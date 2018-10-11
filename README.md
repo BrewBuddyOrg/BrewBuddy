@@ -5,7 +5,7 @@ Met BrouwHulp kun je recepten ontwikkelen, documenteren en uitwisselen. Het prog
 
 # Functionaliteiten
 * Aanpasbare databanken van vergistbare ingrediënten, hop, gist, overige ingrediënten, water, maischschema''s, brouwinstallaties en bierstijlen.
-        * Recepten en brouwsels. Recepten kun je kopiëren naar brouwsels en omgekeerd.
+* Recepten en brouwsels. Recepten kun je kopiëren naar brouwsels en omgekeerd.
 * Import van BeerXML en Promash receptbestanden.
 * Export naar BeerXML/BrouwHulp XML bestanden.
 * Export naar klembord als forum tabel.
