@@ -4,11 +4,7 @@ pipeline {
     stage('Get from GitHub') {
       steps {
         dir(path: '/var/services/homes/pim/Docker/pascal_files')
-        git(url: 'https://github.com/bliekp/BrouwHulp.git', branch: 'development', changelog: true, poll: true)
-        sh '''pwd . && echo **** &&
-ls -altrh . && echo **** &&
-
-ls -al /var/services/homes/pim/Docker/pascal_files'''
+        git(url: 'https://github.com/bliekp/BrouwHulp.git', branch: 'development')
       }
     }
     stage('Build') {
