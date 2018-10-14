@@ -1,6 +1,10 @@
 # BrouwHulp 
 Brouwsoftware oorspronkelijk ontwikkeld door Adrie Otte en sinds eind 2018 Open Source Software onder de GPLv3-licentie.
 
+# Documentatie
+[Documentatie vindt je in onze wiki](https://github.com/bliekp/BrouwHulp/wiki)
+
+# Algemeen
 Met BrouwHulp kun je recepten ontwikkelen, documenteren en uitwisselen. Het programma bevat onder andere de volgende functionaliteiten:
 
 # Functionaliteiten
