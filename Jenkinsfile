@@ -1,9 +1,9 @@
 pipeline {
   agent any
   stages {
-    stage('Allocate WS and fill with data from Git') {
+    stage('Get from GitHub') {
       steps {
-        ws(dir: '/var/services/homes/pim/Docker/pascal_files')
+        dir(path: '/var/services/homes/pim/Docker/pascal_files')
         git(url: 'https://github.com/bliekp/BrouwHulp.git', branch: 'development', changelog: true, poll: true)
         sh '''pwd . && echo **** &&
 ls -altrh . && echo **** &&
