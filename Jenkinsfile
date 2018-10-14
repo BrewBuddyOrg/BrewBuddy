@@ -3,9 +3,11 @@ pipeline {
   stages {
     stage('Allocate WS and fill with data from Git') {
       steps {
-        dir(path: '/var/services/homes/pim/Docker/pascal_files')
         git(url: 'https://github.com/bliekp/BrouwHulp.git', branch: 'development', changelog: true, poll: true)
-        sh 'ls -al /var/services/homes/pim/Docker/pascal_files'
+        sh '''pwd . && echo **** &&
+ls -altrh . && echo **** &&
+
+ls -al /var/services/homes/pim/Docker/pascal_files'''
       }
     }
     stage('Build') {
