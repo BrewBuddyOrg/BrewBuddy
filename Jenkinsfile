@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Clone') {
       steps {
-        git 'https://github.com/bliekp/BrouwHulp.git'
+        git(url: 'https://github.com/bliekp/BrouwHulp.git', branch: '$GIT_BRANCH')
         stash(name: 'scm', includes: '*')
       }
     }
