@@ -4,7 +4,7 @@ pipeline {
     stage('Clone') {
       steps {
         stash(name: 'scm', includes: '*')
-        git(url: 'https://github.com/bliekp/BrouwHulp.git', branch: ${env.BRANCH_NAME}, changelog: true, poll: true)
+        git(url: 'https://github.com/bliekp/BrouwHulp.git', branch: "${env.BRANCH_NAME}", changelog: true, poll: true)
       }
     }
     stage('Build in Docker') {
