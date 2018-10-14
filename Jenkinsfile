@@ -1,21 +1,25 @@
 pipeline {
   agent any
   stages {
-    stage('Get from GitHub') {
-      steps {
-        dir(path: '/var/services/homes/pim/Docker/pascal_files')
-        git(url: 'https://github.com/bliekp/BrouwHulp.git', branch: 'development')
-      }
+    stage('Clone') {
+        steps {
+            git branch: 'master', url: 'https://github.com/bliekp/BrouwHulp.git'
+            stash name:'scm', includes:'*'
+        }
     }
-    stage('Build') {
-      steps {
-        sh 'docker exec pascalContainer bash -c "cd /var/services/homes/pim/Docker/pascal_files && pwd && ls -altrh && fpc -va hello.pas"'
-      }
+
+    stage('Build in Docker') {
+        steps {
+            unstash 'scm'
+            script{
+                docker.image('taraworks/lazarus-cross:0.0.2').inside{ 
+                    sh 'pwd'
+                    sh 'ls -altrh'
+                    sh 'fpc -va hello.pas'
+                    sh 'ls -altrh'
+                }
+            }
+        }
     }
-    stage('error') {
-      steps {
-        archiveArtifacts(allowEmptyArchive: true, caseSensitive: true, onlyIfSuccessful: true, artifacts: 'hello')
-      }
-    }
-  }
+}
 }
