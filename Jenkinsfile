@@ -35,4 +35,5 @@ pipeline {
           //  notifySuccessful()
              echo "SUCCESS!"
         }
+      }
 }
