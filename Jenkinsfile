@@ -1,8 +1,8 @@
-pipeline {
- def notifySuccessful() {
+def notifySuccessful() {
   slackSend (color: '#00FF00', message: "SUCCESSFUL: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
 }
-  
+
+pipeline {
   agent any
   stages {
     stage('Clone') {
