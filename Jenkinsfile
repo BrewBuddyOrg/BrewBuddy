@@ -18,11 +18,13 @@ pipeline {
             sh 'ls -altrh'
           }
         }
-
       }
+      
     }
+    
   }
-  
+}
+
 post {
         always {
             archiveArtifacts artifacts: 'hello', fingerprint: true
