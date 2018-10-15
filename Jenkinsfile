@@ -27,6 +27,10 @@ pipeline {
         always {
             archiveArtifacts artifacts: 'hello', fingerprint: true
         }
+        if (currentBuild.result == 'SUCCESS') {
+            echo "currentBuild.result: ${currentBuild.result}"
+            slackSend channel: channel, color: 'good', teamDomain: null, token: null, message: "*${env.JOB_NAME}* Finished Successfuly! :thumbsup: ${jlink}(<!here|here>/${ulink})"
+        }
     }
   
 }
