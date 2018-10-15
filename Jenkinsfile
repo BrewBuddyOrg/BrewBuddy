@@ -18,20 +18,17 @@ pipeline {
             sh 'ls -altrh'
           }
         }
+
       }
-      
     }
-    
   }
   
-  post {
+      post {
         always {
             archiveArtifacts artifacts: 'hello', fingerprint: true
         }
         notifySuccessful()
-  }
 }
-
 
 
 def notifySuccessful() {
