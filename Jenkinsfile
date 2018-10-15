@@ -31,7 +31,7 @@ pipeline {
         always {
             archiveArtifacts artifacts: 'hello', fingerprint: true
         }
-        succes {
+        success {
           //  notifySuccessful()
              echo "SUCCESS!"
         }
