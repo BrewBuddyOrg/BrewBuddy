@@ -18,7 +18,7 @@ pipeline {
           docker.image('taraworks/lazarus-cross:0.0.2').inside{
             sh 'pwd'
             sh 'ls -altrh'
-            sh 'fpc -va hello.pas'
+            sh 'lazbuild brouwhulp.lpi'
             sh 'ls -altrh'
           }
         }
