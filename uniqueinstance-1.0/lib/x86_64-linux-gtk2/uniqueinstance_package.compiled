@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CONFIG>
-  <Compiler Value="/usr/bin/fpc" Date="1526926378"/>
-  <Params Value=" -MObjFPC -Scgi -Cg -O2 -g -gl -l -vewnhibq -Fu/usr/share/lazarus/1.8.4/packager/units/x86_64-linux -Fu/usr/share/lazarus/1.8.4/components/lazutils/lib/x86_64-linux -Fu/usr/share/lazarus/1.8.4/lcl/units/x86_64-linux -Fu/usr/share/lazarus/1.8.4/lcl/units/x86_64-linux/gtk2 -Fu/home/pim/Documents/BrouwHulp/BrouwHulp/uniqueinstance-1.0/ -FU/home/pim/Documents/BrouwHulp/BrouwHulp/uniqueinstance-1.0/lib/x86_64-linux-gtk2/ -dLCL -dLCLgtk2 uniqueinstance_package.pas"/>
-</CONFIG>

@@ -1,5 +1,0 @@
-<?xml version="1.0"?>
-<CONFIG>
-  <Compiler Value="/usr/local/bin/ppc386" Date="1359911592"/>
-  <Params Value=" -MObjFPC -Scgi -O2 -g -gl -vewnhi -Fu/Developer/lazarus/lcl/units/i386-darwin/carbon -Fu/Developer/lazarus/lcl/units/i386-darwin -Fu/Developer/lazarus/components/lazutils/lib/i386-darwin -Fu/Developer/lazarus/packager/units/i386-darwin -Fu/Users/adrie/Dropbox/BrouwHulp/uniqueinstance-1.0/ -FU/Users/adrie/Dropbox/BrouwHulp/uniqueinstance-1.0/lib/i386-darwin-carbon/ -l -dLCL -dLCLcarbon uniqueinstance_package.pas"/>
-</CONFIG>
