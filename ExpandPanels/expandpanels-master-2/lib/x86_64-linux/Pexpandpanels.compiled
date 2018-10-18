@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Compiler Value="/usr/bin/fpc" Date="1513128808"/>
+  <Params Value=" -MObjFPC -Scgi -Cg -O1 -g -gl -l -vewnhibq -Fu/usr/share/lazarus/1.8.0/components/gradbutton/package -Fu/usr/share/lazarus/1.8.0/packager/units/x86_64-linux -Fu/usr/share/lazarus/1.8.0/components/lazutils/lib/x86_64-linux -Fu/usr/share/lazarus/1.8.0/lcl/units/x86_64-linux -Fu/usr/share/lazarus/1.8.0/lcl/units/x86_64-linux/gtk2 &quot;-Fu/home/pim/Development/BrouwHulp/ExpandPanels/expandpanels-master (2)/&quot; &quot;-FU/home/pim/Development/BrouwHulp/ExpandPanels/expandpanels-master (2)/lib/x86_64-linux/&quot; -dLCL -dLCLgtk2 pexpandpanels.pas"/>
+</CONFIG>
