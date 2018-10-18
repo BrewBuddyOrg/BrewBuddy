@@ -1,0 +1,852 @@
+object FrmWaterAdjustment: TFrmWaterAdjustment
+  Left = 265
+  Height = 494
+  Top = 161
+  Width = 944
+  BorderStyle = bsDialog
+  Caption = 'Waterbehandeling'
+  ClientHeight = 494
+  ClientWidth = 944
+  Font.Height = 12
+  Icon.Data = {
+    7E04000000000100010010100000010020006804000016000000280000001000
+    0000200000000100200000000000000400006400000064000000000000000000
+    0000FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00000000052711003B6127
+    008B6B2C02A0371600580000000FFFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+    FF00FFFFFF00FFFFFF00FFFFFF00000000036F2D009AD05300FDF76300FFF161
+    01FFE35B01FFD35602FFB64A02FF783101D4160B0017FFFFFF00FFFFFF00FFFF
+    FF00FFFFFF00FFFFFF0033160023A64300E9FE6600FFFF6600FFFF6600FFFE66
+    00FFF96503FFF76300FFDA5801FFC24F02FFA14202FB501F0065FFFFFF00FFFF
+    FF00FFFFFF00000000019C3E00E2FF6600FFFF6600FFFE6601FFAF6530FF5383
+    96FF5090ACFF8D6545FFF26507FFF26100FFCF5402FFAB4602FD1D0F0022FFFF
+    FF00FFFFFF006528008EFD6500FFFF6600FFEE670BFF547B85FF45B2DCFF72D3
+    F8FF7CD6F8FF4FBFEEFF34809FFFC6631FFFF96400FFDB5801FF823501DEFFFF
+    FF00FFFFFF00B84A00F8FF6600FFFF6600FF817561FF2ABAF0FF45C0F7FF61BC
+    E1FF7BD5F8FF41A2CBFF34C2F7FF2B7997FFFF6600FFFB6400FFDF5901FF150A
+    00321212121DE96004FFFF6600FFFF6600FF5F8589FF2ABFF7FF4EC9F7FF5EBF
+    EAFF5BBFF7FF55C6F1FF34C2F7FF198EBEFFFD6601FFFF6600FFFA6400FF5E27
+    00835C321669FD7820FFFF6600FFFF6600FF578E9AFF2ABFF7FF4EC9F7FF66CA
+    F8FF4B97BAFF58CCF7FF34C2F7FF1B94C5FFF56606FFFF6600FFFF6600FF8736
+    00C16440276AFD8C42FFFE7215FFFF6600FF4E96AAFF2ABFF7FF4EC9F7FF52BC
+    F7FF59BDF6FF57CBF5FF34C2F7FF1B99CBFFEC660CFFFF6600FFFF6600FF8536
+    00BE3939391FEC9256FFFD944FFFFF6701FF449CB9FF2BB6EBFF2C81A9FF4C9D
+    C2FF6FC7EBFF3E9AC1FF2CA6D7FF1C9FD1FFE46712FFFF6600FFFF6600FF6027
+    007DFFFFFF00CE8B5FFAFBAA75FFFC9855FF39A0CAFF38A7D0FF2F7694FF2B6F
+    93FF6FC6E7FF40ABDFFF30A3D1FF1CA2D4FFDC6919FFFF6600FFF46200FF160B
+    002FFFFFFF008F664C9DF8B489FFFABA91FF87C7E5FF37AEE5FF4295B4FF65C1
+    E5FF7CD6F8FF4EB7E2FF2B98C5FF1BA1D7FFD46A1FFFFF6600FF8E3900D4FFFF
+    FF00FFFFFF00FFFFFF01C79B7EEDF9C7A7FFCAD0D5FFA1CBE2FF72BCDEFF69BA
+    DBFF64B9D6FF56A6C0FF5D919DFF787D70FFE46914FFCA5000FA150B0018FFFF
+    FF00FFFFFF00FFFFFF0060534525CCA286F0F7D1B7FFF9C3A1FFF9B68BFFF5AB
+    7AFFF69A5FFFFD8739FFFE7F2AFFFE7317FFBD4D01F75221004EFFFFFF00FFFF
+    FF00FFFFFF00FFFFFF00FFFFFF0000000001A4836CADDEA987FDF6B388FFFBA8
+    73FFFC9C5DFFFA8D45FFD96D26FE873D0DC40000000EFFFFFF00FFFFFF00FFFF
+    FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00000000025A534F3D8155
+    398B804925994831234900000009FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+    FF00000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000
+  }
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  Position = poDesktopCenter
+  LCLVersion = '1.0.12.0'
+  object gbMash: TGroupBox
+    Left = 3
+    Height = 370
+    Top = 112
+    Width = 671
+    Caption = 'Maischwater'
+    ClientHeight = 342
+    ClientWidth = 665
+    TabOrder = 1
+    object Label1: TLabel
+      Left = 7
+      Height = 15
+      Top = 29
+      Width = 40
+      Caption = 'Bron 1:'
+      ParentColor = False
+    end
+    object cbSource1: TComboBox
+      Left = 48
+      Height = 23
+      Hint = 'Eerste waterbron'
+      Top = 25
+      Width = 182
+      ItemHeight = 0
+      OnChange = cbSource1Change
+      ParentShowHint = False
+      ShowHint = True
+      Style = csDropDownList
+      TabOrder = 0
+    end
+    object sgSource: TStringGrid
+      Left = 1
+      Height = 121
+      Top = 222
+      Width = 665
+      ColCount = 10
+      Columns = <      
+        item
+          Title.Caption = 'Water'
+          Width = 130
+        end      
+        item
+          Title.Alignment = taCenter
+          Title.Caption = 'Ca'
+          Width = 55
+        end      
+        item
+          Title.Alignment = taCenter
+          Title.Caption = 'Mg'
+          Width = 55
+        end      
+        item
+          Title.Alignment = taCenter
+          Title.Caption = 'Na'
+          Width = 55
+        end      
+        item
+          Title.Alignment = taCenter
+          Title.Caption = 'Tot. Alk.'
+          Width = 55
+        end      
+        item
+          Title.Alignment = taCenter
+          Title.Caption = 'SO4'
+          Width = 55
+        end      
+        item
+          Title.Alignment = taCenter
+          Title.Caption = 'Cl'
+          Width = 55
+        end      
+        item
+          Title.Alignment = taCenter
+          Title.Caption = 'maisch-pH'
+          Width = 70
+        end      
+        item
+          Title.Alignment = taCenter
+          Title.Caption = 'RestAlk'
+        end      
+        item
+          Title.Alignment = taCenter
+          Title.Caption = 'Cl/SO4'
+        end>
+      FixedColor = 16237651
+      FixedCols = 0
+      TabOrder = 2
+      TitleFont.Height = 12
+      OnDrawCell = sgSourceDrawCell
+    end
+    object Label2: TLabel
+      Left = 7
+      Height = 15
+      Top = 56
+      Width = 40
+      Caption = 'Bron 2:'
+      ParentColor = False
+    end
+    object cbSource2: TComboBox
+      Left = 48
+      Height = 23
+      Hint = 'Eventueel tweede waterbron'
+      Top = 52
+      Width = 182
+      ItemHeight = 0
+      OnChange = cbSource2Change
+      ParentShowHint = False
+      ShowHint = True
+      Style = csDropDownList
+      TabOrder = 1
+    end
+    object lVolume: TLabel
+      Left = 219
+      Height = 15
+      Top = 6
+      Width = 42
+      Caption = 'Volume'
+      ParentColor = False
+    end
+    object fseVolume1: TFloatSpinEdit
+      Left = 231
+      Height = 22
+      Top = 25
+      Width = 62
+      Enabled = False
+      Increment = 0.5
+      MaxValue = 1000000
+      MinValue = 0
+      ReadOnly = True
+      TabOrder = 3
+      Value = 0
+    end
+    object fseVolume2: TFloatSpinEdit
+      Left = 231
+      Height = 22
+      Top = 52
+      Width = 62
+      Increment = 0.5
+      MaxValue = 1000000
+      MinValue = 0
+      OnChange = fseVolume2Change
+      TabOrder = 4
+      Value = 0
+    end
+    object bgBrewingSalts: TGroupBox
+      Left = 301
+      Height = 217
+      Top = 2
+      Width = 363
+      Caption = 'Brouwzouten toevoegen en aanzuren'
+      ClientHeight = 189
+      ClientWidth = 357
+      TabOrder = 9
+      object Label13: TLabel
+        Left = 9
+        Height = 15
+        Top = 5
+        Width = 140
+        Caption = 'Calciumchloride (CaCl2):'
+        ParentColor = False
+      end
+      object fseCaCl2: TFloatSpinEdit
+        Left = 159
+        Height = 22
+        Top = 1
+        Width = 69
+        DecimalPlaces = 1
+        Increment = 0.5
+        MaxValue = 1000
+        MinValue = 0
+        OnChange = fseCaCl2Change
+        TabOrder = 0
+        Value = 0
+      end
+      object lCaCl2: TLabel
+        Left = 231
+        Height = 15
+        Top = 5
+        Width = 8
+        Caption = 'g'
+        ParentColor = False
+      end
+      object Label14: TLabel
+        Left = 9
+        Height = 15
+        Top = 30
+        Width = 81
+        Caption = 'Gips (CaSO4):'
+        ParentColor = False
+      end
+      object fseCaSO4: TFloatSpinEdit
+        Left = 159
+        Height = 22
+        Top = 25
+        Width = 69
+        DecimalPlaces = 1
+        Increment = 0.5
+        MaxValue = 1000
+        MinValue = 0
+        OnChange = fseCaCl2Change
+        TabOrder = 1
+        Value = 0
+      end
+      object lCaSO4: TLabel
+        Left = 231
+        Height = 15
+        Top = 30
+        Width = 8
+        Caption = 'g'
+        ParentColor = False
+      end
+      object Label15: TLabel
+        Left = 9
+        Height = 15
+        Top = 55
+        Width = 80
+        Caption = 'Kalk (CaCO3):'
+        ParentColor = False
+      end
+      object fseCaCO3: TFloatSpinEdit
+        Left = 159
+        Height = 22
+        Top = 51
+        Width = 69
+        DecimalPlaces = 1
+        Increment = 0.5
+        MaxValue = 1000
+        MinValue = 0
+        OnChange = fseCaCl2Change
+        TabOrder = 2
+        Value = 0
+      end
+      object lCaCO3: TLabel
+        Left = 231
+        Height = 15
+        Top = 55
+        Width = 8
+        Caption = 'g'
+        ParentColor = False
+      end
+      object Label16: TLabel
+        Left = 9
+        Height = 15
+        Top = 80
+        Width = 120
+        Caption = 'Epsom zout (MgSO4):'
+        ParentColor = False
+      end
+      object fseMgSO4: TFloatSpinEdit
+        Left = 159
+        Height = 22
+        Top = 76
+        Width = 69
+        DecimalPlaces = 1
+        Increment = 0.5
+        MaxValue = 1000
+        MinValue = 0
+        OnChange = fseCaCl2Change
+        TabOrder = 3
+        Value = 0
+      end
+      object lMgSO4: TLabel
+        Left = 231
+        Height = 15
+        Top = 80
+        Width = 8
+        Caption = 'g'
+        ParentColor = False
+      end
+      object Label17: TLabel
+        Left = 9
+        Height = 15
+        Top = 105
+        Width = 125
+        Caption = 'Bakpoeder (NaHCO3):'
+        ParentColor = False
+      end
+      object fseNaHCO3: TFloatSpinEdit
+        Left = 159
+        Height = 22
+        Top = 101
+        Width = 69
+        DecimalPlaces = 1
+        Increment = 0.5
+        MaxValue = 1000
+        MinValue = 0
+        OnChange = fseCaCl2Change
+        TabOrder = 4
+        Value = 0
+      end
+      object lNaHCO3: TLabel
+        Left = 231
+        Height = 15
+        Top = 105
+        Width = 8
+        Caption = 'g'
+        ParentColor = False
+      end
+      object Label18: TLabel
+        Left = 9
+        Height = 15
+        Top = 130
+        Width = 107
+        Caption = 'Keukenzout (NaCl):'
+        ParentColor = False
+      end
+      object fseNaCl: TFloatSpinEdit
+        Left = 159
+        Height = 22
+        Top = 126
+        Width = 69
+        DecimalPlaces = 1
+        Increment = 0.5
+        MaxValue = 1000
+        MinValue = 0
+        OnChange = fseCaCl2Change
+        TabOrder = 5
+        Value = 0
+      end
+      object lNaCl: TLabel
+        Left = 231
+        Height = 15
+        Top = 130
+        Width = 8
+        Caption = 'g'
+        ParentColor = False
+      end
+      object Label19: TLabel
+        Left = 9
+        Height = 15
+        Top = 155
+        Width = 52
+        Caption = 'Melkzuur:'
+        ParentColor = False
+      end
+      object fseLacticAcid: TFloatSpinEdit
+        Left = 159
+        Height = 22
+        Top = 151
+        Width = 68
+        Increment = 0.5
+        MaxValue = 1000
+        MinValue = 0
+        OnChange = fseCaCl2Change
+        TabOrder = 6
+        Value = 0
+      end
+      object fseLacticAcidPerc: TFloatSpinEdit
+        Left = 281
+        Height = 22
+        Top = 151
+        Width = 50
+        DecimalPlaces = 0
+        Increment = 1
+        MaxValue = 100
+        MinValue = 0
+        OnChange = fseCaCl2Change
+        TabOrder = 7
+        Value = 80
+      end
+      object Label20: TLabel
+        Left = 257
+        Height = 15
+        Top = 155
+        Width = 20
+        Caption = 'van'
+        ParentColor = False
+      end
+      object Label21: TLabel
+        Left = 333
+        Height = 15
+        Top = 155
+        Width = 12
+        Caption = '%'
+        ParentColor = False
+      end
+      object lLacticAcid: TLabel
+        Left = 231
+        Height = 15
+        Top = 155
+        Width = 15
+        Caption = 'ml'
+        ParentColor = False
+      end
+    end
+    object Label12: TLabel
+      Left = 7
+      Height = 15
+      Top = 82
+      Width = 30
+      Caption = 'Doel:'
+      ParentColor = False
+    end
+    object cbTarget: TComboBox
+      Left = 48
+      Height = 23
+      Hint = 'Te emuleren water'
+      Top = 78
+      Width = 250
+      ItemHeight = 0
+      OnChange = cbTargetChange
+      ParentShowHint = False
+      ShowHint = True
+      Style = csDropDownList
+      TabOrder = 5
+    end
+    object bbTargetWater: TBitBtn
+      Left = 17
+      Height = 30
+      Hint = 'Benader doelwater'
+      Top = 112
+      Width = 252
+      Caption = 'Suggestie op basis van doelwater'
+      OnClick = bbTargetWaterClick
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 6
+    end
+    object bbRAClSO4: TBitBtn
+      Left = 17
+      Height = 30
+      Hint = 'Benader RA en Cl/SO4 van doelwater'
+      Top = 144
+      Width = 252
+      Caption = 'Suggestie op basis van RA en Cl/SO4'
+      OnClick = bbRAClSO4Click
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 7
+    end
+    object bbReset: TBitBtn
+      Left = 17
+      Height = 30
+      Hint = 'Zet alle brouwzouten op 0'
+      Top = 176
+      Width = 252
+      Caption = 'Herstel'
+      OnClick = bbResetClick
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 8
+    end
+    object lVolume1: TLabel
+      Left = 294
+      Height = 15
+      Top = 29
+      Width = 4
+      Caption = 'l'
+      ParentColor = False
+    end
+    object lVolume2: TLabel
+      Left = 294
+      Height = 15
+      Top = 56
+      Width = 4
+      Caption = 'l'
+      ParentColor = False
+    end
+  end
+  object bbOK: TBitBtn
+    Left = 710
+    Height = 30
+    Top = 450
+    Width = 99
+    Caption = '&OK'
+    Default = True
+    Kind = bkOK
+    ModalResult = 1
+    TabOrder = 2
+  end
+  object bbCancel: TBitBtn
+    Left = 819
+    Height = 30
+    Top = 450
+    Width = 99
+    Cancel = True
+    Caption = 'Annuleer'
+    Kind = bkCancel
+    ModalResult = 2
+    TabOrder = 3
+  end
+  object bgBeer: TGroupBox
+    Left = 3
+    Height = 112
+    Top = 0
+    Width = 671
+    Caption = 'Doel voor bier'
+    ClientHeight = 84
+    ClientWidth = 665
+    TabOrder = 0
+    object Label3: TLabel
+      Left = 10
+      Height = 29
+      Top = 5
+      Width = 75
+      Caption = 'Wortkleur '#10'bij maischen:'
+      ParentColor = False
+      WordWrap = True
+    end
+    object Label4: TLabel
+      Left = 216
+      Height = 15
+      Top = 6
+      Width = 95
+      Caption = 'Min. restalkaliteit:'
+      ParentColor = False
+    end
+    object Label5: TLabel
+      Left = 385
+      Height = 15
+      Top = 6
+      Width = 25
+      Caption = 'mg/l'
+      ParentColor = False
+    end
+    object Label7: TLabel
+      Left = 385
+      Height = 15
+      Top = 30
+      Width = 25
+      Caption = 'mg/l'
+      ParentColor = False
+    end
+    object Label9: TLabel
+      Left = 385
+      Height = 15
+      Top = 57
+      Width = 25
+      Caption = 'mg/l'
+      ParentColor = False
+    end
+    object Label6: TLabel
+      Left = 219
+      Height = 15
+      Top = 30
+      Width = 95
+      Caption = 'Opt. restalkaliteit:'
+      ParentColor = False
+    end
+    object Label8: TLabel
+      Left = 216
+      Height = 15
+      Top = 57
+      Width = 97
+      Caption = 'Max. restalkaliteit:'
+      ParentColor = False
+    end
+    object Label10: TLabel
+      Left = 467
+      Height = 15
+      Top = 5
+      Width = 92
+      Caption = 'Bitterheidsindex:'
+      ParentColor = False
+    end
+    object Label11: TLabel
+      Left = 467
+      Height = 15
+      Top = 30
+      Width = 101
+      Caption = 'Richtgetal Cl/SO4:'
+      ParentColor = False
+    end
+    object eMinRA: TEdit
+      Left = 327
+      Height = 22
+      Hint = 'Minimaal benodigde restalkaliteit'
+      Top = 2
+      Width = 55
+      ParentShowHint = False
+      ReadOnly = True
+      ShowHint = True
+      TabOrder = 0
+    end
+    object eOptRA: TEdit
+      Left = 327
+      Height = 22
+      Hint = 'Optimale restalkaliteit'
+      Top = 27
+      Width = 55
+      ParentShowHint = False
+      ReadOnly = True
+      ShowHint = True
+      TabOrder = 1
+    end
+    object eMaxRA: TEdit
+      Left = 327
+      Height = 22
+      Hint = 'Maximaal benodigde restalkaliteit'
+      Top = 52
+      Width = 55
+      ParentShowHint = False
+      ReadOnly = True
+      ShowHint = True
+      TabOrder = 2
+    end
+    object eBUGU: TEdit
+      Left = 582
+      Height = 22
+      Hint = 'IBU / (SG - 1), geeft indicatie van bitterheidsbeleving'
+      Top = 2
+      Width = 55
+      ParentShowHint = False
+      ReadOnly = True
+      ShowHint = True
+      TabOrder = 3
+    end
+    object eOptClSO4: TEdit
+      Left = 582
+      Height = 22
+      Hint = 'Aanbevolen chloride/sulfaatverhouding'
+      Top = 27
+      Width = 55
+      ParentShowHint = False
+      ReadOnly = True
+      ShowHint = True
+      TabOrder = 4
+    end
+    object eWortColor: TEdit
+      Left = 90
+      Height = 74
+      Top = 2
+      Width = 109
+      Alignment = taCenter
+      AutoSize = False
+      ReadOnly = True
+      TabOrder = 5
+      Text = 'eWortColor'
+    end
+  end
+  object gbSpargeWater: TGroupBox
+    Left = 676
+    Height = 280
+    Top = 112
+    Width = 267
+    Caption = 'Spoelwater'
+    ClientHeight = 252
+    ClientWidth = 261
+    TabOrder = 4
+    object Label22: TLabel
+      Left = 9
+      Height = 15
+      Top = 6
+      Width = 45
+      Caption = 'Volume:'
+      ParentColor = False
+    end
+    object fseSpargeVolume: TFloatSpinEdit
+      Left = 71
+      Height = 22
+      Hint = 'Hoeveelheid te behandelen spoelwater'
+      Top = 2
+      Width = 69
+      DecimalPlaces = 1
+      Increment = 1
+      MaxValue = 10000000
+      MinValue = 0
+      OnChange = fseSpargeVolumeChange
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 0
+      Value = 0
+    end
+    object lSpargeVolume: TLabel
+      Left = 142
+      Height = 15
+      Top = 6
+      Width = 4
+      Caption = 'l'
+      ParentColor = False
+    end
+    object rgSource: TRadioGroup
+      Left = 5
+      Height = 112
+      Top = 33
+      Width = 255
+      AutoFill = True
+      Caption = 'Waterbron(nen)'
+      ChildSizing.LeftRightSpacing = 6
+      ChildSizing.TopBottomSpacing = 6
+      ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+      ChildSizing.EnlargeVertical = crsHomogenousChildResize
+      ChildSizing.ShrinkHorizontal = crsScaleChilds
+      ChildSizing.ShrinkVertical = crsScaleChilds
+      ChildSizing.Layout = cclLeftToRightThenTopToBottom
+      ChildSizing.ControlsPerLine = 1
+      ClientHeight = 84
+      ClientWidth = 249
+      ItemIndex = 0
+      Items.Strings = (
+        'Alleen bron 1'
+        'Alleen bron 2'
+        'Zelfde mengsel als maischwater'
+      )
+      OnClick = rgSourceClick
+      TabOrder = 1
+    end
+    object Label23: TLabel
+      Left = 9
+      Height = 15
+      Top = 149
+      Width = 79
+      Caption = 'Gewenste pH:'
+      ParentColor = False
+    end
+    object fseSpargepH: TFloatSpinEdit
+      Left = 100
+      Height = 22
+      Top = 146
+      Width = 58
+      DecimalPlaces = 1
+      Increment = 0.1
+      MaxValue = 14
+      MinValue = 1
+      OnChange = fseSpargepHChange
+      TabOrder = 2
+      Value = 5.5
+    end
+    object Label24: TLabel
+      Left = 9
+      Height = 15
+      Top = 229
+      Width = 77
+      Caption = 'Aanzuren met'
+      ParentColor = False
+    end
+    object eSpargeLacticAcid: TEdit
+      Left = 100
+      Height = 22
+      Top = 226
+      Width = 58
+      TabOrder = 3
+    end
+    object lSpargeLacticAcid: TLabel
+      Left = 161
+      Height = 15
+      Top = 229
+      Width = 15
+      Caption = 'ml'
+      ParentColor = False
+    end
+    object Label25: TLabel
+      Left = 9
+      Height = 15
+      Top = 176
+      Width = 29
+      Caption = 'Zuur:'
+      ParentColor = False
+    end
+    object cbAcid: TComboBox
+      Left = 100
+      Height = 22
+      Top = 172
+      Width = 157
+      ItemHeight = 0
+      OnChange = fseSpargepHChange
+      TabOrder = 4
+      Text = 'cbAcid'
+    end
+    object Label26: TLabel
+      Left = 9
+      Height = 15
+      Top = 203
+      Width = 74
+      Caption = 'Concentratie:'
+      ParentColor = False
+    end
+    object fseAcidPerc: TFloatSpinEdit
+      Left = 100
+      Height = 22
+      Top = 199
+      Width = 50
+      DecimalPlaces = 0
+      Increment = 1
+      MaxValue = 100
+      MinValue = 0
+      OnChange = fseSpargepHChange
+      TabOrder = 5
+      Value = 80
+    end
+    object Label27: TLabel
+      Left = 154
+      Height = 15
+      Top = 203
+      Width = 12
+      Caption = '%'
+      ParentColor = False
+    end
+  end
+  object gbVisual: TGroupBox
+    Left = 676
+    Height = 112
+    Top = 0
+    Width = 267
+    Caption = 'Behandeld water en doelen'
+    ParentFont = False
+    TabOrder = 5
+  end
+end

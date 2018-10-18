@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="139.52451"
+   height="108.48732"
+   id="svg3895"
+   version="1.1"
+   inkscape:version="0.48.3.1 r9886"
+   sodipodi:docname="New document 2">
+  <defs
+     id="defs3897">
+    <filter
+       inkscape:collect="always"
+       id="filter3560"
+       color-interpolation-filters="sRGB">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="2.0915042"
+         id="feGaussianBlur3562" />
+    </filter>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3941"
+       id="linearGradient3803"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(-0.9830197,0.00134353,-0.09581231,0.8668591,244.41511,340.0028)"
+       spreadMethod="reflect"
+       x1="8.1358986"
+       y1="506.26208"
+       x2="30.871983"
+       y2="520.06683" />
+    <linearGradient
+       id="linearGradient3941">
+      <stop
+         style="stop-color:#261d23;stop-opacity:1;"
+         offset="0"
+         id="stop3943" />
+      <stop
+         style="stop-color:#aaa0a6;stop-opacity:1;"
+         offset="1"
+         id="stop3945" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3941"
+       id="linearGradient3806"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(-0.9297118,0.3682878,0.3682878,0.9297118,341.30539,61.972777)"
+       spreadMethod="reflect"
+       x1="396.05038"
+       y1="588.24939"
+       x2="509.96304"
+       y2="588.24939" />
+    <linearGradient
+       id="linearGradient4248">
+      <stop
+         style="stop-color:#261d23;stop-opacity:1;"
+         offset="0"
+         id="stop4250" />
+      <stop
+         style="stop-color:#aaa0a6;stop-opacity:1;"
+         offset="1"
+         id="stop4252" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3941"
+       id="linearGradient3808"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(-0.9297118,0.3682878,0.3682878,0.9297118,341.30539,61.972777)"
+       spreadMethod="reflect"
+       x1="489.8446"
+       y1="549.81549"
+       x2="536.41907"
+       y2="563.15613" />
+    <linearGradient
+       id="linearGradient4255">
+      <stop
+         style="stop-color:#261d23;stop-opacity:1;"
+         offset="0"
+         id="stop4257" />
+      <stop
+         style="stop-color:#aaa0a6;stop-opacity:1;"
+         offset="1"
+         id="stop4259" />
+    </linearGradient>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="164.76268"
+     inkscape:cy="-114.25663"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1571"
+     inkscape:window-height="849"
+     inkscape:window-x="14"
+     inkscape:window-y="11"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata3900">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-210.23732,-309.61823)">
+    <g
+       id="g3575"
+       transform="matrix(-0.82650461,0.37751315,0.37751315,0.82650461,129.72807,-337.83383)"
+       inkscape:export-filename="f:\Tedel\Dibujos\escudo.png"
+       inkscape:export-xdpi="125"
+       inkscape:export-ydpi="125">
+      <g
+         style="opacity:0.98000004;fill:#070707;fill-opacity:1;stroke:#000000;stroke-opacity:1;filter:url(#filter3560)"
+         transform="matrix(1.0296811,0,0,1.0296811,-134.77786,64.754421)"
+         id="g3529">
+        <path
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="cccccccccccccccccccccccccc"
+           id="path3531"
+           d="m 368.61303,688.75148 -2.54503,23.02594 -33.39194,0.0456 2.54501,-23.02592 33.39196,-0.0456 z m -6.20803,9.75917 -23.13168,0.0316 -0.12575,1.13775 -0.75392,7.53072 1.51896,-0.002 5.07257,-0.0419 0.15181,-1.37365 -5.06867,0.007 0.67666,-6.1222 9.49227,-0.013 -1.29645,11.72969 1.59739,-0.002 1.29647,-11.72969 9.18509,-0.0125 -0.67668,6.12218 -5.06869,0.007 -0.16557,1.10677 5.10852,0.024 1.25949,-0.002 0.80242,-7.25995 0.12576,-1.13775 z"
+           style="fill:#070707;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.92304438;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+        <path
+           inkscape:connector-curvature="0"
+           inkscape:export-ydpi="125"
+           inkscape:export-xdpi="125"
+           inkscape:export-filename="f:\Tedel\Dibujos\shield.png"
+           sodipodi:nodetypes="csccs"
+           id="path3533"
+           d="m 368.99374,688.21505 c 2.07804,-0.13662 2.31926,-6.51481 0.2505,-6.62691 -25.4364,-1.37837 -117.6,2.47089 -116.89222,0.64872 l -0.25049,6.62691 c -2.10351,-2.0708 85.23051,1.43302 116.89221,-0.64872 z"
+           style="fill:#070707;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1.65570176;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+        <path
+           inkscape:connector-curvature="0"
+           inkscape:export-ydpi="125"
+           inkscape:export-xdpi="125"
+           inkscape:export-filename="f:\Tedel\Dibujos\shield.png"
+           id="path3535"
+           d="m 230.62273,685.31476 c 1.55458,-18.05636 7.63455,-32.54462 13.58139,-32.31408 5.94685,0.23054 9.55267,15.09424 7.99809,33.1506 -1.55458,18.05635 -7.68298,32.49198 -13.6298,32.26144 -5.94685,-0.23054 -9.50426,-15.04162 -7.94968,-33.09796 z m 3.58779,0.13907 c -1.03708,12.04558 1.33112,21.9284 5.29833,22.08217 3.96717,0.1538 8.0685,-9.47822 9.10554,-21.5238 1.0371,-12.04559 -1.37951,-21.98101 -5.34672,-22.13481 -3.9672,-0.15381 -8.02007,9.53086 -9.05715,21.57644 z"
+           style="fill:#070707;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1.65570176;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+      </g>
+      <g
+         transform="translate(45.349682,-6.4701217)"
+         id="g3564">
+        <path
+           inkscape:connector-curvature="0"
+           style="fill:url(#linearGradient3803);fill-opacity:1;fill-rule:nonzero;stroke:#332a1e;stroke-width:0.92304438;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+           d="m 194.41752,779.33315 -2.54503,23.02594 -33.39194,0.0456 2.54501,-23.02592 33.39196,-0.0456 z m -6.20803,9.75917 -23.13168,0.0316 -0.12575,1.13775 -0.75392,7.53072 1.51896,-0.002 5.07257,-0.0419 0.15181,-1.37365 -5.06867,0.007 0.67666,-6.1222 9.49227,-0.013 -1.29645,11.72969 1.59739,-0.002 1.29647,-11.72969 9.18509,-0.0125 -0.67668,6.12218 -5.06869,0.007 -0.16557,1.10677 5.10852,0.0241 1.25949,-0.002 0.80242,-7.25995 0.12576,-1.13775 z"
+           id="rect2523"
+           sodipodi:nodetypes="cccccccccccccccccccccccccc" />
+        <path
+           inkscape:connector-curvature="0"
+           style="fill:url(#linearGradient3806);fill-opacity:1;fill-rule:nonzero;stroke:#332a1e;stroke-width:1.65570176;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+           d="m 194.79823,778.79672 c 2.07804,-0.13662 2.31926,-6.51481 0.2505,-6.62691 -25.4364,-1.37837 -117.600003,2.47089 -116.892223,0.64872 l -0.25049,6.62691 c -2.10351,-2.0708 85.230513,1.43302 116.892213,-0.64872 z"
+           id="path3550"
+           sodipodi:nodetypes="csccs"
+           inkscape:export-filename="f:\Tedel\Dibujos\shield.png"
+           inkscape:export-xdpi="125"
+           inkscape:export-ydpi="125" />
+        <path
+           inkscape:connector-curvature="0"
+           style="fill:url(#linearGradient3808);fill-opacity:1;fill-rule:nonzero;stroke:#332a1e;stroke-width:1.65570176;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+           d="m 56.427217,775.89643 c 1.55458,-18.05636 7.63455,-32.54462 13.58139,-32.31408 5.94685,0.23054 9.55267,15.09424 7.99809,33.1506 -1.55458,18.05635 -7.68298,32.49198 -13.6298,32.26144 -5.94685,-0.23054 -9.50426,-15.04162 -7.94968,-33.09796 z m 3.58779,0.13907 c -1.03708,12.04558 1.33112,21.9284 5.29833,22.08217 3.96717,0.1538 8.0685,-9.47822 9.10554,-21.5238 1.0371,-12.04559 -1.37951,-21.98101 -5.34672,-22.13481 -3.9672,-0.15381 -8.02007,9.53086 -9.05715,21.57644 z"
+           id="path3548"
+           inkscape:export-filename="f:\Tedel\Dibujos\shield.png"
+           inkscape:export-xdpi="125"
+           inkscape:export-ydpi="125" />
+      </g>
+    </g>
+  </g>
+</svg>

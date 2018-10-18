@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512">
+ <defs>
+  <linearGradient y2="7.01654" x2="0" y1="92.5396" gradientTransform="scale(1.0058652,0.994169)" gradientUnits="userSpaceOnUse" xlink:href="#1"/>
+  <filter x="-0.192" y="-0.192" width="1.384" height="1.384" color-interpolation-filters="sRGB">
+   <feGaussianBlur stdDeviation="5.28"/>
+  </filter>
+  <clipPath>
+   <rect width="84" height="84" rx="6" x="6" y="6" fill="#fff"/>
+  </clipPath>
+  <linearGradient id="0">
+   <stop stop-color="#fff"/>
+   <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+  </linearGradient>
+  <linearGradient y1="20.220806" x2="0" y2="138.66119" xlink:href="#0" gradientUnits="userSpaceOnUse"/>
+  <filter color-interpolation-filters="sRGB">
+   <feGaussianBlur stdDeviation="1.71"/>
+  </filter>
+  <linearGradient y1="92.5396" x2="0" y2="7.01654" id="1" gradientUnits="userSpaceOnUse" gradientTransform="scale(1.0058652,0.994169)">
+   <stop/>
+   <stop offset="1" stop-opacity="0.588235"/>
+  </linearGradient>
+  <linearGradient xlink:href="#1" gradientUnits="userSpaceOnUse" gradientTransform="scale(1.0058652,0.994169)" y1="92.5396" x2="0" y2="7.01654"/>
+  <clipPath>
+   <rect y="6" x="6" rx="6" height="84" width="84" fill="#fff"/>
+  </clipPath>
+  <linearGradient gradientUnits="userSpaceOnUse" xlink:href="#0" y2="138.66119" x2="0" y1="20.220806"/>
+  <clipPath>
+   <rect width="84" height="84" rx="6" x="6" y="6" fill="#fff"/>
+  </clipPath>
+  <clipPath>
+   <rect width="84" height="84" rx="6" x="6" y="6" fill="#fff"/>
+  </clipPath>
+  <filter color-interpolation-filters="sRGB">
+   <feGaussianBlur stdDeviation="1.14"/>
+  </filter>
+  <clipPath>
+   <rect y="10" x="10" rx="4" height="76" width="76" fill="#fff"/>
+  </clipPath>
+  <clipPath>
+   <path d="M 0 0 0 96 96 96 96 0 0 0 z m 12 6 72 0 c 3.324 0 6 2.676 6 6 l 0 72 c 0 3.324 -2.676 6 -6 6 L 12 90 C 8.676 90 6 87.324 6 84 L 6 12 C 6 8.676 8.676 6 12 6 z"/>
+  </clipPath>
+  <clipPath>
+   <rect y="6" x="6" rx="6" height="84" width="84" fill="#fff"/>
+  </clipPath>
+  <clipPath>
+   <rect y="6" x="6" rx="6" height="84" width="84" fill="#fff"/>
+  </clipPath>
+ </defs>
+ <rect fill="#282629" opacity="0.25" y="31" x="31" height="450" width="450" rx="147.5047"/>
+ <rect fill="#282629" opacity="0.25" y="34" x="34" height="444" width="444" rx="147.5047"/>
+ <rect fill="#282629" opacity="0.25" rx="147.5047" width="438" height="438" x="37" y="37"/>
+ <path d="M 40 255.84375 L 40 324.5 C 40 406.2176 105.7824 472 187.5 472 L 256.03125 472 L 256.03125 255.84375 L 40 255.84375 z" fill="#924565"/>
+ <path d="M 256.03125 255.84375 L 256.03125 472 L 324.5 472 C 406.2176 472 472 406.2176 472 324.5 L 472 255.84375 L 256.03125 255.84375 z" fill="#e4a146"/>
+ <path d="M 256.03125 40 L 256.03125 255.84375 L 472 255.84375 L 472 187.5 C 472 105.7824 406.2176 40 324.5 40 L 256.03125 40 z" fill="#366378"/>
+ <text y="221.29942" x="681.2207" transform="scale(1.0508243,0.95163388)" fill="#654641" font-family="Gentium Book Basic" word-spacing="0" line-height="125%" letter-spacing="0" font-size="84.76714"><tspan y="221.29942" x="681.2207"/>
+ </text>
+ <text transform="scale(4.2167858,0.23714745)" font-size="30.800055" y="659.00842" x="299.03741" fill="#654641" font-family="Arial" text-anchor="middle"/>
+ <text y="197.80241" x="949.02917" transform="scale(1.0508243,0.95163388)" fill="#654641" font-family="Gentium Book Basic" word-spacing="0" line-height="125%" letter-spacing="0" font-size="45.37838"><tspan y="197.80241" x="949.02917"/>
+ </text>
+ <text transform="scale(4.2167856,0.23714746)" font-size="16.488192" y="671.14209" x="305.70422" fill="#654641" font-family="Arial" text-anchor="middle"/>
+ <text y="290.08667" x="-25.0661" fill="#654641" font-family="Gentium Book Basic" word-spacing="0" line-height="125%" letter-spacing="0" font-size="132.57143"><tspan y="290.08667" x="-25.0661"/>
+ </text>
+ <text transform="scale(4.0128362,0.2492003)" font-size="48.1697" y="805.87994" x="195.9361" fill="#654641" font-family="Arial" text-anchor="middle"/>
+ <text y="270.20966" x="237.18375" fill="#000" font-family="Gentium Book Basic" word-spacing="0" line-height="125%" letter-spacing="0" font-size="208.33334"><tspan y="270.20966" x="237.18375"/>
+ </text>
+ <text x="-55.89325" y="112.37323" fill="#000" font-family="Gentium Book Basic" word-spacing="0" line-height="125%" letter-spacing="0" font-size="208.33334"><tspan x="-55.89325" y="112.37323"/>
+ </text>
+ <path d="M 187.5 40 C 105.7824 40 40 105.7824 40 187.5 L 40 255.84375 L 256.03125 255.84375 L 256.03125 40 L 187.5 40 z" fill="#9a3034"/>
+ <path d="m 259.40238 123.73613 c -18.6199 0 -33.71432 10.44998 -33.71432 23.34068 0.54166 4.80922 3.58197 10.88212 5.18681 12.96705 7.78023 10.37363 7.78023 16.85715 5.83518 20.74727 l -62.89018 0 c -11.49398 0 -20.74727 9.25329 -20.74727 20.74727 l 0 52.51655 C 156.96271 256 163.44624 256 173.81987 248.21977 c 2.08493 -1.60486 8.15783 -4.64516 12.96705 -5.18682 12.8907 0 23.34069 15.09441 23.34069 33.71433 0 18.6199 -10.44999 33.71432 -23.34069 33.71432 -3.9563 -0.067 -9.97099 -3.60539 -12.96705 -5.18683 -10.37363 -7.78023 -16.85716 -7.78023 -20.74727 -5.83516 l 0 68.07699 c 0 11.49398 9.25329 20.74727 20.74727 20.74727 l 83.63746 0 c 1.94505 -3.89011 1.94505 -10.37363 -5.83518 -20.74727 -1.60486 -2.08493 -4.64516 -8.15783 -5.18682 -12.96704 0 -12.89071 15.09442 -23.34069 33.71433 -23.34069 18.6199 0 33.71432 10.44998 33.71432 23.34069 -0.067 3.9563 -3.60539 9.97098 -5.18683 12.96704 -7.78022 10.37364 -7.78022 16.85716 -5.83516 20.74727 l 36.95608 0 c 11.49398 0 20.74727 -9.25329 20.74727 -20.74727 l 0 -57.70336 c 3.89012 -1.94505 10.37364 -1.94505 20.74728 5.83518 2.99606 1.58143 9.01073 5.1198 12.96704 5.18681 12.89071 0 23.34068 -15.09442 23.34068 -33.71432 0 -18.6199 -10.44997 -33.71432 -23.34068 -33.71432 -4.80921 0.54166 -10.88212 3.58197 -12.96704 5.18682 -10.37364 7.78022 -16.85716 7.78022 -20.74728 5.83517 l 0 -62.89018 c 0 -11.49398 -9.25329 -20.74727 -20.74727 -20.74727 l -57.70336 0 c -1.94505 -3.89012 -1.94505 -10.37364 5.83518 -20.74727 1.58143 -2.99605 5.1198 -9.01074 5.18681 -12.96705 0 -12.8907 -15.09442 -23.34068 -33.71432 -23.34068 z" fill="#fff8eb" color="#000"/>
+</svg>

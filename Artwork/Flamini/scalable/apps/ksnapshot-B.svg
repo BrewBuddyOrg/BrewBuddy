@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" height="512" width="512">
+ <g transform="translate(0,-540.36217)">
+  <path d="m 305.71429 246.28572 a 82.85714 82.85714 0 1 1 -165.71428 0 82.85714 82.85714 0 1 1 165.71428 0 z" transform="matrix(3.0172415,0,0,3.0172415,-416.41383,53.258672)" fill="#00a9ec" fill-rule="evenodd"/>
+  <text y="619.64386" x="-299.47046" font-family="Gentium Book Basic" word-spacing="0" line-height="125%" letter-spacing="0" font-size="208.33333"><tspan y="619.64386" x="-299.47046"/>
+  </text>
+  <text x="-2658.3013" y="897.75989" font-family="Gentium Book Basic" word-spacing="0" line-height="125%" letter-spacing="0" font-size="208.33333"><tspan x="-2658.3013" y="897.75989"/>
+  </text>
+  <text x="-2370.0864" y="670.47504" font-family="Gentium Book Basic" word-spacing="0" line-height="125%" letter-spacing="0" font-size="208.33333"><tspan x="-2370.0864" y="670.47504"/>
+  </text>
+  <text x="1824.5126" y="413.5752" font-family="Gentium Book Basic" word-spacing="0" line-height="125%" letter-spacing="0" font-size="208.33333"><tspan x="1824.5126" y="413.5752"/>
+  </text>
+  <text y="558.60944" x="-303.41788" font-family="Gentium Book Basic" word-spacing="0" line-height="125%" letter-spacing="0" font-size="208.33333"><tspan y="558.60944" x="-303.41788"/>
+  </text>
+  <text x="-2662.2485" y="836.72546" font-family="Gentium Book Basic" word-spacing="0" line-height="125%" letter-spacing="0" font-size="208.33333"><tspan x="-2662.2485" y="836.72546"/>
+  </text>
+  <text x="-2374.0337" y="609.44055" font-family="Gentium Book Basic" word-spacing="0" line-height="125%" letter-spacing="0" font-size="208.33333"><tspan x="-2374.0337" y="609.44055"/>
+  </text>
+  <path d="m 108.709 646.53402 0 85.93126 42.05557 0 0 -43.1311 40.26304 0 0 -42.80016 -82.31861 0 z m 97.89981 0 0 42.80016 41.77983 0 0 -42.80016 -41.77983 0 z m 59.15362 0 0 42.80016 39.98726 0 0 -42.80016 -39.98726 0 z m 55.56847 0 0 42.80016 39.90457 0 0 43.1311 42.05553 0 0 -85.93126 -81.9601 0 z m -212.6219 101.5125 0 41.7798 42.05557 0 0 -41.7798 -42.05557 0 z m 252.52647 0 0 41.7798 42.05553 0 0 -41.7798 -42.05553 0 z M 108.709 807.2001 l 0 39.98727 42.05557 0 0 -39.98727 -42.05557 0 z m 252.52647 0 0 39.98727 42.05553 0 0 -39.98727 -42.05553 0 z m -252.52647 55.56851 0 83.42171 82.31861 0 0 -42.77259 -40.26304 0 0 -40.64912 -42.05557 0 z m 252.52647 0 0 40.64912 -39.90457 0 0 42.77259 81.9601 0 0 -83.42171 -42.05553 0 z m -154.62666 40.64912 0 42.77259 41.77983 0 0 -42.77259 -41.77983 0 z m 59.15362 0 0 42.77259 39.98726 0 0 -42.77259 -39.98726 0 z" fill="#fff8eb" fill-rule="evenodd"/>
+  <path d="M 361.34375 385.84375 L 361.34375 482.75 C 376.16152 475.85373 390.21287 467.57428 403.28125 458.03125 L 403.28125 385.84375 L 361.34375 385.84375 z" transform="translate(0,540.36217)" fill="#fff8eb" fill-rule="evenodd"/>
+  <path d="M 383.9375 363.15625 L 383.9375 405.84375 L 456.15625 405.84375 C 466.09843 392.58403 474.72316 378.2715 481.90625 363.15625 L 383.9375 363.15625 z" transform="translate(0,540.36217)" fill="#fff8eb" fill-rule="evenodd"/>
+ </g>
+</svg>

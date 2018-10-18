@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512">
+ <defs>
+  <filter x="-0.192" y="-0.192" width="1.384" height="1.384" color-interpolation-filters="sRGB">
+   <feGaussianBlur stdDeviation="5.28"/>
+  </filter>
+  <clipPath>
+   <rect width="84" height="84" rx="6" x="6" y="6" fill="#fff"/>
+  </clipPath>
+  <filter color-interpolation-filters="sRGB">
+   <feGaussianBlur stdDeviation="1.71"/>
+  </filter>
+  <clipPath>
+   <rect width="84" height="84" rx="6" x="6" y="6" fill="#fff"/>
+  </clipPath>
+  <clipPath>
+   <path d="M 0 0 0 96 96 96 96 0 0 0 z m 12 6 72 0 c 3.324 0 6 2.676 6 6 l 0 72 c 0 3.324 -2.676 6 -6 6 L 12 90 C 8.676 90 6 87.324 6 84 L 6 12 C 6 8.676 8.676 6 12 6 z"/>
+  </clipPath>
+  <clipPath>
+   <rect width="76" height="76" rx="4" x="10" y="10" fill="#fff"/>
+  </clipPath>
+  <filter color-interpolation-filters="sRGB">
+   <feGaussianBlur stdDeviation="1.14"/>
+  </filter>
+  <clipPath>
+   <rect y="6" x="6" rx="6" height="84" width="84" fill="#fff"/>
+  </clipPath>
+  <clipPath>
+   <rect y="6" x="6" rx="6" height="84" width="84" fill="#fff"/>
+  </clipPath>
+  <linearGradient y1="92.5396" x2="0" y2="7.01654" id="0" gradientUnits="userSpaceOnUse" gradientTransform="scale(1.0058652,0.994169)">
+   <stop/>
+   <stop offset="1" stop-opacity="0.588235"/>
+  </linearGradient>
+  <linearGradient y1="20.220806" x2="0" y2="138.66119" xlink:href="#1" gradientUnits="userSpaceOnUse"/>
+  <linearGradient id="1">
+   <stop stop-color="#fff"/>
+   <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+  </linearGradient>
+  <clipPath>
+   <rect width="84" height="84" rx="6" x="6" y="6" fill="#fff"/>
+  </clipPath>
+  <linearGradient y2="7.01654" x2="0" y1="92.5396" gradientTransform="scale(1.0058652,0.994169)" gradientUnits="userSpaceOnUse" xlink:href="#0"/>
+  <linearGradient gradientUnits="userSpaceOnUse" xlink:href="#1" y2="138.66119" x2="0" y1="20.220806"/>
+  <clipPath>
+   <rect y="6" x="6" rx="6" height="84" width="84" fill="#fff"/>
+  </clipPath>
+  <linearGradient xlink:href="#0" gradientUnits="userSpaceOnUse" gradientTransform="scale(1.0058652,0.994169)" y1="92.5396" x2="0" y2="7.01654"/>
+ </defs>
+ <g transform="translate(0,-540.36218)">
+  <path d="M 6.0625 255.6875 L 6.0625 260.28125 C 8.282948 392.0734 112.44944 499.06354 243.125 505.6875 L 256.0625 505.6875 L 256.0625 255.6875 L 6.0625 255.6875 z" transform="translate(0,540.36218)" fill="#924565"/>
+  <path d="M 256.0625 255.6875 L 256.0625 505.6875 L 268.875 505.6875 C 400.96747 498.99172 506 389.75646 506 256 C 506 255.8953 506.00013 255.79217 506 255.6875 L 256.0625 255.6875 z" transform="translate(0,540.36218)" fill="#e4a146"/>
+  <text y="959.68372" x="84.865" transform="scale(1.0508243,0.95163388)" fill="#654641" font-family="Gentium Book Basic" word-spacing="0" line-height="125%" letter-spacing="0" font-size="84.76714"><tspan y="959.68372" x="84.865"/>
+  </text>
+  <text transform="scale(4.2167858,0.23714745)" font-size="30.800055" y="3622.0237" x="150.4254" fill="#654641" font-family="Arial" text-anchor="middle"/>
+  <text y="936.18671" x="352.67346" transform="scale(1.0508243,0.95163388)" fill="#654641" font-family="Gentium Book Basic" word-spacing="0" line-height="125%" letter-spacing="0" font-size="45.37838"><tspan y="936.18671" x="352.67346"/>
+  </text>
+  <text transform="scale(4.2167855,0.23714746)" font-size="16.488192" y="3634.1572" x="157.09219" fill="#654641" font-family="Arial" text-anchor="middle"/>
+  <text y="992.75818" x="-651.73114" fill="#654641" font-family="Gentium Book Basic" word-spacing="0" line-height="125%" letter-spacing="0" font-size="132.57143"><tspan y="992.75818" x="-651.73114"/>
+  </text>
+  <text transform="scale(4.0128362,0.2492003)" font-size="48.1697" y="3625.5857" x="39.770977" fill="#654641" font-family="Arial" text-anchor="middle"/>
+  <path d="M 256.0625 6 L 256.0625 255.6875 L 506 255.6875 C 505.83044 117.78162 394.00012 6.03392 256.0625 6 z" transform="translate(0,540.36218)" fill="#366378"/>
+  <path d="M 256 6 C 119.36356 6 8.355352 115.62915 6.0625 251.71875 L 6.0625 255.6875 L 256.0625 255.6875 L 256.0625 6 C 256.04156 5.999995 256.02094 6 256 6 z" transform="translate(0,540.36218)" fill="#9a3034"/>
+  <path d="m 6.24326 796.36218 499.51348 0" fill="#62c0dc" stroke="#707175" stroke-width="0.697506"/>
+  <path d="m 256 546.60546 0 499.51344" fill="#62c0dc" stroke="#707175" stroke-width="0.697506"/>
+  <path d="M 256 35 C 133.94031 35 35 133.94031 35 256 C 35 378.05969 133.94031 477 256 477 C 378.05969 477 477 378.05969 477 256 C 477 133.94031 378.05969 35 256 35 z M 256 45.59375 C 372.20183 45.59375 466.40625 139.79817 466.40625 256 C 466.40625 372.20183 372.20183 466.40625 256 466.40625 C 139.79817 466.40625 45.59375 372.20183 45.59375 256 C 45.59375 139.79817 139.79817 45.59375 256 45.59375 z" transform="translate(0,540.36218)" fill="#fff8eb" fill-rule="evenodd" stroke="#fff8eb" stroke-width="10"/>
+  <text y="972.88116" x="-389.48129" fill="#000" font-family="Gentium Book Basic" word-spacing="0" line-height="125%" letter-spacing="0" font-size="208.33334"><tspan y="972.88116" x="-389.48129"/>
+  </text>
+  <path d="m 237.68764 940.99999 c -4.69639 -5.18292 -7.04995 -10.20609 -7.04995 -15.04648 0 -6.35494 -6.1604 -11.69795 -19.97342 -17.32326 -15.49535 -6.3104 -17.93811 -6.32336 -29.07241 -0.15427 -13.61507 7.5436 -16.8086 6.86761 -29.94696 -6.33888 -13.15939 -13.22762 -13.80007 -16.34242 -6.27645 -30.51451 6.12819 -11.54353 6.16303 -10.57109 -0.99643 -27.81482 -6.56311 -15.8074 -9.11617 -18.29734 -22.21682 -21.66743 -12.46711 -3.2071 -14.502 -6.58743 -14.502 -24.0905 0 -17.51353 2.34136 -21.47126 15.18886 -25.67451 11.28313 -3.69145 13.92396 -6.18013 19.45567 -18.33486 7.30449 -16.04988 7.5261 -21.06572 1.44345 -32.66912 -6.79089 -12.95443 -5.94464 -16.99658 6.12483 -29.2566 10.70789 -10.87689 21.59373 -13.14032 30.25631 -6.29099 7.14395 5.64856 11.36062 5.6461 25.96505 -0.0149 16.07247 -6.23038 19.39445 -9.37849 23.5788 -22.34522 4.59592 -14.24214 6.54841 -15.4483 25.00848 -15.4483 19.91982 0 21.55679 1.44195 27.69673 24.39796 0.97553 3.64762 5.8858 6.50999 24.30703 14.16942 8.89615 3.69896 12.48819 3.34153 23.16683 -2.30484 14.27482 -7.54795 19.07064 -6.33741 32.63289 8.23686 9.21075 9.89821 10.05098 19.22192 2.6402 29.29754 -4.91325 6.68001 -4.62104 11.66285 1.5637 26.66595 6.55358 15.89806 8.23677 17.57784 21.63044 21.58735 14.86364 4.44955 16.6596 7.70697 15.88448 28.81109 -0.64927 17.67839 -2.63917 21.20013 -12.91232 22.85139 -13.8301 2.22298 -17.38357 5.29547 -23.719 20.50833 -6.51073 15.63412 -6.26901 19.25702 2.13839 32.05297 5.72333 8.7107 3.17789 16.07673 -9.88332 28.59961 -11.12258 10.66409 -18.27598 11.39563 -30.40736 3.10944 -7.85951 -5.36839 -9.19444 -5.27404 -26.59549 1.87979 -15.94519 6.55524 -17.81132 8.64474 -21.17938 23.71367 -2.5334 11.33472 -5.88411 13.11705 -24.65996 13.11705 -14.43148 0 -16.2466 -0.34894 -19.29087 -3.70867 z M 275.74698 839.4741 c 30.45694 -14.48352 37.23036 -52.95 13.59694 -77.21863 -24.33604 -24.99015 -66.10161 -15.79034 -78.41696 17.27318 -14.88927 39.97336 26.44142 78.19596 64.82002 59.94545 z" fill="#fff8eb" fill-opacity="0.968627"/>
+  <text x="-682.55829" y="815.04474" fill="#000" font-family="Gentium Book Basic" word-spacing="0" line-height="125%" letter-spacing="0" font-size="208.33334"><tspan x="-682.55829" y="815.04474"/>
+  </text>
+ </g>
+</svg>

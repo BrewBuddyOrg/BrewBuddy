@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="512"
+   height="512"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="application-x-tex-gf.svg">
+  <metadata
+     id="metadata34">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="640"
+     inkscape:window-height="743"
+     id="namedview32"
+     showgrid="false"
+     inkscape:zoom="1.0117188"
+     inkscape:cx="152.71042"
+     inkscape:cy="223.87645"
+     inkscape:window-x="57"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg2"
+     showguides="true"
+     inkscape:guide-bbox="true">
+    <sodipodi:guide
+       orientation="1,0"
+       position="278.73359,377.57529"
+       id="guide13021" />
+  </sodipodi:namedview>
+  <defs
+     id="defs4">
+    <linearGradient
+       id="0">
+      <stop
+         stop-color="#b74044"
+         id="stop7" />
+      <stop
+         offset="1"
+         stop-color="#9a3034"
+         id="stop9" />
+    </linearGradient>
+    <radialGradient
+       xlink:href="#0"
+       id="1"
+       cx="256"
+       cy="256"
+       r="216"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <rect
+     rx="147.5047"
+     width="450"
+     height="450"
+     x="31"
+     y="31"
+     opacity="0.25"
+     fill="#282629"
+     id="rect12" />
+  <rect
+     rx="147.5047"
+     width="444"
+     height="444"
+     x="34"
+     y="34"
+     opacity="0.25"
+     fill="#282629"
+     id="rect14" />
+  <rect
+     y="37"
+     x="37"
+     height="438"
+     width="438"
+     rx="147.5047"
+     opacity="0.25"
+     fill="#282629"
+     id="rect16" />
+  <rect
+     rx="147.5047"
+     width="432"
+     height="432"
+     x="40"
+     y="40"
+     fill="url(#1)"
+     id="rect18" />
+  <path
+     d="m 405.40625 214.40625 c -21.11756 0.30581 -42.25382 8.28531 -57.1875 23.34375 -25.24687 29.6143 -27.566 75.15358 -11.75 110 13.32147 28.47326 45.02011 39.08771 74.375 37.6875 35.90829 -0.7446 57.13965 -25.05467 61.09375 -59.40625 L 438.25 316.5 c -2.90622 14.88122 -13.77896 38.0876 -34.15625 34.625 C 384.1955 350.35056 371.77212 330.61325 371 311.78125 c -1.76514 -21.12416 0.80145 -49.76159 23.09375 -58.65625 18.00099 -7.47405 40.68938 4.87142 41.5625 25.5625 L 472 269.75 l 0 -14.0625 c -5.35003 -12.55553 -13.6271 -23.82453 -25.25 -30.90625 -12.46164 -7.18608 -26.8949 -10.58424 -41.34375 -10.375 z"
+     fill="#fff8eb"
+     id="path20" />
+  <path
+     d="m 199.36245 243.38974 c -1.26802 -12.07947 33.78392 -2.20447 22.46565 -22.97316 -4.33611 -13.00831 -8.67221 -26.01662 -13.00831 -39.02493 -22.06712 0 -44.13424 0 -66.20136 0 -4.80332 15.52695 -11.62163 30.72547 -14.90846 46.49857 0.35569 10.73333 37.09656 9.23746 21.2912 15.49952 -19.64117 0 -39.28234 0 -58.9235 0 0.69021 -10.84595 26.06746 -5.86967 26.27039 -23.11793 21.36656 -57.44457 42.73316 -114.88912 64.09971 -172.33369 5.42623 0.599598 14.33263 -4.404752 17.49116 -0.153563 20.23521 57.41411 39.58935 115.18224 60.39222 172.36822 2.0956 15.22102 25.11635 12.51045 26.14732 23.23696 -28.372 0 -56.74401 0 -85.11602 0 z m -52.54076 -74.60787 c 19.26494 0 38.52989 0 57.79484 0 -9.10706 -27.67148 -18.21414 -55.34293 -27.32121 -83.01439 -10.15787 27.671464 -20.31574 55.34291 -30.47363 83.01439 z"
+     fill="#fff8eb"
+     id="path22" />
+  <path
+     d="m 317.09761 121.6692 c -21.51104 -0.21966 -42.67983 5.8303 -63.58766 10.47845 -20.19923 -8.41588 -17.21278 27.76366 -1.2133 24.34862 3.87861 21.73921 4.07496 44.02287 1.90267 65.9591 3.21926 18.20274 -20.58664 30.3492 -4.57743 45.19522 -1.50052 16.94139 18.83337 24.3768 22.96988 6.0389 20.0706 10.04179 44.04657 13.87925 66.0694 9.67879 25.25544 -6.48763 40.79398 -31.7013 41.91381 -56.7491 -0.43037 -19.79009 -20.21657 -29.13616 -37.36396 -31.04931 6.75521 -5.97342 29.26796 -24.0795 26.30643 -42.82378 0.24172 -19.59928 -20.60299 -28.9308 -37.47425 -29.80845 -4.99836 -0.81137 -9.9815 -1.21774 -14.94559 -1.26844 z m 9.01698 18.19942 c 15.84576 -0.28852 25.8556 12.97976 19.74362 27.87819 -9.24752 21.19256 -35.36352 24.61647 -55.86671 25.20344 -22.69468 6.25812 -10.88948 -18.77179 -12.90503 -32.3729 -1.57537 -22.63768 32.89542 -19.35509 49.02812 -20.70873 z m -9.04455 68.52356 c 13.00743 -0.0141 25.59082 2.65333 35.51643 11.80206 12.9071 17.01303 -3.36092 37.76915 -20.01935 44.28524 -20.33931 6.95104 -42.36852 1.0082 -59.97535 -10.14754 6.09961 -12.86701 -6.10585 -39.2051 10.53359 -42.21715 10.65171 -1.61733 22.46753 -3.71023 33.94468 -3.72261 z"
+     fill="#fff8eb"
+     id="path24" />
+  <path
+     d="m 42.03125 349.1875 c 6.66431 39.88254 29.23456 74.2205 61 96.375 l 177.1875 0 c 29.05844 0 52.46875 -21.49575 52.46875 -48.1875 0 -26.69175 -23.41031 -48.1875 -52.46875 -48.1875 l -237.5625 0 c -0.21107 0 -0.41454 -0.002 -0.625 0 z"
+     fill="#fff8eb"
+     fill-rule="evenodd"
+     id="path26" />
+  <text
+     x="138.87662"
+     y="415.90903"
+     font-style="italic"
+     word-spacing="0"
+     line-height="125%"
+     font-weight="bold"
+     letter-spacing="0"
+     font-size="70.62069"
+     id="text28"
+     sodipodi:linespacing="125%"
+     style="font-size:70.62068939px;font-style:italic;font-weight:bold;line-height:125%;letter-spacing:0;word-spacing:0;fill:#9a3034;font-family:Sans">
+    <tspan
+       x="138.87662"
+       y="415.90903"
+       id="tspan30">.gf</tspan>
+  </text>
+</svg>

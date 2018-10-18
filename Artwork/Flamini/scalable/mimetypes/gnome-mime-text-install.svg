@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512">
+ <defs>
+  <linearGradient id="0">
+   <stop stop-color="#f38e73"/>
+   <stop offset="1" stop-color="#ef6a47"/>
+  </linearGradient>
+  <filter x="-0.192" y="-0.192" width="1.384" height="1.384" color-interpolation-filters="sRGB">
+   <feGaussianBlur stdDeviation="5.28"/>
+  </filter>
+  <clipPath>
+   <rect width="84" height="84" rx="6" x="6" y="6" fill="#fff"/>
+  </clipPath>
+  <filter color-interpolation-filters="sRGB">
+   <feGaussianBlur stdDeviation="1.71"/>
+  </filter>
+  <clipPath>
+   <rect width="84" height="84" rx="6" x="6" y="6" fill="#fff"/>
+  </clipPath>
+  <clipPath>
+   <path d="M 0 0 0 96 96 96 96 0 0 0 z m 12 6 72 0 c 3.324 0 6 2.676 6 6 l 0 72 c 0 3.324 -2.676 6 -6 6 L 12 90 C 8.676 90 6 87.324 6 84 L 6 12 C 6 8.676 8.676 6 12 6 z"/>
+  </clipPath>
+  <clipPath>
+   <rect width="76" height="76" rx="4" x="10" y="10" fill="#fff"/>
+  </clipPath>
+  <filter color-interpolation-filters="sRGB">
+   <feGaussianBlur stdDeviation="1.14"/>
+  </filter>
+  <clipPath>
+   <rect y="6" x="6" rx="6" height="84" width="84" fill="#fff"/>
+  </clipPath>
+  <clipPath>
+   <rect y="6" x="6" rx="6" height="84" width="84" fill="#fff"/>
+  </clipPath>
+  <radialGradient xlink:href="#0" id="1" cx="256" cy="256" r="216" gradientUnits="userSpaceOnUse"/>
+ </defs>
+ <rect rx="147.5047" width="450" height="450" x="31" y="31" opacity="0.25" fill="#282629"/>
+ <rect rx="147.5047" width="444" height="444" x="34" y="34" opacity="0.25" fill="#282629"/>
+ <rect y="37" x="37" height="438" width="438" rx="147.5047" opacity="0.25" fill="#282629"/>
+ <rect rx="147.5047" width="432" height="432" x="40" y="40" fill="url(#1)"/>
+ <text y="-126.05255" x="63.03957" transform="scale(1.0508243,0.95163388)" fill="#654641" font-family="Gentium Book Basic" word-spacing="0" line-height="125%" letter-spacing="0" font-size="84.76714"><tspan y="-126.05255" x="63.03957"/>
+ </text>
+ <text transform="scale(4.2167858,0.23714745)" font-size="30.800055" y="-734.85828" x="144.9865" fill="#654641" font-family="Arial" text-anchor="middle"/>
+ <text y="-149.54956" x="330.84805" transform="scale(1.0508243,0.95163388)" fill="#654641" font-family="Gentium Book Basic" word-spacing="0" line-height="125%" letter-spacing="0" font-size="45.37838"><tspan y="-149.54956" x="330.84805"/>
+ </text>
+ <text transform="scale(4.2167856,0.23714746)" font-size="16.488192" y="-722.72461" x="151.65329" fill="#654641" font-family="Arial" text-anchor="middle"/>
+ <text y="-40.465267" x="-674.66577" fill="#654641" font-family="Gentium Book Basic" word-spacing="0" line-height="125%" letter-spacing="0" font-size="132.57143"><tspan y="-40.465267" x="-674.66577"/>
+ </text>
+ <text transform="scale(4.0128362,0.2492003)" font-size="48.1697" y="-520.57092" x="34.05565" fill="#654641" font-family="Arial" text-anchor="middle"/>
+ <path d="m 159.9824 200.18946 96.01759 119.7356 96.0176 -119.7356 -192.03519 0 z" fill="#fff8eb" stroke="#fff8eb" stroke-linejoin="round" stroke-linecap="round" stroke-width="17.6626"/>
+ <path d="M 206.3125 40 L 206.3125 199.34375 L 305.6875 199.34375 L 305.6875 40 L 206.3125 40 z" fill="#fff8eb"/>
+ <path d="M 135.63372 219.22425 255.19219 366.51026 376.36629 218.70195" fill="none" stroke="#fff8eb" stroke-linejoin="round" stroke-linecap="round" stroke-width="15.750854"/>
+ <rect width="220.71832" height="30.911411" x="145.64081" y="380.59686" ry="14.394673" rx="18.561563" fill="#fff8eb"/>
+ <path fill="#ef6a47" stroke="#ef6a47" stroke-linejoin="round" stroke-linecap="round" stroke-width="4.678737" stroke-dashoffset="200" d="M 195.375,66.4319 H306.411 V70.3246 H195.375 z"/>
+ <path fill="#ef6a47" stroke="#ef6a47" stroke-linejoin="round" stroke-linecap="round" stroke-width="4.678737" stroke-dashoffset="200" d="M 195.375,90.0033 H306.411 V93.896 H195.375 z"/>
+ <path fill="#ef6a47" stroke="#ef6a47" stroke-linejoin="round" stroke-linecap="round" stroke-width="4.678737" stroke-dashoffset="200" d="M 195.375,118.575 H306.411 V122.467 H195.375 z"/>
+</svg>

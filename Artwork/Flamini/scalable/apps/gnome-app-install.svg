@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512">
+ <defs>
+  <filter x="-0.192" y="-0.192" width="1.384" height="1.384" color-interpolation-filters="sRGB">
+   <feGaussianBlur stdDeviation="5.28"/>
+  </filter>
+  <clipPath>
+   <rect width="84" height="84" rx="6" x="6" y="6" fill="#fff"/>
+  </clipPath>
+  <filter color-interpolation-filters="sRGB">
+   <feGaussianBlur stdDeviation="1.71"/>
+  </filter>
+  <clipPath>
+   <rect width="84" height="84" rx="6" x="6" y="6" fill="#fff"/>
+  </clipPath>
+  <filter color-interpolation-filters="sRGB">
+   <feGaussianBlur stdDeviation="1.14"/>
+  </filter>
+  <clipPath>
+   <rect y="10" x="10" rx="4" height="76" width="76" fill="#fff"/>
+  </clipPath>
+  <clipPath>
+   <path d="M 0 0 0 96 96 96 96 0 0 0 z m 12 6 72 0 c 3.324 0 6 2.676 6 6 l 0 72 c 0 3.324 -2.676 6 -6 6 L 12 90 C 8.676 90 6 87.324 6 84 L 6 12 C 6 8.676 8.676 6 12 6 z"/>
+  </clipPath>
+  <clipPath>
+   <rect y="6" x="6" rx="6" height="84" width="84" fill="#fff"/>
+  </clipPath>
+  <clipPath>
+   <rect y="6" x="6" rx="6" height="84" width="84" fill="#fff"/>
+  </clipPath>
+ </defs>
+ <g transform="translate(0,-540.36218)">
+  <path d="m 562.85715 -316.57144 c 0 198.82251 -161.17749 360 -360 360 -198.82251 0 -360 -161.17749 -360 -360 0 -198.82251 161.17749 -360 360 -360 198.82251 0 360 161.17749 360 360 z" transform="matrix(0.69444444,0,0,0.69444444,115.12698,1016.2035)" fill="#ef6a47" fill-rule="evenodd"/>
+  <path d="m 256 564.92914 c -127.80931 0 -231.43304 103.62373 -231.43304 231.43304 0 127.80931 103.62373 231.43302 231.43304 231.43302 127.80931 0 231.43304 -103.62371 231.43304 -231.43302 C 487.43304 668.55287 383.80931 564.92914 256 564.92914 z m 0 27.55702 c 112.6 0 203.87602 91.27602 203.87602 203.87602 0 112.6 -91.27602 203.87602 -203.87602 203.87602 -112.6 0 -203.87602 -91.27602 -203.87602 -203.87602 0 -112.6 91.27602 -203.87602 203.87602 -203.87602 z" fill="#fff8eb" fill-rule="evenodd"/>
+  <text y="574.81519" x="-672.08502" transform="scale(1.0508243,0.95163388)" fill="#654641" font-family="Gentium Book Basic" word-spacing="0" line-height="125%" letter-spacing="0" font-size="84.76714"><tspan y="574.81519" x="-672.08502"/>
+  </text>
+  <text transform="scale(4.2167858,0.23714745)" font-size="30.800055" y="2077.6091" x="-38.20677" fill="#654641" font-family="Arial" text-anchor="middle"/>
+  <text y="551.31818" x="-404.27655" transform="scale(1.0508243,0.95163388)" fill="#654641" font-family="Gentium Book Basic" word-spacing="0" line-height="125%" letter-spacing="0" font-size="45.37838"><tspan y="551.31818" x="-404.27655"/>
+  </text>
+  <text transform="scale(4.2167856,0.23714746)" font-size="16.488192" y="2089.7427" x="-31.539989" fill="#654641" font-family="Arial" text-anchor="middle"/>
+  <text y="626.50421" x="-1447.1526" fill="#654641" font-family="Gentium Book Basic" word-spacing="0" line-height="125%" letter-spacing="0" font-size="132.57143"><tspan y="626.50421" x="-1447.1526"/>
+  </text>
+  <text transform="scale(4.0128362,0.2492003)" font-size="48.1697" y="2155.8684" x="-158.44829" fill="#654641" font-family="Arial" text-anchor="middle"/>
+  <path d="M 159.98242 744.53051 256 864.26611 l 96.01758 -119.7356 -192.03516 0 z" fill="#fff8eb" stroke="#fff8eb" stroke-linejoin="round" stroke-linecap="round" stroke-width="17.6626"/>
+  <path d="m 256 578.10407 c -17.01729 0 -33.62506 1.43345 -49.6875 4.11981 l 0 161.44979 99.375 0 0 -161.44979 C 289.62506 579.53752 273.01729 578.10407 256 578.10407 z" fill="#fff8eb"/>
+  <path d="M 135.63374 763.5653 255.19218 910.85131 376.36626 763.043" fill="none" stroke="#fff8eb" stroke-linejoin="round" stroke-linecap="round" stroke-width="15.750854"/>
+  <rect width="220.71832" height="30.911411" x="145.64084" y="924.93793" ry="14.394673" rx="18.561563" fill="#fff8eb"/>
+  <g transform="translate(0,-3.0392206e-5)">
+   <path fill="#ef6a47" stroke="#ef6a47" stroke-linejoin="round" stroke-linecap="round" stroke-width="4.678737" stroke-dashoffset="200" d="M 195.375,610.773 H306.411 V614.666 H195.375 z"/>
+   <g transform="translate(0,5.0000176)">
+    <path fill="#ef6a47" stroke="#ef6a47" stroke-linejoin="round" stroke-linecap="round" stroke-width="4.678737" stroke-dashoffset="200" d="M 195.375,629.344 H306.411 V633.237 H195.375 z"/>
+    <path fill="#ef6a47" stroke="#ef6a47" stroke-linejoin="round" stroke-linecap="round" stroke-width="4.678737" stroke-dashoffset="200" d="M 195.375,657.916 H306.411 V661.808 H195.375 z"/>
+   </g>
+  </g>
+ </g>
+</svg>

@@ -1,0 +1,1320 @@
+unit BH_report;
+
+{$mode objfpc}{$H+}
+
+interface
+
+uses
+  Classes, SysUtils, Graphics, ExtCtrls, Printers;
+
+type
+  TBtmpArr = array of TBitmap;
+
+  TBHRDocument = class;
+
+  TBHRElement = class(TObject)
+    Constructor Create(D : TBHRDocument; PNr : integer); virtual;
+    Destructor Destroy; override;
+   private
+     FDocument : TBHRDocument;
+     FRect : TRect;
+     FPageNr : integer;
+     Procedure SetRect(R : TRect);
+     Function GetLeft : word;
+     Function GetRight : word;
+     Function GetTop : word;
+     Function GetBottom : word;
+     Procedure SetLeft(l : word); virtual;
+     Procedure SetRight(r : word); virtual;
+     procedure SetTop(t : word); virtual;
+     Procedure SetBottom(b : word); virtual;
+   protected
+   public
+     Procedure Draw(ABtmp : TBtmpArr); virtual;
+     Procedure CalcRect(Cnvs : TCanvas); virtual;
+     property Rect : TRect read FRect write SetRect;
+     property Left : word read GetLeft write SetLeft;
+     property Right : word read GetRight write SetRight;
+     property Top : word read GetTop write SetTop;
+     property Bottom : word read GetBottom write SetBottom;
+     property PageNr : integer read FPageNr write FPageNr;
+   published
+  end;
+
+  TWhere = (twAbove, twBelow);
+  TLineProps = record
+    Rect : TRect;
+    PageNr : integer;
+    TextRect : TRect;
+  end;
+
+  TBHRText = class(TBHRElement)
+    Constructor Create(D : TBHRDocument; PNr : integer); override;
+    Destructor Destroy; override;
+   private
+    FStrings : TStringList;
+    FFont : TFont;
+    FBrush : TBrush;
+    FPen : TPen;
+    FAlignment : TAlignment;
+    FLineProps : Array of TLineProps;
+    FKeepTogether : boolean;
+    FMarge : word;
+    FAutoSize : boolean;
+    FCheckBoxes : boolean;
+    FCheckBoxSize : Longint;
+    FFontHeight : integer;
+    Function GetString(i : integer) : string;
+    Procedure SetString(i : integer; s : string);
+    Procedure SetMarge(w : word);
+   protected
+   public
+    Procedure Draw(ABtmp : TBtmpArr); override;
+    Procedure CalcRect(Cnvs : TCanvas); override;
+    Procedure AddString(s : string);
+    Procedure RemoveString(i : integer);
+    Procedure InsertString(s : string; i : integer; Where : TWhere);
+    property Line[i : integer] : string read GetString write SetString;
+   published
+    property Font : TFont read FFont;
+    property Brush : TBrush read FBrush;
+    property Pen : TPen read FPen;
+    property Alignment : TAlignment read FAlignment write FAlignment;
+    property KeepTogether : boolean read FKeepTogether write FKeepTogether;
+    property Marge : word read FMarge write SetMarge;
+    property AutoSize : boolean read FAutoSize write FAutoSize;
+    property CheckBoxes : boolean read FCheckBoxes write FCheckBoxes;
+    property CheckBoxSize : LongInt read FCheckBoxSize write FCheckBoxSize;
+  end;
+
+  TBHRImage = class(TBHRElement)
+    Constructor Create(D : TBHRDocument; PNr : integer); override;
+    Destructor Destroy; override;
+   private
+     FPicture : TPicture;
+     FStretch : boolean;
+   protected
+   public
+     Procedure Draw(ABtmp : TBtmpArr); override;
+     Procedure CalcRect(Cnvs : TCanvas); override;
+   published
+     property Picture : TPicture read FPicture;
+     property Stretch : boolean read FStretch write FStretch;
+  end;
+
+  TBHRCell = class(TBHRElement)
+    Constructor Create(D : TBHRDocument; PNr : integer); override;
+    Destructor Destroy; override;
+   private
+     FText : TBHRText;
+     Procedure SetLeft(l : word); override;
+     Procedure SetRight(r : word); override;
+     procedure SetTop(t : word); override;
+     Procedure SetBottom(b : word); override;
+     Function GetFont : TFont;
+     Function GetBrush : TBrush;
+     Function GetPen : TPen;
+     Function GetAlignment : TAlignment;
+     Procedure SetAlignment(al : TAlignment);
+     Function GetKeepTogether : boolean;
+     Procedure SetKeepTogether(b : boolean);
+     Function GetMarge : word;
+     Procedure SetMarge(w : word);
+     Function GetAutoSize : boolean;
+     Procedure SetAutoSize(b : boolean);
+     Function GetCheckBoxes : boolean;
+     Procedure SetCheckBoxes(b : boolean);
+     Function GetCheckBoxSize : LongInt;
+     Procedure SetCheckBoxSize(L : LongInt);
+   protected
+   public
+     Procedure Draw(ABtmp : TBtmpArr); override;
+     Procedure CalcRect(Cnvs : TCanvas); override;
+   published
+     Property Content : TBHRText read FText;
+     property Font : TFont read GetFont;
+     property Brush : TBrush read GetBrush;
+     property Pen : TPen read GetPen;
+     property Alignment : TAlignment read GetAlignment write SetAlignment;
+     property KeepTogether : boolean read GetKeepTogether write SetKeepTogether;
+     property Marge : word read GetMarge write SetMarge;
+     property AutoSize : boolean read GetAutoSize write SetAutoSize;
+     property CheckBoxes : boolean read GetCheckBoxes write SetCheckBoxes;
+     property CheckBoxSize : LongInt read GetCheckBoxSize write SetCheckBoxSize;
+  end;
+
+  TBHRTable = class(TBHRElement)
+    Constructor Create(D : TBHRDocument; PNr : integer); override;
+    Destructor Destroy; override;
+   private
+     FCells : array of array of TBHRCell;
+     FAutoHeight : boolean;
+     FColsEven : boolean;
+   protected
+   public
+     Function GetCell(aRow, aCol : integer) : TBHRCell;
+     Function NumRows : integer;
+     Function NumCols : integer;
+     Function GetColWidth(aCol : integer) : word;
+     Procedure SetColWidth(aCol : integer; Width : word);
+     Procedure SetColsEven(b : boolean);
+     Function GetRowHeight(aRow : integer) : word;
+     Procedure SetRowHeight(ARow : integer; Height : word);
+     Procedure SetAutoHeight(b : boolean);
+     Procedure AddRow;
+     Procedure AddCol;
+     Procedure SetSize(NRows, NCols : integer);
+     Procedure Draw(ABtmp : TBtmpArr); override;
+     Procedure CalcRect(Cnvs : TCanvas); override;
+     property Cells[ARow, ACol: integer] : TBHRCell read GetCell;
+     property ColWidth[ACol : integer] : word read GetColWidth write SetColWidth;
+     property RowHeight[ARow : integer] : word read GetRowHeight write SetRowHeight;
+   published
+     property AutoHeight : boolean read FAutoHeight write SetAutoHeight;
+     property ColsEven : boolean read FColsEven write SetColsEven;
+  end;
+
+  TBHRDocument = class(TObject)
+   Constructor Create;
+   Destructor Destroy; override;
+   private
+     FPages : array of TBitmap;
+     FElements : array of TBHRElement;
+     FPageRect, FPrintRect : TRect;
+     FMarginBT : single;
+     FMarginLR : single;
+     FMarginBTpx : integer;
+     FMarginLRpx : integer;
+     FLastY : word;
+     FLastPage : word;
+     FLineHeight : word;
+     Procedure GetPrinterProps;
+     Function GetNumElements : integer;
+     Function GetNumPages : word;
+     Procedure CalcRects;
+     Function GetElement(i : integer) : TBHRElement;
+     Function GetPage(i : integer) : TBitmap;
+     Procedure DrawPages;
+   protected
+   public
+     Procedure AddPage;
+     Procedure RemovePage;
+     Function AddText(Rect : TRect; PNr : integer; s : string) : TBHRText;
+     Function AddTable(Rect : TRect; PNr : integer; nCol, nRow : integer) : TBHRTable;
+     Function AddImage(Rect : TRect; PNr : integer) : TBHRImage;
+     Procedure Print;
+     Procedure PrintPreview;
+     property Elementp[i : integer] : TBHRElement read GetElement;
+     property PageRect : TRect read FPageRect;
+     property PrintRect : TRect read FPrintRect;
+     property Page[i : integer] : TBitmap read GetPage;
+   published
+     property MarginBT : single read FMarginBT write FMarginBT;
+     property MarginLR : single read FMarginLR write FMarginLR;
+     property NumElements : integer read GetNumElements;
+     property NumPages : word read GetNumPages;
+     property LineHeight : word read FLineHeight;
+  end;
+
+implementation
+
+uses frmain, Math, HulpFuncties, frprintpreview;
+
+Function CmToPixX(cm : single) : word;
+begin
+  Result:= round(cm / 2.54 * Printer.XDPI);
+end;
+
+Function CmToPixY(cm : single) : word;
+begin
+  Result:= round(cm / 2.54 * Printer.YDPI);
+end;
+
+Function FontSizeToPix(sz : single) : word;
+begin
+  Result:= round(abs(sz) / 72 * Printer.YDPI);
+end;
+
+Constructor TBHRElement.Create(D : TBHRDocument; PNr : integer);
+begin
+  Inherited Create;
+  FDocument:= D;
+  FRect.Bottom:= 0;
+  FRect.Top:= 0;
+  FRect.Left:= 0;
+  FRect.Right:= 0;
+  FPageNr:= PNr;
+end;
+
+Destructor TBHRElement.Destroy;
+begin
+  Inherited Destroy;
+end;
+
+Procedure TBHRElement.Draw(ABtmp : TBtmpArr);
+begin
+end;
+
+Procedure TBHRElement.SetRect(R : TRect);
+begin
+  FRect.Left:= R.Left;
+  FRect.Right:= R.Right;
+  FRect.Top:= R.Top;
+  FRect.Bottom:= R.Bottom;
+  FDocument.CalcRects;
+end;
+
+Function TBHRElement.GetLeft : word;
+begin
+  Result:= FRect.Left;
+end;
+
+Procedure TBHRElement.SetLeft(l : word);
+begin
+  FRect.Left:= l;
+end;
+
+Function TBHRElement.GetRight : word;
+begin
+  Result:= FRect.Right;
+end;
+
+Procedure TBHRElement.SetRight(r : word);
+begin
+  FRect.Right:= r;
+end;
+
+Function TBHRElement.GetTop : word;
+begin
+  Result:= FRect.Top;
+end;
+
+procedure TBHRElement.SetTop(t : word);
+begin
+  FRect.Top:= t;
+end;
+
+Function TBHRElement.GetBottom : word;
+begin
+  Result:= FRect.Bottom;
+end;
+
+Procedure TBHRElement.SetBottom(b : word);
+begin
+  FRect.Bottom:= b;
+end;
+
+Procedure TBHRElement.CalcRect(Cnvs : TCanvas);
+begin
+end;
+
+{========================== TBHRText ==========================================}
+
+Constructor TBHRText.Create(D : TBHRDocument; PNr : integer);
+begin
+  Inherited Create(D, PNr);
+  FStrings := TStringList.Create;
+  FFont := TFont.Create;
+  with FFont do
+  begin
+//    CharSet:= DEFAULT_CHARSET;
+    Color:= clBlack;
+    Height:= 12;
+//    Name:= default;
+    Orientation:= 0;
+    Pitch:= fpDefault;
+    Quality:= fqDefault; //fqAntiAliased
+    Style:= [];
+  end;
+  FAlignment:= taLeftJustify;
+  FBrush:= TBrush.Create;
+  with FBrush do
+  begin
+    Color:= clWhite;
+    Style:= bsSolid;
+  end;
+  FPen:= TPen.Create;
+  with FPen do
+  begin
+    Color:= clWhite;
+    Style:= psSolid;
+    Width:= 1;
+  end;
+  FMarge:= CmToPixY(0.1);
+  FAutoSize:= TRUE;
+  FCheckBoxes:= false;
+  FCheckBoxSize:= CmToPixY(0.4);
+end;
+
+Destructor TBHRText.Destroy;
+begin
+  FStrings.Free;
+  SetLength(FLineProps, 0);
+  FFont.Free;
+  FBrush.Free;
+  FPen.Free;
+  Inherited;
+end;
+
+Function TBHRText.GetString(i : integer) : string;
+begin
+  Result:= '';
+  if (i >= 0) and (i < FStrings.Count) then
+    Result:= FStrings[i];
+end;
+
+Procedure TBHRText.SetString(i : integer; s : string);
+begin
+  if (i >= 0) and (i < FStrings.Count) then
+    FStrings[i]:= s
+  else if (i > FStrings.Count - 1) then
+    AddString(s)
+  else if (i < 0) then
+    InsertString(s, 0, twBelow);
+end;
+
+Procedure TBHRText.AddString(s : string);
+var i : integer;
+begin
+  FStrings.Add(s);
+  SetLength(FLineProps, High(FLineProps) + 2);
+  i:= High(FLineProps);
+  FLineProps[i].Rect.Left:= FRect.Left;
+  FLineProps[i].Rect.Right:= FRect.Right;
+  FLineProps[i].PageNr:= FPageNr;
+  FLineProps[i].TextRect.Left:= FRect.Left + FMarge;
+  FLineProps[i].TextRect.Right:= FRect.Right - FMarge;
+  FKeepTogether:= false;
+  FDocument.CalcRects;
+end;
+
+Procedure TBHRText.RemoveString(i : integer);
+var j : integer;
+begin
+  if (i >= 0) and (i < FStrings.Count) then
+  begin
+    FStrings.Delete(i);
+    for j:= i to High(FLineProps) - 1 do
+      FLineProps[j]:= FLineProps[j-1];
+    SetLength(FLineProps, High(FLineProps));
+  end;
+  FDocument.CalcRects;
+end;
+
+Procedure TBHRText.InsertString(s : string; i : integer; Where : TWhere);
+var j : integer;
+begin
+  if (i >= 0) and (i < FStrings.Count) then
+    case Where of
+    twAbove:
+     begin
+        FStrings.Insert(i, s);
+        SetLength(FLineProps, High(FLineProps) + 2);
+        for j:= High(FLineProps) downto i + 1 do
+          FLineProps[j]:= FLineProps[j-1];
+        FLineProps[i].Rect.Left:= FRect.Left;
+        FLineProps[i].Rect.Right:= FRect.Right;
+        FLineProps[i].PageNr:= FPageNr;
+        FLineProps[i].TextRect.Left:= FRect.Left + FMarge;
+        FLineProps[i].TextRect.Right:= FRect.Right - FMarge;
+     end;
+    twBelow:
+      if i = 0 then
+      begin
+        FStrings.Add('');
+        for j:= FStrings.Count - 1 to 1 do
+          FStrings[j]:= FStrings[j-1];
+        FStrings[0]:= s;
+        SetLength(FLineProps, High(FLineProps) + 2);
+        for j:= High(FLineProps) downto 1 do
+          FLineProps[j]:= FLineProps[j-1];
+        FLineProps[0].Rect.Left:= FRect.Left;
+        FLineProps[0].Rect.Right:= FRect.Right;
+        FLineProps[0].PageNr:= FPageNr;
+        FLineProps[0].TextRect.Left:= FRect.Left + FMarge;
+        FLineProps[0].TextRect.Right:= FRect.Right - FMarge;
+      end
+      else
+      begin
+        FStrings.Insert(i-1, s);
+        SetLength(FLineProps, High(FLineProps) + 2);
+        for j:= High(FLineProps) downto i + 1 do
+          FLineProps[j]:= FLineProps[j-1];
+        FLineProps[i].Rect.Left:= FRect.Left;
+        FLineProps[i].Rect.Right:= FRect.Right;
+        FLineProps[i].PageNr:= FPageNr;
+        FLineProps[i].TextRect.Left:= FRect.Left + FMarge;
+        FLineProps[i].TextRect.Right:= FRect.Right - FMarge;
+      end;
+    end;
+  FDocument.CalcRects;
+end;
+
+Procedure TBHRText.SetMarge(w : word);
+begin
+  if FMarge <> w then FMarge:= w;
+end;
+
+Procedure TBHRText.CalcRect(Cnvs : TCanvas);
+//Calculate the height of the text given the width and font size
+var i, opn: integer;
+    tot, LL, LMarge : LongInt;
+    s : string;
+begin
+  if (FAutoSize) and (High(FLineProps) >= 0) then
+  begin
+    Cnvs.Font.Assign(FFont);
+    FFontHeight:= FontSizeToPix(FFont.Height);
+    if FCheckBoxes then LMarge:= FMarge + FCheckBoxSize + FMarge
+    else LMarge:= FMarge;
+    tot:= 0;
+    opn:= FPageNr;
+    FLineProps[0].Rect.Top:= FRect.Top;
+    FLineProps[0].TextRect.Top:= FRect.Top + FMarge;
+    for i:= 0 to FStrings.Count - 1 do
+    begin
+      FLineProps[i].PageNr:= FPageNr;
+      FLineProps[i].TextRect.Left:= FRect.Left + LMarge;
+      FLineProps[i].TextRect.Right:= FRect.Right - FMarge;
+      if i > 0 then
+      begin
+        FLineProps[i].Rect.Top:= FLineProps[i-1].Rect.Bottom;
+        FLineProps[i].PageNr:= FLineProps[i-1].PageNr;
+      end;
+      FLineProps[i].TextRect.Top:= FLineProps[i].Rect.Top + FMarge;
+      s:= FStrings[i];
+      LL:= CalcAmountLines(Cnvs, s, FLineProps[i].TextRect.Right - FLineProps[i].TextRect.Left)
+           * FFontHeight;
+
+      FLineProps[i].TextRect.Bottom:= FLineProps[i].TextRect.Top + LL;
+      FLineProps[i].Rect.Bottom:= FLineProps[i].TextRect.Bottom + FMarge;
+      tot:= tot + (FLineProps[i].Rect.Bottom - FLineProps[i].Rect.Top);
+
+      if FLineProps[i].Rect.Bottom > FDocument.PrintRect.Bottom then
+      begin
+        FLineProps[i].PageNr:= FLineProps[i].PageNr + 1;
+        if FDocument.NumPages < FLineProps[i].PageNr + 1 then
+          FDocument.AddPage;
+        FLineProps[i].Rect.Top:= FDocument.PrintRect.Top;
+        FLineProps[i].TextRect.Top:= FLineProps[i].Rect.Top + FMarge;
+        FLineProps[i].TextRect.Bottom:= FLineProps[i].TextRect.Top + LL;
+        FLineProps[i].Rect.Bottom:= FLineProps[i].TextRect.Bottom + FMarge;
+      end;
+    end;
+//    tot:= tot * FFont.Height;
+    FRect.Bottom:= FRect.Top + tot;
+
+    //if the rect exceeds the bottom of the page, create next page and put on next page
+{    if FKeepTogether then
+    begin
+      Inherited CalcRect(Cnvs);
+      tot:= 0;
+      FLineProps[0].Rect.Top:= FRect.Top;
+      FLineProps[0].TextRect.Top:= FRect.Top + FMarge;
+      for i:= 1 to FStrings.Count - 1 do
+      begin
+        LL:= CalcAmountLines(Cnvs, FStrings[i], FLineProps[i].TextRect.Right - FLineProps[i].TextRect.Left)
+             * FFont.Height;
+        FLineProps[i].TextRect.Bottom:= FLineProps[i].TextRect.Top + LL;
+        FLineProps[i].Rect.Bottom:= FLineProps[i].TextRect.Bottom + FMarge;
+        tot:= tot + LL + 2 * FMarge;
+      end;
+      tot:= tot * FFont.Height;
+      FRect.Bottom:= FRect.Top + tot;
+    end;}
+  end;
+end;
+
+Procedure TBHRText.Draw(ABtmp : TBtmpArr);
+var i, j : integer;
+    t, mh : LongInt;
+    fsz : word;
+    OFont : TFont;
+    OBrush : TBrush;
+    OPen : TPen;
+    Cnvs : TCanvas;
+    OldBrushColor : TColor;
+    cbR : TRect;
+begin
+  t:= FRect.Top;
+  OFont:= TFont.Create;
+  OBrush:= TBrush.Create;
+  OPen:= TPen.Create;
+
+  for i:= 0 to FStrings.Count - 1 do
+  begin
+    j:= FLineProps[i].PageNr - 1;
+    if (j >= Low(ABtmp)) and (j <= High(ABtmp)) then
+    begin
+      Cnvs:= ABtmp[j].Canvas;
+      OFont.Assign(Cnvs.Font);
+      OBrush.Assign(Cnvs.Brush);
+      OPen.Assign(Cnvs.Pen);
+
+      Cnvs.Font.Assign(FFont);
+      Cnvs.Brush.Assign(FBrush);
+      Cnvs.Pen.Assign(FPen);
+      Cnvs.Rectangle(FRect);
+
+      cnvs.Pen.Style:= psSolid;
+      cnvs.Pen.Color:= clBlack;
+      Cnvs.Brush.Color:= clWhite;
+      fsz:= FFont.Size;
+      if FCheckBoxes then
+      begin
+        cbR.Top:= FLineProps[i].TextRect.Top;
+        cbR.Bottom:= cbR.Top + FontSizeToPix(fsz);
+        cbR.Left:= FRect.Left + FMarge;
+        cbR.Right:= cbR.Left + FontSizeToPix(fsz);
+        Cnvs.Rectangle(cbR);
+      end;
+
+      fsz:= FFont.Size;
+      Cnvs.Font.Height:= FontSizeToPix(fsz);
+      mh:= Round((FLineProps[i].TextRect.Bottom + FLineProps[i].TextRect.Top) / 2);
+      t:= t + DrawTxt(Cnvs, mh, FLineProps[i].TextRect.Left, FLineProps[i].TextRect.Right,
+                  FStrings[i], FAlignment, TRUE);
+      Cnvs.Font.Size:= fsz;
+      Cnvs.Font.Assign(OFont);
+      Cnvs.Brush.Assign(OBrush);
+      Cnvs.Pen.Assign(OPen);
+    end;
+  end;
+
+  OFont.Free;
+  OBrush.Free;
+  OPen.Free;
+end;
+
+{========================== TBHRImage =======================================}
+
+Constructor TBHRImage.Create(D : TBHRDocument; PNr : integer);
+begin
+  Inherited Create(D, PNr);
+  FPicture := TPicture.Create;
+  FStretch:= false;
+end;
+
+Destructor TBHRImage.Destroy;
+begin
+  FPicture.Free;
+  Inherited;
+end;
+
+Procedure TBHRImage.Draw(ABtmp : TBtmpArr);
+var R : TRect;
+    cnvs : TCanvas;
+begin
+  if (FPageNr - 1 >= Low(ABtmp)) and (FPageNr - 1 <= High(ABtmp)) then
+  begin
+    R.Left:= 0;
+    R.Top:= 0;
+    R.Right:= FPicture.Width;
+    R.Bottom:= FPicture.Height;
+    cnvs:= ABtmp[FPageNr - 1].Canvas;
+    cnvs.Brush.Color:= clWhite;
+    cnvs.Rectangle(FRect);
+    cnvs.CopyMode:= cmSrcCopy;
+    cnvs.CopyRect(FRect, FPicture.Bitmap.Canvas, R);
+  end;
+end;
+
+Procedure TBHRImage.CalcRect(Cnvs : TCanvas);
+var W, H : LongInt;
+    WH : double;
+begin
+  if FStretch then
+  begin
+    W:= FPicture.Width;
+    H:= FPicture.Height;
+    if H > 0 then
+    begin
+      WH:= W / H;
+      if WH > 1 then FRect.Bottom:= FRect.Top + round((FRect.Right - FRect.Left) / WH)
+      else FRect.Right:= FRect.Left + round((FRect.Bottom - FRect.Top) * WH);
+    end;
+  end;
+end;
+
+{============================TBHRCell =========================================}
+
+Constructor TBHRCell.Create(D : TBHRDocument; PNr : integer);
+begin
+  Inherited Create(D, PNr);
+  FText := TBHRText.Create(D, PNr);
+end;
+
+Destructor TBHRCell.Destroy;
+begin
+  FText.Free;
+  Inherited Destroy;
+end;
+
+Procedure TBHRCell.SetLeft(l : word);
+begin
+  Inherited SetLeft(l);
+  if FText <> NIL then
+    FText.Left:= l;
+end;
+
+Procedure TBHRCell.SetRight(r : word);
+begin
+  Inherited SetRight(r);
+  if FText <> NIL then
+    FText.Right:= r;
+end;
+
+procedure TBHRCell.SetTop(t : word);
+begin
+  Inherited SetTop(t);
+  if FText <> NIL then
+    FText.Top:= t;
+end;
+
+Procedure TBHRCell.SetBottom(b : word);
+begin
+  Inherited SetBottom(b);
+  if FText <> NIL then
+    FText.Bottom:= b;
+end;
+
+Function TBHRCell.GetFont : TFont;
+begin
+  Result:= NIL;
+  if FText <> NIL then Result:= FText.Font;
+end;
+
+Function TBHRCell.GetBrush : TBrush;
+begin
+  Result:= NIL;
+  if FText <> NIL then Result:= FText.Brush;
+end;
+
+Function TBHRCell.GetPen : TPen;
+begin
+  Result:= NIL;
+  if FText <> NIL then Result:= FText.Pen;
+end;
+
+Function TBHRCell.GetAlignment : TAlignment;
+begin
+  Result:= taLeftJustify;
+  if FText <> NIL then Result:= FText.Alignment;
+end;
+
+Procedure TBHRCell.SetAlignment(al : TAlignment);
+begin
+  if FText <> NIL then FText.Alignment:= al;
+end;
+
+Function TBHRCell.GetKeepTogether : boolean;
+begin
+  Result:= TRUE;
+  if FText <> NIL then Result:= FText.KeepTogether;
+end;
+
+Procedure TBHRCell.SetKeepTogether(b : boolean);
+begin
+  if FText <> NIL then FText.KeepTogether:= b;
+end;
+
+Function TBHRCell.GetMarge : word;
+begin
+  Result:= 0;
+  if FText <> NIL then Result:= FText.Marge;
+end;
+
+Procedure TBHRCell.SetMarge(w : word);
+begin
+  if FText <> NIL then FText.Marge:= w;
+end;
+
+Function TBHRCell.GetAutoSize : boolean;
+begin
+  Result:= false;
+  if FText <> NIL then Result:= FText.AutoSize;
+end;
+
+Procedure TBHRCell.SetAutoSize(b : boolean);
+begin
+  if FText <> NIL then FText.AutoSize:= b;
+end;
+
+Function TBHRCell.GetCheckBoxes : boolean;
+begin
+  Result:= false;
+  if FText <> NIL then Result:= FText.CheckBoxes;
+end;
+
+Procedure TBHRCell.SetCheckBoxes(b : boolean);
+begin
+  if FText <> NIL then FText.CheckBoxes:= b;
+end;
+
+Function TBHRCell.GetCheckBoxSize : LongInt;
+begin
+  Result:= 0;
+  if FText <> NIL then Result:= FText.CheckBoxSize;
+end;
+
+Procedure TBHRCell.SetCheckBoxSize(L : LongInt);
+begin
+  if FText <> NIL then FText.CheckBoxSize:= L;
+end;
+
+Procedure TBHRCell.Draw(ABtmp : TBtmpArr);
+begin
+  if FText <> NIL then FText.Draw(ABtmp);
+end;
+
+Procedure TBHRCell.CalcRect(Cnvs : TCanvas);
+begin
+  if FText <> NIL then FText.CalcRect(Cnvs);
+  FRect:= FText.Rect;
+  FPageNr:= FText.PageNr;
+end;
+
+{========================== TBHRTable =========================================}
+
+Constructor TBHRTable.Create(D : TBHRDocument; PNr : integer);
+begin
+  Inherited Create(D, PNr);
+//  FCells : array of array of TBHRCell;
+  FAutoHeight := TRUE;
+  FColsEven := TRUE;
+end;
+
+Destructor TBHRTable.Destroy;
+var R, C : integer;
+begin
+  for R:= Low(FCells) to High(FCells) do
+  begin
+    for C:= Low(FCells[R]) to High(FCells[R]) do
+      FCells[R, C].Free;
+    SetLength(FCells[R], 0);
+  end;
+  SetLength(FCells, 0);
+  Inherited Destroy;
+end;
+
+Function TBHRTable.GetCell(aRow, aCol : integer) : TBHRCell;
+begin
+  if (aRow >= Low(FCells)) and (aRow <= High(FCells)) then
+    if (aCol >= Low(FCells[aRow])) and (aCol <= High(FCells[aRow])) then
+      Result:= FCells[aRow, aCol];
+end;
+
+Procedure TBHRTable.SetSize(NRows, NCols : integer);
+var R, C : integer;
+begin
+  SetLength(FCells, NRows);
+  for R:= 0 to NRows - 1 do
+  begin
+    SetLength(FCells[R], NCols);
+    for C:= 0 to NCols - 1 do
+    begin
+      if FCells[R, C] = NIL then
+      begin
+        FCells[R, C]:= TBHRCell.Create(FDocument, FPageNr);
+        if C = 0 then FCells[R, C].Left:= FRect.Left
+        else FCells[R, C].Left:= FCells[R, C-1].Right;
+        if R = 0 then FCells[R, C].Top:= FRect.Top
+        else FCells[R, C].Top:= FCells[R-1, C].Bottom;
+      end;
+    end;
+  end;
+  SetColsEven(TRUE);
+end;
+
+Function TBHRTable.NumRows : integer;
+begin
+  Result:= High(FCells) + 1;
+end;
+
+Function TBHRTable.NumCols : integer;
+begin
+  Result:= 0;
+  if NumRows > 0 then
+    Result:= High(FCells[0]) + 1;
+end;
+
+Function TBHRTable.GetColWidth(aCol : integer) : word;
+var C : TBHRCell;
+begin
+  Result:= 0;
+  C:= GetCell(0, aCol);
+  if C <> NIL then Result:= C.Rect.Right - C.Rect.Left;
+end;
+
+Procedure TBHRTable.SetColWidth(aCol : integer; Width : word);
+var Cell, Cell2 : TBHRCell;
+    R : integer;
+begin
+  for R:= 0 to NumRows - 1 do
+  begin
+    Cell:= GetCell(R, aCol);
+    if Cell <> NIL then
+    begin
+      if aCol = 0 then
+        Cell.FText.Left:= FRect.Left
+      else
+      begin
+        Cell2:= GetCell(R, aCol-1);
+        if Cell2 <> NIL then
+          Cell.FText.Left:= Cell2.Rect.Right;
+      end;
+      Cell.FText.Right:= Cell.Rect.Left + Width;
+    end;
+  end;
+  FDocument.CalcRects;
+end;
+
+Procedure TBHRTable.SetColsEven(b : boolean);
+var Cell, Cell2, Cell1 : TBHRCell;
+    R, C : integer;
+    W : single;
+begin
+  FColsEven:= b;
+  if b and (NumCols > 0) then
+  begin
+    W:= (FRect.Right - FRect.Left) / NumCols;
+    for R:= 0 to NumRows - 1 do
+    begin
+      Cell1:= GetCell(R, 0);
+      for C:= 0 to NumCols - 1 do
+      begin
+        Cell:= GetCell(R, C);
+        if Cell <> NIL then
+        begin
+          if C = 0 then
+            Cell.FText.Left:= FRect.Left
+          else
+          begin
+            Cell2:= GetCell(R, C-1);
+            if Cell2 <> NIL then
+              Cell.FText.Left:= Cell2.Rect.Right;
+          end;
+          Cell.Right:= Cell1.Left + round((C + 1) * W);
+        end;
+      end;
+    end;
+  end;
+  FDocument.CalcRects;
+end;
+
+Function TBHRTable.GetRowHeight(aRow : integer) : word;
+var C : TBHRCell;
+begin
+  Result:= 0;
+  C:= GetCell(aRow, 0);
+  if C <> NIL then Result:= C.Rect.Bottom - C.Rect.Top;
+end;
+
+Procedure TBHRTable.SetRowHeight(ARow : integer; Height : word);
+var Cell, Cell2 : TBHRCell;
+    R, C : integer;
+begin
+  for C:= 0 to NumCols - 1 do
+  begin
+    Cell:= GetCell(aRow, C);
+    if Cell <> NIL then
+    begin
+      if aRow = 0 then
+        Cell.FText.Top:= FRect.Top
+      else
+      begin
+        Cell2:= GetCell(aRow-1, C);
+        if Cell2 <> NIL then
+          Cell.FText.Left:= Cell2.Rect.Bottom;
+      end;
+      Cell.FText.Bottom:= Cell.FText.Top + Height;
+    end;
+  end;
+  FDocument.CalcRects;
+end;
+
+Procedure TBHRTable.SetAutoHeight(b : boolean);
+begin
+  FAutoHeight:= b;
+  FDocument.CalcRects;
+end;
+
+Procedure TBHRTable.AddRow;
+var C, R : integer;
+    Cell : TBHRCell;
+begin
+  SetLength(FCells, High(FCells) + 2);
+  SetLength(FCells[High(FCells)], NumCols);
+  R:= High(FCells);
+  for C:= 0 to NumCols - 1 do
+  begin
+    FCells[R, C]:= TBHRCell.Create(FDocument, FPageNr);
+    if (R > 0) then
+    begin
+      Cell:= GetCell(R-1, C);
+      if Cell <> NIL then
+      begin
+        if (not FAutoHeight) then
+        begin
+          FCells[R, C].Top:= Cell.Bottom;
+          FCells[R, C].Bottom:= Cell.Bottom + (Cell.Bottom - Cell.Top);
+        end;
+        FCells[R, C].Left:= Cell.Left;
+        FCells[R, C].Right:= Cell.Right;
+      end;
+    end
+    else
+    begin
+      FCells[R, C].Top:= FRect.Top;
+      FCells[R, C].Bottom:= FRect.Bottom;
+      if C = 0 then
+      begin
+        FCells[R, C].Left:= FRect.Left;
+        if NumCols = 0 then
+          FCells[R, C].Right:= FRect.Right
+        else
+          FCells[R, C].Right:= FRect.Left + round((FRect.Right - FRect.Left) / NumCols);
+      end
+      else
+      begin
+        Cell:= GetCell(R, C-1);
+        FCells[R, C].Left:= Cell.Right;
+        FCells[R, C].Right:= FRect.Left + round((C + 1) * (FRect.Right - FRect.Left) / NumCols);
+      end;
+    end;
+  end;
+  FDocument.CalcRects;
+end;
+
+Procedure TBHRTable.AddCol;
+var C, R : integer;
+    Cell : TBHRCell;
+begin
+  for R:= 0 to High(FCells) do
+  begin
+    SetLength(FCells[R], High(FCells[R]) + 2);
+    C:= High(FCells[R]);
+    FCells[R, C]:= TBHRCell.Create(FDocument, FPageNr);
+  end;
+
+  if FColsEven then SetColsEven(TRUE)
+  else if C > 0 then
+  begin
+    for R:= 0 to High(FCells) do
+    begin
+      Cell:= GetCell(R, C-1);
+      FCells[R, C].Top:= Cell.Top;
+      FCells[R, C].Bottom:= Cell.Bottom;
+      FCells[R, C].Left:= Cell.Right;
+      FCells[R, C].Right:= Cell.Right + (Cell.Right - Cell.Left);
+    end;
+  end
+  else
+  begin
+    for R:= 0 to High(FCells) do
+    begin
+      FCells[R, C].Left:= FRect.Right;
+      FCells[R, C].Right:= FRect.Left;
+    end;
+    if not FAutoHeight then
+    begin
+      FCells[0, C].Top:= FRect.Top;
+      if NumRows > 0 then
+        FCells[0, C].Bottom:= FRect.Top + round((FRect.Bottom - FRect.Top) / NumRows)
+      else FCells[0, C].Bottom:= FRect.Bottom;
+      for R:= 1 to High(FCells) do
+      begin
+        Cell:= GetCell(R-1, C);
+        FCells[R, C].Top:= Cell.Top;
+        FCells[R, C].Bottom:= FRect.Top + round((R + 1) * (FRect.Bottom - FRect.Top) / NumRows);
+        FCells[R, C].Left:= FRect.Right;
+        FCells[R, C].Right:= FRect.Left;
+      end;
+    end;
+  end;
+  FDocument.CalcRects;
+end;
+
+Procedure TBHRTable.Draw(ABtmp : TBtmpArr);
+var R, C : integer;
+begin
+  for R:= 0 to NumRows - 1 do
+    for C:= 0 to NumCols - 1 do
+      FCells[R, C].Draw(ABtmp);
+end;
+
+Procedure TBHRTable.CalcRect(Cnvs : TCanvas);
+var R, C, PNr : integer;
+    MaxR, Tp : word;
+    Cell : TBHRCell;
+begin
+  if FAutoHeight then
+  begin
+    Tp:= FRect.Top;
+    MaxR:= 0;
+    for R:= 0 to NumRows - 1 do
+    begin
+      PNr:= FPageNr;
+      //first, calculate the height of every cell in row R
+      for C:= 0 to NumCols - 1 do
+      begin
+        Cell:= FCells[R, C];
+        Cell.Top:= Tp;
+        Cell.CalcRect(Cnvs);
+        if Cell.PageNr > PNr then
+          PNr:= Cell.PageNr;
+      end;
+
+      //then find the maximum height of the cells in row R
+      for C:= 0 to NumCols - 1 do
+      begin
+        Cell:= FCells[R, C];
+        if Cell.PageNr = PNr then
+          if Cell.Bottom > MaxR then
+            MaxR:= Cell.Bottom;
+      end;
+
+      if PNr > FPageNr then Tp:= FRect.Top;
+      //finally set the height of every cell to the maximum height in that row
+      for C:= 0 to NumCols - 1 do
+      begin
+        Cell:= FCells[R, C];
+        Cell.Top:= Tp;
+        Cell.Bottom:= MaxR;
+      end;
+      Tp:= MaxR;
+    end;
+    FRect.Bottom:= MaxR;
+  end;
+end;
+
+{====================== TBHRDocument ==========================================}
+
+Constructor TBHRDocument.Create;
+begin
+  Inherited;
+  SetLength(FPages, 1);
+  FMarginBT := 2; //cm
+  FMarginLR := 1.5; //cm
+  GetPrinterProps;
+  FLastY := 0;
+  FLastPage := 0;
+end;
+
+Destructor TBHRDocument.Destroy;
+var i : integer;
+begin
+  for i:= 0 to High(FPages) do
+    FPages[i].Free;
+  SetLength(FPages, 0);
+  for i:= 0 to High(FElements) do
+    FElements[i].Free;
+  SetLength(FElements, 0);
+  Inherited;
+end;
+
+Procedure TBHRDocument.GetPrinterProps;
+var i : integer;
+    dx : word;
+    dy : word;
+begin
+  dx:= Printer.XDPI;
+  dy:= Printer.YDPI;
+  FMarginBTpx := round(FMarginBT / 2.54 * dy);
+  FMarginLRpx := round(FMarginLR / 2.54 * dx);
+
+  FPageRect.Top:= 0;
+  FPageRect.Left:= 0;
+  FPageRect.Right:= Printer.PageWidth;
+  FPageRect.Bottom:= Printer.PageHeight;
+
+  FPrintRect.Top:= FMarginBTpx;
+  FPrintRect.Bottom:= Printer.PageHeight - FMarginBTpx;
+  FPrintRect.Left:= FMarginLRpx;
+  FPrintRect.Right:= Printer.PageWidth - FMarginLRpx;
+
+  for i:= 0 to High(FPages) do
+  begin
+    FPages[i]:= TBitmap.Create;
+    FPages[i].Width:= FPageRect.Right - FPageRect.Left;
+    FPages[i].Height:= FPageRect.Bottom - FPageRect.Top;
+  end;
+  FLineHeight:= Round(1.0 * FontSizeToPix(12));
+  CalcRects;
+end;
+
+Function TBHRDocument.GetNumElements : integer;
+begin
+  Result:= High(FElements) + 1;
+end;
+
+Function TBHRDocument.GetNumPages : word;
+begin
+  Result:= High(FPages) + 1;
+end;
+
+Procedure TBHRDocument.CalcRects;
+var i : integer;
+    E : TBHRElement;
+begin
+  FLastY := FPrintRect.Top;
+  FLastPage := 0;
+  for i:= 0 to High(FElements) do
+  begin
+    E:= FElements[i];
+    if i = 0 then
+    begin
+      E.Top:= FPrintRect.Top;
+      E.PageNr:= 1;
+    end
+    else
+    begin
+      FLastY:= FLastY + round(1.2 * LineHeight);
+      if FLastY > FPrintRect.Bottom then
+      begin
+        FLastY:= FPrintRect.Top;
+        FLastPage:= FLastPage + 1;
+        if FLastPage > NumPages then AddPage;
+      end;
+      E.Top:= FLastY;
+    end;
+
+    E.CalcRect(FPages[E.PageNr - 1].Canvas);
+    FLastY:= E.Bottom;
+    FLastPage:= E.PageNr;
+  end;
+  While FLastPage > NumPages do RemovePage;
+end;
+
+Procedure TBHRDocument.AddPage;
+var i : integer;
+begin
+  SetLength(FPages, High(FPages) + 2);
+  i:= High(FPages);
+  FPages[i]:= TBitmap.Create;
+  FPages[i].Width:= FPageRect.Right - FPageRect.Left;
+  FPages[i].Height:= FPageRect.Bottom - FPageRect.Top;
+end;
+
+Procedure TBHRDocument.RemovePage;
+begin
+  FPages[High(FPages)].Free;
+  SetLength(FPages, High(FPages));
+end;
+
+Function TBHRDocument.AddText(Rect : TRect; PNr : integer; s : string) : TBHRText;
+begin
+  Result:= NIL;
+  CalcRects;
+  SetLength(FElements, High(FElements) + 2);
+  FElements[High(FElements)]:= TBHRText.Create(self, PNr);
+  Result:= TBHRText(FElements[High(FElements)]);
+  Result.Top:= FLastY;
+  Result.Bottom:= FLastY + (Rect.Bottom - Rect.Top);
+  Result.Left:= Rect.Left;
+  Result.Right:= Rect.Right;
+  Result.AddString(s);
+  CalcRects;
+end;
+
+Function TBHRDocument.AddTable(Rect : TRect; PNr : integer; nCol, nRow : integer) : TBHRTable;
+begin
+  Result:= NIL;
+  CalcRects;
+  SetLength(FElements, High(FElements) + 2);
+  FElements[High(FElements)]:= TBHRTable.Create(self, PNr);
+  Result:= TBHRTable(FElements[High(FElements)]);
+  Result.Top:= Rect.Top;
+  Result.Left:= Rect.Left;
+  Result.Right:= Rect.Right;
+  Result.SetSize(nRow, nCol);
+  Result.ColsEven:= TRUE;
+  Result.AutoHeight:= TRUE;
+  Result.Top:= FLastY;
+  Result.Bottom:= FLastY + (Rect.Bottom - Rect.Top);
+  Result.Left:= Rect.Left;
+  Result.Right:= Rect.Right;
+  CalcRects;
+end;
+
+Function TBHRDocument.AddImage(Rect : TRect; PNr : integer) : TBHRImage;
+begin
+  Result:= NIL;
+  CalcRects;
+  SetLength(FElements, High(FElements) + 2);
+  FElements[High(FElements)]:= TBHRImage.Create(self, PNr);
+  Result:= TBHRImage(FElements[High(FElements)]);
+  Result.Top:= FLastY;
+  Result.Bottom:= FLastY + (Rect.Bottom - Rect.Top);
+  Result.Left:= Rect.Left;
+  Result.Right:= Rect.Right;
+  CalcRects;
+end;
+
+Function TBHRDocument.GetElement(i : integer) : TBHRElement;
+begin
+  Result:= NIL;
+  if (i >= Low(FElements)) and (i <= High(FElements)) then
+    Result:= FElements[i];
+end;
+
+Function TBHRDocument.GetPage(i : integer) : TBitmap;
+begin
+  Result:= NIL;
+  if (i >= 0) and (i <= High(FPages)) then
+    Result:= FPages[i];
+end;
+
+Procedure TBHRDocument.Print;
+var i : integer;
+    E : TBHRElement;
+begin
+  try
+   {DrawPages;}
+    Printer.BeginDoc;
+    Printer.Canvas.CopyMode:= cmSrcCopy;
+    for i:= 0 to High(FPages) do
+    begin
+      Printer.Canvas.CopyRect(FPageRect, FPages[i].Canvas, FPageRect);
+      if i < High(FPages) then Printer.NewPage;
+    end;
+  finally
+    Printer.EndDoc;
+  end;
+end;
+
+Procedure TBHRDocument.PrintPreview;
+begin
+  try
+    DrawPages;
+    FrmPrintPreview:= TFrmPrintPreview.Create(FrmMain);
+    if FrmPrintPreview.Execute(self) then
+      Print;
+  finally
+    FrmPrintPreview.Free;
+    Free;
+  end;
+end;
+
+Procedure TBHRDocument.DrawPages;
+var i : integer;
+    E : TBHRElement;
+begin
+  for i:= 0 to High(FPages) do
+  begin
+    with FPages[i].Canvas do
+    begin
+      Brush.Color:= clWhite;
+      Pen.Color:= clWhite;
+      Rectangle(FPageRect);
+    end;
+  end;
+  for i:= 0 to High(FElements) do
+  begin
+    E:= FElements[i];
+    E.Draw(FPages);
+  end;
+end;
+
+end.
+

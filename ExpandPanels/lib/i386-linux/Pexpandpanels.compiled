@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Compiler Value="/usr/bin/fpc" Date="1397985295"/>
+  <Params Value=" -MObjFPC -Scgi -O1 -l -vewnhibq -Fu/usr/share/lazarus/1.4.4/components/gradbutton/package -Fu/usr/share/lazarus/1.4.4/packager/units/i386-linux -Fu/usr/share/lazarus/1.4.4/components/lazutils/lib/i386-linux -Fu/usr/share/lazarus/1.4.4/lcl/units/i386-linux -Fu/usr/share/lazarus/1.4.4/lcl/units/i386-linux/qt -Fu/media/sf_BrouwHulp/ExpandPanels/ -FU/media/sf_BrouwHulp/ExpandPanels/lib/i386-linux/ -dLCL -dLCLqt pexpandpanels.pas"/>
+</CONFIG>

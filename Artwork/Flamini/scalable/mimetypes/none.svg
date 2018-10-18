@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512">
+ <rect rx="147.5047" width="450" height="450" x="31" y="31" opacity="0.25" fill="#282629"/>
+ <rect rx="147.5047" width="444" height="444" x="34" y="34" opacity="0.25" fill="#282629"/>
+ <rect y="37" x="37" height="438" width="438" rx="147.5047" opacity="0.25" fill="#282629"/>
+ <rect rx="147.5047" width="432" height="432" x="40" y="40" fill="#fff8eb"/>
+ <text x="156.76891" y="394.55295" fill="#282629" font-family="Standard Symbols L" word-spacing="0" line-height="125%" font-weight="bold" letter-spacing="0" font-size="411.74725"><tspan x="156.76891" y="394.55295">?</tspan>
+ </text>
+ <text y="319.2793" x="329.95566" opacity="0.15" fill="#282629" font-family="Standard Symbols L" word-spacing="0" line-height="125%" font-weight="bold" letter-spacing="0" font-size="295.76114"><tspan y="319.2793" x="329.95566">?</tspan>
+ </text>
+ <text x="110.52737" y="416.37805" opacity="0.15" fill="#282629" font-family="Standard Symbols L" word-spacing="0" line-height="125%" font-weight="bold" letter-spacing="0" font-size="214.01654"><tspan x="110.52737" y="416.37805">?</tspan>
+ </text>
+ <text y="415.42603" x="299.85202" opacity="0.15" fill="#282629" font-family="Standard Symbols L" word-spacing="0" line-height="125%" font-weight="bold" letter-spacing="0" font-size="140.4464"><tspan y="415.42603" x="299.85202">?</tspan>
+ </text>
+ <text y="201.05963" x="97.07377" opacity="0.15" fill="#282629" font-family="Standard Symbols L" word-spacing="0" line-height="125%" font-weight="bold" letter-spacing="0" font-size="106.02946"><tspan y="201.05963" x="97.07377">?</tspan>
+ </text>
+</svg>

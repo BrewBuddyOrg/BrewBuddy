@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="512" width="512">
+ <defs>
+  <linearGradient id="0">
+   <stop stop-color="#9cc0e3"/>
+   <stop offset="1" stop-color="#3a75ad"/>
+  </linearGradient>
+  <radialGradient xlink:href="#0" id="1" gradientUnits="userSpaceOnUse" cx="259.50818" cy="60.15877" r="36.06245"/>
+  <path id="2" d="m 295.57063 60.15877 c 0 19.916739 -16.14571 36.06245 -36.06245 36.06245 -19.91674 0 -36.06245 -16.14571 -36.06245 -36.06245 0 -19.91674 16.14571 -36.06245 36.06245 -36.06245 19.91674 0 36.06245 16.14571 36.06245 36.06245 z"/>
+ </defs>
+ <g transform="matrix(1.0416667 0 0 1.0416667 -10.666676 -573.54395)">
+  <path d="m 305.71429 246.28572 c 0 45.76074 -37.09641 82.85714 -82.85714 82.85714 -45.76074 0 -82.85714 -37.0964 -82.85714 -82.85714 0 -45.76073 37.0964 -82.85714 82.85714 -82.85714 45.76073 0 82.85714 37.09641 82.85714 82.85714 z" transform="matrix(2.8965518,0,0,2.8965518,-389.51727,82.982822)" fill="#99c1c3" fill-rule="evenodd"/>
+  <text y="636.31262" x="-286.85162" font-family="Gentium Book Basic" word-spacing="0" line-height="125%" letter-spacing="0" font-size="200"><tspan y="636.31262" x="-286.85162"/>
+  </text>
+  <text x="-2551.3293" y="903.30402" font-family="Gentium Book Basic" word-spacing="0" line-height="125%" letter-spacing="0" font-size="200"><tspan x="-2551.3293" y="903.30402"/>
+  </text>
+  <text x="-2274.6428" y="685.11053" font-family="Gentium Book Basic" word-spacing="0" line-height="125%" letter-spacing="0" font-size="200"><tspan x="-2274.6428" y="685.11053"/>
+  </text>
+  <text x="1752.172" y="438.48669" font-family="Gentium Book Basic" word-spacing="0" line-height="125%" letter-spacing="0" font-size="200"><tspan x="1752.172" y="438.48669"/>
+  </text>
+  <text y="577.71954" x="-290.64117" font-family="Gentium Book Basic" word-spacing="0" line-height="125%" letter-spacing="0" font-size="200"><tspan y="577.71954" x="-290.64117"/>
+  </text>
+  <text x="-2555.1187" y="844.71094" font-family="Gentium Book Basic" word-spacing="0" line-height="125%" letter-spacing="0" font-size="200"><tspan x="-2555.1187" y="844.71094"/>
+  </text>
+  <text x="-2278.4321" y="626.51746" font-family="Gentium Book Basic" word-spacing="0" line-height="125%" letter-spacing="0" font-size="200"><tspan x="-2278.4321" y="626.51746"/>
+  </text>
+  <path d="m 167.83164 748.07795 0 18.2425 0 0.82723 0.0519 0 c 0.45332 9.7115 8.768 17.41528 19.06767 17.41528 l 138.09779 0 c 10.29968 0 18.61437 -7.70378 19.06768 -17.41528 l 0.0518 0 0 -0.82723 0 -18.2425 -19.11963 0 -138.09779 0 -19.11962 0 z" fill="#0078ad" fill-rule="evenodd"/>
+  <path transform="translate(0,540.36217)" d="m 218.53125 243.3125 0 249.78125 C 230.73838 495.00724 243.25565 496 256 496 c 12.74435 0 25.26162 -0.99276 37.46875 -2.90625 l 0 -249.78125 -74.9375 0 z" fill="#99c1c3" fill-rule="evenodd"/>
+  <path transform="translate(0,540.36217)" d="m 192.71875 209.0625 0 278.5 c 8.45526 2.30588 17.07531 4.15422 25.875 5.53125 l 0 -275.1875 c 0 -3.02888 0.31637 -5.99781 0.84375 -8.84375 l -26.71875 0 z m 99.84375 0 c 0.52739 2.84594 0.84375 5.81487 0.84375 8.84375 l 0 275.1875 c 8.79969 -1.37703 17.41974 -3.22537 25.875 -5.53125 l 0 -278.5 -26.71875 0 z" fill="#0078ad" fill-rule="evenodd"/>
+  <path fill="#fff8eb" fill-rule="evenodd" d="M 218.529,783.663 H293.464 V902.034 H218.529 z"/>
+  <path d="m 202.79771 769.32475 c 8.54678 0 15.46467 6.79572 15.74252 15.27492 l 74.91986 0 c 0.27785 -8.4792 7.19576 -15.27492 15.74252 -15.27492 l -106.4049 0 z" fill="#fff" fill-rule="evenodd"/>
+  <path fill="#0078ad" fill-rule="evenodd" d="M 262.134,876.29 H300.986 V894.928 H262.134 z"/>
+  <path fill="#0078ad" fill-rule="evenodd" d="M 242.374,916.294 H300.986 V934.931 H242.374 z"/>
+  <path fill="#0078ad" fill-rule="evenodd" d="M 262.134,952.924 H300.986 V971.561 H262.134 z"/>
+  <use transform="matrix(0.97505573,0,0,0.97505573,30.908977,637.10158)" fill="url(#1)" fill-rule="evenodd" xlink:href="#2"/>
+  <use transform="matrix(0.74771278,0,0,0.74771278,27.722358,610.87792)" fill="url(#1)" fill-rule="evenodd" xlink:href="#2"/>
+  <use transform="matrix(0.52115634,0,0,0.52115634,131.83086,569.24875)" fill="url(#1)" fill-rule="evenodd" xlink:href="#2"/>
+ </g>
+</svg>

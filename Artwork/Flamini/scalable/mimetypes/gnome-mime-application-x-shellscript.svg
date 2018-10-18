@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512">
+ <defs>
+  <linearGradient id="0">
+   <stop stop-color="#383838"/>
+   <stop offset="1" stop-color="#282629"/>
+  </linearGradient>
+  <radialGradient xlink:href="#0" id="1" cx="256" cy="256" r="216" gradientUnits="userSpaceOnUse"/>
+ </defs>
+ <rect rx="147.5047" width="450" height="450" x="31" y="31" opacity="0.25" fill="#282629"/>
+ <rect rx="147.5047" width="444" height="444" x="34" y="34" opacity="0.25" fill="#282629"/>
+ <rect y="37" x="37" height="438" width="438" rx="147.5047" opacity="0.25" fill="#282629"/>
+ <rect rx="147.5047" width="432" height="432" x="40" y="40" fill="url(#1)"/>
+ <text x="121.46173" y="334.57651" fill="#fff8eb" font-family="Sans" text-align="start" word-spacing="0" line-height="125%" font-weight="bold" letter-spacing="0" font-size="261.66611"><tspan x="121.46173" y="334.57651">$_</tspan>
+ </text>
+ <rect y="71.17744" x="71.17743" height="369.64511" width="369.64511" rx="121.80585" ry="124.77111" fill="none" stroke="#fff8eb" stroke-width="25"/>
+</svg>

@@ -1,0 +1,15 @@
+TFRMBOILMETHOD.CAPTION=Kookproef
+TFRMBOILMETHOD.LABEL1.CAPTION=Meet exact 100 ml bier af in een maatcylinder. Meet het SG bij 20°C en vul hier in.
+
+Kook het bier zachtjes in een pan zonder deksel gedurende een kwartier. Koel snel au-bain-marie af tot 20°C.
+
+Giet het bier in de maatcylinder en vul met water van 20°C aan tot 100 ml.
+
+Meet weer het SG en vul hier in. Lees het alcoholpercentage af.
+TFRMBOILMETHOD.LABEL2.CAPTION=SG voor koken:
+TFRMBOILMETHOD.LABEL3.CAPTION=SG na koken:
+TFRMBOILMETHOD.LABEL4.CAPTION=Alcoholgehalte:
+TFRMBOILMETHOD.EALCOHOL.TEXT=0,0 vol.%
+TFRMBOILMETHOD.BBOK.CAPTION=&OK
+TFRMBOILMETHOD.LSGV.CAPTION=SG
+TFRMBOILMETHOD.LSGN.CAPTION=SG

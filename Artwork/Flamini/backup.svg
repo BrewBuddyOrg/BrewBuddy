@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   id="svg8041"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="backup.svg">
+  <defs
+     id="defs8043" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="5.9224839"
+     inkscape:cx="300.12465"
+     inkscape:cy="606.89757"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1012"
+     inkscape:window-x="-4"
+     inkscape:window-y="-6"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata8046">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Laag 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g9021">
+      <rect
+         id="rect5388"
+         style="fill:#555753;stroke:#555753;stroke-width:1.00002967999999992;fill-opacity:1;stroke-opacity:1"
+         rx="2.3899138"
+         ry="2.3899138"
+         height="135.42921"
+         width="137.12134"
+         y="376.23038"
+         x="229.70665" />
+      <rect
+         id="rect5390"
+         style="fill:none;stroke:#c3c3c3;stroke-width:0.50001483999999996;stroke-opacity:1"
+         rx="1.4706914"
+         ry="1.4706914"
+         height="110.88316"
+         width="111.72807"
+         y="388.50116"
+         x="242.3918" />
+      <rect
+         id="rect5392"
+         style="fill:#c3c3c3;fill-opacity:1"
+         rx="1.2999141"
+         ry="1.2999141"
+         height="38.67696"
+         width="4.6044002"
+         y="419.05133"
+         x="247.59479" />
+      <path
+         id="path5394"
+         d="m 332.70711,426.21116 h 18.48874 v 5.64315 h 4.8535 v -21.86169 h -4.8535 v 6.66925 h -18.48874 z"
+         sodipodi:nodetypes="ccccccccc"
+         style="fill:#c3c3c3;fill-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         id="path5414"
+         sodipodi:nodetypes="ccccccccc"
+         style="fill:#c3c3c3;fill-opacity:1"
+         inkscape:connector-curvature="0"
+         d="m 332.70711,472.25516 h 18.48874 v 5.64315 h 4.8535 v -21.86169 h -4.8535 v 6.66925 h -18.48874 z" />
+      <use
+         x="0"
+         y="0"
+         inkscape:tiled-clone-of="#rect5422"
+         width="86.768433"
+         height="92.834732"
+         transform="translate(8.7371049,8.7372297)"
+         xlink:href="#rect5422"
+         id="use5436" />
+      <use
+         x="0"
+         y="0"
+         inkscape:tiled-clone-of="#rect5422"
+         width="86.768433"
+         height="92.834732"
+         transform="translate(8.7371049,17.47421)"
+         xlink:href="#rect5422"
+         id="use5438" />
+      <use
+         x="0"
+         y="0"
+         inkscape:tiled-clone-of="#rect5422"
+         width="86.768433"
+         height="92.834732"
+         transform="translate(8.7371049,26.211939)"
+         xlink:href="#rect5422"
+         id="use5440" />
+      <g
+         id="g9012">
+        <use
+           id="use5428"
+           xlink:href="#rect5422"
+           transform="translate(0,8.7372297)"
+           height="92.834732"
+           width="86.768433"
+           inkscape:tiled-clone-of="#rect5422"
+           y="0"
+           x="0" />
+        <use
+           id="use5430"
+           xlink:href="#rect5422"
+           transform="translate(0,17.47421)"
+           height="92.834732"
+           width="86.768433"
+           inkscape:tiled-clone-of="#rect5422"
+           y="0"
+           x="0" />
+        <use
+           id="use5432"
+           xlink:href="#rect5422"
+           transform="translate(0,26.211939)"
+           height="92.834732"
+           width="86.768433"
+           inkscape:tiled-clone-of="#rect5422"
+           y="0"
+           x="0" />
+        <g
+           id="g9007">
+          <rect
+             inkscape:tile-cx="-332.96994"
+             inkscape:tile-y0="324.21417"
+             x="266.47726"
+             y="423.40189"
+             inkscape:tile-cy="329.21417"
+             inkscape:tile-h="10"
+             width="5.9913535"
+             height="5.9913535"
+             inkscape:tile-w="10"
+             style="fill:#c3c3c3;fill-opacity:1"
+             inkscape:tile-x0="-337.96994"
+             id="rect5422" />
+          <use
+             x="0"
+             y="0"
+             inkscape:tiled-clone-of="#rect5422"
+             width="86.768433"
+             height="92.834732"
+             transform="translate(8.7371049,0)"
+             xlink:href="#rect5422"
+             id="use5434" />
+          <use
+             x="0"
+             y="0"
+             inkscape:tiled-clone-of="#rect5422"
+             width="86.768433"
+             height="92.834732"
+             transform="translate(17.47421,0)"
+             xlink:href="#rect5422"
+             id="use5442" />
+        </g>
+      </g>
+      <use
+         x="0"
+         y="0"
+         inkscape:tiled-clone-of="#rect5422"
+         width="86.768433"
+         height="92.834732"
+         transform="translate(17.47421,8.7372297)"
+         xlink:href="#rect5422"
+         id="use5444" />
+      <use
+         x="0"
+         y="0"
+         inkscape:tiled-clone-of="#rect5422"
+         width="86.768433"
+         height="92.834732"
+         transform="translate(17.47421,17.47421)"
+         xlink:href="#rect5422"
+         id="use5446" />
+      <use
+         x="0"
+         y="0"
+         inkscape:tiled-clone-of="#rect5422"
+         width="86.768433"
+         height="92.834732"
+         transform="translate(17.47421,26.211939)"
+         xlink:href="#rect5422"
+         id="use5448" />
+      <rect
+         id="rect5450"
+         style="fill:#ffffff;fill-opacity:1"
+         height="4.5427008"
+         width="23.362724"
+         y="415.92035"
+         x="266.51889" />
+    </g>
+  </g>
+</svg>

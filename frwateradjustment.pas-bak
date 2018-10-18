@@ -1,0 +1,1339 @@
+unit frwateradjustment;
+
+{$mode objfpc}{$H+}
+
+interface
+
+uses
+  Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, StdCtrls,
+  Buttons, Grids, Spin, ExtCtrls, Math, Data, Hulpfuncties, PositieInterval;
+
+type
+
+  { TFrmWaterAdjustment }
+
+  TFrmWaterAdjustment = class(TForm)
+    bbOK: TBitBtn;
+    bbCancel: TBitBtn;
+    bgBeer: TGroupBox;
+    bbTargetWater: TBitBtn;
+    bbRAClSO4: TBitBtn;
+    bbReset: TBitBtn;
+    cbSource1: TComboBox;
+    cbSource2: TComboBox;
+    cbTarget: TComboBox;
+    cbAcid: TComboBox;
+    eWortColor: TEdit;
+    eSpargeLacticAcid: TEdit;
+    eMinRA: TEdit;
+    eBUGU: TEdit;
+    eOptRA: TEdit;
+    eMaxRA: TEdit;
+    eOptClSO4: TEdit;
+    fseAcidPerc: TFloatSpinEdit;
+    fseSpargepH: TFloatSpinEdit;
+    fseSpargeVolume: TFloatSpinEdit;
+    fseLacticAcidPerc: TFloatSpinEdit;
+    fseLacticAcid: TFloatSpinEdit;
+    fseCaCl2: TFloatSpinEdit;
+    fseCaSO4: TFloatSpinEdit;
+    fseCaCO3: TFloatSpinEdit;
+    fseMgSO4: TFloatSpinEdit;
+    fseNaHCO3: TFloatSpinEdit;
+    fseNaCl: TFloatSpinEdit;
+    fseVolume1: TFloatSpinEdit;
+    fseVolume2: TFloatSpinEdit;
+    gbMash: TGroupBox;
+    bgBrewingSalts: TGroupBox;
+    gbSpargeWater: TGroupBox;
+    gbVisual: TGroupBox;
+    Label1: TLabel;
+    Label10: TLabel;
+    Label11: TLabel;
+    Label12: TLabel;
+    Label13: TLabel;
+    Label14: TLabel;
+    Label15: TLabel;
+    Label16: TLabel;
+    Label17: TLabel;
+    Label18: TLabel;
+    Label19: TLabel;
+    Label20: TLabel;
+    Label21: TLabel;
+    Label22: TLabel;
+    Label23: TLabel;
+    Label24: TLabel;
+    Label25: TLabel;
+    Label26: TLabel;
+    Label27: TLabel;
+    lSpargeLacticAcid: TLabel;
+    lSpargeVolume: TLabel;
+    lLacticAcid: TLabel;
+    lCaCl2: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    Label5: TLabel;
+    Label6: TLabel;
+    Label7: TLabel;
+    Label8: TLabel;
+    Label9: TLabel;
+    lCaSO4: TLabel;
+    lCaCO3: TLabel;
+    lMgSO4: TLabel;
+    lNaHCO3: TLabel;
+    lNaCl: TLabel;
+    lVolume: TLabel;
+    rgSource: TRadioGroup;
+    sgSource: TStringGrid;
+    piRA : TPosInterval;
+    piClSO4 : TPosInterval;
+    lVolume1: TLabel;
+    lVolume2: TLabel;
+    procedure bbRAClSO4Click(Sender: TObject);
+    procedure bbResetClick(Sender: TObject);
+    procedure bbTargetWaterClick(Sender: TObject);
+    procedure cbSource1Change(Sender: TObject);
+    procedure cbSource2Change(Sender: TObject);
+    procedure cbTargetChange(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+    procedure FormDestroy(Sender: TObject);
+    procedure fseCaCl2Change(Sender: TObject);
+    procedure fseSpargepHChange(Sender: TObject);
+    procedure fseSpargeVolumeChange(Sender: TObject);
+    procedure fseVolume2Change(Sender: TObject);
+    procedure rgSourceClick(Sender: TObject);
+    procedure sgSourceDrawCell(Sender: TObject; aCol, aRow: Integer;
+      aRect: TRect; aState: TGridDrawState);
+  private
+    { private declarations }
+    FRecipe : TRecipe;
+    FSource1, FSource2, FMashWater, FAdjustedWater, FTargetWater : TWater;
+    FColorCells : array of TCellCoord;
+    FWarningColor : TColor;
+    Procedure ColorCell(Col, Row : integer);
+    Procedure MixWater(W1, W2, Wr : TWater);
+    Procedure CalcWater;
+    Procedure CalcSparge;
+    //new
+    Function PartCO3(pH : double) : double;
+    Function PartHCO3(pH : double) : double;
+    Function PartH2CO3(pH : double) : double;
+    Function Charge(pH : double) : double;
+  public
+    { public declarations }
+    Function Execute(R : TRecipe) : boolean;
+  end; 
+
+var
+  FrmWaterAdjustment: TFrmWaterAdjustment;
+
+implementation
+
+{$R *.lfm}
+uses Containers, FrMain;
+
+const
+  Ka1 = 0.0000004445;
+  Ka2 = 0.0000000000468;
+
+procedure TFrmWaterAdjustment.FormCreate(Sender: TObject);
+var at : TAcidType;
+begin
+  {$ifdef Linux}
+  Font.Height:= 12;
+  {$endif}
+  {$ifdef Windows}
+  Font.Height:= 0;
+  {$endif}
+
+  FWarningColor:= clRed;
+  piRA:= TPosInterval.Create(gbVisual);
+  piRA.Parent:= gbVisual;
+  piRA.Left:= 3;
+  piRA.Top:= 3;
+  piRA.Width:= 261;
+  piRA.Height:= 40;
+//  piRA.Font.Height:= 12;
+  piRA.Caption:= 'Restalkaliteit: ';
+  piRA.ShowValues:= false;
+  piRA.Effect:= ePlain;
+  piRA.Decimals:= 0;
+  piRA.Min:= -350;
+  piRA.Max:= 350;
+  piRA.Value:= 0;
+
+  piClSO4:= TPosInterval.Create(gbVisual);
+  piClSO4.Parent:= gbVisual;
+  piClSO4.Left:= 3;
+  piClSO4.Top:= 38;
+  piClSO4.Width:= 261;
+  piClSO4.Height:= 40;
+//  piClSO4.Font.Height:= 12;
+  piClSO4.Caption:= 'Cl/SO4 ratio: ';
+  piClSO4.ShowValues:= false;
+  piClSO4.Effect:= ePlain;
+  piClSO4.Decimals:= 0;
+  piClSO4.Min:= 0;
+  piClSO4.Max:= 3;
+  piClSO4.Value:= 0.8;
+
+  for at:= Low(AcidTypeDisplayNames) to High(AcidTypeDisplayNames) do
+    cbAcid.Items.Add(AcidTypeDisplayNames[at]);
+
+  SetFontHeight(self);
+end;
+
+procedure TFrmWaterAdjustment.FormDestroy(Sender: TObject);
+begin
+  FSource1.Free;
+  FSource2.Free;
+  FMashWater.Free;
+  FAdjustedWater.Free;
+  FTargetWater.Free;
+  piRA.Free;
+  piClSO4.Free;
+end;
+
+Function TFrmWaterAdjustment.Execute(R : TRecipe) : boolean;
+var i, n : integer;
+    wc : double;
+    s : string;
+    M : TMisc;
+    W : TWater;
+    at : TAcidType;
+begin
+  Result:= false;
+  FRecipe:= R;
+  FSource1:= TWater.Create(FRecipe);
+  FSource1.Name.Value:= 'Bron 1';
+  FSource1.Amount.Value:= 0;
+  FSource2:= TWater.Create(FRecipe);
+  FSource2.Name.Value:= 'Bron 2';
+  FSource2.Amount.Value:= 0;
+  FMashWater:= TWater.Create(FRecipe);
+  FMashWater.Name.Value:= 'Na mengen';
+  FAdjustedWater:= TWater.Create(FRecipe);
+  FAdjustedWater.Name.Value:= 'Aangepast';
+  FAdjustedWater.Amount.Value:= 0;
+  FTargetWater:= TWater.Create(FRecipe);
+  FTargetWater.Name.Value:= 'Doelwater';
+  FTargetWater.Amount.Value:= 0;
+
+
+  if FRecipe <> NIL then
+  begin
+    fseVolume2.Enabled:= not FRecipe.Locked.Value;
+    cbSource1.Enabled:= not FRecipe.Locked.Value;
+    cbSource2.Enabled:= not FRecipe.Locked.Value;
+    cbTarget.Enabled:= not FRecipe.Locked.Value;
+    fseCaCl2.Enabled:= not FRecipe.Locked.Value;
+    fseCaSO4.Enabled:= not FRecipe.Locked.Value;
+    fseCaCO3.Enabled:= not FRecipe.Locked.Value;
+    fseMgSO4.Enabled:= not FRecipe.Locked.Value;
+    fseNaHCO3.Enabled:= not FRecipe.Locked.Value;
+    fseNaCl.Enabled:= not FRecipe.Locked.Value;
+    fseLacticAcid.Enabled:= not FRecipe.Locked.Value;
+    fseLacticAcidPerc.Enabled:= not FRecipe.Locked.Value;
+    fseSpargeVolume.Enabled:= not FRecipe.Locked.Value;
+
+    M:= TMisc(Miscs.FindByName('melkzuur'));
+    if M <> NIL then s:= M.Amount.DisplayUnitString
+    else s:= 'ml';
+    lLacticAcid.Caption:= s;
+    //lSpargeLacticAcid.Caption:= s + ' melkzuur';
+    lSpargeVolume.Caption:= FRecipe.Equipment.BatchSize.DisplayUnitString;
+    if FRecipe.VolumeHLT.Value > 0 then
+      fseSpargeVolume.Value:= FRecipe.VolumeHLT.DisplayValue
+    else
+      fseSpargeVolume.Value:= StrToFloat(FrmMain.eSpargeWater.Caption);
+
+    wc:= FRecipe.CalcColorMash;
+    eWortColor.Color:= SRMtoColor(wc);
+    if wc > 15 then eWortColor.Font.Color:= clWhite
+    else eWortColor.Font.Color:= clBlack;
+    wc:= Convert(srm, FRecipe.EstColor.DisplayUnit, wc);
+    s:= RealToStrDec(wc, 0) + ' ' + FRecipe.EstColor.DisplayUnitString;
+    eWortColor.Text:= s;
+    eMinRA.Text:= RealToStrDec(FRecipe.RAmin, 0);
+    eOptRA.Text:= RealToStrDec(FRecipe.RAopt, 0);
+    eMaxRA.Text:= RealToStrDec(FRecipe.RAmax, 0);
+    eBUGU.Text:= RealToStrDec(FRecipe.BUGU, 2);
+    eOptClSO4.Text:= RealToStrDec(FRecipe.OptClSO4ratio, 1);
+
+    if (FRecipe.Mash <> NIL) and (FRecipe.Mash.MashStep[0] <> NIL) then
+      lVolume.Caption:= 'Volume (' + FRecipe.Mash.MashStep[0].InfuseAmount.DisplayUnitString + ')'
+    else
+      lVolume.Caption:= 'Volume';
+
+    if FRecipe.Mash <> NIL then
+    begin
+      fseVolume1.MaxValue:= Convert(liter, FRecipe.BatchSize.DisplayUnit, FRecipe.Mash.MashWaterVolume);
+      fseVolume2.MaxValue:= Convert(liter, FRecipe.BatchSize.DisplayUnit, FRecipe.Mash.MashWaterVolume);
+    end;
+
+    Waters.SortByIndex(0, false, 1, Waters.NumItems-1);
+    if Waters.Item[0].Name.Value <> 'Gedemineraliseerd water' then
+    begin
+      Waters.InsertItem(0);
+      TWater(Waters.Item[0]).pHwater.Value:= 7;
+      TWater(Waters.Item[0]).Name.Value:= 'Gedemineraliseerd water';
+    end;
+    for i:= 0 to Waters.NumItems - 1 do
+      cbSource1.Items.Add(Waters.Item[i].Name.Value);
+
+    if FRecipe.Water[0] <> NIL then
+    begin
+      FSource1.Assign(FRecipe.Water[0]);
+      i:= cbSource1.Items.IndexOf(FRecipe.Water[0].Name.Value);
+      if i < 0 then
+      begin
+        cbSource1.Items.Add(FRecipe.Water[0].Name.Value);
+        cbSource1.ItemIndex:= cbSource1.Items.Count - 1;
+      end
+      else
+        cbSource1.ItemIndex:= i;
+      rgSource.Items[0]:= 'Alleen ' + cbSource1.Items[cbSource1.ItemIndex];
+    end
+    else
+    begin
+      cbSource1.ItemIndex:= -1;
+      rgSource.Items[0]:= 'Alleen bron 1';
+    end;
+
+    for i:= 0 to Waters.NumItems - 1 do
+      cbSource2.Items.Add(Waters.Item[i].Name.Value);
+
+    if FRecipe.Water[1] <> NIL then
+    begin
+      FSource2.Assign(FRecipe.Water[1]);
+      s:= FRecipe.Water[1].Name.Value;
+      i:= cbSource2.Items.IndexOf(s);
+      if i < 0 then
+      begin
+        cbSource2.Items.Add(FRecipe.Water[1].Name.Value);
+        cbSource2.ItemIndex:= cbSource2.Items.Count - 1;
+      end
+      else cbSource2.ItemIndex:= i;
+      rgSource.Items[1]:= 'Alleen ' + cbSource2.Items[cbSource2.ItemIndex];
+    end
+    else
+      rgSource.Items[1]:= 'Alleen bron 2';
+
+    rgSource.ItemIndex:= FRecipe.SpargeWaterComposition;
+
+    for i:= 0 to Waters.NumItems - 1 do
+      cbTarget.Items.Add(Waters.Item[i].Name.Value);
+    cbTarget.ItemIndex:= -1;
+
+    bbTargetWater.Enabled:= (cbTarget.ItemIndex > -1);
+
+    if FRecipe.Mash <> NIL then
+      FSource1.Amount.Value:= FRecipe.Mash.MashWaterVolume
+    else
+      FSource1.Amount.Value:= FRecipe.BatchSize.DisplayValue;
+    fseVolume1.Value:= FSource1.Amount.DisplayValue;
+
+    fseVolume2.Value:= 0;
+    if (FRecipe.Mash <> NIL) and (FRecipe.Water[1] <> NIL) then
+    begin
+      FSource2.Amount.Value:= FRecipe.Water[1].Amount.Value;
+      FSource1.Amount.Value:= FRecipe.Mash.MashWaterVolume - FSource2.Amount.Value;
+      fseVolume2.Value:= FSource2.Amount.DisplayValue;
+      fseVolume1.Value:= FSource1.Amount.DisplayValue;
+    end;
+
+    if cbSource1.ItemIndex = -1 then cbSource2.ItemIndex:= -1;
+    cbSource2.Enabled:= (not FRecipe.Locked.Value) and (cbSource1.ItemIndex > -1);
+
+    fseVolume2.Enabled:= (FRecipe.Water[1] <> NIL);
+
+    M:= FRecipe.FindMisc('CaCl2');
+    if M <> NIL then fseCaCl2.Value:= M.Amount.DisplayValue;
+    M:= FRecipe.FindMisc('CaSO4');
+    if M <> NIL then fseCaSO4.Value:= M.Amount.DisplayValue;
+    M:= FRecipe.FindMisc('CaCO3');
+    if M <> NIL then fseCaCO3.Value:= M.Amount.DisplayValue;
+    M:= FRecipe.FindMisc('MgSO4');
+    if M <> NIL then fseMgSO4.Value:= M.Amount.DisplayValue;
+    M:= FRecipe.FindMisc('NaHCO3');
+    if M <> NIL then fseNaHCO3.Value:= M.Amount.DisplayValue;
+    M:= FRecipe.FindMisc('NaCl');
+    if M <> NIL then fseNaCl.Value:= M.Amount.DisplayValue;
+    M:= FRecipe.FindMisc('Melkzuur');
+    if M <> NIL then fseLacticAcid.Value:= M.Amount.DisplayValue;
+
+    i:= 0; n:= -1;
+    for at:= Low(AcidTypeDisplayNames) to High(AcidTypeDisplayNames) do
+    begin
+      inc(n);
+      if at = FRecipe.AcidSpargeType then i:= n;
+    end;
+
+    cbAcid.ItemIndex:= i;
+    wc:= FRecipe.AcidSpargePerc.Value;
+    fseAcidPerc.Value:= wc;
+
+//    cbSource1Change(self);
+//    cbSource2Change(self);
+//    cbTargetChange(self);
+
+    CalcWater;
+    CalcSparge;
+
+    Result:= (ShowModal = mrOK);
+    if Result then
+    begin
+      //create the right waters (source, distilled etc) in FRecipe and add the right amount of salts and acids
+      if cbSource1.ItemIndex > -1 then
+      begin
+        W:= FRecipe.FindWater(FSource1.Name.Value);
+        if W = NIL then //the chosen water is not yet in the recipe. Add it
+        begin
+          FRecipe.RemoveWaters;
+          W:= FRecipe.AddWater;
+          W.Assign(FSource1);
+        end
+        else
+          W.Amount.Value:= FSource1.Amount.Value;
+      end;
+      if cbSource2.ItemIndex > -1 then
+      begin
+        W:= FRecipe.FindWater(FSource2.Name.Value);
+        if W = NIL then
+        begin
+          FRecipe.RemoveWater(1);
+          W:= FRecipe.AddWater;
+          W.Assign(FSource2);
+        end
+        else
+          W.Amount.Value:= FSource2.Amount.Value;
+      end
+      else if FRecipe.NumWaters = 2 then
+        FRecipe.RemoveWater(1);
+
+      M:= FRecipe.FindMisc('CaCl2');
+      if (fseCaCl2.Value = 0) and (M <> NIL) then FRecipe.RemoveMiscByReference(M)
+      else if (fseCaCl2.Value > 0) and (M = NIL) then
+      begin
+        M:= FRecipe.AddMisc;
+        M.Name.Value:= 'CaCl2';
+        M.AmountIsWeight.Value:= TRUE;
+        M.Amount.vUnit:= kilogram;
+        M.Amount.DisplayUnit:= gram;
+        M.Amount.MinValue:= 0;
+        M.Amount.MaxValue:= 10000;
+        M.MiscType:= mtWaterAgent;
+        M.Use:= muMash;
+        M.UseFor.Value:= 'Voor het maken van een ander waterprofiel. Voegt calcium en chloride toe. Voor het verbeteren van zoetere bieren.';
+        M.Inventory.vUnit:= M.Amount.vUnit;
+        M.Inventory.DisplayUnit:= M.Amount.DisplayUnit;
+        M.Inventory.Value:= 0;
+        M.Amount.DisplayValue:= fseCaCl2.Value;
+      end
+      else if (fseCaCl2.Value > 0) and (M <> NIL) then
+      begin
+        M.Amount.DisplayValue:= fseCaCl2.Value;
+      end;
+
+      M:= FRecipe.FindMisc('CaSO4');
+      if (fseCaSO4.Value = 0) and (M <> NIL) then FRecipe.RemoveMiscByReference(M)
+      else if (fseCaSO4.Value > 0) and (M = NIL) then
+      begin
+        M:= FRecipe.AddMisc;
+        M.Name.Value:= 'CaSO4';
+        M.AmountIsWeight.Value:= TRUE;
+        M.Amount.vUnit:= kilogram;
+        M.Amount.DisplayUnit:= gram;
+        M.Amount.MinValue:= 0;
+        M.Amount.MaxValue:= 10000;
+        M.MiscType:= mtWaterAgent;
+        M.Use:= muMash;
+        M.UseFor.Value:= 'Gips. Voor het maken van een ander waterprofiel. Voegt calcium en sulfaat toe. Voor het verbeteren van bittere bieren.';
+        M.Inventory.vUnit:= M.Amount.vUnit;
+        M.Inventory.DisplayUnit:= M.Amount.DisplayUnit;
+        M.Inventory.Value:= 0;
+        M.Amount.DisplayValue:= fseCaSO4.Value;
+      end
+      else if (fseCaSO4.Value > 0) and (M <> NIL) then
+      begin
+        M.Amount.DisplayValue:= fseCaSO4.Value;
+      end;
+
+      M:= FRecipe.FindMisc('CaCO3');
+      if (fseCaCO3.Value = 0) and (M <> NIL) then FRecipe.RemoveMiscByReference(M)
+      else if (fseCaCO3.Value > 0) and (M = NIL) then
+      begin
+        M:= FRecipe.AddMisc;
+        M.Name.Value:= 'CaCO3';
+        M.AmountIsWeight.Value:= TRUE;
+        M.Amount.vUnit:= kilogram;
+        M.Amount.DisplayUnit:= gram;
+        M.Amount.MinValue:= 0;
+        M.Amount.MaxValue:= 10000;
+        M.MiscType:= mtWaterAgent;
+        M.Use:= muMash;
+        M.UseFor.Value:= 'Kalk. Voor het maken van een ander waterprofiel. Voegt calcium en (bi)carbonaat toe. Voor het verhogen van de pH tijdens het maischen.';
+        M.Inventory.vUnit:= M.Amount.vUnit;
+        M.Inventory.DisplayUnit:= M.Amount.DisplayUnit;
+        M.Inventory.Value:= 0;
+        M.Amount.DisplayValue:= fseCaCO3.Value;
+      end
+      else if (fseCaCO3.Value > 0) and (M <> NIL) then
+      begin
+        M.Amount.DisplayValue:= fseCaCO3.Value;
+      end;
+
+      M:= FRecipe.FindMisc('MgSO4');
+      if (fseMgSO4.Value = 0) and (M <> NIL) then FRecipe.RemoveMiscByReference(M)
+      else if (fseMgSO4.Value > 0) and (M = NIL) then
+      begin
+        M:= FRecipe.AddMisc;
+        M.Name.Value:= 'MgSO4';
+        M.AmountIsWeight.Value:= TRUE;
+        M.Amount.vUnit:= kilogram;
+        M.Amount.DisplayUnit:= gram;
+        M.Amount.MinValue:= 0;
+        M.Amount.MaxValue:= 10000;
+        M.MiscType:= mtWaterAgent;
+        M.Use:= muMash;
+        M.UseFor.Value:= 'Epsom zout. Voor het maken van een ander waterprofiel. Voegt magnesium en sulfaat toe. Gebruik spaarzaam!';
+        M.Inventory.vUnit:= M.Amount.vUnit;
+        M.Inventory.DisplayUnit:= M.Amount.DisplayUnit;
+        M.Inventory.Value:= 0;
+        M.Amount.DisplayValue:= fseMgSO4.Value;
+      end
+      else if (fseMgSO4.Value > 0) and (M <> NIL) then
+      begin
+        M.Amount.DisplayValue:= fseMgSO4.Value;
+      end;
+
+      M:= FRecipe.FindMisc('NaHCO3');
+      if (fseNaHCO3.Value = 0) and (M <> NIL) then FRecipe.RemoveMiscByReference(M)
+      else if (fseNaHCO3.Value > 0) and (M = NIL) then
+      begin
+        M:= FRecipe.AddMisc;
+        M.Name.Value:= 'NaHCO3';
+        M.AmountIsWeight.Value:= TRUE;
+        M.Amount.vUnit:= kilogram;
+        M.Amount.DisplayUnit:= gram;
+        M.Amount.MinValue:= 0;
+        M.Amount.MaxValue:= 10000;
+        M.MiscType:= mtWaterAgent;
+        M.Use:= muMash;
+        M.UseFor.Value:= 'Baksoda of bakpoeder. Voor het maken van een ander waterprofiel. Voegt natrium en bicarbonaat toe. Kan gebruikt worden voor verhoging van de pH tijdens het maischen.';
+        M.Inventory.vUnit:= M.Amount.vUnit;
+        M.Inventory.DisplayUnit:= M.Amount.DisplayUnit;
+        M.Inventory.Value:= 0;
+        M.Amount.DisplayValue:= fseNaHCO3.Value;
+      end
+      else if (fseNaHCO3.Value > 0) and (M <> NIL) then
+      begin
+        M.Amount.DisplayValue:= fseNaHCO3.Value;
+      end;
+
+      M:= FRecipe.FindMisc('NaCl');
+      if (fseNaCl.Value = 0) and (M <> NIL) then FRecipe.RemoveMiscByReference(M)
+      else if (fseNaCl.Value > 0) and (M = NIL) then
+      begin
+        M:= FRecipe.AddMisc;
+        M.Name.Value:= 'NaCl';
+        M.AmountIsWeight.Value:= TRUE;
+        M.Amount.vUnit:= kilogram;
+        M.Amount.DisplayUnit:= gram;
+        M.Amount.MinValue:= 0;
+        M.Amount.MaxValue:= 10000;
+        M.MiscType:= mtWaterAgent;
+        M.Use:= muMash;
+        M.UseFor.Value:= 'Keukenzout. Voor het maken van een ander waterprofiel. Voegt natrium en chloride toe. Voor het accentueren van zoetheid. Bij hoge dosering wordt het bier ziltig.';
+        M.Inventory.vUnit:= M.Amount.vUnit;
+        M.Inventory.DisplayUnit:= M.Amount.DisplayUnit;
+        M.Inventory.Value:= 0;
+        M.Amount.DisplayValue:= fseNaCl.Value;
+      end
+      else if (fseNaCl.Value > 0) and (M <> NIL) then
+      begin
+        M.Amount.DisplayValue:= fseNaCl.Value;
+      end;
+
+      M:= FRecipe.FindMisc('Melkzuur');
+      if (fseLacticAcid.Value = 0) and (M <> NIL) then FRecipe.RemoveMiscByReference(M)
+      else if (fseLacticAcid.Value > 0) and (M = NIL) then
+      begin
+        M:= FRecipe.AddMisc;
+        M.Name.Value:= 'Melkzuur';
+        M.AmountIsWeight.Value:= false;
+        M.Amount.vUnit:= liter;
+        M.Amount.DisplayUnit:= milliliter;
+        M.Amount.Value:= 0;
+        M.MiscType:= mtWaterAgent;
+        M.Use:= muMash;
+        M.UseFor.Value:= 'Melkzuur wordt gebruikt voor het verlagen van de pH tijdens het maischen en het verlagen van de pH van het spoelwater.';
+        M.Inventory.vUnit:= M.Amount.vUnit;
+        M.Inventory.DisplayUnit:= M.Amount.DisplayUnit;
+        M.Inventory.Value:= 0;
+        M.Amount.DisplayValue:= fseLacticAcid.Value;
+      end
+      else if (fseLacticAcid.Value > 0) and (M <> NIL) then
+      begin
+        M.Amount.DisplayValue:= fseLacticAcid.Value;
+      end;
+      FRecipe.VolumeHLT.DisplayValue:= fseSpargeVolume.Value;
+      FRecipe.SpargeWaterComposition:= rgSource.ItemIndex;
+    end;
+  end;
+end;
+
+Procedure TFrmWaterAdjustment.ColorCell(Col, Row : integer);
+begin
+  SetLength(FColorCells, High(FColorCells) + 2);
+  FColorCells[High(FColorCells)].Col:= Col;
+  FColorCells[High(FColorCells)].Row:= Row;
+end;
+
+Procedure TFrmWaterAdjustment.MixWater(W1, W2, Wr : TWater);
+  Function Mix(V1, V2, C1, C2 : double) : double;
+  begin
+    if (V1 + V2) > 0 then
+      Result:= (V1 * C1 + V2 * C2) / (V1 + V2)
+    else
+      Result:= 0;
+  end;
+
+var vol1, vol2 : double;
+    phnew : double;
+begin
+  vol1:= W1.Amount.Value;
+  vol2:= W2.Amount.Value;
+  if (vol1 + vol2) > 0 then
+  begin
+    Wr.Amount.Value:= vol1 + vol2;
+    Wr.Calcium.Value:= Mix(vol1, vol2, W1.Calcium.Value, W2.Calcium.Value);
+    Wr.Magnesium.Value:= Mix(vol1, vol2, W1.Magnesium.Value, W2.Magnesium.Value);
+    Wr.Sodium.Value:= Mix(vol1, vol2, W1.Sodium.Value, W2.Sodium.Value);
+    Wr.Bicarbonate.Value:= Mix(vol1, vol2, W1.Bicarbonate.Value, W2.Bicarbonate.Value);
+    Wr.TotalAlkalinity.Value:= Mix(vol1, vol2, W1.TotalAlkalinity.Value, W2.TotalAlkalinity.Value);
+    Wr.Sulfate.Value:= Mix(vol1, vol2, W1.Sulfate.Value, W2.Sulfate.Value);
+    Wr.Chloride.Value:= Mix(vol1, vol2, W1.Chloride.Value, W2.Chloride.Value);
+    pHnew:=  -log10((power(10, -W1.pHWater.Value) * vol1 + power(10, -W2.pHWater.Value) * vol2) / (vol1 + vol2));
+    Wr.pHwater.Value:= pHnew;
+  end;
+end;
+
+Procedure TFrmWaterAdjustment.CalcWater;
+var x, RA, pHa : double;
+    i : integer;
+begin
+  if (FSource1 <> NIL) and (FRecipe <> NIL) then
+  begin
+    FSource1.Amount.Value:= Convert(liter, FRecipe.Equipment.TunVolume.DisplayUnit,
+                                    FRecipe.Mash.MashWaterVolume) - FSource2.Amount.Value;
+    if cbSource2.ItemIndex > -1 then
+      MixWater(FSource1, FSource2, FMashWater)
+    else
+    begin
+      FSource2.Amount.Value:= 0;
+      fSource1.Amount.Value:= Convert(liter, FRecipe.Equipment.TunVolume.DisplayUnit,
+                                    FRecipe.Mash.MashWaterVolume);
+      FMashWater.Assign(FSource1);
+      FMashWater.Name.Value:= 'Na mengen';
+      fseVolume2.Value:= 0;
+      fseVolume1.Value:= fSource1.Amount.DisplayValue;
+    end;
+
+
+    SetLength(FColorCells, 0);
+
+    sgSource.Cells[0, 1]:= FSource1.Name.Value;
+    sgSource.Cells[1, 1]:= FSource1.Calcium.DisplayString;
+    sgSource.Cells[2, 1]:= FSource1.Magnesium.DisplayString;
+    sgSource.Cells[3, 1]:= FSource1.Sodium.DisplayString;
+    sgSource.Cells[4, 1]:= FSource1.TotalAlkalinity.DisplayString;
+    sgSource.Cells[5, 1]:= FSource1.Sulfate.DisplayString;
+    sgSource.Cells[6, 1]:= FSource1.Chloride.DisplayString;
+    RA:= FSource1.ResidualAlkalinity;
+//    pHa:= FRecipe.pHdemi + RA * (0.013 * FRecipe.MashThickness + 0.013) / 2.81;
+    pHa:= FRecipe.pHdemi + RA * (0.013 * FRecipe.MashThickness + 0.013) / 50;
+    sgSource.Cells[7, 1]:= RealToStrDec(pHa, 1);
+    if (pHa > 5.6) or (pHa < 5.2) then ColorCell(7, 1);
+    sgSource.Cells[8, 1]:= RealToStrDec(RA, 0) + ' mg/l';
+    if (RA < FRecipe.RAmin) or (RA > FRecipe.RAmax) then ColorCell(8, 1);
+    if FSource1.Sulfate.Value > 0 then RA:= FSource1.Chloride.Value / FSource1.Sulfate.Value
+    else RA:= 10;
+    if (RA < 0.8 * FRecipe.BUGU) or (RA > 1.2 * FRecipe.BUGU) then ColorCell(9, 1);
+    sgSource.Cells[9, 1]:= RealToStrDec(RA, 1);
+
+    if cbSource2.ItemIndex > -1 then
+    begin
+      sgSource.Cells[0, 2]:= FMashWater.Name.Value;
+      sgSource.Cells[1, 2]:= FMashWater.Calcium.DisplayString;
+      sgSource.Cells[2, 2]:= FMashWater.Magnesium.DisplayString;
+      sgSource.Cells[3, 2]:= FMashWater.Sodium.DisplayString;
+      sgSource.Cells[4, 2]:= FMashWater.TotalAlkalinity.DisplayString;
+      sgSource.Cells[5, 2]:= FMashWater.Sulfate.DisplayString;
+      sgSource.Cells[6, 2]:= FMashWater.Chloride.DisplayString;
+      RA:= FMashWater.ResidualAlkalinity;
+//      pHa:= FRecipe.pHdemi + RA * (0.013 * FRecipe.MashThickness + 0.013) / 2.81;
+      pHa:= FRecipe.pHdemi + RA * (0.013 * FRecipe.MashThickness + 0.013) / 50;
+      sgSource.Cells[7, 2]:= RealToStrDec(pHa, 1);
+      if (pHa > 5.6) or (pHa < 5.2) then ColorCell(7, 2);
+      sgSource.Cells[8, 2]:= RealToStrDec(RA, 0) + ' mg/l';
+      if (RA < FRecipe.RAmin) or (RA > FRecipe.RAmax) then ColorCell(8, 2);
+      if FMashWater.Sulfate.Value > 0 then RA:= FMashWater.Chloride.Value / FMashWater.Sulfate.Value
+      else RA:= 10;
+      if (RA < 0.8 * FRecipe.BUGU) or (RA > 1.2 * FRecipe.BUGU) then ColorCell(9, 2);
+      sgSource.Cells[9, 2]:= RealToStrDec(RA, 1);
+      //sgSource.Cells[7, 2]:= FDilutedWater.pHWater.DisplayString;
+    end
+    else
+    begin
+      for i:= 0 to 9 do sgSource.Cells[i, 2]:= '';
+    end;
+//    FAdjustedWater
+    FAdjustedWater.Assign(FMashWater);
+    FAdjustedWater.Name.Value:= 'Aangepast';
+    if FAdjustedWater.Amount.Value > 0 then
+    begin
+      //Ca
+      RA:= fseCaCl2.Value * MMCa / MMCaCl2 + fseCaSO4.Value * MMCa / MMCaSO4
+           + fseCaCO3.Value * MMCa / MMCaCO3;
+      RA:= 1000 * RA / FAdjustedWater.Amount.Value;
+      FAdjustedWater.Calcium.Value:= FMashWater.Calcium.Value + RA;
+      if (FAdjustedWater.Calcium.Value < 40) or (FAdjustedWater.Calcium.Value > 200) then ColorCell(1, 3);
+      //Mg
+      RA:= fseMgSO4.Value * MMMg / MMMgSO4;
+      RA:= 1000 * RA / FAdjustedWater.Amount.Value;
+      FAdjustedWater.Magnesium.Value:= FMashWater.Magnesium.Value + RA;
+      if (FAdjustedWater.Magnesium.Value > 40) then ColorCell(2, 3);
+      //Na
+      RA:= fseNaCl.Value * MMNa / MMNaCl + fseNaHCO3.Value * MMNa / MMNaHCO3;
+      RA:= 1000 * RA / FAdjustedWater.Amount.Value;
+      FAdjustedWater.Sodium.Value:= FMashWater.Sodium.Value + RA;
+      if (FAdjustedWater.Sodium.Value > 100) then ColorCell(3, 3);
+      //HCO3
+      RA:= fseCaCO3.Value * MMHCO3 / MMCaCO3 + fseNaHCO3.Value * MMHCO3 / MMNaHCO3;
+      RA:= 1000 * RA / FAdjustedWater.Amount.Value;
+      FAdjustedWater.Bicarbonate.Value:= FMashWater.Bicarbonate.Value + RA;
+//      if (FAdjustedWater.Bicarbonate.Value > 300) then ColorCell(2, 3);
+      //SO4
+      RA:= fseCaSO4.Value * MMSO4 / MMCaSO4 + fseMgSO4.Value * MMSO4 / MMMgSO4;
+      RA:= 1000 * RA / FAdjustedWater.Amount.Value;
+      x:= FMashWater.Sulfate.Value;
+      FAdjustedWater.Sulfate.Value:= x + RA;
+      if (FAdjustedWater.Sulfate.Value > 600) then ColorCell(5, 3);
+      //Cl
+      RA:= 2 * fseCaCl2.Value * MMCl / MMCaCl2 + fseNaCl.Value * MMCl / MMNaCl;
+      RA:= 1000 * RA / FAdjustedWater.Amount.Value;
+      FAdjustedWater.Chloride.Value:= FMashWater.Chloride.Value + RA;
+      if (FAdjustedWater.Chloride.Value > 200) then ColorCell(6, 3);
+
+      //Lactic acid
+  {    RA:= 1214 * fseLacticAcid.Value * fseLacticAcidPerc.Value / 100 / FAdjustedWater.Amount.Value;
+      FAdjustedWater.Bicarbonate.Value:= FAdjustedWater.Bicarbonate.Value - 0.5 * 61/90 * RA;}
+      sgSource.Cells[0, 3]:= FAdjustedWater.Name.Value;
+      sgSource.Cells[1, 3]:= FAdjustedWater.Calcium.DisplayString;
+      sgSource.Cells[2, 3]:= FAdjustedWater.Magnesium.DisplayString;
+      sgSource.Cells[3, 3]:= FAdjustedWater.Sodium.DisplayString;
+      sgSource.Cells[4, 3]:= FAdjustedWater.TotalAlkalinity.DisplayString;
+      sgSource.Cells[5, 3]:= FAdjustedWater.Sulfate.DisplayString;
+      sgSource.Cells[6, 3]:= FAdjustedWater.Chloride.DisplayString;
+
+      RA:= 2/3 * 50 / FAdjustedWater.Amount.Value * fseLacticAcid.Value * 11.8 * fseLacticAcidPerc.Value / 88;
+      RA:= FAdjustedWater.ResidualAlkalinity - RA;// / 17.859;
+//      pHa:= FRecipe.pHdemi + RA * (0.013 * FRecipe.MashThickness + 0.013) / 2.81;
+      pHa:= FRecipe.pHdemi + RA * (0.013 * FRecipe.MashThickness + 0.013) / 50;
+      sgSource.Cells[7, 3]:= RealToStrDec(pHa, 1);
+      if (pHa > 5.6) or (pHa < 5.2) then ColorCell(7, 3);
+
+      piRa.Low:= FRecipe.RAmin;
+      piRa.High:= FRecipe.RAmax;
+      if (RA < FRecipe.RAmin) or (RA > FRecipe.RAmax) then ColorCell(8, 3);
+      sgSource.Cells[8, 3]:= RealToStrDec(RA, 0) + ' mg/l';
+      piRA.Value:= RA;
+
+      if FAdjustedWater.Sulfate.Value > 0 then RA:= FAdjustedWater.Chloride.Value / FAdjustedWater.Sulfate.Value
+      else RA:= 10;
+
+      piClSO4.Low:= 0.8 * FRecipe.OptClSO4ratio;
+      piClSO4.High:= 1.2 * FRecipe.OptClSO4ratio;
+      if (RA < piClSO4.Low) or (RA > piClSO4.High) then ColorCell(9, 3);
+      sgSource.Cells[9, 3]:= RealToStrDec(RA, 1);
+      piClSO4.Value:= RA;
+
+      CalcSparge;
+    end;
+  end;
+end;
+
+procedure TFrmWaterAdjustment.cbSource1Change(Sender: TObject);
+var W : TWater;
+begin
+  W:= TWater(Waters.Item[cbSource1.ItemIndex]);
+  if W <> NIL then
+  begin
+    FSource1.Assign(W);
+    FSource1.Name.Value:= W.Name.Value;
+    rgSource.Items[0]:= 'Alleen ' + W.Name.Value;
+  end;
+  CalcWater;
+  if cbSource1.ItemIndex = -1 then
+    cbSource2.ItemIndex:= -1;
+  cbSource2.Enabled:= (not FRecipe.Locked.Value) and (cbSource1.ItemIndex > -1);
+end;
+
+procedure TFrmWaterAdjustment.cbSource2Change(Sender: TObject);
+var W : TWater;
+begin
+  W:= TWater(Waters.Item[cbSource2.ItemIndex]);
+  if W <> NIL then
+  begin
+    FSource2.Assign(W);
+    FSource2.Name.Value:= W.Name.Value;
+    FSource2.Amount.Value:= 0;
+    fseVolume2.Value:= 0;
+    rgSource.Items[1]:= 'Alleen ' + W.Name.Value;
+  end;
+  fseVolume2.Enabled:= (cbSource2.ItemIndex > -1);
+  rgSource.Enabled:= fseVolume2.Enabled;
+  if not rgSource.Enabled then rgSource.ItemIndex:= 0;
+  CalcWater;
+end;
+
+procedure TFrmWaterAdjustment.fseVolume2Change(Sender: TObject);
+begin
+  if FRecipe <> NIL then
+  begin
+    fseVolume1.Value:= fseVolume1.MaxValue - fseVolume2.Value;
+    FSource1.Amount.DisplayValue:= fseVolume1.Value;
+    FSource2.Amount.DisplayValue:= fseVolume2.Value;
+    CalcWater;
+  end;
+end;
+
+procedure TFrmWaterAdjustment.cbTargetChange(Sender: TObject);
+var W : TWater;
+    RA, pH : double;
+begin
+  W:= TWater(Waters.Item[cbTarget.ItemIndex]);
+  if W <> NIL then
+  begin
+     FTargetWater.Assign(W);
+     FTargetWater.Name.Value:= 'Doelwater';
+     sgSource.Cells[0, 4]:= FTargetWater.Name.Value;
+     sgSource.Cells[1, 4]:= FTargetWater.Calcium.DisplayString;
+     sgSource.Cells[2, 4]:= FTargetWater.Magnesium.DisplayString;
+     sgSource.Cells[3, 4]:= FTargetWater.Sodium.DisplayString;
+     sgSource.Cells[4, 4]:= FTargetWater.TotalAlkalinity.DisplayString;
+     sgSource.Cells[5, 4]:= FTargetWater.Sulfate.DisplayString;
+     sgSource.Cells[6, 4]:= FTargetWater.Chloride.DisplayString;
+     RA:= FTargetWater.ResidualAlkalinity;
+//     pH:= FRecipe.pHdemi + RA * (0.013 * FRecipe.MashThickness + 0.013) / 2.81;
+     pH:= FRecipe.pHdemi + RA * (0.013 * FRecipe.MashThickness + 0.013) / 50;
+     sgSource.Cells[7, 4]:= RealToStrDec(pH, 1);
+     sgSource.Cells[8, 4]:= RealToStrDec(RA, 0) + ' mg/l';
+     if FTargetWater.Sulfate.Value > 0 then RA:= FTargetWater.Chloride.Value / FTargetWater.Sulfate.Value
+     else RA:= 10;
+     sgSource.Cells[9, 4]:= RealToStrDec(RA, 0);
+  end
+  else
+  begin
+    sgSource.Cells[0, 4]:= '';
+    sgSource.Cells[1, 4]:= '';
+    sgSource.Cells[2, 4]:= '';
+    sgSource.Cells[3, 4]:= '';
+    sgSource.Cells[4, 4]:= '';
+    sgSource.Cells[5, 4]:= '';
+    sgSource.Cells[6, 4]:= '';
+    sgSource.Cells[7, 4]:= '';
+    sgSource.Cells[8, 4]:= '';
+    sgSource.Cells[9, 4]:= '';
+  end;
+  bbTargetWater.Enabled:= (W <> NIL);
+end;
+
+procedure TFrmWaterAdjustment.sgSourceDrawCell(Sender: TObject; aCol,
+  aRow: Integer; aRect: TRect; aState: TGridDrawState);
+var S: string;
+    i : integer;
+begin
+  for i:= Low(FColorCells) to High(FColorCells) do
+    if (ACol = FColorCells[i].Col) and (ARow = FColorCells[i].Row) then
+    begin
+      sgSource.Canvas.Brush.Color := FWarningColor;
+      sgSource.Canvas.FillRect(aRect);
+      S := sgSource.Cells[ACol, ARow];
+      sgSource.Canvas.TextOut(aRect.Left + 2, aRect.Top + 2, S);
+    end;
+end;
+
+procedure TFrmWaterAdjustment.fseCaCl2Change(Sender: TObject);
+begin
+  CalcWater;
+end;
+
+Procedure TFrmWaterAdjustment.CalcSparge;
+var alkalinity, acid, TargetpH : double;
+    r1, r2, d, f1, f3 : double;
+    r1g, r2g, dg, f1g, f3g : double;
+    r143, r243, d43, f143, f343 : double;
+    r1d, r2d, r3d, dd, f1d, f2d, f3d, f4d, frac, pK1, pK2, pK3, MolWt, AcidSG, AcidPrc : double;
+    W : TWater;
+    AT : TAcidType;
+begin
+  //Calculations from http://www.brewery.org/brewery/library/AcidifWaterAJD0497.html
+
+  if rgSource.ItemIndex = 0 then W:= FSource1
+  else if rgSource.ItemIndex = 1 then W:= FSource2
+  else W:= FMashwater;
+  TargetpH:= fseSpargepH.Value;
+
+  //Step 1: Compute the mole fractions of carbonic (f1o), bicarbonate (f2o) and carbonate(f3o) at the water sample's pH
+  r1:= power(10, W.pHwater.Value - 6.38);
+  r2:= power(10, W.pHwater.Value - 10.33);
+  d:= 1 + r1 + r1*r2;
+  f1:= 1/d;
+  f3:= r1 * r2 / d;
+
+  //Step 2. Compute the mole fractions at pHb = 4.3 (the pH which defines alkalinity)
+  r143:= power(10, 4.3 - 6.38);
+  r243:= power(10, 4.3 - 10.33);
+  d43:= 1 + r143 + r143*r243;
+  f143:= 1/d43;
+  f343:= r143 * r243 / d43;
+
+  //Step 3. Convert the sample alkalinity to milliequivalents/L
+  alkalinity:= W.TotalAlkalinity.Value / 50;
+
+  //Step 4. Solve
+  alkalinity:= alkalinity / ((f143-f1)+(f3-f343));
+
+  //Step 5. Compute mole fractions at desired pH
+  r1g:= power(10, TargetpH - 6.38);
+  r2g:= power(10, TargetpH - 10.33);
+  dg:= 1 + r1g + r1g*r2g;
+  f1g:= 1/dg;
+  f3g:= r1g * r2g / dg;
+
+  //Step 6. Use these to compute the milliequivalents acid required per liter (mEq/L)
+  acid:= alkalinity + ((f1g-f1)+(f3-f3g)) + power(10, -TargetpH)
+         - power(10, -W.pHwater.Value);  //mEq/l
+
+  {Step 7. If the acid is labeled in terms of its normality (i.e. 1 N, 0.1N) recognize that
+   a milliter contains the same number of mEq as the normality of the acid e.g. 1 N acid
+   contains 1 mEq/mL, 0.1N contains 0.1 mEq/L. Of the acids typically used only hydrochloric
+   and sulfuric are likely to be labeled in this way. Divide 'E' by the number of mEq/mL
+   to get the number of mL of acid to add to each liter of the water. Thus if 8.75 N acid
+   (approximate strength of hardware store hydrochloric acid) were being used with the
+   example water 1.94/8.75 = 0.216 mL would be required for each liter being acidified.
+
+  Step 8. If the acid is not labeled by its normality then you must compute the number
+  of millimoles (mM) required to give the needed number of mEq and then convert that
+  to a weight or volume. This is not necessary if the acid is labeled in terms of its
+  molarity (e.g. 2 M, 0.1M) in which case each milliliter contains the same number
+  of mM as the strength. One mL of 1M acid contains 1 mM. Start by computing the number
+  of mEq of H+ obtained from 1 mM of the acid at the target pH. To do this you will
+  need all the pK's of the acid being used. The following table gives values you can
+  plug into the formulas which follow (you will neFRecipe.AcidSpargePerc.Value:= fseAcidPerc.Value;ed the molecular weights later):
+
+  Code            Acid            pK1     pK2     pK3     Mol. Wt
+
+                  Acetic          4.75    20     20        60.05
+                  Citric          3.14    4.77    6.39    192.13
+  taHydrochloric  Hydrochloric  -10.     20      20        36.46
+  taLactic        Lactic          3.08   20      20        90.08
+  taPhosphoric    Phosphoric      2.12    7.20   12.44     98.00
+  taSulfuric      Sulfuric      -10.      1.92   20        98.07
+                  Tartaric        2.98    4.34   20       150.09
+
+  I hope the chemists will appreciate that I know that hydrochloric acid, for example,
+  only has one hydogen ion to give and that the pK for this ion probably isn't -10.
+  By using -10 for the pK I insure that the math will calculate 1 millimole of H+
+  from each millimole of HCl whatever the (reasonable) target pH. Similarly the
+  use of +20 for the second and third pKs will result in calculation of insignificant
+  additional amounts of hydrogen ions from the second and third nonexistant dissociations.
+  This artifice allows the same formulas to be used for any of the acids we are
+  likely to encounter.
+  The "fraction" (in quotes because it may be a number biggert than one) of moles
+  of acid which release a hydrogen ion are found from the following formulas.}
+
+  if cbAcid.ItemIndex < 0 then cbAcid.ItemIndex:= 0;
+  FRecipe.AcidSpargeTypeDisplayName:= cbAcid.Items[cbAcid.ItemIndex];
+  AT:= FRecipe.AcidSpargeType;
+  Case AT of
+  atLactic:
+    begin
+      pK1:= 3.08;
+      pK2:= 20;
+      pK3:= 20;
+      MolWt:= 90.08;
+      AcidSG:= 1214; //@88%
+      AcidPrc:= 0.88;
+    end;
+  atHydrochloric:
+    begin
+      pK1:= -10;
+      pK2:=  20;
+      pK3:=  20;
+      MolWt:= 36.46;
+      AcidSG:= 1142; //@28%
+      AcidPrc:= 0.28;
+    end;
+  atPhosphoric:
+    begin
+      pK1:= 2.12;
+      pK2:= 7.20;
+      pK3:=  12.44;
+      MolWt:= 98.00;
+      AcidSG:= 1170; //@25%
+      AcidPrc:= 0.25;
+    end;
+  atSulfuric:
+    begin
+      pK1:= -10;
+      pK2:= 1.92;
+      pK3:= 20;
+      MolWt:= 98.07;
+      AcidSG:= 1700; //@93%
+      AcidPrc:= 0.93;
+    end;
+  end;
+
+  r1d:= Power(10, TargetpH - pK1);
+  r2d:= Power(10, TargetpH - pK2);
+  r3d:= Power(10, TargetpH - pK3);
+  dd:= 1/(1 + r1d + r1d*r2d + r1d*r2d*r3d);
+  f1d:= dd;
+  f2d:= r1d*dd;
+  f3d:= r1d*r2d*dd;
+  f4d:= r1d*r2d*r3d*dd;
+  frac:= f2d + 2*f3d + 3*f4d;
+
+{ Step 9. Now divide the mEq required by the "fraction". This is the required
+  number of moles of acid.}
+  Acid:= Acid / frac;
+
+  //Step 10. Multiply by molecular weight of the acid
+  Acid:= Acid * MolWt; //mg
+
+  {Step 10. Liquids are usually labeled according to the percentage of their weight
+   which is the acid, for example, 88% lactic acid, 25% phosphoric acid and 28% hydrochloric
+   acid are typical labelings. In order to calculate the volume of liquid which contains
+   a given weight it is necessary to know the specific gravity of the liquid.
+   In some cases this is specified on the label (for example 28% HCl is labeled
+   18 Baume which converts to about 1.142 specific gravity or 1142 mg/mL).
+   In other cases you will have to determine the specific gravity by the use of
+   tables in the CRC handbook (sulfuric) or weigh a small known quantity of the
+   acid. 88% lactic acid, for example, weighs about 1214 mg/mL (and thus has a
+   density of about 1.214 mg/mL). 25% phosphoric acid weighs about 1170 mg/L
+   (specific gravity 1.170). If unable to obtain a specific gravity value you
+   can use 1000 mg/L. The three examples just given indicate that you would
+   incur errors of 14 - 21% by doing that. This may seem like a lot of error but
+   it really isn't especially if you are going to add measured acid gradually until
+   the target pH is reached.}
+
+  acid:= acid / AcidSG; //ml ; 88% lactid solution
+  acid:= acid * AcidPrc / (fseAcidPerc.Value / 100);
+
+  acid:= acid * fseSpargeVolume.Value; //ml lactic acid total
+  eSpargeLacticAcid.Text:= RealToStrDec(acid, 1);
+  FRecipe.AcidSparge.Value:= Convert(milliliter, FRecipe.AcidSparge.vUnit, acid);
+  FRecipe.AcidSpargePerc.Value:= fseAcidPerc.Value;
+  FRecipe.AcidSpargeType:= AT;
+
+{  acid:= acid * 1.00 * 36.46; //mg acid/l water
+  acid:= acid / (1140 * fseLacticAcidPerc.Value / 100); //ml lactic acid / l water
+  acid:= acid * fseSpargeVolume.Value; //ml lactic acid total
+  eSpargeLacticAcid.Text:= RealToStrDec(acid, 1);
+  FRecipe.LacticSparge.Value:= Convert(milliliter, FRecipe.LacticSparge.vUnit, acid);}
+end;
+
+procedure TFrmWaterAdjustment.fseSpargepHChange(Sender: TObject);
+begin
+  CalcSparge;
+end;
+
+procedure TFrmWaterAdjustment.fseSpargeVolumeChange(Sender: TObject);
+begin
+  CalcSparge;
+end;
+
+procedure TFrmWaterAdjustment.rgSourceClick(Sender: TObject);
+begin
+  if (not fseVolume2.Enabled) and (rgSource.ItemIndex > 0) then
+    rgSource.ItemIndex:= 0;
+  CalcSparge;
+end;
+
+procedure TFrmWaterAdjustment.bbTargetWaterClick(Sender: TObject);
+var Na1, Na2, Ca1, Ca2, Mg1, Mg2 : Double;
+    Cl1, Cl2, SO41, SO42, CO31, CO32 : Double;
+    dNa, dCa, dMg, dCl, dSO4, dCO3 : Double;
+    NaCl1, NaHCO31, CaCl21, CaCO31 : Double;
+    NaCl2, NaHCO32, CaCl22, CaCO32 : Double;
+    NaCl3, NaHCO33, CaCl23, CaCO33 : Double;
+    NaCl4, NaHCO34, CaCl24, CaCO34 : Double;
+    MgSO4, CaSO4 : Double;
+    Neg1, Neg2, Neg3, Neg4, MaxNeg : Double;
+    Vol : Double;
+begin
+  Na1:= 0; Na2:= 0; Ca1:= 0; Ca2:= 0; Mg1:= 0; Mg2:= 0;
+  Cl1:= 0; Cl2:= 0; SO41:= 0; SO42:= 0; CO31:= 0; CO32:= 0;
+  dNa:= 0; dCa:= 0; dMg:= 0; dCl:= 0; dSO4:= 0; dCO3:= 0;
+  NaCl1:= 0; NaHCO31:= 0; CaCl21:= 0; CaCO31:= 0;
+  NaCl2:= 0; NaHCO32:= 0; CaCl22:= 0; CaCO32:= 0;
+  NaCl3:= 0; NaHCO33:= 0; CaCl23:= 0; CaCO33:= 0;
+  NaCl4:= 0; NaHCO34:= 0; CaCl24:= 0; CaCO34:= 0;
+  MgSO4:= 0; CaSO4:= 0;
+  Neg1:= 0; Neg2:= 0; Neg3:= 0; Neg4:= 0; MaxNeg:= 0;
+  Vol:= 0;
+
+  // Get concentration of ions in diluted brewwater (1) and target water (2) in mmol/l
+  Ca1:= FMashWater.Calcium.Value / MMCa;
+  Ca2:= FTargetWater.Calcium.Value / MMCa;
+  Mg1:= FMashWater.Magnesium.Value / MMMg;
+  Mg2:= FTargetWater.Magnesium.Value / MMMg;
+  Na1:= FMashWater.Sodium.Value / MMNa;
+  Na2:= FTargetWater.Sodium.Value / MMNa;
+
+  CO31:= FMashWater.Bicarbonate.Value / MMHCO3;
+  CO32:= FTargetWater.Bicarbonate.Value / MMHCO3;
+  SO41:= FMashWater.Sulfate.Value / MMSO4;
+  SO42:= FTargetWater.Sulfate.Value / MMSO4;
+  Cl1:= FMashWater.Sulfate.Value / MMSO4;
+  Cl2:= FTargetWater.Sulfate.Value / MMSO4;
+
+  Vol:= FMashWater.Amount.Value;
+
+  dNa:= MaxD(Na2 - Na1, 0);
+  dCa:= MaxD(Ca2 - Ca1, 0);
+  dMg:= MaxD(Mg2 - Mg1, 0);
+  dCl:= MaxD(Cl2 - Cl1, 0);
+  dSO4:= MaxD(SO42 - SO41, 0);
+  dCO3:= MaxD(CO32 - CO31, 0);
+
+  MgSO4:= dMg;
+  CaSO4:= MaxD(dSO4 - dMg, 0);
+
+  //situation 1: no Na2CO3
+  NaHCO31:= 0;
+  NaCl1:= dNa;
+  CaCl21:= (dCl - dNa) / 2;
+  CaCO31:= dCO3;
+  Neg1:= MinA([NaHCO31, NaCl1, CaCl21, CaCO31]);
+
+  //situation 2: no NaCl
+  NaCl2:= 0;
+  CaCl22:= dCl / 2;
+  CaCO32:= dCa + dMg - dSO4 - dCl / 2;
+  NaHCO32:= dNa;
+  Neg2:= MinA([NaHCO32, NaCl2, CaCl22, CaCO32]);
+
+  //situation 3: no CaCO3
+  CaCO33:= 0;
+  NaHCO33:= dCO3;
+  NaCl3:= dNa - 2 * dCO3;
+  CaCl23:= dCa + dMg - dSO4;
+  Neg3:= MinA([NaHCO33, NaCl3, CaCl23, CaCO33]);
+
+  //situation 4: no CaCl2
+  CaCl24:= 0;
+  NaCl4:= dCl;
+  CaCO34:= dCa + dMg - dSO4;
+  NaHCO34:= dNa - dCl;
+  Neg4:= MinA([NaHCO34, NaCl4, CaCl24, CaCO34]);
+
+  MaxNeg:= MaxA([Neg1, Neg2, Neg3, Neg4]);
+
+  If Neg1 = MaxNeg Then
+  begin
+    NaCl1:= MaxD(NaCl1, 0);
+    CaCl21:= MaxD(CaCl21, 0);
+    CaCO31:= MaxD(CaCO31, 0);
+    NaHCO31:= MaxD(NaHCO31, 0);
+  end
+  Else If Neg2 = MaxNeg Then
+  begin
+    NaCl1:= MaxD(NaCl2, 0);
+    CaCl21:= MaxD(CaCl22, 0);
+    CaCO31:= MaxD(CaCO32, 0);
+    NaHCO31:= MaxD(NaHCO32, 0);
+  end
+  Else If Neg3 = MaxNeg Then
+  begin
+    NaCl1:= MaxD(NaCl3, 0);
+    CaCl21:= MaxD(CaCl23, 0);
+    CaCO31:= MaxD(CaCO33, 0);
+    NaHCO31:= MaxD(NaHCO33, 0);
+  end
+  Else If Neg4 = MaxNeg Then
+  begin
+    NaCl1:= MaxD(NaCl4, 0);
+    CaCl21:= MaxD(CaCl24, 0);
+    CaCO31:= MaxD(CaCO34, 0);
+    NaHCO31:= MaxD(NaHCO34, 0);
+  end;
+
+  //calculate addition in grams per salt
+  NaCl1:= NaCl1 * MMNaCl * Vol / 1000;
+  CaCl21:= CaCl21 * MMCaCl2 * Vol / 1000;
+  NaHCO31:= NaHCO31 * MMNaHCO3 * Vol / 1000;
+  CaCO31:= CaCO31 * MMCaCO3 * Vol / 1000;
+  MgSO4:= MgSO4 * MMMgSO4 * Vol / 1000;
+  CaSO4:= CaSO4 * MMCaSO4 * Vol / 1000;
+
+  fseNaCl.Value:= NaCl1;
+  fseCaCl2.Value:= CaCl21;
+  fseNaHCO3.Value:= NaHCO31;
+  fseCaCO3.Value:= CaCO31;
+  fseMgSO4.Value:= MgSO4;
+  fseCaSO4.Value:= CaSO4;
+  fseLacticAcid.Value:= 0;
+
+  CalcWater;
+end;
+
+procedure TFrmWaterAdjustment.bbRAClSO4Click(Sender: TObject);
+var dCa, Ca1, Ca2, Ca3, Mg1: Double;
+    Cl1, Cl2, SO41, SO42, CO31, totalk1 : Double;
+    CaCl21 : Double;
+    CaCl2, CaCO3 : Double;
+    CaSO4, CaSO41 : Double;
+    Lactic : double;
+    R2, R3, Ratio1, Ratio2: Double;
+    Vol : Double;
+begin
+  Ca1:= 0; Ca2:= 0; Ca3:= 0; Mg1:= 0;
+  Cl1:= 0; Cl2:= 0; SO41:= 0; SO42:= 0; CO31:= 0;
+  CaCl21:= 0;
+  CaCl2:= 0; CaCO3:= 0;
+  CaSO4:= 0; CaSO41:= 0;
+  Lactic:= 0;
+  Vol:= 0;
+
+  // Get concentration of ions in diluted brewwater (1) and target water (2) in mmol/l
+  Ca1:= FMashWater.Calcium.Value / MMCa;
+  Mg1:= FMashWater.Magnesium.Value / MMMg;
+  CO31:= FMashWater.Bicarbonate.Value / MMHCO3;
+  totalk1:= FMashWater.TotalAlkalinity.Value / MMCaCO3;
+  SO41:= FMashWater.Sulfate.Value / MMSO4;
+  Cl1:= FMashWater.Chloride.Value / MMCl;
+
+  Vol:= FMashWater.Amount.Value;
+
+  //Calculate Residual Alkalinity of the brewing water and the desired RA for the beer color
+  //First, get SO4 levels at desired level, using the Cl/SO4 ratio:
+  if SO41 > 0 then Ratio1:= Cl1 / SO41 //current ratio
+  else Ratio1:= 1;
+
+  if cbTarget.ItemIndex > -1 then  //calculate from target water
+  begin
+    SO42:= FTargetWater.Sulfate.Value / MMSO4;
+    Cl2:= FTargetWater.Chloride.Value / MMCl;
+    R2:= FTargetWater.ResidualAlkalinity; //RA of target water
+    if SO42 > 0 then Ratio2:= Cl2 / SO42 //ratio in target water
+    else Ratio2:= 1;
+  end
+  else //calculate from suggested Cl/SO4 ratio and optimum RA
+  begin
+    R2:= FRecipe.RAopt; //optimum RA for the beer color
+    Ratio2:= FRecipe.OptClSO4ratio * MMSO4 / MMCl;
+  end;
+
+  If Ratio2 <= Ratio1 Then //add calcium sulfate
+  begin
+    SO42:= Ratio1 * SO41 / Ratio2;
+    CaSO4:= SO42 - SO41;
+    Cl2:= Cl1;
+    Ca2:= Ca1 + CaSO4;
+  end
+  else //add calcium chloride
+  begin
+    Cl2:= Ratio2 * Cl1 / Ratio1;
+    CaCl2:= 0.5 * (Cl2 - Cl1);
+    SO42:= SO41;
+    Ca2:= Ca1 + CaCl2;
+  end;
+
+  //Now calculate the new Residual Alkalinity
+//  R3:= 2.8 * CO31 - 1.6 * Ca2 - 0.8 * Mg1;
+  R3:= totalk1 - (Ca2 / 1.4 + Mg1 / 1.7);
+  If R3 > R2 Then //RA is still too high. Add CaCl2 and CaSO4, but don't change the Cl/SO4 ratio
+  begin
+    Ca3:= (totalk1 - Mg1 / 1.7 - R2) * 1.4;
+    dCa:= Ca3 - (Ca1 + CaSO4 + CaCl2);
+    CaCl21:= CaCl2 + dCa / ((2 / Ratio2) + 1);
+    CaSO41:= CaSO4 + dCa - (CaCl21 - CaCl2);
+
+    Cl2:= Cl2 + 2 * CaCl21;
+    SO42:= SO42 + CaSO41;
+    R3:= totalk1 - (Ca2 / 1.4 + Mg1 / 1.7);
+    //if Cl concentrations or SO4 concentrations exceed maximum limits, than add lactic acid
+    if (((Cl2 * MMCl) > 200) or ((SO42 * MMSO4) > 300)) and (fseLacticAcidPerc.Value > 0) then
+      Lactic:= (R3 - R2) * Vol / (fseLacticAcidPerc.Value * 4.47)
+    else
+    begin
+      CaCl2:= CaCl21;
+      CaSO4:= CaSO41;
+    end;
+  end
+  else If R3 < R2 Then //RA is too low. Add CaCO3
+  begin
+    CaCO3:= (R2 - R3) / 1.2;
+    dCa:= dCa + CaCO3;
+  end;
+
+  //calculate addition in grams per salt
+  CaCl2:= CaCl2 * MMCaCl2 * Vol / 1000;
+  CaCO3:= CaCO3 * MMCaCO3 * Vol / 1000;
+  CaSO4:= CaSO4 * MMCaSO4 * Vol / 1000;
+  fseCaCl2.Value:= CaCl2;
+  fseCaCO3.Value:= CaCO3;
+  fseCaSO4.Value:= CaSO4;
+  fseNaCl.Value:= 0;
+  fseNaHCO3.Value:= 0;
+  fseMgSO4.Value:= 0;
+  fseLacticAcid.Value:= Lactic;
+
+  CalcWater;
+end;
+
+Function TFrmWaterAdjustment.PartCO3(pH : double) : double;
+var H : double;
+begin
+  H:= Power(10, -pH);
+  Result:= 100 * Ka1 * Ka2 / (H*H + H * Ka1 + Ka1 * Ka2);
+end;
+
+Function TFrmWaterAdjustment.PartHCO3(pH : double) : double;
+var H : double;
+begin
+  H:= Power(10, -pH);
+  Result:= 100 * Ka1 * H / (H*H + H * Ka1 + Ka1 * Ka2);
+end;
+
+Function TFrmWaterAdjustment.PartH2CO3(pH : double) : double;
+var H : double;
+begin
+  H:= Power(10, -pH);
+  Result:= 100 * H * H / (H*H + H * Ka1 + Ka1 * Ka2);
+end;
+
+Function TFrmWaterAdjustment.Charge(pH : double) : double;
+begin
+  Result:= (-2 * PartCO3(pH) - PartHCO3(pH));
+end;
+
+procedure TFrmWaterAdjustment.bbResetClick(Sender: TObject);
+begin
+  fseCaCl2.Value:= 0;
+  fseCaSO4.Value:= 0;
+  fseCaCO3.Value:= 0;
+  fseMgSO4.Value:= 0;
+  fseNaHCO3.Value:= 0;
+  fseNaCl.Value:= 0;
+  fseLacticAcid.Value:= 0;
+  CalcWater;
+end;
+
+end.
+

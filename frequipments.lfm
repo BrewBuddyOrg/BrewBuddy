@@ -1,0 +1,1007 @@
+object FrmEquipments: TFrmEquipments
+  Left = 342
+  Height = 570
+  Top = 123
+  Width = 835
+  BorderStyle = bsDialog
+  Caption = 'Brouwinstallaties'
+  ClientHeight = 570
+  ClientWidth = 835
+  Icon.Data = {
+    BE1000000000010001002020000001002000A810000016000000280000002000
+    0000400000000100200000000000001000006400000064000000000000000000
+    0000FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+    FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF0000000001000000010000
+    00020000000A000000020000000200000001FFFFFF00FFFFFF00FFFFFF00FFFF
+    FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+    FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+    FF00FFFFFF00FFFFFF00000000030000003E401A009F732E00E2873701F4953C
+    01FE9D3F01FF893701FB773101EF5D2601D1190A00750000001E00000001FFFF
+    FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+    FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+    FF0000000004240D0071873700F3D85700FFFA6400FFF36101FFEB5F01FFE55C
+    01FFDF5A01FFDB5802FFD75702FFD35602FFCB5202FF9D3F02FF562301CF0000
+    003000000001FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+    FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF001008
+    003F7F3200E9ED5F00FFFF6600FFFF6600FFFF6600FFFE6600FFFE6600FFF763
+    00FFEF6001FFE45C01FFD85802FFD15502FFCB5202FFC75102FFC55002FF9F41
+    02FF461C00B40000000CFFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+    FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF0027100070BD4B
+    00FEFF6600FFFF6600FFFF6600FFFF6600FFFF6600FFFF6600FFFF6600FFFF66
+    00FFFE6600FFFD6500FFF86300FFE45C01FFD05402FFC85102FFC24F02FFC04E
+    03FFC34F03FF642901E600000023FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+    FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF0038170092DA5700FFFF66
+    00FFFF6600FFFF6600FFFF6600FFFF6600FFFF6600FFFF6600FFFF6600FFFB65
+    02FFE4650FFFFF6600FFFF6600FFFD6500FFF56200FFDE5901FFCA5202FFC450
+    02FFC24F02FFC75102FF7B3102F70000002CFFFFFF00FFFFFF00FFFFFF00FFFF
+    FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00200D0061D25400FFFF6600FFFF66
+    00FFFF6600FFFF6600FFFF6600FFFF6600FFFF6600FFF56606FF9E6338FF3A60
+    72FF28698AFF635F57FFCA631DFFFF6600FFFF6600FFFC6500FFF36100FFD957
+    02FFC95202FFC85102FFCD5302FF692A01ED00000013FFFFFF00FFFFFF00FFFF
+    FF00FFFFFF00FFFFFF00FFFFFF000000002DB24700FCFF6600FFFF6600FFFF66
+    00FFFF6600FFFF6600FFFF6600FFFA6603FF946642FF34667EFF3C8BAEFF6CC3
+    E5FF83D7F6FF54A9CCFF297093FF505E61FFC8641EFFFF6600FFFE6600FFFA64
+    00FFE05A01FFCF5402FFCF5402FFD25502FF502001CC00000001FFFFFF00FFFF
+    FF00FFFFFF00FFFFFF00FFFFFF00612700CFFF6600FFFF6600FFFF6600FFFF66
+    00FFFF6600FFFF6600FFD3681DFF4C6B74FF3088ACFF50BFE8FF69D1F8FF7BD6
+    F8FF85D9F8FF73D4F8FF60CEF6FF3EA5CEFF21678AFF7B6049FFF46506FFFF66
+    00FFFC6500FFE85D01FFD55602FFD55602FFBC4B02FF0C060053FFFFFF00FFFF
+    FF00FFFFFF00FFFFFF000B040047D55500FFFF6600FFFF6600FFFF6600FFFF66
+    00FFFF6600FFC0692CFF2D7695FF2FA4D2FF45C7F7FF47AED7FF69D1F8FF7BD6
+    F8FF85D9F8FF73D4F8FF5FCEF7FF4ABAE4FF3BBDEEFF2280A9FF405E6BFFF666
+    05FFFF6600FFFD6500FFEE6001FFDC5802FFDC5901FF6A2C01E600000003FFFF
+    FF00FFFFFF00FFFFFF00652900CEFF6600FFFF6600FFFF6600FFFF6600FFFF66
+    00FFF26709FF447586FF25A6D8FF32C1F7FF45C7F7FF38ADF0FF5DBEE5FF7BD6
+    F8FF85D9F8FF73D4F8FF3EB2F7FF40ABD6FF3DC4F7FF2BBFF7FF1D779FFF8161
+    47FFFF6600FFFF6600FFFD6500FFF26001FFE15B01FFCA5101FF0400004BFFFF
+    FF00FFFFFF000000000DA64300FDFF6600FFFF6600FFFF6600FFFF6600FFFF66
+    00FFBB6D33FF298BB1FF20BCF6FF32C1F7FF45C7F7FF54C9F7FF4396B8FF7BD6
+    F8FF85D9F8FF6ED0F8FF4197B9FF4FC9F7FF3DC4F7FF2BBFF7FF1AAAE2FF2F60
+    79FFFF6600FFFF6600FFFF6600FFFD6500FFF06101FFE85D01FF4B1D00AF0000
+    0001FFFFFF00160C065AF06203FFFF6600FFFF6600FFFF6600FFFF6600FFFF66
+    00FFB3703CFF2695C0FF20BCF6FF32C1F7FF45C7F7FF57CCF7FF43B4F7FF63B7
+    DAFF85D9F8FF43AFF4FF54B9E0FF4FC9F7FF3DC4F7FF2BBFF7FF1AB6F0FF2763
+    80FFFF6600FFFF6600FFFF6600FFFF6600FFFD6500FFF16101FF873600F30000
+    0001FFFFFF0151290D9EFE6D0CFFFF6702FFFF6600FFFF6600FFFF6600FFFF66
+    00FFAB7345FF269AC6FF20BCF6FF32C1F7FF45C7F7FF57CCF7FF68D0F8FF51A1
+    C0FF7AD2F8FF4493B6FF61CFF7FF4FC9F7FF3DC4F7FF2BBFF7FF19B9F5FF2365
+    86FFFC6602FFFF6600FFFF6600FFFF6600FFFF6600FFFD6500FFB54800FF0000
+    0017FFFFFF026B3715BEFE761CFFFF6B09FFFF6600FFFF6600FFFF6600FFFF66
+    00FFA3774EFF279ECBFF20BCF6FF32C1F7FF45C7F7FF57CCF7FF69D1F8FF58BE
+    F7FF3C91C2FF68C5E9FF61CFF7FF4FC9F7FF3DC4F7FF2BBFF7FF19BAF6FF246B
+    8CFFF26608FFFF6600FFFF6600FFFF6600FFFF6600FFFF6600FFD35500FF0000
+    0031FFFFFF037E441CD8FD7E29FFFE751AFFFF6804FFFF6600FFFF6600FFFF66
+    00FF9C7B58FF26A2D1FF20BCF6FF32C1F7FF45C7F7FF57CCF7FF69D1F8FF6BCB
+    F8FF4894B2FF71D1F5FF61CFF7FF4FC9F7FF3DC4F7FF2BBFF7FF19BAF6FF2671
+    93FFE9670EFFFF6600FFFF6600FFFF6600FFFF6600FFFF6600FFEC5E00FF0000
+    004BFFFFFF05834C27D8FD8636FFFE8432FFFE6E0EFFFF6702FFFF6600FFFF66
+    00FF957F62FF25A6D6FF20BCF6FF32C1F7FF45C7F7FF57CCF7FF69D1F8FF52AE
+    DBFF65C0F1FF4B9DC1FF61CFF7FF4FC9F7FF3DC4F7FF2BBFF7FF19BAF6FF2676
+    9AFFDF6715FFFF6600FFFF6600FFFF6600FFFF6600FFFF6600FFEA5E00FF0000
+    0049FFFFFF0477492BC1FC8B40FFFD8E44FFFD812EFFFE6A08FFFF6600FFFF66
+    00FF8E836DFF24AADAFF20BCF6FF32C1F7FF45C7F7FF57CCF7FF55C1F8FF4D9A
+    BDFF85D9F8FF51AFDAFF5DC8F0FF4FC9F7FF3DC4F7FF2BBFF7FF19BAF6FF267C
+    A0FFD6671BFFFF6600FFFF6600FFFF6600FFFF6600FFFF6600FFD25400FF0000
+    002FFFFFFF0363412AA3FC9048FFFD9653FFFC924DFFFD7921FFFF6804FFFF66
+    00FF858778FF22ADDFFF20BCF6FF31B7EBFF308EB6FF50BFE9FF55ADCCFF78D2
+    F4FF85D9F8FF65C9F8FF398DB1FF3592BBFF298DB9FF2BBFF7FF19BAF6FF2681
+    A7FFCC6922FFFF6600FFFF6600FFFF6600FFFF6600FFFF6600FFB94A00FF0000
+    0014FFFFFF013934315DEE8D4EFFFC9C5EFFFB9D5FFFFC934DFFFE7316FFFF68
+    03FF7A8984FF1EAEE4FF20BCF6FF3192B9FF266A8AFF1E5F81FF296F93FF69BF
+    E1FF79CCECFF59AECEFF3D9BCBFF48B9E6FF288BB6FF2BBFF7FF19BAF6FF2585
+    ADFFC46929FFFF6600FFFF6600FFFF6600FFFF6600FFFF6600FF883700EEFFFF
+    FF00FFFFFF008E8E8E16BB7A4EFCFBA166FFFBA56DFFFBA46BFFFC924CFFFF73
+    15FF6E8C92FF1BAFE7FF24B8EEFF3A85A1FF307795FF256889FF1C5C7EFF1654
+    77FF76C9E9FF54A9C9FF5ACAF7FF348DB2FF2A87B0FF299ECDFF19BAF6FF2589
+    B2FFBB6B30FFFF6600FFFF6600FFFF6600FFFF6600FFFF6600FF481C00A3FFFF
+    FF00FFFFFF00E3E3E3098C644AD4FBA46BFFFBAB77FFFBAD7BFFFAAB76FFFC95
+    51FF6E95A6FF1AB1EBFF2BB0E3FF4391ACFF3983A0FF2F7594FF246788FF428D
+    AFFF85D9F8FF6BC8EBFF4BA3C2FF3095CEFF35ACDBFF35A8D2FF1DB6EFFF258D
+    B7FFB26C38FFFF6600FFFF6600FFFF6600FFFF6600FFD95700FF0000003FFFFF
+    FF00FFFFFF00FFFFFF0358565651DC9464FFFAB07FFFFAB486FFFAB589FFFAB1
+    82FF8CB1C5FF2EB8EFFF2AB3EAFF4498B9FF4290ABFF38829FFF3782A2FF74CD
+    EFFF85D9F8FF73D4F8FF4FB1D9FF4DC7F7FF3089AEFF228BB8FF1CA2DBFF2391
+    BCFFA96E3FFFFF6600FFFF6600FFFF6600FFFF6600FF6A2A00DCFFFFFF00FFFF
+    FF00FFFFFF00FFFFFF00FFE3FF0987614BD3FBAF7EFFFAB990FFF9BD95FFF9BE
+    96FFABC9DBFF77D0F3FF48C6F5FF3CA1D9FF4699BAFF48A2C2FF64C9EEFF7BD6
+    F8FF85D9F8FF73D4F8FF52BDEDFF43A4CBFF32A7DEFF2BBDF5FF19BAF6FF2295
+    C1FFA06F46FFFF6600FFFF6600FFFF6600FFD05300FF04000041FFFFFF00FFFF
+    FF00FFFFFF00FFFFFF00FFFFFF01605B6038C58D68FCFABC95FFF9C39FFFF9C4
+    A2FFB5D2E6FFA8D3EBFF95D2EDFF6FCCF0FF5AC9F4FF5FCDF5FF6CD2F8FF7CD6
+    F8FF85D9F8FF73D4F8FF61CEF6FF4EC5F2FF3DBCECFF31ADDCFF2D99C1FF3284
+    A4FF98714EFFFF6600FFFF6600FFF76300FF4A1E00BAFFFFFF00FFFFFF00FFFF
+    FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF0577706C71DFAA86FFF9C6A6FFF9CB
+    AEFFEDCDB9FFDACEC7FFC2CED4FFA8CADDFF96C2DBFF78B5D4FF5EA8CBFF55A3
+    C5FF55A4C1FF519EB9FF4A97B1FF4D91A9FF548B9BFF60848AFF8B7962FFBD70
+    37FFF1680BFFFF6600FFFF6600FF692A00E00000000AFFFFFF00FFFFFF00FFFF
+    FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF01FFFFFF0B8273699CE5B292FFF9CE
+    B3FFF8D0B6FFF9CCAFFFF9C6A4FFF9C09AFFFAB88EFFF8B080FFF4A875FFEFA1
+    6EFFEA985FFFF08B46FFF9802FFFFD7A23FFFE771DFFFE7317FFFE7011FFFE6D
+    0CFFFF6905FFFD6601FF7C3100ED0000001CFFFFFF00FFFFFF00FFFFFF00FFFF
+    FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF01FFFFFF0C877E7A80D7AD
+    92FDF9CDAFFFF8CDB0FFF9C6A6FFF9C19BFFFAB990FFFAB485FFFBAD7AFFFBA6
+    6EFFFB9E60FFFC9755FFFC9048FFFD893DFFFD8332FFFD7D27FFFE771DFFFE70
+    11FFF36406FF5F2701D300000014FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+    FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF01E3E3E3097E7E
+    7E4BAB8870E9EDB895FFF9BF9AFFF9BE96FFFAB88EFFFAB384FFFBAC79FFFBA6
+    6EFFFB9F62FFFC9857FFFC924CFFFD8B41FFFD8434FFFD7C26FFFD751AFFAF4D
+    0BFC3F1B039600000004FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+    FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+    FF03F0F0F0116E676374A27557EED8986EFFF9AC7BFFFBAC78FFFBA771FFFBA2
+    66FFFC9B5BFFFD9551FFFD8F46FFFD8639FFEB7526FFA74F13FC52270AB40909
+    091EFFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+    FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+    FF00FFFFFF01FFFFFF04E8E8E80B535353345645398F8C5F41D79F6A46ECA867
+    3CF8AC6332FD9C582CF2874C25E1633719B9171411582525250EFFFFFF01FFFF
+    FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+    FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+    FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF03FFFFFF07E3E3E309FFFF
+    FF08DBDBDB07D5D5D506FFFFFF04FFFFFF02FFFFFF00FFFFFF00FFFFFF00FFFF
+    FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+    FF00000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000
+  }
+  OnCreate = FormCreate
+  Position = poScreenCenter
+  LCLVersion = '1.8.2.0'
+  object pSelect: TPanel
+    Left = 609
+    Height = 570
+    Top = 0
+    Width = 226
+    Align = alRight
+    ClientHeight = 570
+    ClientWidth = 226
+    TabOrder = 0
+    object Panel1: TPanel
+      Left = 1
+      Height = 42
+      Top = 527
+      Width = 224
+      Align = alBottom
+      ClientHeight = 42
+      ClientWidth = 224
+      TabOrder = 0
+      object bbAdd: TBitBtn
+        Left = 8
+        Height = 30
+        Top = 7
+        Width = 104
+        Caption = 'Nieuw'
+        Glyph.Data = {
+          36040000424D3604000000000000360000002800000010000000100000000100
+          2000000000000004000064000000640000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          000000000000000000000000000000000000A46534CCA46534FFA46534FFA465
+          34CC000000000000000000000000000000000000000000000000000000000000
+          000000000000000000000000000000000000A46534FFE6CEB7FFE6CEB7FFA465
+          34FF000000000000000000000000000000000000000000000000000000000000
+          000000000000000000000000000000000000A46534FFE6CEB7FFD9AD86FFA465
+          34FF000000000000000000000000000000000000000000000000000000000000
+          000000000000000000000000000000000000A46534FFE6CEB7FFD9AD86FFA465
+          34FF000000000000000000000000000000000000000000000000000000000000
+          0000A46534CCA46534FFA46534FFA46534FFA46534FFD9AD86FFD9AD86FFA465
+          34FFA46534FFA46534FFA46534FFA46534CC0000000000000000000000000000
+          0000A46534FFE5CCB4FFDBB795FFDBB694FFDAB492FFDAB390FFD9AD86FFD8AA
+          83FFD7A87FFFD7A67DFFE0BE9FFFA46534FF0000000000000000000000000000
+          0000A46534FFE8D3C0FFE7D1BBFFE7D1BCFFE6CEB7FFE6CEB7FFE6CEB7FFE6CE
+          B7FFE6CDB6FFE6CCB5FFE6CCB6FFA46534FF0000000000000000000000000000
+          0000A46534CCA46534FFA46534FFA46534FFA46534FFE6CEB7FFE6CEB7FFA465
+          34FFA46534FFA46534FFA46534FFA46534CC0000000000000000000000000000
+          000000000000000000000000000000000000A46534FFE6CEB7FFE6CEB7FFA465
+          34FF000000000000000000000000000000000000000000000000000000000000
+          000000000000000000000000000000000000A46534FFE6CEB7FFE6CEB7FFA465
+          34FF000000000000000000000000000000000000000000000000000000000000
+          000000000000000000000000000000000000A46534FFE6CEB7FFE6CEB7FFA465
+          34FF000000000000000000000000000000000000000000000000000000000000
+          000000000000000000000000000000000000A46534CCA46534FFA46534FFA465
+          34CC000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000
+        }
+        OnClick = bbAddClick
+        TabOrder = 0
+      end
+      object bbDelete: TBitBtn
+        Left = 112
+        Height = 30
+        Top = 7
+        Width = 104
+        Caption = 'Wis'
+        Glyph.Data = {
+          36040000424D3604000000000000360000002800000010000000100000000100
+          2000000000000004000064000000640000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000A46534CCA46534FFA46534FFA46534FFA46534FFA46534FFA46534FFA465
+          34FFA46534FFA46534FFA46534FFA46534CC0000000000000000000000000000
+          0000A46534FFE5CCB4FFDBB795FFDBB694FFDAB492FFDAB390FFD9AD86FFD8AA
+          83FFD7A87FFFD7A67DFFE0BE9FFFA46534FF0000000000000000000000000000
+          0000A46534FFE8D3C0FFE7D1BBFFE7D1BCFFE6CEB7FFE6CEB7FFE6CEB7FFE6CE
+          B7FFE6CDB6FFE6CCB5FFE6CCB6FFA46534FF0000000000000000000000000000
+          0000A46534CCA46534FFA46534FFA46534FFA46534FFA46534FFA46534FFA465
+          34FFA46534FFA46534FFA46534FFA46534CC0000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000
+        }
+        OnClick = bbDeleteClick
+        TabOrder = 1
+      end
+    end
+    object tvSelect: TTreeView
+      Left = 1
+      Height = 526
+      Top = 1
+      Width = 224
+      Align = alClient
+      AutoExpand = True
+      HideSelection = False
+      PopupMenu = pmIngredients
+      ReadOnly = True
+      SortType = stText
+      TabOrder = 1
+      OnKeyDown = tvSelectKeyDown
+      OnSelectionChanged = tvSelectSelectionChanged
+      Options = [tvoAutoExpand, tvoAutoItemHeight, tvoKeepCollapsedNodes, tvoReadOnly, tvoShowButtons, tvoShowLines, tvoShowRoot, tvoToolTips, tvoThemedDraw]
+    end
+  end
+  object pEdit: TPanel
+    Left = 0
+    Height = 570
+    Top = 0
+    Width = 609
+    Align = alClient
+    BorderStyle = bsSingle
+    ClientHeight = 568
+    ClientWidth = 607
+    TabOrder = 1
+    object bbOK: TBitBtn
+      Left = 178
+      Height = 33
+      Top = 529
+      Width = 120
+      Caption = '&Sla op'
+      Default = True
+      Kind = bkOK
+      ModalResult = 1
+      OnClick = bbOKClick
+      TabOrder = 2
+    end
+    object gbInfo: TGroupBox
+      Left = 4
+      Height = 153
+      Top = 6
+      Width = 597
+      Caption = 'Algemeen'
+      ClientHeight = 138
+      ClientWidth = 595
+      TabOrder = 0
+      object Label1: TLabel
+        Left = 6
+        Height = 14
+        Top = 9
+        Width = 37
+        Caption = 'Naam:'
+        ParentColor = False
+      end
+      object eName: TEdit
+        Left = 104
+        Height = 26
+        Top = 2
+        Width = 464
+        AutoSize = False
+        TabOrder = 0
+      end
+      object Label2: TLabel
+        Left = 6
+        Height = 14
+        Top = 29
+        Width = 75
+        Caption = 'Opmerkingen:'
+        ParentColor = False
+      end
+      object mNotes: TMemo
+        Tag = 1
+        Left = 104
+        Height = 103
+        Top = 29
+        Width = 464
+        Lines.Strings = (
+          ''
+        )
+        ScrollBars = ssAutoVertical
+        TabOrder = 1
+      end
+    end
+    object gbProperties: TGroupBox
+      Left = 4
+      Height = 361
+      Top = 165
+      Width = 597
+      Caption = 'Eigenschappen'
+      ClientHeight = 346
+      ClientWidth = 595
+      TabOrder = 1
+      object gbMash: TGroupBox
+        Left = 4
+        Height = 162
+        Top = 2
+        Width = 293
+        Caption = 'Maischen'
+        ClientHeight = 147
+        ClientWidth = 291
+        TabOrder = 0
+        object Label3: TLabel
+          Left = 6
+          Height = 14
+          Top = 7
+          Width = 111
+          Caption = 'Volume maischkuip:'
+          ParentColor = False
+        end
+        object fseTunVolume: TFloatSpinEdit
+          Left = 179
+          Height = 26
+          Hint = 'Volume van de maischkuip tot de rand gevuld'
+          Top = 3
+          Width = 80
+          AutoSize = False
+          DecimalPlaces = 1
+          Increment = 1
+          MaxValue = 10000
+          MinValue = 0
+          OnChange = fseTunVolumeChange
+          TabOrder = 0
+          Value = 0
+        end
+        object lTunVolume: TLabel
+          Left = 266
+          Height = 14
+          Top = 7
+          Width = 3
+          Caption = 'l'
+          ParentColor = False
+        end
+        object Label4: TLabel
+          Left = 6
+          Height = 14
+          Top = 63
+          Width = 112
+          Caption = 'Gewicht maischkuip:'
+          ParentColor = False
+        end
+        object fseTunWeight: TFloatSpinEdit
+          Left = 179
+          Height = 26
+          Hint = 'Gewicht van de maischkuip'
+          Top = 57
+          Width = 80
+          AutoSize = False
+          DecimalPlaces = 1
+          Increment = 1
+          MaxValue = 1000
+          MinValue = 0
+          ParentShowHint = False
+          ShowHint = True
+          TabOrder = 2
+          Value = 0
+        end
+        object lTunWeight: TLabel
+          Left = 266
+          Height = 14
+          Top = 63
+          Width = 13
+          Caption = 'kg'
+          ParentColor = False
+        end
+        object Label15: TLabel
+          Left = 6
+          Height = 14
+          Top = 90
+          Width = 120
+          Caption = 'Materiaal maischkuip:'
+          ParentColor = False
+        end
+        object cbTunMaterial: TComboBox
+          Left = 145
+          Height = 26
+          Hint = 'Waarvan is de maischkuip gemaakt?'
+          Top = 84
+          Width = 144
+          AutoSize = False
+          ItemHeight = 0
+          ParentShowHint = False
+          ShowHint = True
+          Style = csDropDownList
+          TabOrder = 3
+        end
+        object Label21: TLabel
+          Left = 6
+          Height = 14
+          Top = 35
+          Width = 109
+          Caption = 'Hoogte maischkuip:'
+          ParentColor = False
+        end
+        object fseTunHeight: TFloatSpinEdit
+          Left = 179
+          Height = 26
+          Hint = 'Hoogte maischkuip (binnenkant)'
+          Top = 30
+          Width = 80
+          AutoSize = False
+          DecimalPlaces = 1
+          Increment = 1
+          MaxValue = 1000
+          MinValue = 0
+          ParentShowHint = False
+          ShowHint = True
+          TabOrder = 1
+          Value = 0
+        end
+        object lTunHeight: TLabel
+          Left = 266
+          Height = 14
+          Top = 35
+          Width = 17
+          Caption = 'cm'
+          ParentColor = False
+        end
+        object Label22: TLabel
+          Left = 6
+          Height = 14
+          Top = 117
+          Width = 72
+          Caption = 'Maischwater:'
+          ParentColor = False
+        end
+        object fseMashVolume: TFloatSpinEdit
+          Left = 179
+          Height = 26
+          Hint = 'Volume water van de eerste maischstap'
+          Top = 111
+          Width = 80
+          AutoSize = False
+          DecimalPlaces = 1
+          Increment = 1
+          MaxValue = 10000
+          MinValue = 0
+          OnChange = fseMashVolumeChange
+          ParentShowHint = False
+          ShowHint = True
+          TabOrder = 4
+          Value = 0
+        end
+        object lMashVolume: TLabel
+          Left = 266
+          Height = 14
+          Top = 117
+          Width = 3
+          Caption = 'l'
+          ParentColor = False
+        end
+      end
+      object gbBoil: TGroupBox
+        Left = 298
+        Height = 264
+        Top = 2
+        Width = 293
+        Caption = 'Koken'
+        ClientHeight = 249
+        ClientWidth = 291
+        TabOrder = 2
+        object Label6: TLabel
+          Left = 5
+          Height = 14
+          Top = 89
+          Width = 115
+          Caption = 'Verdampingsnelheid:'
+          ParentColor = False
+        end
+        object fseEvapRate: TFloatSpinEdit
+          Left = 155
+          Height = 26
+          Hint = 'Verdampingssnelheid bij kookvolume'
+          Top = 84
+          Width = 80
+          AutoSize = False
+          DecimalPlaces = 1
+          Increment = 1
+          MaxValue = 20
+          MinValue = 0
+          OnChange = fseEvapRateChange
+          ParentShowHint = False
+          ShowHint = True
+          TabOrder = 3
+          Value = 8
+        end
+        object lEvapRate: TLabel
+          Left = 244
+          Height = 14
+          Top = 90
+          Width = 32
+          Caption = '%/uur'
+          ParentColor = False
+        end
+        object lTopUpKettle: TLabel
+          Left = 244
+          Height = 14
+          Top = 171
+          Width = 3
+          Caption = 'l'
+          ParentColor = False
+        end
+        object lBoilSize: TLabel
+          Left = 244
+          Height = 14
+          Top = 63
+          Width = 3
+          Caption = 'l'
+          ParentColor = False
+        end
+        object lHopUtilization: TLabel
+          Left = 244
+          Height = 14
+          Top = 197
+          Width = 9
+          Caption = '%'
+          ParentColor = False
+        end
+        object fseHopUtilization: TFloatSpinEdit
+          Left = 155
+          Height = 26
+          Hint = '100% voor kleine volumes, hoger voor professionele brouwsels'
+          Top = 192
+          Width = 80
+          AutoSize = False
+          DecimalPlaces = 0
+          Increment = 1
+          MaxValue = 300
+          MinValue = 100
+          ParentShowHint = False
+          ShowHint = True
+          TabOrder = 6
+          Value = 100
+        end
+        object Label13: TLabel
+          Left = 5
+          Height = 14
+          Top = 197
+          Width = 58
+          Caption = 'Hopfactor:'
+          ParentColor = False
+        end
+        object Label11: TLabel
+          Left = 5
+          Height = 14
+          Top = 63
+          Width = 71
+          Caption = 'Kookvolume:'
+          ParentColor = False
+        end
+        object fseBoilSize: TFloatSpinEdit
+          Left = 155
+          Height = 26
+          Hint = 'Volume bij start koken (mits niet berekend)'
+          Top = 57
+          Width = 80
+          AutoSize = False
+          DecimalPlaces = 1
+          Increment = 1
+          MaxValue = 500
+          MinValue = 0
+          OnChange = fseBoilSizeChange
+          ParentShowHint = False
+          ShowHint = True
+          TabOrder = 2
+          Value = 0
+        end
+        object fseTopUpKettle: TFloatSpinEdit
+          Left = 155
+          Height = 26
+          Hint = 'Hoeveelheid extra water dat je meestal bij het koken toevoegt'
+          Top = 165
+          Width = 80
+          AutoSize = False
+          DecimalPlaces = 1
+          Increment = 1
+          MaxValue = 500
+          MinValue = 0
+          ParentShowHint = False
+          ShowHint = True
+          TabOrder = 5
+          Value = 0
+        end
+        object Label9: TLabel
+          Left = 5
+          Height = 14
+          Top = 171
+          Width = 115
+          Caption = 'Extra water bij koken:'
+          ParentColor = False
+        end
+        object Label7: TLabel
+          Left = 5
+          Height = 14
+          Top = 7
+          Width = 99
+          Caption = 'Volume kookketel:'
+          ParentColor = False
+        end
+        object fseKettleVolume: TFloatSpinEdit
+          Left = 155
+          Height = 26
+          Hint = 'Volume kookketel tot de rand gevuld'
+          Top = 3
+          Width = 80
+          AutoSize = False
+          DecimalPlaces = 1
+          Increment = 1
+          MaxValue = 100000
+          MinValue = 0
+          ParentShowHint = False
+          ShowHint = True
+          TabOrder = 0
+          Value = 0
+        end
+        object lKettleVolume: TLabel
+          Left = 244
+          Height = 14
+          Top = 7
+          Width = 3
+          Caption = 'l'
+          ParentColor = False
+        end
+        object Label18: TLabel
+          Left = 5
+          Height = 14
+          Top = 114
+          Width = 121
+          Caption = 'Verdampingssnelheid:'
+          ParentColor = False
+        end
+        object eEvapRate: TEdit
+          Left = 155
+          Height = 26
+          Hint = 'Verdampingssnelheid in liters per uur'
+          Top = 111
+          Width = 128
+          AutoSize = False
+          ParentShowHint = False
+          ReadOnly = True
+          ShowHint = True
+          TabOrder = 7
+        end
+        object Label20: TLabel
+          Left = 6
+          Height = 14
+          Top = 35
+          Width = 97
+          Caption = 'Hoogte kookketel:'
+          ParentColor = False
+        end
+        object fseKettleHeight: TFloatSpinEdit
+          Left = 155
+          Height = 26
+          Hint = 'Hoogte kookketel (binnenkant)'
+          Top = 30
+          Width = 80
+          AutoSize = False
+          DecimalPlaces = 1
+          Increment = 1
+          MaxValue = 1000
+          MinValue = 0
+          ParentShowHint = False
+          ShowHint = True
+          TabOrder = 1
+          Value = 0
+        end
+        object lKettleHeight: TLabel
+          Left = 244
+          Height = 14
+          Top = 35
+          Width = 17
+          Caption = 'cm'
+          ParentColor = False
+        end
+        object Label23: TLabel
+          Left = 5
+          Height = 14
+          Top = 142
+          Width = 48
+          Caption = 'Kooktijd:'
+          ParentColor = False
+        end
+        object fseBoilTime: TFloatSpinEdit
+          Left = 155
+          Height = 26
+          Hint = 'Standaard kooktijd'
+          Top = 138
+          Width = 80
+          AutoSize = False
+          DecimalPlaces = 0
+          Increment = 1
+          MaxValue = 100000
+          MinValue = 0
+          ParentShowHint = False
+          ShowHint = True
+          TabOrder = 4
+          Value = 0
+        end
+        object lBoilTime: TLabel
+          Left = 244
+          Height = 14
+          Top = 142
+          Width = 21
+          Caption = 'min'
+          ParentColor = False
+        end
+        object Label12: TLabel
+          Left = 6
+          Height = 14
+          Top = 224
+          Width = 106
+          Caption = 'Volume eind koken:'
+          ParentColor = False
+        end
+        object fseBatchSize: TFloatSpinEdit
+          Left = 155
+          Height = 26
+          Hint = 'Standaard volume dat naar het gistingsvat gaat'
+          Top = 219
+          Width = 80
+          AutoSize = False
+          DecimalPlaces = 1
+          Increment = 1
+          MaxValue = 100000
+          MinValue = 0
+          OnChange = fseBatchSizeChange
+          ParentShowHint = False
+          ShowHint = True
+          TabOrder = 8
+          Value = 0
+        end
+        object lBatchSize: TLabel
+          Left = 244
+          Height = 14
+          Top = 224
+          Width = 3
+          Caption = 'l'
+          ParentColor = False
+        end
+      end
+      object gbLauter: TGroupBox
+        Left = 4
+        Height = 161
+        Top = 171
+        Width = 293
+        Caption = 'Filteren'
+        ClientHeight = 146
+        ClientWidth = 291
+        TabOrder = 1
+        object Label5: TLabel
+          Left = 6
+          Height = 14
+          Top = 63
+          Width = 119
+          Caption = 'Dode ruimte filterkuip:'
+          ParentColor = False
+        end
+        object fseLauterDeadspace: TFloatSpinEdit
+          Left = 179
+          Height = 26
+          Hint = 'Volume wort dat achterblijft in de filterkuip'
+          Top = 57
+          Width = 80
+          AutoSize = False
+          DecimalPlaces = 1
+          Increment = 1
+          MaxValue = 25
+          MinValue = 0
+          ParentShowHint = False
+          ShowHint = True
+          TabOrder = 2
+          Value = 0
+        end
+        object lLauterDeadspace: TLabel
+          Left = 266
+          Height = 14
+          Top = 63
+          Width = 3
+          Caption = 'l'
+          ParentColor = False
+        end
+        object Label8: TLabel
+          Left = 6
+          Height = 14
+          Top = 13
+          Width = 95
+          Caption = 'Volume filterkuip:'
+          ParentColor = False
+        end
+        object lLauterVolume: TLabel
+          Left = 266
+          Height = 14
+          Top = 13
+          Width = 3
+          Caption = 'l'
+          ParentColor = False
+        end
+        object fseLautervolume: TFloatSpinEdit
+          Left = 179
+          Height = 26
+          Hint = 'Volume filterkuip tot de rand gevuld'
+          Top = 7
+          Width = 80
+          AutoSize = False
+          DecimalPlaces = 1
+          Increment = 1
+          MaxValue = 100000
+          MinValue = 0
+          ParentShowHint = False
+          ShowHint = True
+          TabOrder = 0
+          Value = 0
+        end
+        object Label16: TLabel
+          Left = 6
+          Height = 14
+          Top = 88
+          Width = 146
+          Caption = 'Gem. brouwzaalrendement'
+          ParentColor = False
+        end
+        object fseEfficiency: TFloatSpinEdit
+          Left = 179
+          Height = 26
+          Hint = 'Gemiddeld brouwzaalrendement'
+          Top = 82
+          Width = 80
+          AutoSize = False
+          DecimalPlaces = 1
+          Increment = 1
+          MaxValue = 100
+          MinValue = 10
+          ParentShowHint = False
+          ShowHint = True
+          TabOrder = 3
+          Value = 75
+        end
+        object lEfficiency: TLabel
+          Left = 265
+          Height = 14
+          Top = 88
+          Width = 9
+          Caption = '%'
+          ParentColor = False
+        end
+        object Label19: TLabel
+          Left = 6
+          Height = 14
+          Top = 38
+          Width = 93
+          Caption = 'Hoogte filterkuip:'
+          ParentColor = False
+        end
+        object fseLauterHeight: TFloatSpinEdit
+          Left = 179
+          Height = 26
+          Hint = 'Hoogte filterkuip (binnenkant)'
+          Top = 32
+          Width = 80
+          AutoSize = False
+          DecimalPlaces = 1
+          Increment = 1
+          MaxValue = 1000
+          MinValue = 0
+          ParentShowHint = False
+          ShowHint = True
+          TabOrder = 1
+          Value = 0
+        end
+        object lLauterHeight: TLabel
+          Left = 266
+          Height = 14
+          Top = 38
+          Width = 17
+          Caption = 'cm'
+          ParentColor = False
+        end
+      end
+      object gbChilling: TGroupBox
+        Left = 298
+        Height = 66
+        Top = 266
+        Width = 293
+        Caption = 'Koelen'
+        ClientHeight = 51
+        ClientWidth = 291
+        TabOrder = 3
+        object Label10: TLabel
+          Left = 6
+          Height = 14
+          Top = 11
+          Width = 106
+          Caption = 'Verlies in kookketel:'
+          ParentColor = False
+        end
+        object fseTrubChillerLoss: TFloatSpinEdit
+          Left = 155
+          Height = 26
+          Hint = 'Standaard verlies in de kookketel'
+          Top = 5
+          Width = 80
+          AutoSize = False
+          DecimalPlaces = 1
+          Increment = 1
+          MaxValue = 100
+          MinValue = 0
+          ParentShowHint = False
+          ShowHint = True
+          TabOrder = 0
+          Value = 0
+        end
+        object lTrubChillerLoss: TLabel
+          Left = 244
+          Height = 14
+          Top = 11
+          Width = 3
+          Caption = 'l'
+          ParentColor = False
+        end
+      end
+    end
+    object bbCancel: TBitBtn
+      Left = 314
+      Height = 33
+      Top = 529
+      Width = 120
+      Cancel = True
+      Caption = '&Annuleer'
+      Kind = bkCancel
+      ModalResult = 2
+      OnClick = bbCancelClick
+      TabOrder = 3
+    end
+  end
+  object pmIngredients: TPopupMenu
+    left = 572
+    top = 511
+    object miNew: TMenuItem
+      Caption = 'Nieuw'
+      OnClick = bbAddClick
+    end
+    object miDelete: TMenuItem
+      Caption = 'Verwijder'
+      OnClick = bbDeleteClick
+    end
+  end
+end

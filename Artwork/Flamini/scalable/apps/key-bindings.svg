@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512">
+ <defs>
+  <linearGradient id="0">
+   <stop stop-color="#282629" stop-opacity="0.477551"/>
+   <stop offset="1" stop-color="#282629"/>
+  </linearGradient>
+  <linearGradient id="1">
+   <stop stop-color="#189cd6"/>
+   <stop offset="1" stop-color="#0078ad"/>
+  </linearGradient>
+  <radialGradient xlink:href="#1" id="2" gradientUnits="userSpaceOnUse" cx="202.85715" cy="-316.57144" r="360" gradientTransform="matrix(0.69444444,0,0,0.69444444,115.12698,475.84132)"/>
+  <radialGradient xlink:href="#0" id="3" cx="256" cy="256" r="250" gradientUnits="userSpaceOnUse" gradientTransform="matrix(2.1450938,0,0,1.8866654,-293.144,-226.98634)"/>
+ </defs>
+ <path d="m 506 256.00004 c 0 138.07119 -111.92881 250 -250 250 -138.07119 0 -250 -111.92881 -250 -250 C 6 117.92886 117.92881 6.00005 256 6.00005 c 138.07119 0 250 111.92881 250 249.99999 z" fill="url(#2)" fill-rule="evenodd"/>
+ <rect ry="21.894651" rx="21.775854" y="218.52592" x="70.51376" height="76.37669" width="76.37669" fill="#fff8eb"/>
+ <rect ry="21.894651" rx="21.775854" y="218.52592" x="266.91095" height="76.37669" width="76.37669" fill="#fff8eb"/>
+ <rect width="76.37669" height="76.37669" x="365.10953" y="218.52592" rx="21.775854" ry="21.894651" fill="#fff8eb"/>
+ <rect ry="21.894651" rx="21.775854" y="120.32733" x="217.81165" height="76.37669" width="76.37669" fill="#fff8eb"/>
+ <rect width="76.37669" height="76.37669" x="316.01025" y="120.32733" rx="21.775854" ry="21.894651" fill="#fff8eb"/>
+ <rect ry="21.894651" rx="21.775854" y="316.72452" x="78.69698" height="76.37669" width="354.60605" fill="#fff8eb"/>
+ <path d="M 256 6 C 117.92881 6 6 117.92882 6 256 C 6 394.07119 117.92881 506 256 506 C 394.07119 506 506 394.07119 506 256 C 506 117.92882 394.07119 6 256 6 z M 256 36.65625 C 377.13265 36.65625 475.34375 134.86736 475.34375 256 C 475.34375 377.13265 377.13265 475.34375 256 475.34375 C 134.86735 475.34375 36.65625 377.13265 36.65625 256 C 36.65625 134.86736 134.86735 36.65625 256 36.65625 z" fill="url(#3)" fill-rule="evenodd"/>
+ <rect width="44.46995" height="44.46995" x="86.46713" y="234.47929" rx="16.11179" ry="12.324326" fill="#282629"/>
+ <rect ry="12.324326" rx="16.11179" y="136.2807" x="233.76501" height="44.46995" width="44.46995" fill="#282629"/>
+ <rect width="44.46995" height="44.46995" x="381.0629" y="234.47929" rx="16.11179" ry="12.324326" fill="#282629"/>
+ <rect width="76.37669" height="76.37669" x="168.71234" y="218.52592" rx="21.775854" ry="21.894651" fill="#fff8eb"/>
+ <rect width="76.37669" height="76.37669" x="119.61305" y="120.32733" rx="21.775854" ry="21.894651" fill="#fff8eb"/>
+ <path d="m 111.59029 254.56894 46.10803 0.39063 0.39063 -45.42733 48.8089 -2.14844 -0.19531 -47.83234 48.51881 0" fill="none" stroke="#282629" stroke-linejoin="round" stroke-linecap="round" stroke-width="27.5"/>
+</svg>

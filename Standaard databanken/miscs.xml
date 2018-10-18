@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MISCS>
+  <MISC>
+    <NAME>Malto-dextrine</NAME>
+    <NOTES>Dextrinesuikers op basis van mout. Zorgt voor meer body en een beetje zoetheid.
+</NOTES>
+    <VERSION>1</VERSION>
+    <AMOUNT>0.1774419993</AMOUNT>
+    <DISPLAY_AMOUNT>177.44 ml</DISPLAY_AMOUNT>
+    <TYPE>Other</TYPE>
+    <USE>Boil</USE>
+    <TIME>5</TIME>
+    <AMOUNT_IS_WEIGHT>FALSE</AMOUNT_IS_WEIGHT>
+    <USE_FOR>Verhoogt de body</USE_FOR>
+    <DISPLAY_TIME>5 min.</DISPLAY_TIME>
+  </MISC>
+  <MISC>
+    <NAME>WYeast gistvoeding</NAME>
+    <NOTES>Complete gistvoeding voor gezonde gist en een goede vergsting. Vooral gebruikt in starters van moutextract en bieren met veel simpele suikers en ongemoute granen.</NOTES>
+    <VERSION>1</VERSION>
+    <AMOUNT>0.004929</AMOUNT>
+    <DISPLAY_AMOUNT>4.93 ml</DISPLAY_AMOUNT>
+    <TYPE>Other</TYPE>
+    <USE>Primary</USE>
+    <TIME>4320</TIME>
+    <AMOUNT_IS_WEIGHT>TRUE</AMOUNT_IS_WEIGHT>
+    <USE_FOR>Giststarter en/of vergisting</USE_FOR>
+    <DISPLAY_TIME>4320 min.</DISPLAY_TIME>
+  </MISC>
+  <MISC>
+    <NAME>CaCO3</NAME>
+    <NOTES>Kalk. Voor het maken van een ander waterprofiel. Voegt calcium en carbonaat toe. Voor het verhogen van de pH tijdens het maischen.</NOTES>
+    <VERSION>1</VERSION>
+    <AMOUNT>0.001</AMOUNT>
+    <DISPLAY_AMOUNT>1.00 g</DISPLAY_AMOUNT>
+    <TYPE>Water agent</TYPE>
+    <USE>Mash</USE>
+    <TIME>60</TIME>
+    <AMOUNT_IS_WEIGHT>TRUE</AMOUNT_IS_WEIGHT>
+    <USE_FOR>Brouwzout</USE_FOR>
+    <DISPLAY_TIME>60 min.</DISPLAY_TIME>
+  </MISC>
+  <MISC>
+    <NAME>CaCl2</NAME>
+    <NOTES>Voor het maken van een ander waterprofiel. Voegt calcium en chloride toe. Voor het verbeteren van zoetere bieren.</NOTES>
+    <VERSION>1</VERSION>
+    <AMOUNT>0.0049999999</AMOUNT>
+    <DISPLAY_AMOUNT>5.00 g</DISPLAY_AMOUNT>
+    <TYPE>Water agent</TYPE>
+    <USE>Mash</USE>
+    <TIME>60</TIME>
+    <AMOUNT_IS_WEIGHT>TRUE</AMOUNT_IS_WEIGHT>
+    <USE_FOR>Brouwzout</USE_FOR>
+    <DISPLAY_TIME>60 min.</DISPLAY_TIME>
+  </MISC>
+  <MISC>
+    <NAME>CaSO4</NAME>
+    <NOTES>Voor het maken van een ander waterprofiel. Voegt calcium en sulfaat toe. Voor het verbeteren van bittere bieren.</NOTES>
+    <VERSION>1</VERSION>
+    <AMOUNT>0.0099999998</AMOUNT>
+    <DISPLAY_AMOUNT>10.00 g</DISPLAY_AMOUNT>
+    <TYPE>Water agent</TYPE>
+    <USE>Mash</USE>
+    <TIME>60</TIME>
+    <AMOUNT_IS_WEIGHT>TRUE</AMOUNT_IS_WEIGHT>
+    <USE_FOR>Brouwzout</USE_FOR>
+    <DISPLAY_TIME>60 min.</DISPLAY_TIME>
+  </MISC>
+  <MISC>
+    <NAME>MgSO4</NAME>
+    <NOTES>Voor het maken van een ander waterprofiel. Voegt magnesium en sulfaat toe. Gebruik spaarzaam!</NOTES>
+    <VERSION>1</VERSION>
+    <AMOUNT>0.0049999999</AMOUNT>
+    <DISPLAY_AMOUNT>5.00 g</DISPLAY_AMOUNT>
+    <TYPE>Water agent</TYPE>
+    <USE>Mash</USE>
+    <TIME>60</TIME>
+    <AMOUNT_IS_WEIGHT>TRUE</AMOUNT_IS_WEIGHT>
+    <USE_FOR>Brouwzout</USE_FOR>
+    <DISPLAY_TIME>60 min.</DISPLAY_TIME>
+  </MISC>
+  <MISC>
+    <NAME>NaCl</NAME>
+    <NOTES>Keukenzout. Voor het maken van een ander waterprofiel. Voegt natrium en chloride toe. Maakt de indruk van bieren wat voller en zoeter. In hoge doseringen wordt het bier ziltig.</NOTES>
+    <VERSION>1</VERSION>
+    <AMOUNT>0.0005</AMOUNT>
+    <DISPLAY_AMOUNT>0.50 g</DISPLAY_AMOUNT>
+    <TYPE>Water agent</TYPE>
+    <USE>Mash</USE>
+    <TIME>60</TIME>
+    <AMOUNT_IS_WEIGHT>TRUE</AMOUNT_IS_WEIGHT>
+    <USE_FOR>Brouwzout</USE_FOR>
+    <DISPLAY_TIME>60 min.</DISPLAY_TIME>
+  </MISC>
+  <MISC>
+    <NAME>NaHCO3</NAME>
+    <NOTES>Baksoda. Voor het maken van een ander waterprofiel. Voegt natrium en bicarbonaat toe. Kan gebruikt worden voor verhoging van de pH tijdens het maischen.</NOTES>
+    <VERSION>1</VERSION>
+    <AMOUNT>0.001</AMOUNT>
+    <DISPLAY_AMOUNT>1.00 g</DISPLAY_AMOUNT>
+    <TYPE>Water agent</TYPE>
+    <USE>Mash</USE>
+    <TIME>60</TIME>
+    <AMOUNT_IS_WEIGHT>TRUE</AMOUNT_IS_WEIGHT>
+    <USE_FOR>Brouwzout</USE_FOR>
+    <DISPLAY_TIME>60 min.</DISPLAY_TIME>
+  </MISC>
+  <MISC>
+    <NAME>Gelatine</NAME>
+    <NOTES>Voor het helder krijgen van bier. Gelatine toegevoegd na het lageren zorgt voor neerslaan van de gist. Neem een halve liter water op 20 liter bier, los de gelatine al roerend en verwarmend op. Niet koken.</NOTES>
+    <VERSION>1</VERSION>
+    <AMOUNT>0.0024639999</AMOUNT>
+    <DISPLAY_AMOUNT>2.46 ml</DISPLAY_AMOUNT>
+    <TYPE>Fining</TYPE>
+    <USE>Secondary</USE>
+    <TIME>300</TIME>
+    <AMOUNT_IS_WEIGHT>FALSE</AMOUNT_IS_WEIGHT>
+    <USE_FOR>Helderheid</USE_FOR>
+    <DISPLAY_TIME>300 min.</DISPLAY_TIME>
+  </MISC>
+  <MISC>
+    <NAME>Iers mos</NAME>
+    <NOTES>Zorgt  voor neerslaan van eiwitten bij  het koken. Gebruik 1-2 gram per 10 liter wort. Kook 10 minuten mee.</NOTES>
+    <VERSION>1</VERSION>
+    <AMOUNT>0.001232</AMOUNT>
+    <DISPLAY_AMOUNT>1.23 g</DISPLAY_AMOUNT>
+    <TYPE>Fining</TYPE>
+    <USE>Boil</USE>
+    <TIME>10</TIME>
+    <AMOUNT_IS_WEIGHT>TRUE</AMOUNT_IS_WEIGHT>
+    <USE_FOR>Helderheid</USE_FOR>
+    <DISPLAY_TIME>10 min.</DISPLAY_TIME>
+  </MISC>
+  <MISC>
+    <NAME>Isinglass</NAME>
+    <NOTES>Voeg toe voor het bottelen voor het helder krijgen van bier. Zorgt voor het neerslaan van eiwitten.</NOTES>
+    <VERSION>1</VERSION>
+    <AMOUNT>0.0147869997</AMOUNT>
+    <DISPLAY_AMOUNT>14.79 ml</DISPLAY_AMOUNT>
+    <TYPE>Fining</TYPE>
+    <USE>Secondary</USE>
+    <TIME>10080</TIME>
+    <AMOUNT_IS_WEIGHT>FALSE</AMOUNT_IS_WEIGHT>
+    <USE_FOR>Helderheid</USE_FOR>
+    <DISPLAY_TIME>10080 min.</DISPLAY_TIME>
+  </MISC>
+  <MISC>
+    <NAME>Gemberwortel</NAME>
+    <NOTES>Geeft een specifieke verwarmende gembersmaak. Gebruik weinig (enkele grammen per 20 liter). Zeer geschikt voor in witbier.
+</NOTES>
+    <VERSION>1</VERSION>
+    <AMOUNT>0.0295739993</AMOUNT>
+    <DISPLAY_AMOUNT>29.57 ml</DISPLAY_AMOUNT>
+    <TYPE>Herb</TYPE>
+    <USE>Boil</USE>
+    <TIME>12</TIME>
+    <AMOUNT_IS_WEIGHT>TRUE</AMOUNT_IS_WEIGHT>
+    <USE_FOR>Witbier</USE_FOR>
+    <DISPLAY_TIME>12 min.</DISPLAY_TIME>
+  </MISC>
+  <MISC>
+    <NAME>Vlierbloesem (gedroogd)</NAME>
+    <NOTES>Geeft een specifieke, kruidig-zoete geur en smaak. </NOTES>
+    <VERSION>1</VERSION>
+    <TYPE>Herb</TYPE>
+    <USE>Boil</USE>
+    <AMOUNT_IS_WEIGHT>TRUE</AMOUNT_IS_WEIGHT>
+    <USE_FOR>Witbier, kruidenbier.</USE_FOR>
+  </MISC>
+  <MISC>
+    <NAME>Eikenhoutsnippers, matig geroosterd</NAME>
+    <NOTES>Geroosterde eikenhoutsnippers. Vooral gebruikt om rijping op houten vaten te simuleren.</NOTES>
+    <VERSION>1</VERSION>
+    <TYPE>Flavor</TYPE>
+    <USE>Boil</USE>
+    <AMOUNT_IS_WEIGHT>TRUE</AMOUNT_IS_WEIGHT>
+    <USE_FOR>Bij het lageren van bier om rijping op houten vaten te simuleren.</USE_FOR>
+  </MISC>
+  <MISC>
+    <NAME>Eikenhoutsnippers, whiskeyvaten</NAME>
+    <NOTES>Houtsnippers gemaakt van whiskeyvaten.</NOTES>
+    <VERSION>1</VERSION>
+    <TYPE>Flavor</TYPE>
+    <USE>Boil</USE>
+    <AMOUNT_IS_WEIGHT>TRUE</AMOUNT_IS_WEIGHT>
+    <USE_FOR>In de lagering.</USE_FOR>
+  </MISC>
+  <MISC>
+    <NAME>Eikensnippers, licht geroosterd</NAME>
+    <NOTES>Geroosterde eikenhoutsnippers. Vooral gebruikt om rijping op houten vaten te simuleren.</NOTES>
+    <VERSION>1</VERSION>
+    <AMOUNT>0.118294999</AMOUNT>
+    <DISPLAY_AMOUNT>118.29 ml</DISPLAY_AMOUNT>
+    <TYPE>Flavor</TYPE>
+    <USE>Secondary</USE>
+    <TIME>10080</TIME>
+    <AMOUNT_IS_WEIGHT>TRUE</AMOUNT_IS_WEIGHT>
+    <USE_FOR>Eikensmaak</USE_FOR>
+    <DISPLAY_TIME>10080 min.</DISPLAY_TIME>
+  </MISC>
+  <MISC>
+    <NAME>Koffie,  koud getrokken</NAME>
+    <NOTES>Koffie, koud getrokken en toegevoegd tijdens de lagering of bij bottelen.</NOTES>
+    <VERSION>1</VERSION>
+    <TYPE>Flavor</TYPE>
+    <USE>Boil</USE>
+    <AMOUNT_IS_WEIGHT>TRUE</AMOUNT_IS_WEIGHT>
+    <USE_FOR>Speciaalbieren met een koffie-accent.</USE_FOR>
+  </MISC>
+  <MISC>
+    <NAME>Gagel</NAME>
+    <NOTES>Zeer sterke, aromatische struik. Vroeger gebruikt in het gruitmengsel. Geschikt voor speciaalbieren. Gebruik maar weinig, want het aroma en de smaak zijn zeer sterk.</NOTES>
+    <VERSION>1</VERSION>
+    <AMOUNT>0.001</AMOUNT>
+    <DISPLAY_AMOUNT>1.00 g</DISPLAY_AMOUNT>
+    <TYPE>Spice</TYPE>
+    <USE>Boil</USE>
+    <TIME>10</TIME>
+    <AMOUNT_IS_WEIGHT>TRUE</AMOUNT_IS_WEIGHT>
+    <USE_FOR>Speciaalbieren</USE_FOR>
+    <DISPLAY_TIME>10 min.</DISPLAY_TIME>
+  </MISC>
+  <MISC>
+    <NAME>Kaneelstok</NAME>
+    <NOTES>Voor een kaneelsmaak aan speciaalbieren. Gaat goed samen met gember, honing en sinaasappel. Voeg op 20 liter een stok toe, 5 minuten voor het eind van het koken.</NOTES>
+    <VERSION>1</VERSION>
+    <AMOUNT>0.0029569999</AMOUNT>
+    <DISPLAY_AMOUNT>2.96 g</DISPLAY_AMOUNT>
+    <TYPE>Spice</TYPE>
+    <USE>Boil</USE>
+    <TIME>5</TIME>
+    <AMOUNT_IS_WEIGHT>TRUE</AMOUNT_IS_WEIGHT>
+    <USE_FOR>Voor speciaalbieren</USE_FOR>
+    <DISPLAY_TIME>5 min.</DISPLAY_TIME>
+  </MISC>
+  <MISC>
+    <NAME>Korianderzaad</NAME>
+    <NOTES>Vooral gebruikt in Belgische bieren, zoals witbier, tripels en blonds. Gaat goed samen met sinaasappelschil.</NOTES>
+    <VERSION>1</VERSION>
+    <AMOUNT>0.0221800003</AMOUNT>
+    <DISPLAY_AMOUNT>22.18 g</DISPLAY_AMOUNT>
+    <TYPE>Spice</TYPE>
+    <USE>Boil</USE>
+    <TIME>5</TIME>
+    <AMOUNT_IS_WEIGHT>TRUE</AMOUNT_IS_WEIGHT>
+    <USE_FOR>Witbieren, tripels en blonds</USE_FOR>
+    <DISPLAY_TIME>5 min.</DISPLAY_TIME>
+  </MISC>
+  <MISC>
+    <NAME>Paradijszaad</NAME>
+    <NOTES>Geeft een peperachtige smaak met citrustonen. Gebruik zeer weinig!</NOTES>
+    <VERSION>1</VERSION>
+    <AMOUNT>0.0020000001</AMOUNT>
+    <DISPLAY_AMOUNT>2.00 g</DISPLAY_AMOUNT>
+    <TYPE>Spice</TYPE>
+    <USE>Boil</USE>
+    <TIME>5</TIME>
+    <AMOUNT_IS_WEIGHT>TRUE</AMOUNT_IS_WEIGHT>
+    <USE_FOR>Kruidenbier</USE_FOR>
+    <DISPLAY_TIME>5 min.</DISPLAY_TIME>
+  </MISC>
+  <MISC>
+    <NAME>Sinaasappelschil, bitter</NAME>
+    <NOTES>Gemaakt van Curacao sinaasappels. Gebruikt in vele Belgische bieren, zoals witbier.</NOTES>
+    <VERSION>1</VERSION>
+    <AMOUNT>0.0221800003</AMOUNT>
+    <DISPLAY_AMOUNT>22.18 g</DISPLAY_AMOUNT>
+    <TYPE>Spice</TYPE>
+    <USE>Boil</USE>
+    <TIME>5</TIME>
+    <AMOUNT_IS_WEIGHT>TRUE</AMOUNT_IS_WEIGHT>
+    <USE_FOR>Belgisch witbier</USE_FOR>
+    <DISPLAY_TIME>5 min.</DISPLAY_TIME>
+  </MISC>
+  <MISC>
+    <NAME>Sinaasappelschil, zoet</NAME>
+    <NOTES>Zorgt voor een sinaasappellikeurachtige smaak in bier. Vooral gebruikt in 
+Belgische sterke lichtgekleurde bieren.</NOTES>
+    <VERSION>1</VERSION>
+    <AMOUNT>0.0221800003</AMOUNT>
+    <DISPLAY_AMOUNT>22.18 g</DISPLAY_AMOUNT>
+    <TYPE>Spice</TYPE>
+    <USE>Boil</USE>
+    <TIME>5</TIME>
+    <AMOUNT_IS_WEIGHT>TRUE</AMOUNT_IS_WEIGHT>
+    <USE_FOR>Belgische zware, lichtgekleurde bieren.</USE_FOR>
+    <DISPLAY_TIME>5 min.</DISPLAY_TIME>
+  </MISC>
+  <MISC>
+    <NAME>Steranijs</NAME>
+    <NOTES>Steranijs geeft een sterke dropachtige smaak. Vooral voor speciaalbieren. Gebruik weinig en kook 10 tot 30 minuten mee.
+</NOTES>
+    <VERSION>1</VERSION>
+    <AMOUNT>0.0739340037</AMOUNT>
+    <DISPLAY_AMOUNT>73.93 g</DISPLAY_AMOUNT>
+    <TYPE>Spice</TYPE>
+    <USE>Boil</USE>
+    <TIME>30</TIME>
+    <AMOUNT_IS_WEIGHT>TRUE</AMOUNT_IS_WEIGHT>
+    <USE_FOR>Dropachtige smaak.</USE_FOR>
+    <DISPLAY_TIME>30 min.</DISPLAY_TIME>
+  </MISC>
+  <MISC>
+    <NAME>Kamillebloemen</NAME>
+    <NOTES>Geven een zachte, aromatische smaak.</NOTES>
+    <VERSION>1</VERSION>
+    <TYPE>Herb</TYPE>
+    <USE>Boil</USE>
+    <AMOUNT_IS_WEIGHT>TRUE</AMOUNT_IS_WEIGHT>
+  </MISC>
+</MISCS>

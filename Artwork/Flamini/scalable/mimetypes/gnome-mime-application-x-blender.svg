@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512">
+ <defs>
+  <linearGradient id="0">
+   <stop stop-color="#f4c484"/>
+   <stop offset="1" stop-color="#e4a146"/>
+  </linearGradient>
+  <linearGradient y2="7.01654" x2="0" y1="92.5396" gradientTransform="scale(1.0058652,0.994169)" gradientUnits="userSpaceOnUse" xlink:href="#2"/>
+  <filter x="-0.192" y="-0.192" width="1.384" height="1.384" color-interpolation-filters="sRGB">
+   <feGaussianBlur stdDeviation="5.28"/>
+  </filter>
+  <clipPath>
+   <rect width="84" height="84" rx="6" x="6" y="6" fill="#fff"/>
+  </clipPath>
+  <linearGradient id="1">
+   <stop stop-color="#fff"/>
+   <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+  </linearGradient>
+  <linearGradient y1="20.220806" x2="0" y2="138.66119" xlink:href="#1" gradientUnits="userSpaceOnUse"/>
+  <filter color-interpolation-filters="sRGB">
+   <feGaussianBlur stdDeviation="1.71"/>
+  </filter>
+  <linearGradient y1="92.5396" x2="0" y2="7.01654" id="2" gradientUnits="userSpaceOnUse" gradientTransform="scale(1.0058652,0.994169)">
+   <stop/>
+   <stop offset="1" stop-opacity="0.588235"/>
+  </linearGradient>
+  <radialGradient xlink:href="#0" id="3" cx="256" cy="256" r="216" gradientUnits="userSpaceOnUse"/>
+ </defs>
+ <rect rx="147.5047" width="450" height="450" x="31" y="31" opacity="0.25" fill="#282629"/>
+ <rect rx="147.5047" width="444" height="444" x="34" y="34" opacity="0.25" fill="#282629"/>
+ <rect y="37" x="37" height="438" width="438" rx="147.5047" opacity="0.25" fill="#282629"/>
+ <rect rx="147.5047" width="432" height="432" x="40" y="40" fill="url(#3)"/>
+ <text y="446.66309" x="98.11455" font-family="Gentium Book Basic" word-spacing="0" line-height="125%" letter-spacing="0" font-size="208.33333"><tspan y="446.66309" x="98.11455"/>
+ </text>
+ <text transform="scale(4.0128362,0.2492003)" font-size="75.69771" y="1229.4965" x="342.17603" font-family="Arial" text-anchor="middle"/>
+ <path d="m 279.87375 104.53139 c -4.39966 -0.0444 -8.97395 1.35252 -12.9375 4.28125 -9.05955 6.69439 -11.40761 18.74034 -5.28125 27.03125 l 39.09375 52.9375 -144.625 -21.71875 c -10.19453 -1.53054 -19.76183 6.3805 -21.46875 17.75 -1.70692 11.36964 5.11797 21.7507 15.3125 23.28125 l 72.21875 10.84375 -110.5 81.65625 c -8.29091 6.12636 -9.48878 18.50357 -2.65625 27.75 6.83239 9.24656 19.02159 11.78275 27.3125 5.65625 l 53.375 -39.4375 c -0.0529 1.53529 -0.0737 3.07446 -0.0625 4.625 0.43487 60.08002 49.30073 108.49936 109.28125 108.28125 59.9816 -0.21812 108.46875 -49.014 108.46875 -109.09375 l 0 -1.5625 C 406.972 266.9024 394.5418 239.95496 374.78 220.53139 L 294.3425 111.68764 c -3.44608 -4.66363 -8.81204 -7.0992 -14.46875 -7.15625 z m 17.96875 163.90625 c 17.87662 0 32.34375 14.49825 32.34375 32.375 0 17.87676 -14.46713 32.375 -32.34375 32.375 -17.87676 0 -32.375 -14.49824 -32.375 -32.375 0 -17.87675 14.49824 -32.375 32.375 -32.375 z" fill="#fff" fill-rule="evenodd"/>
+</svg>
