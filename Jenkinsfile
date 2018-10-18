@@ -15,7 +15,7 @@ pipeline {
       steps {
         unstash 'scm'
         script {
-          docker.image('taraworks/lazarus-cross:0.0.2').withRun('-u root'){
+          docker.image('taraworks/lazarus-cross:0.0.2').inside('-u root'){
             sh '/usr/bin/apt-get install -y libfann-dev'
           }
           docker.image('taraworks/lazarus-cross:0.0.2').inside{
