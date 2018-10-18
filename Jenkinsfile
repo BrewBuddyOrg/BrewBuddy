@@ -32,7 +32,7 @@ pipeline {
   
       post {
         always {
-            archiveArtifacts artifacts: 'hello', fingerprint: true
+            archiveArtifacts artifacts: 'brouwhulp', fingerprint: true
         }
         success {
 //            notifySuccessful()
