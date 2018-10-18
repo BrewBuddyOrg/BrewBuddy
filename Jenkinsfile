@@ -19,8 +19,8 @@ pipeline {
             sh 'ls -al /root/ && pwd'
             sh '/usr/bin/apt-get install -y libfann-dev'
             sh 'pwd'
-            sh 'find . -name "*.o" -exec rm {} \;
-            sh 'find . -name "*.ppu" -exec rm {} \;
+            sh 'find . -name "*.o" -exec rm {} \;'
+            sh 'find . -name "*.ppu" -exec rm {} \;'
             sh 'rm brouwhulp'
             sh 'lazbuild --verbose --add-package ExpandPanels/expandpanels-master-2/pexpandpanels.lpk'
             sh 'lazbuild --verbose --add-package uniqueinstance-1.0/uniqueinstance_package.lpk'
