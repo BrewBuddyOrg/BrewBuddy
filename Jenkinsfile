@@ -17,8 +17,8 @@ pipeline {
         script {
           docker.image('taraworks/lazarus-cross:0.0.2').inside('-u root'){
             sh '/usr/bin/apt-get install -y libfann-dev'
-          }
-          docker.image('taraworks/lazarus-cross:0.0.2').inside{
+//          }
+//          docker.image('taraworks/lazarus-cross:0.0.2').inside{
             sh 'pwd'
             sh 'lazbuild --verbose --pcp=/tmp/.lazarus --scp=/tmp/.lazarus --lazarusdir=/tmp/.lazarus  --add-package ExpandPanels/expandpanels-master-2/pexpandpanels.lpk'
             sh 'lazbuild --verbose --pcp=/tmp/.lazarus --scp=/tmp/.lazarus --lazarusdir=/tmp/.lazarus  --add-package uniqueinstance-1.0/uniqueinstance_package.lpk'
