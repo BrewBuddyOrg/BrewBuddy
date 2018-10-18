@@ -17,9 +17,11 @@ pipeline {
         script {
           docker.image('taraworks/lazarus-cross:0.0.2').inside{
             sh 'pwd'
-            sh 'ls -altrh'
-            sh 'lazbuild brouwhulp.lpi'
-            sh 'ls -altrh'
+            sh 'lazbuild --add-package ExpandPanels/expandpanels-master-2/pexpandpanels.lpk'
+            sh 'lazbuild --add-package uniqueinstance-1.0/uniqueinstance_package.lpk'
+            sh 'lazbuild --add-package Synapse/source/lib/laz_synapse.lpk'
+            sh 'apt install -y libfann-dev'
+            sh 'lazbuild --verbose --pcp=/tmp/.lazarus --scp=/tmp/.lazarus --lazarusdir=/tmp/.lazarus brouwhulp.lpi'
           }
         }
 
