@@ -20,9 +20,9 @@ pipeline {
             sh '/usr/bin/apt-get install -y libfann-dev'
             sh 'pwd'
             sh 'lazbuild --verbose --add-package ExpandPanels/expandpanels-master-2/pexpandpanels.lpk'
-            sh 'lazbuild --verbose --pcp=/tmp/.lazarus --scp=/tmp/.lazarus --lazarusdir=/tmp/.lazarus  --add-package uniqueinstance-1.0/uniqueinstance_package.lpk'
-            sh 'lazbuild --verbose --pcp=/tmp/.lazarus --scp=/tmp/.lazarus --lazarusdir=/tmp/.lazarus  --add-package Synapse/source/lib/laz_synapse.lpk'
-            sh 'lazbuild --verbose --pcp=/tmp/.lazarus --scp=/tmp/.lazarus --lazarusdir=/tmp/.lazarus brouwhulp.lpi'
+            sh 'lazbuild --verbose --add-package uniqueinstance-1.0/uniqueinstance_package.lpk'
+            sh 'lazbuild --verbose --add-package Synapse/source/lib/laz_synapse.lpk'
+            sh 'lazbuild --verbose brouwhulp.lpi'
           }
         }
 
