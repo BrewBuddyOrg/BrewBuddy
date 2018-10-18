@@ -17,7 +17,7 @@ pipeline {
         script {
           docker.image('taraworks/lazarus-cross:0.0.2').inside{
             sh 'pwd'
-            sh 'lazbuild --verbose --pcp=/tmp/.lazarus --scp=/tmp/.lazarus brouwhulp.lpi'
+            sh 'lazbuild --verbose --pcp=/tmp/.lazarus --scp=/tmp/.lazarus --lazarusdir=/tmp/.lazarus brouwhulp.lpi'
           }
         }
 
