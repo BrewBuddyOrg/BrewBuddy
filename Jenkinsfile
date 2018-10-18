@@ -15,7 +15,7 @@ pipeline {
       steps {
         unstash 'scm'
         script {
-          docker.image('taraworks/lazarus-cross:0.0.2').inside('-u root -v /root/.lazarus:/tmp/.lazarus') {
+          docker.image('taraworks/lazarus-cross:0.0.2').inside('-u root -v /root/.lazarus:/root/.lazarus') {
             sh 'ls -al && pwd'
           }
           docker.image('taraworks/lazarus-cross:0.0.2').inside('-u root'){
