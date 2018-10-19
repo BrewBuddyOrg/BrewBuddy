@@ -17,7 +17,7 @@ pipeline {
         script {
           docker.image('taraworks/lazarus-cross:0.0.2').inside('-u root -v /var/jenkins_home/.lazarus:/var/jenkins_home/.lazarus'){
             sh 'ls -al /root/ && pwd'
-            sh '/usr/bin/apt-get install -y libfann-dev'
+            sh '/usr/bin/apt-get install -y libfann-dev lcl lcl-gtk2'
             sh 'pwd'
 //            sh 'find . -name "*.o" -exec rm {} \\;'
 //            sh 'find . -name "*.ppu" -exec rm {} \\;'
