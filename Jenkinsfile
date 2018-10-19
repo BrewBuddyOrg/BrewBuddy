@@ -19,14 +19,14 @@ pipeline {
             sh 'ls -al /root/ && pwd'
             sh '/usr/bin/apt-get install -y libfann-dev'
             sh 'pwd'
-            sh 'chown -R jenkins:jenkins .'
+            sh 'chown -R 1000:1000 .'
 //            sh 'find . -name "*.o" -exec rm {} \\;'
 //            sh 'find . -name "*.ppu" -exec rm {} \\;'
             sh 'lazbuild --verbose --pcp=/var/jenkins_home/.lazarus --scp=/var/jenkins_home/.lazarus --lazarusdir=/usr/share/lazarus/1.8.0 --add-package ExpandPanels/expandpanels-master-2/pexpandpanels.lpk'
             sh 'lazbuild --pcp=/var/jenkins_home/.lazarus --lazarusdir=/usr/share/lazarus/1.8.0 --verbose --add-package uniqueinstance-1.0/uniqueinstance_package.lpk'
             sh 'lazbuild --pcp=/var/jenkins_home/.lazarus --lazarusdir=/usr/share/lazarus/1.8.0 --verbose --add-package Synapse/source/lib/laz_synapse.lpk'
             sh 'lazbuild --pcp=/var/jenkins_home/.lazarus --lazarusdir=/usr/share/lazarus/1.8.0 --verbose brouwhulp.lpi'
-            sh 'chown -R jenkins:jenkins .'
+            sh 'chown -R 1000:1000 .'
           }
         }
 
@@ -41,7 +41,7 @@ pipeline {
             script {
               docker.image('taraworks/lazarus-cross:0.0.2').inside('-u root -v /var/jenkins_home/.lazarus:/var/jenkins_home/.lazarus'){
                 sh 'pwd && ls -altrh'
-                sh 'rm -rf *'
+                sh 'rm -rf * .git .github'
                 sh 'ls -altrh'
               }
             }
@@ -53,7 +53,7 @@ pipeline {
             script {
                docker.image('taraworks/lazarus-cross:0.0.2').inside('-u root -v /var/jenkins_home/.lazarus:/var/jenkins_home/.lazarus'){
                  sh 'pwd && ls -altrh'
-                 sh 'rm -rf *'
+                 sh 'rm -rf * .git .github'
                  sh 'ls -altrh'
                }
             }
