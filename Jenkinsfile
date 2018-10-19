@@ -38,7 +38,7 @@ pipeline {
         always {
             echo ""
         }
-	failed {
+	failure {
 	    echo "Build FAILED..."
             echo "Now let's remove the stash:"
             script {
