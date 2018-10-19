@@ -19,6 +19,7 @@ pipeline {
             sh 'ls -al /root/ && pwd'
             sh '/usr/bin/apt-get install -y libfann-dev'
             sh 'pwd'
+            sh 'chown -R jenkins:jenkins .'
 //            sh 'find . -name "*.o" -exec rm {} \\;'
 //            sh 'find . -name "*.ppu" -exec rm {} \\;'
             sh 'lazbuild --verbose --pcp=/var/jenkins_home/.lazarus --scp=/var/jenkins_home/.lazarus --lazarusdir=/usr/share/lazarus/1.8.0 --add-package ExpandPanels/expandpanels-master-2/pexpandpanels.lpk'
