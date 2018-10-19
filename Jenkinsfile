@@ -21,10 +21,10 @@ pipeline {
             sh 'pwd'
 //            sh 'find . -name "*.o" -exec rm {} \\;'
 //            sh 'find . -name "*.ppu" -exec rm {} \\;'
-            sh 'lazbuild --verbose --pcp=/var/jenkins_home/.lazarus --scp=/var/jenkins_home/.lazarus --lazarusdir=/var/jenkins_home/.lazarus --add-package ExpandPanels/expandpanels-master-2/pexpandpanels.lpk'
-            sh 'lazbuild --pcp=/var/jenkins_home/.lazarus --verbose --add-package uniqueinstance-1.0/uniqueinstance_package.lpk'
-            sh 'lazbuild --pcp=/var/jenkins_home/.lazarus --verbose --add-package Synapse/source/lib/laz_synapse.lpk'
-            sh 'lazbuild --pcp=/var/jenkins_home/.lazarus --verbose brouwhulp.lpi'
+            sh 'lazbuild --verbose --pcp=/var/jenkins_home/.lazarus --scp=/var/jenkins_home/.lazarus --lazarusdir=/usr/share/lazarus/1.8.0 --add-package ExpandPanels/expandpanels-master-2/pexpandpanels.lpk'
+            sh 'lazbuild --pcp=/var/jenkins_home/.lazarus --lazarusdir=usr/share/lazarus/1.8.0 --verbose --add-package uniqueinstance-1.0/uniqueinstance_package.lpk'
+            sh 'lazbuild --pcp=/var/jenkins_home/.lazarus --lazarusdir=usr/share/lazarus/1.8.0 --verbose --add-package Synapse/source/lib/laz_synapse.lpk'
+            sh 'lazbuild --pcp=/var/jenkins_home/.lazarus --lazarusdir=usr/share/lazarus/1.8.0 --verbose brouwhulp.lpi'
           }
         }
 
