@@ -36,12 +36,24 @@ pipeline {
   
       post {
         always {
-	   echo ""
+            echo ""
+            echo "Now let's remove the stash:"
+            docker.image('taraworks/lazarus-cross:0.0.2').inside('-u root -v /var/jenkins_home/.lazarus:/var/jenkins_home/.lazarus'){
+               sh 'pwd && ls -altrh'
+               sh 'rm -rf .'
+               sh 'ls -altrh'
+            }
         }
         success {
 //            notifySuccessful()
             archiveArtifacts artifacts: 'brouwhulp', fingerprint: true
             echo "SUCCESS!"
+            echo "Now let's remove the stash:"
+            docker.image('taraworks/lazarus-cross:0.0.2').inside('-u root -v /var/jenkins_home/.lazarus:/var/jenkins_home/.lazarus'){
+               sh 'pwd && ls -altrh'
+               sh 'rm -rf .'
+               sh 'ls -altrh'
+            }
         }
       }
 }
