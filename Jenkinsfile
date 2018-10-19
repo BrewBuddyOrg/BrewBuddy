@@ -41,7 +41,7 @@ pipeline {
             script {
               docker.image('taraworks/lazarus-cross:0.0.2').inside('-u root -v /var/jenkins_home/.lazarus:/var/jenkins_home/.lazarus'){
                 sh 'pwd && ls -altrh'
-                sh 'rm -rf .'
+                sh 'rm -rf *'
                 sh 'ls -altrh'
               }
             }
@@ -53,7 +53,7 @@ pipeline {
             script {
                docker.image('taraworks/lazarus-cross:0.0.2').inside('-u root -v /var/jenkins_home/.lazarus:/var/jenkins_home/.lazarus'){
                  sh 'pwd && ls -altrh'
-                 sh 'rm -rf .'
+                 sh 'rm -rf *'
                  sh 'ls -altrh'
                }
             }
