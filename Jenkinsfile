@@ -37,6 +37,9 @@ pipeline {
       post {
         always {
             echo ""
+        }
+	failed {
+	    echo "Build FAILED..."
             echo "Now let's remove the stash:"
             script {
               docker.image('taraworks/lazarus-cross:0.0.2').inside('-u root -v /var/jenkins_home/.lazarus:/var/jenkins_home/.lazarus'){
@@ -45,7 +48,7 @@ pipeline {
                 sh 'ls -altrh'
               }
             }
-        }
+	}
         success {
 //            notifySuccessful()
             archiveArtifacts artifacts: 'brouwhulp', fingerprint: true
