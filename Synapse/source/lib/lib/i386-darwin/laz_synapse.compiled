@@ -1,5 +1,0 @@
-<?xml version="1.0"?>
-<CONFIG>
-  <Compiler Value="/usr/local/bin/ppc386" Date="1359911592"/>
-  <Params Value=" -MObjFPC -Scghi -O1 -Tdarwin -Pi386 -g -gl -vewnhi -Fi/usr/share/lazarus/1.0.10 -Fu/Developer/lazarus/packager/units/i386-darwin -Fu/Users/adrie/Dropbox/BrouwHulp/Synapse/source/lib/ -FU/Users/adrie/Dropbox/BrouwHulp/Synapse/source/lib/lib/i386-darwin/ -l laz_synapse.pas"/>
-</CONFIG>
