@@ -1368,10 +1368,10 @@ begin
   try
     Screen.Cursor:= crHourglass;
     {$ifdef Windows}
-      localfn:= Settings.DataLocation.Value + 'brouwhulp.zip';
+      localfn:= Settings.DataLocation.Value + 'brewbuddy.zip';
     {$endif}
     {$ifdef unix}
-      localfn:= Settings.DataLocation.Value + 'brouwhulp';
+      localfn:= Settings.DataLocation.Value + 'brewbuddy';
     {$endif}
 
 //    if GetHTTPFile('http://wittepaard.roodetoren.nl/' + fn, localfn) then
@@ -1386,11 +1386,11 @@ begin
         delfile:= PChar(localfn);
         DeleteFile(delfile);
       end;
-      localfn:= Settings.DataLocation.Value + 'brouwhulp.exe';
+      localfn:= Settings.DataLocation.Value + 'brewbuddy.exe';
       //new exe file is now downloaded to localfn
       //replace old exe file with new one
       s:= Application.ExeName;
-//      s:= 'C:\Program Files (x86)\BrouwHulp\brouwhulp.exe';
+//      s:= 'C:\Program Files (x86)\BrewBuddy\brewbuddy.exe';
       l:= TStringList.Create;
       bs:= 'copy "' + localfn + '" "' + s + '"';
       l.Add(bs);
@@ -1405,9 +1405,9 @@ begin
       end;
       {$endif}
       {$ifdef Linux}
-      Result:= RunAsRoot('cp ' + localfn + ' /usr/bin/brouwhulp', 'chmod +x /usr/bin/brouwhulp');
+      Result:= RunAsRoot('cp ' + localfn + ' /usr/bin/brewbuddy', 'chmod +x /usr/bin/brewbuddy');
       {$endif}
-      if not Result then ShowNotification(frmMain, 'Fout bij kopiëren nieuwe BrouwHulp');
+      if not Result then ShowNotification(frmMain, 'Fout bij kopiëren nieuwe BrewBuddy');
       if FileExists(localfn) then
       begin
         delfile:= PChar(localfn);

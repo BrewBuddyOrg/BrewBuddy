@@ -1,4 +1,4 @@
-5.1.0.0
-brouwhulp.zip
-brouwhulp_i386
-brouwhulp_amd64
+5.4.0.0
+brewbuddy.zip
+brewbuddy_i386
+brewbuddy_amd64
