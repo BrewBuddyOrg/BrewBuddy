@@ -4,7 +4,7 @@ msgstr "Content-Type: text/plain; charset=UTF-8efficiency"
 #: rcstrngs.aaend1
 msgctxt "rcstrngs.aaend1"
 msgid "Schijnbare vergistingsgraad:"
-msgstr ""
+msgstr "Apparent attenuation"
 
 #: rcstrngs.aaendhint1
 msgctxt "rcstrngs.aaendhint1"
@@ -10976,4 +10976,3 @@ msgstr ""
 msgctxt "tfrmyeasts3.lamount.caption"
 msgid "stuks"
 msgstr ""
-
