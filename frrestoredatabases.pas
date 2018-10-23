@@ -58,10 +58,10 @@ begin
       Screen.Cursor:= crHourglass;
       Backup;
       {$ifdef UNIX}
-      sourcedata:= '/usr/share/brouwhulpdata/';
+      sourcedata:= '/usr/share/brewbuddy/';
       {$endif}
       {$ifdef Windows}
-      sourcedata:= ExtractFilePath(Application.ExeName) + 'brouwhulpdata\';
+      sourcedata:= ExtractFilePath(Application.ExeName) + 'brewbuddy\';
       {$endif}
       destdata:= Settings.DataLocation.Value;
       if cgDatabases.Checked[0] then
@@ -96,4 +96,4 @@ begin
 end;
 
 end.
-
+

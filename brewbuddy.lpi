@@ -5,10 +5,9 @@
     <General>
       <MainUnit Value="0"/>
       <AutoCreateForms Value="False"/>
-      <Title Value="brouwhulp"/>
+      <Title Value="brewbuddy"/>
       <UseAppBundle Value="False"/>
       <ResourceType Value="res"/>
-      <Icon Value="0"/>
     </General>
     <i18n>
       <EnableI18N LFM="False"/>
@@ -18,7 +17,7 @@
       <MajorVersionNr Value="5"/>
       <MinorVersionNr Value="4"/>
       <Language Value="0413"/>
-      <StringTable CompanyName="Brouwerij Het Witte Paard" FileDescription="BrouwHulp Eroica" InternalName="BrouwHulp" OriginalFilename="BrouwHulp" ProductName="BrouwHulp" ProductVersion="5.3.5.2"/>
+      <StringTable Comments="first open source release under the GPLv3!" CompanyName="BrewBuddy.org" FileDescription="BrewBuddy Sassy Saison" InternalName="BrewBuddy" OriginalFilename="BrewBuddy" ProductName="BrewBuddy" ProductVersion="5.4"/>
     </VersionInfo>
     <BuildModes Count="1" Active="Default">
       <Item1 Name="Default" Default="True"/>
@@ -65,14 +64,15 @@
         <PackageName Value="LCL"/>
       </Item9>
     </RequiredPackages>
-    <Units Count="197">
+    <Units Count="198">
       <Unit0>
-        <Filename Value="brouwhulp.pas"/>
+        <Filename Value="brewbuddy.pas"/>
         <IsPartOfProject Value="True"/>
-        <IsVisibleTab Value="True"/>
-        <CursorPos X="20" Y="13"/>
+        <UnitName Value="brewbuddy"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <CursorPos X="24" Y="10"/>
         <UsageCount Value="201"/>
-        <Loaded Value="True"/>
       </Unit0>
       <Unit1>
         <Filename Value="frmain.pas"/>
@@ -81,9 +81,8 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="FrMain"/>
-        <EditorIndex Value="1"/>
-        <TopLine Value="1021"/>
-        <CursorPos Y="1048"/>
+        <IsVisibleTab Value="True"/>
+        <CursorPos X="16" Y="681"/>
         <UsageCount Value="201"/>
         <Loaded Value="True"/>
       </Unit1>
@@ -91,10 +90,10 @@
         <Filename Value="data.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="Data"/>
-        <EditorIndex Value="5"/>
-        <CursorPos X="58" Y="28"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="11596"/>
+        <CursorPos X="41" Y="11638"/>
         <UsageCount Value="201"/>
-        <Loaded Value="True"/>
       </Unit2>
       <Unit3>
         <Filename Value="/usr/lib/lazarus/0.9.30/ide/lazarus.pp"/>
@@ -147,11 +146,10 @@
         <Filename Value="hulpfuncties.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="Hulpfuncties"/>
-        <EditorIndex Value="3"/>
-        <TopLine Value="2448"/>
-        <CursorPos Y="2462"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="375"/>
+        <CursorPos X="76" Y="399"/>
         <UsageCount Value="201"/>
-        <Loaded Value="True"/>
       </Unit11>
       <Unit12>
         <Filename Value="lnet/lazaruspackage/lnetbase.pas"/>
@@ -161,10 +159,10 @@
         <Filename Value="containers.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="Containers"/>
-        <EditorIndex Value="2"/>
-        <CursorPos Y="3349"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="3354"/>
+        <CursorPos X="42" Y="3364"/>
         <UsageCount Value="200"/>
-        <Loaded Value="True"/>
       </Unit13>
       <Unit14>
         <Filename Value="appsettings.pas"/>
@@ -555,8 +553,8 @@
         <UsageCount Value="7"/>
       </Unit57>
       <Unit58>
-        <Filename Value="brouwhulpgraph.pas"/>
-        <UnitName Value="BrouwHulpGraph"/>
+        <Filename Value="brewbuddygraph.pas"/>
+        <UnitName Value="BrewBuddyGraph"/>
         <TopLine Value="449"/>
         <CursorPos X="81" Y="463"/>
         <UsageCount Value="196"/>
@@ -1512,11 +1510,10 @@
       </Unit191>
       <Unit192>
         <Filename Value="openal.pas"/>
-        <EditorIndex Value="4"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="2172"/>
         <CursorPos Y="2191"/>
         <UsageCount Value="24"/>
-        <Loaded Value="True"/>
       </Unit192>
       <Unit193>
         <Filename Value="/usr/share/fpcsrc/3.0.4/packages/openal/src/openal.pas"/>
@@ -1544,130 +1541,22 @@
         <CursorPos X="10" Y="90"/>
         <UsageCount Value="8"/>
       </Unit196>
+      <Unit197>
+        <Filename Value="brewbuddy.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="20"/>
+      </Unit197>
     </Units>
-    <JumpHistory Count="29" HistoryIndex="28">
-      <Position1>
-        <Filename Value="openal.pas"/>
-        <Caret Line="2098" Column="30" TopLine="2082"/>
-      </Position1>
-      <Position2>
-        <Filename Value="openal.pas"/>
-        <Caret Line="2099" Column="39" TopLine="2082"/>
-      </Position2>
-      <Position3>
-        <Filename Value="openal.pas"/>
-        <Caret Line="2100" Column="32" TopLine="2082"/>
-      </Position3>
-      <Position4>
-        <Filename Value="openal.pas"/>
-        <Caret Line="2101" Column="33" TopLine="2082"/>
-      </Position4>
-      <Position5>
-        <Filename Value="openal.pas"/>
-        <Caret Line="2102" Column="40" TopLine="2082"/>
-      </Position5>
-      <Position6>
-        <Filename Value="openal.pas"/>
-        <Caret Line="2103" Column="36" TopLine="2082"/>
-      </Position6>
-      <Position7>
-        <Filename Value="openal.pas"/>
-        <Caret Line="2104" Column="34" TopLine="2082"/>
-      </Position7>
-      <Position8>
-        <Filename Value="openal.pas"/>
-        <Caret Line="2105" Column="39" TopLine="2082"/>
-      </Position8>
-      <Position9>
-        <Filename Value="openal.pas"/>
-        <Caret Line="2106" Column="31" TopLine="2082"/>
-      </Position9>
-      <Position10>
-        <Filename Value="openal.pas"/>
-        <Caret Line="2107" Column="33" TopLine="2082"/>
-      </Position10>
-      <Position11>
-        <Filename Value="openal.pas"/>
-        <Caret Line="2109" Column="39" TopLine="2082"/>
-      </Position11>
-      <Position12>
-        <Filename Value="openal.pas"/>
-        <Caret Line="2110" Column="40" TopLine="2082"/>
-      </Position12>
-      <Position13>
-        <Filename Value="openal.pas"/>
-        <Caret Line="2111" Column="34" TopLine="2082"/>
-      </Position13>
-      <Position14>
-        <Filename Value="openal.pas"/>
-        <Caret Line="2112" Column="33" TopLine="2082"/>
-      </Position14>
-      <Position15>
-        <Filename Value="openal.pas"/>
-        <Caret Line="2113" Column="36" TopLine="2082"/>
-      </Position15>
-      <Position16>
-        <Filename Value="openal.pas"/>
-        <Caret Line="2126" Column="30" TopLine="2094"/>
-      </Position16>
-      <Position17>
-        <Filename Value="openal.pas"/>
-        <Caret Line="2127" Column="30" TopLine="2095"/>
-      </Position17>
-      <Position18>
-        <Filename Value="openal.pas"/>
-        <Caret Line="1973" TopLine="1951"/>
-      </Position18>
-      <Position19>
-        <Filename Value="openal.pas"/>
-        <Caret Line="1974" TopLine="1951"/>
-      </Position19>
-      <Position20>
-        <Filename Value="openal.pas"/>
-        <Caret Line="1975" TopLine="1951"/>
-      </Position20>
-      <Position21>
-        <Filename Value="openal.pas"/>
-        <Caret Line="1976" TopLine="1951"/>
-      </Position21>
-      <Position22>
-        <Filename Value="openal.pas"/>
-        <Caret Line="1977" TopLine="1951"/>
-      </Position22>
-      <Position23>
-        <Filename Value="openal.pas"/>
-        <Caret Line="1979" TopLine="1951"/>
-      </Position23>
-      <Position24>
-        <Filename Value="hulpfuncties.pas"/>
-        <Caret Line="2462" TopLine="2448"/>
-      </Position24>
-      <Position25>
-        <Filename Value="openal.pas"/>
-        <Caret Line="1963" Column="29" TopLine="1951"/>
-      </Position25>
-      <Position26>
-        <Filename Value="openal.pas"/>
-        <Caret Line="1973" TopLine="1951"/>
-      </Position26>
-      <Position27>
-        <Filename Value="openal.pas"/>
-        <Caret Line="2189" TopLine="2170"/>
-      </Position27>
-      <Position28>
-        <Filename Value="openal.pas"/>
-        <Caret Line="1973" TopLine="1951"/>
-      </Position28>
-      <Position29>
-        <Filename Value="openal.pas"/>
-        <Caret Line="2191" TopLine="2172"/>
-      </Position29>
-    </JumpHistory>
+    <JumpHistory HistoryIndex="-1"/>
   </ProjectOptions>
   <CompilerOptions>
     <Version Value="11"/>
     <Target>
-      <Filename Value="brouwhulp"/>
+      <Filename Value="brewbuddy"/>
     </Target>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>
@@ -1688,6 +1577,7 @@
         <StackChecks Value="True"/>
       </Checks>
       <VerifyObjMethodCallValidity Value="True"/>
+      <TargetProcessor Value="ATHLON64"/>
       <TargetCPU Value="x86_64"/>
       <TargetOS Value="linux"/>
       <Optimizations>

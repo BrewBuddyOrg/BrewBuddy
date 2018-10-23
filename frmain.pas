@@ -678,7 +678,7 @@ type
     tbTrainNN: TToolButton;
     ToolButton10: TToolButton;
     tbChart: TToolButton;
-    uiBrouwHulp: TUniqueInstance;
+    uiBrewBuddy: TUniqueInstance;
     procedure aFullScreenExecute(Sender: TObject);
     procedure bbChecklistClick(Sender: TObject);
     procedure bbRemoveCloudRecipeClick(Sender: TObject);
@@ -4592,9 +4592,9 @@ Procedure TfrmMain.NameChange;
 var s : string;
 begin
   if FTemporary <> NIL then
-    Caption:= 'BrouwHulp - Eroica - ' + FTemporary.Name.Value
+    Caption:= 'BrewBuddy - Sassy Saison - ' + FTemporary.Name.Value
   else
-    Caption:= 'BrouwHulp - Eroica';
+    Caption:= 'BrewBuddy - Sassy Saison';
 end;
 
 procedure TfrmMain.tvRecipesSelectionChanged(Sender: TObject);

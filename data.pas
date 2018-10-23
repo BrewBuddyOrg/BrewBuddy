@@ -373,7 +373,7 @@ type
   TIngredient = class(TBase)
   private
     FAmount: TBFloat;
-    //BrouwHulpXML
+    //BrewBuddyXML
     FInventory: TBFloat;
     FCost: TBFloat; //kosten per kilogram of per stuk
     FIngredientType: TIngredientType;
@@ -390,7 +390,7 @@ type
     Function IsInstock : boolean; virtual;
   published
     property Amount: TBFloat read FAmount;
-    //BrouwHulpXML
+    //BrewBuddyXML
     property Inventory: TBFloat read FInventory;
     property Cost: TBFloat read FCost;
     property IngredientType: TIngredientType
@@ -500,7 +500,7 @@ type
     FMaxInBatch: TBFloat;
     FRecommendMash: TBBoolean;
     FIbuGalPerLb: TBFloat;
-    //BrouwHulpXML
+    //BrewBuddyXML
     FGrainType: TGrainType;
     FAdded: TAddedType;
     FPercentage: TBFloat;
@@ -589,7 +589,7 @@ type
     FAddToSecondary: TBBoolean;
     //Extensions
     FCultureDate: TBDate;
-    //BrouwHulp XML
+    //BrewBuddy XML
     FStarterType: TStartertype;
     FStarterMade: TBBoolean;
     FStarterVolume1, FStarterVolume2, FStarterVolume3: TBFloat;
@@ -727,7 +727,7 @@ type
     FSodium: TBFloat;
     FMagnesium: TBFloat;
     FpH: TBFloat;
-    //BrouwHulpXML
+    //BrewBuddyXML
     FTotalAlkalinity : TBFloat;
     FDefault : TBBoolean;
     FDilutionFactor: TBFloat; //% diluted with distilled water
@@ -798,7 +798,7 @@ type
     FTopUpKettle: TBFloat;
     FHopUtilization: TBFloat;
     // Large batch hop utilization. This value should be 100% for batches less than 20 gallons, but may be higher (200% or more) for very large batch equipment.
-    //BrouwHulpXML
+    //BrewBuddyXML
     FLauterVolume: TBFloat;
     FKettleVolume: TBFloat;
     FEfficiency: TBFloat;
@@ -947,7 +947,7 @@ type
     FStepTime: TBFloat;
     FRampTime: TBFloat;
     FEndTemp: TBFloat;
-    //BrouwHulpXML
+    //BrewBuddyXML
     FpH: TBFloat;
     function GetTypeName: string;
     procedure SetTypeName(s: string);
@@ -1209,7 +1209,7 @@ type
     FABV: TBFloat;
     FActualEfficiency: TBFloat;
     FCalories: TBFloat; //bv 200 kCal/30 cl
-    //BrouwHulpXML
+    //BrewBuddyXML
 //    FEstOGFermenter : TBFloat;
     FParentAutoNr : TBString;
     FColorMethod: TColorMethod;
@@ -2826,7 +2826,7 @@ begin
   FAmount.Decimals := 3;
   FAmount.NodeLabel := 'AMOUNT';
   FAmount.DisplayLabel := 'DISPLAY_AMOUNT';
-  //BrouwHulpXML
+  //BrewBuddyXML
   FCost := TBFloat.Create(self);
   FCost.vUnit := euro;
   FCost.DisplayUnit := euro;
@@ -3229,7 +3229,7 @@ begin
   FMyrcene.SaveXML(Doc, iChild, bxml);
   //extensions
   FTime.SaveXMLDisplayValue(Doc, iChild);
-  //BrouwHulpXML
+  //BrewBuddyXML
   if not bxml then
   begin
     FTotalOil.SaveXML(Doc, iChild, bxml);
@@ -3265,7 +3265,7 @@ begin
   FCaryophyllene.ReadXML(iNode);
   FCohumulone.ReadXML(iNode);
   FMyrcene.ReadXML(iNode);
-  //BrouwHulpXML
+  //BrewBuddyXML
   FTotalOil.ReadXML(iNode);
   FHarvestDate.ReadXML(iNode);
 end;
@@ -3776,7 +3776,7 @@ begin
   FIbuGalPerLb.NodeLabel := 'IBU_GAL_PER_LB';
   FIbuGalPerLb.DisplayLabel := '';
 
-  //BrouwHulpXML
+  //BrewBuddyXML
   FGrainType := gtNone;
   FAdded := atMash;
 
@@ -3994,7 +3994,7 @@ begin
   FIbuGalPerLb.SaveXML(Doc, iChild, bxml);
   //Extensions
   FColor.SaveXMLDisplayValue(Doc, iChild);
-  //BrouwHulpXML
+  //BrewBuddyXML
   if not bxml then
   begin
     AddNode(Doc, iChild, 'GRAINTYPE', GrainTypeNames[FGrainType]);
@@ -4023,7 +4023,7 @@ begin
   FMaxInBatch.ReadXML(iNode);
   RecommendMash.ReadXML(iNode);
   FIbuGalPerLb.ReadXML(iNode);
-  //BrouwHulpXML
+  //BrewBuddyXML
   GrainTypeName := GetNodeString(iNode, 'GRAINTYPE');
   AddedTypeName := GetNodeString(iNode, 'ADDED');
   FDissolvedProtein.ReadXML(iNode);
@@ -6278,7 +6278,7 @@ begin
   FHopUtilization.NodeLabel := 'HOP_UTILIZATION';
   FHopUtilization.DisplayLabel := '';
 
-  //BrouwHulpXML
+  //BrewBuddyXML
   FTopUpWaterBrewDay := TBFloat.Create(NIL);
   FTopUpWaterBrewDay.vUnit := liter;
   FTopUpWaterBrewDay.DisplayUnit := liter;
@@ -7552,7 +7552,7 @@ begin
   FEndTemp.NodeLabel := 'END_TEMP';
   FEndTemp.DisplayLabel := '';
 
-  //BrouwHulpXML
+  //BrewBuddyXML
   FpH := TBFloat.Create(self);
   FpH.vUnit := ph;
   FpH.DisplayUnit := ph;
@@ -7677,7 +7677,7 @@ begin
 
   FInfuseTemp.SaveXMLDisplayValue(Doc, iChild);
   FStepTemp.SaveXMLDisplayValue(Doc, iChild);
-  //BrouwHulpXML
+  //BrewBuddyXML
   if not bxml then
     FpH.SaveXML(Doc, iChild, bxml);
 end;
@@ -7695,7 +7695,7 @@ begin
   FEndTemp.ReadXML(iNode);
   //Extensions
   FInfuseTemp.ReadXMLDisplayValue(iNode);
-  //BrouwHulpXML
+  //BrewBuddyXML
   FpH.ReadXML(iNode);
 end;
 
@@ -10120,7 +10120,7 @@ begin
   FCalories.NodeLabel := '';
   FCalories.DisplayLabel := 'CALORIES';
 
-  //BrouwHulpXML
+  //BrewBuddyXML
 {  FEstOGFermenter := TBFloat.Create(self);
   FEstOGFermenter.vUnit := sg;
   FEstOGFermenter.DisplayUnit := sg;
@@ -11327,7 +11327,7 @@ begin
   FSecondaryTemp.SaveXMLDisplayValue(Doc, iChild);
   FAgeTemp.SaveXMLDisplayValue(Doc, iChild);
   FCarbonationTemp.SaveXMLDisplayValue(Doc, iChild);
-  //BrouwHulpXML
+  //BrewBuddyXML
   if not bxml then
   begin
     FParentAutoNr.SaveXML(Doc, iChild, bxml);
@@ -11635,7 +11635,7 @@ begin
   CalcOG;
   CalcBitterness;
 
-  //correctie voor foutieve BrouwHulpXML code
+  //correctie voor foutieve BrewBuddyXML code
   for i := 0 to High(FWaters) do
   begin
     W := TWater(FWaters[i]);

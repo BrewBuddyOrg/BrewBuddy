@@ -1,4 +1,4 @@
-program brouwhulp;
+program brewbuddy;
 
 {$mode objfpc}{$H+}
 

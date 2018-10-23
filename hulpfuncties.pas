@@ -396,7 +396,7 @@ begin
       Result:= FileExists(Dir + FN);
     end;
     sdd.free;
-//    ShowNotification(frmMain, FN + 'niet gevonden.' + #10#13 + 'BrouwHulp sluit af');
+//    ShowNotification(frmMain, FN + 'niet gevonden.' + #10#13 + 'BrewBuddy sluit af');
   end;
 end;
 
