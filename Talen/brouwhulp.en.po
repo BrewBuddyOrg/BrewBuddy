@@ -1,3 +1,16 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-8859-1\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"X-Generator: Poedit 2.2\n"
+
 msgid "rendement:rendement:rendement:bij maischen:bij maischen:bij maischen:bij maischen:bij maischen:bij maischen:bij maischen:bij maischen:bij maischen:bij maischen:bij maischen:bij maischen:bij maischen:rendement:rendement:bij maischen:bij maischen:bij maischen:bij maischen:bij maischen:bij maischen:bij maischen:bij maischen:bij maischen:bij maischen:bij maischen:bij maischen:bij maischen:bij maischen:bij maischen:bij maischen:bij maischen:bij maischen:bij maischen:bij maischen:bij maischen:bij maischen:bij maischen:bij maischen:bij maischen:bij maischen:bij maischen:bij maischen:bij maischen:bij maischen:bij maischen:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:rendement:"
 msgstr "Content-Type: text/plain; charset=UTF-8efficiency"
 
@@ -9,16 +22,16 @@ msgstr "Apparent attenuation"
 #: rcstrngs.aaendhint1
 msgctxt "rcstrngs.aaendhint1"
 msgid "Schijnbare vergistingsgraad van het uitgegiste bier"
-msgstr ""
+msgstr "Apparent attenuation of the fermented beer"
 
 #: rcstrngs.aaendprimary1
 msgctxt "rcstrngs.aaendprimary1"
 msgid "Schijnbare vergistingsgraad:"
-msgstr ""
+msgstr "Apparent attenuation:"
 
 #: rcstrngs.aaendprimaryhint1
 msgid "Vergistingsgraad eind hoofdvergisting"
-msgstr ""
+msgstr "Attenuation end of main fermentation"
 
 #: rcstrngs.add1
 msgctxt "rcstrngs.add1"
@@ -28,7 +41,7 @@ msgstr "Add"
 #: rcstrngs.addgrain1
 msgctxt "rcstrngs.addgrain1"
 msgid "Mout"
-msgstr "Grains"
+msgstr "Malt"
 
 #: rcstrngs.addgrainhint1
 msgctxt "rcstrngs.addgrainhint1"
@@ -43,7 +56,7 @@ msgstr "Hops"
 #: rcstrngs.addhophint1
 msgctxt "rcstrngs.addhophint1"
 msgid "Voeg hop toe"
-msgstr "Add hop"
+msgstr "Add hops"
 
 #: rcstrngs.addmisc1
 msgctxt "rcstrngs.addmisc1"
@@ -62,7 +75,7 @@ msgstr "New step"
 
 #: rcstrngs.addstephint1
 msgid "Voeg nieuwe maischstap toe"
-msgstr ""
+msgstr "Insert additional mash step"
 
 #: rcstrngs.addyeast1
 msgctxt "rcstrngs.addyeast1"
@@ -77,16 +90,16 @@ msgstr "Add yeast"
 #: rcstrngs.adjustalfa1
 msgctxt "rcstrngs.adjustalfa1"
 msgid "Automatische hopveroudering"
-msgstr "Automatic hop adjustment"
+msgstr "Automatic hop ageing adjustment"
 
 #: rcstrngs.adjustalfahint1
 msgctxt "rcstrngs.adjustalfahint1"
 msgid "Schakel automatische berekening hopveroudering aan of uit"
-msgstr ""
+msgstr "Toggle automatic hop ageing adjustment"
 
 #: rcstrngs.aerationflowrate1
 msgid "Beluchtingssnelheid:"
-msgstr ""
+msgstr "Aeration flow:"
 
 #: rcstrngs.aerationflowratehint1
 msgctxt "rcstrngs.aerationflowratehint1"
@@ -96,7 +109,7 @@ msgstr "Aeration flow"
 #: rcstrngs.aerationtime1
 msgctxt "rcstrngs.aerationtime1"
 msgid "Beluchtingstijd:"
-msgstr ""
+msgstr "Aeration time:"
 
 #: rcstrngs.aerationtimehint1
 msgctxt "rcstrngs.aerationtimehint1"
@@ -105,7 +118,7 @@ msgstr "Aeration time"
 
 #: rcstrngs.aerationwith1
 msgid "Beluchten met:"
-msgstr ""
+msgstr "Aerated with:"
 
 #: rcstrngs.aerationwithhint1
 msgctxt "rcstrngs.aerationwithhint1"
@@ -114,7 +127,7 @@ msgstr "Aerated with air or oxygen?"
 
 #: rcstrngs.afullscreen1
 msgid "Full screen"
-msgstr ""
+msgstr "Fullscreen"
 
 #: rcstrngs.alcbottles1
 msgctxt "rcstrngs.alcbottles1"
