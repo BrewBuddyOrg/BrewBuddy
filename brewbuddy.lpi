@@ -19,8 +19,149 @@
       <Language Value="0413"/>
       <StringTable Comments="first open source release under the GPLv3!" CompanyName="BrewBuddy.org" FileDescription="BrewBuddy Sassy Saison" InternalName="BrewBuddy" OriginalFilename="BrewBuddy" ProductName="BrewBuddy" ProductVersion="5.4"/>
     </VersionInfo>
-    <BuildModes Count="1" Active="Default">
+    <BuildModes Count="5" Active="Release">
       <Item1 Name="Default" Default="True"/>
+      <Item2 Name="Debug">
+        <CompilerOptions>
+          <Version Value="11"/>
+          <Target>
+            <Filename Value="brewbuddy"/>
+          </Target>
+          <SearchPaths>
+            <IncludeFiles Value="$(ProjOutDir)"/>
+            <Libraries Value="/usr/lib/lazarus/0.9.30.4/;lib"/>
+            <OtherUnitFiles Value="/usr/lib/lazarus/0.9.30.4/"/>
+            <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
+          </SearchPaths>
+          <Parsing>
+            <SyntaxOptions>
+              <IncludeAssertionCode Value="True"/>
+            </SyntaxOptions>
+          </Parsing>
+          <CodeGeneration>
+            <Checks>
+              <IOChecks Value="True"/>
+              <RangeChecks Value="True"/>
+              <OverflowChecks Value="True"/>
+              <StackChecks Value="True"/>
+            </Checks>
+            <VerifyObjMethodCallValidity Value="True"/>
+            <TargetProcessor Value="ATHLON64"/>
+            <TargetCPU Value="x86_64"/>
+            <TargetOS Value="linux"/>
+            <Optimizations>
+              <VariablesInRegisters Value="True"/>
+            </Optimizations>
+          </CodeGeneration>
+          <Linking>
+            <Debugging>
+              <DebugInfoType Value="dsDwarf2Set"/>
+              <UseHeaptrc Value="True"/>
+              <TrashVariables Value="True"/>
+              <UseValgrind Value="True"/>
+              <UseExternalDbgSyms Value="True"/>
+            </Debugging>
+          </Linking>
+        </CompilerOptions>
+      </Item2>
+      <Item3 Name="Release">
+        <CompilerOptions>
+          <Version Value="11"/>
+          <Target>
+            <Filename Value="brewbuddy"/>
+          </Target>
+          <SearchPaths>
+            <IncludeFiles Value="$(ProjOutDir)"/>
+            <Libraries Value="/usr/lib/lazarus/0.9.30.4/;lib"/>
+            <OtherUnitFiles Value="/usr/lib/lazarus/0.9.30.4/"/>
+            <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
+          </SearchPaths>
+          <CodeGeneration>
+            <SmartLinkUnit Value="True"/>
+            <TargetProcessor Value="ATHLON64"/>
+            <TargetCPU Value="x86_64"/>
+            <TargetOS Value="linux"/>
+            <Optimizations>
+              <OptimizationLevel Value="3"/>
+              <VariablesInRegisters Value="True"/>
+            </Optimizations>
+          </CodeGeneration>
+          <Linking>
+            <Debugging>
+              <GenerateDebugInfo Value="False"/>
+              <UseValgrind Value="True"/>
+            </Debugging>
+            <LinkSmart Value="True"/>
+          </Linking>
+        </CompilerOptions>
+      </Item3>
+      <Item4 Name="Win32">
+        <CompilerOptions>
+          <Version Value="11"/>
+          <Target>
+            <Filename Value="brewbuddy"/>
+          </Target>
+          <SearchPaths>
+            <IncludeFiles Value="$(ProjOutDir)"/>
+            <Libraries Value="/usr/lib/lazarus/0.9.30.4/;lib"/>
+            <OtherUnitFiles Value="/usr/lib/lazarus/0.9.30.4/"/>
+            <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
+          </SearchPaths>
+          <CodeGeneration>
+            <SmartLinkUnit Value="True"/>
+            <TargetProcessor Value="pentiumm"/>
+            <TargetCPU Value="i386"/>
+            <TargetOS Value="win32"/>
+            <Optimizations>
+              <OptimizationLevel Value="3"/>
+              <VariablesInRegisters Value="True"/>
+            </Optimizations>
+          </CodeGeneration>
+          <Linking>
+            <Debugging>
+              <GenerateDebugInfo Value="False"/>
+              <UseValgrind Value="True"/>
+            </Debugging>
+            <LinkSmart Value="True"/>
+            <Options>
+              <Win32>
+                <GraphicApplication Value="True"/>
+              </Win32>
+            </Options>
+          </Linking>
+        </CompilerOptions>
+      </Item4>
+      <Item5 Name="Win64">
+        <CompilerOptions>
+          <Version Value="11"/>
+          <Target>
+            <Filename Value="brewbuddy"/>
+          </Target>
+          <SearchPaths>
+            <IncludeFiles Value="$(ProjOutDir)"/>
+            <Libraries Value="/usr/lib/lazarus/0.9.30.4/;lib"/>
+            <OtherUnitFiles Value="/usr/lib/lazarus/0.9.30.4/"/>
+            <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
+          </SearchPaths>
+          <CodeGeneration>
+            <SmartLinkUnit Value="True"/>
+            <TargetProcessor Value="ATHLON64"/>
+            <TargetCPU Value="x86_64"/>
+            <TargetOS Value="win64"/>
+            <Optimizations>
+              <OptimizationLevel Value="3"/>
+              <VariablesInRegisters Value="True"/>
+            </Optimizations>
+          </CodeGeneration>
+          <Linking>
+            <Debugging>
+              <GenerateDebugInfo Value="False"/>
+              <UseValgrind Value="True"/>
+            </Debugging>
+            <LinkSmart Value="True"/>
+          </Linking>
+        </CompilerOptions>
+      </Item5>
     </BuildModes>
     <PublishOptions>
       <Version Value="2"/>
@@ -64,11 +205,10 @@
         <PackageName Value="LCL"/>
       </Item9>
     </RequiredPackages>
-    <Units Count="198">
+    <Units Count="197">
       <Unit0>
         <Filename Value="brewbuddy.pas"/>
         <IsPartOfProject Value="True"/>
-        <UnitName Value="brewbuddy"/>
         <EditorIndex Value="-1"/>
         <WindowIndex Value="-1"/>
         <CursorPos X="24" Y="10"/>
@@ -82,9 +222,11 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="FrMain"/>
         <IsVisibleTab Value="True"/>
+        <TopLine Value="632"/>
         <CursorPos X="16" Y="681"/>
         <UsageCount Value="201"/>
         <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
       </Unit1>
       <Unit2>
         <Filename Value="data.pas"/>
@@ -1180,7 +1322,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="2"/>
         <CursorPos X="86" Y="8"/>
-        <UsageCount Value="164"/>
+        <UsageCount Value="165"/>
       </Unit147>
       <Unit148>
         <Filename Value="/usr/share/lazarus/1.0/components/lazutils/fileutil.inc"/>
@@ -1201,7 +1343,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="1308"/>
         <CursorPos X="42" Y="194"/>
-        <UsageCount Value="112"/>
+        <UsageCount Value="113"/>
       </Unit150>
       <Unit151>
         <Filename Value="/usr/share/lazarus/1.0.2/lcl/extctrls.pp"/>
@@ -1237,7 +1379,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="91"/>
         <CursorPos X="32" Y="115"/>
-        <UsageCount Value="113"/>
+        <UsageCount Value="114"/>
       </Unit155>
       <Unit156>
         <Filename Value="frrestoredatabases.pas"/>
@@ -1247,14 +1389,14 @@
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="47" Y="16"/>
-        <UsageCount Value="112"/>
+        <UsageCount Value="113"/>
       </Unit156>
       <Unit157>
         <Filename Value="neuroot.pas"/>
         <IsPartOfProject Value="True"/>
         <TopLine Value="189"/>
         <CursorPos X="25" Y="213"/>
-        <UsageCount Value="112"/>
+        <UsageCount Value="113"/>
       </Unit157>
       <Unit158>
         <Filename Value="fann.pas"/>
@@ -1290,7 +1432,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="7"/>
         <CursorPos Y="21"/>
-        <UsageCount Value="95"/>
+        <UsageCount Value="96"/>
       </Unit162>
       <Unit163>
         <Filename Value="frdownloadprogress.pas"/>
@@ -1301,7 +1443,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="29"/>
         <CursorPos Y="57"/>
-        <UsageCount Value="89"/>
+        <UsageCount Value="90"/>
       </Unit163>
       <Unit164>
         <Filename Value="/usr/share/fpcsrc/2.6.0/packages/fcl-xml/src/xmlutils.pp"/>
@@ -1541,15 +1683,6 @@
         <CursorPos X="10" Y="90"/>
         <UsageCount Value="8"/>
       </Unit196>
-      <Unit197>
-        <Filename Value="brewbuddy.pas"/>
-        <IsPartOfProject Value="True"/>
-        <EditorIndex Value="-1"/>
-        <WindowIndex Value="-1"/>
-        <TopLine Value="-1"/>
-        <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="20"/>
-      </Unit197>
     </Units>
     <JumpHistory HistoryIndex="-1"/>
   </ProjectOptions>
