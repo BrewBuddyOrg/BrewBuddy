@@ -4,6 +4,6 @@ Section: utils
 Priority: optional
 Architecture: amd64
 Depends: libatk1.0-0, libblkid1, libbsd0, libc6, libcairo2, libdatrie1, libexpat1, libfann2, libffi6, libfontconfig1, libfreetype6, libgdk-pixbuf2.0-0, libglib2.0-0, libglib2.0-dev, libgraphite2-3, libgtk2.0-0, libharfbuzz0b, libmount1, libpango-1.0-0, libpangocairo-1.0-0, libpangoft2-1.0-0, libpcre3, libpixman-1-0, libpng16-16, libselinux1, libthai0, libuuid1, libx11-6, libxau6, libxcb1, libxcb-render0, libxcb-shm0, libxcomposite1, libxcursor1, libxdamage1, libxdmcp6, libxext6, libxfixes3, libxi6, libxinerama1, libxrandr2, libxrender1, zlib1g
-Installed-Size: 56988
+Installed-Size: 20748
 Maintainer: Pim Bliek <pim@pimbliek.nl>
 Description: Design your own beer brewing recipes with BrouwHulp (BrewBuddy). BrewBuddy is a very sophisticated brewing program for the enthusiast homebrewer. It helps you design, create and brew your own beers. BrewBuddy is compatible with BeerXML and kan import Pormash files as well. (an English version is to be expected soon. BrouwHulp will than change it's name to BrewBuddy.)
