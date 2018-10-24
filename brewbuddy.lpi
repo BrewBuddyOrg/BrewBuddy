@@ -19,7 +19,7 @@
       <Language Value="0413"/>
       <StringTable Comments="first open source release under the GPLv3!" CompanyName="BrewBuddy.org" FileDescription="BrewBuddy Sassy Saison" InternalName="BrewBuddy" OriginalFilename="BrewBuddy" ProductName="BrewBuddy" ProductVersion="5.4"/>
     </VersionInfo>
-    <BuildModes Count="5" Active="Release">
+    <BuildModes Count="5" Active="Debug">
       <Item1 Name="Default" Default="True"/>
       <Item2 Name="Debug">
         <CompilerOptions>
@@ -72,10 +72,13 @@
           </Target>
           <SearchPaths>
             <IncludeFiles Value="$(ProjOutDir)"/>
-            <Libraries Value="/usr/lib/lazarus/0.9.30.4/;lib"/>
-            <OtherUnitFiles Value="/usr/lib/lazarus/0.9.30.4/"/>
+            <Libraries Value="lib"/>
+            <OtherUnitFiles Value="/usr/lib/lazarus/1.8.2/"/>
             <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
           </SearchPaths>
+          <Parsing>
+            <Style Value="1"/>
+          </Parsing>
           <CodeGeneration>
             <SmartLinkUnit Value="True"/>
             <TargetProcessor Value="ATHLON64"/>
@@ -205,7 +208,7 @@
         <PackageName Value="LCL"/>
       </Item9>
     </RequiredPackages>
-    <Units Count="197">
+    <Units Count="198">
       <Unit0>
         <Filename Value="brewbuddy.pas"/>
         <IsPartOfProject Value="True"/>
@@ -222,8 +225,8 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="FrMain"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="632"/>
-        <CursorPos X="16" Y="681"/>
+        <TopLine Value="5869"/>
+        <CursorPos X="5" Y="5886"/>
         <UsageCount Value="201"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -288,10 +291,11 @@
         <Filename Value="hulpfuncties.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="Hulpfuncties"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="375"/>
-        <CursorPos X="76" Y="399"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="2316"/>
+        <CursorPos X="5" Y="2333"/>
         <UsageCount Value="201"/>
+        <Loaded Value="True"/>
       </Unit11>
       <Unit12>
         <Filename Value="lnet/lazaruspackage/lnetbase.pas"/>
@@ -1683,8 +1687,19 @@
         <CursorPos X="10" Y="90"/>
         <UsageCount Value="8"/>
       </Unit196>
+      <Unit197>
+        <Filename Value="/usr/lib/lazarus/1.8.2/ide/lazarus.pp"/>
+        <UnitName Value="Lazarus"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="10"/>
+      </Unit197>
     </Units>
-    <JumpHistory HistoryIndex="-1"/>
+    <JumpHistory Count="1">
+      <Position1>
+        <Filename Value="frmain.pas"/>
+        <Caret Line="681" Column="16" TopLine="648"/>
+      </Position1>
+    </JumpHistory>
   </ProjectOptions>
   <CompilerOptions>
     <Version Value="11"/>

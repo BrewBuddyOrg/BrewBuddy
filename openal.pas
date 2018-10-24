@@ -68,7 +68,7 @@ const
   calutlibname='Alut.dll';
 {$ENDIF}
 {$IFDEF Linux}
-  callibname='libopenal.so';
+  callibname='libopenal.so.1';
   calutlibname='libalut.so';
 {$ENDIF}
 
