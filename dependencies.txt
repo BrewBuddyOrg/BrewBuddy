@@ -1,2 +1,0 @@
-	linux-vdso.so.1 =>  (0x00007fff7d7af000)
-	libuuid.so.1 => /lib/x86_64-linux-gnu/libuuid.so.1 (0x00007f0fd7beb000)
