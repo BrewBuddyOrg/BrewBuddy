@@ -1,0 +1,774 @@
+object FrmBeerstyles: TFrmBeerstyles
+  Left = 342
+  Height = 552
+  Top = 119
+  Width = 927
+  BorderStyle = bsDialog
+  Caption = 'Bierstijlen'
+  ClientHeight = 552
+  ClientWidth = 927
+  Icon.Data = {
+    7E04000000000100010010100000010020006804000016000000280000001000
+    0000200000000100200000000000000400006400000064000000000000000000
+    0000FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00000000052711003B6127
+    008B6B2C02A0371600580000000FFFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+    FF00FFFFFF00FFFFFF00FFFFFF00000000036F2D009AD05300FDF76300FFF161
+    01FFE35B01FFD35602FFB64A02FF783101D4160B0017FFFFFF00FFFFFF00FFFF
+    FF00FFFFFF00FFFFFF0033160023A64300E9FE6600FFFF6600FFFF6600FFFE66
+    00FFF96503FFF76300FFDA5801FFC24F02FFA14202FB501F0065FFFFFF00FFFF
+    FF00FFFFFF00000000019C3E00E2FF6600FFFF6600FFFE6601FFAF6530FF5383
+    96FF5090ACFF8D6545FFF26507FFF26100FFCF5402FFAB4602FD1D0F0022FFFF
+    FF00FFFFFF006528008EFD6500FFFF6600FFEE670BFF547B85FF45B2DCFF72D3
+    F8FF7CD6F8FF4FBFEEFF34809FFFC6631FFFF96400FFDB5801FF823501DEFFFF
+    FF00FFFFFF00B84A00F8FF6600FFFF6600FF817561FF2ABAF0FF45C0F7FF61BC
+    E1FF7BD5F8FF41A2CBFF34C2F7FF2B7997FFFF6600FFFB6400FFDF5901FF150A
+    00321212121DE96004FFFF6600FFFF6600FF5F8589FF2ABFF7FF4EC9F7FF5EBF
+    EAFF5BBFF7FF55C6F1FF34C2F7FF198EBEFFFD6601FFFF6600FFFA6400FF5E27
+    00835C321669FD7820FFFF6600FFFF6600FF578E9AFF2ABFF7FF4EC9F7FF66CA
+    F8FF4B97BAFF58CCF7FF34C2F7FF1B94C5FFF56606FFFF6600FFFF6600FF8736
+    00C16440276AFD8C42FFFE7215FFFF6600FF4E96AAFF2ABFF7FF4EC9F7FF52BC
+    F7FF59BDF6FF57CBF5FF34C2F7FF1B99CBFFEC660CFFFF6600FFFF6600FF8536
+    00BE3939391FEC9256FFFD944FFFFF6701FF449CB9FF2BB6EBFF2C81A9FF4C9D
+    C2FF6FC7EBFF3E9AC1FF2CA6D7FF1C9FD1FFE46712FFFF6600FFFF6600FF6027
+    007DFFFFFF00CE8B5FFAFBAA75FFFC9855FF39A0CAFF38A7D0FF2F7694FF2B6F
+    93FF6FC6E7FF40ABDFFF30A3D1FF1CA2D4FFDC6919FFFF6600FFF46200FF160B
+    002FFFFFFF008F664C9DF8B489FFFABA91FF87C7E5FF37AEE5FF4295B4FF65C1
+    E5FF7CD6F8FF4EB7E2FF2B98C5FF1BA1D7FFD46A1FFFFF6600FF8E3900D4FFFF
+    FF00FFFFFF00FFFFFF01C79B7EEDF9C7A7FFCAD0D5FFA1CBE2FF72BCDEFF69BA
+    DBFF64B9D6FF56A6C0FF5D919DFF787D70FFE46914FFCA5000FA150B0018FFFF
+    FF00FFFFFF00FFFFFF0060534525CCA286F0F7D1B7FFF9C3A1FFF9B68BFFF5AB
+    7AFFF69A5FFFFD8739FFFE7F2AFFFE7317FFBD4D01F75221004EFFFFFF00FFFF
+    FF00FFFFFF00FFFFFF00FFFFFF0000000001A4836CADDEA987FDF6B388FFFBA8
+    73FFFC9C5DFFFA8D45FFD96D26FE873D0DC40000000EFFFFFF00FFFFFF00FFFF
+    FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00000000025A534F3D8155
+    398B804925994831234900000009FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+    FF00000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000
+  }
+  OnCreate = FormCreate
+  LCLVersion = '1.8.4.0'
+  object pSelect: TPanel
+    Left = 613
+    Height = 552
+    Top = 0
+    Width = 314
+    Align = alRight
+    ClientHeight = 552
+    ClientWidth = 314
+    TabOrder = 0
+    object Panel1: TPanel
+      Left = 1
+      Height = 42
+      Top = 509
+      Width = 312
+      Align = alBottom
+      ClientHeight = 42
+      ClientWidth = 312
+      TabOrder = 0
+      object bbAdd: TBitBtn
+        Left = 5
+        Height = 30
+        Top = 7
+        Width = 100
+        Caption = 'Nieuw'
+        Glyph.Data = {
+          36040000424D3604000000000000360000002800000010000000100000000100
+          2000000000000004000064000000640000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          000000000000000000000000000000000000A46534CCA46534FFA46534FFA465
+          34CC000000000000000000000000000000000000000000000000000000000000
+          000000000000000000000000000000000000A46534FFE6CEB7FFE6CEB7FFA465
+          34FF000000000000000000000000000000000000000000000000000000000000
+          000000000000000000000000000000000000A46534FFE6CEB7FFD9AD86FFA465
+          34FF000000000000000000000000000000000000000000000000000000000000
+          000000000000000000000000000000000000A46534FFE6CEB7FFD9AD86FFA465
+          34FF000000000000000000000000000000000000000000000000000000000000
+          0000A46534CCA46534FFA46534FFA46534FFA46534FFD9AD86FFD9AD86FFA465
+          34FFA46534FFA46534FFA46534FFA46534CC0000000000000000000000000000
+          0000A46534FFE5CCB4FFDBB795FFDBB694FFDAB492FFDAB390FFD9AD86FFD8AA
+          83FFD7A87FFFD7A67DFFE0BE9FFFA46534FF0000000000000000000000000000
+          0000A46534FFE8D3C0FFE7D1BBFFE7D1BCFFE6CEB7FFE6CEB7FFE6CEB7FFE6CE
+          B7FFE6CDB6FFE6CCB5FFE6CCB6FFA46534FF0000000000000000000000000000
+          0000A46534CCA46534FFA46534FFA46534FFA46534FFE6CEB7FFE6CEB7FFA465
+          34FFA46534FFA46534FFA46534FFA46534CC0000000000000000000000000000
+          000000000000000000000000000000000000A46534FFE6CEB7FFE6CEB7FFA465
+          34FF000000000000000000000000000000000000000000000000000000000000
+          000000000000000000000000000000000000A46534FFE6CEB7FFE6CEB7FFA465
+          34FF000000000000000000000000000000000000000000000000000000000000
+          000000000000000000000000000000000000A46534FFE6CEB7FFE6CEB7FFA465
+          34FF000000000000000000000000000000000000000000000000000000000000
+          000000000000000000000000000000000000A46534CCA46534FFA46534FFA465
+          34CC000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000
+        }
+        OnClick = bbAddClick
+        TabOrder = 0
+      end
+      object bbDelete: TBitBtn
+        Left = 105
+        Height = 30
+        Top = 7
+        Width = 100
+        Caption = 'Wis'
+        Glyph.Data = {
+          36040000424D3604000000000000360000002800000010000000100000000100
+          2000000000000004000064000000640000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000A46534CCA46534FFA46534FFA46534FFA46534FFA46534FFA46534FFA465
+          34FFA46534FFA46534FFA46534FFA46534CC0000000000000000000000000000
+          0000A46534FFE5CCB4FFDBB795FFDBB694FFDAB492FFDAB390FFD9AD86FFD8AA
+          83FFD7A87FFFD7A67DFFE0BE9FFFA46534FF0000000000000000000000000000
+          0000A46534FFE8D3C0FFE7D1BBFFE7D1BCFFE6CEB7FFE6CEB7FFE6CEB7FFE6CE
+          B7FFE6CDB6FFE6CCB5FFE6CCB6FFA46534FF0000000000000000000000000000
+          0000A46534CCA46534FFA46534FFA46534FFA46534FFA46534FFA46534FFA465
+          34FFA46534FFA46534FFA46534FFA46534CC0000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000
+        }
+        OnClick = bbDeleteClick
+        TabOrder = 1
+      end
+      object bbImport: TBitBtn
+        Left = 207
+        Height = 30
+        Top = 7
+        Width = 100
+        Caption = 'Importeer'
+        Glyph.Data = {
+          36040000424D3604000000000000360000002800000010000000100000000100
+          2000000000000004000064000000640000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000A46534CCA46534FFA46534FFA46534FFA46534FFA46534FFA46534FFA465
+          34FFA46534FFA46534FFA46534FFA46534CC0000000000000000000000000000
+          0000A46534FFE5CCB4FFDBB795FFDBB694FFDAB492FFDAB390FFD9AD86FFD8AA
+          83FFD7A87FFFD7A67DFFE0BE9FFFA46534FF0000000000000000000000000000
+          0000A46534FFE8D3C0FFE7D1BBFFE7D1BCFFE6CEB7FFE6CEB7FFE6CEB7FFE6CE
+          B7FFE6CDB6FFE6CCB5FFE6CCB6FFA46534FF0000000000000000000000000000
+          0000A46534CCA46534FFA46534FFA46534FFA46534FFA46534FFA46534FFA465
+          34FFA46534FFA46534FFA46534FFA46534CC0000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000
+        }
+        OnClick = bbImportClick
+        TabOrder = 2
+      end
+    end
+    object tvSelect: TTreeView
+      Left = 1
+      Height = 508
+      Top = 1
+      Width = 312
+      Align = alClient
+      AutoExpand = True
+      HideSelection = False
+      PopupMenu = pmIngredients
+      ReadOnly = True
+      SortType = stText
+      TabOrder = 1
+      OnKeyDown = tvSelectKeyDown
+      OnSelectionChanged = tvSelectSelectionChanged
+      Options = [tvoAutoExpand, tvoAutoItemHeight, tvoKeepCollapsedNodes, tvoReadOnly, tvoShowButtons, tvoShowLines, tvoShowRoot, tvoToolTips, tvoThemedDraw]
+    end
+  end
+  object pEdit: TPanel
+    Left = 0
+    Height = 552
+    Top = 0
+    Width = 613
+    Align = alClient
+    BorderStyle = bsSingle
+    ClientHeight = 548
+    ClientWidth = 609
+    TabOrder = 1
+    object bbOK: TBitBtn
+      Left = 167
+      Height = 30
+      Top = 515
+      Width = 120
+      Caption = '&Sla op'
+      Kind = bkOK
+      ModalResult = 1
+      OnClick = bbOKClick
+      TabOrder = 2
+    end
+    object gbInfo: TGroupBox
+      Left = 4
+      Height = 200
+      Top = 6
+      Width = 600
+      Caption = 'Algemeen'
+      ClientHeight = 180
+      ClientWidth = 596
+      TabOrder = 0
+      object Label1: TLabel
+        Left = 7
+        Height = 15
+        Top = 7
+        Width = 35
+        Caption = 'Naam:'
+        ParentColor = False
+      end
+      object eName: TEdit
+        Left = 95
+        Height = 26
+        Top = 2
+        Width = 500
+        AutoSize = False
+        OnChange = eNameChange
+        TabOrder = 0
+      end
+      object Label2: TLabel
+        Left = 5
+        Height = 15
+        Top = 58
+        Width = 76
+        Caption = 'Opmerkingen:'
+        ParentColor = False
+      end
+      object mNotes: TMemo
+        Tag = 1
+        Left = 95
+        Height = 104
+        Top = 58
+        Width = 500
+        Lines.Strings = (
+          'mNotes'
+        )
+        ScrollBars = ssAutoVertical
+        TabOrder = 1
+      end
+      object Label15: TLabel
+        Left = 7
+        Height = 15
+        Top = 37
+        Width = 35
+        Caption = 'Groep:'
+        ParentColor = False
+      end
+      object eStyleLetter: TEdit
+        Left = 95
+        Height = 26
+        Top = 31
+        Width = 46
+        AutoSize = False
+        OnExit = eStyleLetterExit
+        TabOrder = 2
+      end
+      object Label3: TLabel
+        Left = 160
+        Height = 15
+        Top = 37
+        Width = 54
+        Caption = 'Categorie:'
+        ParentColor = False
+      end
+      object eCategory: TEdit
+        Left = 234
+        Height = 26
+        Top = 31
+        Width = 149
+        AutoSize = False
+        TabOrder = 3
+      end
+      object Label4: TLabel
+        Left = 395
+        Height = 15
+        Top = 37
+        Width = 103
+        Caption = 'Categorie nummer:'
+        ParentColor = False
+      end
+      object eCategoryNumber: TEdit
+        Left = 515
+        Height = 26
+        Top = 31
+        Width = 50
+        AutoSize = False
+        TabOrder = 4
+      end
+    end
+    object gbProperties: TGroupBox
+      Left = 4
+      Height = 304
+      Top = 206
+      Width = 600
+      Caption = 'Eigenschappen'
+      ClientHeight = 284
+      ClientWidth = 596
+      TabOrder = 1
+      object Label8: TLabel
+        Left = 57
+        Height = 15
+        Top = 9
+        Width = 28
+        Caption = 'Type:'
+        ParentColor = False
+      end
+      object cbType: TComboBox
+        Left = 95
+        Height = 23
+        Top = 2
+        Width = 188
+        AutoSize = False
+        ItemHeight = 15
+        Style = csDropDownList
+        TabOrder = 0
+      end
+      object Label5: TLabel
+        Left = 7
+        Height = 15
+        Top = 235
+        Width = 69
+        Caption = 'Voorbeelden:'
+        ParentColor = False
+      end
+      object eExamples: TEdit
+        Left = 95
+        Height = 26
+        Top = 228
+        Width = 500
+        AutoSize = False
+        TabOrder = 1
+      end
+      object Label6: TLabel
+        Left = 7
+        Height = 15
+        Top = 206
+        Width = 70
+        Caption = 'Ingrediënten:'
+        ParentColor = False
+      end
+      object eIngredients: TEdit
+        Left = 95
+        Height = 26
+        Top = 199
+        Width = 500
+        AutoSize = False
+        TabOrder = 2
+      end
+      object Label7: TLabel
+        Left = 7
+        Height = 15
+        Top = 174
+        Width = 37
+        Caption = 'Profiel:'
+        ParentColor = False
+      end
+      object eProfile: TEdit
+        Left = 95
+        Height = 26
+        Top = 169
+        Width = 500
+        AutoSize = False
+        TabOrder = 3
+      end
+      object lOGmin: TLabel
+        Left = 7
+        Height = 15
+        Top = 40
+        Width = 70
+        Caption = 'Min. start SG:'
+        ParentColor = False
+      end
+      object fseOGMin: TFloatSpinEdit
+        Left = 96
+        Height = 26
+        Top = 35
+        Width = 66
+        AutoSize = False
+        DecimalPlaces = 3
+        Increment = 0.001
+        MaxValue = 1.3
+        MinValue = 1
+        OnChange = fseOGMinChange
+        TabOrder = 4
+        Value = 1
+      end
+      object lOGMax: TLabel
+        Left = 7
+        Height = 15
+        Top = 69
+        Width = 71
+        Caption = 'Max. start SG:'
+        ParentColor = False
+      end
+      object fseOGMax: TFloatSpinEdit
+        Left = 96
+        Height = 26
+        Top = 63
+        Width = 66
+        AutoSize = False
+        DecimalPlaces = 3
+        Increment = 0.001
+        MaxValue = 1.3
+        MinValue = 1
+        OnChange = fseOGMaxChange
+        TabOrder = 5
+        Value = 1
+      end
+      object lFGMin: TLabel
+        Left = 7
+        Height = 15
+        Top = 98
+        Width = 70
+        Caption = 'Min. eind SG:'
+        ParentColor = False
+      end
+      object fseFGMin: TFloatSpinEdit
+        Left = 96
+        Height = 26
+        Top = 92
+        Width = 66
+        AutoSize = False
+        DecimalPlaces = 3
+        Increment = 0.001
+        MaxValue = 1.3
+        MinValue = 1
+        OnChange = fseFGMinChange
+        TabOrder = 6
+        Value = 1
+      end
+      object lFGMax: TLabel
+        Left = 7
+        Height = 15
+        Top = 126
+        Width = 71
+        Caption = 'Max. eind SG:'
+        ParentColor = False
+      end
+      object fseFGMax: TFloatSpinEdit
+        Left = 96
+        Height = 26
+        Top = 120
+        Width = 66
+        AutoSize = False
+        DecimalPlaces = 3
+        Increment = 0.001
+        MaxValue = 1.3
+        MinValue = 1
+        OnChange = fseFGMaxChange
+        TabOrder = 7
+        Value = 1
+      end
+      object Label13: TLabel
+        Left = 170
+        Height = 15
+        Top = 40
+        Width = 81
+        Caption = 'Min. bitterheid:'
+        ParentColor = False
+      end
+      object fseIBUMin: TFloatSpinEdit
+        Left = 272
+        Height = 26
+        Top = 35
+        Width = 66
+        AutoSize = False
+        DecimalPlaces = 0
+        Increment = 5
+        MaxValue = 200
+        MinValue = 0
+        OnChange = fseIBUMinChange
+        TabOrder = 8
+        Value = 0
+      end
+      object Label14: TLabel
+        Left = 170
+        Height = 15
+        Top = 69
+        Width = 82
+        Caption = 'Max. bitterheid:'
+        ParentColor = False
+      end
+      object fseIBUMax: TFloatSpinEdit
+        Left = 272
+        Height = 26
+        Top = 63
+        Width = 66
+        AutoSize = False
+        DecimalPlaces = 0
+        Increment = 5
+        MaxValue = 200
+        MinValue = 0
+        OnChange = fseIBUMaxChange
+        TabOrder = 9
+        Value = 0
+      end
+      object Label16: TLabel
+        Left = 170
+        Height = 15
+        Top = 98
+        Width = 56
+        Caption = 'Min. kleur:'
+        ParentColor = False
+      end
+      object fseColorMin: TFloatSpinEdit
+        Left = 272
+        Height = 26
+        Top = 92
+        Width = 66
+        AutoSize = False
+        DecimalPlaces = 0
+        Increment = 5
+        MaxValue = 2000
+        MinValue = 0
+        OnChange = fseColorMinChange
+        TabOrder = 10
+        Value = 0
+      end
+      object Label17: TLabel
+        Left = 170
+        Height = 15
+        Top = 126
+        Width = 57
+        Caption = 'Max. kleur:'
+        ParentColor = False
+      end
+      object fseColorMax: TFloatSpinEdit
+        Left = 272
+        Height = 26
+        Top = 120
+        Width = 66
+        AutoSize = False
+        DecimalPlaces = 0
+        Increment = 5
+        MaxValue = 2000
+        MinValue = 0
+        OnChange = fseColorMaxChange
+        TabOrder = 11
+        Value = 0
+      end
+      object lIBUmin: TLabel
+        Left = 342
+        Height = 15
+        Top = 40
+        Width = 18
+        Caption = 'IBU'
+        ParentColor = False
+      end
+      object lIBUmax: TLabel
+        Left = 342
+        Height = 15
+        Top = 69
+        Width = 18
+        Caption = 'IBU'
+        ParentColor = False
+      end
+      object lColorMin: TLabel
+        Left = 342
+        Height = 15
+        Top = 98
+        Width = 21
+        Caption = 'EBC'
+        ParentColor = False
+      end
+      object lColorMax: TLabel
+        Left = 342
+        Height = 15
+        Top = 126
+        Width = 21
+        Caption = 'EBC'
+        ParentColor = False
+      end
+      object Label20: TLabel
+        Left = 378
+        Height = 15
+        Top = 40
+        Width = 76
+        Caption = 'Min. koolzuur:'
+        ParentColor = False
+      end
+      object fseCarbMin: TFloatSpinEdit
+        Left = 470
+        Height = 26
+        Top = 34
+        Width = 66
+        AutoSize = False
+        DecimalPlaces = 1
+        Increment = 0.1
+        MaxValue = 20
+        MinValue = 0
+        OnChange = fseCarbMinChange
+        TabOrder = 12
+        Value = 0
+      end
+      object lCarbMin: TLabel
+        Left = 540
+        Height = 15
+        Top = 40
+        Width = 42
+        Caption = 'vol CO2'
+        ParentColor = False
+      end
+      object lCarbMax: TLabel
+        Left = 540
+        Height = 15
+        Top = 69
+        Width = 42
+        Caption = 'vol CO2'
+        ParentColor = False
+      end
+      object fseCarbMax: TFloatSpinEdit
+        Left = 470
+        Height = 26
+        Top = 63
+        Width = 66
+        AutoSize = False
+        DecimalPlaces = 1
+        Increment = 0.1
+        MaxValue = 20
+        MinValue = 0
+        OnChange = fseCarbMaxChange
+        TabOrder = 13
+        Value = 0
+      end
+      object Label23: TLabel
+        Left = 378
+        Height = 15
+        Top = 69
+        Width = 77
+        Caption = 'Max. koolzuur:'
+        ParentColor = False
+      end
+      object Label24: TLabel
+        Left = 378
+        Height = 15
+        Top = 98
+        Width = 69
+        Caption = 'Min. alcohol:'
+        ParentColor = False
+      end
+      object fseABVMin: TFloatSpinEdit
+        Left = 470
+        Height = 26
+        Top = 92
+        Width = 66
+        AutoSize = False
+        DecimalPlaces = 1
+        Increment = 0.1
+        MaxValue = 20
+        MinValue = 0
+        OnChange = fseABVMinChange
+        TabOrder = 14
+        Value = 0
+      end
+      object lABVmin: TLabel
+        Left = 540
+        Height = 15
+        Top = 98
+        Width = 29
+        Caption = 'vol.%'
+        ParentColor = False
+      end
+      object lABVmax: TLabel
+        Left = 540
+        Height = 15
+        Top = 126
+        Width = 29
+        Caption = 'vol.%'
+        ParentColor = False
+      end
+      object fseABVmax: TFloatSpinEdit
+        Left = 470
+        Height = 26
+        Top = 120
+        Width = 66
+        AutoSize = False
+        DecimalPlaces = 1
+        Increment = 0.1
+        MaxValue = 20
+        MinValue = 0
+        OnChange = fseABVmaxChange
+        TabOrder = 15
+        Value = 0
+      end
+      object Label25: TLabel
+        Left = 378
+        Height = 15
+        Top = 126
+        Width = 70
+        Caption = 'Max. alcohol:'
+        ParentColor = False
+      end
+    end
+    object bbCancel: TBitBtn
+      Left = 303
+      Height = 30
+      Top = 515
+      Width = 120
+      Caption = '&Annuleer'
+      Kind = bkCancel
+      ModalResult = 2
+      OnClick = bbCancelClick
+      TabOrder = 3
+    end
+  end
+  object pmIngredients: TPopupMenu
+    left = 556
+    top = 499
+    object miNew: TMenuItem
+      Caption = 'Nieuw'
+      OnClick = bbAddClick
+    end
+    object miDelete: TMenuItem
+      Caption = 'Verwijder'
+      OnClick = bbDeleteClick
+    end
+    object MenuItem1: TMenuItem
+      Caption = '-'
+    end
+    object miImport: TMenuItem
+      Caption = 'Importeer'
+      OnClick = bbImportClick
+    end
+  end
+end
