@@ -20,7 +20,7 @@ pipeline {
             sh '/usr/bin/apt-get install -y libfann-dev'
             sh 'pwd'
             sh 'chown -R 1000:1000 .'
-            sh 'cd source' 
+            sh 'cd Source' 
 //            sh 'find . -name "*.o" -exec rm {} \\;'
 //            sh 'find . -name "*.ppu" -exec rm {} \\;'
             sh 'lazbuild --verbose --pcp=/var/jenkins_home/.lazarus --scp=/var/jenkins_home/.lazarus --lazarusdir=/usr/share/lazarus/1.8.0 --add-package source/3rdParty/ExpandPanels/expandpanels-master-2/pexpandpanels.lpk'
