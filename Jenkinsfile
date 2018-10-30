@@ -27,7 +27,7 @@ pipeline {
             sh 'lazbuild --lazarusdir=/usr/share/lazarus/1.8.0 --verbose --add-package uniqueinstance-1.0/uniqueinstance_package.lpk'
             sh 'lazbuild --lazarusdir=/usr/share/lazarus/1.8.0 --verbose --add-package Synapse/source/lib/laz_synapse.lpk'
             sh 'lazbuild --lazarusdir=/usr/share/lazarus/1.8.0 --verbose brewbuddy.lpi'
-            sh 'lazbuild --lazarusdir=/usr/share/lazarus/1.8.0 --verbose -Twin32 brewbuddy.lpi'
+            sh 'PATH=$PATH:/opt/clang/bin:/opt/osxcross/target/bin lazbuild --lazarusdir=/usr/share/lazarus/1.8.0 -B brewbuddy.lpi --ws=win32 --cpu=i386 --os=win32 --compiler=/opt/windows/lib/fpc/3.0.4/ppcross386'
 //            sh 'PATH=$PATH:/opt/clang/bin:/opt/osxcross/target/bin /opt/windows/lib/fpc/3.0.4/ppcross386 -Twin32 -va brewbuddy.lpi'
             sh 'chown -R 1000:1000 .'
           }
