@@ -46,7 +46,7 @@
               <StackChecks Value="True"/>
             </Checks>
             <VerifyObjMethodCallValidity Value="True"/>
-            <TargetProcessor Value="ATHLON64"/>
+            <TargetProcessor Value=""/>
             <TargetCPU Value="x86_64"/>
             <TargetOS Value="linux"/>
             <Optimizations>
