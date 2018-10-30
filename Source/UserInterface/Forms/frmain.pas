@@ -4592,9 +4592,9 @@ Procedure TfrmMain.NameChange;
 var s : string;
 begin
   if FTemporary <> NIL then
-    Caption:= 'BrouwHulp - Eroica - ' + FTemporary.Name.Value
+    Caption:= 'BrewBuddy - Sassy Saison - ' + FTemporary.Name.Value
   else
-    Caption:= 'BrouwHulp - Eroica';
+    Caption:= 'BrewBuddy - Sassy Saison';
 end;
 
 procedure TfrmMain.tvRecipesSelectionChanged(Sender: TObject);

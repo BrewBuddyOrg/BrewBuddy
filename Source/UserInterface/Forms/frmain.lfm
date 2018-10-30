@@ -4,7 +4,7 @@ object frmMain: TfrmMain
   Top = 171
   Width = 1004
   BorderStyle = bsSingle
-  Caption = 'BrouwHulp - Eroica'
+  Caption = 'BrewBuddy - Sassy Saison'
   ClientHeight = 720
   ClientWidth = 1004
   Font.Height = 12

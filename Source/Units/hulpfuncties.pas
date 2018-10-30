@@ -2406,7 +2406,7 @@ begin
 end;
 
 Procedure Log(s : string);
-const fn = 'brouwhulp.log';
+const fn = 'brewbuddy.log';
 var fnp : string;
 begin
   if (slLog <> NIL) and DoLog then

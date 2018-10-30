@@ -459,7 +459,7 @@ begin
   begin
     DefaultExt:= '.xml';
     FileName:= '*.xml';
-    Filter:= 'BrouwHulp xml|*.xml';
+    Filter:= 'BrewBuddy xml|*.xml';
   end;
   FImportFileName:= '';
   try
@@ -3060,14 +3060,14 @@ Procedure CheckDataFolder;
 var sourcedata, destdata, sourcesounds, destsounds : string;
 begin
   {$ifdef UNIX}
-    sourcedata:= '/usr/share/brouwhulpdata/';
+    sourcedata:= '/usr/share/brewbuddy/';
   {$endif}
   {$ifdef darwin}
-    sourcedata:= '/usr/share/brouwhulpdata/';
+    sourcedata:= '/usr/share/brewbuddy/';
   {$endif}
   {$ifdef Windows}
-    sourcedata:= ExtractFilePath(Application.ExeName) + 'brouwhulpdata\';
-    if OnUSB then BHFolder:= DriveLetter + '\brouwhulp\brouwhulp\';
+    sourcedata:= ExtractFilePath(Application.ExeName) + 'brewbuddy\';
+    if OnUSB then BHFolder:= DriveLetter + '\brewbuddy\brewbuddy\';
     log('Checkdatafolder: BHFolder = ' + BHFolder);
   {$endif}
   destdata:= BHFolder;
@@ -3113,13 +3113,13 @@ begin
   CheckFile(sourcedata, destdata, 'yeasts.xml');
   CheckFile(sourcedata, destdata, 'logo.png');
   {$ifdef Windows}
-  CheckFile(sourcedata, destdata, 'Introductie BrouwHulp Eroica.pdf');
+  CheckFile(sourcedata, destdata, 'Introductie BrewBuddy Sassy Saison.pdf');
   {$endif}
   {$ifdef Darwin}
-  CheckFile('/usr/share/doc/brouwhulp/', destdata, 'Introductie BrouwHulp Eroica.pdf');
+  CheckFile('/usr/share/doc/brewbuddy/', destdata, 'Introductie BrewBuddy Sassy Saison.pdf');
   {$endif}
   {$ifdef Unix}
-  CheckFile('/usr/share/doc/brouwhulp/', destdata, 'Introductie BrouwHulp Eroica.pdf');
+  CheckFile('/usr/share/doc/brewbuddy/', destdata, 'Introductie BrewBuddy Sassy Saison.pdf');
   {$endif}
   CheckFile(sourcesounds, destsounds, 'alarm.wav');
 //  CheckFile(sourcesounds, destsounds, 'alarm02.wav');
@@ -3233,14 +3233,14 @@ begin
     else //copy previous database to new location, but clear brews
     begin
       {$ifdef UNIX}
-        sourcedata:= '/usr/share/brouwhulpdata/';
+        sourcedata:= '/usr/share/brewbuddy/';
       {$endif}
       {$ifdef darwin}
-        sourcedata:= '/usr/share/brouwhulpdata/';
+        sourcedata:= '/usr/share/brewbuddy/';
       {$endif}
       {$ifdef Windows}
-        sourcedata:= ExtractFilePath(Application.ExeName) + 'brouwhulpdata\';
-        if OnUSB then BHFolder:= DriveLetter + '\brouwhulp\brouwhulp\'
+        sourcedata:= ExtractFilePath(Application.ExeName) + 'brewbuddy\';
+        if OnUSB then BHFolder:= DriveLetter + '\brewbuddy\brewbuddy\'
         else BHFolder:= destination;
       {$endif}
 
@@ -3262,7 +3262,7 @@ begin
         CheckCopyFile(source, destination, ExtractFileName(SL.Strings[i]));
       FreeAndNIL(SL);
       Brews.FreeCollection;
-      CheckCopyFile(source, destination, 'Introductie BrouwHulp Eroica.pdf');
+      CheckCopyFile(source, destination, 'Introductie BrewBuddy Sassy Saison.pdf');
       CheckCopyFile(source, destination, 'styles-BJCP.xml');
       CheckCopyFile(source, destination, 'logo.png');
       CheckDataFolder;
@@ -3289,7 +3289,7 @@ begin
       for i:= 0 to SL.Count - 1 do
         DeleteFile(PChar(SL.Strings[i]));
       FreeAndNIL(SL);
-      DeleteFile(PChar(source + 'Introductie BrouwHulp Eroica.pdf'));
+      DeleteFile(PChar(source + 'Introductie BrewBuddy Sassy Saison.pdf'));
       DeleteFile(PChar(source + 'styles-BJCP.xml'));
       DeleteFile(PChar(source + 'logo.png'));
     end;
@@ -3361,16 +3361,16 @@ Initialization
     end
     else
     begin}
-      BHFolder:= GetUserDir + '.brouwhulp/';
-  //    DataFolder:= GetUserDir + '.brouwhulp/';
+      BHFolder:= GetUserDir + '.brewbuddy/';
+  //    DataFolder:= GetUserDir + '.brewbuddy/';
    { end;}
     SoundFolder:= BHFolder + 'sounds/';
     IconFolder:= BHFolder + 'icons/';
     Slash:= '/';
   {$endif}
   {$ifdef darwin}
-    BHFolder:= GetUserDir + '.brouwhulp/';
-//    DataFolder:= GetUserDir + '.brouwhulp/';
+    BHFolder:= GetUserDir + '.brewbuddy/';
+//    DataFolder:= GetUserDir + '.brewbuddy/';
     SoundFolder:= BHFolder + 'sounds/';
   IconFolder:= BHFolder + 'icons/';
     Slash:= '/';
@@ -3380,17 +3380,17 @@ Initialization
     if GetDriveType(PChar(DriveLetter)) = DRIVE_REMOVABLE then
     begin
       Log('Gestart van USB');
-      BHFolder:= DriveLetter + '\brouwhulp\brouwhulp\';
+      BHFolder:= DriveLetter + '\brewbuddy\brewbuddy\';
       OnUSB:= TRUE;
     end
     else
     begin
       Log('Gestart van harddisk');
       BHFolder:= GetWindowsSpecialDir(CSIDL_PERSONAL); //GetUserDir
-      if FileExists(BHFolder + 'My Documents\brouwhulp\settings.xml') then
-        BHFolder:= BHFolder + 'My Documents\brouwhulp\'
+      if FileExists(BHFolder + 'My Documents\brewbuddy\settings.xml') then
+        BHFolder:= BHFolder + 'My Documents\brewbuddy\'
       else
-        BHFolder:= BHFolder + 'brouwhulp\';
+        BHFolder:= BHFolder + 'brewbuddy\';
     end;
     log('BHFolder = ' + BHFolder);
     SoundFolder:= BHFolder + 'sounds\';

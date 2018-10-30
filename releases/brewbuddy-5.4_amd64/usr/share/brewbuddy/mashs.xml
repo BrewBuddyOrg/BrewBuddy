@@ -1,0 +1,1422 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MASHS>
+  <MASH>
+    <NAME>Decoctie 50, 64, 70, 78</NAME>
+    <NOTES>Gebruikt in Duitse bierstijlen. Neem voor de decocties het dikste deel van het beslag. Houd de deelmaisch minimaal een kwartier op 70 graden alvorens te koken.</NOTES>
+    <VERSION>1</VERSION>
+    <GRAIN_TEMP>22.22222137</GRAIN_TEMP>
+    <TUN_TEMP>22.22222137</TUN_TEMP>
+    <SPARGE_TEMP>75.55555725</SPARGE_TEMP>
+    <SG_LAST_RUNNINGS>1.00999999</SG_LAST_RUNNINGS>
+    <PH_LAST_RUNNINGS>6</PH_LAST_RUNNINGS>
+    <PH>5.400000095</PH>
+    <TUN_WEIGHT>5</TUN_WEIGHT>
+    <TUN_SPECIFIC_HEAT>0.1199999973</TUN_SPECIFIC_HEAT>
+    <EQUIP_ADJUST>FALSE</EQUIP_ADJUST>
+    <MASH_STEPS>
+      <MASH_STEP>
+        <NAME>Eiwitrust</NAME>
+        <VERSION>1</VERSION>
+        <TYPE>Infusion</TYPE>
+        <INFUSE_AMOUNT>18.92716789</INFUSE_AMOUNT>
+        <STEP_TEMP>50</STEP_TEMP>
+        <STEP_TIME>35</STEP_TIME>
+        <RAMP_TIME>2</RAMP_TIME>
+        <END_TEMP>50</END_TEMP>
+        <WATER_GRAIN_RATIO>0.00 l/kg</WATER_GRAIN_RATIO>
+        <DECOCTION_AMT>0.0</DECOCTION_AMT>
+        <DISPLAY_INFUSE_AMT>18.9 l</DISPLAY_INFUSE_AMT>
+        <DISPLAY_STEP_TEMP>50.0 °C</DISPLAY_STEP_TEMP>
+        <PH>5.300000191</PH>
+      </MASH_STEP>
+      <MASH_STEP>
+        <NAME>Beta-amylaserust</NAME>
+        <VERSION>1</VERSION>
+        <TYPE>Decoction</TYPE>
+        <STEP_TEMP>64</STEP_TEMP>
+        <STEP_TIME>20</STEP_TIME>
+        <RAMP_TIME>2</RAMP_TIME>
+        <END_TEMP>64</END_TEMP>
+        <WATER_GRAIN_RATIO>0.00 l/kg</WATER_GRAIN_RATIO>
+        <DECOCTION_AMT>0.00l</DECOCTION_AMT>
+        <INFUSE_AMOUNT>0.0</INFUSE_AMOUNT>
+        <DISPLAY_STEP_TEMP>64.0 °C</DISPLAY_STEP_TEMP>
+        <PH>5.300000191</PH>
+      </MASH_STEP>
+      <MASH_STEP>
+        <NAME>Alfa-amylaserust</NAME>
+        <VERSION>1</VERSION>
+        <TYPE>Decoction</TYPE>
+        <STEP_TEMP>70</STEP_TEMP>
+        <STEP_TIME>20</STEP_TIME>
+        <RAMP_TIME>2</RAMP_TIME>
+        <END_TEMP>70</END_TEMP>
+        <WATER_GRAIN_RATIO>0.00 l/kg</WATER_GRAIN_RATIO>
+        <DECOCTION_AMT>0.00l</DECOCTION_AMT>
+        <INFUSE_AMOUNT>0.0</INFUSE_AMOUNT>
+        <DISPLAY_STEP_TEMP>70.0 °C</DISPLAY_STEP_TEMP>
+        <PH>5.300000191</PH>
+      </MASH_STEP>
+      <MASH_STEP>
+        <NAME>Uitmaischen</NAME>
+        <VERSION>1</VERSION>
+        <TYPE>Temperature</TYPE>
+        <STEP_TEMP>78</STEP_TEMP>
+        <STEP_TIME>10</STEP_TIME>
+        <RAMP_TIME>10</RAMP_TIME>
+        <END_TEMP>78</END_TEMP>
+        <WATER_GRAIN_RATIO>0.00 l/kg</WATER_GRAIN_RATIO>
+        <DECOCTION_AMT>0.0</DECOCTION_AMT>
+        <DISPLAY_STEP_TEMP>78.0 °C</DISPLAY_STEP_TEMP>
+        <PH>5.300000191</PH>
+      </MASH_STEP>
+    </MASH_STEPS>
+  </MASH>
+  <MASH>
+    <NAME>Decoctie 50, 68, 78</NAME>
+    <NOTES>Gebruikt in Duitse bierstijlen. Neem voor de decocties het dikste deel van het beslag. Houd de deelmaisch minimaal een kwartier op 70 graden alvorens te koken.</NOTES>
+    <VERSION>1</VERSION>
+    <GRAIN_TEMP>22.22222137</GRAIN_TEMP>
+    <TUN_TEMP>22.22222137</TUN_TEMP>
+    <SPARGE_TEMP>75.55555725</SPARGE_TEMP>
+    <SG_LAST_RUNNINGS>1.00999999</SG_LAST_RUNNINGS>
+    <PH_LAST_RUNNINGS>6</PH_LAST_RUNNINGS>
+    <PH>5.400000095</PH>
+    <TUN_WEIGHT>5</TUN_WEIGHT>
+    <TUN_SPECIFIC_HEAT>0.1199999973</TUN_SPECIFIC_HEAT>
+    <EQUIP_ADJUST>FALSE</EQUIP_ADJUST>
+    <MASH_STEPS>
+      <MASH_STEP>
+        <NAME>Eiwitrust</NAME>
+        <VERSION>1</VERSION>
+        <TYPE>Infusion</TYPE>
+        <INFUSE_AMOUNT>18.92716789</INFUSE_AMOUNT>
+        <STEP_TEMP>50</STEP_TEMP>
+        <STEP_TIME>35</STEP_TIME>
+        <RAMP_TIME>2</RAMP_TIME>
+        <END_TEMP>50</END_TEMP>
+        <WATER_GRAIN_RATIO>0.00 l/kg</WATER_GRAIN_RATIO>
+        <DECOCTION_AMT>0.0</DECOCTION_AMT>
+        <DISPLAY_INFUSE_AMT>18.9 l</DISPLAY_INFUSE_AMT>
+        <DISPLAY_STEP_TEMP>50.0 °C</DISPLAY_STEP_TEMP>
+        <PH>5.300000191</PH>
+      </MASH_STEP>
+      <MASH_STEP>
+        <NAME>Amylaserust</NAME>
+        <VERSION>1</VERSION>
+        <TYPE>Decoction</TYPE>
+        <STEP_TEMP>68</STEP_TEMP>
+        <STEP_TIME>45</STEP_TIME>
+        <RAMP_TIME>2</RAMP_TIME>
+        <END_TEMP>68</END_TEMP>
+        <WATER_GRAIN_RATIO>0.00 l/kg</WATER_GRAIN_RATIO>
+        <DECOCTION_AMT>0.00l</DECOCTION_AMT>
+        <INFUSE_AMOUNT>0.0</INFUSE_AMOUNT>
+        <DISPLAY_STEP_TEMP>68.0 °C</DISPLAY_STEP_TEMP>
+        <PH>5.300000191</PH>
+      </MASH_STEP>
+      <MASH_STEP>
+        <NAME>Uitmaischen</NAME>
+        <VERSION>1</VERSION>
+        <TYPE>Temperature</TYPE>
+        <STEP_TEMP>78</STEP_TEMP>
+        <STEP_TIME>10</STEP_TIME>
+        <RAMP_TIME>10</RAMP_TIME>
+        <END_TEMP>78</END_TEMP>
+        <WATER_GRAIN_RATIO>0.00 l/kg</WATER_GRAIN_RATIO>
+        <DECOCTION_AMT>0.0</DECOCTION_AMT>
+        <DISPLAY_STEP_TEMP>78.0 °C</DISPLAY_STEP_TEMP>
+        <PH>5.300000191</PH>
+      </MASH_STEP>
+    </MASH_STEPS>
+  </MASH>
+  <MASH>
+    <NAME>Decoctie 35, 50, 65, 69, 78</NAME>
+    <NOTES>Gebruikt in Duitse bierstijlen. Neem voor de decocties het dikste deel van het beslag. Houd de deelmaisch minimaal een kwartier op 70 graden alvorens te koken.</NOTES>
+    <VERSION>1</VERSION>
+    <GRAIN_TEMP>22.22222137</GRAIN_TEMP>
+    <TUN_TEMP>22.22222137</TUN_TEMP>
+    <SPARGE_TEMP>75.55555725</SPARGE_TEMP>
+    <SG_LAST_RUNNINGS>1.00999999</SG_LAST_RUNNINGS>
+    <PH_LAST_RUNNINGS>6</PH_LAST_RUNNINGS>
+    <PH>5.400000095</PH>
+    <TUN_WEIGHT>5</TUN_WEIGHT>
+    <TUN_SPECIFIC_HEAT>0.1199999973</TUN_SPECIFIC_HEAT>
+    <EQUIP_ADJUST>FALSE</EQUIP_ADJUST>
+    <MASH_STEPS>
+      <MASH_STEP>
+        <NAME>Inmaischen</NAME>
+        <VERSION>1</VERSION>
+        <TYPE>Infusion</TYPE>
+        <INFUSE_AMOUNT>18.92716789</INFUSE_AMOUNT>
+        <STEP_TEMP>35</STEP_TEMP>
+        <STEP_TIME>45</STEP_TIME>
+        <RAMP_TIME>2</RAMP_TIME>
+        <END_TEMP>35</END_TEMP>
+        <WATER_GRAIN_RATIO>0.00 l/kg</WATER_GRAIN_RATIO>
+        <DECOCTION_AMT>0.0</DECOCTION_AMT>
+        <DISPLAY_INFUSE_AMT>18.9 l</DISPLAY_INFUSE_AMT>
+        <DISPLAY_STEP_TEMP>35.0 °C</DISPLAY_STEP_TEMP>
+        <PH>5.300000191</PH>
+      </MASH_STEP>
+      <MASH_STEP>
+        <NAME>Eiwitrust</NAME>
+        <VERSION>1</VERSION>
+        <TYPE>Decoction</TYPE>
+        <STEP_TEMP>50</STEP_TEMP>
+        <STEP_TIME>60</STEP_TIME>
+        <RAMP_TIME>2</RAMP_TIME>
+        <END_TEMP>50</END_TEMP>
+        <WATER_GRAIN_RATIO>0.00 l/kg</WATER_GRAIN_RATIO>
+        <DECOCTION_AMT>0.00l</DECOCTION_AMT>
+        <INFUSE_AMOUNT>0.0</INFUSE_AMOUNT>
+        <DISPLAY_STEP_TEMP>50.0 °C</DISPLAY_STEP_TEMP>
+        <PH>5.300000191</PH>
+      </MASH_STEP>
+      <MASH_STEP>
+        <NAME>Beta-amylaserust</NAME>
+        <VERSION>1</VERSION>
+        <TYPE>Decoction</TYPE>
+        <STEP_TEMP>65</STEP_TEMP>
+        <STEP_TIME>15</STEP_TIME>
+        <RAMP_TIME>2</RAMP_TIME>
+        <END_TEMP>65</END_TEMP>
+        <WATER_GRAIN_RATIO>0.00 l/kg</WATER_GRAIN_RATIO>
+        <DECOCTION_AMT>0.00l</DECOCTION_AMT>
+        <INFUSE_AMOUNT>0.0</INFUSE_AMOUNT>
+        <DISPLAY_STEP_TEMP>65.0 °C</DISPLAY_STEP_TEMP>
+        <PH>5.300000191</PH>
+      </MASH_STEP>
+      <MASH_STEP>
+        <NAME>Alfa-amylaserust</NAME>
+        <VERSION>1</VERSION>
+        <TYPE>Decoction</TYPE>
+        <STEP_TEMP>69</STEP_TEMP>
+        <STEP_TIME>15</STEP_TIME>
+        <RAMP_TIME>2</RAMP_TIME>
+        <END_TEMP>69</END_TEMP>
+        <WATER_GRAIN_RATIO>0.00 l/kg</WATER_GRAIN_RATIO>
+        <DECOCTION_AMT>0.00l</DECOCTION_AMT>
+        <INFUSE_AMOUNT>0.0</INFUSE_AMOUNT>
+        <DISPLAY_STEP_TEMP>69.0 °C</DISPLAY_STEP_TEMP>
+        <PH>5.300000191</PH>
+      </MASH_STEP>
+      <MASH_STEP>
+        <NAME>Uitmaischen</NAME>
+        <VERSION>1</VERSION>
+        <TYPE>Temperature</TYPE>
+        <STEP_TEMP>78</STEP_TEMP>
+        <STEP_TIME>10</STEP_TIME>
+        <RAMP_TIME>10</RAMP_TIME>
+        <END_TEMP>78</END_TEMP>
+        <WATER_GRAIN_RATIO>0.00 l/kg</WATER_GRAIN_RATIO>
+        <DECOCTION_AMT>0.0</DECOCTION_AMT>
+        <DISPLAY_STEP_TEMP>78.0 °C</DISPLAY_STEP_TEMP>
+        <PH>5.300000191</PH>
+      </MASH_STEP>
+    </MASH_STEPS>
+  </MASH>
+  <MASH>
+    <NAME>Decoctie 41, 50, 67, 78</NAME>
+    <NOTES>Uit Noonan. New Brewing Lager Beer. Een gemengde vorm met infusie en decoctie. Het boek raadt aan kokend water toe te voegen voor de tweede stap. De eerste twee decocties neem je met het dikke deel van het beslag. de derde met het dunne.</NOTES>
+    <VERSION>1</VERSION>
+    <GRAIN_TEMP>21.11111069</GRAIN_TEMP>
+    <TUN_TEMP>21.11111069</TUN_TEMP>
+    <SPARGE_TEMP>75.55555725</SPARGE_TEMP>
+    <SG_LAST_RUNNINGS>1.00999999</SG_LAST_RUNNINGS>
+    <PH_LAST_RUNNINGS>6</PH_LAST_RUNNINGS>
+    <PH>5.400000095</PH>
+    <TUN_WEIGHT>5</TUN_WEIGHT>
+    <TUN_SPECIFIC_HEAT>0.1199999973</TUN_SPECIFIC_HEAT>
+    <EQUIP_ADJUST>FALSE</EQUIP_ADJUST>
+    <MASH_STEPS>
+      <MASH_STEP>
+        <NAME>Inmaischen</NAME>
+        <VERSION>1</VERSION>
+        <TYPE>Infusion</TYPE>
+        <INFUSE_AMOUNT>5.914740086</INFUSE_AMOUNT>
+        <STEP_TEMP>41</STEP_TEMP>
+        <STEP_TIME>20</STEP_TIME>
+        <RAMP_TIME>2</RAMP_TIME>
+        <END_TEMP>41</END_TEMP>
+        <WATER_GRAIN_RATIO>0.00 l/kg</WATER_GRAIN_RATIO>
+        <DECOCTION_AMT>0.0</DECOCTION_AMT>
+        <DISPLAY_INFUSE_AMT>5.9 l</DISPLAY_INFUSE_AMT>
+        <DISPLAY_STEP_TEMP>41.0 °C</DISPLAY_STEP_TEMP>
+        <PH>5.300000191</PH>
+      </MASH_STEP>
+      <MASH_STEP>
+        <NAME>Eiwitrust</NAME>
+        <VERSION>1</VERSION>
+        <TYPE>Decoction</TYPE>
+        <STEP_TEMP>50</STEP_TEMP>
+        <STEP_TIME>10</STEP_TIME>
+        <RAMP_TIME>5</RAMP_TIME>
+        <END_TEMP>50</END_TEMP>
+        <WATER_GRAIN_RATIO>0.00 l/kg</WATER_GRAIN_RATIO>
+        <DECOCTION_AMT>0.00l</DECOCTION_AMT>
+        <INFUSE_AMOUNT>0.0</INFUSE_AMOUNT>
+        <DISPLAY_STEP_TEMP>50.0 °C</DISPLAY_STEP_TEMP>
+        <PH>5.300000191</PH>
+      </MASH_STEP>
+      <MASH_STEP>
+        <NAME>Amylaserust</NAME>
+        <VERSION>1</VERSION>
+        <TYPE>Decoction</TYPE>
+        <STEP_TEMP>67</STEP_TEMP>
+        <STEP_TIME>20</STEP_TIME>
+        <RAMP_TIME>2</RAMP_TIME>
+        <END_TEMP>67</END_TEMP>
+        <WATER_GRAIN_RATIO>0.00 l/kg</WATER_GRAIN_RATIO>
+        <DECOCTION_AMT>0.00l</DECOCTION_AMT>
+        <INFUSE_AMOUNT>0.0</INFUSE_AMOUNT>
+        <DISPLAY_STEP_TEMP>67.0 °C</DISPLAY_STEP_TEMP>
+        <PH>5.300000191</PH>
+      </MASH_STEP>
+      <MASH_STEP>
+        <NAME>Uitmaischen</NAME>
+        <VERSION>1</VERSION>
+        <TYPE>Decoction</TYPE>
+        <STEP_TEMP>78</STEP_TEMP>
+        <STEP_TIME>5</STEP_TIME>
+        <RAMP_TIME>5</RAMP_TIME>
+        <END_TEMP>78</END_TEMP>
+        <WATER_GRAIN_RATIO>0.00 l/kg</WATER_GRAIN_RATIO>
+        <DECOCTION_AMT>0.00l</DECOCTION_AMT>
+        <INFUSE_AMOUNT>0.0</INFUSE_AMOUNT>
+        <DISPLAY_STEP_TEMP>78.0 °C</DISPLAY_STEP_TEMP>
+        <PH>5.300000191</PH>
+      </MASH_STEP>
+    </MASH_STEPS>
+  </MASH>
+  <MASH>
+    <NAME>50, 69, 78 infusie. volle body.</NAME>
+    <NOTES>Voor een volmondig bier dat een eiwitrust behoeft. Gebruikt voor bieren met veel ongemoute granen.</NOTES>
+    <VERSION>1</VERSION>
+    <GRAIN_TEMP>22.22222137</GRAIN_TEMP>
+    <TUN_TEMP>22.22222137</TUN_TEMP>
+    <SPARGE_TEMP>75.55555725</SPARGE_TEMP>
+    <SG_LAST_RUNNINGS>1.00999999</SG_LAST_RUNNINGS>
+    <PH_LAST_RUNNINGS>6</PH_LAST_RUNNINGS>
+    <PH>5.400000095</PH>
+    <TUN_WEIGHT>5</TUN_WEIGHT>
+    <TUN_SPECIFIC_HEAT>0.1199999973</TUN_SPECIFIC_HEAT>
+    <EQUIP_ADJUST>FALSE</EQUIP_ADJUST>
+    <MASH_STEPS>
+      <MASH_STEP>
+        <NAME>Eiwitrust</NAME>
+        <VERSION>1</VERSION>
+        <TYPE>Infusion</TYPE>
+        <INFUSE_AMOUNT>8.517225266</INFUSE_AMOUNT>
+        <STEP_TEMP>50</STEP_TEMP>
+        <STEP_TIME>30</STEP_TIME>
+        <RAMP_TIME>2</RAMP_TIME>
+        <END_TEMP>50</END_TEMP>
+        <WATER_GRAIN_RATIO>0.00 l/kg</WATER_GRAIN_RATIO>
+        <DECOCTION_AMT>0.0</DECOCTION_AMT>
+        <DISPLAY_INFUSE_AMT>8.5 l</DISPLAY_INFUSE_AMT>
+        <DISPLAY_STEP_TEMP>50.0 °C</DISPLAY_STEP_TEMP>
+        <PH>5.300000191</PH>
+      </MASH_STEP>
+      <MASH_STEP>
+        <NAME>Amylaserust</NAME>
+        <VERSION>1</VERSION>
+        <TYPE>Infusion</TYPE>
+        <INFUSE_AMOUNT>7.570867062</INFUSE_AMOUNT>
+        <STEP_TEMP>69</STEP_TEMP>
+        <STEP_TIME>30</STEP_TIME>
+        <RAMP_TIME>2</RAMP_TIME>
+        <END_TEMP>69</END_TEMP>
+        <WATER_GRAIN_RATIO>0.00 l/kg</WATER_GRAIN_RATIO>
+        <DECOCTION_AMT>0.0</DECOCTION_AMT>
+        <DISPLAY_INFUSE_AMT>7.6 l</DISPLAY_INFUSE_AMT>
+        <DISPLAY_STEP_TEMP>69.0 °C</DISPLAY_STEP_TEMP>
+        <PH>5.300000191</PH>
+      </MASH_STEP>
+      <MASH_STEP>
+        <NAME>Uitmaischen</NAME>
+        <VERSION>1</VERSION>
+        <TYPE>Infusion</TYPE>
+        <INFUSE_AMOUNT>5.678150177</INFUSE_AMOUNT>
+        <STEP_TEMP>78</STEP_TEMP>
+        <STEP_TIME>10</STEP_TIME>
+        <RAMP_TIME>2</RAMP_TIME>
+        <END_TEMP>78</END_TEMP>
+        <WATER_GRAIN_RATIO>0.00 l/kg</WATER_GRAIN_RATIO>
+        <DECOCTION_AMT>0.0</DECOCTION_AMT>
+        <DISPLAY_INFUSE_AMT>5.7 l</DISPLAY_INFUSE_AMT>
+        <DISPLAY_STEP_TEMP>78.0 °C</DISPLAY_STEP_TEMP>
+        <PH>5.300000191</PH>
+      </MASH_STEP>
+    </MASH_STEPS>
+  </MASH>
+  <MASH>
+    <NAME>50, 64, 78. infusie</NAME>
+    <NOTES>Voor bieren met lichte body die een eiwitrust behoeven. Voor bieren met veel ongemout graan in de stort.</NOTES>
+    <VERSION>1</VERSION>
+    <GRAIN_TEMP>22.22222137</GRAIN_TEMP>
+    <TUN_TEMP>22.22222137</TUN_TEMP>
+    <SPARGE_TEMP>75.55555725</SPARGE_TEMP>
+    <SG_LAST_RUNNINGS>1.00999999</SG_LAST_RUNNINGS>
+    <PH_LAST_RUNNINGS>6</PH_LAST_RUNNINGS>
+    <PH>5.400000095</PH>
+    <TUN_WEIGHT>5</TUN_WEIGHT>
+    <TUN_SPECIFIC_HEAT>0.1199999973</TUN_SPECIFIC_HEAT>
+    <EQUIP_ADJUST>FALSE</EQUIP_ADJUST>
+    <MASH_STEPS>
+      <MASH_STEP>
+        <NAME>Eiwitrust</NAME>
+        <VERSION>1</VERSION>
+        <TYPE>Infusion</TYPE>
+        <INFUSE_AMOUNT>8.517225266</INFUSE_AMOUNT>
+        <STEP_TEMP>50</STEP_TEMP>
+        <STEP_TIME>30</STEP_TIME>
+        <RAMP_TIME>2</RAMP_TIME>
+        <END_TEMP>50</END_TEMP>
+        <WATER_GRAIN_RATIO>0.00 l/kg</WATER_GRAIN_RATIO>
+        <DECOCTION_AMT>0.0</DECOCTION_AMT>
+        <DISPLAY_INFUSE_AMT>8.5 l</DISPLAY_INFUSE_AMT>
+        <DISPLAY_STEP_TEMP>50.0 °C</DISPLAY_STEP_TEMP>
+        <PH>5.300000191</PH>
+      </MASH_STEP>
+      <MASH_STEP>
+        <NAME>Amylaserust</NAME>
+        <VERSION>1</VERSION>
+        <TYPE>Infusion</TYPE>
+        <INFUSE_AMOUNT>7.570867062</INFUSE_AMOUNT>
+        <STEP_TEMP>64</STEP_TEMP>
+        <STEP_TIME>30</STEP_TIME>
+        <RAMP_TIME>2</RAMP_TIME>
+        <END_TEMP>64</END_TEMP>
+        <WATER_GRAIN_RATIO>0.00 l/kg</WATER_GRAIN_RATIO>
+        <DECOCTION_AMT>0.0</DECOCTION_AMT>
+        <DISPLAY_INFUSE_AMT>7.6 l</DISPLAY_INFUSE_AMT>
+        <DISPLAY_STEP_TEMP>64.0 °C</DISPLAY_STEP_TEMP>
+        <PH>5.300000191</PH>
+      </MASH_STEP>
+      <MASH_STEP>
+        <NAME>Uitmaischen</NAME>
+        <VERSION>1</VERSION>
+        <TYPE>Infusion</TYPE>
+        <INFUSE_AMOUNT>8.517225266</INFUSE_AMOUNT>
+        <STEP_TEMP>78</STEP_TEMP>
+        <STEP_TIME>10</STEP_TIME>
+        <RAMP_TIME>2</RAMP_TIME>
+        <END_TEMP>78</END_TEMP>
+        <WATER_GRAIN_RATIO>0.00 l/kg</WATER_GRAIN_RATIO>
+        <DECOCTION_AMT>0.0</DECOCTION_AMT>
+        <DISPLAY_INFUSE_AMT>8.5 l</DISPLAY_INFUSE_AMT>
+        <DISPLAY_STEP_TEMP>78.0 °C</DISPLAY_STEP_TEMP>
+        <PH>5.300000191</PH>
+      </MASH_STEP>
+    </MASH_STEPS>
+  </MASH>
+  <MASH>
+    <NAME>50, 67, 78 infusie. medium body.</NAME>
+    <NOTES>Voor bieren met medium body die een eiwitrust behoeven. Voor bieren met veel ongemout graan in de stort.</NOTES>
+    <VERSION>1</VERSION>
+    <GRAIN_TEMP>22.22222137</GRAIN_TEMP>
+    <TUN_TEMP>22.22222137</TUN_TEMP>
+    <SPARGE_TEMP>75.55555725</SPARGE_TEMP>
+    <SG_LAST_RUNNINGS>1.00999999</SG_LAST_RUNNINGS>
+    <PH_LAST_RUNNINGS>6</PH_LAST_RUNNINGS>
+    <PH>5.400000095</PH>
+    <TUN_WEIGHT>5</TUN_WEIGHT>
+    <TUN_SPECIFIC_HEAT>0.1199999973</TUN_SPECIFIC_HEAT>
+    <EQUIP_ADJUST>FALSE</EQUIP_ADJUST>
+    <MASH_STEPS>
+      <MASH_STEP>
+        <NAME>Eiwitrust</NAME>
+        <VERSION>1</VERSION>
+        <TYPE>Infusion</TYPE>
+        <INFUSE_AMOUNT>8.517225266</INFUSE_AMOUNT>
+        <STEP_TEMP>50</STEP_TEMP>
+        <STEP_TIME>30</STEP_TIME>
+        <RAMP_TIME>2</RAMP_TIME>
+        <END_TEMP>50</END_TEMP>
+        <WATER_GRAIN_RATIO>0.00 l/kg</WATER_GRAIN_RATIO>
+        <DECOCTION_AMT>0.0</DECOCTION_AMT>
+        <DISPLAY_INFUSE_AMT>8.5 l</DISPLAY_INFUSE_AMT>
+        <DISPLAY_STEP_TEMP>50.0 °C</DISPLAY_STEP_TEMP>
+        <PH>5.300000191</PH>
+      </MASH_STEP>
+      <MASH_STEP>
+        <NAME>Amylaserust</NAME>
+        <VERSION>1</VERSION>
+        <TYPE>Infusion</TYPE>
+        <INFUSE_AMOUNT>7.570867062</INFUSE_AMOUNT>
+        <STEP_TEMP>67</STEP_TEMP>
+        <STEP_TIME>30</STEP_TIME>
+        <RAMP_TIME>2</RAMP_TIME>
+        <END_TEMP>67</END_TEMP>
+        <WATER_GRAIN_RATIO>0.00 l/kg</WATER_GRAIN_RATIO>
+        <DECOCTION_AMT>0.0</DECOCTION_AMT>
+        <DISPLAY_INFUSE_AMT>7.6 l</DISPLAY_INFUSE_AMT>
+        <DISPLAY_STEP_TEMP>67.0 °C</DISPLAY_STEP_TEMP>
+        <PH>5.300000191</PH>
+      </MASH_STEP>
+      <MASH_STEP>
+        <NAME>Uitmaischen</NAME>
+        <VERSION>1</VERSION>
+        <TYPE>Infusion</TYPE>
+        <INFUSE_AMOUNT>6.624508858</INFUSE_AMOUNT>
+        <STEP_TEMP>78</STEP_TEMP>
+        <STEP_TIME>10</STEP_TIME>
+        <RAMP_TIME>2</RAMP_TIME>
+        <END_TEMP>78</END_TEMP>
+        <WATER_GRAIN_RATIO>0.00 l/kg</WATER_GRAIN_RATIO>
+        <DECOCTION_AMT>0.0</DECOCTION_AMT>
+        <DISPLAY_INFUSE_AMT>6.6 l</DISPLAY_INFUSE_AMT>
+        <DISPLAY_STEP_TEMP>78.0 °C</DISPLAY_STEP_TEMP>
+        <PH>5.300000191</PH>
+      </MASH_STEP>
+    </MASH_STEPS>
+  </MASH>
+  <MASH>
+    <NAME>40, 66, 78. Infusie, voorgekookt ongemout graan</NAME>
+    <NOTES>Lange eiwitrust helpt het afbreken van eiwitten in voorgekookte. ongemoute granen alvorens het zetmeel af te breken.</NOTES>
+    <VERSION>1</VERSION>
+    <GRAIN_TEMP>22.22222137</GRAIN_TEMP>
+    <TUN_TEMP>22.22222137</TUN_TEMP>
+    <SPARGE_TEMP>75.55555725</SPARGE_TEMP>
+    <SG_LAST_RUNNINGS>1.00999999</SG_LAST_RUNNINGS>
+    <PH_LAST_RUNNINGS>6</PH_LAST_RUNNINGS>
+    <PH>5.400000095</PH>
+    <TUN_WEIGHT>5</TUN_WEIGHT>
+    <TUN_SPECIFIC_HEAT>0.1199999973</TUN_SPECIFIC_HEAT>
+    <EQUIP_ADJUST>FALSE</EQUIP_ADJUST>
+    <MASH_STEPS>
+      <MASH_STEP>
+        <NAME>Inmaischen</NAME>
+        <VERSION>1</VERSION>
+        <TYPE>Infusion</TYPE>
+        <INFUSE_AMOUNT>7.570867062</INFUSE_AMOUNT>
+        <STEP_TEMP>40</STEP_TEMP>
+        <STEP_TIME>30</STEP_TIME>
+        <RAMP_TIME>2</RAMP_TIME>
+        <END_TEMP>40</END_TEMP>
+        <WATER_GRAIN_RATIO>0.00 l/kg</WATER_GRAIN_RATIO>
+        <DECOCTION_AMT>0.0</DECOCTION_AMT>
+        <DISPLAY_INFUSE_AMT>7.6 l</DISPLAY_INFUSE_AMT>
+        <DISPLAY_STEP_TEMP>40.0 °C</DISPLAY_STEP_TEMP>
+        <PH>5.300000191</PH>
+      </MASH_STEP>
+      <MASH_STEP>
+        <NAME>Amylaserust</NAME>
+        <VERSION>1</VERSION>
+        <TYPE>Infusion</TYPE>
+        <INFUSE_AMOUNT>6.624508858</INFUSE_AMOUNT>
+        <STEP_TEMP>66</STEP_TEMP>
+        <STEP_TIME>60</STEP_TIME>
+        <RAMP_TIME>2</RAMP_TIME>
+        <END_TEMP>66</END_TEMP>
+        <WATER_GRAIN_RATIO>0.00 l/kg</WATER_GRAIN_RATIO>
+        <DECOCTION_AMT>0.0</DECOCTION_AMT>
+        <DISPLAY_INFUSE_AMT>6.6 l</DISPLAY_INFUSE_AMT>
+        <DISPLAY_STEP_TEMP>66.0 °C</DISPLAY_STEP_TEMP>
+        <PH>5.300000191</PH>
+      </MASH_STEP>
+      <MASH_STEP>
+        <NAME>Uitmaischen</NAME>
+        <VERSION>1</VERSION>
+        <TYPE>Infusion</TYPE>
+        <INFUSE_AMOUNT>8.517225266</INFUSE_AMOUNT>
+        <STEP_TEMP>78</STEP_TEMP>
+        <STEP_TIME>10</STEP_TIME>
+        <RAMP_TIME>2</RAMP_TIME>
+        <END_TEMP>78</END_TEMP>
+        <WATER_GRAIN_RATIO>0.00 l/kg</WATER_GRAIN_RATIO>
+        <DECOCTION_AMT>0.0</DECOCTION_AMT>
+        <DISPLAY_INFUSE_AMT>8.5 l</DISPLAY_INFUSE_AMT>
+        <DISPLAY_STEP_TEMP>78.0 °C</DISPLAY_STEP_TEMP>
+        <PH>5.300000191</PH>
+      </MASH_STEP>
+    </MASH_STEPS>
+  </MASH>
+  <MASH>
+    <NAME>69, 78 infusie. volle body</NAME>
+    <NOTES>Eenvoudige eenstaps infusie. Geschikt voor de meeste moderne mouten.</NOTES>
+    <VERSION>1</VERSION>
+    <GRAIN_TEMP>22.22222137</GRAIN_TEMP>
+    <TUN_TEMP>22.22222137</TUN_TEMP>
+    <SPARGE_TEMP>75.55555725</SPARGE_TEMP>
+    <SG_LAST_RUNNINGS>1.00999999</SG_LAST_RUNNINGS>
+    <PH_LAST_RUNNINGS>6</PH_LAST_RUNNINGS>
+    <PH>5.400000095</PH>
+    <TUN_WEIGHT>5</TUN_WEIGHT>
+    <TUN_SPECIFIC_HEAT>0.1199999973</TUN_SPECIFIC_HEAT>
+    <EQUIP_ADJUST>FALSE</EQUIP_ADJUST>
+    <MASH_STEPS>
+      <MASH_STEP>
+        <NAME>Amylaserust</NAME>
+        <VERSION>1</VERSION>
+        <TYPE>Infusion</TYPE>
+        <INFUSE_AMOUNT>11.82948017</INFUSE_AMOUNT>
+        <STEP_TEMP>69</STEP_TEMP>
+        <STEP_TIME>45</STEP_TIME>
+        <RAMP_TIME>2</RAMP_TIME>
+        <END_TEMP>69</END_TEMP>
+        <WATER_GRAIN_RATIO>0.00 l/kg</WATER_GRAIN_RATIO>
+        <DECOCTION_AMT>0.0</DECOCTION_AMT>
+        <DISPLAY_INFUSE_AMT>11.8 l</DISPLAY_INFUSE_AMT>
+        <DISPLAY_STEP_TEMP>69.0 °C</DISPLAY_STEP_TEMP>
+        <PH>5.300000191</PH>
+      </MASH_STEP>
+      <MASH_STEP>
+        <NAME>Uitmaischen</NAME>
+        <VERSION>1</VERSION>
+        <TYPE>Infusion</TYPE>
+        <INFUSE_AMOUNT>4.731791973</INFUSE_AMOUNT>
+        <STEP_TEMP>78</STEP_TEMP>
+        <STEP_TIME>10</STEP_TIME>
+        <RAMP_TIME>2</RAMP_TIME>
+        <END_TEMP>78</END_TEMP>
+        <WATER_GRAIN_RATIO>0.00 l/kg</WATER_GRAIN_RATIO>
+        <DECOCTION_AMT>0.0</DECOCTION_AMT>
+        <DISPLAY_INFUSE_AMT>4.7 l</DISPLAY_INFUSE_AMT>
+        <DISPLAY_STEP_TEMP>78.0 °C</DISPLAY_STEP_TEMP>
+        <PH>5.300000191</PH>
+      </MASH_STEP>
+    </MASH_STEPS>
+  </MASH>
+  <MASH>
+    <NAME>69. Volle body</NAME>
+    <NOTES>Eenvoudige eenstaps infusie. Geschikt voor de meeste moderne mouten.</NOTES>
+    <VERSION>1</VERSION>
+    <GRAIN_TEMP>22.22222137</GRAIN_TEMP>
+    <TUN_TEMP>22.22222137</TUN_TEMP>
+    <SPARGE_TEMP>75.55555725</SPARGE_TEMP>
+    <SG_LAST_RUNNINGS>1.00999999</SG_LAST_RUNNINGS>
+    <PH_LAST_RUNNINGS>6</PH_LAST_RUNNINGS>
+    <PH>5.400000095</PH>
+    <TUN_WEIGHT>5</TUN_WEIGHT>
+    <TUN_SPECIFIC_HEAT>0.1199999973</TUN_SPECIFIC_HEAT>
+    <EQUIP_ADJUST>FALSE</EQUIP_ADJUST>
+    <MASH_STEPS>
+      <MASH_STEP>
+        <VERSION>1</VERSION>
+        <TYPE>Infusion</TYPE>
+        <INFUSE_AMOUNT>11.82948017</INFUSE_AMOUNT>
+        <STEP_TEMP>69</STEP_TEMP>
+        <STEP_TIME>45</STEP_TIME>
+        <RAMP_TIME>2</RAMP_TIME>
+        <END_TEMP>69</END_TEMP>
+        <WATER_GRAIN_RATIO>0.00 l/kg</WATER_GRAIN_RATIO>
+        <DECOCTION_AMT>0.0</DECOCTION_AMT>
+        <DISPLAY_INFUSE_AMT>11.8 l</DISPLAY_INFUSE_AMT>
+        <DISPLAY_STEP_TEMP>69.0 °C</DISPLAY_STEP_TEMP>
+        <PH>5.300000191</PH>
+      </MASH_STEP>
+    </MASH_STEPS>
+  </MASH>
+  <MASH>
+    <NAME>64, 78. lichte body</NAME>
+    <NOTES>Eenvoudige eenstaps infusie. Geschikt voor de meeste moderne mouten.</NOTES>
+    <VERSION>1</VERSION>
+    <GRAIN_TEMP>22.22222137</GRAIN_TEMP>
+    <TUN_TEMP>22.22222137</TUN_TEMP>
+    <SPARGE_TEMP>75.55555725</SPARGE_TEMP>
+    <SG_LAST_RUNNINGS>1.00999999</SG_LAST_RUNNINGS>
+    <PH_LAST_RUNNINGS>6</PH_LAST_RUNNINGS>
+    <PH>5.400000095</PH>
+    <TUN_WEIGHT>5</TUN_WEIGHT>
+    <TUN_SPECIFIC_HEAT>0.1199999973</TUN_SPECIFIC_HEAT>
+    <EQUIP_ADJUST>FALSE</EQUIP_ADJUST>
+    <MASH_STEPS>
+      <MASH_STEP>
+        <NAME>Amylaserust</NAME>
+        <VERSION>1</VERSION>
+        <TYPE>Infusion</TYPE>
+        <INFUSE_AMOUNT>11.82948017</INFUSE_AMOUNT>
+        <STEP_TEMP>64</STEP_TEMP>
+        <STEP_TIME>75</STEP_TIME>
+        <RAMP_TIME>2</RAMP_TIME>
+        <END_TEMP>64</END_TEMP>
+        <WATER_GRAIN_RATIO>0.00 l/kg</WATER_GRAIN_RATIO>
+        <DECOCTION_AMT>0.0</DECOCTION_AMT>
+        <DISPLAY_INFUSE_AMT>11.8 l</DISPLAY_INFUSE_AMT>
+        <DISPLAY_STEP_TEMP>64.0 °C</DISPLAY_STEP_TEMP>
+        <PH>5.300000191</PH>
+      </MASH_STEP>
+      <MASH_STEP>
+        <NAME>Uitmaischen</NAME>
+        <VERSION>1</VERSION>
+        <TYPE>Infusion</TYPE>
+        <INFUSE_AMOUNT>7.570867062</INFUSE_AMOUNT>
+        <STEP_TEMP>78</STEP_TEMP>
+        <STEP_TIME>10</STEP_TIME>
+        <RAMP_TIME>2</RAMP_TIME>
+        <END_TEMP>78</END_TEMP>
+        <WATER_GRAIN_RATIO>0.00 l/kg</WATER_GRAIN_RATIO>
+        <DECOCTION_AMT>0.0</DECOCTION_AMT>
+        <DISPLAY_INFUSE_AMT>7.6 l</DISPLAY_INFUSE_AMT>
+        <DISPLAY_STEP_TEMP>78.0 °C</DISPLAY_STEP_TEMP>
+        <PH>5.300000191</PH>
+      </MASH_STEP>
+    </MASH_STEPS>
+  </MASH>
+  <MASH>
+    <NAME>67, 78, infusie. medium body</NAME>
+    <NOTES>Eenvoudige eenstaps infusie. Geschikt voor de meeste moderne mouten.</NOTES>
+    <VERSION>1</VERSION>
+    <GRAIN_TEMP>22.22222137</GRAIN_TEMP>
+    <TUN_TEMP>22.22222137</TUN_TEMP>
+    <SPARGE_TEMP>75.55555725</SPARGE_TEMP>
+    <SG_LAST_RUNNINGS>1.00999999</SG_LAST_RUNNINGS>
+    <PH_LAST_RUNNINGS>6</PH_LAST_RUNNINGS>
+    <PH>5.400000095</PH>
+    <TUN_WEIGHT>5</TUN_WEIGHT>
+    <TUN_SPECIFIC_HEAT>0.1199999973</TUN_SPECIFIC_HEAT>
+    <EQUIP_ADJUST>FALSE</EQUIP_ADJUST>
+    <MASH_STEPS>
+      <MASH_STEP>
+        <NAME>Amylaserust</NAME>
+        <VERSION>1</VERSION>
+        <TYPE>Infusion</TYPE>
+        <INFUSE_AMOUNT>11.82948017</INFUSE_AMOUNT>
+        <STEP_TEMP>67</STEP_TEMP>
+        <STEP_TIME>60</STEP_TIME>
+        <RAMP_TIME>2</RAMP_TIME>
+        <END_TEMP>67</END_TEMP>
+        <WATER_GRAIN_RATIO>0.00 l/kg</WATER_GRAIN_RATIO>
+        <DECOCTION_AMT>0.0</DECOCTION_AMT>
+        <DISPLAY_INFUSE_AMT>11.8 l</DISPLAY_INFUSE_AMT>
+        <DISPLAY_STEP_TEMP>67.0 °C</DISPLAY_STEP_TEMP>
+        <PH>5.300000191</PH>
+      </MASH_STEP>
+      <MASH_STEP>
+        <NAME>Uitmaischen</NAME>
+        <VERSION>1</VERSION>
+        <TYPE>Infusion</TYPE>
+        <INFUSE_AMOUNT>6.624508858</INFUSE_AMOUNT>
+        <STEP_TEMP>78</STEP_TEMP>
+        <STEP_TIME>10</STEP_TIME>
+        <RAMP_TIME>2</RAMP_TIME>
+        <END_TEMP>78</END_TEMP>
+        <WATER_GRAIN_RATIO>0.00 l/kg</WATER_GRAIN_RATIO>
+        <DECOCTION_AMT>0.0</DECOCTION_AMT>
+        <DISPLAY_INFUSE_AMT>6.6 l</DISPLAY_INFUSE_AMT>
+        <DISPLAY_STEP_TEMP>78.0 °C</DISPLAY_STEP_TEMP>
+        <PH>5.300000191</PH>
+      </MASH_STEP>
+    </MASH_STEPS>
+  </MASH>
+  <MASH>
+    <NAME>67. medium body</NAME>
+    <NOTES>Eenstapsmaisch met directe verwarming van de maischketel. Directe verwarming zorgt voor het warm houden en opwarmen van het beslag.</NOTES>
+    <VERSION>1</VERSION>
+    <GRAIN_TEMP>22.22222137</GRAIN_TEMP>
+    <TUN_TEMP>22.22222137</TUN_TEMP>
+    <SPARGE_TEMP>75.55555725</SPARGE_TEMP>
+    <SG_LAST_RUNNINGS>1.00999999</SG_LAST_RUNNINGS>
+    <PH_LAST_RUNNINGS>6</PH_LAST_RUNNINGS>
+    <PH>5.400000095</PH>
+    <TUN_WEIGHT>5</TUN_WEIGHT>
+    <TUN_SPECIFIC_HEAT>0.1199999973</TUN_SPECIFIC_HEAT>
+    <EQUIP_ADJUST>FALSE</EQUIP_ADJUST>
+    <MASH_STEPS>
+      <MASH_STEP>
+        <NAME>Amylaserust</NAME>
+        <VERSION>1</VERSION>
+        <TYPE>Infusion</TYPE>
+        <INFUSE_AMOUNT>11.82948017</INFUSE_AMOUNT>
+        <STEP_TEMP>67</STEP_TEMP>
+        <STEP_TIME>60</STEP_TIME>
+        <RAMP_TIME>2</RAMP_TIME>
+        <END_TEMP>67</END_TEMP>
+        <WATER_GRAIN_RATIO>0.00 l/kg</WATER_GRAIN_RATIO>
+        <DECOCTION_AMT>0.0</DECOCTION_AMT>
+        <DISPLAY_INFUSE_AMT>11.8 l</DISPLAY_INFUSE_AMT>
+        <DISPLAY_STEP_TEMP>67.0 °C</DISPLAY_STEP_TEMP>
+        <PH>5.300000191</PH>
+      </MASH_STEP>
+    </MASH_STEPS>
+  </MASH>
+  <MASH>
+    <NAME>69, 78. volle body</NAME>
+    <NOTES>Eenstapsmaisch met directe verwarming van de maischketel. Directe verwarming zorgt voor het warm houden en opwarmen van het beslag.</NOTES>
+    <VERSION>1</VERSION>
+    <GRAIN_TEMP>22.22222137</GRAIN_TEMP>
+    <TUN_TEMP>22.22222137</TUN_TEMP>
+    <SPARGE_TEMP>75.55555725</SPARGE_TEMP>
+    <SG_LAST_RUNNINGS>1.00999999</SG_LAST_RUNNINGS>
+    <PH_LAST_RUNNINGS>6</PH_LAST_RUNNINGS>
+    <PH>5.400000095</PH>
+    <TUN_WEIGHT>5</TUN_WEIGHT>
+    <TUN_SPECIFIC_HEAT>0.1199999973</TUN_SPECIFIC_HEAT>
+    <EQUIP_ADJUST>FALSE</EQUIP_ADJUST>
+    <MASH_STEPS>
+      <MASH_STEP>
+        <NAME>Amylaserust</NAME>
+        <VERSION>1</VERSION>
+        <TYPE>Infusion</TYPE>
+        <INFUSE_AMOUNT>11.82948017</INFUSE_AMOUNT>
+        <STEP_TEMP>69</STEP_TEMP>
+        <STEP_TIME>40</STEP_TIME>
+        <RAMP_TIME>1</RAMP_TIME>
+        <END_TEMP>69</END_TEMP>
+        <WATER_GRAIN_RATIO>0.00 l/kg</WATER_GRAIN_RATIO>
+        <DECOCTION_AMT>0.0</DECOCTION_AMT>
+        <DISPLAY_INFUSE_AMT>11.8 l</DISPLAY_INFUSE_AMT>
+        <DISPLAY_STEP_TEMP>69.0 °C</DISPLAY_STEP_TEMP>
+        <PH>5.300000191</PH>
+      </MASH_STEP>
+      <MASH_STEP>
+        <NAME>Uitmaischen</NAME>
+        <VERSION>1</VERSION>
+        <TYPE>Temperature</TYPE>
+        <STEP_TEMP>78</STEP_TEMP>
+        <STEP_TIME>10</STEP_TIME>
+        <RAMP_TIME>10</RAMP_TIME>
+        <END_TEMP>78</END_TEMP>
+        <WATER_GRAIN_RATIO>0.00 l/kg</WATER_GRAIN_RATIO>
+        <DECOCTION_AMT>0.0</DECOCTION_AMT>
+        <DISPLAY_STEP_TEMP>78.0 °C</DISPLAY_STEP_TEMP>
+        <PH>5.300000191</PH>
+      </MASH_STEP>
+    </MASH_STEPS>
+  </MASH>
+  <MASH>
+    <NAME>64, 78. lichte body</NAME>
+    <NOTES>Eenstapsmaisch met directe verwarming van de maischketel. Directe verwarming zorgt voor het warm houden en opwarmen van het beslag.</NOTES>
+    <VERSION>1</VERSION>
+    <GRAIN_TEMP>22.22222137</GRAIN_TEMP>
+    <TUN_TEMP>22.22222137</TUN_TEMP>
+    <SPARGE_TEMP>75.55555725</SPARGE_TEMP>
+    <SG_LAST_RUNNINGS>1.00999999</SG_LAST_RUNNINGS>
+    <PH_LAST_RUNNINGS>6</PH_LAST_RUNNINGS>
+    <PH>5.400000095</PH>
+    <TUN_WEIGHT>5</TUN_WEIGHT>
+    <TUN_SPECIFIC_HEAT>0.1199999973</TUN_SPECIFIC_HEAT>
+    <EQUIP_ADJUST>FALSE</EQUIP_ADJUST>
+    <MASH_STEPS>
+      <MASH_STEP>
+        <NAME>Amylaserust</NAME>
+        <VERSION>1</VERSION>
+        <TYPE>Infusion</TYPE>
+        <INFUSE_AMOUNT>11.82948017</INFUSE_AMOUNT>
+        <STEP_TEMP>64</STEP_TEMP>
+        <STEP_TIME>75</STEP_TIME>
+        <RAMP_TIME>1</RAMP_TIME>
+        <END_TEMP>64</END_TEMP>
+        <WATER_GRAIN_RATIO>0.00 l/kg</WATER_GRAIN_RATIO>
+        <DECOCTION_AMT>0.0</DECOCTION_AMT>
+        <DISPLAY_INFUSE_AMT>11.8 l</DISPLAY_INFUSE_AMT>
+        <DISPLAY_STEP_TEMP>64.0 °C</DISPLAY_STEP_TEMP>
+        <PH>5.300000191</PH>
+      </MASH_STEP>
+      <MASH_STEP>
+        <NAME>Uitmaischen</NAME>
+        <VERSION>1</VERSION>
+        <TYPE>Temperature</TYPE>
+        <STEP_TEMP>78</STEP_TEMP>
+        <STEP_TIME>10</STEP_TIME>
+        <RAMP_TIME>10</RAMP_TIME>
+        <END_TEMP>78</END_TEMP>
+        <WATER_GRAIN_RATIO>0.00 l/kg</WATER_GRAIN_RATIO>
+        <DECOCTION_AMT>0.0</DECOCTION_AMT>
+        <DISPLAY_STEP_TEMP>78.0 °C</DISPLAY_STEP_TEMP>
+        <PH>5.300000191</PH>
+      </MASH_STEP>
+    </MASH_STEPS>
+  </MASH>
+  <MASH>
+    <NAME>67, 78. medium body</NAME>
+    <NOTES>Eenstapsmaisch met directe verwarming van de maischketel. Directe verwarming zorgt voor het warm houden en opwarmen van het beslag.</NOTES>
+    <VERSION>1</VERSION>
+    <GRAIN_TEMP>22.22222137</GRAIN_TEMP>
+    <TUN_TEMP>22.22222137</TUN_TEMP>
+    <SPARGE_TEMP>75.55555725</SPARGE_TEMP>
+    <SG_LAST_RUNNINGS>1.00999999</SG_LAST_RUNNINGS>
+    <PH_LAST_RUNNINGS>6</PH_LAST_RUNNINGS>
+    <PH>5.400000095</PH>
+    <TUN_WEIGHT>5</TUN_WEIGHT>
+    <TUN_SPECIFIC_HEAT>0.1199999973</TUN_SPECIFIC_HEAT>
+    <EQUIP_ADJUST>FALSE</EQUIP_ADJUST>
+    <MASH_STEPS>
+      <MASH_STEP>
+        <NAME>Amylaserust</NAME>
+        <VERSION>1</VERSION>
+        <TYPE>Infusion</TYPE>
+        <INFUSE_AMOUNT>11.82948017</INFUSE_AMOUNT>
+        <STEP_TEMP>67</STEP_TEMP>
+        <STEP_TIME>60</STEP_TIME>
+        <RAMP_TIME>1</RAMP_TIME>
+        <END_TEMP>67</END_TEMP>
+        <WATER_GRAIN_RATIO>0.00 l/kg</WATER_GRAIN_RATIO>
+        <DECOCTION_AMT>0.0</DECOCTION_AMT>
+        <DISPLAY_INFUSE_AMT>11.8 l</DISPLAY_INFUSE_AMT>
+        <DISPLAY_STEP_TEMP>67.0 °C</DISPLAY_STEP_TEMP>
+        <PH>5.300000191</PH>
+      </MASH_STEP>
+      <MASH_STEP>
+        <NAME>Uitmaischen</NAME>
+        <VERSION>1</VERSION>
+        <TYPE>Temperature</TYPE>
+        <STEP_TEMP>78</STEP_TEMP>
+        <STEP_TIME>10</STEP_TIME>
+        <RAMP_TIME>10</RAMP_TIME>
+        <END_TEMP>78</END_TEMP>
+        <WATER_GRAIN_RATIO>0.00 l/kg</WATER_GRAIN_RATIO>
+        <DECOCTION_AMT>0.0</DECOCTION_AMT>
+        <DISPLAY_STEP_TEMP>78.0 °C</DISPLAY_STEP_TEMP>
+        <PH>5.300000191</PH>
+      </MASH_STEP>
+    </MASH_STEPS>
+  </MASH>
+  <MASH>
+    <NAME>62, 72, 78. volle body</NAME>
+    <NOTES>Tweestapsmaisch met eiwitrust en directe verwarming van de maischketel. Directe verwarming zorgt voor het warm houden en opwarmen van het beslag.</NOTES>
+    <VERSION>1</VERSION>
+    <GRAIN_TEMP>22.22222137</GRAIN_TEMP>
+    <TUN_TEMP>22.22222137</TUN_TEMP>
+    <SPARGE_TEMP>75.55555725</SPARGE_TEMP>
+    <SG_LAST_RUNNINGS>1.00999999</SG_LAST_RUNNINGS>
+    <PH_LAST_RUNNINGS>6</PH_LAST_RUNNINGS>
+    <PH>5.400000095</PH>
+    <TUN_WEIGHT>5</TUN_WEIGHT>
+    <TUN_SPECIFIC_HEAT>0.1199999973</TUN_SPECIFIC_HEAT>
+    <EQUIP_ADJUST>FALSE</EQUIP_ADJUST>
+    <MASH_STEPS>
+      <MASH_STEP>
+        <NAME>Beta-amylaserust</NAME>
+        <VERSION>1</VERSION>
+        <TYPE>Infusion</TYPE>
+        <INFUSE_AMOUNT>11.82948017</INFUSE_AMOUNT>
+        <STEP_TEMP>62</STEP_TEMP>
+        <STEP_TIME>10</STEP_TIME>
+        <RAMP_TIME>1</RAMP_TIME>
+        <END_TEMP>62</END_TEMP>
+        <WATER_GRAIN_RATIO>0.00 l/kg</WATER_GRAIN_RATIO>
+        <DECOCTION_AMT>0.0</DECOCTION_AMT>
+        <DISPLAY_INFUSE_AMT>11.8 l</DISPLAY_INFUSE_AMT>
+        <DISPLAY_STEP_TEMP>62.0 °C</DISPLAY_STEP_TEMP>
+        <PH>5.300000191</PH>
+      </MASH_STEP>
+      <MASH_STEP>
+        <NAME>Alfa-amylaserust</NAME>
+        <VERSION>1</VERSION>
+        <TYPE>Temperature</TYPE>
+        <STEP_TEMP>72</STEP_TEMP>
+        <STEP_TIME>45</STEP_TIME>
+        <RAMP_TIME>15</RAMP_TIME>
+        <END_TEMP>72</END_TEMP>
+        <WATER_GRAIN_RATIO>0.00 l/kg</WATER_GRAIN_RATIO>
+        <DECOCTION_AMT>0.0</DECOCTION_AMT>
+        <DISPLAY_STEP_TEMP>72.0 °C</DISPLAY_STEP_TEMP>
+        <PH>5.300000191</PH>
+      </MASH_STEP>
+      <MASH_STEP>
+        <NAME>Uitmaischen</NAME>
+        <VERSION>1</VERSION>
+        <TYPE>Temperature</TYPE>
+        <STEP_TEMP>78</STEP_TEMP>
+        <STEP_TIME>5</STEP_TIME>
+        <RAMP_TIME>10</RAMP_TIME>
+        <END_TEMP>78</END_TEMP>
+        <WATER_GRAIN_RATIO>0.00 l/kg</WATER_GRAIN_RATIO>
+        <DECOCTION_AMT>0.0</DECOCTION_AMT>
+        <DISPLAY_STEP_TEMP>78.0 °C</DISPLAY_STEP_TEMP>
+        <PH>5.300000191</PH>
+      </MASH_STEP>
+    </MASH_STEPS>
+  </MASH>
+  <MASH>
+    <NAME>62, 72, 78. lichte body</NAME>
+    <NOTES>Tweestapsmaisch met eiwitrust en directe verwarming van de maischketel.  Directe verwarming zorgt voor het warm houden en opwarmen van het beslag.</NOTES>
+    <VERSION>1</VERSION>
+    <GRAIN_TEMP>22.22222137</GRAIN_TEMP>
+    <TUN_TEMP>22.22222137</TUN_TEMP>
+    <SPARGE_TEMP>75.55555725</SPARGE_TEMP>
+    <SG_LAST_RUNNINGS>1.00999999</SG_LAST_RUNNINGS>
+    <PH_LAST_RUNNINGS>6</PH_LAST_RUNNINGS>
+    <PH>5.400000095</PH>
+    <TUN_WEIGHT>5</TUN_WEIGHT>
+    <TUN_SPECIFIC_HEAT>0.1199999973</TUN_SPECIFIC_HEAT>
+    <EQUIP_ADJUST>FALSE</EQUIP_ADJUST>
+    <MASH_STEPS>
+      <MASH_STEP>
+        <NAME>Beta-amylaserust</NAME>
+        <VERSION>1</VERSION>
+        <TYPE>Infusion</TYPE>
+        <INFUSE_AMOUNT>11.82948017</INFUSE_AMOUNT>
+        <STEP_TEMP>62</STEP_TEMP>
+        <STEP_TIME>45</STEP_TIME>
+        <RAMP_TIME>1</RAMP_TIME>
+        <END_TEMP>62</END_TEMP>
+        <WATER_GRAIN_RATIO>0.00 l/kg</WATER_GRAIN_RATIO>
+        <DECOCTION_AMT>0.0</DECOCTION_AMT>
+        <DISPLAY_INFUSE_AMT>11.8 l</DISPLAY_INFUSE_AMT>
+        <DISPLAY_STEP_TEMP>62.0 °C</DISPLAY_STEP_TEMP>
+        <PH>5.300000191</PH>
+      </MASH_STEP>
+      <MASH_STEP>
+        <NAME>Alfa-amylaserust</NAME>
+        <VERSION>1</VERSION>
+        <TYPE>Temperature</TYPE>
+        <STEP_TEMP>72</STEP_TEMP>
+        <STEP_TIME>10</STEP_TIME>
+        <RAMP_TIME>15</RAMP_TIME>
+        <END_TEMP>72</END_TEMP>
+        <WATER_GRAIN_RATIO>0.00 l/kg</WATER_GRAIN_RATIO>
+        <DECOCTION_AMT>0.0</DECOCTION_AMT>
+        <DISPLAY_STEP_TEMP>72.0 °C</DISPLAY_STEP_TEMP>
+        <PH>5.300000191</PH>
+      </MASH_STEP>
+      <MASH_STEP>
+        <NAME>Uitmaischen</NAME>
+        <VERSION>1</VERSION>
+        <TYPE>Temperature</TYPE>
+        <STEP_TEMP>78</STEP_TEMP>
+        <STEP_TIME>5</STEP_TIME>
+        <RAMP_TIME>10</RAMP_TIME>
+        <END_TEMP>78</END_TEMP>
+        <WATER_GRAIN_RATIO>0.00 l/kg</WATER_GRAIN_RATIO>
+        <DECOCTION_AMT>0.0</DECOCTION_AMT>
+        <DISPLAY_STEP_TEMP>78.0 °C</DISPLAY_STEP_TEMP>
+        <PH>5.300000191</PH>
+      </MASH_STEP>
+    </MASH_STEPS>
+  </MASH>
+  <MASH>
+    <NAME>62, 72, 78. medium body</NAME>
+    <NOTES>Tweestapsmaisch met eiwitrust en directe verwarming van de maischketel.  Directe verwarming zorgt voor het warm houden en opwarmen van het beslag.</NOTES>
+    <VERSION>1</VERSION>
+    <GRAIN_TEMP>22.22222137</GRAIN_TEMP>
+    <TUN_TEMP>22.22222137</TUN_TEMP>
+    <SPARGE_TEMP>75.55555725</SPARGE_TEMP>
+    <SG_LAST_RUNNINGS>1.00999999</SG_LAST_RUNNINGS>
+    <PH_LAST_RUNNINGS>6</PH_LAST_RUNNINGS>
+    <PH>5.400000095</PH>
+    <TUN_WEIGHT>5</TUN_WEIGHT>
+    <TUN_SPECIFIC_HEAT>0.1199999973</TUN_SPECIFIC_HEAT>
+    <EQUIP_ADJUST>FALSE</EQUIP_ADJUST>
+    <MASH_STEPS>
+      <MASH_STEP>
+        <NAME>Beta-amylaserust</NAME>
+        <VERSION>1</VERSION>
+        <TYPE>Infusion</TYPE>
+        <INFUSE_AMOUNT>11.82948017</INFUSE_AMOUNT>
+        <STEP_TEMP>62</STEP_TEMP>
+        <STEP_TIME>20</STEP_TIME>
+        <RAMP_TIME>1</RAMP_TIME>
+        <END_TEMP>62</END_TEMP>
+        <WATER_GRAIN_RATIO>0.00 l/kg</WATER_GRAIN_RATIO>
+        <DECOCTION_AMT>0.0</DECOCTION_AMT>
+        <DISPLAY_INFUSE_AMT>11.8 l</DISPLAY_INFUSE_AMT>
+        <DISPLAY_STEP_TEMP>62.0 °C</DISPLAY_STEP_TEMP>
+        <PH>5.300000191</PH>
+      </MASH_STEP>
+      <MASH_STEP>
+        <NAME>Alfa-amylaserust</NAME>
+        <VERSION>1</VERSION>
+        <TYPE>Temperature</TYPE>
+        <STEP_TEMP>72</STEP_TEMP>
+        <STEP_TIME>30</STEP_TIME>
+        <RAMP_TIME>15</RAMP_TIME>
+        <END_TEMP>72</END_TEMP>
+        <WATER_GRAIN_RATIO>0.00 l/kg</WATER_GRAIN_RATIO>
+        <DECOCTION_AMT>0.0</DECOCTION_AMT>
+        <DISPLAY_STEP_TEMP>72.0 °C</DISPLAY_STEP_TEMP>
+        <PH>5.300000191</PH>
+      </MASH_STEP>
+      <MASH_STEP>
+        <NAME>Uitmaischen</NAME>
+        <VERSION>1</VERSION>
+        <TYPE>Temperature</TYPE>
+        <STEP_TEMP>78</STEP_TEMP>
+        <STEP_TIME>5</STEP_TIME>
+        <RAMP_TIME>10</RAMP_TIME>
+        <END_TEMP>78</END_TEMP>
+        <WATER_GRAIN_RATIO>0.00 l/kg</WATER_GRAIN_RATIO>
+        <DECOCTION_AMT>0.0</DECOCTION_AMT>
+        <DISPLAY_STEP_TEMP>78.0 °C</DISPLAY_STEP_TEMP>
+        <PH>5.300000191</PH>
+      </MASH_STEP>
+    </MASH_STEPS>
+  </MASH>
+  <MASH>
+    <NAME>50, 69, 78. volle body</NAME>
+    <NOTES>Tweestapsmaisch met eiwitrust en directe verwarming van de maischketel. Voor bieren met veel ongemoute granen in de stort. Directe verwarming zorgt voor het warm houden en opwarmen van het beslag.</NOTES>
+    <VERSION>1</VERSION>
+    <GRAIN_TEMP>22.22222137</GRAIN_TEMP>
+    <TUN_TEMP>22.22222137</TUN_TEMP>
+    <SPARGE_TEMP>75.55555725</SPARGE_TEMP>
+    <SG_LAST_RUNNINGS>1.00999999</SG_LAST_RUNNINGS>
+    <PH_LAST_RUNNINGS>6</PH_LAST_RUNNINGS>
+    <PH>5.400000095</PH>
+    <TUN_WEIGHT>5</TUN_WEIGHT>
+    <TUN_SPECIFIC_HEAT>0.1199999973</TUN_SPECIFIC_HEAT>
+    <EQUIP_ADJUST>FALSE</EQUIP_ADJUST>
+    <MASH_STEPS>
+      <MASH_STEP>
+        <NAME>Eiwitrust</NAME>
+        <VERSION>1</VERSION>
+        <TYPE>Infusion</TYPE>
+        <INFUSE_AMOUNT>11.82948017</INFUSE_AMOUNT>
+        <STEP_TEMP>50</STEP_TEMP>
+        <STEP_TIME>30</STEP_TIME>
+        <RAMP_TIME>2</RAMP_TIME>
+        <END_TEMP>50</END_TEMP>
+        <WATER_GRAIN_RATIO>0.00 l/kg</WATER_GRAIN_RATIO>
+        <DECOCTION_AMT>0.0</DECOCTION_AMT>
+        <DISPLAY_INFUSE_AMT>11.8 l</DISPLAY_INFUSE_AMT>
+        <DISPLAY_STEP_TEMP>50.0 °C</DISPLAY_STEP_TEMP>
+        <PH>5.300000191</PH>
+      </MASH_STEP>
+      <MASH_STEP>
+        <NAME>Amylaserust</NAME>
+        <VERSION>1</VERSION>
+        <TYPE>Temperature</TYPE>
+        <STEP_TEMP>69</STEP_TEMP>
+        <STEP_TIME>30</STEP_TIME>
+        <RAMP_TIME>15</RAMP_TIME>
+        <END_TEMP>69</END_TEMP>
+        <WATER_GRAIN_RATIO>0.00 l/kg</WATER_GRAIN_RATIO>
+        <DECOCTION_AMT>0.0</DECOCTION_AMT>
+        <DISPLAY_STEP_TEMP>69.0 °C</DISPLAY_STEP_TEMP>
+        <PH>5.300000191</PH>
+      </MASH_STEP>
+      <MASH_STEP>
+        <NAME>Uitmaischen</NAME>
+        <VERSION>1</VERSION>
+        <TYPE>Temperature</TYPE>
+        <STEP_TEMP>78</STEP_TEMP>
+        <STEP_TIME>10</STEP_TIME>
+        <RAMP_TIME>10</RAMP_TIME>
+        <END_TEMP>78</END_TEMP>
+        <WATER_GRAIN_RATIO>0.00 l/kg</WATER_GRAIN_RATIO>
+        <DECOCTION_AMT>0.0</DECOCTION_AMT>
+        <DISPLAY_STEP_TEMP>78.0 °C</DISPLAY_STEP_TEMP>
+        <PH>5.300000191</PH>
+      </MASH_STEP>
+    </MASH_STEPS>
+  </MASH>
+  <MASH>
+    <NAME>50, 64, 78. lichte body</NAME>
+    <NOTES>Tweestapsmaisch met eiwitrust en directe verwarming van de maischketel. Voor bieren met veel ongemoute granen in de stort. Directe verwarming zorgt voor het warm houden en opwarmen van het beslag.</NOTES>
+    <VERSION>1</VERSION>
+    <GRAIN_TEMP>22.22222137</GRAIN_TEMP>
+    <TUN_TEMP>22.22222137</TUN_TEMP>
+    <SPARGE_TEMP>75.55555725</SPARGE_TEMP>
+    <SG_LAST_RUNNINGS>1.00999999</SG_LAST_RUNNINGS>
+    <PH_LAST_RUNNINGS>6</PH_LAST_RUNNINGS>
+    <PH>5.400000095</PH>
+    <TUN_WEIGHT>5</TUN_WEIGHT>
+    <TUN_SPECIFIC_HEAT>0.1199999973</TUN_SPECIFIC_HEAT>
+    <EQUIP_ADJUST>FALSE</EQUIP_ADJUST>
+    <MASH_STEPS>
+      <MASH_STEP>
+        <NAME>Eiwitrust</NAME>
+        <VERSION>1</VERSION>
+        <TYPE>Infusion</TYPE>
+        <INFUSE_AMOUNT>11.82948017</INFUSE_AMOUNT>
+        <STEP_TEMP>50</STEP_TEMP>
+        <STEP_TIME>30</STEP_TIME>
+        <RAMP_TIME>2</RAMP_TIME>
+        <END_TEMP>50</END_TEMP>
+        <WATER_GRAIN_RATIO>0.00 l/kg</WATER_GRAIN_RATIO>
+        <DECOCTION_AMT>0.0</DECOCTION_AMT>
+        <DISPLAY_INFUSE_AMT>11.8 l</DISPLAY_INFUSE_AMT>
+        <DISPLAY_STEP_TEMP>50.0 °C</DISPLAY_STEP_TEMP>
+        <PH>5.300000191</PH>
+      </MASH_STEP>
+      <MASH_STEP>
+        <NAME>Amylaserust</NAME>
+        <VERSION>1</VERSION>
+        <TYPE>Temperature</TYPE>
+        <STEP_TEMP>64</STEP_TEMP>
+        <STEP_TIME>75</STEP_TIME>
+        <RAMP_TIME>15</RAMP_TIME>
+        <END_TEMP>64</END_TEMP>
+        <WATER_GRAIN_RATIO>0.00 l/kg</WATER_GRAIN_RATIO>
+        <DECOCTION_AMT>0.0</DECOCTION_AMT>
+        <DISPLAY_STEP_TEMP>64.0 °C</DISPLAY_STEP_TEMP>
+        <PH>5.300000191</PH>
+      </MASH_STEP>
+      <MASH_STEP>
+        <NAME>Uitmaischen</NAME>
+        <VERSION>1</VERSION>
+        <TYPE>Temperature</TYPE>
+        <STEP_TEMP>78</STEP_TEMP>
+        <STEP_TIME>10</STEP_TIME>
+        <RAMP_TIME>10</RAMP_TIME>
+        <END_TEMP>78</END_TEMP>
+        <WATER_GRAIN_RATIO>0.00 l/kg</WATER_GRAIN_RATIO>
+        <DECOCTION_AMT>0.0</DECOCTION_AMT>
+        <DISPLAY_STEP_TEMP>78.0 °C</DISPLAY_STEP_TEMP>
+        <PH>5.300000191</PH>
+      </MASH_STEP>
+    </MASH_STEPS>
+  </MASH>
+  <MASH>
+    <NAME>50, 67, 78. medium body</NAME>
+    <NOTES>Tweestapsmaisch met eiwitrust en directe verwarming van de maischketel. Voor bieren met veel ongemoute granen in de stort. Directe verwarming zorgt voor het warm houden en opwarmen van het beslag.</NOTES>
+    <VERSION>1</VERSION>
+    <GRAIN_TEMP>22.22222137</GRAIN_TEMP>
+    <TUN_TEMP>22.22222137</TUN_TEMP>
+    <SPARGE_TEMP>75.55555725</SPARGE_TEMP>
+    <SG_LAST_RUNNINGS>1.00999999</SG_LAST_RUNNINGS>
+    <PH_LAST_RUNNINGS>6</PH_LAST_RUNNINGS>
+    <PH>5.400000095</PH>
+    <TUN_WEIGHT>5</TUN_WEIGHT>
+    <TUN_SPECIFIC_HEAT>0.1199999973</TUN_SPECIFIC_HEAT>
+    <EQUIP_ADJUST>FALSE</EQUIP_ADJUST>
+    <MASH_STEPS>
+      <MASH_STEP>
+        <NAME>Eiwitrust</NAME>
+        <VERSION>1</VERSION>
+        <TYPE>Infusion</TYPE>
+        <INFUSE_AMOUNT>11.82948017</INFUSE_AMOUNT>
+        <STEP_TEMP>50</STEP_TEMP>
+        <STEP_TIME>30</STEP_TIME>
+        <RAMP_TIME>2</RAMP_TIME>
+        <END_TEMP>50</END_TEMP>
+        <WATER_GRAIN_RATIO>0.00 l/kg</WATER_GRAIN_RATIO>
+        <DECOCTION_AMT>0.0</DECOCTION_AMT>
+        <DISPLAY_INFUSE_AMT>11.8 l</DISPLAY_INFUSE_AMT>
+        <DISPLAY_STEP_TEMP>50.0 °C</DISPLAY_STEP_TEMP>
+        <PH>5.300000191</PH>
+      </MASH_STEP>
+      <MASH_STEP>
+        <NAME>Amylaserust</NAME>
+        <VERSION>1</VERSION>
+        <TYPE>Temperature</TYPE>
+        <STEP_TEMP>67</STEP_TEMP>
+        <STEP_TIME>45</STEP_TIME>
+        <RAMP_TIME>15</RAMP_TIME>
+        <END_TEMP>67</END_TEMP>
+        <WATER_GRAIN_RATIO>0.00 l/kg</WATER_GRAIN_RATIO>
+        <DECOCTION_AMT>0.0</DECOCTION_AMT>
+        <DISPLAY_STEP_TEMP>67.0 °C</DISPLAY_STEP_TEMP>
+        <PH>5.300000191</PH>
+      </MASH_STEP>
+      <MASH_STEP>
+        <NAME>Uitmaischen</NAME>
+        <VERSION>1</VERSION>
+        <TYPE>Temperature</TYPE>
+        <STEP_TEMP>78</STEP_TEMP>
+        <STEP_TIME>10</STEP_TIME>
+        <RAMP_TIME>10</RAMP_TIME>
+        <END_TEMP>78</END_TEMP>
+        <WATER_GRAIN_RATIO>0.00 l/kg</WATER_GRAIN_RATIO>
+        <DECOCTION_AMT>0.0</DECOCTION_AMT>
+        <DISPLAY_STEP_TEMP>78.0 °C</DISPLAY_STEP_TEMP>
+        <PH>5.300000191</PH>
+      </MASH_STEP>
+    </MASH_STEPS>
+  </MASH>
+  <MASH>
+    <NAME>53, 62, 72, 78. lichte body</NAME>
+    <NOTES>Tweestapsmaisch met eiwitrust en directe verwarming van de maischketel. Voor bieren met veel ongemoute granen in de stort. Directe verwarming zorgt voor het warm houden en opwarmen van het beslag.</NOTES>
+    <VERSION>1</VERSION>
+    <GRAIN_TEMP>22.22222137</GRAIN_TEMP>
+    <TUN_TEMP>22.22222137</TUN_TEMP>
+    <SPARGE_TEMP>75.55555725</SPARGE_TEMP>
+    <SG_LAST_RUNNINGS>1.00999999</SG_LAST_RUNNINGS>
+    <PH_LAST_RUNNINGS>6</PH_LAST_RUNNINGS>
+    <PH>5.400000095</PH>
+    <TUN_WEIGHT>5</TUN_WEIGHT>
+    <TUN_SPECIFIC_HEAT>0.1199999973</TUN_SPECIFIC_HEAT>
+    <EQUIP_ADJUST>FALSE</EQUIP_ADJUST>
+    <MASH_STEPS>
+      <MASH_STEP>
+        <NAME>Eiwitrust</NAME>
+        <VERSION>1</VERSION>
+        <TYPE>Infusion</TYPE>
+        <INFUSE_AMOUNT>11.82948017</INFUSE_AMOUNT>
+        <STEP_TEMP>53</STEP_TEMP>
+        <STEP_TIME>20</STEP_TIME>
+        <RAMP_TIME>1</RAMP_TIME>
+        <END_TEMP>53</END_TEMP>
+        <WATER_GRAIN_RATIO>0.00 l/kg</WATER_GRAIN_RATIO>
+        <DECOCTION_AMT>0.0</DECOCTION_AMT>
+        <DISPLAY_INFUSE_AMT>11.8 l</DISPLAY_INFUSE_AMT>
+        <DISPLAY_STEP_TEMP>53.0 °C</DISPLAY_STEP_TEMP>
+        <PH>5.300000191</PH>
+      </MASH_STEP>
+      <MASH_STEP>
+        <NAME>Beta-amylase</NAME>
+        <VERSION>1</VERSION>
+        <TYPE>Temperature</TYPE>
+        <STEP_TEMP>62</STEP_TEMP>
+        <STEP_TIME>45</STEP_TIME>
+        <RAMP_TIME>10</RAMP_TIME>
+        <END_TEMP>62</END_TEMP>
+        <WATER_GRAIN_RATIO>0.00 l/kg</WATER_GRAIN_RATIO>
+        <DECOCTION_AMT>0.0</DECOCTION_AMT>
+        <INFUSE_TEMP>99.0 °C</INFUSE_TEMP>
+        <DISPLAY_STEP_TEMP>62.0 °C</DISPLAY_STEP_TEMP>
+        <PH>5.300000191</PH>
+      </MASH_STEP>
+      <MASH_STEP>
+        <NAME>Alfa-amylase</NAME>
+        <VERSION>1</VERSION>
+        <TYPE>Temperature</TYPE>
+        <STEP_TEMP>72</STEP_TEMP>
+        <STEP_TIME>10</STEP_TIME>
+        <RAMP_TIME>15</RAMP_TIME>
+        <END_TEMP>72</END_TEMP>
+        <WATER_GRAIN_RATIO>0.00 l/kg</WATER_GRAIN_RATIO>
+        <DECOCTION_AMT>0.0</DECOCTION_AMT>
+        <DISPLAY_STEP_TEMP>72.0 °C</DISPLAY_STEP_TEMP>
+        <PH>5.300000191</PH>
+      </MASH_STEP>
+      <MASH_STEP>
+        <NAME>Uitmaischen</NAME>
+        <VERSION>1</VERSION>
+        <TYPE>Temperature</TYPE>
+        <STEP_TEMP>78</STEP_TEMP>
+        <STEP_TIME>5</STEP_TIME>
+        <RAMP_TIME>10</RAMP_TIME>
+        <END_TEMP>78</END_TEMP>
+        <WATER_GRAIN_RATIO>0.00 l/kg</WATER_GRAIN_RATIO>
+        <DECOCTION_AMT>0.0</DECOCTION_AMT>
+        <DISPLAY_STEP_TEMP>78.0 °C</DISPLAY_STEP_TEMP>
+        <PH>5.300000191</PH>
+      </MASH_STEP>
+    </MASH_STEPS>
+  </MASH>
+  <MASH>
+    <NAME>53, 62, 72, 78. medium body</NAME>
+    <NOTES>Driestapsmaisch met eiwitrust en directe verwarming van de maischketel. Voor bieren met veel ongemoute granen in de stort. Directe verwarming zorgt voor het warm houden en opwarmen van het beslag.</NOTES>
+    <VERSION>1</VERSION>
+    <GRAIN_TEMP>22.22222137</GRAIN_TEMP>
+    <TUN_TEMP>22.22222137</TUN_TEMP>
+    <SPARGE_TEMP>75.55555725</SPARGE_TEMP>
+    <SG_LAST_RUNNINGS>1.00999999</SG_LAST_RUNNINGS>
+    <PH_LAST_RUNNINGS>6</PH_LAST_RUNNINGS>
+    <PH>5.400000095</PH>
+    <TUN_WEIGHT>5</TUN_WEIGHT>
+    <TUN_SPECIFIC_HEAT>0.1199999973</TUN_SPECIFIC_HEAT>
+    <EQUIP_ADJUST>FALSE</EQUIP_ADJUST>
+    <MASH_STEPS>
+      <MASH_STEP>
+        <NAME>Eiwitrust</NAME>
+        <VERSION>1</VERSION>
+        <TYPE>Infusion</TYPE>
+        <INFUSE_AMOUNT>11.82948017</INFUSE_AMOUNT>
+        <STEP_TEMP>53</STEP_TEMP>
+        <STEP_TIME>20</STEP_TIME>
+        <RAMP_TIME>1</RAMP_TIME>
+        <END_TEMP>53</END_TEMP>
+        <WATER_GRAIN_RATIO>0.00 l/kg</WATER_GRAIN_RATIO>
+        <DECOCTION_AMT>0.0</DECOCTION_AMT>
+        <DISPLAY_INFUSE_AMT>11.8 l</DISPLAY_INFUSE_AMT>
+        <DISPLAY_STEP_TEMP>53.0 °C</DISPLAY_STEP_TEMP>
+        <PH>5.300000191</PH>
+      </MASH_STEP>
+      <MASH_STEP>
+        <NAME>Beta-amylase</NAME>
+        <VERSION>1</VERSION>
+        <TYPE>Temperature</TYPE>
+        <STEP_TEMP>63</STEP_TEMP>
+        <STEP_TIME>30</STEP_TIME>
+        <RAMP_TIME>20</RAMP_TIME>
+        <END_TEMP>63</END_TEMP>
+        <WATER_GRAIN_RATIO>0.00 l/kg</WATER_GRAIN_RATIO>
+        <DECOCTION_AMT>0.0</DECOCTION_AMT>
+        <INFUSE_TEMP>99.0 °C</INFUSE_TEMP>
+        <DISPLAY_STEP_TEMP>63.0 °C</DISPLAY_STEP_TEMP>
+        <PH>5.300000191</PH>
+      </MASH_STEP>
+      <MASH_STEP>
+        <NAME>Alfa-amylase</NAME>
+        <VERSION>1</VERSION>
+        <TYPE>Temperature</TYPE>
+        <STEP_TEMP>72</STEP_TEMP>
+        <STEP_TIME>30</STEP_TIME>
+        <RAMP_TIME>15</RAMP_TIME>
+        <END_TEMP>72</END_TEMP>
+        <WATER_GRAIN_RATIO>0.00 l/kg</WATER_GRAIN_RATIO>
+        <DECOCTION_AMT>0.0</DECOCTION_AMT>
+        <DISPLAY_STEP_TEMP>72.0 °C</DISPLAY_STEP_TEMP>
+        <PH>5.300000191</PH>
+      </MASH_STEP>
+      <MASH_STEP>
+        <NAME>Uitmaischen</NAME>
+        <VERSION>1</VERSION>
+        <TYPE>Temperature</TYPE>
+        <STEP_TEMP>78</STEP_TEMP>
+        <STEP_TIME>5</STEP_TIME>
+        <RAMP_TIME>10</RAMP_TIME>
+        <END_TEMP>78</END_TEMP>
+        <WATER_GRAIN_RATIO>0.00 l/kg</WATER_GRAIN_RATIO>
+        <DECOCTION_AMT>0.0</DECOCTION_AMT>
+        <DISPLAY_STEP_TEMP>78.0 °C</DISPLAY_STEP_TEMP>
+        <PH>5.300000191</PH>
+      </MASH_STEP>
+    </MASH_STEPS>
+  </MASH>
+  <MASH>
+    <NAME>53, 62, 72, 78. volle body</NAME>
+    <NOTES>Driestapsmaisch met eiwitrust en directe verwarming van de maischketel. Voor bieren met veel ongemoute granen in de stort. Directe verwarming zorgt voor het warm houden en opwarmen van het beslag.</NOTES>
+    <VERSION>1</VERSION>
+    <GRAIN_TEMP>22.22222137</GRAIN_TEMP>
+    <TUN_TEMP>22.22222137</TUN_TEMP>
+    <SPARGE_TEMP>75.55555725</SPARGE_TEMP>
+    <SG_LAST_RUNNINGS>1.00999999</SG_LAST_RUNNINGS>
+    <PH_LAST_RUNNINGS>6</PH_LAST_RUNNINGS>
+    <PH>5.400000095</PH>
+    <TUN_WEIGHT>5</TUN_WEIGHT>
+    <TUN_SPECIFIC_HEAT>0.1199999973</TUN_SPECIFIC_HEAT>
+    <EQUIP_ADJUST>FALSE</EQUIP_ADJUST>
+    <MASH_STEPS>
+      <MASH_STEP>
+        <NAME>Eiwitrust</NAME>
+        <VERSION>1</VERSION>
+        <TYPE>Infusion</TYPE>
+        <INFUSE_AMOUNT>11.82948017</INFUSE_AMOUNT>
+        <STEP_TEMP>53</STEP_TEMP>
+        <STEP_TIME>20</STEP_TIME>
+        <RAMP_TIME>1</RAMP_TIME>
+        <END_TEMP>53</END_TEMP>
+        <WATER_GRAIN_RATIO>0.00 l/kg</WATER_GRAIN_RATIO>
+        <DECOCTION_AMT>0.0</DECOCTION_AMT>
+        <DISPLAY_INFUSE_AMT>11.8 l</DISPLAY_INFUSE_AMT>
+        <DISPLAY_STEP_TEMP>53.0 °C</DISPLAY_STEP_TEMP>
+        <PH>5.300000191</PH>
+      </MASH_STEP>
+      <MASH_STEP>
+        <NAME>Beta-amylase</NAME>
+        <VERSION>1</VERSION>
+        <TYPE>Temperature</TYPE>
+        <STEP_TEMP>63</STEP_TEMP>
+        <STEP_TIME>15</STEP_TIME>
+        <RAMP_TIME>20</RAMP_TIME>
+        <END_TEMP>63</END_TEMP>
+        <WATER_GRAIN_RATIO>0.00 l/kg</WATER_GRAIN_RATIO>
+        <DECOCTION_AMT>0.0</DECOCTION_AMT>
+        <INFUSE_TEMP>99.0 °C</INFUSE_TEMP>
+        <DISPLAY_STEP_TEMP>63.0 °C</DISPLAY_STEP_TEMP>
+        <PH>5.300000191</PH>
+      </MASH_STEP>
+      <MASH_STEP>
+        <NAME>Alfa-amylase</NAME>
+        <VERSION>1</VERSION>
+        <TYPE>Temperature</TYPE>
+        <STEP_TEMP>72</STEP_TEMP>
+        <STEP_TIME>30</STEP_TIME>
+        <RAMP_TIME>15</RAMP_TIME>
+        <END_TEMP>72</END_TEMP>
+        <WATER_GRAIN_RATIO>0.00 l/kg</WATER_GRAIN_RATIO>
+        <DECOCTION_AMT>0.0</DECOCTION_AMT>
+        <DISPLAY_STEP_TEMP>72.0 °C</DISPLAY_STEP_TEMP>
+        <PH>5.300000191</PH>
+      </MASH_STEP>
+      <MASH_STEP>
+        <NAME>Uitmaischen</NAME>
+        <VERSION>1</VERSION>
+        <TYPE>Temperature</TYPE>
+        <STEP_TEMP>78</STEP_TEMP>
+        <STEP_TIME>5</STEP_TIME>
+        <RAMP_TIME>10</RAMP_TIME>
+        <END_TEMP>78</END_TEMP>
+        <WATER_GRAIN_RATIO>0.00 l/kg</WATER_GRAIN_RATIO>
+        <DECOCTION_AMT>0.0</DECOCTION_AMT>
+        <DISPLAY_STEP_TEMP>78.0 °C</DISPLAY_STEP_TEMP>
+        <PH>5.300000191</PH>
+      </MASH_STEP>
+    </MASH_STEPS>
+  </MASH>
+</MASHS>
