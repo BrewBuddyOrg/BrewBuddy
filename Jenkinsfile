@@ -53,8 +53,8 @@ pipeline {
 	}
         success {
 //            notifySuccessful()
-            archiveArtifacts artifacts: 'brewbuddy', fingerprint: true
-            archiveArtifacts artifacts: 'brewbuddy.exe', fingerprint: true
+            archiveArtifacts artifacts: 'Output/brewbuddy', fingerprint: true
+            archiveArtifacts artifacts: 'Output/brewbuddy.exe', fingerprint: true
             echo "SUCCESS!"
             script {
                docker.image('taraworks/lazarus-cross:0.0.2').inside('-u root -v /var/jenkins_home/.lazarus:/var/jenkins_home/.lazarus'){
