@@ -16,7 +16,7 @@ pipeline {
         unstash 'scm'
         script {
 //          docker.image('taraworks/lazarus-cross:0.0.2').inside('-u root -v /var/jenkins_home/.lazarus:/var/jenkins_home/.lazarus'){
-          docker.image('taraworks/lazarus-cross:0.0.2').inside('-u root'){
+          docker.image('kirill/lazarus-cross:0.0.2').inside('-u root'){
             sh 'ls -al /root/ && pwd'
             sh '/usr/bin/apt-get install -y libfann-dev'
             sh 'pwd'
