@@ -5,7 +5,7 @@
     <General>
       <MainUnit Value="0"/>
       <AutoCreateForms Value="False"/>
-      <Title Value="brouwhulp"/>
+      <Title Value="brewbuddy"/>
       <UseAppBundle Value="False"/>
       <ResourceType Value="res"/>
       <Icon Value="0"/>
@@ -18,7 +18,7 @@
       <MajorVersionNr Value="5"/>
       <MinorVersionNr Value="4"/>
       <Language Value="0413"/>
-      <StringTable CompanyName="Brouwerij Het Witte Paard" FileDescription="BrouwHulp Eroica" InternalName="BrouwHulp" OriginalFilename="BrouwHulp" ProductName="BrouwHulp" ProductVersion="5.3.5.2"/>
+      <StringTable CompanyName="Brouwerij Het Witte Paard" FileDescription="BrewBuddy Sassy Saison" InternalName="BrewBuddy" OriginalFilename="BrewBuddy" ProductName="BrewBuddy" ProductVersion="5.3.5.2"/>
     </VersionInfo>
     <BuildModes Count="1" Active="Default">
       <Item1 Name="Default" Default="True"/>
@@ -67,7 +67,7 @@
     </RequiredPackages>
     <Units Count="199">
       <Unit0>
-        <Filename Value="brouwhulp.pas"/>
+        <Filename Value="brewbuddy.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="7"/>
@@ -554,8 +554,8 @@
         <UsageCount Value="7"/>
       </Unit57>
       <Unit58>
-        <Filename Value="brouwhulpgraph.pas"/>
-        <UnitName Value="BrouwHulpGraph"/>
+        <Filename Value="brewbuddygraph.pas"/>
+        <UnitName Value="BrewBuddyGraph"/>
         <TopLine Value="449"/>
         <CursorPos X="81" Y="463"/>
         <UsageCount Value="196"/>
@@ -1571,7 +1571,7 @@
   <CompilerOptions>
     <Version Value="11"/>
     <Target>
-      <Filename Value="../Output/brouwhulp"/>
+      <Filename Value="../Output/brewbuddy"/>
     </Target>
     <SearchPaths>
       <IncludeFiles Value="../Output;$(ProjOutDir)"/>
@@ -1591,8 +1591,8 @@
         <StackChecks Value="True"/>
       </Checks>
       <VerifyObjMethodCallValidity Value="True"/>
-      <TargetCPU Value="i386"/>
-      <TargetOS Value="win32"/>
+      <TargetCPU Value=""/>
+      <TargetOS Value=""/>
       <Optimizations>
         <OptimizationLevel Value="0"/>
         <VariablesInRegisters Value="True"/>
