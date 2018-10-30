@@ -12,7 +12,7 @@ object frmMain: TfrmMain
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   Position = poScreenCenter
-  LCLVersion = '1.8.4.0'
+  LCLVersion = '1.8.2.0'
   object pRecipes: TPanel
     Left = 0
     Height = 638
@@ -38,7 +38,7 @@ object frmMain: TfrmMain
       object tsBrews: TTabSheet
         Hint = 'Brouwsels zijn recepten die je zelf hebt gebrouwen'
         Caption = 'Brouwsels'
-        ClientHeight = 607
+        ClientHeight = 605
         ClientWidth = 224
         ParentShowHint = False
         object tvBrews: TTreeView
@@ -332,12 +332,12 @@ object frmMain: TfrmMain
       object tsRecipes: TTabSheet
         Hint = 'Recepten kunnen van jezelf zijn of van derden'
         Caption = 'Recepten'
-        ClientHeight = 607
+        ClientHeight = 605
         ClientWidth = 224
         ParentShowHint = False
         object tvRecipes: TTreeView
           Left = 0
-          Height = 509
+          Height = 507
           Top = 38
           Width = 224
           Align = alClient
@@ -355,7 +355,7 @@ object frmMain: TfrmMain
         object pRecipesButtons1: TPanel
           Left = 0
           Height = 60
-          Top = 547
+          Top = 545
           Width = 224
           Align = alBottom
           ClientHeight = 60
@@ -621,7 +621,7 @@ object frmMain: TfrmMain
       end
       object tsCloud: TTabSheet
         Caption = 'Cloud'
-        ClientHeight = 607
+        ClientHeight = 605
         ClientWidth = 224
         object pCloudButtons: TPanel
           Left = 0
@@ -1607,11 +1607,11 @@ object frmMain: TfrmMain
       TabOrder = 1
       object tsAnalysisCommon: TTabSheet
         Caption = 'Algemeen'
-        ClientHeight = 607
+        ClientHeight = 605
         ClientWidth = 616
         object chCommon: TChart
           Left = 0
-          Height = 607
+          Height = 605
           Top = 0
           Width = 616
           AxisList = <          
@@ -1652,7 +1652,7 @@ object frmMain: TfrmMain
       end
       object tsFermentables: TTabSheet
         Caption = 'Vergistbare ingrediënten'
-        ClientHeight = 607
+        ClientHeight = 605
         ClientWidth = 616
         object chAFerm: TChart
           Left = 0
@@ -1712,7 +1712,7 @@ object frmMain: TfrmMain
       end
       object tsHops: TTabSheet
         Caption = 'Hop'
-        ClientHeight = 607
+        ClientHeight = 605
         ClientWidth = 616
         object pAnalysisHops: TPanel
           Left = 0
@@ -1822,7 +1822,7 @@ object frmMain: TfrmMain
       end
       object tsYeast: TTabSheet
         Caption = 'Gist'
-        ClientHeight = 607
+        ClientHeight = 605
         ClientWidth = 616
         object chAnalyseYeast: TChart
           Left = 0
@@ -1867,7 +1867,7 @@ object frmMain: TfrmMain
       end
       object tsMiscs: TTabSheet
         Caption = 'Overige ingrediënten'
-        ClientHeight = 607
+        ClientHeight = 605
         ClientWidth = 616
         object chAnalyseMiscs: TChart
           Left = 0
@@ -2048,7 +2048,7 @@ object frmMain: TfrmMain
       object tsRecipe: TTabSheet
         Hint = 'Voer ingrediënten in en bereken bitterheid, kleur en begin SG'
         Caption = 'Recept'
-        ClientHeight = 607
+        ClientHeight = 605
         ClientWidth = 616
         ParentShowHint = False
         object gbIngredients: TGroupBox
@@ -2124,10 +2124,10 @@ object frmMain: TfrmMain
           end
           object cbPercentage: TCheckBox
             Left = 6
-            Height = 23
+            Height = 25
             Hint = 'Voer hoeveelheden mout in als percentage van de stort'
             Top = 300
-            Width = 358
+            Width = 360
             Caption = 'Reken met percentages vergistbare ingrediënten'
             OnChange = cbPercentageChange
             ParentShowHint = False
@@ -2994,10 +2994,10 @@ object frmMain: TfrmMain
           end
           object cbScaleVolume: TCheckBox
             Left = 459
-            Height = 23
+            Height = 25
             Hint = 'Verander alle hoeveelheden mee met het volume'
             Top = 56
-            Width = 154
+            Width = 156
             Caption = 'Schaal met volume'
             OnChange = cbScaleVolumeChange
             ParentShowHint = False
@@ -3006,9 +3006,9 @@ object frmMain: TfrmMain
           end
           object cbLocked: TCheckBox
             Left = 459
-            Height = 23
+            Height = 25
             Top = -2
-            Width = 97
+            Width = 99
             Caption = 'Afgesloten'
             OnChange = cbLockedChange
             OnClick = cbLockedClick
@@ -3030,7 +3030,7 @@ object frmMain: TfrmMain
       object tsWater: TTabSheet
         Hint = 'Voer maischschema, waterprofiel en geplande volumes in'
         Caption = 'Maischen, water'
-        ClientHeight = 607
+        ClientHeight = 605
         ClientWidth = 616
         ParentShowHint = False
         object gbMashing: TGroupBox
@@ -3910,7 +3910,7 @@ object frmMain: TfrmMain
       object tsBrewday: TTabSheet
         Hint = 'Voer metingen tijdens de brouwdag in'
         Caption = 'Metingen op de brouwdag'
-        ClientHeight = 607
+        ClientHeight = 605
         ClientWidth = 616
         ParentShowHint = False
         object gbMeasMash: TGroupBox
@@ -5296,7 +5296,7 @@ object frmMain: TfrmMain
       object tsFermentation: TTabSheet
         Hint = 'Voer gegevens over de vergisting in'
         Caption = 'Vergisting'
-        ClientHeight = 607
+        ClientHeight = 605
         ClientWidth = 616
         ParentShowHint = False
         object gbYeast: TGroupBox
@@ -6476,7 +6476,7 @@ object frmMain: TfrmMain
       object tsPackaging: TTabSheet
         Hint = 'Voer gegevens over het afvullen in'
         Caption = 'Afvullen, proeven'
-        ClientHeight = 607
+        ClientHeight = 605
         ClientWidth = 616
         ParentShowHint = False
         object gbBottleDates: TGroupBox
@@ -7326,7 +7326,7 @@ object frmMain: TfrmMain
       object tsNotes: TTabSheet
         Hint = 'Voer notities in'
         Caption = 'Notities'
-        ClientHeight = 607
+        ClientHeight = 605
         ClientWidth = 616
         ParentShowHint = False
         object gbNotes: TGroupBox
@@ -7423,7 +7423,7 @@ object frmMain: TfrmMain
     TabOrder = 2
     object tsFile: TTabSheet
       Caption = 'Bestand'
-      ClientHeight = 49
+      ClientHeight = 47
       ClientWidth = 994
       object tbFile: TToolBar
         Left = 0
@@ -7599,7 +7599,7 @@ object frmMain: TfrmMain
     end
     object tsDatabases: TTabSheet
       Caption = 'Databanken'
-      ClientHeight = 49
+      ClientHeight = 47
       ClientWidth = 994
       object tbDatabases: TToolBar
         Left = 0
@@ -7792,7 +7792,7 @@ object frmMain: TfrmMain
     end
     object tsAnalysis: TTabSheet
       Caption = 'Analyse'
-      ClientHeight = 49
+      ClientHeight = 47
       ClientWidth = 994
       object ToolBar1: TToolBar
         Left = 0
@@ -7895,7 +7895,7 @@ object frmMain: TfrmMain
     end
     object tsOptions: TTabSheet
       Caption = 'Instellingen'
-      ClientHeight = 49
+      ClientHeight = 47
       ClientWidth = 994
       ParentFont = False
       object pSettings1: TPanel
