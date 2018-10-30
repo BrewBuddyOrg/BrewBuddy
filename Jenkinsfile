@@ -16,7 +16,7 @@ pipeline {
         unstash 'scm'
         script {
 //          docker.image('taraworks/lazarus-cross:0.0.2').inside('-u root -v /var/jenkins_home/.lazarus:/var/jenkins_home/.lazarus'){
-          docker.image('kirill/lazarus-cross:0.0.2').inside('-u root'){
+          docker.image('taraworks/lazarus-cross:0.0.2').inside('-u root'){
             sh 'ls -al /root/ && pwd'
             sh '/usr/bin/apt-get install -y libfann-dev'
             sh 'pwd'
@@ -27,6 +27,7 @@ pipeline {
             sh 'lazbuild --lazarusdir=/usr/share/lazarus/1.8.0 --verbose --add-package uniqueinstance-1.0/uniqueinstance_package.lpk'
             sh 'lazbuild --lazarusdir=/usr/share/lazarus/1.8.0 --verbose --add-package Synapse/source/lib/laz_synapse.lpk'
             sh 'lazbuild --lazarusdir=/usr/share/lazarus/1.8.0 --verbose brewbuddy.lpi'
+            sh 'PATH=$PATH:/opt/clang/bin:/opt/osxcross/target/bin /opt/windows/lib/fpc/3.0.4/ppcross386 -Twin32 -va brewbuddy.lpi'
             sh 'chown -R 1000:1000 .'
           }
         }
