@@ -1,0 +1,115 @@
+object FrmHopGraph: TFrmHopGraph
+  Left = 461
+  Height = 631
+  Top = 148
+  Width = 904
+  Caption = 'Grafiek hopeigenschappen'
+  ClientHeight = 631
+  ClientWidth = 904
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  Position = poScreenCenter
+  LCLVersion = '1.4.4.0'
+  object pTop: TPanel
+    Left = 0
+    Height = 34
+    Top = 0
+    Width = 904
+    Align = alTop
+    ClientHeight = 34
+    ClientWidth = 904
+    TabOrder = 0
+    object cbProperties: TComboBox
+      Left = 113
+      Height = 30
+      Top = 2
+      Width = 247
+      AutoSize = False
+      ItemHeight = 20
+      OnChange = cbPropertiesChange
+      Style = csDropDownList
+      TabOrder = 0
+    end
+    object Label1: TLabel
+      Left = 8
+      Height = 20
+      Top = 5
+      Width = 79
+      Caption = 'Eigenschap:'
+      ParentColor = False
+    end
+    object cbOnlyInStock: TCheckBox
+      Left = 462
+      Height = 24
+      Top = 4
+      Width = 162
+      Caption = 'Alleen op voorraad'
+      OnChange = cbOnlyInStockChange
+      TabOrder = 1
+    end
+  end
+  object Chart1: TChart
+    Left = 0
+    Height = 572
+    Top = 34
+    Width = 904
+    AxisList = <    
+      item
+        Minors = <>
+        Title.LabelFont.Orientation = 900
+        Title.Visible = True
+      end    
+      item
+        Alignment = calBottom
+        Marks.Margins.Left = 0
+        Marks.Margins.Top = 0
+        Marks.Margins.Right = 0
+        Marks.Margins.Bottom = 0
+        Marks.LabelFont.Orientation = 900
+        Marks.Format = '%2:s'
+        Marks.OverlapPolicy = opHideNeighbour
+        Marks.Source = lcsData
+        Marks.Style = smsLabel
+        Minors = <>
+      end>
+    Foot.Brush.Color = clBtnFace
+    Foot.Font.Color = clBlue
+    Margins.Bottom = 1
+    Title.Brush.Color = clBtnFace
+    Title.Font.Color = clBlue
+    Title.Text.Strings = (
+      'TAChart'
+    )
+    Toolset = ChartToolset1
+    Align = alClient
+    object cbsProperties: TBarSeries
+      BarBrush.Color = clGreen
+      Source = lcsData
+    end
+  end
+  object StatusBar1: TStatusBar
+    Left = 0
+    Height = 25
+    Top = 606
+    Width = 904
+    Panels = <    
+      item
+        Width = 500
+      end>
+    SimplePanel = False
+  end
+  object lcsData: TListChartSource
+    left = 777
+    top = 50
+  end
+  object ChartToolset1: TChartToolset
+    left = 629
+    top = 50
+    object ChartToolset1DataPointCrosshairTool1: TDataPointCrosshairTool
+      OnAfterMouseMove = ChartToolset1DataPointCrosshairTool1AfterMouseMove
+      DistanceMode = cdmOnlyX
+      GrabRadius = 5
+      Size = 4
+    end
+  end
+end

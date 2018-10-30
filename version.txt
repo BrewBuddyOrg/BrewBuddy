@@ -1,4 +1,0 @@
-5.4.0.0
-brewbuddy.zip
-brewbuddy_i386
-brewbuddy_amd64
