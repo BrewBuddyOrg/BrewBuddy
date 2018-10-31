@@ -8,7 +8,6 @@
       <Title Value="brewbuddy"/>
       <UseAppBundle Value="False"/>
       <ResourceType Value="res"/>
-      <Icon Value="0"/>
     </General>
     <i18n>
       <EnableI18N LFM="False"/>
@@ -1591,8 +1590,8 @@
         <StackChecks Value="True"/>
       </Checks>
       <VerifyObjMethodCallValidity Value="True"/>
-      <TargetCPU Value=""/>
-      <TargetOS Value=""/>
+      <TargetCPU Value="x86_64"/>
+      <TargetOS Value="linux"/>
       <Optimizations>
         <OptimizationLevel Value="0"/>
         <VariablesInRegisters Value="True"/>
