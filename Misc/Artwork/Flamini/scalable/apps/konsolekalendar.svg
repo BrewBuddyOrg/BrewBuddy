@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="512"
+   height="512"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48+devel r13149 custom"
+   sodipodi:docname="konsolekalendar.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.7"
+     inkscape:cx="462.62952"
+     inkscape:cy="172.00417"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1309"
+     inkscape:window-height="750"
+     inkscape:window-x="55"
+     inkscape:window-y="-3"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-540.36218)">
+    <path
+       sodipodi:type="arc"
+       style="fill:#62c0dc;fill-rule:evenodd;stroke:none"
+       id="path2985"
+       sodipodi:cx="202.85715"
+       sodipodi:cy="-316.57144"
+       sodipodi:rx="360"
+       sodipodi:ry="360"
+       d="m 562.85715,-316.57144 a 360,360 0 0 1 -360,359.999998 360,360 0 0 1 -360,-359.999998 360,360 0 0 1 360,-360 360,360 0 0 1 360,360 z"
+       transform="matrix(0.69444444,0,0,0.69444444,115.12698,1016.2035)" />
+    <path
+       style="fill:#0078ad;fill-opacity:1;stroke:none"
+       d="M 45.064453 122.34375 A 250 250 0 0 0 20.191406 173.83203 L 62.375 173.83203 L 62.375 122.34375 L 45.064453 122.34375 z M 449.625 122.34375 L 449.625 173.83203 L 491.80859 173.83203 A 250 250 0 0 0 467.18164 122.34375 L 449.625 122.34375 z M 124.56641 123.64648 L 124.56641 176.29297 L 68.382812 176.29297 L 68.382812 224.09961 L 124.56641 224.09961 L 124.56641 294.91016 L 68.382812 294.91016 L 68.382812 342.7168 L 173.46289 342.7168 L 173.46289 389.65625 L 224.95117 389.65625 L 224.95117 342.7168 L 286.4043 342.7168 L 286.4043 389.65625 L 337.89062 389.65625 L 337.89062 342.7168 L 446.74805 342.7168 L 446.74805 294.91016 L 389.95117 294.91016 L 389.95117 224.09961 L 446.74805 224.09961 L 446.74805 176.29297 L 389.95117 176.29297 L 389.95117 123.64648 L 342.14453 123.64648 L 342.14453 176.29297 L 281.99414 176.29297 L 281.99414 123.64648 L 234.18555 123.64648 L 234.18555 176.29297 L 172.375 176.29297 L 172.375 123.64648 L 124.56641 123.64648 z M 172.375 224.09961 L 234.18555 224.09961 L 234.18555 294.91016 L 172.375 294.91016 L 172.375 224.09961 z M 281.99414 224.09961 L 342.14453 224.09961 L 342.14453 294.91016 L 281.99414 294.91016 L 281.99414 224.09961 z "
+       transform="translate(0,540.36218)"
+       id="rect4072" />
+  </g>
+</svg>

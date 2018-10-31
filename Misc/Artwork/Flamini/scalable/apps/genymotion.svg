@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512">
+ <defs>
+  <linearGradient gradientTransform="scale(1.0058652,0.994169)" gradientUnits="userSpaceOnUse" id="0" y2="7.01654" x2="0" y1="92.5396">
+   <stop/>
+   <stop offset="1" stop-opacity="0.588235"/>
+  </linearGradient>
+  <filter color-interpolation-filters="sRGB">
+   <feGaussianBlur stdDeviation="1.71"/>
+  </filter>
+  <linearGradient gradientUnits="userSpaceOnUse" xlink:href="#1" y2="138.66119" x2="0" y1="20.220806"/>
+  <linearGradient id="1">
+   <stop stop-color="#fff"/>
+   <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+  </linearGradient>
+  <clipPath>
+   <rect y="6" x="6" rx="6" height="84" width="84" fill="#fff"/>
+  </clipPath>
+  <filter color-interpolation-filters="sRGB" height="1.384" width="1.384" y="-0.192" x="-0.192">
+   <feGaussianBlur stdDeviation="5.28"/>
+  </filter>
+  <linearGradient xlink:href="#0" gradientUnits="userSpaceOnUse" gradientTransform="scale(1.0058652,0.994169)" y1="92.5396" x2="0" y2="7.01654"/>
+  <linearGradient gradientUnits="userSpaceOnUse" xlink:href="#1" y2="138.66119" x2="0" y1="20.220806"/>
+  <clipPath>
+   <rect y="6" x="6" rx="6" height="84" width="84" fill="#fff"/>
+  </clipPath>
+  <linearGradient xlink:href="#0" gradientUnits="userSpaceOnUse" gradientTransform="scale(1.0058652,0.994169)" y1="92.5396" x2="0" y2="7.01654"/>
+  <linearGradient y1="20.220806" x2="0" y2="138.66119" xlink:href="#1" gradientUnits="userSpaceOnUse"/>
+  <clipPath>
+   <rect width="84" height="84" rx="6" x="6" y="6" fill="#fff"/>
+  </clipPath>
+  <linearGradient y2="7.01654" x2="0" y1="92.5396" gradientTransform="scale(1.0058652,0.994169)" gradientUnits="userSpaceOnUse" xlink:href="#0"/>
+  <linearGradient gradientUnits="userSpaceOnUse" xlink:href="#1" y2="138.66119" x2="0" y1="20.220806"/>
+  <clipPath>
+   <rect y="6" x="6" rx="6" height="84" width="84" fill="#fff"/>
+  </clipPath>
+  <linearGradient xlink:href="#0" gradientUnits="userSpaceOnUse" gradientTransform="scale(1.0058652,0.994169)" y1="92.5396" x2="0" y2="7.01654"/>
+ </defs>
+ <g transform="translate(0,-540.36217)">
+  <path transform="matrix(3.0172415,0,0,3.0172415,-416.41383,53.258672)" d="m 305.71429 246.28572 c 0 45.76074 -37.09641 82.85714 -82.85714 82.85714 -45.76074 0 -82.85714 -37.0964 -82.85714 -82.85714 0 -45.76073 37.0964 -82.85714 82.85714 -82.85714 45.76073 0 82.85714 37.09641 82.85714 82.85714 z" fill="#e75177" fill-rule="evenodd"/>
+  <text x="-299.47046" y="619.64386" font-family="Gentium Book Basic" word-spacing="0" line-height="125%" letter-spacing="0" font-size="208.33333"><tspan x="-299.47046" y="619.64386"/>
+  </text>
+  <text y="897.75989" x="-2658.3013" font-family="Gentium Book Basic" word-spacing="0" line-height="125%" letter-spacing="0" font-size="208.33333"><tspan y="897.75989" x="-2658.3013"/>
+  </text>
+  <text y="670.47504" x="-2370.0864" font-family="Gentium Book Basic" word-spacing="0" line-height="125%" letter-spacing="0" font-size="208.33333"><tspan y="670.47504" x="-2370.0864"/>
+  </text>
+  <text y="413.5752" x="1824.5126" font-family="Gentium Book Basic" word-spacing="0" line-height="125%" letter-spacing="0" font-size="208.33333"><tspan y="413.5752" x="1824.5126"/>
+  </text>
+  <path d="m 180.80453 694.27883 c -56.37593 0 -102.11583 45.71636 -102.11583 102.08334 0 56.36697 45.739901 102.08334 102.11583 102.08334 56.37594 0 102.05084 -45.71637 102.05084 -102.08334 0 -56.36698 -45.6749 -102.08334 -102.05084 -102.08334 z m -0.0323 20.83333 c 44.87063 0 81.25 36.3865 81.25 81.25001 0 44.86351 -36.37937 81.25 -81.25 81.25 -44.87062 0 -81.25 -36.38649 -81.25 -81.25 0 -44.86351 36.37938 -81.25001 81.25 -81.25001 z m 185.28646 13.9974 c -37.13958 0 -67.2526 30.11299 -67.2526 67.25261 0 37.13961 30.11302 67.25261 67.2526 67.25261 37.13959 0 67.25261 -30.113 67.25261 -67.25261 0 -37.13962 -30.11302 -67.25261 -67.25261 -67.25261 z m 0 20.83334 c 25.63459 0 46.41927 20.78466 46.41927 46.41927 0 25.6346 -20.78468 46.41927 -46.41927 46.41927 -25.63458 0 -46.41927 -20.78467 -46.41927 -46.41927 0 -25.63461 20.78469 -46.41927 46.41927 -46.41927 z" fill="#fff8eb"/>
+ </g>
+</svg>

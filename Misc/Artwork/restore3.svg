@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="svg11959"
+   version="1.1"
+   inkscape:version="0.48.3.1 r9886"
+   width="500"
+   height="500"
+   sodipodi:docname="restore3.svg"
+   inkscape:export-filename="/home/adrie/Documenten/bier/BrouwHulp/BrouwHulp Amarillo/Artwork/restore3.png"
+   inkscape:export-xdpi="5.7600002"
+   inkscape:export-ydpi="5.7600002">
+  <metadata
+     id="metadata11965">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs11963">
+    <linearGradient
+       id="linearGradient12739">
+      <stop
+         style="stop-color:#0604f5;stop-opacity:0.20175439;"
+         offset="0"
+         id="stop12741" />
+      <stop
+         id="stop12747"
+         offset="0.5"
+         style="stop-color:#5507fb;stop-opacity:0.90789473;" />
+      <stop
+         style="stop-color:#4f00f9;stop-opacity:1;"
+         offset="1"
+         id="stop12743" />
+    </linearGradient>
+  </defs>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1600"
+     inkscape:window-height="816"
+     id="namedview11961"
+     showgrid="false"
+     inkscape:zoom="1.21"
+     inkscape:cx="114.04959"
+     inkscape:cy="250"
+     inkscape:window-x="-2"
+     inkscape:window-y="23"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg11959" />
+  <image
+     width="500"
+     height="500"
+     xlink:href="file:///windows7/Users/Adrie/Documents/BrouwHulp%20Amarillo/Artwork/backup126.png"
+     id="image11967"
+     x="0"
+     y="0" />
+  <path
+     style="fill:#d60b22;fill-opacity:1;stroke:none"
+     d="M 175.20661,206.61157 C 114.48104,218.73905 31.45505,231.28702 18.181818,297.52066 6.4096803,356.26382 41.099869,425.98103 119.83471,448.76033 c 78.73484,22.7793 165.94012,-5.33405 257.85124,-14.04958 l -17.35537,37.19007 118.18182,-52.06611 -125.61984,-37.19008 23.96694,35.53719 c 0,0 -155.56536,21.8372 -231.40495,-5.78513 -35.1852,-12.81517 -66.510859,-75.69432 -42.14876,-104.13223 26.32288,-30.72673 71.90083,-37.19008 71.90083,-37.19008 z"
+     id="path11969"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="cszcccccsscc" />
+</svg>

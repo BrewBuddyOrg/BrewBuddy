@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512">
+ <defs>
+  <linearGradient id="0">
+   <stop stop-color="#e25b6a"/>
+   <stop offset="1" stop-color="#cd1d31"/>
+  </linearGradient>
+  <radialGradient xlink:href="#0" id="1" cx="202.85715" cy="-316.57144" r="360" gradientUnits="userSpaceOnUse"/>
+ </defs>
+ <g transform="translate(0,-540.36218)">
+  <path d="m 562.85715 -316.57144 c 0 198.82251 -161.17749 360 -360 360 -198.82251 0 -360 -161.17749 -360 -360 0 -198.82251 161.17749 -360 360 -360 198.82251 0 360 161.17749 360 360 z" transform="matrix(0.69444444,0,0,0.69444444,115.12698,1016.2035)" fill="url(#1)" fill-rule="evenodd"/>
+  <text y="769.89191" x="344.33511" fill="#fff8eb" font-family="Gentium Book Basic" word-spacing="0" line-height="125%" letter-spacing="0" font-size="162.28572"><tspan y="769.89191" x="344.33511"/>
+  </text>
+  <text transform="scale(4.0128361,0.24920031)" font-size="58.966351" y="2650.9758" x="333.3078" fill="#fff8eb" font-family="Arial" text-anchor="middle"/>
+  <text y="813.01349" x="949.15436" fill="#fff8eb" font-family="Gentium Book Basic" word-spacing="0" line-height="125%" letter-spacing="0" font-size="162.28572"><tspan y="813.01349" x="949.15436"/>
+  </text>
+  <text transform="scale(4.0128361,0.24920031)" font-size="58.966351" y="2824.0159" x="484.0289" fill="#fff8eb" font-family="Arial" text-anchor="middle"/>
+  <text y="712.54462" x="1679.1272" fill="#fff8eb" font-family="Gentium Book Basic" word-spacing="0" line-height="125%" letter-spacing="0" font-size="162.28572"><tspan y="712.54462" x="1679.1272"/>
+  </text>
+  <text transform="scale(4.0128361,0.24920031)" font-size="58.966351" y="2420.8503" x="665.93842" fill="#fff8eb" font-family="Arial" text-anchor="middle"/>
+  <text y="669.83276" x="971.43988" fill="#fff8eb" font-family="Gentium Book Basic" word-spacing="0" line-height="125%" letter-spacing="0" font-size="162.28572"><tspan y="669.83276" x="971.43988"/>
+  </text>
+  <text transform="scale(4.0128361,0.24920031)" font-size="58.966351" y="2249.4548" x="489.58249" fill="#fff8eb" font-family="Arial" text-anchor="middle"/>
+  <text y="569.36383" x="1701.4128" fill="#fff8eb" font-family="Gentium Book Basic" word-spacing="0" line-height="125%" letter-spacing="0" font-size="162.28572"><tspan y="569.36383" x="1701.4128"/>
+  </text>
+  <text transform="scale(4.0128361,0.24920031)" font-size="58.966351" y="1846.2894" x="671.492" fill="#fff8eb" font-family="Arial" text-anchor="middle"/>
+  <text y="1036.5042" x="-1470.9465" fill="#fff8eb" font-family="Gentium Book Basic" word-spacing="0" line-height="125%" letter-spacing="0" font-size="162.28572"><tspan y="1036.5042" x="-1470.9465"/>
+  </text>
+  <text transform="scale(4.0128361,0.24920031)" font-size="58.966351" y="3720.8472" x="-119.06095" fill="#fff8eb" font-family="Arial" text-anchor="middle"/>
+  <path d="m 256 574.21932 c -122.68611 0 -222.14286 99.45674 -222.14286 222.14285 0 122.6861 99.45675 222.14283 222.14286 222.14283 122.68611 0 222.14285 -99.45673 222.14285 -222.14283 0 -122.68611 -99.45674 -222.14285 -222.14285 -222.14285 z m 0 28.57312 c 106.91199 0 193.56973 86.65774 193.56973 193.56973 0 106.91199 -86.65774 193.56974 -193.56973 193.56974 -106.91199 0 -193.56973 -86.65775 -193.56973 -193.56974 0 -106.91199 86.65774 -193.56973 193.56973 -193.56973 z" fill="#fff8eb" fill-rule="evenodd"/>
+  <path d="m 348.46949 693.73796 c -6.56005 -5.93096 -16.63024 -5.73265 -22.95659 0.5937 L 256 763.84456 186.4871 694.33166 c -6.53043 -6.53042 -17.03636 -6.51394 -23.56678 0.0166 l -8.93855 8.93854 c -6.53043 6.53043 -6.54692 17.03635 -0.0166 23.56677 l 69.51291 69.51292 -69.51291 69.51291 c -6.53043 6.53042 -6.51393 17.03634 0.0166 23.56676 l 8.93855 8.93857 c 6.53042 6.53042 17.03635 6.5469 23.56678 0.0166 L 256 828.88836 l 69.5129 69.51291 c 6.53043 6.53042 17.03636 6.51393 23.56679 -0.0166 l 8.93854 -8.93857 c 6.53042 -6.53042 6.54692 -17.03634 0.0166 -23.56676 l -69.51291 -69.51291 69.51291 -69.51292 c 6.53041 -6.53042 6.51393 -17.03634 -0.0166 -23.56677 l -8.93854 -8.93854 c -0.20409 -0.20408 -0.39858 -0.41887 -0.6102 -0.6102 z" fill="#fff8eb" fill-rule="evenodd" stroke="#fff8eb" stroke-linejoin="round" stroke-linecap="round" color="#000" stroke-width="29.853334"/>
+ </g>
+</svg>

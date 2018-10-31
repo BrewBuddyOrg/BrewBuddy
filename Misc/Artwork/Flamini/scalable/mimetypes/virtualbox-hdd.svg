@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512">
+ <rect rx="147.5047" width="450" height="450" x="31" y="31" opacity="0.25" fill="#282629"/>
+ <rect rx="147.5047" width="444" height="444" x="34" y="34" opacity="0.25" fill="#282629"/>
+ <rect y="37" x="37" height="438" width="438" rx="147.5047" opacity="0.25" fill="#282629"/>
+ <rect rx="147.5047" width="432" height="432" x="40" y="40" fill="#924565"/>
+ <text y="459.75974" x="-579.70227" font-family="Gentium Book Basic" word-spacing="0" line-height="125%" letter-spacing="0" font-size="208.33333"><tspan y="459.75974" x="-579.70227"/>
+ </text>
+ <text transform="scale(4.0128362,0.2492003)" font-size="75.69771" y="1282.0511" x="173.26385" font-family="Arial" text-anchor="middle"/>
+ <path d="M 232.71875 64.34375 L 217.34375 115.0625 L 166.75 281.5 L 128.75 173.125 L 124.6875 162.03125 L 111.34375 162.03125 L 42.15625 162.03125 C 40.729445 170.29777 40 178.8136 40 187.5 L 40 193.125 L 97.78125 193.125 L 150.65625 343.4375 L 169.21875 396.28125 L 185.5 342.875 L 237 173.71875 L 267.75 253.125 L 284.46875 296.25 L 302.09375 253.3125 L 338.5 164 L 383.46875 281.875 L 387.53125 292.5625 L 400.65625 292.5625 L 472 292.5625 L 472 261.5 L 413.78125 261.5 L 356.125 110.78125 L 339.40625 67.25 L 321.78125 110.5625 L 285.375 199.9375 L 251.9375 114.0625 L 232.71875 64.34375 z" fill="#fff8eb"/>
+ <text x="227.49602" y="420.17102" font-style="italic" word-spacing="0" line-height="125%" font-weight="bold" letter-spacing="0" font-size="91.85597" fill="#fff8eb" font-family="Sans"><tspan x="227.49602" y="420.17102">.hdd</tspan>
+ </text>
+</svg>

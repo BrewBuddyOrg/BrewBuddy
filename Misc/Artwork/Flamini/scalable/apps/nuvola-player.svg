@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:osb="http://www.openswatchbook.org/uri/2009/osb"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="512"
+   height="512"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="nuvola-player.svg">
+  <defs
+     id="defs4">
+    <linearGradient
+       id="linearGradient5284"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#a7d6f6;stop-opacity:1;"
+         offset="0"
+         id="stop5286" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient5228"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop5230" />
+    </linearGradient>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="399.33648"
+     inkscape:cy="234.9747"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1309"
+     inkscape:window-height="750"
+     inkscape:window-x="55"
+     inkscape:window-y="-3"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-540.36218)">
+    <path
+       sodipodi:type="arc"
+       style="fill:#b93d48;fill-rule:evenodd;stroke:none"
+       id="path2985"
+       sodipodi:cx="202.85715"
+       sodipodi:cy="-316.57144"
+       sodipodi:rx="360"
+       sodipodi:ry="360"
+       d="m 562.85715,-316.57144 c 0,198.82251 -161.17749,359.999998 -360,359.999998 -198.8225127,0 -360,-161.177488 -360,-359.999998 0,-198.82251 161.1774873,-360 360,-360 198.82251,0 360,161.17749 360,360 z"
+       transform="matrix(0.69444444,0,0,0.69444444,115.12698,1016.2035)" />
+    <g
+       id="text6110-1-8-2"
+       style="font-size:220.81851196px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#fff8c1;fill-opacity:1;stroke:none;font-family:Sans"
+       transform="matrix(0.23463968,0,0,0.23138396,714.53364,688.69792)" />
+    <path
+       style="font-size:medium;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3.00000024;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Sans;-inkscape-font-specification:Sans"
+       d="M 311.1875 94.71875 C 229.93399 99.44572 233.35862 134.6206 212.3125 167.71875 C 145.28649 143.72076 110.98951 187.87328 120.71875 234.84375 C 48.868837 253.11529 40.439527 371.29624 139.625 370.625 L 369.34375 372.0625 C 451.1468 375.07347 469.66759 278.50929 414.40625 249.4375 C 405.47081 196.44698 424.88543 105.02272 311.1875 94.71875 z M 263.9375 171 L 278.71875 173.46875 C 292.71463 213.93005 291.36373 199.59109 305.8125 219.875 C 336.34611 265.66376 308.40539 298.14692 290.5625 305.5 C 299.24149 279.71528 312.63493 257.32225 270.65625 220.3125 C 266.95376 252.16083 262.19336 284.13205 258.34375 316 C 257.6284 319.96668 256.11687 325.05857 252.625 328.15625 C 226.41985 352.7644 197.10825 337.29959 193.53125 320.71875 C 187.60777 293.261 210.34802 271.4488 247.46875 292.6875 C 253.35136 250.99223 258.05488 212.69527 263.9375 171 z "
+       transform="translate(0,540.36218)"
+       id="path3912-4" />
+  </g>
+</svg>

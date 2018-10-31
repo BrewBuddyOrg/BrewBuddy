@@ -1,0 +1,23 @@
+TO-DO:
+
+- MaxM:
+
+Fix User components have 2 Pixels visible over the Button when Button Position
+      is akRight and is Collapsed SEE PROJECT1 DEVELOPMENT - ONLY ADDED IN TExpandPanels?
+Fix Shadows incoerence when Button.Style is bbsTab, the Panel attached side may not have borders.
+
+
+- Alex
+
+simplyfy everything with verctor addition and scalar multiplication (orthogonal basis vectors... and so on)
+      if horizonatal and vertical would be described by a unity vector, I could calculate if a certain operation should be performed
+      and I could just multiply the basis vector  with an operation to get a delta movement (or none)
+
+
+
+Known Bugs:
+
+- the TExpandPanels lacks a arrange on bottom and right
+
+- (Solved?) Button.Color Setted to clBtnFace at DesignTime -> Color = clSkyBlue in RunTime
+    (is not Loaded because is The inherited Default Color of TCustomSpeedButton)

@@ -1,0 +1,85 @@
+object Form1: TForm1
+  Left = 290
+  Height = 265
+  Top = 175
+  Width = 360
+  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = bsSingle
+  Caption = 'Form1'
+  ClientHeight = 265
+  ClientWidth = 360
+  OnClose = FormClose
+  OnCreate = FormCreate
+  Position = poScreenCenter
+  LCLVersion = '1.0.14.0'
+  object lblerror: TLabel
+    Left = 288
+    Height = 17
+    Top = 208
+    Width = 32
+    Caption = 'error'
+    ParentColor = False
+  end
+  object lblmse: TLabel
+    Left = 288
+    Height = 17
+    Top = 227
+    Width = 27
+    Caption = 'mse'
+    ParentColor = False
+  end
+  object btnTrain: TButton
+    Left = 192
+    Height = 25
+    Top = 16
+    Width = 75
+    Caption = 'Train'
+    Enabled = False
+    OnClick = btnTrainClick
+    TabOrder = 0
+  end
+  object btnrun: TButton
+    Left = 104
+    Height = 25
+    Top = 16
+    Width = 75
+    Caption = 'Run'
+    Enabled = False
+    OnClick = btnrunClick
+    TabOrder = 1
+  end
+  object memoXor: TMemo
+    Left = 16
+    Height = 200
+    Top = 48
+    Width = 248
+    TabOrder = 2
+  end
+  object btnBuild: TButton
+    Left = 16
+    Height = 25
+    Top = 16
+    Width = 75
+    Caption = 'Build'
+    OnClick = btnBuildClick
+    TabOrder = 3
+  end
+  object btnLoad: TButton
+    Left = 272
+    Height = 25
+    Top = 48
+    Width = 75
+    Caption = 'Load'
+    OnClick = btnLoadClick
+    TabOrder = 4
+  end
+  object btnSave: TButton
+    Left = 272
+    Height = 25
+    Top = 80
+    Width = 75
+    Caption = 'Save'
+    OnClick = btnSaveClick
+    TabOrder = 5
+  end
+end

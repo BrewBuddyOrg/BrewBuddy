@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512">
+ <defs>
+  <linearGradient id="0">
+   <stop stop-color="#404040"/>
+   <stop offset="1" stop-color="#282629"/>
+  </linearGradient>
+  <radialGradient xlink:href="#0" id="1" cx="202.85715" cy="-316.57144" r="360" gradientUnits="userSpaceOnUse"/>
+ </defs>
+ <g transform="translate(0,-540.36218)">
+  <path d="m 562.85715 -316.57144 c 0 198.82251 -161.17749 360 -360 360 -198.82251 0 -360 -161.17749 -360 -360 0 -198.82251 161.17749 -360 360 -360 198.82251 0 360 161.17749 360 360 z" transform="matrix(0.69444444,0,0,0.69444444,115.12698,1016.2035)" fill="url(#1)" fill-rule="evenodd"/>
+  <rect width="247.98073" height="41.33012" x="165.48657" y="699.58575" ry="20.66506" rx="22.255856" fill="#fff8eb" fill-rule="evenodd" color="#000"/>
+  <rect ry="20.66506" y="775.69714" x="165.48657" height="41.33012" width="247.98073" rx="22.255856" fill="#fff8eb" fill-rule="evenodd" color="#000"/>
+  <rect width="247.98073" height="41.33012" x="165.48657" y="851.80847" ry="20.66506" rx="22.255856" fill="#f38725" fill-rule="evenodd" color="#000"/>
+  <rect y="699.58575" x="98.53272" height="40.867931" width="40.867931" rx="20.433966" fill="#fff8eb" fill-rule="evenodd" color="#000"/>
+  <rect width="40.867931" height="40.867931" x="98.53272" y="775.69714" rx="20.433966" fill="#fff8eb" fill-rule="evenodd" color="#000"/>
+  <rect y="851.80847" x="98.53272" height="40.867931" width="40.867931" rx="20.433966" fill="#f38725" fill-rule="evenodd" color="#000"/>
+  <path d="m 256 564.03985 c -128.30808 0 -232.32233 104.01425 -232.32233 232.32233 0 128.30808 104.01425 232.32232 232.32233 232.32232 128.30808 0 232.32233 -104.01424 232.32233 -232.32232 C 488.32233 668.0541 384.30808 564.03985 256 564.03985 z m 0 20.64765 c 116.90234 0 211.67468 94.77234 211.67468 211.67468 0 116.90234 -94.77234 211.67472 -211.67468 211.67472 -116.90234 0 -211.67468 -94.77238 -211.67468 -211.67472 C 44.32532 679.45984 139.09766 584.6875 256 584.6875 z" fill="#fff8eb" fill-rule="evenodd"/>
+ </g>
+</svg>

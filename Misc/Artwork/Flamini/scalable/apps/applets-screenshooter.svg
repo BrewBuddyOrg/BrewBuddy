@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="512" width="512">
+ <defs>
+  <linearGradient id="0">
+   <stop stop-color="#79c5e3"/>
+   <stop offset="1" stop-color="#00a9ec"/>
+  </linearGradient>
+  <radialGradient xlink:href="#0" id="1" cx="256.00001" cy="256" r="250" gradientTransform="translate(0,-3.0719999e-6)" gradientUnits="userSpaceOnUse"/>
+ </defs>
+ <path d="m 506.00001 256 c 0 138.0712 -111.92882 250 -250 250 C 117.92881 506 6.00001 394.0712 6.00001 256 6.00001 117.92882 117.92881 5.999994 256.00001 5.999994 c 138.07118 0 250 111.92883 250 250.00001 z" fill="url(#1)" fill-rule="evenodd"/>
+ <text font-size="208.33333" letter-spacing="0" line-height="125%" word-spacing="0" x="-299.47046" y="79.28169" font-family="Gentium Book Basic"><tspan x="-299.47046" y="79.28169"/>
+ </text>
+ <text font-size="208.33333" letter-spacing="0" line-height="125%" word-spacing="0" y="357.39771" x="-2658.3013" font-family="Gentium Book Basic"><tspan y="357.39771" x="-2658.3013"/>
+ </text>
+ <text font-size="208.33333" letter-spacing="0" line-height="125%" word-spacing="0" y="130.11287" x="-2370.0864" font-family="Gentium Book Basic"><tspan y="130.11287" x="-2370.0864"/>
+ </text>
+ <text font-size="208.33333" letter-spacing="0" line-height="125%" word-spacing="0" y="-126.78697" x="1824.5126" font-family="Gentium Book Basic"><tspan y="-126.78697" x="1824.5126"/>
+ </text>
+ <text font-size="208.33333" letter-spacing="0" line-height="125%" word-spacing="0" x="-303.41788" y="18.247267" font-family="Gentium Book Basic"><tspan x="-303.41788" y="18.247267"/>
+ </text>
+ <text font-size="208.33333" letter-spacing="0" line-height="125%" word-spacing="0" y="296.36328" x="-2662.2485" font-family="Gentium Book Basic"><tspan y="296.36328" x="-2662.2485"/>
+ </text>
+ <text font-size="208.33333" letter-spacing="0" line-height="125%" word-spacing="0" y="69.07838" x="-2374.0337" font-family="Gentium Book Basic"><tspan y="69.07838" x="-2374.0337"/>
+ </text>
+ <path d="m 258.71515 71.88109 0 49.15446 c 17.03094 0.90566 33.1984 5.0372 47.93138 11.76798 l 0 -52.59229 c -15.20698 -4.82938 -31.28378 -7.68386 -47.93138 -8.33015 z" fill="#fff8eb" fill-rule="evenodd"/>
+ <path d="m 237.8898 72.21166 c -17.497 1.29951 -34.31014 5.10603 -50.08008 11.00768 l 0 53.91454 c 15.14922 -8.30826 32.06751 -13.7644 50.08008 -15.60249 l 0 -49.31973 z" fill="#fff8eb" fill-rule="evenodd"/>
+ <path d="m 325.32319 87.3183 0 55.8979 c 12.9928 8.70279 24.353 19.64251 33.55201 32.26278 l 56.92265 0 C 397.1635 136.36752 364.99233 104.94889 325.32319 87.3183 z" fill="#fff8eb" fill-rule="evenodd"/>
+ <path d="m 169.13306 91.41726 c -35.70886 18.18049 -64.58065 47.82156 -81.84695 84.06172 l 56.92264 0 c 7.10014 -9.74075 15.48951 -18.46741 24.92431 -25.94906 l 0 -58.11266 z" fill="#fff8eb" fill-rule="evenodd"/>
+ <path d="m 79.61709 194.15569 c -5.465695 15.81513 -8.83377 32.62684 -9.7185 50.08002 l 49.22061 0 c 1.24641 -17.90958 6.03452 -34.828 13.68513 -50.08002 l -53.18724 0 z" fill="#fff8eb" fill-rule="evenodd"/>
+ <path d="m 370.27951 194.15569 c 7.65072 15.25202 12.43884 32.17044 13.68534 50.08002 l 49.22052 0 c -0.88475 -17.45318 -4.25277 -34.26489 -9.7185 -50.08002 l -53.18736 0 z" fill="#fff8eb" fill-rule="evenodd"/>
+ <path d="m 70.03081 265.06107 c 1.03901 16.679 4.317405 32.76994 9.55322 47.93138 l 53.2203 0 c -7.34131 -14.64366 -12.05538 -30.8135 -13.5199 -47.93138 l -49.25362 0 z" fill="#fff8eb" fill-rule="evenodd"/>
+ <path d="m 87.25305 331.66916 c 17.26411 36.2582 46.15814 65.90765 81.88001 84.09477 l 0 -58.11266 c -9.44685 -7.4912 -17.85136 -16.22637 -24.95742 -25.98211 l -56.92259 0 z" fill="#fff8eb" fill-rule="evenodd"/>
+ <path d="m 187.80972 370.04731 0 53.91454 c 15.76994 5.90165 32.58308 9.70817 50.08008 11.00769 l 0 -49.31974 c -18.01257 -1.83809 -34.93086 -7.29423 -50.08008 -15.60249 z" fill="#fff8eb" fill-rule="evenodd"/>
+ <path d="M 258.09375 385.65625 L 258.09375 434.96875 L 306.59375 434.96875 L 306.59375 385.65625 L 258.09375 385.65625 z M 325.21875 385.65625 L 325.21875 434.96875 L 430.53125 434.96875 C 445.58466 420.28687 458.79892 403.72375 469.78125 385.65625 L 325.21875 385.65625 z" fill="#fff8eb" fill-rule="evenodd"/>
+ <path d="M 383.75 264.90625 L 383.75 313.28125 L 433.0625 313.28125 L 433.0625 264.90625 L 383.75 264.90625 z M 383.75 331.875 L 383.75 470.90625 C 401.7663 460.1727 418.34469 447.2645 433.0625 432.5 L 433.0625 331.875 L 383.75 331.875 z" fill="#fff8eb" fill-rule="evenodd"/>
+</svg>

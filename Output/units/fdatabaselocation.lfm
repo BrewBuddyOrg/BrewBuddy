@@ -1,0 +1,87 @@
+object FrmDatabaseLocation: TFrmDatabaseLocation
+  Left = 635
+  Height = 254
+  Top = 268
+  Width = 296
+  Caption = 'Databank locatie'
+  ClientHeight = 254
+  ClientWidth = 296
+  LCLVersion = '1.8.4.0'
+  object deSettings: TDirectoryEdit
+    Left = 7
+    Height = 23
+    Top = 32
+    Width = 283
+    DialogTitle = 'Kies nieuwe map'
+    ShowHidden = True
+    ButtonWidth = 23
+    NumGlyphs = 1
+    Flat = True
+    MaxLength = 0
+    TabOrder = 0
+    OnChange = deSettingsChange
+  end
+  object bbOK: TBitBtn
+    Left = 51
+    Height = 30
+    Top = 213
+    Width = 95
+    Caption = '&OK'
+    Kind = bkOK
+    ModalResult = 1
+    OnClick = bbOKClick
+    TabOrder = 1
+  end
+  object bbCancel: TBitBtn
+    Left = 150
+    Height = 30
+    Top = 213
+    Width = 95
+    Cancel = True
+    Caption = 'Annuleer'
+    Kind = bkCancel
+    ModalResult = 2
+    TabOrder = 2
+  end
+  object Label1: TLabel
+    Left = 7
+    Height = 15
+    Top = 12
+    Width = 91
+    Caption = 'Databank locatie:'
+    ParentColor = False
+  end
+  object rgFiles: TRadioGroup
+    Left = 5
+    Height = 105
+    Top = 65
+    Width = 285
+    AutoFill = True
+    Caption = 'Kies actie'
+    ChildSizing.LeftRightSpacing = 6
+    ChildSizing.TopBottomSpacing = 6
+    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+    ChildSizing.EnlargeVertical = crsHomogenousChildResize
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 1
+    ClientHeight = 85
+    ClientWidth = 281
+    ItemIndex = 0
+    Items.Strings = (
+      'Gebruik bestanden in nieuwe map'
+      'Kopieer bestanden naar nieuwe map'
+    )
+    TabOrder = 3
+  end
+  object cbRemove: TCheckBox
+    Left = 14
+    Height = 19
+    Top = 179
+    Width = 197
+    Caption = 'Verwijder bestanden in oude map'
+    OnClick = cbRemoveClick
+    TabOrder = 4
+  end
+end

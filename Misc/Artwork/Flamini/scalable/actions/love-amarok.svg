@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="512"
+   height="512"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="love-amarok.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.78203125"
+     inkscape:cx="261.6804"
+     inkscape:cy="273.31246"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1309"
+     inkscape:window-height="750"
+     inkscape:window-x="55"
+     inkscape:window-y="-3"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-540.3622)">
+    <g
+       transform="matrix(9.8210715,0,0,7.6652711,-7296.7426,-4651.1009)"
+       id="_x33__rating_favorite"
+       style="fill:#555753">
+      <g
+         id="g1092"
+         style="fill:#555753">
+        <path
+           style="fill:#555753"
+           inkscape:connector-curvature="0"
+           d="m 769.032,693.063 c 2.303,-5.186 6.336,-10.206 12.096,-10.206 3.366,0 6.469,1.638 9.305,4.913 2.701,3.107 4.057,6.23 4.057,9.374 0,4.696 -1.289,9.612 -3.856,14.756 -2.217,4.429 -5.407,9.101 -9.572,14.02 -3.146,3.722 -7.199,7.952 -12.159,12.693 -4.301,-4.122 -8.153,-8.216 -11.564,-12.294 -4.168,-5.007 -7.4,-9.682 -9.705,-14.025 -2.7,-5.137 -4.055,-9.744 -4.055,-13.818 0,-3.9 1.195,-7.422 3.592,-10.566 2.614,-3.461 5.801,-5.187 9.57,-5.187 5.932,0 10.031,5.067 12.291,10.34 z"
+           id="path1094" />
+      </g>
+    </g>
+  </g>
+</svg>

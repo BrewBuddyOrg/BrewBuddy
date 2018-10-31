@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512">
+ <defs>
+  <linearGradient id="0">
+   <stop stop-color="#9ce7fd"/>
+   <stop offset="1" stop-color="#62c0dc"/>
+  </linearGradient>
+  <radialGradient xlink:href="#0" id="1" cx="256" cy="256" r="216" gradientUnits="userSpaceOnUse"/>
+ </defs>
+ <rect rx="147.5047" width="450" height="450" x="31" y="31" opacity="0.25" fill="#282629"/>
+ <rect rx="147.5047" width="444" height="444" x="34" y="34" opacity="0.25" fill="#282629"/>
+ <rect y="37" x="37" height="438" width="438" rx="147.5047" opacity="0.25" fill="#282629"/>
+ <rect rx="147.5047" width="432" height="432" x="40" y="40" fill="url(#1)"/>
+ <text x="192.13202" y="394.09296" opacity="0.66" fill="#282629" font-family="Serif" word-spacing="0" line-height="125%" font-weight="bold" letter-spacing="0" font-size="383.59143"><tspan x="192.13202" y="394.09296">i</tspan>
+ </text>
+ <path d="m 193.92777 60.26857 c -74.04955 0 -133.6592 59.60965 -133.6592 133.6592 l 0 124.14446 c 0 74.04955 59.60965 133.6592 133.6592 133.6592 l 124.14446 0 c 74.04955 0 133.6592 -59.60965 133.6592 -133.6592 l 0 -124.14446 c 0 -74.04955 -59.60965 -133.6592 -133.6592 -133.6592 l -124.14446 0 z m 3.17157 13.932272 117.80132 0 c 68.08482 0 122.89849 51.707064 122.89849 115.93235 l 0 131.7336 c 0 64.22529 -54.81367 115.93235 -122.89849 115.93235 l -117.80132 0 c -68.08482 0 -122.89849 -51.70706 -122.89849 -115.93235 l 0 -131.7336 c 0 -64.22529 54.813674 -115.93235 122.89849 -115.93235 z" opacity="0.66" fill="#282629"/>
+</svg>

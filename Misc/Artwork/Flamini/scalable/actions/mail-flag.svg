@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="512"
+   height="512"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="mail.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.7"
+     inkscape:cx="626.73318"
+     inkscape:cy="213.16082"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1309"
+     inkscape:window-height="750"
+     inkscape:window-x="55"
+     inkscape:window-y="-3"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-540.36218)">
+    <path
+       style="color:#000000;fill:none;stroke:#555753;stroke-width:7;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="M 217.1875 260.1875 L 68.8125 408.5625 C 114.61384 460.2661 181.49545 492.875 256 492.875 C 330.5046 492.875 397.3862 460.2661 443.1875 408.5625 L 295.46875 260.84375 L 295.46875 277.65625 L 217.1875 277.65625 L 217.1875 260.1875 z "
+       transform="translate(0,540.36218)"
+       id="path2992" />
+    <path
+       style="fill:#555753;fill-rule:evenodd;stroke:none"
+       d="M 75.875,622.98718 C 32.605546,667.93329 6,729.04607 6,796.36218 c 0,138.07119 111.92881,250.00002 250,250.00002 138.07119,0 250,-111.92883 250,-250.00002 0,-67.32398 -26.62784,-128.42741 -69.90625,-173.375 L 407.8125,651.26843 C 443.85844,688.97277 466,740.08103 466,796.36218 c 0,115.9798 -94.0202,210.00002 -210,210.00002 -115.9798,0 -210,-94.02022 -210,-210.00002 0,-56.27306 22.150734,-107.35973 58.1875,-145.0625 L 75.875,622.98718 z"
+       id="path3788" />
+    <path
+       style="font-size:medium;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#555753;fill-opacity:1;stroke:none;stroke-width:40;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Sans;-inkscape-font-specification:Sans"
+       d="M 91.33726,638.36751 C 79.876421,647.19101 69.157884,656.924 59.259006,667.44054 L 240.72062,848.90215 a 21.612774,21.612774 0 0 0 30.55875,0 L 452.74099,667.44054 C 442.84246,656.9226 432.08972,647.2261 420.62897,638.40128 L 256.01688,803.04713 91.33726,638.36751 z"
+       id="rect3014"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#555753;fill-rule:evenodd;stroke:none"
+       d="M 256 6 C 117.92881 6 6 117.92881 6 256 C 6 394.07119 117.92881 506 256 506 C 394.07119 506 506 394.07119 506 256 C 506 117.92881 394.07119 6 256 6 z M 256 14 C 389.65291 14 498 122.34709 498 256 C 498 389.65291 389.65291 498 256 498 C 122.34709 498 14 389.65291 14 256 C 14 122.34709 122.34709 14 256 14 z "
+       transform="translate(0,540.36218)"
+       id="path3818" />
+  </g>
+</svg>
