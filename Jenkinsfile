@@ -26,8 +26,8 @@ pipeline {
             sh 'cd Source && lazbuild --lazarusdir=/usr/share/lazarus/1.8.0 --add-package ./3rdParty/ExpandPanels/expandpanels-master-2/pexpandpanels.lpk'
             sh 'cd Source && lazbuild --lazarusdir=/usr/share/lazarus/1.8.0 --add-package ./3rdParty/uniqueinstance-1.0/uniqueinstance_package.lpk'
             sh 'cd Source && lazbuild --lazarusdir=/usr/share/lazarus/1.8.0 --add-package ./3rdParty/Synapse/source/lib/laz_synapse.lpk'
-            sh 'cd Source && lazbuild --lazarusdir=/usr/share/lazarus/1.8.0 ./brewbuddy.lpi'
-            sh 'cd Source && PATH=$PATH:/opt/clang/bin:/opt/osxcross/target/bin lazbuild --lazarusdir=/usr/share/lazarus/1.8.0 -B ./brewbuddy.lpi --ws=win32 --cpu=i386 --os=win32 --compiler=/opt/windows/lib/fpc/3.0.4/ppcross386'
+            sh 'cd Source && lazbuild --lazarusdir=/usr/share/lazarus/1.8.0 ./brewbuddy_linux-x64.lpi'
+            sh 'cd Source && PATH=$PATH:/opt/clang/bin:/opt/osxcross/target/bin lazbuild --lazarusdir=/usr/share/lazarus/1.8.0 -B ./brewbuddy_win32.lpi --ws=win32 --cpu=i386 --os=win32 --compiler=/opt/windows/lib/fpc/3.0.4/ppcross386'
             sh 'chown -R 1000:1000 .'
           }
         }
