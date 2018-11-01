@@ -71,6 +71,7 @@
       <Unit0>
         <Filename Value="brewbuddy.pas"/>
         <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="2"/>
         <CursorPos Y="6"/>
         <UsageCount Value="201"/>
@@ -148,7 +149,6 @@
         <Filename Value="Units/hulpfuncties.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="Hulpfuncties"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
         <TopLine Value="2491"/>
         <CursorPos Y="2526"/>
@@ -1564,15 +1564,11 @@
         <UsageCount Value="10"/>
       </Unit198>
     </Units>
-    <JumpHistory Count="2" HistoryIndex="1">
+    <JumpHistory Count="1">
       <Position1>
         <Filename Value="UserInterface/Forms/frmain.pas"/>
         <Caret Line="1048" TopLine="1048"/>
       </Position1>
-      <Position2>
-        <Filename Value="brewbuddy.pas"/>
-        <Caret Line="6"/>
-      </Position2>
     </JumpHistory>
   </ProjectOptions>
   <CompilerOptions>

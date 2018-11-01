@@ -3,6 +3,12 @@ program brewbuddy;
 {$mode objfpc}{$H+}
 
 uses
+  {$IFDEF UNIX}{$IFDEF UseCThreads}
+  cthreads,
+  {$ENDIF}{$ENDIF}
+  {$ifdef UNIX}
+  clocale,
+  {$endif}
   SysUtils, Interfaces, // this includes the LCL widgetset
   printer4lazarus, tachartprint, Forms, FrMain, Data, subs, Hulpfuncties,
   Containers, FrBeerstyles, FrHop2, frQuestion, frgetstring, FrEquipments,
