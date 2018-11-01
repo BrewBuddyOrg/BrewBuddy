@@ -1,21 +1,21 @@
-{ This file was automatically created by Lazarus. Do not edit!
-  This source is only used to compile and install the package.
+{ Diese Datei wurde automatisch von Lazarus erzeugt. Sie darf nicht bearbeitet werden!
+Dieser Quelltext dient nur dem Übersetzen und Installieren des Packages.
  }
 
-unit Pexpandpanels;
+unit Pexpandpanels; 
 
 interface
 
 uses
-  ExpandPanels, LazarusPackageIntf;
+  ExpandPanels, LazarusPackageIntf; 
 
 implementation
 
-procedure Register;
+procedure Register; 
 begin
-  RegisterUnit('ExpandPanels', @ExpandPanels.Register);
-end;
+  RegisterUnit('ExpandPanels', @ExpandPanels.Register); 
+end; 
 
 initialization
-  RegisterPackage('Pexpandpanels', @Register);
+  RegisterPackage('Pexpandpanels', @Register); 
 end.

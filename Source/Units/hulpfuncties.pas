@@ -1,10 +1,12 @@
 unit Hulpfuncties;
 
+// temporarily removed the whole OpenAL sound library from the program for Linux since it causes weird floating point exceptions
+
 interface
 uses
   {$ifdef unix}clocale,{$endif} Classes, SysUtils, Variants, Math, Graphics,
   Forms, Dialogs, strutils, frQuestion, frgetstring, frgetpasswd,
-  FrNotification {$ifdef linux}, openal{$endif}
+  FrNotification //{$ifdef linux}, openal{$endif}
   {$ifdef windows}, MMsystem{$endif}, Process;
 
 type
@@ -201,22 +203,22 @@ var
   AmCellspGramDry, AmCellspPack, AmCellspMlSlurry : double;
 
 
-  {$ifdef linux}
-  buffer : array [0..numbuffers] of TALuint; //TALuint;
-  source : array [0..numsources] of TALuint; //TALuint;
-  sourcepos: array [0..2] of TALfloat= ( 0.0, 0.0, 0.0 ); //TALfloat= ( 0.0, 0.0, 0.0 );
-  sourcevel: array [0..2] of TALfloat= ( 0.0, 0.0, 0.0 ); //TALfloat= ( 0.0, 0.0, 0.0 );
-  listenerpos: array [0..2] of TALfloat= ( 0.0, 0.0, 0.0); //TALfloat= ( 0.0, 0.0, 0.0 );
-  listenervel: array [0..2] of TALfloat= ( 0.0, 0.0, 0.0); //TALfloat= ( 0.0, 0.0, 0.0 );
-  listenerori: array [0..5] of TALfloat= ( 0.0, 0.0, -1.0, 0.0, 1.0, 0.0); //TALfloat= ( 0.0, 0.0, -1.0, 0.0, 1.0, 0.0);
-
-  argv: array of PalByte;
-  format: TALEnum; //TALEnum;
-  size: TALSizei; //TALSizei;
-  freq: TALSizei; //TALSizei;
-  loop: TALInt;  //TALInt;
-  dat: TALVoid;  //TALVoid;
-  {$endif}
+//  {$ifdef linux}
+//  buffer : array [0..numbuffers] of TALuint; //TALuint;
+//  source : array [0..numsources] of TALuint; //TALuint;
+//  sourcepos: array [0..2] of TALfloat= ( 0.0, 0.0, 0.0 ); //TALfloat= ( 0.0, 0.0, 0.0 );
+//  sourcevel: array [0..2] of TALfloat= ( 0.0, 0.0, 0.0 ); //TALfloat= ( 0.0, 0.0, 0.0 );
+//  listenerpos: array [0..2] of TALfloat= ( 0.0, 0.0, 0.0); //TALfloat= ( 0.0, 0.0, 0.0 );
+//  listenervel: array [0..2] of TALfloat= ( 0.0, 0.0, 0.0); //TALfloat= ( 0.0, 0.0, 0.0 );
+//  listenerori: array [0..5] of TALfloat= ( 0.0, 0.0, -1.0, 0.0, 1.0, 0.0); //TALfloat= ( 0.0, 0.0, -1.0, 0.0, 1.0, 0.0);
+//
+//  argv: array of PalByte;
+//  format: TALEnum; //TALEnum;
+//  size: TALSizei; //TALSizei;
+//  freq: TALSizei; //TALSizei;
+//  loop: TALInt;  //TALInt;
+//  dat: TALVoid;  //TALVoid;
+//  {$endif}
 
   StartSound, EndSound, WarningSound, AlarmSound : string;
 
@@ -2332,9 +2334,9 @@ end;}
 Procedure PlayStartProg;
 var sound : TProcess;
 begin
-  {$ifdef linux}
-  AlSourcePlay(source[startprog]);
-  {$endif}
+//  {$ifdef linux}
+//  AlSourcePlay(source[startprog]);
+//  {$endif}
   {$ifdef darwin}
   sound:= TProcess.Create(NIL);
   sound.CommandLine:= 'afplay ' + StartSound;
@@ -2351,9 +2353,9 @@ end;
 Procedure PlayWarning;
 var sound : TProcess;
 begin
-  {$ifdef linux}
-  AlSourcePlay(source[warning]);
-  {$endif}
+//  {$ifdef linux}
+//  AlSourcePlay(source[warning]);
+//  {$endif}
   {$ifdef darwin}
   sound:= TProcess.Create(NIL);
   sound.CommandLine:= 'afplay ' + StartSound;
@@ -2370,9 +2372,9 @@ end;
 Procedure PlayAlarm;
 var sound : TProcess;
 begin
-  {$ifdef linux}
-  AlSourcePlay(source[alarm]);
-  {$endif}
+//  {$ifdef linux}
+//  AlSourcePlay(source[alarm]);
+//  {$endif}
   {$ifdef darwub}
   sound:= TProcess.Create(NIL);
   sound.CommandLine:= 'afplay ' + StartSound;
@@ -2389,9 +2391,9 @@ end;
 Procedure PlayEndProg;
 var sound : TProcess;
 begin
-  {$ifdef linux}
-  AlSourcePlay(source[endprog]);
-  {$endif}
+//  {$ifdef linux}
+//  AlSourcePlay(source[endprog]);
+//  {$endif}
   {$ifdef darwin}
   sound:= TProcess.Create(NIL);
   sound.CommandLine:= 'afplay ' + StartSound;
@@ -2455,72 +2457,75 @@ Initialization
   EndSound:= SoundFolder + 'end.wav';
   WarningSound:= SoundFolder + 'warning.wav';
 
-  {$ifdef linux}
-  //Initialize the sound system
-  InitOpenAL;
-  AlutInit(nil,argv);
-  alGenBuffers(numbuffers, buffer);
-  alGenSources(numsources, source);
+//  {$ifdef linux}
+//  //Initialize the sound system
+//  InitOpenAL;
+//  AlutInit(nil,argv);
+//  alGenBuffers(numbuffers, buffer);
+//  alGenSources(numsources, source);
 
-  AlutLoadWavFile(StartSound, format, dat, size, freq, loop);
-  AlBufferData(buffer[startprog], format, dat, size, freq);
-  AlutUnloadWav(format, dat, size, freq);
+//  AlutLoadWavFile(StartSound, format, dat, size, freq, loop);
+//  AlBufferData(buffer[startprog], format, dat, size, freq);
+//  AlutUnloadWav(format, dat, size, freq);
 
-  AlutLoadWavFile(WarningSound, format, dat, size, freq, loop);
-  AlBufferData(buffer[warning], format, dat, size, freq);
-  AlutUnloadWav(format, dat, size, freq);
+//  AlutLoadWavFile(WarningSound, format, dat, size, freq, loop);
+//  AlBufferData(buffer[warning], format, dat, size, freq);
+//  AlutUnloadWav(format, dat, size, freq);
 
-  AlutLoadWavFile(AlarmSound, format, dat, size, freq, loop);
-  AlBufferData(buffer[alarm], format, dat, size, freq);
-  AlutUnloadWav(format, dat, size, freq);
+//  AlutLoadWavFile(AlarmSound, format, dat, size, freq, loop);
+//  AlBufferData(buffer[alarm], format, dat, size, freq);
+//  AlutUnloadWav(format, dat, size, freq);
 
-  AlutLoadWavFile(EndSound, format, dat, size, freq, loop);
-  AlBufferData(buffer[endprog], format, dat, size, freq);
-  AlutUnloadWav(format, dat, size, freq);
+//  AlutLoadWavFile(EndSound, format, dat, size, freq, loop);
+//  AlBufferData(buffer[endprog], format, dat, size, freq);
+//  AlutUnloadWav(format, dat, size, freq);
 
-  AlSourcei( source[startprog], AL_BUFFER, buffer[startprog]);
-  AlSourcef( source[startprog], AL_PITCH, 1.0 );
-  AlSourcef( source[startprog], AL_GAIN, 1.0 );
-  AlSourcefv( source[startprog], AL_POSITION, @sourcepos);
-  AlSourcefv( source[startprog], AL_VELOCITY, @sourcevel);
-  AlSourcei( source[startprog], AL_LOOPING, loop);
+//  AlSourcei( source[startprog], AL_BUFFER, buffer[startprog]);
+//  AlSourcef( source[startprog], AL_PITCH, 1.0 );
+//  AlSourcef( source[startprog], AL_GAIN, 1.0 );
+//  AlSourcefv( source[startprog], AL_POSITION, @sourcepos);
+//  AlSourcefv( source[startprog], AL_VELOCITY, @sourcevel);
+//  AlSourcei( source[startprog], AL_LOOPING, loop);
 
-  AlSourcei( source[warning], AL_BUFFER, buffer[warning]);
-  AlSourcef( source[warning], AL_PITCH, 1.0 );
-  AlSourcef( source[warning], AL_GAIN, 1.0 );
-  AlSourcefv( source[warning], AL_POSITION, @sourcepos);
-  AlSourcefv( source[warning], AL_VELOCITY, @sourcevel);
-  AlSourcei( source[warning], AL_LOOPING, loop);
+//  AlSourcei( source[warning], AL_BUFFER, buffer[warning]);
+//  AlSourcef( source[warning], AL_PITCH, 1.0 );
+//  AlSourcef( source[warning], AL_GAIN, 1.0 );
+//  AlSourcefv( source[warning], AL_POSITION, @sourcepos);
+//  AlSourcefv( source[warning], AL_VELOCITY, @sourcevel);
+//  AlSourcei( source[warning], AL_LOOPING, loop);
 
-  AlSourcei( source[alarm], AL_BUFFER, buffer[alarm]);
-  AlSourcef( source[alarm], AL_PITCH, 1.0 );
-  AlSourcef( source[alarm], AL_GAIN, 1.0 );
-  AlSourcefv( source[alarm], AL_POSITION, @sourcepos);
-  AlSourcefv( source[alarm], AL_VELOCITY, @sourcevel);
-  AlSourcei( source[alarm], AL_LOOPING, loop);
+//  AlSourcei( source[alarm], AL_BUFFER, buffer[alarm]);
+//  AlSourcef( source[alarm], AL_PITCH, 1.0 );
+//  AlSourcef( source[alarm], AL_GAIN, 1.0 );
+//  AlSourcefv( source[alarm], AL_POSITION, @sourcepos);
+//  AlSourcefv( source[alarm], AL_VELOCITY, @sourcevel);
+//  AlSourcei( source[alarm], AL_LOOPING, loop);
 
-  AlSourcei( source[endprog], AL_BUFFER, buffer[endprog]);
-  AlSourcef( source[endprog], AL_PITCH, 1.0 );
-  AlSourcef( source[endprog], AL_GAIN, 1.0 );
-  AlSourcefv( source[endprog], AL_POSITION, @sourcepos);
-  AlSourcefv( source[endprog], AL_VELOCITY, @sourcevel);
-  AlSourcei( source[endprog], AL_LOOPING, loop);
+//  AlSourcei( source[endprog], AL_BUFFER, buffer[endprog]);
+//  AlSourcef( source[endprog], AL_PITCH, 1.0 );
+//  AlSourcef( source[endprog], AL_GAIN, 1.0 );
+//  AlSourcefv( source[endprog], AL_POSITION, @sourcepos);
+//  AlSourcefv( source[endprog], AL_VELOCITY, @sourcevel);
+//  AlSourcei( source[endprog], AL_LOOPING, loop);
 
-  AlListenerfv( AL_POSITION, @listenerpos);
-  AlListenerfv( AL_VELOCITY, @listenervel);
-  AlListenerfv( AL_ORIENTATION, @listenerori);
-  {$endif}
+//  AlListenerfv( AL_POSITION, @listenerpos);
+//  AlListenerfv( AL_VELOCITY, @listenervel);
+//  AlListenerfv( AL_ORIENTATION, @listenerori);
+//  {$endif}
 
 finalization
-  {$ifdef linux}
+//  {$ifdef linux}
 //Terminate the sound system
-  Log('');
-  Log('HULPFUNCTIES');
-  AlDeleteBuffers(1, @buffer);
-  Log('alBuffers afgesloten');
-  AlDeleteSources(1, @source);
-  Log('alSources afgesloten');
-  AlutExit();
-  Log('Sound system afgesloten');
-  {$endif}
+//  Log('');
+//  Log('HULPFUNCTIES');
+//  AlDeleteBuffers(1, @buffer);
+//  Log('alBuffers afgesloten');
+//  AlDeleteSources(1, @source);
+//  Log('alSources afgesloten');
+//  AlutExit();
+//  Log('Sound system afgesloten');
+//  {$endif}
+    {$ifdef linux}
+    Log('');
+    {$endif}
 end.
