@@ -23,7 +23,7 @@ pipeline {
             sh 'pwd'
 //            sh 'find . -name "*.o" -exec rm {} \\;'
 //            sh 'find . -name "*.ppu" -exec rm {} \\;'
-            sh 'cd Source && lazbuild --lazarusdir=/usr/share/lazarus/1.8.0 --add-package ./3rdParty/ExpandPanels/expandpanels-master-2/pexpandpanels.lpk'
+            sh 'cd Source && lazbuild --lazarusdir=/usr/share/lazarus/1.8.0 --add-package ./3rdParty/ExpandPanels/pexpandpanels.lpk'
             sh 'cd Source && lazbuild --lazarusdir=/usr/share/lazarus/1.8.0 --add-package ./3rdParty/uniqueinstance-1.0/uniqueinstance_package.lpk'
             sh 'cd Source && lazbuild --lazarusdir=/usr/share/lazarus/1.8.0 --add-package ./3rdParty/Synapse/source/lib/laz_synapse.lpk'
             sh 'cd Source && lazbuild --lazarusdir=/usr/share/lazarus/1.8.0 ./brewbuddy_linux-x64.lpi'
