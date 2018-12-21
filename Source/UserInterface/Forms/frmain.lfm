@@ -1,7 +1,7 @@
 object frmMain: TfrmMain
-  Left = 330
+  Left = 1087
   Height = 720
-  Top = 171
+  Top = 166
   Width = 1004
   BorderStyle = bsSingle
   Caption = 'BrewBuddy - Sassy Saison'
@@ -38,7 +38,7 @@ object frmMain: TfrmMain
       object tsBrews: TTabSheet
         Hint = 'Brouwsels zijn recepten die je zelf hebt gebrouwen'
         Caption = 'Brouwsels'
-        ClientHeight = 605
+        ClientHeight = 607
         ClientWidth = 224
         ParentShowHint = False
         object tvBrews: TTreeView
@@ -84,7 +84,7 @@ object frmMain: TfrmMain
             Top = 0
             Width = 130
             AutoSize = False
-            ItemHeight = 12
+            ItemHeight = 0
             ItemIndex = 0
             Items.Strings = (
               'Code, naam'
@@ -332,14 +332,14 @@ object frmMain: TfrmMain
       object tsRecipes: TTabSheet
         Hint = 'Recepten kunnen van jezelf zijn of van derden'
         Caption = 'Recepten'
-        ClientHeight = 611
-        ClientWidth = 226
+        ClientHeight = 607
+        ClientWidth = 224
         ParentShowHint = False
         object tvRecipes: TTreeView
           Left = 0
-          Height = 513
+          Height = 509
           Top = 38
-          Width = 226
+          Width = 224
           Align = alClient
           AutoExpand = True
           Indent = 10
@@ -355,17 +355,17 @@ object frmMain: TfrmMain
         object pRecipesButtons1: TPanel
           Left = 0
           Height = 60
-          Top = 551
-          Width = 226
+          Top = 547
+          Width = 224
           Align = alBottom
           ClientHeight = 60
-          ClientWidth = 226
+          ClientWidth = 224
           TabOrder = 1
           object Label21: TLabel
             Left = 7
-            Height = 12
+            Height = 15
             Top = 6
-            Width = 48
+            Width = 69
             Caption = 'Sorteren op:'
             ParentColor = False
           end
@@ -375,7 +375,7 @@ object frmMain: TfrmMain
             Top = 0
             Width = 130
             AutoSize = False
-            ItemHeight = 12
+            ItemHeight = 0
             ItemIndex = 1
             Items.Strings = (
               'Code, naam'
@@ -546,24 +546,24 @@ object frmMain: TfrmMain
           Left = 0
           Height = 38
           Top = 0
-          Width = 226
+          Width = 224
           Align = alTop
           ClientHeight = 38
-          ClientWidth = 226
+          ClientWidth = 224
           Font.Height = 12
           ParentFont = False
           TabOrder = 2
           object Label156: TLabel
             Left = 3
-            Height = 12
+            Height = 15
             Top = 10
-            Width = 19
+            Width = 29
             Caption = 'Filter'
             ParentColor = False
           end
           object eSearchRecipes: TEdit
             Left = 34
-            Height = 20
+            Height = 27
             Hint = 'Filter recepten op ingrediënten'
             Top = 4
             Width = 165
@@ -621,7 +621,7 @@ object frmMain: TfrmMain
       end
       object tsCloud: TTabSheet
         Caption = 'Cloud'
-        ClientHeight = 605
+        ClientHeight = 607
         ClientWidth = 224
         object pCloudButtons: TPanel
           Left = 0
@@ -647,7 +647,7 @@ object frmMain: TfrmMain
             Top = -1
             Width = 130
             AutoSize = False
-            ItemHeight = 12
+            ItemHeight = 0
             ItemIndex = 1
             Items.Strings = (
               'Code, naam'
@@ -795,9 +795,9 @@ object frmMain: TfrmMain
       AnimationSpeed = 20
       object Label119: TLabel
         Left = 8
-        Height = 15
+        Height = 17
         Top = 34
-        Width = 17
+        Width = 22
         Caption = 'SG:'
         ParentColor = False
       end
@@ -820,9 +820,9 @@ object frmMain: TfrmMain
       end
       object Label120: TLabel
         Left = 8
-        Height = 15
+        Height = 17
         Top = 60
-        Width = 30
+        Width = 40
         Caption = 'Plato:'
         ParentColor = False
       end
@@ -845,9 +845,9 @@ object frmMain: TfrmMain
       end
       object Label121: TLabel
         Left = 8
-        Height = 15
+        Height = 17
         Top = 87
-        Width = 22
+        Width = 31
         Caption = 'Brix:'
         ParentColor = False
       end
@@ -883,9 +883,9 @@ object frmMain: TfrmMain
       end
       object Label126: TLabel
         Left = 8
-        Height = 15
+        Height = 17
         Top = 138
-        Width = 22
+        Width = 31
         Caption = 'Brix:'
         ParentColor = False
       end
@@ -908,9 +908,9 @@ object frmMain: TfrmMain
       end
       object Label124: TLabel
         Left = 8
-        Height = 15
+        Height = 17
         Top = 166
-        Width = 17
+        Width = 22
         Caption = 'SG:'
         ParentColor = False
       end
@@ -933,9 +933,9 @@ object frmMain: TfrmMain
       end
       object Label125: TLabel
         Left = 8
-        Height = 15
+        Height = 17
         Top = 192
-        Width = 30
+        Width = 40
         Caption = 'Plato:'
         ParentColor = False
       end
@@ -958,9 +958,9 @@ object frmMain: TfrmMain
       end
       object lABV: TLabel
         Left = 8
-        Height = 15
+        Height = 17
         Top = 220
-        Width = 44
+        Width = 55
         Caption = 'Alcohol:'
         ParentColor = False
       end
@@ -981,9 +981,9 @@ object frmMain: TfrmMain
       end
       object lSVG1: TLabel
         Left = 8
-        Height = 15
+        Height = 17
         Top = 246
-        Width = 24
+        Width = 32
         Caption = 'SVG:'
         ParentColor = False
       end
@@ -1032,9 +1032,9 @@ object frmMain: TfrmMain
       Collapsed = True
       object Label127: TLabel
         Left = 4
-        Height = 15
+        Height = 17
         Top = 32
-        Width = 17
+        Width = 22
         Caption = 'SG:'
         ParentColor = False
       end
@@ -1057,9 +1057,9 @@ object frmMain: TfrmMain
       end
       object Label128: TLabel
         Left = 4
-        Height = 15
+        Height = 17
         Top = 63
-        Width = 43
+        Width = 55
         Caption = 'Volume:'
         ParentColor = False
       end
@@ -1082,17 +1082,17 @@ object frmMain: TfrmMain
       end
       object Label129: TLabel
         Left = 123
-        Height = 15
+        Height = 17
         Top = 63
-        Width = 3
+        Width = 4
         Caption = 'l'
         ParentColor = False
       end
       object Label130: TLabel
         Left = 4
-        Height = 15
+        Height = 17
         Top = 90
-        Width = 34
+        Width = 46
         Caption = 'Water:'
         ParentColor = False
       end
@@ -1114,18 +1114,18 @@ object frmMain: TfrmMain
       end
       object Label131: TLabel
         Left = 123
-        Height = 15
+        Height = 17
         Top = 90
-        Width = 3
+        Width = 4
         Caption = 'l'
         ParentColor = False
       end
       object Label132: TLabel
         Left = 4
-        Height = 15
+        Height = 17
         Hint = 'Suiker erbij (kg)'
         Top = 121
-        Width = 35
+        Width = 46
         Caption = 'Suiker:'
         ParentColor = False
         ParentShowHint = False
@@ -1149,17 +1149,17 @@ object frmMain: TfrmMain
       end
       object Label133: TLabel
         Left = 123
-        Height = 15
+        Height = 17
         Top = 121
-        Width = 13
+        Width = 16
         Caption = 'kg'
         ParentColor = False
       end
       object Label134: TLabel
         Left = 4
-        Height = 15
+        Height = 17
         Top = 150
-        Width = 33
+        Width = 41
         Caption = 'SG na:'
         ParentColor = False
       end
@@ -1182,9 +1182,9 @@ object frmMain: TfrmMain
       end
       object Label135: TLabel
         Left = 4
-        Height = 15
+        Height = 17
         Top = 177
-        Width = 43
+        Width = 55
         Caption = 'Volume:'
         ParentColor = False
       end
@@ -1207,9 +1207,9 @@ object frmMain: TfrmMain
       end
       object Label136: TLabel
         Left = 123
-        Height = 15
+        Height = 17
         Top = 177
-        Width = 3
+        Width = 4
         Caption = 'l'
         ParentColor = False
       end
@@ -1243,9 +1243,9 @@ object frmMain: TfrmMain
       Collapsed = True
       object Label137: TLabel
         Left = 8
-        Height = 15
+        Height = 17
         Top = 35
-        Width = 17
+        Width = 22
         Caption = 'SG:'
         ParentColor = False
       end
@@ -1268,9 +1268,9 @@ object frmMain: TfrmMain
       end
       object Label138: TLabel
         Left = 8
-        Height = 15
+        Height = 17
         Top = 62
-        Width = 36
+        Width = 45
         Caption = 'Temp.:'
         ParentColor = False
       end
@@ -1293,17 +1293,17 @@ object frmMain: TfrmMain
       end
       object lTemp: TLabel
         Left = 123
-        Height = 15
+        Height = 17
         Top = 63
-        Width = 13
+        Width = 14
         Caption = '°C'
         ParentColor = False
       end
       object Label139: TLabel
         Left = 8
-        Height = 15
+        Height = 17
         Top = 93
-        Width = 17
+        Width = 22
         Caption = 'SG:'
         ParentColor = False
       end
@@ -1352,7 +1352,7 @@ object frmMain: TfrmMain
       Collapsed = True
       object mPredictions: TMemo
         Left = 0
-        Height = 0
+        Height = 33
         Hint = 'Voorspelde waarden door neurale netwerken'
         Top = 27
         Width = 138
@@ -1607,13 +1607,13 @@ object frmMain: TfrmMain
       TabOrder = 1
       object tsAnalysisCommon: TTabSheet
         Caption = 'Algemeen'
-        ClientHeight = 611
-        ClientWidth = 618
+        ClientHeight = 607
+        ClientWidth = 616
         object chCommon: TChart
           Left = 0
-          Height = 611
+          Height = 607
           Top = 0
-          Width = 618
+          Width = 616
           AxisList = <          
             item
               Marks.LabelBrush.Style = bsClear
@@ -1652,7 +1652,7 @@ object frmMain: TfrmMain
       end
       object tsFermentables: TTabSheet
         Caption = 'Vergistbare ingrediënten'
-        ClientHeight = 605
+        ClientHeight = 607
         ClientWidth = 616
         object chAFerm: TChart
           Left = 0
@@ -1712,7 +1712,7 @@ object frmMain: TfrmMain
       end
       object tsHops: TTabSheet
         Caption = 'Hop'
-        ClientHeight = 605
+        ClientHeight = 607
         ClientWidth = 616
         object pAnalysisHops: TPanel
           Left = 0
@@ -1822,7 +1822,7 @@ object frmMain: TfrmMain
       end
       object tsYeast: TTabSheet
         Caption = 'Gist'
-        ClientHeight = 605
+        ClientHeight = 607
         ClientWidth = 616
         object chAnalyseYeast: TChart
           Left = 0
@@ -1867,7 +1867,7 @@ object frmMain: TfrmMain
       end
       object tsMiscs: TTabSheet
         Caption = 'Overige ingrediënten'
-        ClientHeight = 605
+        ClientHeight = 607
         ClientWidth = 616
         object chAnalyseMiscs: TChart
           Left = 0
@@ -2048,8 +2048,8 @@ object frmMain: TfrmMain
       object tsRecipe: TTabSheet
         Hint = 'Voer ingrediënten in en bereken bitterheid, kleur en begin SG'
         Caption = 'Recept'
-        ClientHeight = 611
-        ClientWidth = 618
+        ClientHeight = 607
+        ClientWidth = 616
         ParentShowHint = False
         object gbIngredients: TGroupBox
           Left = 0
@@ -2057,8 +2057,8 @@ object frmMain: TfrmMain
           Top = 98
           Width = 615
           Caption = 'Ingrediënten'
-          ClientHeight = 333
-          ClientWidth = 611
+          ClientHeight = 334
+          ClientWidth = 613
           ParentShowHint = False
           TabOrder = 1
           object hcIngredients: THeaderControl
@@ -2124,10 +2124,10 @@ object frmMain: TfrmMain
           end
           object cbPercentage: TCheckBox
             Left = 6
-            Height = 19
+            Height = 23
             Hint = 'Voer hoeveelheden mout in als percentage van de stort'
             Top = 300
-            Width = 211
+            Width = 351
             Caption = 'Reken met percentages vergistbare ingrediënten'
             OnChange = cbPercentageChange
             ParentShowHint = False
@@ -2136,9 +2136,9 @@ object frmMain: TfrmMain
           end
           object Label9: TLabel
             Left = 6
-            Height = 12
+            Height = 15
             Top = 5
-            Width = 37
+            Width = 52
             Caption = 'Begin SG:'
             ParentColor = False
             ParentShowHint = False
@@ -2190,18 +2190,18 @@ object frmMain: TfrmMain
           end
           object lEfficiency: TLabel
             Left = 577
-            Height = 12
+            Height = 15
             Top = 57
-            Width = 7
+            Width = 10
             Caption = '%'
             ParentColor = False
             ParentShowHint = False
           end
           object Label12: TLabel
             Left = 212
-            Height = 12
+            Height = 15
             Top = 5
-            Width = 40
+            Width = 60
             Caption = 'Bitterheid:'
             ParentColor = False
             ParentShowHint = False
@@ -2225,9 +2225,9 @@ object frmMain: TfrmMain
           end
           object Label13: TLabel
             Left = 212
-            Height = 12
+            Height = 15
             Top = 57
-            Width = 22
+            Width = 33
             Caption = 'Kleur:'
             ParentColor = False
             ParentShowHint = False
@@ -2337,9 +2337,9 @@ object frmMain: TfrmMain
           end
           object Label16: TLabel
             Left = 527
-            Height = 12
+            Height = 15
             Top = 90
-            Width = 35
+            Width = 50
             Alignment = taCenter
             Caption = 'Voeg toe'
             ParentColor = False
@@ -2491,18 +2491,18 @@ object frmMain: TfrmMain
           end
           object Label17: TLabel
             Left = 212
-            Height = 12
+            Height = 15
             Top = 30
-            Width = 65
+            Width = 95
             Caption = 'Bitterheidsindex:'
             ParentColor = False
             ParentShowHint = False
           end
           object lBUGU: TLabel
             Left = 371
-            Height = 12
+            Height = 15
             Top = 30
-            Width = 27
+            Width = 37
             Alignment = taCenter
             Caption = 'BU/GU'
             ParentColor = False
@@ -2510,9 +2510,9 @@ object frmMain: TfrmMain
           end
           object Label18: TLabel
             Left = 6
-            Height = 12
+            Height = 15
             Top = 30
-            Width = 66
+            Width = 91
             Caption = 'Geschat eind SG:'
             ParentColor = False
             ParentShowHint = False
@@ -2555,9 +2555,9 @@ object frmMain: TfrmMain
           end
           object Label62: TLabel
             Left = 455
-            Height = 12
+            Height = 15
             Top = 5
-            Width = 33
+            Width = 49
             Caption = 'Kooktijd:'
             ParentColor = False
             ParentShowHint = False
@@ -2581,18 +2581,18 @@ object frmMain: TfrmMain
           end
           object lBoilTime: TLabel
             Left = 577
-            Height = 12
+            Height = 15
             Top = 5
-            Width = 17
+            Width = 23
             Caption = 'min.'
             ParentColor = False
             ParentShowHint = False
           end
           object Label150: TLabel
             Left = 8
-            Height = 12
+            Height = 15
             Top = 57
-            Width = 64
+            Width = 89
             Caption = 'Geschat alcohol:'
             ParentColor = False
             ParentShowHint = False
@@ -2627,7 +2627,7 @@ object frmMain: TfrmMain
           end
           object eABVest: TEdit
             Left = 104
-            Height = 20
+            Height = 27
             Top = 52
             Width = 79
             Color = clScrollBar
@@ -2673,17 +2673,17 @@ object frmMain: TfrmMain
           end
           object lEstOG: TLabel
             Left = 183
-            Height = 12
+            Height = 15
             Top = 5
-            Width = 11
+            Width = 14
             Caption = 'SG'
             ParentColor = False
           end
           object Label11: TLabel
             Left = 390
-            Height = 12
+            Height = 15
             Top = 306
-            Width = 29
+            Width = 42
             Caption = 'Kosten:'
             ParentColor = False
           end
@@ -2843,15 +2843,15 @@ object frmMain: TfrmMain
           Top = 0
           Width = 615
           Caption = 'Algemeen'
-          ClientHeight = 81
-          ClientWidth = 611
+          ClientHeight = 82
+          ClientWidth = 613
           ParentShowHint = False
           TabOrder = 0
           object Label2: TLabel
             Left = 6
-            Height = 12
+            Height = 15
             Top = 3
-            Width = 23
+            Width = 31
             Caption = 'Code:'
             ParentColor = False
             ParentShowHint = False
@@ -2870,9 +2870,9 @@ object frmMain: TfrmMain
           end
           object Label3: TLabel
             Left = 136
-            Height = 12
+            Height = 15
             Top = 4
-            Width = 27
+            Width = 34
             Caption = 'Naam:'
             ParentColor = False
             ParentShowHint = False
@@ -2891,9 +2891,9 @@ object frmMain: TfrmMain
           end
           object Label5: TLabel
             Left = 240
-            Height = 12
+            Height = 15
             Top = 30
-            Width = 59
+            Width = 83
             Caption = 'Type brouwsel:'
             ParentColor = False
             ParentShowHint = False
@@ -2905,7 +2905,7 @@ object frmMain: TfrmMain
             Top = 25
             Width = 114
             AutoSize = False
-            ItemHeight = 12
+            ItemHeight = 0
             OnChange = cbTypeChange
             ParentShowHint = False
             ShowHint = True
@@ -2914,9 +2914,9 @@ object frmMain: TfrmMain
           end
           object Label4: TLabel
             Left = 6
-            Height = 12
+            Height = 15
             Top = 31
-            Width = 30
+            Width = 45
             Caption = 'Bierstijl:'
             ParentColor = False
             ParentShowHint = False
@@ -2928,7 +2928,7 @@ object frmMain: TfrmMain
             Top = 25
             Width = 160
             AutoSize = False
-            ItemHeight = 12
+            ItemHeight = 0
             OnChange = cbBeerStyleChange
             ParentShowHint = False
             ShowHint = True
@@ -2937,9 +2937,9 @@ object frmMain: TfrmMain
           end
           object Label6: TLabel
             Left = 8
-            Height = 12
+            Height = 15
             Top = 60
-            Width = 40
+            Width = 56
             Caption = 'Installatie:'
             ParentColor = False
             ParentShowHint = False
@@ -2951,7 +2951,7 @@ object frmMain: TfrmMain
             Top = 53
             Width = 160
             AutoSize = False
-            ItemHeight = 12
+            ItemHeight = 0
             OnChange = cbEquipmentChange
             ParentShowHint = False
             ShowHint = True
@@ -2960,9 +2960,9 @@ object frmMain: TfrmMain
           end
           object Label15: TLabel
             Left = 450
-            Height = 12
+            Height = 15
             Top = 31
-            Width = 32
+            Width = 44
             Caption = 'Volume:'
             ParentColor = False
             ParentShowHint = False
@@ -2986,18 +2986,18 @@ object frmMain: TfrmMain
           end
           object lBatchSize: TLabel
             Left = 592
-            Height = 12
+            Height = 15
             Top = 32
-            Width = 2
+            Width = 3
             Caption = 'l'
             ParentColor = False
           end
           object cbScaleVolume: TCheckBox
             Left = 459
-            Height = 19
+            Height = 23
             Hint = 'Verander alle hoeveelheden mee met het volume'
             Top = 56
-            Width = 95
+            Width = 151
             Caption = 'Schaal met volume'
             OnChange = cbScaleVolumeChange
             ParentShowHint = False
@@ -3006,9 +3006,9 @@ object frmMain: TfrmMain
           end
           object cbLocked: TCheckBox
             Left = 459
-            Height = 19
+            Height = 23
             Top = -2
-            Width = 63
+            Width = 100
             Caption = 'Afgesloten'
             OnChange = cbLockedChange
             OnClick = cbLockedClick
@@ -3030,7 +3030,7 @@ object frmMain: TfrmMain
       object tsWater: TTabSheet
         Hint = 'Voer maischschema, waterprofiel en geplande volumes in'
         Caption = 'Maischen, water'
-        ClientHeight = 605
+        ClientHeight = 607
         ClientWidth = 616
         ParentShowHint = False
         object gbMashing: TGroupBox
@@ -3039,8 +3039,8 @@ object frmMain: TfrmMain
           Top = 2
           Width = 609
           Caption = 'Maischen en waterbehandeling'
-          ClientHeight = 310
-          ClientWidth = 605
+          ClientHeight = 309
+          ClientWidth = 607
           ParentShowHint = False
           TabOrder = 0
           object sgMashSteps: TStringGrid
@@ -3165,7 +3165,7 @@ object frmMain: TfrmMain
             Hint = 'Kies voorgedefinieerd maischschema'
             Top = 240
             Width = 504
-            ItemHeight = 12
+            ItemHeight = 0
             OnChange = cbMashChange
             ParentShowHint = False
             ShowHint = True
@@ -3415,8 +3415,8 @@ object frmMain: TfrmMain
           Top = 336
           Width = 609
           Caption = 'Geplande watervolumes'
-          ClientHeight = 236
-          ClientWidth = 605
+          ClientHeight = 235
+          ClientWidth = 607
           ParentShowHint = False
           TabOrder = 1
           object Label26: TLabel
@@ -3910,7 +3910,7 @@ object frmMain: TfrmMain
       object tsBrewday: TTabSheet
         Hint = 'Voer metingen tijdens de brouwdag in'
         Caption = 'Metingen op de brouwdag'
-        ClientHeight = 605
+        ClientHeight = 607
         ClientWidth = 616
         ParentShowHint = False
         object gbMeasMash: TGroupBox
@@ -3919,8 +3919,8 @@ object frmMain: TfrmMain
           Top = 40
           Width = 235
           Caption = 'Maischen'
-          ClientHeight = 83
-          ClientWidth = 231
+          ClientHeight = 82
+          ClientWidth = 233
           ParentShowHint = False
           TabOrder = 1
           object Label50: TLabel
@@ -4012,8 +4012,8 @@ object frmMain: TfrmMain
           Top = 40
           Width = 367
           Caption = 'Koken'
-          ClientHeight = 131
-          ClientWidth = 363
+          ClientHeight = 130
+          ClientWidth = 365
           ParentShowHint = False
           TabOrder = 5
           object Label55: TLabel
@@ -4301,8 +4301,8 @@ object frmMain: TfrmMain
           Top = 142
           Width = 235
           Caption = 'Filteren, spoelen'
-          ClientHeight = 111
-          ClientWidth = 231
+          ClientHeight = 110
+          ClientWidth = 233
           ParentShowHint = False
           TabOrder = 2
           object Label51: TLabel
@@ -4433,8 +4433,8 @@ object frmMain: TfrmMain
           Top = 272
           Width = 235
           Caption = 'Volumes'
-          ClientHeight = 113
-          ClientWidth = 231
+          ClientHeight = 112
+          ClientWidth = 233
           ParentShowHint = False
           TabOrder = 3
           object Label157: TLabel
@@ -4573,8 +4573,8 @@ object frmMain: TfrmMain
           Top = 198
           Width = 367
           Caption = 'Whirlpoolen, koelen, beluchten en naar gistvat'
-          ClientHeight = 343
-          ClientWidth = 363
+          ClientHeight = 342
+          ClientWidth = 365
           ParentShowHint = False
           TabOrder = 6
           object Label64: TLabel
@@ -4654,7 +4654,7 @@ object frmMain: TfrmMain
             Hint = 'Kies type koeler'
             Top = 33
             Width = 156
-            ItemHeight = 12
+            ItemHeight = 0
             OnChange = cbCoolingMethodChange
             ParentShowHint = False
             ShowHint = True
@@ -4763,7 +4763,7 @@ object frmMain: TfrmMain
             Hint = 'Is belucht met zuurstof of met lucht?'
             Top = 225
             Width = 156
-            ItemHeight = 12
+            ItemHeight = 0
             OnChange = cbAerationTypeChange
             ParentShowHint = False
             ShowHint = True
@@ -4937,8 +4937,8 @@ object frmMain: TfrmMain
           Top = 411
           Width = 235
           Caption = 'Timers en stopwatch'
-          ClientHeight = 130
-          ClientWidth = 231
+          ClientHeight = 129
+          ClientWidth = 233
           ParentShowHint = False
           TabOrder = 4
           object bbStartMash: TBitBtn
@@ -5296,7 +5296,7 @@ object frmMain: TfrmMain
       object tsFermentation: TTabSheet
         Hint = 'Voer gegevens over de vergisting in'
         Caption = 'Vergisting'
-        ClientHeight = 605
+        ClientHeight = 607
         ClientWidth = 616
         ParentShowHint = False
         object gbYeast: TGroupBox
@@ -5305,8 +5305,8 @@ object frmMain: TfrmMain
           Top = 0
           Width = 610
           Caption = 'Gist en starter'
-          ClientHeight = 143
-          ClientWidth = 606
+          ClientHeight = 142
+          ClientWidth = 608
           ParentShowHint = False
           TabOrder = 0
           object Label71: TLabel
@@ -5325,7 +5325,7 @@ object frmMain: TfrmMain
             Top = 1
             Width = 100
             AutoSize = False
-            ItemHeight = 12
+            ItemHeight = 0
             OnChange = cbYeastAddedAsChange
             ParentShowHint = False
             ShowHint = True
@@ -5359,7 +5359,7 @@ object frmMain: TfrmMain
             Top = 57
             Width = 100
             AutoSize = False
-            ItemHeight = 12
+            ItemHeight = 0
             OnChange = cbStarterTypeChange
             ParentShowHint = False
             ShowHint = True
@@ -5695,8 +5695,8 @@ object frmMain: TfrmMain
           Top = 168
           Width = 610
           Caption = 'Metingen'
-          ClientHeight = 423
-          ClientWidth = 606
+          ClientHeight = 422
+          ClientWidth = 608
           ParentShowHint = False
           TabOrder = 1
           object pcMeasurements: TPageControl
@@ -6476,7 +6476,7 @@ object frmMain: TfrmMain
       object tsPackaging: TTabSheet
         Hint = 'Voer gegevens over het afvullen in'
         Caption = 'Afvullen, proeven'
-        ClientHeight = 605
+        ClientHeight = 607
         ClientWidth = 616
         ParentShowHint = False
         object gbBottleDates: TGroupBox
@@ -6485,8 +6485,8 @@ object frmMain: TfrmMain
           Top = 4
           Width = 611
           Caption = 'Afvullen'
-          ClientHeight = 28
-          ClientWidth = 607
+          ClientHeight = 27
+          ClientWidth = 609
           ParentShowHint = False
           TabOrder = 0
           object Label49: TLabel
@@ -6546,8 +6546,8 @@ object frmMain: TfrmMain
           Top = 53
           Width = 294
           Caption = 'Bottelen'
-          ClientHeight = 294
-          ClientWidth = 290
+          ClientHeight = 293
+          ClientWidth = 292
           ParentShowHint = False
           TabOrder = 1
           object Label90: TLabel
@@ -6749,7 +6749,7 @@ object frmMain: TfrmMain
             Top = 52
             Width = 138
             AutoSize = False
-            ItemHeight = 12
+            ItemHeight = 0
             OnChange = cbPrimingSugarBottlesChange
             ParentShowHint = False
             ShowHint = True
@@ -6778,8 +6778,8 @@ object frmMain: TfrmMain
           Top = 53
           Width = 311
           Caption = 'Op fust zetten'
-          ClientHeight = 294
-          ClientWidth = 307
+          ClientHeight = 293
+          ClientWidth = 309
           ParentShowHint = False
           TabOrder = 2
           object Label95: TLabel
@@ -7027,7 +7027,7 @@ object frmMain: TfrmMain
             Top = 80
             Width = 137
             AutoSize = False
-            ItemHeight = 12
+            ItemHeight = 0
             OnChange = cbPrimingSugarKegsChange
             ParentShowHint = False
             ShowHint = True
@@ -7055,8 +7055,8 @@ object frmMain: TfrmMain
           Top = 373
           Width = 611
           Caption = 'Proeven'
-          ClientHeight = 217
-          ClientWidth = 607
+          ClientHeight = 216
+          ClientWidth = 609
           ParentShowHint = False
           TabOrder = 3
           object Label105: TLabel
@@ -7326,7 +7326,7 @@ object frmMain: TfrmMain
       object tsNotes: TTabSheet
         Hint = 'Voer notities in'
         Caption = 'Notities'
-        ClientHeight = 605
+        ClientHeight = 607
         ClientWidth = 616
         ParentShowHint = False
         object gbNotes: TGroupBox
@@ -7336,8 +7336,8 @@ object frmMain: TfrmMain
           Width = 616
           Align = alClient
           Caption = 'Notities'
-          ClientHeight = 515
-          ClientWidth = 612
+          ClientHeight = 514
+          ClientWidth = 614
           ParentShowHint = False
           TabOrder = 1
           object mNotes: TMemo
@@ -7359,8 +7359,8 @@ object frmMain: TfrmMain
           Width = 616
           Align = alTop
           Caption = 'Brouwers'
-          ClientHeight = 59
-          ClientWidth = 612
+          ClientHeight = 58
+          ClientWidth = 614
           ParentShowHint = False
           TabOrder = 0
           object Label45: TLabel
@@ -7599,13 +7599,13 @@ object frmMain: TfrmMain
     end
     object tsDatabases: TTabSheet
       Caption = 'Databanken'
-      ClientHeight = 54
-      ClientWidth = 996
+      ClientHeight = 51
+      ClientWidth = 994
       object tbDatabases: TToolBar
         Left = 0
         Height = 50
         Top = 0
-        Width = 996
+        Width = 994
         ButtonHeight = 45
         ButtonWidth = 45
         Caption = 'tbDatabases'
@@ -7924,7 +7924,7 @@ object frmMain: TfrmMain
           Top = 0
           Width = 118
           AutoSize = False
-          ItemHeight = 15
+          ItemHeight = 0
           OnChange = cbColorMethodChange
           ParentShowHint = False
           ShowHint = True
@@ -7947,7 +7947,7 @@ object frmMain: TfrmMain
           Top = 27
           Width = 118
           AutoSize = False
-          ItemHeight = 15
+          ItemHeight = 0
           OnChange = cbIBUMethodChange
           ParentShowHint = False
           ShowHint = True
