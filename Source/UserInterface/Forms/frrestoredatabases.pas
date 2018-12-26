@@ -57,8 +57,11 @@ begin
     begin
       Screen.Cursor:= crHourglass;
       Backup;
-      {$ifdef UNIX}
+      {$ifdef linux}
       sourcedata:= '/usr/share/brewbuddy/';
+      {$endif}
+      {$ifdef Darwin}
+      sourcedata:= ProgramDirectory() + 'BrewBuddy.app/Contents/Resources/';
       {$endif}
       {$ifdef Windows}
       sourcedata:= ExtractFilePath(Application.ExeName) + 'brewbuddy\';

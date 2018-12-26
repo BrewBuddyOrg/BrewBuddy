@@ -965,9 +965,9 @@ begin
     for i:= 0 to FChart.AxisList.Count - 1 do
     begin
       FChart.AxisList[i].Marks.LabelFont.Size:= OMFH;
-      {$ifndef Darwin}
+      {$IFNDEF LCL qt}
       FChart.AxisList[i].Title.Font.Size:= OTFH;
-      {$endif}
+      {$ENDIF}
       FChart.AxisList[i].TickLength:= OTL;
     end;
     FChart.Legend.Font.Size:= OLFH;

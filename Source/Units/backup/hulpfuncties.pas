@@ -2396,7 +2396,7 @@ begin
 //  {$endif}
   {$ifdef darwin}
   sound:= TProcess.Create(NIL);
-  sound.CommandLine:= 'afplay ' + EndSound;
+  sound.CommandLine:= 'afplay ' + StartSound;
   sound.Execute;
   sound.Free;
   {$endif}

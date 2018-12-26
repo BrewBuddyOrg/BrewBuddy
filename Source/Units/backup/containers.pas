@@ -3046,7 +3046,7 @@ Procedure CheckDataFolder;
   begin
     Result:= false;
     destOK:= FileExists(dd + fn);
-    sourceOK:= FileExists(sd + fn);
+    sourceOK:= FileExists('"' + sd + fn + '"');
     if (not destOK) and (sourceOK) then
     try
       result:= CopyFile(sd + fn, dd + fn);

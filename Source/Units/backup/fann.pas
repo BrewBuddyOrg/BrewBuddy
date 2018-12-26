@@ -52,7 +52,7 @@ const DLL_FILE = 'libfloatfann.so';
 {$IF Defined(FIXEDFANN)}
 const DLL_FILE = 'libfixedfann.2.2.0.dylib';
 {$ELSEIF Defined(DOUBLEFANN)}
-const DLL_FILE = 'libdoublefann.2.2.0.dylib';
+const DLL_FILE = '/usr/local/lib/libdoublefann.2.2.0.dylib';
 {$ELSE}
 const DLL_FILE = 'libfloatfann.2.2.0.dylib';
 {$IFEND}
