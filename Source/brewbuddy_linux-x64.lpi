@@ -8,7 +8,6 @@
       <Title Value="brewbuddy"/>
       <UseAppBundle Value="False"/>
       <ResourceType Value="res"/>
-      <Icon Value="0"/>
     </General>
     <i18n>
       <EnableI18N LFM="False"/>
@@ -20,8 +19,36 @@
       <Language Value="0413"/>
       <StringTable CompanyName="Brouwerij Het Witte Paard" FileDescription="BrewBuddy Sassy Saison" InternalName="BrewBuddy" OriginalFilename="BrewBuddy" ProductName="BrewBuddy" ProductVersion="5.3.5.2"/>
     </VersionInfo>
-    <BuildModes Count="1" Active="Default">
+    <BuildModes Count="2" Active="Release Linux X64">
       <Item1 Name="Default" Default="True"/>
+      <Item2 Name="Release Linux X64">
+        <CompilerOptions>
+          <Version Value="11"/>
+          <Target>
+            <Filename Value="../Output/brewbuddy"/>
+          </Target>
+          <SearchPaths>
+            <IncludeFiles Value="../Output;$(ProjOutDir)"/>
+            <Libraries Value="3rdParty/fann/usr/local/lib"/>
+            <OtherUnitFiles Value="UserInterface/Forms;Units"/>
+            <UnitOutputDirectory Value="../Output/units"/>
+          </SearchPaths>
+          <CodeGeneration>
+            <TargetCPU Value="x86_64"/>
+            <TargetOS Value="linux"/>
+            <Optimizations>
+              <OptimizationLevel Value="2"/>
+              <VariablesInRegisters Value="True"/>
+            </Optimizations>
+          </CodeGeneration>
+          <Linking>
+            <Debugging>
+              <GenerateDebugInfo Value="False"/>
+              <UseValgrind Value="True"/>
+            </Debugging>
+          </Linking>
+        </CompilerOptions>
+      </Item2>
     </BuildModes>
     <PublishOptions>
       <Version Value="2"/>
@@ -65,14 +92,14 @@
         <PackageName Value="LCL"/>
       </Item9>
     </RequiredPackages>
-    <Units Count="199">
+    <Units Count="201">
       <Unit0>
         <Filename Value="brewbuddy.pas"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="7"/>
-        <CursorPos Y="29"/>
+        <EditorIndex Value="1"/>
+        <CursorPos Y="50"/>
         <UsageCount Value="201"/>
+        <Loaded Value="True"/>
       </Unit0>
       <Unit1>
         <Filename Value="UserInterface/Forms/frmain.pas"/>
@@ -82,8 +109,7 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="FrMain"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="1047"/>
-        <CursorPos Y="1048"/>
+        <CursorPos X="18" Y="9"/>
         <UsageCount Value="201"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -92,9 +118,10 @@
         <Filename Value="Units/data.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="Data"/>
-        <EditorIndex Value="-1"/>
-        <CursorPos X="58" Y="28"/>
+        <EditorIndex Value="2"/>
+        <CursorPos X="5" Y="1673"/>
         <UsageCount Value="201"/>
+        <Loaded Value="True"/>
       </Unit2>
       <Unit3>
         <Filename Value="/usr/lib/lazarus/0.9.30/ide/lazarus.pp"/>
@@ -147,10 +174,10 @@
         <Filename Value="Units/hulpfuncties.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="Hulpfuncties"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="2490"/>
-        <CursorPos Y="2526"/>
+        <EditorIndex Value="5"/>
+        <CursorPos X="25" Y="4"/>
         <UsageCount Value="201"/>
+        <Loaded Value="True"/>
       </Unit11>
       <Unit12>
         <Filename Value="lnet/lazaruspackage/lnetbase.pas"/>
@@ -1186,7 +1213,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="2"/>
         <CursorPos X="86" Y="8"/>
-        <UsageCount Value="170"/>
+        <UsageCount Value="172"/>
       </Unit147>
       <Unit148>
         <Filename Value="/usr/share/lazarus/1.0/components/lazutils/fileutil.inc"/>
@@ -1207,7 +1234,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="1307"/>
         <CursorPos X="42" Y="194"/>
-        <UsageCount Value="118"/>
+        <UsageCount Value="120"/>
       </Unit150>
       <Unit151>
         <Filename Value="/usr/share/lazarus/1.0.2/lcl/extctrls.pp"/>
@@ -1243,7 +1270,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="91"/>
         <CursorPos X="32" Y="115"/>
-        <UsageCount Value="119"/>
+        <UsageCount Value="121"/>
       </Unit155>
       <Unit156>
         <Filename Value="UserInterface/Forms/frrestoredatabases.pas"/>
@@ -1253,7 +1280,7 @@
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="47" Y="16"/>
-        <UsageCount Value="118"/>
+        <UsageCount Value="120"/>
       </Unit156>
       <Unit157>
         <Filename Value="Units/neuroot.pas"/>
@@ -1261,7 +1288,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="189"/>
         <CursorPos X="25" Y="213"/>
-        <UsageCount Value="118"/>
+        <UsageCount Value="120"/>
       </Unit157>
       <Unit158>
         <Filename Value="fann.pas"/>
@@ -1297,7 +1324,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="7"/>
         <CursorPos Y="21"/>
-        <UsageCount Value="101"/>
+        <UsageCount Value="103"/>
       </Unit162>
       <Unit163>
         <Filename Value="UserInterface/Forms/frdownloadprogress.pas"/>
@@ -1308,7 +1335,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="29"/>
         <CursorPos Y="57"/>
-        <UsageCount Value="95"/>
+        <UsageCount Value="97"/>
       </Unit163>
       <Unit164>
         <Filename Value="/usr/share/fpcsrc/2.6.0/packages/fcl-xml/src/xmlutils.pp"/>
@@ -1560,12 +1587,108 @@
         <CursorPos X="3" Y="11"/>
         <UsageCount Value="10"/>
       </Unit198>
+      <Unit199>
+        <Filename Value="Units/amoebes.pas"/>
+        <EditorIndex Value="4"/>
+        <TopLine Value="70"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit199>
+      <Unit200>
+        <Filename Value="3rdParty/ExpandPanels/expandpanels.pas"/>
+        <UnitName Value="ExpandPanels"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="187"/>
+        <CursorPos X="15" Y="218"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit200>
     </Units>
-    <JumpHistory Count="1">
+    <JumpHistory Count="21" HistoryIndex="20">
       <Position1>
         <Filename Value="UserInterface/Forms/frmain.pas"/>
         <Caret Line="1048" TopLine="1046"/>
       </Position1>
+      <Position2>
+        <Filename Value="UserInterface/Forms/frmain.pas"/>
+        <Caret Line="8" Column="2"/>
+      </Position2>
+      <Position3>
+        <Filename Value="UserInterface/Forms/frmain.pas"/>
+        <Caret Line="48" Column="16" TopLine="5"/>
+      </Position3>
+      <Position4>
+        <Filename Value="UserInterface/Forms/frmain.pas"/>
+        <Caret Line="49" Column="16" TopLine="5"/>
+      </Position4>
+      <Position5>
+        <Filename Value="Units/hulpfuncties.pas"/>
+        <Caret Line="7" Column="40"/>
+      </Position5>
+      <Position6>
+        <Filename Value="Units/hulpfuncties.pas"/>
+        <Caret Line="8" Column="40"/>
+      </Position6>
+      <Position7>
+        <Filename Value="Units/hulpfuncties.pas"/>
+        <Caret Line="11" Column="2"/>
+      </Position7>
+      <Position8>
+        <Filename Value="Units/hulpfuncties.pas"/>
+        <Caret Line="182" Column="17" TopLine="139"/>
+      </Position8>
+      <Position9>
+        <Filename Value="Units/hulpfuncties.pas"/>
+        <Caret Line="222" TopLine="187"/>
+      </Position9>
+      <Position10>
+        <Filename Value="Units/hulpfuncties.pas"/>
+        <Caret Line="2339" Column="3" TopLine="2294"/>
+      </Position10>
+      <Position11>
+        <Filename Value="Units/hulpfuncties.pas"/>
+        <Caret Line="2425" Column="3" TopLine="2393"/>
+      </Position11>
+      <Position12>
+        <Filename Value="Units/hulpfuncties.pas"/>
+        <Caret Line="2527" TopLine="2478"/>
+      </Position12>
+      <Position13>
+        <Filename Value="UserInterface/Forms/frmain.pas"/>
+        <Caret Line="786" Column="6" TopLine="761"/>
+      </Position13>
+      <Position14>
+        <Filename Value="Units/hulpfuncties.pas"/>
+        <Caret Line="2530" Column="13" TopLine="2480"/>
+      </Position14>
+      <Position15>
+        <Filename Value="Units/hulpfuncties.pas"/>
+        <Caret Line="2460" Column="3" TopLine="2460"/>
+      </Position15>
+      <Position16>
+        <Filename Value="brewbuddy.pas"/>
+        <Caret Line="50" TopLine="26"/>
+      </Position16>
+      <Position17>
+        <Filename Value="Units/data.pas"/>
+        <Caret Line="1673" Column="5" TopLine="1660"/>
+      </Position17>
+      <Position18>
+        <Filename Value="3rdParty/ExpandPanels/expandpanels.pas"/>
+        <Caret Line="218" Column="15" TopLine="205"/>
+      </Position18>
+      <Position19>
+        <Filename Value="brewbuddy.pas"/>
+        <Caret Line="50" TopLine="27"/>
+      </Position19>
+      <Position20>
+        <Filename Value="Units/hulpfuncties.pas"/>
+        <Caret Line="2373" Column="5" TopLine="2360"/>
+      </Position20>
+      <Position21>
+        <Filename Value="brewbuddy.pas"/>
+        <Caret Line="50" TopLine="27"/>
+      </Position21>
     </JumpHistory>
   </ProjectOptions>
   <CompilerOptions>
@@ -1575,6 +1698,7 @@
     </Target>
     <SearchPaths>
       <IncludeFiles Value="../Output;$(ProjOutDir)"/>
+      <Libraries Value="3rdParty/fann/usr/local/lib"/>
       <OtherUnitFiles Value="UserInterface/Forms;Units"/>
       <UnitOutputDirectory Value="../Output/units"/>
     </SearchPaths>
@@ -1591,8 +1715,8 @@
         <StackChecks Value="True"/>
       </Checks>
       <VerifyObjMethodCallValidity Value="True"/>
-      <TargetCPU Value=""/>
-      <TargetOS Value=""/>
+      <TargetCPU Value="x86_64"/>
+      <TargetOS Value="linux"/>
       <Optimizations>
         <OptimizationLevel Value="0"/>
         <VariablesInRegisters Value="True"/>
@@ -1602,11 +1726,6 @@
       <Debugging>
         <UseValgrind Value="True"/>
       </Debugging>
-      <Options>
-        <Win32>
-          <GraphicApplication Value="True"/>
-        </Win32>
-      </Options>
     </Linking>
   </CompilerOptions>
   <Debugging>

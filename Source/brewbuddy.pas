@@ -25,6 +25,7 @@ uses
 {$R *.res}
 
 begin
+  Application.Title:='brewbuddy';
   try
     Application.Initialize;
     Application.CreateForm(TfrmMain, frmMain);
