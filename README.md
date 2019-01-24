@@ -1,3 +1,7 @@
+# English version below
+# Developers wanted!
+Are you fluent in Freepascal? Does the Lazarus IDE have no secrets for you? Do you love home brewing and are you an avid supporter of OSS? Than join us and help making BrewBuddy the number 1 brewing software!
+
 # BrouwHulp 
 Brouwsoftware oorspronkelijk ontwikkeld door Adrie Otte en sinds eind 2018 Open Source Software onder de GPLv3-licentie.
 
@@ -71,3 +75,14 @@ Momenteel is er een Windows versie en een Linux 64 bits versie. De Linux versies
 
 ## Waarschuwing
 WAARSCHUWING. Het kan zijn dat je een melding krijgt dat er een virus in het installatiebestand van BrouwHulp zit. Dit is echter niet het geval. Deze melding wordt gegenereerd omdat BrouwHulp nog maar weinig is gedownload. Sommige anti-virusprogramma's zetten het bestand daarom uit voorzorg in quarantaine. Je kunt het installatiebestand daar weer veilig uithalen en BrouwHulp installeren. 
+
+
+# English 
+# BrewBuddy
+BrewBuddy, formerly know as 'BrouwHulp' (Brewing Help in Dutch) is a software project built by Adrie Otte built in Freepascal with the Lazarus IDE. Since Adrie is too busy to maintain the software alone he was convinced in autumn 2018 to make his software Open Source Software. The software is now released under the GPLv3 license for anyone to use.
+
+# Functionality
+BrewBuddy is your fully functional brewing solution for home brewers and micro breweries. You can create your recipes, manage your stock, manage your brewing session and calculate all the things you need for a succesfull brew. Brewing your own beer has never been easier with BrewBuddy!
+
+# English language
+Currently the BrewBuddy software is in Dutch only. We are working on a English translation. Don't hold your breath...
