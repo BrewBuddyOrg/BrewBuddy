@@ -19,5 +19,8 @@
   "devDependencies": {
     "electron": "^4.0.4",
     "xel": ""
+  },
+  "dependencies": {
+    "xel": "0.0.199"
   }
 }
