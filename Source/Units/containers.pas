@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, {$ifdef Windows}windows, windirs, {$endif}Forms, Controls, Dialogs,
-  Data, Hulpfuncties, DOM, XMLRead, XMLWrite, XMLUtils, variants, frimport;
+  Data, Hulpfuncties, DOM, XMLRead, XMLWrite, XMLUtils, variants;//, frimport;
 
 type
   TContainer = class(TObject)
@@ -58,7 +58,7 @@ type
      Procedure ReadXML; override;
      Function ImportXML : boolean; override;
      Function GetSelectedItem : TFermentable;
-     Function AddItem : TFermentable;
+     Function AddItem : TFermentable; override;
      Procedure InsertItem(i : integer); override;
      Function FindByNameAndSupplier(N, S : string) : TFermentable;
   published
@@ -73,7 +73,7 @@ type
      Procedure ReadXML; override;
      Function ImportXML : boolean; override;
      Function GetSelectedItem : THop;
-     Function AddItem : THop;
+     Function AddItem : THop; override;
      Procedure InsertItem(i : integer); override;
      Function FindByNameAndOriginAndAlfa(N, O : string; A : double) : THop;
   published
@@ -201,8 +201,10 @@ type
      Procedure SaveXML; override;
      Procedure ReadXML; override;
      Procedure CheckAutoNrs;
-     Function ImportFiles(FN : TStrings; DN : string; Equip : TEquipment;
-                          FT : TFileType) : boolean;
+     //Function ImportFiles(FN : TStrings; DN : string; Equip : TEquipment;
+     //                     FT : TFileType) : boolean;
+     Function ImportFiles(FN : TStrings; DN : string; Equip : TEquipment
+                          ) : boolean;
      Procedure Sort;
      Function GetSelectedItem : TRecipe;
      Function AddItem : TRecipe;
@@ -296,8 +298,8 @@ var
 
 implementation
 
-uses frmain, ComCtrls, frselectbeerstyle, fileutil, LazFileUtils, promashimport, cloud, subs,
-     neuroot, strutils, math;
+uses frmain, ComCtrls, frselectbeerstyle, fileutil, LazFileUtils, {promashimport, cloud, subs,}
+     {neuroot, }strutils, math, subs;
 
 Procedure CheckSalts;
 var M : TMisc;
@@ -1656,7 +1658,8 @@ begin
         FCollection[i-1]:= TRecipe.Create(NIL);
         R:= TRecipe(FCollection[i-1]);
         if FFileName = 'brews.xml' then R.RecType:= rtBrew
-        else if FFileName = 'recipes.xml' then R.RecType:= rtRecipe
+        else if FFileName = 'recipes.xml' then
+        R.RecType:= rtRecipe
         else R.RecType:= rtCloud;
         R.ReadXML(FChild);
         FChild:= FChild.NextSibling;
@@ -1717,15 +1720,20 @@ begin
   end;
 end;
 
+{ JR: Shortcut --> FileType removed, not necessary
 Function TRecipes.ImportFiles(FN : TStrings; DN : string; Equip : TEquipment;
-                              FT : TFileType) : boolean;
+                              FT : TFileType) : boolean;}
+Function TRecipes.ImportFiles(FN : TStrings; DN : string; Equip : TEquipment
+                             ) : boolean;
+
 begin
   Result:= false;
-  case FT of
-  ftXML: Result:= ImportXMLs(FN, DN, Equip);
-  ftPromash: Result:= ImportRECs(FN, DN, Equip);
-  ftInvalid: Result:= false;
-  end;
+//  case FT of
+//  ftXML: Result:= ImportXMLs(FN, DN, Equip);
+//  ftPromash: Result:= ImportRECs(FN, DN, Equip);
+////  ftInvalid: Result:= false;
+//  end;
+  Result := ImportXMLs(FN, DN, Equip);
   SaveXML;
 end;
 
@@ -1881,44 +1889,44 @@ begin
 end;
 
 Function TRecipes.ImportREC(FN : string; Equip : TEquipment) : boolean;
-var PI : TPromash;
-    R : TRecipe;
-    s : string;
+//var PI : TPromash;
+//    R : TRecipe;
+//    s : string;
 begin
-  Result:= false;
-  PI := TPromash.Create(FrmMain);
-  try
-    FN:= ConvertStringEnc(FN);
-    if FileExists(FN) then
-    begin
-      if PI.OpenReadRec(FN) then
-      begin
-       R:= AddItem;
-       if R <> NIL then
-       begin
-         PI.Convert(R);
-         s:= R.Style.Name.Value;
-         R.AutoNr.Value:= MaxAutoNr + 1;
-
-         CheckBeerStyle(R);
-         CheckFermentables(R);
-         CheckYeasts(R);
-
-         //change the equipment
-         if Equip <> NIL then
-           R.ChangeEquipment(Equip);
-
-         if FFileName = 'brews.xml' then R.RecType:= rtBrew
-         else if FFileName = 'recipes.xml' then R.RecType:= rtRecipe
-         else R.RecType:= rtCloud;
-
-         Result:= TRUE;
-       end;
-      end;
-    end;
-  finally
-    PI.Free;
-  end;
+//  Result:= false;
+//  PI := TPromash.Create(FrmMain);
+//  try
+//    FN:= ConvertStringEnc(FN);
+//    if FileExists(FN) then
+//    begin
+//      if PI.OpenReadRec(FN) then
+//      begin
+//       R:= AddItem;
+//       if R <> NIL then
+//       begin
+//         PI.Convert(R);
+//         s:= R.Style.Name.Value;
+//         R.AutoNr.Value:= MaxAutoNr + 1;
+//
+//         CheckBeerStyle(R);
+//         CheckFermentables(R);
+//         CheckYeasts(R);
+//
+//         //change the equipment
+//         if Equip <> NIL then
+//           R.ChangeEquipment(Equip);
+//
+//         if FFileName = 'brews.xml' then R.RecType:= rtBrew
+//         else if FFileName = 'recipes.xml' then R.RecType:= rtRecipe
+//         else R.RecType:= rtCloud;
+//
+//         Result:= TRUE;
+//       end;
+//      end;
+//    end;
+//  finally
+//    PI.Free;
+//  end;
 end;
 
 Procedure TRecipes.QuickSortRecipes(var Arr : array of TBase);
@@ -3047,9 +3055,9 @@ Procedure CheckDataFolder;
     Result:= false;
     destOK:= FileExists(dd + fn);
     sourceOK:= FileExists(sd + fn);
-    if (not destOK) and (sourceOK) then
+    if (not destOK) and (sourceOK) then // Source exists, destination doesn't
     try
-      result:= CopyFile(sd + fn, dd + fn);
+      result:= CopyFile(sd + fn, dd + fn); // Copy source to destination
     except
       ShowMessage('Fout bij aanmaken ' + dd + fn + '.');
       Halt;
@@ -3113,7 +3121,7 @@ begin
   CheckFile(sourcedata, destdata, 'yeasts.xml');
   CheckFile(sourcedata, destdata, 'logo.png');
   {$ifdef Windows}
-  CheckFile(sourcedata, destdata, 'Introductie BrewBuddy Sassy Saison.pdf');
+  //CheckFile(sourcedata, destdata, 'Introductie BrewBuddy Sassy Saison.pdf');
   {$endif}
   {$ifdef Darwin}
   CheckFile('/usr/share/doc/brewbuddy/', destdata, 'Introductie BrewBuddy Sassy Saison.pdf');
@@ -3228,7 +3236,7 @@ begin
       StyleSubs.ReadXML;
       FermentableSubs.ReadXML;
       YeastSubs.ReadXML;
-      BHNNs.ReadXML;
+//      BHNNs.ReadXML;
     end
     else //copy previous database to new location, but clear brews
     begin
@@ -3256,7 +3264,7 @@ begin
       StyleSubs.SaveXML;
       FermentableSubs.SaveXML;
       YeastSubs.SaveXML;
-      BHNNs.SaveXML;
+//      BHNNs.SaveXML;
       SL:= FindAllFiles(source, '*.nn', false);
       for i:= 0 to SL.Count - 1 do
         CheckCopyFile(source, destination, ExtractFileName(SL.Strings[i]));
@@ -3293,8 +3301,8 @@ begin
       DeleteFile(PChar(source + 'styles-BJCP.xml'));
       DeleteFile(PChar(source + 'logo.png'));
     end;
-    FrmMain.cbBrewsSortChange(FrmMain);
-    FrmMain.cbRecipesSortChange(FrmMain);
+    //FrmMain.cbBrewsSortChange(FrmMain);
+    //FrmMain.cbRecipesSortChange(FrmMain);
   end
   else //copy from old directory and overwrite files in new directory
   begin
@@ -3311,7 +3319,7 @@ begin
     StyleSubs.SaveXML;
     FermentableSubs.SaveXML;
     YeastSubs.SaveXML;
-    BHNNs.SaveXML;
+//    BHNNs.SaveXML;
     SL:= FindAllFiles(source, '*.nn', false);
     for i:= 0 to SL.Count - 1 do
       CheckCopyFile(source, destination, ExtractFileName(SL.Strings[i]));
@@ -3346,6 +3354,7 @@ end;
 {====================== Initialization and Finalization =======================}
 
 Initialization
+  // JR: Initialize logging if DoLog is enabled
   if DoLog then slLog:= TStringList.Create
   else slLog:= NIL;
   Screen.Cursor:= crHourglass;
@@ -3413,7 +3422,7 @@ Initialization
   Brews:= TRecipes.Create;
   Brews.FileName:= 'brews.xml';
 
-  BHNNs:= TBHNNs.Create;
+//  BHNNs:= TBHNNs.Create;
 
   loc:= Settings.DataLocation.Value;
   if loc = '' then loc:= BHFolder;
@@ -3423,7 +3432,7 @@ Initialization
   begin
     if not OnUSB then Settings.DataLocation.Value:= loc;
 
-    BHCloud:= TBHCloud.Create;
+//    BHCloud:= TBHCloud.Create;
 //    BHCloud.ReadCloud;
 
     Fermentables.ReadXML;
@@ -3445,7 +3454,7 @@ Initialization
     FermentableSubs.ReadXML;
     YeastSubs.ReadXML;
 
-    BHNNs.ReadXML;
+    //BHNNs.ReadXML;
 
     CheckSalts;
   end
@@ -3475,9 +3484,9 @@ Finalization
     Settings.Save;
   end;
   Log('');
-//  Log('CONTAINERS');
-  FreeAndNIL(BHCloud);
-//  Log('BHCloud afgesloten');
+////  Log('CONTAINERS');
+//  FreeAndNIL(BHCloud);
+////  Log('BHCloud afgesloten');
   StyleSubs.SaveXML;
 //  Log('StyleSubs opgeslagen');
   FermentableSubs.SaveXML;
@@ -3490,7 +3499,7 @@ Finalization
 //  Log('FermentableSubs afgesloten');
   FreeAndNIL(YeastSubs);
 //  Log('YeastSubs afgesloten');
-
+//
   FreeAndNIL(Fermentables);
 //  Log('Fermentables afgesloten');
   FreeAndNIL(Hops);
@@ -3510,8 +3519,8 @@ Finalization
   FreeAndNIL(Recipes);
 //  Log('Recipes afgesloten');
   FreeAndNIL(Brews);
-//  Log('Brews afgesloten');
-  FreeAndNIL(BHNNs);
+////  Log('Brews afgesloten');
+//  FreeAndNIL(BHNNs);
 //  Log('BHNNs afgesloten');
 
   Settings.Save;

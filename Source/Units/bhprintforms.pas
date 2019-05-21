@@ -3046,8 +3046,8 @@ var i, j : integer;
 const ItemLength = 40;
 begin
   Result:= false;
-  ds:= DecimalSeparator;
-  ls:= ListSeparator;
+  ds:= DefaultFormatSettings.DecimalSeparator;
+  ls:= DefaultFormatSettings.ListSeparator;
   if ds = ls then ls:= ';';
 
   Application.ProcessMessages;

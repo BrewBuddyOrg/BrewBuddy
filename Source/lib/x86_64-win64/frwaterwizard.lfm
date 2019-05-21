@@ -1,0 +1,479 @@
+object FrmWaterWizard: TFrmWaterWizard
+  Left = 444
+  Height = 485
+  Top = 172
+  Width = 650
+  Caption = 'Water Wizard'
+  ClientHeight = 485
+  ClientWidth = 650
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  Position = poScreenCenter
+  LCLVersion = '2.0.0.4'
+  object gbMash: TGroupBox
+    Left = -1
+    Height = 81
+    Top = 8
+    Width = 651
+    Caption = 'Maischen'
+    ClientHeight = 61
+    ClientWidth = 647
+    TabOrder = 0
+    object Label1: TLabel
+      Left = 5
+      Height = 15
+      Top = 12
+      Width = 70
+      Caption = 'Maischwater:'
+      ParentColor = False
+    end
+    object fseMashWater: TFloatSpinEdit
+      Left = 132
+      Height = 23
+      Top = 8
+      Width = 77
+      AutoSize = False
+      DecimalPlaces = 1
+      Increment = 0.5
+      MinValue = 0
+      OnChange = fseMashWaterChange
+      OnEnter = sbMashWaterEnter
+      OnExit = sbMashWaterExit
+      TabOrder = 0
+      Value = 0
+    end
+    object sbMashWater: TScrollBar
+      Left = 242
+      Height = 17
+      Top = 13
+      Width = 400
+      LargeChange = 10
+      PageSize = 0
+      TabOrder = 2
+      OnChange = sbMashWaterChange
+      OnEnter = sbMashWaterEnter
+      OnExit = sbMashWaterExit
+    end
+    object sbMashThickness: TScrollBar
+      Left = 242
+      Height = 17
+      Top = 35
+      Width = 400
+      LargeChange = 10
+      PageSize = 0
+      TabOrder = 3
+      OnChange = sbMashThicknessChange
+      OnEnter = sbMashWaterEnter
+      OnExit = sbMashWaterExit
+    end
+    object Label2: TLabel
+      Left = 5
+      Height = 15
+      Top = 35
+      Width = 63
+      Caption = 'Beslagdikte:'
+      ParentColor = False
+    end
+    object lMashWater: TLabel
+      Left = 210
+      Height = 15
+      Top = 12
+      Width = 20
+      Caption = 'liter'
+      ParentColor = False
+    end
+    object lMashThickness: TLabel
+      Left = 210
+      Height = 15
+      Top = 35
+      Width = 21
+      Caption = 'l/kg'
+      ParentColor = False
+    end
+    object fseMashThickness: TFloatSpinEdit
+      Left = 132
+      Height = 23
+      Top = 33
+      Width = 77
+      AutoSize = False
+      DecimalPlaces = 1
+      Increment = 0.5
+      MinValue = 0
+      OnChange = fseMashThicknessChange
+      OnEnter = sbMashWaterEnter
+      OnExit = sbMashWaterExit
+      TabOrder = 1
+      Value = 0
+    end
+  end
+  object gbSparge: TGroupBox
+    Left = -1
+    Height = 104
+    Top = 104
+    Width = 651
+    Caption = 'Filteren en spoelen'
+    ClientHeight = 84
+    ClientWidth = 647
+    TabOrder = 1
+    object Label5: TLabel
+      Left = 5
+      Height = 15
+      Top = 6
+      Width = 61
+      Caption = 'Spoelwater:'
+      ParentColor = False
+    end
+    object fseSparge: TFloatSpinEdit
+      Left = 132
+      Height = 23
+      Top = 3
+      Width = 77
+      AutoSize = False
+      DecimalPlaces = 1
+      Increment = 0.1
+      MinValue = 0
+      OnChange = fseSpargeChange
+      OnEnter = sbMashWaterEnter
+      OnExit = sbMashWaterEnter
+      TabOrder = 1
+      Value = 0
+    end
+    object lSparge: TLabel
+      Left = 210
+      Height = 15
+      Top = 6
+      Width = 20
+      Caption = 'liter'
+      ParentColor = False
+    end
+    object sbSparge: TScrollBar
+      Left = 242
+      Height = 17
+      Top = 7
+      Width = 400
+      LargeChange = 10
+      PageSize = 0
+      TabOrder = 0
+      OnChange = sbSpargeChange
+      OnEnter = sbMashWaterEnter
+      OnExit = sbMashWaterExit
+    end
+    object Label6: TLabel
+      Left = 5
+      Height = 15
+      Top = 55
+      Width = 85
+      Caption = 'Filterkuipverlies:'
+      ParentColor = False
+    end
+    object fseLauterLoss: TFloatSpinEdit
+      Left = 132
+      Height = 23
+      Top = 53
+      Width = 77
+      AutoSize = False
+      DecimalPlaces = 1
+      MinValue = 0
+      OnChange = fseLauterLossChange
+      OnEnter = sbMashWaterEnter
+      OnExit = sbMashWaterExit
+      TabOrder = 4
+      Value = 0
+    end
+    object lLauterLoss: TLabel
+      Left = 210
+      Height = 15
+      Top = 55
+      Width = 20
+      Caption = 'liter'
+      ParentColor = False
+    end
+    object sbLauterLoss: TScrollBar
+      Left = 242
+      Height = 17
+      Top = 56
+      Width = 400
+      LargeChange = 10
+      PageSize = 0
+      TabOrder = 3
+      OnChange = sbLauterLossChange
+      OnEnter = sbMashWaterEnter
+      OnExit = sbMashWaterExit
+    end
+    object Label11: TLabel
+      Left = 5
+      Height = 15
+      Top = 31
+      Width = 104
+      Caption = 'Spoel/maischwater:'
+      ParentColor = False
+    end
+    object fseSpargeMash: TFloatSpinEdit
+      Left = 132
+      Height = 23
+      Top = 28
+      Width = 77
+      AutoSize = False
+      Increment = 0.1
+      MinValue = 0
+      OnChange = fseSpargeMashChange
+      OnEnter = sbMashWaterEnter
+      OnExit = sbMashWaterExit
+      TabOrder = 2
+      Value = 0
+    end
+    object sbSpargeMash: TScrollBar
+      Left = 242
+      Height = 17
+      Top = 31
+      Width = 400
+      LargeChange = 10
+      PageSize = 0
+      TabOrder = 5
+      OnChange = sbSpargeMashChange
+      OnEnter = sbMashWaterEnter
+      OnExit = sbMashWaterExit
+    end
+  end
+  object gbBoil: TGroupBox
+    Left = -1
+    Height = 139
+    Top = 216
+    Width = 651
+    Caption = 'Koken'
+    ClientHeight = 119
+    ClientWidth = 647
+    TabOrder = 2
+    object Label3: TLabel
+      Left = 5
+      Height = 15
+      Top = 7
+      Width = 105
+      Caption = 'Volume voor koken:'
+      ParentColor = False
+    end
+    object lPreBoilVolume: TLabel
+      Left = 139
+      Height = 15
+      Top = 7
+      Width = 11
+      Caption = 'x l'
+      ParentColor = False
+    end
+    object Label7: TLabel
+      Left = 5
+      Height = 15
+      Top = 31
+      Width = 67
+      Caption = 'Verdamping:'
+      ParentColor = False
+    end
+    object fseEvap: TFloatSpinEdit
+      Left = 132
+      Height = 23
+      Top = 28
+      Width = 77
+      AutoSize = False
+      DecimalPlaces = 1
+      MinValue = 0
+      OnChange = fseEvapChange
+      OnEnter = sbMashWaterEnter
+      OnExit = sbMashWaterExit
+      TabOrder = 2
+      Value = 0
+    end
+    object lEvap: TLabel
+      Left = 210
+      Height = 15
+      Top = 31
+      Width = 20
+      Caption = 'liter'
+      ParentColor = False
+    end
+    object sbEvap: TScrollBar
+      Left = 242
+      Height = 17
+      Top = 32
+      Width = 400
+      LargeChange = 10
+      PageSize = 0
+      TabOrder = 0
+      OnChange = sbEvapChange
+      OnEnter = sbMashWaterEnter
+      OnExit = sbMashWaterExit
+    end
+    object Label4: TLabel
+      Left = 5
+      Height = 15
+      Top = 57
+      Width = 94
+      Caption = 'Volume na koken:'
+      ParentColor = False
+    end
+    object lPostBoilVolume: TLabel
+      Left = 139
+      Height = 15
+      Top = 57
+      Width = 90
+      Caption = 'x l (y l bij 20 gr C)'
+      ParentColor = False
+    end
+    object Label8: TLabel
+      Left = 5
+      Height = 15
+      Top = 84
+      Width = 88
+      Caption = 'Kookketelverlies:'
+      ParentColor = False
+    end
+    object fseKettleLoss: TFloatSpinEdit
+      Left = 132
+      Height = 23
+      Top = 81
+      Width = 77
+      AutoSize = False
+      DecimalPlaces = 1
+      MinValue = 0
+      OnChange = fseKettleLossChange
+      OnEnter = sbMashWaterEnter
+      OnExit = sbMashWaterExit
+      TabOrder = 3
+      Value = 0
+    end
+    object lKettleLoss: TLabel
+      Left = 210
+      Height = 15
+      Top = 84
+      Width = 20
+      Caption = 'liter'
+      ParentColor = False
+    end
+    object sbKettleLoss: TScrollBar
+      Left = 242
+      Height = 17
+      Top = 85
+      Width = 400
+      LargeChange = 10
+      PageSize = 0
+      TabOrder = 1
+      OnChange = sbKettleLossChange
+      OnEnter = sbMashWaterEnter
+      OnExit = sbMashWaterExit
+    end
+  end
+  object gbFermentation: TGroupBox
+    Left = -1
+    Height = 89
+    Top = 357
+    Width = 651
+    Caption = 'Vergisting'
+    ClientHeight = 69
+    ClientWidth = 647
+    TabOrder = 3
+    object Label9: TLabel
+      Left = 5
+      Height = 15
+      Top = 4
+      Width = 79
+      Caption = 'Extra in gistvat:'
+      ParentColor = False
+    end
+    object fseExtra: TFloatSpinEdit
+      Left = 132
+      Height = 23
+      Top = 1
+      Width = 77
+      AutoSize = False
+      DecimalPlaces = 1
+      MinValue = 0
+      OnChange = fseExtraChange
+      OnEnter = sbMashWaterEnter
+      OnExit = sbMashWaterExit
+      TabOrder = 2
+      Value = 0
+    end
+    object lFerm: TLabel
+      Left = 210
+      Height = 15
+      Top = 4
+      Width = 20
+      Caption = 'liter'
+      ParentColor = False
+    end
+    object sbExtra: TScrollBar
+      Left = 242
+      Height = 17
+      Top = 5
+      Width = 400
+      LargeChange = 10
+      PageSize = 0
+      TabOrder = 0
+      OnChange = sbExtraChange
+      OnEnter = sbMashWaterEnter
+      OnExit = sbMashWaterExit
+    end
+    object Label10: TLabel
+      Left = 5
+      Height = 15
+      Top = 28
+      Width = 94
+      Caption = 'Volume in gistvat:'
+      ParentColor = False
+    end
+    object lPreFerm: TLabel
+      Left = 210
+      Height = 15
+      Top = 28
+      Width = 20
+      Caption = 'liter'
+      ParentColor = False
+    end
+    object fseFermenter: TFloatSpinEdit
+      Left = 132
+      Height = 23
+      Top = 26
+      Width = 77
+      AutoSize = False
+      DecimalPlaces = 1
+      MinValue = 0
+      OnChange = fseFermenterChange
+      OnEnter = sbMashWaterEnter
+      OnExit = sbMashWaterExit
+      TabOrder = 3
+      Value = 0
+    end
+    object sbFermenter: TScrollBar
+      Left = 242
+      Height = 17
+      Top = 28
+      Width = 400
+      LargeChange = 10
+      PageSize = 0
+      TabOrder = 1
+      OnChange = sbFermenterChange
+      OnEnter = sbMashWaterEnter
+      OnExit = sbMashWaterExit
+    end
+  end
+  object bbOK: TBitBtn
+    Left = 243
+    Height = 30
+    Top = 452
+    Width = 91
+    DefaultCaption = True
+    Kind = bkOK
+    ModalResult = 1
+    TabOrder = 4
+  end
+  object bbCancel: TBitBtn
+    Left = 334
+    Height = 30
+    Top = 452
+    Width = 91
+    Cancel = True
+    DefaultCaption = True
+    Kind = bkCancel
+    ModalResult = 2
+    TabOrder = 5
+  end
+end

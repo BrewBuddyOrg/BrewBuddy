@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SUBS>
+  <SUB>
+    <ORIGINAL>blonde ale</ORIGINAL>
+    <SUBSTITUTE>blond</SUBSTITUTE>
+  </SUB>
+  <SUB>
+    <ORIGINAL>belgian blond ale</ORIGINAL>
+    <SUBSTITUTE>blond</SUBSTITUTE>
+  </SUB>
+</SUBS>

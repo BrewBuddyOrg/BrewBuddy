@@ -249,7 +249,7 @@ type
     FPanelColors : TColor;
   public
     constructor Create;
-    destructor Destroy;
+    destructor Destroy; override;
     procedure Assign(St : TStyle);
     procedure SaveXML(Doc: TXMLDocument; iNode: TDomNode; bxml: boolean);
     procedure ReadXML(iNode: TDOMNode);
@@ -299,7 +299,7 @@ type
     FSortCloud : TBInteger;
   public
     constructor Create;
-    destructor Destroy;
+    destructor Destroy; override;
     procedure Save;
     procedure Read;
   published
@@ -1667,7 +1667,7 @@ var
 
 implementation
 
-uses frmain, Containers, umulfit, utypes, lconvencoding, typinfo;
+uses frmain, Containers, typinfo;//, umulfit, utypes, lconvencoding, typinfo;
 
 Procedure SetFloatSpinEdit(fse : TFloatSpinEdit; f : TBFloat; SetValue : boolean);
 var u : TUnit;
@@ -1847,11 +1847,11 @@ begin
   if (FCaption <> '') then
   begin
     val := FCaption;
-    {$ifdef WINDOWS}
-    encs := 'utf8';
-    encto := GetDefaultTextEncoding;
-    val := ConvertEncoding(FCaption, encs, encto);
-    {$endif}
+    //{$ifdef WINDOWS}
+    //encs := 'utf8';
+    //encto := GetDefaultTextEncoding;
+    //val := ConvertEncoding(FCaption, encs, encto);
+    //{$endif}
     AddNodeS(Doc, iNode, 'CAPTION', Val);
   end;
 end;
@@ -1864,14 +1864,14 @@ begin
     v := GetNodeString(iNode, 'CAPTION');
     if v <> '' then
     begin
-      {$ifdef WINDOWS}
-      encs := GetDefaultTextEncoding;
-      encto := 'utf8';
-      FCaption := ConvertEncoding(v, encs, encto);
-      //  FValue:= ANSItoUTF8(v);
-      {$else}
+      //{$ifdef WINDOWS}
+      //encs := GetDefaultTextEncoding;
+      //encto := 'utf8';
+      //FCaption := ConvertEncoding(v, encs, encto);
+      ////  FValue:= ANSItoUTF8(v);
+      //{$else}
       FCaption := v;
-      {$endif}
+      //{$endif}
     end;
   end;
 end;
@@ -2402,11 +2402,11 @@ begin
   if (FValue <> '') and (FLabel <> '') then
   begin
     val := FValue;
-    {$ifdef WINDOWS}
-    encs := 'utf8';
-    encto := GetDefaultTextEncoding;
-    val := ConvertEncoding(FValue, encs, encto);
-    {$endif}
+    //{$ifdef WINDOWS}
+    //encs := 'utf8';
+    //encto := GetDefaultTextEncoding;
+    //val := ConvertEncoding(FValue, encs, encto);
+    //{$endif}
     AddNodeS(Doc, iNode, FLabel, Val);
   end;
 end;
@@ -2420,14 +2420,14 @@ begin
     v := GetNodeString(iNode, FLabel);
     if v <> '' then
     begin
-      {$ifdef WINDOWS}
-      encs := GetDefaultTextEncoding;
-      encto := 'utf8';
-      FValue := ConvertEncoding(v, encs, encto);
-      //  FValue:= ANSItoUTF8(v);
-      {$else}
+      //{$ifdef WINDOWS}
+      //encs := GetDefaultTextEncoding;
+      //encto := 'utf8';
+      //FValue := ConvertEncoding(v, encs, encto);
+      ////  FValue:= ANSItoUTF8(v);
+      //{$else}
       FValue := v;
-      {$endif}
+      //{$endif}
     end;
   end;
 end;
@@ -2769,6 +2769,7 @@ procedure TBase.ReadXML(iNode: TDOMNode);
 begin
   FAutoNr.ReadXML(iNode);
   FName.ReadXML(iNode);
+  //Log('Brouwsel: ' + FName.Value);
   FNotes.ReadXML(iNode);
 end;
 
@@ -6784,79 +6785,79 @@ begin
 end;
 
 procedure TEquipment.CalcEfficiencyFactors;
-var
-  i: integer;
-  R: TRecipe;
-  OG, WtGR, Eff: double;
-  X: TMatrix;
-  Y: TVector;
-  Lb, Ub, Nvar: integer;
-  B: TVector;
-  V: TMatrix;
+//var
+//  i: integer;
+//  R: TRecipe;
+//  OG, WtGR, Eff: double;
+//  X: TMatrix;
+//  Y: TVector;
+//  Lb, Ub, Nvar: integer;
+//  B: TVector;
+//  V: TMatrix;
 begin
-  NVar := 2;
-  SetLength(Y, 0);
-  SetLength(B, NVar + 1);
-  for i := 0 to NVar do
-    B[i] := 0.0;
-
-  Lb := 0;
-  Ub := -1;
-  for i := 0 to Brews.NumItems - 1 do
-  begin
-    R := TRecipe(Brews.Item[i]);
-    if (R <> nil) and (R.Equipment <> nil) and
-      (R.Equipment.Name.Value = FName.Value) and (R.SGStartBoil > 1.0) and
-      (R.ActualEfficiency.Value > 30) and (R.Mash <> nil) and
-      (R.Mash.MashStep[0].WaterToGrainRatio > 0) then
-    begin
-      Inc(Ub);
-      SetLength(X, Ub + 1);
-      SetLength(X[Ub], 3);
-      SetLength(Y, Ub + 1);
-
-      OG := R.SGStartBoil;
-      WtGR := R.Mash.MashStep[0].WaterToGrainRatio;
-      Eff := R.ActualEfficiency.Value;
-      X[Ub, 1] := OG;
-      X[Ub, 2] := WtGR;
-      Y[Ub] := Eff;
-    end;
-  end;
-  SetLength(V, Ub + 1);
-  for i := 0 to Ub do
-    SetLength(V[i], Ub + 1);
-
-  if Ub > 4 then
-  begin
-    try
-      MulFit(X, Y, Lb, Ub, Nvar, True, B, V);
-
-      FEffFactBD.Value := B[2];
-      FEffFactSG.Value := B[1];
-      FEffFactC.Value := B[0];
-    except
-      FEffFactBD.Value := 0;
-      FEffFactSG.Value := 0;
-      FEffFactC.Value := FEfficiency.Value;
-    end;
-  end
-  else
-  begin
-    FEffFactBD.Value := 0;
-    FEffFactSG.Value := 0;
-    FEffFactC.Value := FEfficiency.Value;
-  end;
-
-  for i := 0 to Ub do
-  begin
-    SetLength(V[i], 0);
-    SetLength(X[i], 0);
-  end;
-  SetLength(X, 0);
-  SetLength(Y, 0);
-  SetLength(V, 0);
-  SetLength(B, 0);
+//  NVar := 2;
+//  SetLength(Y, 0);
+//  SetLength(B, NVar + 1);
+//  for i := 0 to NVar do
+//    B[i] := 0.0;
+//
+//  Lb := 0;
+//  Ub := -1;
+//  for i := 0 to Brews.NumItems - 1 do
+//  begin
+//    R := TRecipe(Brews.Item[i]);
+//    if (R <> nil) and (R.Equipment <> nil) and
+//      (R.Equipment.Name.Value = FName.Value) and (R.SGStartBoil > 1.0) and
+//      (R.ActualEfficiency.Value > 30) and (R.Mash <> nil) and
+//      (R.Mash.MashStep[0].WaterToGrainRatio > 0) then
+//    begin
+//      Inc(Ub);
+//      SetLength(X, Ub + 1);
+//      SetLength(X[Ub], 3);
+//      SetLength(Y, Ub + 1);
+//
+//      OG := R.SGStartBoil;
+//      WtGR := R.Mash.MashStep[0].WaterToGrainRatio;
+//      Eff := R.ActualEfficiency.Value;
+//      X[Ub, 1] := OG;
+//      X[Ub, 2] := WtGR;
+//      Y[Ub] := Eff;
+//    end;
+//  end;
+//  SetLength(V, Ub + 1);
+//  for i := 0 to Ub do
+//    SetLength(V[i], Ub + 1);
+//
+//  if Ub > 4 then
+//  begin
+//    try
+//      MulFit(X, Y, Lb, Ub, Nvar, True, B, V);
+//
+//      FEffFactBD.Value := B[2];
+//      FEffFactSG.Value := B[1];
+//      FEffFactC.Value := B[0];
+//    except
+//      FEffFactBD.Value := 0;
+//      FEffFactSG.Value := 0;
+//      FEffFactC.Value := FEfficiency.Value;
+//    end;
+//  end
+//  else
+//  begin
+//    FEffFactBD.Value := 0;
+//    FEffFactSG.Value := 0;
+//    FEffFactC.Value := FEfficiency.Value;
+//  end;
+//
+//  for i := 0 to Ub do
+//  begin
+//    SetLength(V[i], 0);
+//    SetLength(X[i], 0);
+//  end;
+//  SetLength(X, 0);
+//  SetLength(Y, 0);
+//  SetLength(V, 0);
+//  SetLength(B, 0);
 end;
 
 function TEquipment.CalcEfficiency(OG, WtGR: double): double;
@@ -6865,103 +6866,103 @@ begin
 end;
 
 procedure TEquipment.CalcAttenuationFactors;
-var
-  i: integer;
-  R: TRecipe;
-  Att, AttY, WtGR, Temp, TTime, PC, PS: double;
-  X: TMatrix;
-  Y: TVector;
-  Lb, Ub, Nvar: integer;
-  B: TVector;
-  V: TMatrix;
+//var
+//  i: integer;
+//  R: TRecipe;
+//  Att, AttY, WtGR, Temp, TTime, PC, PS: double;
+//  X: TMatrix;
+//  Y: TVector;
+//  Lb, Ub, Nvar: integer;
+//  B: TVector;
+//  V: TMatrix;
 begin
-  NVar := 5;
-  SetLength(Y, 0);
-  SetLength(B, NVar + 1);
-  for i := 0 to NVar do
-    B[i] := 0.0;
-
-  Lb := 0;
-  Ub := -1;
-  for i := 0 to Brews.NumItems - 1 do
-  begin
-    R := TRecipe(Brews.Item[i]);
-    if (R <> nil) and (R.Equipment <> nil) and
-      (R.Equipment.Name.Value = FName.Value) and (R.Mash <> nil) and
-      (R.Mash.MashStep[0] <> nil) and (R.Mash.MashStep[0].WaterToGrainRatio > 0) and
-      (R.Yeast[0] <> nil) and (R.Yeast[0].Attenuation.Value > 0) and
-      (R.Mash.TotalMashTime > 0) and (R.Mash.AverageTemperature > 0) and
-      (R.OG.Value > 1) and (R.FG.Value > 1) then
-    begin
-      Inc(Ub);
-      SetLength(X, Ub + 1);
-      SetLength(X[Ub], Nvar + 1);
-      SetLength(Y, Ub + 1);
-
-      AttY := R.Yeast[0].Attenuation.Value;
-      Temp := R.Mash.AverageTemperature;
-      TTime := R.Mash.TotalMashTime;
-      PC := R.PercCrystalMalt;
-      PS := R.PercSugar;
-      WtGR := R.Mash.MashStep[0].WaterToGrainRatio;
-      if R.OG.Value > 1 then
-        Att := (R.OG.Value - R.FG.Value) / (R.OG.Value - 1)
-      else Att:= 0;
-      X[Ub, 1] := AttY;
-      X[Ub, 2] := WtGR;
-      X[Ub, 3] := Temp;
-      X[Ub, 4] := TTime;
-      X[Ub, 5] := PC;
-      X[Ub, 6] := PS;
-      Y[Ub] := Att;
-    end;
-  end;
-  SetLength(V, Ub + 1);
-  for i := 0 to Ub do
-    SetLength(V[i], Ub + 1);
-
-  if Ub > 4 then
-  begin
-    try
-      MulFit(X, Y, Lb, Ub, Nvar, True, B, V);
-
-      FAttFactC.Value := B[0];
-      FAttFactAttY.Value := B[1];
-      FAttFactBD.Value := B[2];
-      FAttFactTemp.Value := B[3];
-      FAttFactTTime.Value := B[4];
-      FAttFactPercCara.Value := B[5];
-      FAttFactPercS.Value := B[6];
-    except
-      FAttFactC.Value := 0.547;
-      FAttFactAttY.Value := 0.00825;
-      FAttFactBD.Value := 0.00817;
-      FAttFactTemp.Value := -0.00684;
-      FAttFactTTime.Value := 0.0026;
-      FAttFactPercCara.Value := -0.00356;
-      FAttFactPercS.Value := 0.00553;
-    end;
-  end
-  else
-  begin
-    FAttFactC.Value := 0.547;
-    FAttFactAttY.Value := 0.00825;
-    FAttFactBD.Value := 0.00817;
-    FAttFactTemp.Value := -0.00684;
-    FAttFactTTime.Value := 0.0026;
-    FAttFactPercCara.Value := -0.00356;
-    FAttFactPercS.Value := 0.00553;
-  end;
-
-  for i := 0 to Ub do
-  begin
-    SetLength(V[i], 0);
-    SetLength(X[i], 0);
-  end;
-  SetLength(X, 0);
-  SetLength(Y, 0);
-  SetLength(V, 0);
-  SetLength(B, 0);
+//  NVar := 5;
+//  SetLength(Y, 0);
+//  SetLength(B, NVar + 1);
+//  for i := 0 to NVar do
+//    B[i] := 0.0;
+//
+//  Lb := 0;
+//  Ub := -1;
+//  for i := 0 to Brews.NumItems - 1 do
+//  begin
+//    R := TRecipe(Brews.Item[i]);
+//    if (R <> nil) and (R.Equipment <> nil) and
+//      (R.Equipment.Name.Value = FName.Value) and (R.Mash <> nil) and
+//      (R.Mash.MashStep[0] <> nil) and (R.Mash.MashStep[0].WaterToGrainRatio > 0) and
+//      (R.Yeast[0] <> nil) and (R.Yeast[0].Attenuation.Value > 0) and
+//      (R.Mash.TotalMashTime > 0) and (R.Mash.AverageTemperature > 0) and
+//      (R.OG.Value > 1) and (R.FG.Value > 1) then
+//    begin
+//      Inc(Ub);
+//      SetLength(X, Ub + 1);
+//      SetLength(X[Ub], Nvar + 1);
+//      SetLength(Y, Ub + 1);
+//
+//      AttY := R.Yeast[0].Attenuation.Value;
+//      Temp := R.Mash.AverageTemperature;
+//      TTime := R.Mash.TotalMashTime;
+//      PC := R.PercCrystalMalt;
+//      PS := R.PercSugar;
+//      WtGR := R.Mash.MashStep[0].WaterToGrainRatio;
+//      if R.OG.Value > 1 then
+//        Att := (R.OG.Value - R.FG.Value) / (R.OG.Value - 1)
+//      else Att:= 0;
+//      X[Ub, 1] := AttY;
+//      X[Ub, 2] := WtGR;
+//      X[Ub, 3] := Temp;
+//      X[Ub, 4] := TTime;
+//      X[Ub, 5] := PC;
+//      X[Ub, 6] := PS;
+//      Y[Ub] := Att;
+//    end;
+//  end;
+//  SetLength(V, Ub + 1);
+//  for i := 0 to Ub do
+//    SetLength(V[i], Ub + 1);
+//
+//  if Ub > 4 then
+//  begin
+//    try
+//      MulFit(X, Y, Lb, Ub, Nvar, True, B, V);
+//
+//      FAttFactC.Value := B[0];
+//      FAttFactAttY.Value := B[1];
+//      FAttFactBD.Value := B[2];
+//      FAttFactTemp.Value := B[3];
+//      FAttFactTTime.Value := B[4];
+//      FAttFactPercCara.Value := B[5];
+//      FAttFactPercS.Value := B[6];
+//    except
+//      FAttFactC.Value := 0.547;
+//      FAttFactAttY.Value := 0.00825;
+//      FAttFactBD.Value := 0.00817;
+//      FAttFactTemp.Value := -0.00684;
+//      FAttFactTTime.Value := 0.0026;
+//      FAttFactPercCara.Value := -0.00356;
+//      FAttFactPercS.Value := 0.00553;
+//    end;
+//  end
+//  else
+//  begin
+//    FAttFactC.Value := 0.547;
+//    FAttFactAttY.Value := 0.00825;
+//    FAttFactBD.Value := 0.00817;
+//    FAttFactTemp.Value := -0.00684;
+//    FAttFactTTime.Value := 0.0026;
+//    FAttFactPercCara.Value := -0.00356;
+//    FAttFactPercS.Value := 0.00553;
+//  end;
+//
+//  for i := 0 to Ub do
+//  begin
+//    SetLength(V[i], 0);
+//    SetLength(X[i], 0);
+//  end;
+//  SetLength(X, 0);
+//  SetLength(Y, 0);
+//  SetLength(V, 0);
+//  SetLength(B, 0);
 end;
 
 function TEquipment.EstimateFG(AttY, BD, Temp, TTime, PCara, PSugar: double): double;
@@ -16783,6 +16784,7 @@ end;
 
 destructor TBSettings.Destroy;
 begin
+  //inherited
   FColorMethod.Free;
   FIBUMethod.Free;
   FDataLocation.Free;
@@ -16865,7 +16867,9 @@ begin
     iDoc.Free;
   end;
 end;
-
+{ TBSettings.Read reads the settings from the settings.xml file.
+  The location is predetermined during initialization.
+}
 procedure TBSettings.Read;
 var
   iDoc: TXMLDocument;

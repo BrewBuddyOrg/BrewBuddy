@@ -64,7 +64,7 @@ implementation
 
 procedure Register;
 begin
-  RegisterComponents('Adrie', [TPosInterval]);
+  RegisterComponents('Adrie', [TPosInterval]);      // JR "Adrie?"
 end;
 
 
@@ -796,4 +796,4 @@ begin
 end;
 
 end.
-
+

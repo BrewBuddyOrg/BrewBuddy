@@ -1,0 +1,26 @@
+[ Zeddski 27 feb 2019 ]
+TExpandPanels - Component not found. --> https://github.com/roth-a/expandpanels
+Synapse - https://github.com/marado/synapse.git
+LuiPack - https://github.com/blikblum/luipack.git (UniqueInstance)
+Fann - https://github.com/joelself/FannCSharp
+
+- CLOUD overal weggecomment
+- Alle modules uitgeschakeld en een voor een terug aan: waar zitten de problemen?
+! Geen settings --> OpenDialog crasht
+- Alles met splash en geluiden uitgezet
+- Versiecheck uitgeschakeld
+- Histogram, Analyse, training uitgezet vanwege lastige dependencies.
+- FrmMain.CloseQuery aangepast
+- TControl uitgeschakeld
+- Uncommented TBString.ReadXML en SaveXML (encoding conversie verwijderd)
+- !! uiBrouwHulp: Identifier was 'adrie123' - gewijzigd 
+- Taborder FrmMashsteps gecorrigeerd
+- frmNotification verwijderd en vervangen door Yes/No/Cancel standaard dialog.
+- Mogelijkheid om Cancel (annuleren) te gebruiken geintroduceerd.
+- Code voorzien van minimaal commentaar (zeker niet volledig)
+
+
+>>> TODO
+- Alle componenten vervangen door moderne / Lazarus-standaarden
+- Warnings nalopen, geven veel verouderde methoden weer.
+- Er gaat iets niet goed met de Hover-kleur op de TPanel "pRight". Die is altijd zwart.
