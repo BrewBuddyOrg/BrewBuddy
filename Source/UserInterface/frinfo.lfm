@@ -154,7 +154,7 @@ object frmInfo: TfrmInfo
   }
   OnCreate = FormCreate
   Position = poScreenCenter
-  LCLVersion = '1.8.4.0'
+  LCLVersion = '2.0.0.4'
   object BitBtn1: TBitBtn
     Left = 223
     Height = 30
@@ -170,13 +170,13 @@ object frmInfo: TfrmInfo
     Height = 380
     Top = 0
     Width = 529
-    ActivePage = tsBrewing
-    TabIndex = 1
+    ActivePage = tsInfo
+    TabIndex = 0
     TabOrder = 1
     object tsInfo: TTabSheet
       Caption = 'Informatie'
-      ClientHeight = 349
-      ClientWidth = 519
+      ClientHeight = 352
+      ClientWidth = 521
       object pLogo: TPanel
         Left = 0
         Height = 340
@@ -1196,25 +1196,25 @@ object frmInfo: TfrmInfo
         end
         object Label1: TLabel
           Left = 9
-          Height = 17
+          Height = 15
           Top = 287
-          Width = 38
+          Width = 33
           Caption = 'Versie:'
           ParentColor = False
         end
         object lFileVersion: TLabel
           Left = 72
-          Height = 17
+          Height = 15
           Top = 287
-          Width = 64
+          Width = 59
           Caption = 'lFileVersion'
           ParentColor = False
         end
         object lTwitter: TLabel
           Left = 9
-          Height = 17
+          Height = 15
           Top = 313
-          Width = 148
+          Width = 142
           Caption = 'Volg BrouwHulp op Twitter'
           Font.Color = clBlue
           Font.Style = [fsUnderline]
@@ -11633,8 +11633,8 @@ object frmInfo: TfrmInfo
     end
     object tsThanks: TTabSheet
       Caption = 'Dankwoord'
-      ClientHeight = 349
-      ClientWidth = 519
+      ClientHeight = 352
+      ClientWidth = 521
       object mThanks: TMemo
         Left = 8
         Height = 331

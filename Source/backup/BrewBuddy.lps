@@ -6,10 +6,11 @@
     <BuildModes Active="Default"/>
     <Units Count="202">
       <Unit0>
-        <Filename Value="BrewBuddy_JR.lpr"/>
+        <Filename Value="BrewBuddy.lpr"/>
         <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="8"/>
-        <CursorPos Y="17"/>
+        <CursorPos X="125" Y="24"/>
         <UsageCount Value="201"/>
         <Loaded Value="True"/>
       </Unit0>
@@ -20,7 +21,6 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="FrMain"/>
-        <IsVisibleTab Value="True"/>
         <UsageCount Value="20"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -29,16 +29,19 @@
         <Filename Value="UserInterface\frfermentables.lfm"/>
         <IsPartOfProject Value="True"/>
         <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit2>
       <Unit3>
         <Filename Value="UserInterface\frfermentables2.lfm"/>
         <IsPartOfProject Value="True"/>
         <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit3>
       <Unit4>
         <Filename Value="UserInterface\frfermentables3.lfm"/>
         <IsPartOfProject Value="True"/>
         <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit4>
       <Unit5>
         <Filename Value="Units\amoebes.pas"/>
@@ -159,6 +162,7 @@
         <Filename Value="UserInterface\fdatabaselocation.lfm"/>
         <IsPartOfProject Value="True"/>
         <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit17>
       <Unit18>
         <Filename Value="UserInterface\fdatabaselocation.pas"/>
@@ -170,6 +174,7 @@
         <Filename Value="UserInterface\fradjustto100.lfm"/>
         <IsPartOfProject Value="True"/>
         <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit19>
       <Unit20>
         <Filename Value="UserInterface\fradjustto100.pas"/>
@@ -181,6 +186,7 @@
         <Filename Value="UserInterface\franalysis.lfm"/>
         <IsPartOfProject Value="True"/>
         <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit21>
       <Unit22>
         <Filename Value="UserInterface\franalysis.pas"/>
@@ -192,6 +198,7 @@
         <Filename Value="UserInterface\frbeerstyles.lfm"/>
         <IsPartOfProject Value="True"/>
         <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit23>
       <Unit24>
         <Filename Value="UserInterface\frbeerstyles.pas"/>
@@ -203,6 +210,7 @@
         <Filename Value="UserInterface\frboilmethod.lfm"/>
         <IsPartOfProject Value="True"/>
         <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit25>
       <Unit26>
         <Filename Value="UserInterface\frboilmethod.pas"/>
@@ -214,6 +222,7 @@
         <Filename Value="UserInterface\frchecklist.lfm"/>
         <IsPartOfProject Value="True"/>
         <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit27>
       <Unit28>
         <Filename Value="UserInterface\frchecklist.pas"/>
@@ -227,6 +236,7 @@
         <Filename Value="UserInterface\frchoosebrews.lfm"/>
         <IsPartOfProject Value="True"/>
         <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit29>
       <Unit30>
         <Filename Value="UserInterface\frchoosebrews.pas"/>
@@ -238,6 +248,7 @@
         <Filename Value="UserInterface\frchoosebrewschars.lfm"/>
         <IsPartOfProject Value="True"/>
         <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit31>
       <Unit32>
         <Filename Value="UserInterface\frchoosebrewschars.pas"/>
@@ -249,6 +260,7 @@
         <Filename Value="UserInterface\frdividebrew.lfm"/>
         <IsPartOfProject Value="True"/>
         <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit33>
       <Unit34>
         <Filename Value="UserInterface\frdividebrew.pas"/>
@@ -260,6 +272,7 @@
         <Filename Value="UserInterface\frequipments.lfm"/>
         <IsPartOfProject Value="True"/>
         <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit35>
       <Unit36>
         <Filename Value="UserInterface\frequipments.pas"/>
@@ -283,6 +296,7 @@
         <Filename Value="UserInterface\frgristwizard.lfm"/>
         <IsPartOfProject Value="True"/>
         <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit39>
       <Unit40>
         <Filename Value="UserInterface\frgristwizard.pas"/>
@@ -294,6 +308,7 @@
         <Filename Value="UserInterface\frhistogram.lfm"/>
         <IsPartOfProject Value="True"/>
         <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit41>
       <Unit42>
         <Filename Value="UserInterface\frhistogram.pas"/>
@@ -305,6 +320,7 @@
         <Filename Value="UserInterface\frhop.lfm"/>
         <IsPartOfProject Value="True"/>
         <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit43>
       <Unit44>
         <Filename Value="UserInterface\frhop.pas"/>
@@ -316,6 +332,7 @@
         <Filename Value="UserInterface\frhop2.lfm"/>
         <IsPartOfProject Value="True"/>
         <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit45>
       <Unit46>
         <Filename Value="UserInterface\frhop2.pas"/>
@@ -327,6 +344,7 @@
         <Filename Value="UserInterface\frhop3.lfm"/>
         <IsPartOfProject Value="True"/>
         <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit47>
       <Unit48>
         <Filename Value="UserInterface\frhop3.pas"/>
@@ -338,6 +356,7 @@
         <Filename Value="UserInterface\frhopgraph.lfm"/>
         <IsPartOfProject Value="True"/>
         <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit49>
       <Unit50>
         <Filename Value="UserInterface\frhopgraph.pas"/>
@@ -349,6 +368,7 @@
         <Filename Value="UserInterface\frhopstorage.lfm"/>
         <IsPartOfProject Value="True"/>
         <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit51>
       <Unit52>
         <Filename Value="UserInterface\frhopstorage.pas"/>
@@ -360,6 +380,7 @@
         <Filename Value="UserInterface\frhopwizard.lfm"/>
         <IsPartOfProject Value="True"/>
         <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit53>
       <Unit54>
         <Filename Value="UserInterface\frhopwizard.pas"/>
@@ -371,6 +392,7 @@
         <Filename Value="UserInterface\frimport.lfm"/>
         <IsPartOfProject Value="True"/>
         <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit55>
       <Unit56>
         <Filename Value="UserInterface\frimport.pas"/>
@@ -382,6 +404,7 @@
         <Filename Value="UserInterface\frinfo.lfm"/>
         <IsPartOfProject Value="True"/>
         <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit57>
       <Unit58>
         <Filename Value="UserInterface\frinfo.pas"/>
@@ -401,6 +424,7 @@
         <Filename Value="UserInterface\frmashs.lfm"/>
         <IsPartOfProject Value="True"/>
         <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit60>
       <Unit61>
         <Filename Value="UserInterface\frmashs.pas"/>
@@ -412,6 +436,7 @@
         <Filename Value="UserInterface\frmashstep.lfm"/>
         <IsPartOfProject Value="True"/>
         <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit62>
       <Unit63>
         <Filename Value="UserInterface\frmashstep.pas"/>
@@ -425,6 +450,7 @@
         <Filename Value="UserInterface\frmeasurements.lfm"/>
         <IsPartOfProject Value="True"/>
         <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit64>
       <Unit65>
         <Filename Value="UserInterface\frmeasurements.pas"/>
@@ -436,6 +462,7 @@
         <Filename Value="UserInterface\frmiscs.lfm"/>
         <IsPartOfProject Value="True"/>
         <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit66>
       <Unit67>
         <Filename Value="UserInterface\frmiscs.pas"/>
@@ -447,6 +474,7 @@
         <Filename Value="UserInterface\frmiscs2.lfm"/>
         <IsPartOfProject Value="True"/>
         <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit68>
       <Unit69>
         <Filename Value="UserInterface\frmiscs2.pas"/>
@@ -458,6 +486,7 @@
         <Filename Value="UserInterface\frmiscs3.lfm"/>
         <IsPartOfProject Value="True"/>
         <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit70>
       <Unit71>
         <Filename Value="UserInterface\frmiscs3.pas"/>
@@ -469,6 +498,7 @@
         <Filename Value="UserInterface\frnotification.lfm"/>
         <IsPartOfProject Value="True"/>
         <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit72>
       <Unit73>
         <Filename Value="UserInterface\frnotification.pas"/>
@@ -480,6 +510,7 @@
         <Filename Value="UserInterface\frprintpreview.lfm"/>
         <IsPartOfProject Value="True"/>
         <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit74>
       <Unit75>
         <Filename Value="UserInterface\frprintpreview.pas"/>
@@ -491,6 +522,7 @@
         <Filename Value="UserInterface\frpropagation.lfm"/>
         <IsPartOfProject Value="True"/>
         <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit76>
       <Unit77>
         <Filename Value="UserInterface\frpropagation.pas"/>
@@ -502,6 +534,7 @@
         <Filename Value="UserInterface\frrecipetobrew.lfm"/>
         <IsPartOfProject Value="True"/>
         <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit78>
       <Unit79>
         <Filename Value="UserInterface\frrecipetobrew.pas"/>
@@ -513,6 +546,7 @@
         <Filename Value="UserInterface\frrefractometer.lfm"/>
         <IsPartOfProject Value="True"/>
         <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit80>
       <Unit81>
         <Filename Value="UserInterface\frrefractometer.pas"/>
@@ -524,6 +558,7 @@
         <Filename Value="UserInterface\frrestoredatabases.lfm"/>
         <IsPartOfProject Value="True"/>
         <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit82>
       <Unit83>
         <Filename Value="UserInterface\frrestoredatabases.pas"/>
@@ -535,6 +570,7 @@
         <Filename Value="UserInterface\frselectbeerstyle.lfm"/>
         <IsPartOfProject Value="True"/>
         <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit84>
       <Unit85>
         <Filename Value="UserInterface\frselectbeerstyle.pas"/>
@@ -546,6 +582,7 @@
         <Filename Value="UserInterface\frsettings.lfm"/>
         <IsPartOfProject Value="True"/>
         <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit86>
       <Unit87>
         <Filename Value="UserInterface\frsettings.pas"/>
@@ -557,6 +594,7 @@
         <Filename Value="UserInterface\frwateradjustment.lfm"/>
         <IsPartOfProject Value="True"/>
         <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit88>
       <Unit89>
         <Filename Value="UserInterface\frwateradjustment.pas"/>
@@ -568,6 +606,7 @@
         <Filename Value="UserInterface\frwaters.lfm"/>
         <IsPartOfProject Value="True"/>
         <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit90>
       <Unit91>
         <Filename Value="UserInterface\frwaters.pas"/>
@@ -579,6 +618,7 @@
         <Filename Value="UserInterface\frwaterwizard.lfm"/>
         <IsPartOfProject Value="True"/>
         <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit92>
       <Unit93>
         <Filename Value="UserInterface\frwaterwizard.pas"/>
@@ -592,6 +632,7 @@
         <Filename Value="UserInterface\fryeasts.lfm"/>
         <IsPartOfProject Value="True"/>
         <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit94>
       <Unit95>
         <Filename Value="UserInterface\fryeasts.pas"/>
@@ -603,6 +644,7 @@
         <Filename Value="UserInterface\fryeasts2.lfm"/>
         <IsPartOfProject Value="True"/>
         <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit96>
       <Unit97>
         <Filename Value="UserInterface\fryeasts2.pas"/>
@@ -614,6 +656,7 @@
         <Filename Value="UserInterface\fryeasts3.lfm"/>
         <IsPartOfProject Value="True"/>
         <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit98>
       <Unit99>
         <Filename Value="UserInterface\fryeasts3.pas"/>
@@ -637,7 +680,6 @@
           <Item2 X="70" Y="4714" ID="4"/>
           <Item3 X="11" Y="3799" ID="5"/>
         </Bookmarks>
-        <LoadedDesigner Value="True"/>
       </Unit100>
       <Unit101>
         <Filename Value="UI\frfermentables.lfm"/>
@@ -783,7 +825,6 @@
         <EditorIndex Value="-1"/>
         <CursorPos X="53" Y="56"/>
         <UsageCount Value="92"/>
-        <LoadedDesigner Value="True"/>
       </Unit116>
       <Unit117>
         <Filename Value="UI\frchoosebrews.lfm"/>
@@ -1530,7 +1571,7 @@
         <UsageCount Value="10"/>
       </Unit201>
     </Units>
-    <JumpHistory Count="11" HistoryIndex="10">
+    <JumpHistory Count="13" HistoryIndex="12">
       <Position1>
         <Filename Value="Units\bhprintforms.pas"/>
         <Caret Line="3049" Column="30" TopLine="3030"/>
@@ -1575,6 +1616,13 @@
         <Filename Value="Units\subs.pas"/>
         <Caret Line="406" Column="8" TopLine="403"/>
       </Position11>
+      <Position12>
+        <Filename Value="BrewBuddy.lpr"/>
+        <Caret Line="11" Column="23"/>
+      </Position12>
+      <Position13>
+        <Filename Value="UserInterface\frmain.pas"/>
+      </Position13>
     </JumpHistory>
     <RunParams>
       <FormatVersion Value="2"/>
