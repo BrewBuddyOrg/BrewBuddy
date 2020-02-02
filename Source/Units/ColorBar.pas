@@ -19,9 +19,7 @@ type
     FInsideColor, FOutsideColor, FIntermediateColor : TColor;
     FShowValues, FValuesInBar : boolean;
     FBandWidth : integer;
-    { Private declarations }
   protected
-    { Protected declarations }
     Procedure SetMin(V : LongInt);
     Procedure SetMax(V : LongInt);
     Procedure SetTarget(V : LongInt);
@@ -35,11 +33,9 @@ type
     Procedure SetValuesInBar(V : boolean);
     Procedure SetBandWidth(I : integer);
   public
-    { Public declarations }
     Constructor Create(AOwner : TComponent); override;
     procedure Paint; override;
   published
-    { Published declarations }
     property Min : LongInt read FMin write SetMin default -10;
     property Max: LongInt read FMax write SetMax default 10;
     property Target : LongInt read FTarget write SetTarget default 0;

@@ -80,10 +80,8 @@ type
     procedure FormCreate(Sender: TObject);
     procedure seFontSizeChange(Sender: TObject);
   private
-    { private declarations }
     FStyle : TStyle;
   public
-    { public declarations }
     Function Execute : boolean;
   end;
 

@@ -32,13 +32,11 @@ type
     procedure eNrRecipeChange(Sender: TObject);
     procedure deBrewDateChange(Sender: TObject);
   private
-    { private declarations }
     FEquipment : TEquipment;
     FNrRecipe : string;
     FVolume : double;
     FBrewDate : TDate;
   public
-    { public declarations }
     Function Execute(R : TRecipe) : boolean;
   end; 
 

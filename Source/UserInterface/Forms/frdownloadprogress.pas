@@ -15,12 +15,10 @@ type
     ProgressBar1: TProgressBar;
     procedure FormCreate(Sender: TObject);
   private
-    { private declarations }
     FProgress, FMax : integer;
     procedure SetProgress(l : integer);
     Procedure SetMaxValue(l : integer);
   public
-    { public declarations }
     procedure OnMonitor(Sender: TObject; Writing: Boolean;
                         const Buffer: TMemory; Len: Integer);
   published

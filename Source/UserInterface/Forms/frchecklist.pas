@@ -23,13 +23,11 @@ type
     procedure FormDestroy(Sender: TObject);
     procedure FormHide(Sender: TObject);
   private
-    { private declarations }
     CLGroups : array of TCheckGroup;
     FRecipe : TRecipe;
     Procedure PlaceWindow;
     Procedure ClearAll;
   public
-    { public declarations }
     Function Execute(R : TRecipe) : boolean;
   end;
 

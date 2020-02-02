@@ -100,7 +100,6 @@ type
     procedure sgSourceDrawCell(Sender: TObject; aCol, aRow: Integer;
       aRect: TRect; aState: TGridDrawState);
   private
-    { private declarations }
     FRecipe : TRecipe;
     FSource1, FSource2, FMashWater, FAdjustedWater, FTargetWater : TWater;
     FColorCells : array of TCellCoord;
@@ -122,7 +121,6 @@ type
     Function GetDefaultPerc(at : TAcidType) : double;
     Procedure Dilute(perc : double);
   public
-    { public declarations }
     Function Execute(R : TRecipe) : boolean;
   end; 
 

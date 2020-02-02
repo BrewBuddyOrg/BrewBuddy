@@ -30,11 +30,9 @@ type
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
   private
-    { private declarations }
     FGraphType : longint;
     procedure FillGraph;
   public
-    { public declarations }
     Function Execute(i : longint) : boolean;
   end;
 

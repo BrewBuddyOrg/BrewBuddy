@@ -27,9 +27,9 @@ type
     procedure fseSGChange(Sender: TObject);
     procedure bbOKClick(Sender: TObject);
   private
-    { private declarations }
+
   public
-    { public declarations }
+
   end; 
 
 var

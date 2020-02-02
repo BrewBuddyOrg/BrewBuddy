@@ -61,7 +61,6 @@ type
     procedure rxteTimeChange(Sender: TObject);
     procedure bbRemoveAllClick(Sender: TObject);
   private
-    { private declarations }
     FRecipe : TRecipe;
     FMeasurements : TFermMeasurements;
     FSelM : TFermMeasurement;
@@ -74,7 +73,6 @@ type
     Function CountColumns : integer;
     Function FindEndHeader : integer;
   public
-    { public declarations }
     Function Execute(R : TRecipe) : boolean;
   end; 
 

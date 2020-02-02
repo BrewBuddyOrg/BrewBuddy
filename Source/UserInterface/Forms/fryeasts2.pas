@@ -67,14 +67,12 @@ type
     procedure FormDestroy(Sender: TObject);
     procedure cbNameChange(Sender: TObject);
   private
-    { private declarations }
     FYeast, FOriginal, FChosen : TYeast;
     FUserClicked : boolean;
     Procedure Store;
     Procedure SetControls;
     procedure FillcbName;
   public
-    { public declarations }
     Function Execute(Y : TYeast) : boolean;
   end; 
 

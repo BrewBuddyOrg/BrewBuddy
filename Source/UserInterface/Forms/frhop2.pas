@@ -85,14 +85,12 @@ type
     procedure fseAlfaChange(Sender: TObject);
     procedure cbFormChange(Sender: TObject);
   private
-    { private declarations }
     FHop, FOriginal, FChosen : THop;
     FCh, FUserClicked : boolean;
     Function GetHopUse : THopUse;
     Procedure SetControls;
     Procedure FillcbName;
   public
-    { public declarations }
     Function Execute(H : THop) : boolean;
   end;
 

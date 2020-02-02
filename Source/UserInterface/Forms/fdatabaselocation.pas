@@ -23,10 +23,8 @@ type
     procedure deSettingsChange(Sender: TObject);
     procedure cbRemoveClick(Sender: TObject);
   private
-    { private declarations }
     FOldDir, FNewDir : string;
   public
-    { public declarations }
     Function Execute : boolean;
   end; 
 

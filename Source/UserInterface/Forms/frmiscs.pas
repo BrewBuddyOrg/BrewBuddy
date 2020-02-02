@@ -72,21 +72,19 @@ type
     procedure fseCostChange(Sender: TObject);
     procedure fseInventoryChange(Sender: TObject);
     procedure sbClearClick(Sender: TObject);
-    procedure tvSelectKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState
-      );
+    procedure tvSelectKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure tvSelectSelectionChanged(Sender: TObject);
     procedure cbTypeChange(Sender: TObject);
     procedure bbImportClick(Sender: TObject);
     procedure bbCopyClick(Sender: TObject);
   private
-    { private declarations }
     FSelectedNode : TTreeNode;
     FNew : boolean;
     FUserClicked: boolean;
     Procedure Store;
     Procedure FillTree;
   public
-    { public declarations }
+
   end; 
 
 var

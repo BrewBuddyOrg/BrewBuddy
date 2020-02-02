@@ -55,13 +55,11 @@ type
     procedure tbCopyToClipboardClick(Sender: TObject);
     procedure tbPrintClick(Sender: TObject);
   private
-    { private declarations }
     FX : LongInt;
     FMarkList : TStringList;
     FHistArr : array of THistRecs;
     Procedure FillChart;
   public
-    { public declarations }
     Function Execute : boolean;
   end;
 

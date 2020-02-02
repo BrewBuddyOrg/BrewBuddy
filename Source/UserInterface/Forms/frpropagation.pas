@@ -51,14 +51,12 @@ type
     procedure cbStarterTypeChange(Sender: TObject);
     procedure bbOKClick(Sender: TObject);
   private
-    { private declarations }
     FCellsNeeded : double;
     FAuto : boolean;
     Function CalcStart : double;
     Procedure CalcNeeded;
     Procedure CalcSteps;
   public
-    { public declarations }
     Function Execute(Rec : TRecipe) : boolean;
   end; 
 

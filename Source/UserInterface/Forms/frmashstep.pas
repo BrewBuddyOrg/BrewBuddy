@@ -34,9 +34,8 @@ type
     seStepTemp: TSpinEdit;
     procedure FormCreate(Sender: TObject);
   private
-    { private declarations }
+
   public
-    { public declarations }
     Function Execute(MS : TMashStep) : boolean;
   end; 
 

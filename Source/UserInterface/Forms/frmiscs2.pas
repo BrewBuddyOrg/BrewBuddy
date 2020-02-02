@@ -49,14 +49,12 @@ type
     procedure FormDestroy(Sender: TObject);
     procedure cbNameChange(Sender: TObject);
   private
-    { private declarations }
     FMisc, FOriginal, FChosen : TMisc;
     FUserClicked : boolean;
     Procedure Store;
     Procedure SetControls;
     procedure FillcbName;
   public
-    { public declarations }
     Function Execute(M : TMisc) : boolean;
   end; 
 

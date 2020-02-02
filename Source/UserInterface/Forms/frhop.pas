@@ -98,15 +98,13 @@ type
     procedure fseCohumuloneChange(Sender: TObject);
     procedure fseCostChange(Sender: TObject);
     procedure sbClearClick(Sender: TObject);
-    procedure tvSelectKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState
-      );
+    procedure tvSelectKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure tvSelectSelectionChanged(Sender: TObject);
     procedure fseInventoryChange(Sender: TObject);
     procedure eOriginExit(Sender: TObject);
     procedure bbImportClick(Sender: TObject);
     procedure bbCopyClick(Sender: TObject);
   private
-    { private declarations }
     FNew : boolean;
     FSelectedNode : TTreeNode;
     FUserClicked : boolean;
@@ -114,7 +112,7 @@ type
     Procedure FillTree;
     Procedure UpdateAmoebe;
   public
-    { public declarations }
+
   end; 
 
 var

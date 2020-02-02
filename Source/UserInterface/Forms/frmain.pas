@@ -932,7 +932,6 @@ type
     procedure tbTrainNNClick(Sender: TObject);
     procedure tbChartClick(Sender: TObject);
   private
-    { private declarations }
     FSelRecipe : TRecipe;
     FSelBrew : TRecipe;
     FSelCloud : TRecipe;
@@ -977,7 +976,6 @@ type
     Procedure SetControlsStrings;
     Procedure NameChange;
   public
-    { public declarations }
     OriginalBounds: TRect;
     OriginalWindowState: TWindowState;
     ScreenBounds: TRect;

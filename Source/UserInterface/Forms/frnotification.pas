@@ -21,9 +21,8 @@ type
     procedure FormDestroy(Sender: TObject);
     procedure FormHide(Sender: TObject);
   private
-    { private declarations }
+
   public
-    { public declarations }
     Procedure ShowFrm(s : string);
     Procedure SetText(s : string);
     Procedure AddText(s : string);

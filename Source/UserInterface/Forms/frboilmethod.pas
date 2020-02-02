@@ -28,9 +28,9 @@ type
     procedure fseSGafterChange(Sender: TObject);
     procedure FormCreate(Sender: TObject);
   private
-    { private declarations }
+
   public
-    { public declarations }
+
   end; 
 
 var

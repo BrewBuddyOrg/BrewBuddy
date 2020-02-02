@@ -87,7 +87,6 @@ type
     procedure bbImportClick(Sender: TObject);
     procedure bbCopyClick(Sender: TObject);
   private
-    { private declarations }
     FSelectedNode : TTreeNode;
     FNew : boolean;
     FUserClicked : boolean;
@@ -95,7 +94,7 @@ type
     Procedure FillTree;
     Procedure UpdateAmoebe;
   public
-    { public declarations }
+
   end; 
 
 var

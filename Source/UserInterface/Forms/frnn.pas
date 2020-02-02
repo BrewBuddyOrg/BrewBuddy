@@ -129,7 +129,6 @@ type
     procedure tvNNSelectionChanged(Sender: TObject);
     procedure bbTrainClick(Sender: TObject);
   private
-    { private declarations }
     FSelNN : TBHNN;
     FUserClicked, FChanged, FTraining : boolean;
     FISGX, FISGY : integer;
@@ -140,7 +139,6 @@ type
     Procedure UpdateChart;
     Procedure UpdatesgOutput;
   public
-    { public declarations }
     Procedure Execute;
     procedure NNOnTrainRound(Sender : TObject; Error, Progress : single);
     procedure NNOnTrainReady(Sender : TObject; Error : single);

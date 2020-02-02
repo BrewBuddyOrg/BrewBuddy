@@ -19,9 +19,8 @@ type
     cbAll: TCheckBox;
     procedure cbAllChange(Sender: TObject);
   private
-    { private declarations }
+
   public
-    { public declarations }
     Function Execute : boolean;
   end;
 

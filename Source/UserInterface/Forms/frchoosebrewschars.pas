@@ -28,7 +28,6 @@ type
     bbCancel: TBitBtn;
     procedure FormCreate(Sender: TObject);
   private
-    { private declarations }
     Function GetNrRecipe : string;
     Function GetName : string;
     Function GetBeerStyle : TBeerStyle;
@@ -36,7 +35,6 @@ type
     Function GetEquipment : TEquipment;
     Function GetBrewDate : TDateTime;
   public
-    { public declarations }
     Function Execute(brew : boolean) : boolean;
   published
     property NrRecipe : string read GetNrRecipe;

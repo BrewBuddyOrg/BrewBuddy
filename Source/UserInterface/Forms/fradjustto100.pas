@@ -18,9 +18,8 @@ type
     Label1: TLabel;
     procedure cbBasemaltsClickCheck(Sender: TObject);
   private
-    { private declarations }
+
   public
-    { public declarations }
     Function Execute(Rec : TRecipe) : boolean;
   end;
 

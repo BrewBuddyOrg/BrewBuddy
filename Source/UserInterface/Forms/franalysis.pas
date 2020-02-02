@@ -65,12 +65,10 @@ type
     procedure tbCopyToClipboardClick(Sender: TObject);
     procedure tbPrintClick(Sender: TObject);
   private
-    { private declarations }
     FX, FY : longint;
     Procedure FillChart;
     Function CalcRSquare : double;
   public
-    { public declarations }
     Function Execute : boolean;
   end;
 

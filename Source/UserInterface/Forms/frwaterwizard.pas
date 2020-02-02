@@ -81,7 +81,6 @@ type
     procedure sbSpargeChange(Sender: TObject);
     procedure sbSpargeMashChange(Sender: TObject);
   private
-    { private declarations }
     FRec : TRecipe;
     un, dun : TUnit;
     Mash : TMash;
@@ -90,7 +89,6 @@ type
     FMaxFerm : double;
     Procedure Update; reintroduce;
   public
-    { public declarations }
     Function Execute(R : TRecipe) : boolean;
   end;
 

@@ -86,7 +86,6 @@ type
     procedure FormDestroy(Sender: TObject);
     procedure cbFlexibleChange(Sender: TObject);
   private
-    { private declarations }
     FFermentable, FOriginal, FChosen : TFermentable;
     FTotal : double;
     FRec : TRecipe;
@@ -97,7 +96,6 @@ type
     procedure FillcbName;
     Function InRecipe(F : TFermentable) : boolean;
   public
-    { public declarations }
     Function Execute(F : TFermentable; perc : boolean; tot : double) : boolean;
   end; 
 

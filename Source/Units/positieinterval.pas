@@ -17,9 +17,7 @@ type
     FInsideColor, FOutsideColor, FIntermediateColor : TColor;
     FColorScale, FShowValues, FValuesInBar : boolean;
     FDecimals : integer;
-    { Private declarations }
   protected
-    { Protected declarations }
     Procedure SetMin(V : double);
     Procedure SetMax(V : double);
     Procedure SetLow(V : double);
@@ -37,11 +35,9 @@ type
     Procedure PaintLinux;
     Procedure PaintWindows;
   public
-    { Public declarations }
     Constructor Create(AOwner : TComponent); override;
     procedure Paint; override;
   published
-    { Published declarations }
     property Min : double read FMin write SetMin;
     property Max: double read FMax write SetMax;
     property Low : double read FLow write SetLow;

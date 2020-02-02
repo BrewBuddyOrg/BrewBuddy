@@ -102,13 +102,12 @@ type
     procedure fseBoilSizeChange(Sender: TObject);
     procedure fseEvapRateChange(Sender: TObject);
   private
-    { private declarations }
     FSelectedNode : TTreeNode;
     FNew : boolean;
     FUserClicked : boolean;
     Procedure Store;
   public
-    { public declarations }
+
   end; 
 
 var

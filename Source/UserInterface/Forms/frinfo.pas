@@ -34,9 +34,8 @@ type
     procedure lTwitterClick(Sender: TObject);
     procedure mBrewingChange(Sender: TObject);
   private
-    { private declarations }
+
   public
-    { public declarations }
     Function Execute : boolean;
   end; 
 

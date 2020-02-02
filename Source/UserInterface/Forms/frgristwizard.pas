@@ -95,7 +95,6 @@ type
     procedure sgSugarSelectEditor(Sender: TObject; aCol, aRow: Integer;
       var Editor: TWinControl);
   private
-    { private declarations }
     FRec : TRecipe;
     FUserClicked : boolean;
     FSelFerm : TFermentable;
@@ -120,7 +119,6 @@ type
     procedure sbScrollbarsChange(Sender: TObject);
     procedure cbScrollbarsChange(Sender: TObject);
   public
-    { public declarations }
     Function Execute(R : TRecipe) : boolean;
   end;
 

@@ -18,9 +18,8 @@ type
     leAnswer: TLabeledEdit;
     procedure FormCreate(Sender: TObject);
   private
-    { private declarations }
+
   public
-    { public declarations }
     Function GetAnswer(Q : string) : string;
   end; 
 
