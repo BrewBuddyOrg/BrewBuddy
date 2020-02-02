@@ -1048,7 +1048,7 @@ begin
   if Settings.ShowSplash.Value then
   begin
     frmsplash:= TFrmSplash.Create(self);
-    //frmsplash.Execute;
+    frmsplash.Execute;
   end;
   if Settings.PlaySounds.Value then
   begin
