@@ -5,7 +5,7 @@ unit BH_report;
 interface
 
 uses
-  Classes, SysUtils, Graphics, ExtCtrls, Printers, Types, TAGraph;
+  Classes, SysUtils, Graphics, ExtCtrls, Printers, LCLVersion, Types, TAGraph;
 
 type
   TBHRDocument = class;
@@ -916,7 +916,10 @@ var SRect, BRect : TRect;
     bmp : tbitmap;
     GSc : single;
     i, OLineWidth, OLegendMargin, OSymbolWidth : integer;
-    OMFH, OTFH, OTL, OLFH : integer;
+    OMFH, OTL, OLFH : integer;
+    {$IF LCL_FullVersion < 2010000}
+    OTFH : integer;
+    {$ENDIF}
 {const FH = 100;
       PenW = 10;}
 begin
@@ -935,7 +938,9 @@ begin
     BRect.Bottom:= SRect.Bottom - SRect.Top;
     BRect.Right:= SRect.Right - SRect.Left;
 
+    {$IF LCL_FullVersion < 2010000}
     OTFH:= FChart.AxisList[0].Title.Font.Size;
+    {$ENDIF}
     OMFH:= FChart.AxisList[0].Marks.LabelFont.Size;
     OTL:= FChart.AxisList[0].TickLength;
     OLFH:= FChart.Legend.Font.Size;
@@ -946,7 +951,9 @@ begin
     for i:= 0 to FChart.AxisList.Count - 1 do
     begin
       FChart.AxisList[i].Marks.LabelFont.Size:= round(GSc * 9);
+      {$IF LCL_FullVersion < 2010000}
       FChart.AxisList[i].Title.Font.Size:= round(GSC * 9);
+      {$ENDIF}
       FChart.AxisList[i].TickLength:= round(GSc * OTL);
     end;
     FChart.Legend.Font.Size:= round(GSc * 9);
@@ -962,7 +969,9 @@ begin
     for i:= 0 to FChart.AxisList.Count - 1 do
     begin
       FChart.AxisList[i].Marks.LabelFont.Size:= OMFH;
+      {$IF LCL_FullVersion < 2010000}
       FChart.AxisList[i].Title.Font.Size:= OTFH;
+      {$ENDIF}
       FChart.AxisList[i].TickLength:= OTL;
     end;
     FChart.Legend.Font.Size:= OLFH;
