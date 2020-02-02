@@ -1059,8 +1059,6 @@ begin
     Application.ProcessMessages;
   end;
 
-  Screen.Cursor:= crHourglass;
-
   epRight.AddPanel(mroSG);
   epRight.AddPanel(mroWaterSugar);
   epRight.AddPanel(mroHydrometerCorrection);
@@ -1434,8 +1432,6 @@ begin
   SetReadOnly(fseOG, (not cbPercentage.Checked));
   cbScaleVolume.Checked:= Settings.ScaleWithVolume.Value;
   FUserClicked:= TRUE;
-
-  Screen.Cursor:= crDefault;
 
   if Settings.CheckForNewVersion.Value then
   begin
@@ -2454,7 +2450,6 @@ begin
       if Question(self, savechanges2) then
       begin
         Screen.Cursor:= crHourglass;
-        Cursor:= crHourglass;
         Application.ProcessMessages;
 
         if FSelected <> NIL then
@@ -2468,14 +2463,12 @@ begin
         Brews.SaveXML;
         Recipes.SaveXML;
         Screen.Cursor:= crDefault;
-        Cursor:= crDefault;
       end
       else FChanged:= false;
     end
     else
     begin
       Screen.Cursor:= crHourglass;
-      Cursor:= crHourglass;
       Application.ProcessMessages;
 
       if FSelected <> NIL then
@@ -2489,7 +2482,6 @@ begin
       Brews.SaveXML;
       Recipes.SaveXML;
       Screen.Cursor:= crDefault;
-      Cursor:= crDefault;
     end;
 end;
 
@@ -2532,7 +2524,6 @@ end;
 procedure TfrmMain.tbSaveClick(Sender: TObject);
 begin
   Screen.Cursor:= crHourglass;
-  Cursor:= crHourglass;
   Application.ProcessMessages;
   if (FSelected <> NIL) then
   begin
@@ -2546,7 +2537,6 @@ begin
   Application.ProcessMessages;
   Recipes.SaveXML;
   Screen.Cursor:= crDefault;
-  Cursor:= crDefault;
 end;
 
 procedure TfrmMain.tbImportClick(Sender: TObject);
@@ -2631,12 +2621,10 @@ begin
   if FSelected <> NIL then
   begin
     Screen.Cursor:= crHourglass;
-    Cursor:= crHourglass;
     Application.ProcessMessages;
     if FTemporary.CopyToClipboardForumFormat then
       ShowNotification(self, copysucces1);
     Screen.Cursor:= crDefault;
-    Cursor:= crDefault;
   end;
 end;
 
@@ -2645,12 +2633,10 @@ begin
   if FSelected <> NIL then
   begin
     Screen.Cursor:= crHourglass;
-    Cursor:= crHourglass;
     Application.ProcessMessages;
     if FTemporary.CopyToClipboardHTML then
       ShowNotification(self, copysucces1);
     Screen.Cursor:= crDefault;
-    Cursor:= crDefault;
   end;
 end;
 
@@ -2662,7 +2648,6 @@ begin
     if frmChooseBrewsList.Execute > -1 then
     begin
       Screen.Cursor:= crHourglass;
-      Cursor:= crHourglass;
       Application.ProcessMessages;
 
       Doc:= TBHRDocument.Create;
@@ -2670,13 +2655,11 @@ begin
                          frmChooseBrewsList.StartNR, frmChooseBrewsList.EndNR) then
       begin
         Screen.Cursor:= crDefault;
-        Cursor:= crDefault;
         Doc.PrintPreview;
       end
       else Doc.Free;
       Doc:= NIL; //Doc is freed automatically after PrintPreview form closes;
       Screen.Cursor:= crDefault;
-      Cursor:= crDefault;
     end;
   finally
     frmChooseBrewsList.Free;
@@ -2688,7 +2671,6 @@ var Doc : TBHRDocument;
     RT : TRecType;
 begin
   Screen.Cursor:= crHourglass;
-  Cursor:= crHourglass;
   Application.ProcessMessages;
 
   if pcRecipes.ActivePage = tsBrews then
@@ -2700,13 +2682,11 @@ begin
   if CreateLogbook(Doc, FTemporary, RT) then
   begin
     Screen.Cursor:= crDefault;
-    Cursor:= crDefault;
     Doc.PrintPreview
   end
   else Doc.Free;
   Doc:= NIL; //Doc is freed automatically after PrintPreview form closes;
   Screen.Cursor:= crDefault;
-  Cursor:= crDefault;
 end;
 
 procedure TfrmMain.tbPrintClick(Sender: TObject);
@@ -2989,7 +2969,6 @@ procedure TfrmMain.miCheckPrintClick(Sender: TObject);
 var Doc : TBHRDocument;
 begin
   Screen.Cursor:= crHourglass;
-  Cursor:= crHourglass;
   Application.ProcessMessages;
 
   FTemporary.CheckList.CreateCheckList;
@@ -2997,7 +2976,6 @@ begin
   if CreateCheckList(Doc, FTemporary) then
   begin
     Screen.Cursor:= crDefault;
-    Cursor:= crDefault;
     Doc.PrintPreview;
   end
   else Doc.Free;
@@ -3018,14 +2996,12 @@ procedure TfrmMain.tbInventoryListClick(Sender: TObject);
 var Doc : TBHRDocument;
 begin
   Screen.Cursor:= crHourglass;
-  Cursor:= crHourglass;
   Application.ProcessMessages;
 
   Doc:= TBHRDocument.Create;
   if CreateStockList(Doc) then
   begin
     Screen.Cursor:= crDefault;
-    Cursor:= crDefault;
     Doc.PrintPreview;
   end
   else Doc.Free;
@@ -3578,7 +3554,6 @@ begin
     if (tvBrews.Selected <> NIL) and (tvBrews.Selected.Data <> NIL) then
       Rec:= TRecipe(tvBrews.Selected.Data);
     Screen.Cursor:= crHourglass;
-    Cursor:= crHourglass;
     Application.ProcessMessages;
     tvBrews.Visible:= false;
     tvBrews.Items.Clear;
@@ -3630,14 +3605,12 @@ begin
       end;
     end;
     Screen.Cursor:= crDefault;
-    Cursor:= crDefault;
   end
   else if page = tsRecipes then
   begin
     if (tvRecipes.Selected <> NIL) and (tvRecipes.Selected.Data <> NIL) then
       Rec:= TRecipe(tvRecipes.Selected.Data);
     Screen.Cursor:= crHourglass;
-    Cursor:= crHourglass;
     Application.ProcessMessages;
     tvRecipes.Visible:= false;
     tvRecipes.Items.Clear;
@@ -3674,7 +3647,6 @@ begin
         tvRecipes.Selected.MakeVisible;
     end;
     Screen.Cursor:= crDefault;
-    Cursor:= crDefault;
   end
   else if page = tsCloud then
   begin
@@ -3683,7 +3655,6 @@ begin
       if (tvCloud.Selected <> NIL) and (tvCloud.Selected.Data <> NIL) then
         CloudF:= BHCloud.Selected;
       Screen.Cursor:= crHourglass;
-      Cursor:= crHourglass;
       Application.ProcessMessages;
       tvCloud.Visible:= false;
       tvCloud.Items.Clear;
@@ -3713,7 +3684,6 @@ begin
           tvCloud.Selected.MakeVisible;
       end;
       Screen.Cursor:= crDefault;
-      Cursor:= crDefault;
     end
     else if not BHCloud.IsBusy then
       tsCloud.TabVisible:= BHCloud.ReadCloud;
@@ -3736,7 +3706,6 @@ begin
     if (tvBrews.Selected <> NIL) and (tvBrews.Selected.Data <> NIL) then
       RecO:= TRecipe(tvBrews.Selected.Data);
     Screen.Cursor:= crHourglass;
-    Cursor:= crHourglass;
     Application.ProcessMessages;
     tvBrews.Visible:= false;
     tvBrews.Items.Clear;
@@ -3808,13 +3777,11 @@ begin
       end;
     finally
       Screen.Cursor:= crDefault;
-      Cursor:= crDefault;
     end;
   end
   else if Page = tsRecipes then
   begin
     Screen.Cursor:= crHourglass;
-    Cursor:= crHourglass;
     Application.ProcessMessages;
     if (tvRecipes.Selected <> NIL) and (tvRecipes.Selected.Data <> NIL) then
       RecO:= TRecipe(tvRecipes.Selected.Data);
@@ -3875,13 +3842,11 @@ begin
       end;
     finally
       Screen.Cursor:= crDefault;
-      Cursor:= crDefault;
     end;
   end
   else if Page = tsCloud then
   begin
     Screen.Cursor:= crHourglass;
-    Cursor:= crHourglass;
     Application.ProcessMessages;
     if (tvCloud.Selected <> NIL) and (tvCloud.Selected.Data <> NIL) then
       RecO:= TRecipe(tvCloud.Selected.Data);
@@ -3946,7 +3911,6 @@ begin
         tsCloud.TabVisible:= BHCloud.ReadCloud;
     finally
       Screen.Cursor:= crDefault;
-      Cursor:= crDefault;
       tvCloud.Visible:= TRUE;
     end;
   end;
@@ -3968,7 +3932,6 @@ begin
   begin
     //fill the treeview with brews
     Screen.Cursor:= crHourglass;
-    Cursor:= crHourglass;
     Application.ProcessMessages;
     if (tvBrews.Selected <> NIL) and (tvBrews.Selected.Data <> NIL) then
       RecO:= TRecipe(tvBrews.Selected.Data);
@@ -4039,13 +4002,11 @@ begin
       end;
     finally
       Screen.Cursor:= crDefault;
-      Cursor:= crDefault;
     end;
   end
   else if Page = tsRecipes then
   begin
     Screen.Cursor:= crHourglass;
-    Cursor:= crHourglass;
     Application.ProcessMessages;
     if (tvRecipes.Selected <> NIL) and (tvRecipes.Selected.Data <> NIL) then
       RecO:= TRecipe(tvRecipes.Selected.Data);
@@ -4103,13 +4064,11 @@ begin
       end;
     finally
       Screen.Cursor:= crDefault;
-      Cursor:= crDefault;
     end;
   end
   else if Page = tsCloud then
   begin
     Screen.Cursor:= crHourglass;
-    Cursor:= crHourglass;
     Application.ProcessMessages;
     if (tvCloud.Selected <> NIL) and (tvCloud.Selected.Data <> NIL) then
       RecO:= TRecipe(tvCloud.Selected.Data);
@@ -4168,7 +4127,6 @@ begin
         tsCloud.TabVisible:= BHCloud.ReadCloud;
     finally
       Screen.Cursor:= crDefault;
-      Cursor:= crDefault;
       tvCloud.Visible:= TRUE;
     end;
   end;
@@ -4871,7 +4829,6 @@ begin
   if (FSelected <> NIL) and FUserClicked then
   begin
     Screen.Cursor:= crHourglass;
-    Cursor:= crHourglass;
     Application.ProcessMessages;
     FTemporary.Locked.Value:= cbLocked.Checked;
     Store;
@@ -4888,7 +4845,6 @@ begin
 
     Application.ProcessMessages;
     Screen.Cursor:= crDefault;
-    Cursor:= crDefault;
     FChanged:= false;
   end;
 end;
@@ -7483,14 +7439,12 @@ procedure TfrmMain.bbChecklistClick(Sender: TObject);
 var Doc : TBHRDocument;
 begin
   Screen.Cursor:= crHourglass;
-  Cursor:= crHourglass;
   Application.ProcessMessages;
 
   Doc:= TBHRDocument.Create;
   if CreateCheckList(Doc, FTemporary) then
   begin
     Screen.Cursor:= crDefault;
-    Cursor:= crDefault;
     Doc.PrintPreview
   end
   else Doc.Free;
