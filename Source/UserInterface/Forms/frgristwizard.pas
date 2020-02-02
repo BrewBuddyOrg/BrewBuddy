@@ -106,7 +106,7 @@ type
     FScrollBars : array of TScrollRec;
     piSG, piColor, piAlcohol : TPosInterval;
     Procedure FillGrids;
-    Procedure Update;
+    Procedure Update; reintroduce;
     Procedure ChangeOG;
     Function FindMaltScrollBar : TScrollBar;
     Function FindScrollBar(sg : TStringGrid; aCol, aRow : integer) : TScrollBar;

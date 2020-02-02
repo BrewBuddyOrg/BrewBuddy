@@ -249,7 +249,7 @@ type
     FPanelColors : TColor;
   public
     constructor Create;
-    destructor Destroy;
+    destructor Destroy; override;
     procedure Assign(St : TStyle);
     procedure SaveXML(Doc: TXMLDocument; iNode: TDomNode; bxml: boolean);
     procedure ReadXML(iNode: TDOMNode);
@@ -299,7 +299,7 @@ type
     FSortCloud : TBInteger;
   public
     constructor Create;
-    destructor Destroy;
+    destructor Destroy; override;
     procedure Save;
     procedure Read;
   published
@@ -352,6 +352,8 @@ type
     function GetValueByName(s: string): variant; virtual;
   public
     constructor Create(R: TRecipe); virtual;
+    {$warning Destructor should have "override", not "virtual" but it causes crash. Serious memory issues!}
+    //destructor Destroy; override;
     destructor Destroy; virtual;
     procedure SaveXML(Doc: TXMLDocument; iNode: TDOMNode; bxml: boolean); virtual;
     procedure ReadXML(iNode: TDOMNode); virtual;
@@ -2396,7 +2398,6 @@ constructor TBString.Create(aParent : TBase);
 begin
   Inherited Create(aParent);
   FValue := '';
-  FLabel := '';
 end;
 
 procedure TBString.SaveXML(Doc: TXMLDocument; iNode: TDomNode; bxml: boolean);
@@ -4522,7 +4523,6 @@ begin
   FCultureDate.Value := 0;
   FCultureDate.NodeLabel := 'CULTURE_DATE';
 
-
   FTimeAerated := TBFloat.Create(self);
   FTimeAerated.vUnit := uur;
   FTimeAerated.DisplayUnit := uur;
@@ -6489,7 +6489,6 @@ begin
   FEvapRate.Free;
   FBoilTime.Free;
   FCalcBoilVolume.Free;
-  FMashVolume.Free;
   FLauterDeadSpace.Free;
   FTopUpKettle.Free;
   FHopUtilization.Free;
@@ -6500,6 +6499,7 @@ begin
   FTunHeight.Free;
   FKettleHeight.Free;
   FLauterHeight.Free;
+  FMashVolume.Free;
   FEfficiency.Free;
   FEffFactBD.Free;
   FEffFactSG.Free;
@@ -9066,6 +9066,7 @@ end;
 destructor TCheckList.Destroy;
 begin
   Clear;
+  Inherited;
 end;
 
 procedure TCheckList.Assign(Source: TBase);

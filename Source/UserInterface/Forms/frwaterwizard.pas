@@ -88,7 +88,7 @@ type
     Eq : TEquipment;
     FUserClicked : boolean;
     FMaxFerm : double;
-    Procedure Update;
+    Procedure Update; reintroduce;
   public
     { public declarations }
     Function Execute(R : TRecipe) : boolean;

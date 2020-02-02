@@ -134,7 +134,7 @@ type
     FUserClicked, FChanged, FTraining : boolean;
     FISGX, FISGY : integer;
     Procedure FillTree;
-    Procedure Update;
+    Procedure Update; reintroduce;
     Function UpdateNetwork : boolean;
     Procedure AskToSave;
     Procedure UpdateChart;

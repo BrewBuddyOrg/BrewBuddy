@@ -16,7 +16,7 @@ type
     FShowRecipe : TBBoolean; //show the recipe in the cloud recipe tree
     FFileType : TFileType;
     Constructor Create;
-    Destructor Destroy;
+    Destructor Destroy; override;
     Procedure ReadXML(iNode: TDOMNode);
     Procedure SaveXML(Doc: TXMLDocument; iNode: TDOMNode);
   private
@@ -77,7 +77,7 @@ type
     Function GetFileRec(i : longint) : TBHCloudFile;
   public
     Constructor Create; virtual;
-    Destructor Destroy;
+    Destructor Destroy; override;
     Function ReadCloud : boolean; //retrieve file info of all files in the cloud
     Procedure SaveXML;
     Procedure ReadXML;

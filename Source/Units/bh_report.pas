@@ -11,8 +11,6 @@ type
   TBHRDocument = class;
 
   TBHRElement = class(TObject)
-    Constructor Create(D : TBHRDocument); virtual;
-    Destructor Destroy; override;
    private
      FDocument : TBHRDocument;
      FRect : TRect;
@@ -40,6 +38,8 @@ type
      Procedure DeployKeepWithNext; virtual;
      Procedure Move(PNr, Tp : word); virtual;
    public
+     Constructor Create(D : TBHRDocument); virtual;
+     Destructor Destroy; override;
      Procedure Draw(Cnvs : TCanvas; Pnr : integer; Scale : single); virtual;
      Procedure CalcRect; virtual;
      property Rect : TRect read FRect write SetRect;
@@ -58,13 +58,13 @@ type
   end;
 
   TBHRImage = class(TBHRElement)
-    Constructor Create(D : TBHRDocument); override;
-    Destructor Destroy; override;
    private
      FPicture : TPicture;
      FStretch : boolean;
    protected
    public
+     Constructor Create(D : TBHRDocument); override;
+     Destructor Destroy; override;
      Procedure Draw(Cnvs : TCanvas; Pnr : integer; Scale : single); override;
      Procedure CalcRect; override;
    published
@@ -73,13 +73,13 @@ type
   end;
 
  { TBHRBHGraph = class(TBHRElement)
-    Constructor Create(D : TBHRDocument); override;
-    Destructor Destroy; override;
    private
      FGraph : TBHGraph;
      FStretch : boolean;
    protected
    public
+     Constructor Create(D : TBHRDocument); override;
+     Destructor Destroy; override;
      Procedure Draw(Cnvs : TCanvas; Pnr : integer; Scale : single); override;
      Procedure CalcRect; override;
    published
@@ -88,13 +88,13 @@ type
   end; }
 
   TBHRChart = class(TBHRElement)
-    Constructor Create(D : TBHRDocument); override;
-    Destructor Destroy; override;
    private
      FChart : TChart;
      FStretch : boolean;
    protected
    public
+     Constructor Create(D : TBHRDocument); override;
+     Destructor Destroy; override;
      Procedure Draw(Cnvs : TCanvas; Pnr : integer; Scale : single); override;
      Procedure CalcRect; override;
    published
@@ -106,8 +106,6 @@ type
   TBHRCell = class;
 
   TBHRTable = class(TBHRElement)
-    Constructor Create(D : TBHRDocument); override;
-    Destructor Destroy; override;
    private
      FCells : array of array of TBHRCell;
      FAutoSizeCells : boolean;
@@ -123,6 +121,8 @@ type
    protected
      Procedure Move(PNr, Tp : word); override;
    public
+     Constructor Create(D : TBHRDocument); override;
+     Destructor Destroy; override;
      Function GetCell(aRow, aCol : integer) : TBHRCell;
      Function NumRows : integer;
      Function NumCols : integer;
@@ -147,8 +147,6 @@ type
   end;
 
   TBHRCell = class(TBHRElement)
-    Constructor Create(D : TBHRDocument; R, C : integer);
-    Destructor Destroy; override;
    private
      FText : TBHRText;
      FTable : TBHRTable;
@@ -179,6 +177,8 @@ type
    protected
      Procedure Move(PNr, Tp : word); override;
    public
+     Constructor Create(D : TBHRDocument; R, C : integer);
+     Destructor Destroy; override;
      Procedure Draw(Cnvs : TCanvas; Pnr : integer; Scale : single); override;
      Procedure CalcRect; override;
    published
@@ -205,8 +205,6 @@ type
   end;
 
   TBHRText = class(TBHRElement)
-    Constructor Create(D : TBHRDocument); override;
-    Destructor Destroy; override;
    private
     FCell : TBHRCell;
     FStrings : TStringList;
@@ -227,6 +225,8 @@ type
    protected
     Procedure Move(PNr, Tp : word); override;
    public
+    Constructor Create(D : TBHRDocument); override;
+    Destructor Destroy; override;
     Procedure Draw(Cnvs : TCanvas; Pnr : integer; Scale : single); override;
     Procedure CalcRect; override;
     Procedure AddString(s : string);
@@ -249,8 +249,6 @@ type
   THeaderType = (thHeader, thFooter);
 
   TBHRHeader = class(TBHRElement)
-    Constructor Create(D : TBHRDocument; HT : THeaderType);
-    Destructor Destroy; override;
    private
      FPicture : TPicture;
      FPictRect, FTxtRect : TRect;
@@ -271,6 +269,8 @@ type
      Procedure SetText(S : string);
    protected
    public
+     Constructor Create(D : TBHRDocument; HT : THeaderType);
+     Destructor Destroy; override;
      Procedure Draw(Cnvs : TCanvas; Pnr : integer; Scale : single); override;
      Procedure CalcRect; override;
      property PictRect : TRect read GetPictRect write SetPictRect;
@@ -287,8 +287,6 @@ type
   end;
 
   TBHRDocument = class(TObject)
-   Constructor Create;
-   Destructor Destroy; override;
    private
      FHeader : TBHRHeader;
      FFooter : TBHRHeader;
@@ -307,6 +305,8 @@ type
      Function GetElement(i : integer) : TBHRElement;
    protected
    public
+     Constructor Create;
+     Destructor Destroy; override;
      Procedure AddPage;
      Procedure RemovePage;
      Function AddText(Rect : TRect; s : string) : TBHRText;

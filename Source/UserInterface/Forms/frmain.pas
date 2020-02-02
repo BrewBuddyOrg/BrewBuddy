@@ -965,7 +965,7 @@ type
     Procedure CheckTotal100;
     Procedure Store;
     Procedure UpdateIngredientsGrid;
-    Procedure Update;
+    Procedure Update; reintroduce;
     Procedure UpdatePredictions;
     Procedure SetControls;
     Procedure SortIngredients(I1, I2 : integer);

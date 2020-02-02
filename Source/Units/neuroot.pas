@@ -42,7 +42,7 @@ type
      Function GetActivationFunction : TActivationFunction;
    public
      Constructor Create;
-     Destructor Destroy;
+     Destructor Destroy; override;
      Procedure AddInputIndex(s : string);
      Procedure AddOutputIndex(s : string);
      Procedure ClearInputIndexs;

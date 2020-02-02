@@ -29,7 +29,7 @@ type
      Procedure SortByIndex2(I1, I2 : integer; Decending : boolean);
      Procedure SortByName(s : string);
      Procedure UnSelect;
-     Function AddItem : TBase; virtual;
+     Function AddItem : TBase;
      Procedure InsertItem(i : integer); virtual;
      Procedure RemoveItem(i : integer); virtual;
      Procedure RemoveByReference(Item : TBase); virtual;
@@ -58,7 +58,7 @@ type
      Procedure ReadXML; override;
      Function ImportXML : boolean; override;
      Function GetSelectedItem : TFermentable;
-     Function AddItem : TFermentable;
+     Function AddItem : TFermentable; reintroduce;
      Procedure InsertItem(i : integer); override;
      Function FindByNameAndSupplier(N, S : string) : TFermentable;
   published
@@ -73,7 +73,7 @@ type
      Procedure ReadXML; override;
      Function ImportXML : boolean; override;
      Function GetSelectedItem : THop;
-     Function AddItem : THop;
+     Function AddItem : THop; reintroduce;
      Procedure InsertItem(i : integer); override;
      Function FindByNameAndOriginAndAlfa(N, O : string; A : double) : THop;
   published
@@ -88,7 +88,7 @@ type
      Procedure ReadXML; override;
      Function ImportXML : boolean; override;
      Function GetSelectedItem : TMisc;
-     Function AddItem : TMisc;
+     Function AddItem : TMisc; reintroduce;
      Procedure InsertItem(i : integer); override;
   published
     property SelectedItem : TMisc read GetSelectedItem;
@@ -102,7 +102,7 @@ type
      Procedure ReadXML; override;
      Function ImportXML : boolean; override;
      Function GetSelectedItem : TYeast;
-     Function AddItem : TYeast;
+     Function AddItem : TYeast; reintroduce;
      Procedure InsertItem(i : integer); override;
      Function FindByNameAndLaboratory(N, L : string) : TYeast;
   published
@@ -117,7 +117,7 @@ type
      Procedure ReadXML; override;
      Function ImportXML : boolean; override;
      Function GetSelectedItem : TWater;
-     Function AddItem : TWater;
+     Function AddItem : TWater; reintroduce;
      Procedure InsertItem(i : integer); override;
      Function GetDefaultWater : TWater;
      Function GetDemiWater : TWater;
@@ -133,7 +133,7 @@ type
      Procedure ReadXML; override;
 //     Function ImportXML : boolean; override;
      Function GetSelectedItem : TEquipment;
-     Function AddItem : TEquipment;
+     Function AddItem : TEquipment; reintroduce;
      Procedure InsertItem(i : integer); override;
      Procedure CalcEfficiencyRegressionFactors;
      Procedure CalcAttenuationRegressionFactors;
@@ -149,7 +149,7 @@ type
      Procedure ReadXML; override;
      Function ImportXML : boolean; override;
      Function GetSelectedItem : TBeerStyle;
-     Function AddItem : TBeerStyle;
+     Function AddItem : TBeerStyle; reintroduce;
      Procedure InsertItem(i : integer); override;
   published
     property SelectedItem : TBeerStyle read GetSelectedItem;
@@ -163,7 +163,7 @@ type
      Procedure ReadXML; override;
      Function ImportXML : boolean; override;
      Function GetSelectedItem : TMash;
-     Function AddItem : TMash;
+     Function AddItem : TMash; reintroduce;
      Procedure InsertItem(i : integer); override;
   published
     property SelectedItem : TMash read GetSelectedItem;
@@ -188,7 +188,7 @@ type
      FCommonMinMaxArray : TMinMaxArray;
      Procedure QuickSortRecipes(var Arr : array of TBase);
      Function ImportXMLs(FN : TStrings; DN : string; Equip : TEquipment) : boolean;
-     Function ImportXML(FN : string; Equip : TEquipment) : boolean;
+     Function ImportXML(FN : string; Equip : TEquipment) : boolean; reintroduce;
      Function ImportRECs(FN : TStrings; DN : string; Equip : TEquipment) : boolean;
      Function ImportREC(FN : string; Equip : TEquipment) : boolean;
      Function GetLastNrRecipe : string;
@@ -205,7 +205,7 @@ type
                           FT : TFileType) : boolean;
      Procedure Sort;
      Function GetSelectedItem : TRecipe;
-     Function AddItem : TRecipe;
+     Function AddItem : TRecipe; reintroduce;
      Procedure InsertItem(i : integer); override;
      Function FindByNameAndNr(Nm, Nr : string) : TRecipe;
      Function FindByAutoNr(nr : integer) : TRecipe;

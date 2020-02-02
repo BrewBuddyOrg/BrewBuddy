@@ -689,7 +689,8 @@ end;
 Destructor TAmoebe.Destroy;
 var i : LongInt;
 begin
-  for i:= 0 to FSeries.Count-1 do TAmoebeSerie(FSeries.Items[i]).Free;
+  for i:= 0 to FSeries.Count-1 do
+    TAmoebeSerie(FSeries.Items[i]).Free;
   FSeries.Clear;
   FSeries.Free;
   FSeries:= NIL;

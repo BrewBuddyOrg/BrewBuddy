@@ -122,7 +122,7 @@ type
     Function IsFlavourHop(H : THop) : boolean;
     Function IsAromaHop(H : THop) : boolean;
     Procedure FillGrids;
-    Procedure Update;
+    Procedure Update; reintroduce;
     Procedure ChangeIBU;
     Function FindHopScrollBar : TScrollBar;
     Function FindScrollBar(sg : TStringGrid; aCol, aRow : integer) : TScrollBar;
