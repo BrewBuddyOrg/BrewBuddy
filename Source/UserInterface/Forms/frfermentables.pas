@@ -205,7 +205,7 @@ Procedure TFrmFermentables.FillTree;
 var i : integer;
     supp, fname : string;
     F : TFermentable;
-    Node, ChildNode, ChildNode2 : TTreeNode;
+    Node, ChildNode, {%H-}ChildNode2 : TTreeNode;
 begin
   tvSelect.Items.Clear;
   Node:= tvSelect.Items.Add(nil,'Fabrikant');
@@ -474,7 +474,7 @@ end;
 
 procedure TFrmFermentables.bbDeleteClick(Sender: TObject);
 var Ferm : TFermentable;
-    Node, ChildNode, Node2 : TTreeNode;
+    Node, ChildNode{, Node2} : TTreeNode;
 begin
   FUserClicked:= false;
   Node:= tvSelect.Selected;
@@ -567,8 +567,7 @@ begin
 end;
 
 procedure TFrmFermentables.eSearchChange(Sender: TObject);
-var i : integer;
-    N : TTreeNode;
+var N : TTreeNode;
     Ferm : TFermentable;
     s, s2 : string;
     Vis : boolean;

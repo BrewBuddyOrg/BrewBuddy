@@ -221,9 +221,6 @@ begin
 end;
 
 Function TFrmFermentables2.Execute(F : TFermentable; perc : boolean; tot : double) : boolean;
-var i : integer;
-    s : string;
-    Fr : TFermentable;
 begin
   FRec:= F.Recipe;
   FFermentable:= F;

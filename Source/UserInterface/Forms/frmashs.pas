@@ -108,7 +108,7 @@ Procedure TFrmMashs.FillTree;
 var i : integer;
     mname : string;
     Mash : TMash;
-    Node, ChildNode: TTreeNode;
+    Node, {%H-}ChildNode: TTreeNode;
 begin
   tvSelect.Items.Clear;
   Node:= tvSelect.Items.Add(nil,'');

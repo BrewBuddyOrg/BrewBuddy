@@ -195,9 +195,6 @@ begin
 end;
 
 Function TFrmYeasts2.Execute(Y : TYeast) : boolean;
-var i : integer;
-    s : string;
-    Ye : TYeast;
 begin
   FYeast:= Y;
   FOriginal.Assign(Y);

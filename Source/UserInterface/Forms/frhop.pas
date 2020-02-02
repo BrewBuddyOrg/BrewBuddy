@@ -187,7 +187,7 @@ Procedure TFrmHop.FillTree;
 var i : integer;
     H : THop;
     s : string;
-    Node, ChildNode, ChildNode2 : TTreeNode;
+    Node, ChildNode, {%H-}ChildNode2 : TTreeNode;
 begin
   tvSelect.Items.Clear;
   Node:= tvSelect.Items.Add(nil,'Herkomst');
@@ -492,8 +492,7 @@ begin
 end;
 
 procedure TFrmHop.eSearchChange(Sender: TObject);
-var i : integer;
-    N : TTreeNode;
+var N : TTreeNode;
     H : THop;
     s, s2 : string;
     Vis : boolean;

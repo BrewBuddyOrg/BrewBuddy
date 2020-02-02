@@ -131,8 +131,8 @@ begin
 end;
 
 Procedure TFrmHistogram.FillChart;
-var i, j, XC, tot : longint;
-    x, y, xmin, xmax : double;
+var i, j, tot : longint;
+    x, {y,} xmin, xmax : double;
     R : TRecipe;
     s : string;
     nbars : integer;
@@ -153,7 +153,7 @@ begin
         begin
           if i = 0 then DataSeries.Title:= R.GetNumberNameByIndex(FX+1);
           x := R.GetNumberByIndex(FX+1);
-          if ((x > -99) and (y > -99)) then
+          if (x > -99) {and (y > -99)} then
           begin
             xmin:= MinD(x, xmin);
             xmax:= MaxD(x, xmax);

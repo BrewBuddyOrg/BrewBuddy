@@ -427,7 +427,6 @@ var i, numbit, numflav, numaro : integer;
     ibu, gpl, n, ni : double;
     sb : TScrollBar;
     cb : TCheckBox;
-    variableset : boolean;
 begin
   if FRec <> NIL then
   begin
@@ -642,8 +641,6 @@ var i, j, nbit, nflav, naro : integer;
     ibubitter, ibuflavour, ibuaroma : double;
     allflavourlocked, allaromalocked : boolean;
     sb : TScrollBar;
-    cb : TCheckBox;
-    Rect : TRect;
     St : TBeerStyle;
 begin
   FUserClicked:= false;
@@ -1074,20 +1071,16 @@ end;
 
 procedure TFrmHopWizard.sbScrollbarsChange(Sender: TObject);
 var sb : TScrollBar;
-    i, spos, n : integer;
-    vol, conc, amount, tot, delta : double;
+    i, n : integer;
+    vol, conc, amount, delta : double;
     H : THop;
-    ibuold, ibunew, ibufa, ibu : double;
+    ibuold, ibunew, ibu : double;
 begin
   if (FRec <> NIL) and (FSelHop <> NIL) and FUserClicked then
   begin
     FUserClicked:= false;
-
     sb:= TScrollBar(sender);
-
-    spos:= sb.Position;
     FSelHop:= FindHop(sb);
-
     vol:= FRec.BatchSize.DisplayValue;
     conc:= sb.Position / 10;
     amount:= conc * vol;
@@ -1831,9 +1824,6 @@ end;
 
 procedure TFrmHopWizard.bbAddHopClick(Sender: TObject);
 var H : THop;
-    g : TStringGrid;
-    sb : TScrollBar;
-    i, n : integer;
     IBUold : double;
 begin
   try

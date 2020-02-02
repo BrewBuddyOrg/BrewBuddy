@@ -89,7 +89,7 @@ end;
 
 Procedure TFrmCheckList.PlaceWindow;
 var ScreenBounds: TRect;
-    tp, l, h : integer;
+    {tp,} l, h : integer;
 const
     {$ifdef windows}
     PanelH = 80;
@@ -103,7 +103,7 @@ begin
   if FOptions = 0 then
   begin
     ScreenBounds := Screen.MonitorFromWindow(WindowHandle).BoundsRect;
-    tp:= ScreenBounds.Top + round(0.5 * (Screenbounds.Bottom - Screenbounds.Top) - 0.5 * Height);
+    //tp:= ScreenBounds.Top + round(0.5 * (Screenbounds.Bottom - Screenbounds.Top) - 0.5 * Height);
     FrmMain.SetBounds(0, FrmMain.Top, FrmMain.Width, FrmMain.Height);
     l:= FrmMain.Left + FrmMain.Width + FMargin;
     h:= ScreenBounds.Bottom - ScreenBounds.Top - PanelH;
@@ -130,9 +130,9 @@ var i, j : integer;
     CLI : TCheckListItem;
     s : string;
 begin
+  Result:= True;
   Width:= 422;
   PlaceWindow;
-
   ClearAll;
   if (R <> NIL) and (R.CheckList <> NIL) and (R.CheckList.NumItems > 0) then
   begin

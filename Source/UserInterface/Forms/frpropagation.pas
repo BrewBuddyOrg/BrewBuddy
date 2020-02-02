@@ -179,7 +179,7 @@ type
 const numtrials = 12;
 var i, n, n2 : integer;
     SA1 : array[0..numtrials-1] of TStepArray;
-    StepVol, TotVol, AmCells : double;
+    TotVol, AmCells : double;
     numsteps : array[0..numtrials-1] of integer;
 
   function TrySteps(StartVol, stepsize : double; SA : PStepArray) : integer;

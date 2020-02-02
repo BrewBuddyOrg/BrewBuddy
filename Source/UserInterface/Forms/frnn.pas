@@ -249,14 +249,14 @@ end;
 
 procedure TFrmNN.sbInputAddClick(Sender: TObject);
 var s : string;
-    i : integer;
+    //i : integer;
     R : TRecipe;
 begin
   R:= TRecipe(Brews.Item[0]);
   if (lbParameters.ItemIndex > -1) and (R <> NIL) and (FSelNN <> NIL) then
   begin
     s:= lbParameters.Items[lbParameters.ItemIndex];
-    i:= R.GetNumberIndexByName(s);
+    //i:= R.GetNumberIndexByName(s);
     lbParameters.Items.Delete(lbParameters.ItemIndex);
     lbInput.Items.Add(s);
 //    FSelNN.AddInputIndex(i);
@@ -271,7 +271,7 @@ end;
 
 procedure TFrmNN.sbInputRemoveClick(Sender: TObject);
 var s : string;
-    i : integer;
+    //i : integer;
     R : TRecipe;
 begin
   R:= TRecipe(Brews.Item[0]);
@@ -282,7 +282,7 @@ begin
     else
     begin
       s:= lbInput.Items[lbInput.ItemIndex];
-      i:= R.GetNumberIndexByName(s);
+      //i:= R.GetNumberIndexByName(s);
       lbInput.Items.Delete(lbInput.ItemIndex);
       lbParameters.Items.Add(s);
       UpdateNetwork;
@@ -292,7 +292,7 @@ end;
 
 procedure TFrmNN.sbOutputAddClick(Sender: TObject);
 var s : string;
-    i : integer;
+    //i : integer;
     R : TRecipe;
 begin
   R:= TRecipe(Brews.Item[0]);
@@ -303,7 +303,7 @@ begin
     else
     begin
       s:= lbParameters.Items[lbParameters.ItemIndex];
-      i:= R.GetNumberIndexByName(s);
+      //i:= R.GetNumberIndexByName(s);
       lbParameters.Items.Delete(lbParameters.ItemIndex);
       lbOutput.Items.Add(s);
   //    FSelNN.AddOutputIndex(i);
@@ -319,14 +319,14 @@ end;
 
 procedure TFrmNN.sbOutputRemoveClick(Sender: TObject);
 var s : string;
-    i : integer;
+    //i : integer;
     R : TRecipe;
 begin
   R:= TRecipe(Brews.Item[0]);
   if (lbOutput.ItemIndex > -1) and (R <> NIL) and (FSelNN <> NIL) then
   begin
     s:= lbOutput.Items[lbOutput.ItemIndex];
-    i:= R.GetNumberIndexByName(s);
+    //i:= R.GetNumberIndexByName(s);
     lbOutput.Items.Delete(lbOutput.ItemIndex);
     lbParameters.Items.Add(s);
     UpdateNetwork;
@@ -525,7 +525,7 @@ end;
 
 Function TFrmNN.UpdateNetwork : boolean;
 var s : string;
-    i, n : integer;
+    i : integer;
     numvalid : longint;
     R : TRecipe;
 begin
@@ -826,8 +826,7 @@ begin
 end;
 
 procedure TFrmNN.bbRemoveNNClick(Sender: TObject);
-var i : integer;
-    pn, tn, ns : TTreeNode;
+var pn, tn, ns : TTreeNode;
     FS : TBHNN;
 begin
   if FSelNN <> NIL then

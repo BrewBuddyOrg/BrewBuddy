@@ -217,9 +217,6 @@ end;
 
 Function TFrmHop2.Execute(H : THop) : boolean;
 var R : TRecipe;
-    s : string;
-    Ho : THop;
-    i : integer;
     hu : THopUse;
 begin
   Result:= false;

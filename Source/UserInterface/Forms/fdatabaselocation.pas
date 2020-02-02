@@ -39,7 +39,7 @@ implementation
 uses Data, Containers, frmain, Hulpfuncties, subs, neuroot;
 
 procedure TFrmDatabaseLocation.deSettingsChange(Sender: TObject);
-var StylesN, FermN, HopN, MiscN, YeastN, WaterN : string;
+//var StylesN, FermN, HopN, MiscN, YeastN, WaterN : string;
 begin
 {  //Check if there are files in the chosen directory
   FNewDir:= deSettings.Directory;

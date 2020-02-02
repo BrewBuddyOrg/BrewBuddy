@@ -427,7 +427,7 @@ Procedure TContainer.SaveXML;
 begin
   FDoc := TXMLDocument.Create;
 //  FDoc.Encoding:= 'ISO-8859-1';
-  FRootNode := FDoc.CreateElement(FLabel);
+  FRootNode := FDoc.CreateElement(FLabel{%H-});
   FDoc.Appendchild(FRootNode);
 end;
 
@@ -441,7 +441,7 @@ begin
     if FileExists(FN) then
     begin
       ReadXMLFile(FDoc, FN);
-      FRootNode:= FDoc.FindNode(FLabel);
+      FRootNode:= FDoc.FindNode(FLabel{%H-});
     end;
   except
     FDoc.Free;
@@ -468,7 +468,7 @@ begin
       FImportFileName:= dlg.FileName;
       dlg.Free;
       ReadXMLFile(FDoc, FImportFileName);
-      FRootNode:= FDoc.FindNode(FLabel);
+      FRootNode:= FDoc.FindNode(FLabel{%H-});
       Result:= TRUE;
     end;
   except
@@ -1733,7 +1733,7 @@ Function TRecipes.ImportXMLs(FN : TStrings; DN : string; Equip : TEquipment) : b
 var SL : TStringList;
     i : integer;
     mask : string;
-    ps : TProgressBar;
+    //ps : TProgressBar;
 begin
   Result:= false;
   if DN <> '' then
@@ -1789,7 +1789,7 @@ end;
 
 Function TRecipes.ImportXML(FN : string; Equip : TEquipment) : boolean;
 var R : TRecipe;
-    s : string;
+    //s : string;
 begin
   Result:= false;
   FDoc := TXMLDocument.Create;
@@ -1798,8 +1798,8 @@ begin
     if FileExists(FN) then
     begin
       ReadXMLFile(FDoc, FN);
-      s:= ExtractFileNameOnly(FN);
-      FRootNode:= FDoc.FindNode(FLabel);
+      //s:= ExtractFileNameOnly(FN);
+      FRootNode:= FDoc.FindNode(FLabel{%H-});
       if FRootNode <> NIL then
       begin
         FChild:= FRootNode.FirstChild;
@@ -1837,7 +1837,7 @@ Function TRecipes.ImportRECs(FN : TStrings; DN : string; Equip : TEquipment) : b
 var SL : TStringList;
     i : integer;
     mask : string;
-    ps : TProgressBar;
+    //ps : TProgressBar;
 begin
   Result:= false;
   if DN <> '' then
@@ -1883,7 +1883,7 @@ end;
 Function TRecipes.ImportREC(FN : string; Equip : TEquipment) : boolean;
 var PI : TPromash;
     R : TRecipe;
-    s : string;
+    //s : string;
 begin
   Result:= false;
   PI := TPromash.Create(FrmMain);
@@ -1897,7 +1897,7 @@ begin
        if R <> NIL then
        begin
          PI.Convert(R);
-         s:= R.Style.Name.Value;
+         //s:= R.Style.Name.Value;
          R.AutoNr.Value:= MaxAutoNr + 1;
 
          CheckBeerStyle(R);
@@ -2954,7 +2954,6 @@ Procedure Backup;
 var sourcedata, destdata : string;
     year, month, day : word;
     i : integer;
-    SearchResult : TSearchRec;
     SL : TStringList;
 begin
   sourcedata:= Settings.DataLocation.Value;
@@ -2995,7 +2994,6 @@ Procedure Restore(sourcedata : string);
       result:= CopyFile(sd + fn, dd + fn);
   end;
 var destdata : string;
-    year, month, day : word;
     i : integer;
     SL : TStringList;
 begin
@@ -3192,10 +3190,10 @@ Procedure ChangeDatabaseLocation(source, destination : string; copy, deleteold :
     if FileExists(sd + fn) then
       result:= CopyFile(sd + fn, dd + fn);
   end;
-var SearchResult : TSearchRec;
-    i : integer;
-    SL : TStringList;
-    StylesN, FermN, HopN, MiscN, YeastN, WaterN, sourcedata : string;
+var
+  i : integer;
+  SL : TStringList;
+  StylesN, FermN, HopN, MiscN, YeastN, WaterN : string;
 begin
   {$ifdef UNIX}
     destination:= destination + '/';
@@ -3233,13 +3231,13 @@ begin
     else //copy previous database to new location, but clear brews
     begin
       {$ifdef UNIX}
-        sourcedata:= '/usr/share/brewbuddy/';
+        //sourcedata:= '/usr/share/brewbuddy/';
       {$endif}
       {$ifdef darwin}
-        sourcedata:= '/usr/share/brewbuddy/';
+        //sourcedata:= '/usr/share/brewbuddy/';
       {$endif}
       {$ifdef Windows}
-        sourcedata:= ExtractFilePath(Application.ExeName) + 'brewbuddy\';
+        //sourcedata:= ExtractFilePath(Application.ExeName) + 'brewbuddy\';
         if OnUSB then BHFolder:= DriveLetter + '\brewbuddy\brewbuddy\'
         else BHFolder:= destination;
       {$endif}

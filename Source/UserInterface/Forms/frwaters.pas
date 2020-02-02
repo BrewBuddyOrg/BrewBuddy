@@ -155,7 +155,7 @@ Procedure TFrmWaters.FillTree;
 var i : integer;
     mname : string;
     W : TWater;
-    Node, ChildNode: TTreeNode;
+    Node, {%H-}ChildNode: TTreeNode;
 begin
   tvSelect.Items.Clear;
   Node:= tvSelect.Items.Add(nil,'');
@@ -407,8 +407,6 @@ begin
 end;
 
 procedure TFrmWaters.cbDefaultChange(Sender: TObject);
-var i : integer;
-    W : TWater;
 begin
 
 end;

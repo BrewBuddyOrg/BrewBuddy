@@ -80,16 +80,15 @@ var
 implementation
 
 {$R *.lfm}
-uses Data, Containers, LCLType, Math, TAChartAxis, TAChartUtils, TACustomSource,
-     TADrawerSVG, TADrawUtils, TADrawerCanvas, OSPrinters, TAPrint, Printers,
-     hulpfuncties;
+uses Data, Containers, LCLType, Math, TAChartAxis, TAChartUtils,
+     TADrawerSVG, TADrawUtils, TADrawerCanvas, OSPrinters, TAPrint, Printers;
 
 { TFrmAnalysis }
 
 procedure TFrmAnalysis.FormCreate(Sender: TObject);
 var i, j : LongInt;
     R : TRecipe;
-    E : TEquipment;
+    //E : TEquipment;
     s : string;
     found : boolean;
 begin
@@ -331,7 +330,7 @@ begin
 end;
 
 Procedure TFrmAnalysis.FillChart;
-var i, XC, YC : longint;
+var i : longint;
     x, y : double;
     R : TRecipe;
     s : string;

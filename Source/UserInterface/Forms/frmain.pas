@@ -1033,7 +1033,7 @@ var rt : TRecipeType;
     st : TStarterType;
     ps : TPrimingSugar;
     R : TRecipe;
-    b, bt : boolean;
+    b{, bt} : boolean;
 begin
   {$ifdef Windows}
   clBack:= RGBToColor(242, 242, 242);
@@ -1050,7 +1050,7 @@ begin
   if Settings.ShowSplash.Value then
   begin
     frmsplash:= TFrmSplash.Create(self);
-    frmsplash.Execute;
+    //frmsplash.Execute;
   end;
   if Settings.PlaySounds.Value then
   begin
@@ -1422,7 +1422,7 @@ begin
   lMessage.Visible:= false;
   pbProgress.Visible:= false;
   b:= Settings.UseCloud.Value;
-  bt:= (BHCloud.PassWord <> '');
+  //bt:= (BHCloud.PassWord <> '');
   if Settings.UseCloud.Value then BHCloud.ReadCloud;
   tsCloud.TabVisible:= Settings.UseCloud.Value and (BHCloud.PassWord <> '');
   bbShowTools.Visible:= false;
@@ -1757,10 +1757,10 @@ begin
 end;
 
 Procedure TfrmMain.SetControls;
-var u : TUnit;
-    v : double;
-    bl : boolean;
-    s : string;
+var
+  v : double;
+  bl : boolean;
+  s : string;
 begin
   if FTemporary <> NIL then
   begin
@@ -3041,9 +3041,7 @@ begin
 end;
 
 procedure TfrmMain.tbRestoreClick(Sender: TObject);
-var DBlocation : string;
 begin
-  DBlocation:= BHFolder;
   sddBackup.InitialDir:= BHFolder;
   sddBackup.Title:= choosebackupfolder1;
   sddBackup.Filter:= 'backup-*';
@@ -3336,7 +3334,7 @@ end;
 
 procedure TfrmMain.miCloudToBrewsClick(Sender: TObject);
 var R : TRecipe;
-    s : string;
+    //s : string;
     ibu : double;
 begin
   if FSelected <> NIL then
@@ -3377,7 +3375,7 @@ end;
 
 procedure TfrmMain.miCloudToRecipesClick(Sender: TObject);
 var R : TRecipe;
-    s : string;
+    //s : string;
 begin
   if FSelected <> NIL then
   begin
@@ -3695,11 +3693,11 @@ var i, n : integer;
     st, le : string;
     RootNode, ClassNode, StyleNode, RecipeNode : TTreeNode;
     Rec, RecO : TRecipe;
-    CloudF : longint;
+    //CloudF : longint;
     CloudFile : TBHCloudFile;
 begin
   Rec:= NIL; RecO:= NIL;
-  CloudF:= -1;
+  //CloudF:= -1;
   if Page = tsBrews then
   begin
     //fill the treeview with brews
@@ -3860,7 +3858,7 @@ begin
         RootNode.StateIndex:= 11;
         for i:= 0 to BHCloud.NumFiles - 1 do
         begin
-          CloudF:= BHCloud.Selected;
+          //CloudF:= BHCloud.Selected;
           CloudFile:= BHCloud.FileRec[i];
           if CloudFile.ShowRecipe.Value then
           begin
@@ -3922,11 +3920,9 @@ var y, m, d, i, n : word;
     st : string;
     RootNode, YearNode, MonthNode, RecipeNode : TTreeNode;
     Rec, RecO : TRecipe;
-    CloudF : longint;
     CloudFile : TBHCloudFile;
 begin
   Rec:= NIL; RecO:= NIL;
-  CloudF:= -1;
   CloudFile:= NIL;
   if Page = tsBrews then
   begin
@@ -4199,8 +4195,8 @@ begin
 end;
 
 procedure TfrmMain.FillAnalyseCharts;
-var lett, snm : string;
-    num : integer;
+var //lett, snm : string;
+    //num : integer;
     mma : TMinMax;
     ylist: array [1..4] of Double;
     i : integer;
@@ -4226,20 +4222,20 @@ begin
     begin
       OK:= TRUE;
       RC:= Brews;
-      snm:= tvBrews.Selected.Text;
-      lett:= tvBrews.Selected.Parent.Text;
+      //snm:= tvBrews.Selected.Text;
+      //lett:= tvBrews.Selected.Parent.Text;
     end
     else if (pcRecipes.ActivePage = tsRecipes) and (cbRecipesSort.ItemIndex = 1) and
        (tvRecipes.Selected <> NIL) and (tvRecipes.Selected.Level = 2) then //sorted by beerstyle
     begin
       OK:= TRUE;
       RC:= Recipes;
-      snm:= tvRecipes.Selected.Text;
-      lett:= tvRecipes.Selected.Parent.Text;
+      //snm:= tvRecipes.Selected.Text;
+      //lett:= tvRecipes.Selected.Parent.Text;
     end;
     if OK then
     begin
-      num:= RC.AnalyseFermentables(lett, snm);
+      //num:= RC.AnalyseFermentables(lett, snm);
       dbawFermentables.Source.Ycount:= 5;
       //create graph and show it
       for i:= 0 to High(RC.FermentablesMinMaxArray) do
@@ -4255,7 +4251,7 @@ begin
       end;
 
       lcsHopBW.YCount:= 5;
-      num:= RC.AnalyseHops(lett, snm);
+      //num:= RC.AnalyseHops(lett, snm);
       if rgBitterhop.Checked then
       begin
         for i:= 0 to High(RC.BitterhopMinMaxArray) do
@@ -4309,7 +4305,7 @@ begin
       end;
       if maxr > 0 then latHopright.Scale:= maxl / maxr;
 
-      num:= RC.AnalyseYeasts(lett, snm);
+      //num:= RC.AnalyseYeasts(lett, snm);
       //create graph and show it
       for i:= 0 to High(RC.YeastMinMaxArray) do
       begin
@@ -4325,7 +4321,7 @@ begin
 
       maxl:= 0;
       maxr:= 0;
-      num:= RC.AnalyseMiscs(lett, snm);
+      //num:= RC.AnalyseMiscs(lett, snm);
       for i:= 0 to High(RC.MiscMinMaxArray) do
       begin
         mma:= RC.MiscMinMaxArray[i];
@@ -4341,7 +4337,7 @@ begin
       end;
       if maxr > 0 then latMiscRight.Scale:= maxl / maxr;
 
-      num:= RC.AnalyseRecipes(lett, snm);
+      //num:= RC.AnalyseRecipes(lett, snm);
       for i:= 0 to High(RC.CommonMinMaxArray) do
       begin
         mma:= RC.CommonMinMaxArray[i];
@@ -4381,7 +4377,7 @@ end;
 
 Procedure TfrmMain.UpdateAndStoreCheckList(Rec : TRecipe);
 var R : TRecipe;
-    i, n, g : longint;
+    //i, n, g : longint;
 begin
   if Rec.RecType = rtBrew then
   begin
@@ -4389,26 +4385,26 @@ begin
     R:= Brews.FindByAutoNr(Rec.AutoNr.Value);
     if R <> NIL then
     begin
-      n:= Rec.CheckList.NumItemsChecked;
+      //n:= Rec.CheckList.NumItemsChecked;
       R.CheckList.Assign(Rec.CheckList);
-      i:= R.CheckList.NumItemsChecked;
-      n:= Rec.CheckList.NumItemsChecked;
-      g:= Rec.CheckList.NumGroups;
+      //i:= R.CheckList.NumItemsChecked;
+      //n:= Rec.CheckList.NumItemsChecked;
+      //g:= Rec.CheckList.NumGroups;
       if (FSelBrew = R) then
       begin
         if (FTemporary.RecType = rtBrew) and (FTemporary.AutoNr.Value = Rec.AutoNr.Value) then
         begin
-          g:= Rec.CheckList.NumGroups;
+          //g:= Rec.CheckList.NumGroups;
           FTemporary.CheckList.Assign(Rec.CheckList);
-          i:= FTemporary.CheckList.NumItemsChecked;
-          n:= Rec.CheckList.NumItemsChecked;
+          //i:= FTemporary.CheckList.NumItemsChecked;
+          //n:= Rec.CheckList.NumItemsChecked;
           FSelBrew.Assign(FTemporary);
-          i:= FSelBrew.CheckList.NumItemsChecked;
-          n:= Rec.CheckList.NumItemsChecked;
+          //i:= FSelBrew.CheckList.NumItemsChecked;
+          //n:= Rec.CheckList.NumItemsChecked;
         end;
       end;
       Brews.SaveXML;
-      i:= R.CheckList.NumItemsChecked;
+      //i:= R.CheckList.NumItemsChecked;
     end;
     FUserClicked:= TRUE;
   end;
@@ -4547,7 +4543,6 @@ begin
 end;
 
 Procedure TfrmMain.NameChange;
-var s : string;
 begin
   if FTemporary <> NIL then
     Caption:= 'BrewBuddy - Sassy Saison - ' + FTemporary.Name.Value
@@ -4824,7 +4819,7 @@ begin
 end;
 
 procedure TfrmMain.cbLockedChange(Sender: TObject);
-var n : TTreeNode;
+//var n : TTreeNode;
 begin
   if (FSelected <> NIL) and FUserClicked then
   begin
@@ -4840,7 +4835,7 @@ begin
     else
       bbInventory.Color:= clDefault;
 
-    n:= tvBrews.Items.FindNodeWithData(FSelected);
+    //n:= tvBrews.Items.FindNodeWithData(FSelected);
     SetIcon;
 
     Application.ProcessMessages;
@@ -5839,7 +5834,7 @@ procedure TfrmMain.sgIngredientsSelectEditor(Sender: TObject; aCol,
   aRow: Integer; var Editor: TWinControl);
 var r : TRect;
     v : double;
-    s : string;
+    //s : string;
     Y : TYeast;
 begin
   Editor:= NIL;
@@ -5857,7 +5852,7 @@ begin
         fseGrid.BoundsRect:= r;
         fseGrid.DecimalPlaces:= Y.AmountYeast.Decimals;
         fseGrid.MaxValue:= Y.AmountYeast.MaxValue;
-        s:= Y.Name.Value;
+        //s:= Y.Name.Value;
         v:= Y.AmountYeast.DisplayValue;
         fseGrid.Value:= v;
         Editor:= fseGrid;
@@ -5867,7 +5862,7 @@ begin
         fseGrid.BoundsRect:= r;
         fseGrid.DecimalPlaces:= FSelIngredient.Amount.Decimals;
         fseGrid.MaxValue:= FSelIngredient.Amount.MaxValue;
-        s:= FSelIngredient.Name.Value;
+        //s:= FSelIngredient.Name.Value;
         v:= FSelIngredient.Amount.DisplayValue;
         fseGrid.Value:= v;
         Editor:= fseGrid;
@@ -6651,7 +6646,7 @@ begin
 end;
 
 procedure TfrmMain.fseTopUpWaterChange(Sender: TObject);
-var V, V2, x : double;
+//var V, V2, x : double;
 begin
   if (FSelected <> NIL) and (FTemporary.Mash <> NIL) and FUserClicked then
   begin

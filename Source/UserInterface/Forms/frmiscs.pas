@@ -133,7 +133,7 @@ Procedure TFrmMiscs.FillTree;
 var i : integer;
     s : string;
     M : TMisc;
-    Node, ChildNode, ChildNode2: TTreeNode;
+    Node, ChildNode, {%H-}ChildNode2: TTreeNode;
 begin
   tvSelect.Items.Clear;
   Node:= tvSelect.Items.Add(nil,'Type');
@@ -405,8 +405,7 @@ begin
 end;
 
 procedure TFrmMiscs.eSearchChange(Sender: TObject);
-var i : integer;
-    N : TTreeNode;
+var N : TTreeNode;
     M : TMisc;
     s, s2 : string;
     Vis : boolean;

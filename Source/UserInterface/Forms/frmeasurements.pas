@@ -196,8 +196,8 @@ begin
 end;
 
 procedure TfrmMeasurements.sgMeasSelection(Sender: TObject; aCol, aRow: Integer);
-var sg : double;
-    b : boolean;
+var
+  b : boolean;
 begin //a row is selected. Put values of that row in the edit controls
   FUserClicked:= false;
   if (FMeasurements <> NIL) and (aRow > sgMeas.FixedRows) then
@@ -397,7 +397,7 @@ var s, w : string;
     StartDate, Date : TDateTime;
     v, hr, sg : double;
     Meas : TFermMeasurement;
-    ColCount, DataStart, iDate : integer;
+    ColCount, DataStart : integer;
 begin
   Result:= false;
   try
@@ -514,7 +514,7 @@ begin
 end;
 
 Function TfrmMeasurements.FindEndHeader : integer;
-var s, w : string;
+var s : string;
 begin
   Result:= 0;
   repeat

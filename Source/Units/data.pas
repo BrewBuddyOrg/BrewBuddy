@@ -1670,7 +1670,7 @@ implementation
 uses frmain, Containers, umulfit, utypes, lconvencoding, typinfo;
 
 Procedure SetFloatSpinEdit(fse : TFloatSpinEdit; f : TBFloat; SetValue : boolean);
-var u : TUnit;
+var {%H-}u : TUnit;
 begin
   fse.AutoSize:= false;
   fse.Height:= 23;
@@ -1697,7 +1697,6 @@ begin
 end;
 
 Procedure SetSpinEdit(se : TSpinEdit; f : TBInteger; SetValue : boolean);
-var u : TUnit;
 begin
   se.AutoSize:= false;
   se.Height:= 23;
@@ -1738,10 +1737,10 @@ var
   iChild, iTextNode: TDOMNode;
   s: string;
 begin
-  iChild := Doc.CreateElement(Title);
+  iChild := Doc.CreateElement(Title{%H-});
   s := ReplaceSpecialChars(Value);
   s := SetDecimalPoint(s);
-  iTextNode := Doc.CreateTextNode(s);
+  iTextNode := Doc.CreateTextNode(s{%H-});
   iChild.AppendChild(iTextNode);
   iNode.AppendChild(iChild);
 end;
@@ -1751,9 +1750,9 @@ var
   iChild, iTextNode: TDOMNode;
   s: string;
 begin
-  iChild := Doc.CreateElement(Title);
+  iChild := Doc.CreateElement(Title{%H-});
   s := ReplaceSpecialChars(Value);
-  iTextNode := Doc.CreateTextNode(s);
+  iTextNode := Doc.CreateTextNode(s{%H-});
   iChild.AppendChild(iTextNode);
   iNode.AppendChild(iChild);
 end;
@@ -1774,9 +1773,9 @@ var
   iChild: TDOMNode;
   s: string;
 begin
-  iChild := iNode.FindNode(Title);
+  iChild := iNode.FindNode(Title{%H-});
   if (iChild <> nil) and (iChild.FirstChild <> nil) then
-    s := iChild.FirstChild.NodeValue
+    s := iChild{%H-}.FirstChild.NodeValue
   else
     s := '';
   Result := Trim(ResetSpecialChars(s));
@@ -1841,23 +1840,29 @@ end;
 
 procedure TBData.SaveXML(Doc: TXMLDocument; iNode: TDomNode; bxml: boolean);
 var
-  val: string;
+  v: string;
+  {$ifdef WINDOWS}
   encs, encto: string;
+  {$endif}
 begin
   if (FCaption <> '') then
   begin
-    val := FCaption;
+    v := FCaption;
     {$ifdef WINDOWS}
     encs := 'utf8';
     encto := GetDefaultTextEncoding;
-    val := ConvertEncoding(FCaption, encs, encto);
+    v := ConvertEncoding(FCaption, encs, encto);
     {$endif}
-    AddNodeS(Doc, iNode, 'CAPTION', Val);
+    AddNodeS(Doc, iNode, 'CAPTION', v);
   end;
 end;
 
 procedure TBData.ReadXML(iNode: TDOMNode);
-var v, encs, encto: string;
+var
+  v: string;
+  {$ifdef WINDOWS}
+  encs, encto: string;
+  {$endif}
 begin
   if (FLabel <> '') then
   begin
@@ -2396,24 +2401,29 @@ end;
 
 procedure TBString.SaveXML(Doc: TXMLDocument; iNode: TDomNode; bxml: boolean);
 var
-  val: string;
+  v: string;
+  {$ifdef WINDOWS}
   encs, encto: string;
+  {$endif}
 begin
   if (FValue <> '') and (FLabel <> '') then
   begin
-    val := FValue;
+    v := FValue;
     {$ifdef WINDOWS}
     encs := 'utf8';
     encto := GetDefaultTextEncoding;
-    val := ConvertEncoding(FValue, encs, encto);
+    v := ConvertEncoding(FValue, encs, encto);
     {$endif}
-    AddNodeS(Doc, iNode, FLabel, Val);
+    AddNodeS(Doc, iNode, FLabel, v);
   end;
 end;
 
 procedure TBString.ReadXML(iNode: TDOMNode);
 var
-  v, encs, encto: string;
+  v: string;
+  {$ifdef WINDOWS}
+  encs, encto: string;
+  {$endif}
 begin
   if FLabel <> '' then
   begin
@@ -2442,15 +2452,15 @@ begin
 end;
 
 procedure TBString.SetValue(v: string);
-var
-  encs, encto: string;
 begin
   FValue := v;
 end;
 
 function TBString.GetValue: string;
 var
+  {$ifdef Windows}
   i: integer;
+  {$endif}
   s: string;
 begin
   s := FValue;
@@ -4227,9 +4237,11 @@ begin
 end;
 
 Function TFermentable.BufferCapacity : double;  //mEq/kg.pH
-var C1, x, y, ebc : double;
-begin                       x:= FAcidTo57.Value;
-  y:= FDIpH.Value;
+var C1, ebc: double;
+    //x, y: double;
+begin
+  //x:= FAcidTo57.Value;
+  //y:= FDIpH.Value;
   if (FDIpH.Value <> 5.7) and (not Between(FAcidTo57.Value, -0.1, 0.1)) then
     C1:= FAcidTo57.Value / (FDIpH.Value - 5.7)
   else
@@ -4859,7 +4871,6 @@ end;
 
 procedure TYeast.ReadXML(iNode: TDOMNode);
 var am : double;
-    b : boolean;
     s, samun : string;
 begin
   inherited ReadXML(iNode);
@@ -7761,7 +7772,7 @@ end;
 
 procedure TMashStep.CalcStep;
 var
-  A, B, perc, GrM, VolMalt, VWater, Temp, Vol: double;
+  A, B, GrM, {VolMalt,} VWater, Temp, Vol: double;
   i, n: integer;
   Mash: TMash;
   Prior: TMashStep;
@@ -7778,7 +7789,7 @@ begin
     end;
     Mash := FRecipe.Mash;
     GrM := FRecipe.GrainMassMash;
-    VolMalt := GrM * MaltVolume;
+    //VolMalt := GrM * MaltVolume;
     case MashStepType of
       mstInfusion:
       begin
@@ -8179,8 +8190,7 @@ begin
 end;
 
 procedure TMash.SetMashWaterVolume(V: double);
-var
-  Vol: double;
+//var Vol: double;
 begin
   if (NumMashSteps > 0) and (V > 0) then
   begin
@@ -8326,9 +8336,10 @@ var
 begin
   Result := 0;
   pt:= 0;
+  MS:= NIL;
   for i := 0 to NumMashSteps - 1 do
   begin
-    if i > 0 then MS2:= MS else MS2:= NIL;
+    MS2:= MS;
     MS := MashStep[i];
     if ((MS.StepTemp.Value > 59) and (MS.StepTemp.Value <= 65)) or
      ((MS.EndTemp.Value > 59) and (MS.EndTemp.Value <= 65)) then
@@ -8368,9 +8379,10 @@ var
 begin
   Result := 0;
   pt:= 0;
+  MS:= NIL;
   for i := 0 to NumMashSteps - 1 do
   begin
-    if i > 0 then MS2:= MS else MS2:= NIL;
+    MS2:= MS;
     MS := MashStep[i];
     if ((MS.StepTemp.Value > 65) and (MS.StepTemp.Value <= 75)) or
      ((MS.EndTemp.Value > 65) and (MS.EndTemp.Value <= 75)) then
@@ -8897,7 +8909,6 @@ begin
 end;
 
 procedure TCheckListItem.ReadXML(iNode: TDOMNode);
-var iChild, iChild2: TDOMNode;
 begin
   FItem.ReadXML(iNode);
 end;
@@ -9240,7 +9251,6 @@ var IngrListArray : TIngrListArray;
     F : TFermentable;
     H : THop;
     MS : TMashStep;
-    ho, mi, se, mis : word;
     numsalts : longint;
     CLG : TCheckListGroup;
     CLI : TCheckListItem;
@@ -13024,7 +13034,6 @@ Procedure TRecipe.CalcNumMissingIngredients;
 var i, n : integer;
     IDB : TIngredient;
     F : TFermentable;
-    H : THop;
     M : TMisc;
     Y : TYeast;
     SL : TStringList;
@@ -13046,6 +13055,7 @@ begin
     end;
   end;
 
+  SetLength(Amounts, 0);
   SL:= TStringList.Create;
   //avoid dubble counts, make a list of unique hops
   for n:= 0 to NumHops - 1 do
@@ -13696,7 +13706,6 @@ end;
 function TRecipe.GetSGEndMashCalc : double;
 var i : integer;
     mvol, d, v, s, gs : double;
-    MS : TMashStep;
     F : TFermentable;
 begin
   mvol:= 0;
@@ -13742,9 +13751,8 @@ end;
 
 function TRecipe.GetSGStartBoil: double;
 var
-  p, d: double;
   i: integer;
-  Pl, s, v: double;
+  d, Pl, s, v: double;
   F: TFermentable;
 begin
   if FBatchSize.Value <> 0 then
@@ -13791,8 +13799,8 @@ end;
 procedure TRecipe.CalcOG;
 var
   i, j, k: integer;
-  v, v2, sg, d, tot, tot2, vol, vol1, vol2, sugF, sug, sug2, p, x: double;
-  mass1, mass2 : double;
+  sg, d, tot, tot2, vol, vol1, vol2, sugF, sug, sug2, p, x: double;
+  //mass1, mass2 : double;
   F: TFermentable;
 //  ibu, bindex : double;
 begin
@@ -13920,7 +13928,6 @@ var
   i, j: integer;
   sug, d, tot, totmass, x: double;
   vol, vol1, vol2, sug2: double;
-  mass1, mass2 : double;
   F: TFermentable;
 //  ibu, bindex : double;
 begin
@@ -13991,7 +13998,7 @@ end;
 function TRecipe.CalcEfficiencyBeforeBoil: double;
 var
   i: integer;
-  d, m, b, tot: double;
+  d, m, tot: double;
   F: TFermentable;
 begin
   m := 0; //amount of sugars extracted from mash
@@ -14115,7 +14122,7 @@ begin   //og in fermenter, calculated from estimated OG and volumes
 end;
 
 Function TRecipe.CalcOGFermenter : double;
-var vol1, vol2, sug, addedmass, addedS, ogx, top, vol, x: double;
+var vol1, {vol2,} sug, addedmass, addedS, ogx, top, vol, x: double;
     F: TFermentable;
     i: integer;
 begin //og in fermenter, calculated from measured OG and volumes
@@ -14149,7 +14156,7 @@ begin //og in fermenter, calculated from measured OG and volumes
         vol:= vol + (x * SugarDensity + (1 - x) * 1) * F.Amount.Value;
       end;
     end;
-    vol2:= vol1 + top + vol;
+    //vol2:= vol1 + top + vol;
     sug:= sug + addedS; //kg
 
     if ((vol1 * ogx + addedmass) > 0) then
@@ -14200,10 +14207,13 @@ var V, V2, x, addedvolume, top : double;
 begin
   CalcColor;
   Result:= FEstColor.Value;
+  addedVolume:= 0;
   if FEquipment <> NIL then
   begin
-    if FEquipment.TopUpWaterBrewday.Value > 0 then top:= FEquipment.TopUpWaterBrewDay.Value
-    else top:= FEquipment.TopUpWater.Value;
+    if FEquipment.TopUpWaterBrewday.Value > 0 then
+      top:= FEquipment.TopUpWaterBrewDay.Value
+    else
+      top:= FEquipment.TopUpWater.Value;
     V2:= FVolumeFermenter.Value + top;
     if V2 > 0 then
     begin
@@ -14219,8 +14229,7 @@ begin
         end;
       end;
       V2:= V2 + addedvolume;
-
-      if (V2 > 0) then
+      if V2 > 0 then
         Result:= Result * V / V2;
   //    Result:= Convert(Result, FEstColor.vUnit, FEstColor.DisplayUnit);
     end;
@@ -14229,7 +14238,6 @@ end;
 
 procedure TRecipe.EstimateFG;
 var
-  i: integer;
   percS, percCara, BD, Att, AttBeer, sg: double;
   Temp, TotTme: double;
   Y: TYeast;
@@ -14708,7 +14716,7 @@ procedure SortByIndex(var Arr: array of TIngredient; Index: integer;
   procedure QuickSort(var A: array of TIngredient; iLo, iHi: integer);
   var
     Lo, Hi: integer;
-    mid, v: variant;
+    mid: variant;
     TB: TIngredient;
   begin
     Lo := iLo;
@@ -14733,7 +14741,7 @@ procedure SortByIndex(var Arr: array of TIngredient; Index: integer;
   procedure QuickSortDec(var A: array of TIngredient; iLo, iHi: integer);
   var
     Lo, Hi: integer;
-    mid, v: variant;
+    mid: variant;
     TB: TIngredient;
   begin
     Lo := iLo;
@@ -15085,10 +15093,9 @@ end;
 procedure TRecipe.CalcMashWater;
 var
   i: integer;
-  W: TWater;
   M: TMisc;
-  vol, acid, MolWt, AcidSG, AcidPrc, Acidmg, pK1, pK2, pK3, frac, TpH,
-    ProtonDeficit: double;
+  vol, acid, MolWt, AcidSG, Acidmg, pK1, pK2, pK3, frac, TpH, ProtonDeficit: double;
+  //AcidPrc: double;
 begin
   FMashWater.Bicarbonate.Value:= 0;
   FMashWater.Calcium.Value:= 0;
@@ -15102,7 +15109,7 @@ begin
   vol:= 0;
   MolWt:= 0;
   AcidSG:= 0;
-  AcidPrc:= 0;
+  //AcidPrc:= 0;
   Acidmg:= 0;
   pK1:= 0;
   pK2:= 0;
@@ -15155,7 +15162,7 @@ begin
         pK3:= 20;
         MolWt:= 90.08;
         AcidSG:= 1214; //@88%
-        AcidPrc:= 0.88;
+        //AcidPrc:= 0.88;
         frac:= CalcFrac(TpH, pK1, pK2, pK3);
         acid:= acid + M.Amount.Value * M.FreeField.Value / 100 * AcidSG / MolWt * Frac / vol; //mEq/l
       end;
@@ -15166,7 +15173,7 @@ begin
         pK3:=  20;
         MolWt:= 36.46;
         AcidSG:= 1142; //@28%
-        AcidPrc:= 0.28;
+        //AcidPrc:= 0.28;
         frac:= CalcFrac(TpH, pK1, pK2, pK3);
         Acidmg:= M.Amount.Value * M.FreeField.Value / 100 * AcidSG / vol;
         acid:= acid + Acidmg / MolWt * Frac; //mEq/l
@@ -15179,7 +15186,7 @@ begin
         pK3:=  12.44;
         MolWt:= 98.00;
         AcidSG:= 1170; //@25%
-        AcidPrc:= 0.25;
+        //AcidPrc:= 0.25;
         frac:= CalcFrac(TpH, pK1, pK2, pK3);
         Acidmg:= M.Amount.Value * M.FreeField.Value / 100 * AcidSG / vol;
         acid:= acid + Acidmg / MolWt * Frac; //mEq/l
@@ -15191,7 +15198,7 @@ begin
         pK3:= 20;
         MolWt:= 98.07;
         AcidSG:= 1700; //@93%
-        AcidPrc:= 0.93;
+        //AcidPrc:= 0.93;
         frac:= CalcFrac(TpH, pK1, pK2, pK3);
         Acidmg:= M.Amount.Value * M.FreeField.Value / 100 * AcidSG / vol;
         acid:= acid + Acidmg / MolWt * Frac; //mEq/l
@@ -15797,11 +15804,12 @@ const
   Lichtgeel = '#fbfea3';
 var
   tabus, tabue, heads, heade, rowse, rowso, rowe, datas, datae, rows: string;
-  lf, qm: char;
+  qm: char;
   Memo: TMemo;
   s1, s2: string;
   i, n, rownr: integer;
-  volmalt, spdspc, evap, mashvol, vol, x, top: double;
+  //volmalt, spdspc, evap, mashvol, vol: double;
+  x, top: double;
   F: TFermentable;
   H: THop;
   M: TMisc;
@@ -15819,9 +15827,7 @@ var
   end;
 
 begin
-  lf := CHR(10);
   qm := CHR(34);
-
   tabus := '<table border=' + qm + '0' + qm + '><tbody>';
   tabue := '</tbody></table>';
   heads := '<td style=' + qm + 'width: 200px;' + qm + '><p align=' +
@@ -15841,9 +15847,6 @@ begin
     Memo.Parent := FrmMain;
     Memo.Visible := False;
     Memo.Lines.Clear;
-
-    lf := Chr(10);
-
     with Memo.Lines do
     begin
       Add('<h1>BrouwHulp Recept uitdraai</h1>');
@@ -16225,11 +16228,11 @@ end;
 function TRecipe.SaveHTML(s : string) : boolean;
 var L : TStringList;
   tabus, tabue, heads, heade, firsts, firste, rows, rowe, datas, datae: string;
-  lf, qm: char;
-  Memo: TMemo;
+  lf: char;
   s1, s2: string;
   i: integer;
-  volmalt, spdspc, evap, mashvol, vol, x, top: double;
+  //volmalt, spdspc, evap, mashvol, vol: double;
+  x, top: double;
   F: TFermentable;
   H: THop;
   M: TMisc;
@@ -16238,8 +16241,6 @@ var L : TStringList;
   MS: TMashStep;
 begin
   lf := CHR(10);
-  qm := CHR(34);
-
   tabus := '<p>'+lf+'<table id="bier">';
   tabue := '</table></p>';
   heads := '	<caption>';
@@ -16962,7 +16963,6 @@ procedure TStyle.SaveXML(Doc: TXMLDocument; iNode: TDomNode; bxml: boolean);
 //the style is supposed to be stored as a separate field in the settings file
 var iChild: TDOMNode;
     s : string;
-    i : integer;
     col : TColor;
     r, g, b : integer;
     rb, gb, bb : byte;
@@ -17050,7 +17050,6 @@ end;
 procedure TStyle.ReadXML(iNode: TDOMNode);
 var s : string;
     i : integer;
-    col : TColor;
     r, g, b : integer;
     rb, gb, bb : byte;
 begin

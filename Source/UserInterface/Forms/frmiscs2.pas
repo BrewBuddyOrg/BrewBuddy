@@ -202,9 +202,6 @@ begin
 end;
 
 Function TFrmMiscs2.Execute(M : TMisc) : boolean;
-var i : integer;
-    s : string;
-    Mi : TMisc;
 begin
   Result:= false;
   FMisc:= M;

@@ -191,7 +191,7 @@ Procedure TFrmBeerstyles.FillTree;
 var i : integer;
     letter, sname : string;
     S : TBeerStyle;
-    Node, ChildNode, ChildNode2 : TTreeNode;
+    Node, ChildNode, {%H-}ChildNode2 : TTreeNode;
 begin
   FUserClicked:= false;
   tvSelect.Items.Clear;

@@ -184,7 +184,7 @@ Procedure TFrmYeasts.FillTree;
 var i : integer;
     supp, yname : string;
     Y : TYeast;
-    Node, ChildNode, ChildNode2 : TTreeNode;
+    Node, ChildNode, {%H-}ChildNode2 : TTreeNode;
 begin
   tvSelect.Items.Clear;
   Node:= tvSelect.Items.Add(nil,'Fabrikant');
@@ -495,8 +495,7 @@ begin
 end;
 
 procedure TFrmYeasts.eSearchChange(Sender: TObject);
-var i : integer;
-    N : TTreeNode;
+var N : TTreeNode;
     Y : TYeast;
     s, s2 : string;
     Vis : boolean;

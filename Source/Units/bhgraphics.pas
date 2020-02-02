@@ -964,14 +964,16 @@ end;
 
 Function PolyPolygon(Canvas : TCanvas; Points: array of TPoint; {PolyCounts : array of integer;} AmPoly : integer) : boolean;
 begin
+  Result:= True;
   Canvas.Polygon(Points, {PolyCounts,} AmPoly, false);
 end;
 
 Function PolyRoundedLine(Canvas : TCanvas; Points : array of TPoint; RoundPerc : single) : boolean;
-var i, j, Max, dX, dY : LongInt;
+var i, dX, dY : LongInt;
     PB : array[1..4] of TPoint;
     Line : array[1..2] of TPoint;
 begin
+  Result:= True;
   if RoundPerc < 0 then RoundPerc:= 0;
   if RoundPerc > 50 then RoundPerc:= 50;
   Line[1].X:= Points[0].X; Line[1].Y:= Points[0].Y;

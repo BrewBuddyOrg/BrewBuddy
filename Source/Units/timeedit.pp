@@ -386,8 +386,9 @@ begin
   SH := IntToStr(H);
   SM := IntToStr(M);
   SS := IntToStr(Sec);
-  ET := ZeroPad2(SH) + TimeSeparator + ZeroPad2(SM);
-  if (FTimeEditFormat = tefLong) then ET := ET + TimeSeparator + ZeroPad2(SS);
+  ET := ZeroPad2(SH) + DefaultFormatSettings.TimeSeparator + ZeroPad2(SM);
+  if FTimeEditFormat = tefLong then
+    ET := ET + DefaultFormatSettings.TimeSeparator + ZeroPad2(SS);
   //debugln('  Resetting EditText to ',ET);
   EditText := ET;
 end;
@@ -426,8 +427,9 @@ begin
   SH := IntToStr(H);
   SM := IntToStr(M);
   SS := IntToStr(Sec);
-  ET := ZeroPad2(SH) + TimeSeparator + ZeroPad2(SM);
-  if (FTimeEditFormat = tefLong) then ET := ET + TimeSeparator + ZeroPad2(SS);
+  ET := ZeroPad2(SH) + DefaultFormatSettings.TimeSeparator + ZeroPad2(SM);
+  if FTimeEditFormat = tefLong then
+    ET := ET + DefaultFormatSettings.TimeSeparator + ZeroPad2(SS);
   EditText := ET;
 end;
 
