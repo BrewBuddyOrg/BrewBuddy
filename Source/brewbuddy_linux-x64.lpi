@@ -22,67 +22,21 @@
       <Language Value="0413"/>
       <StringTable CompanyName="Brouwerij Het Witte Paard" FileDescription="BrewBuddy Sassy Saison" InternalName="BrewBuddy" OriginalFilename="BrewBuddy" ProductName="BrewBuddy" ProductVersion="5.3.5.2"/>
     </VersionInfo>
-    <BuildModes Count="3">
+    <BuildModes Count="2">
       <Item1 Name="Default" Default="True"/>
-      <Item2 Name="Debug">
+      <Item2 Name="Release Linux X64">
         <CompilerOptions>
           <Version Value="11"/>
           <Target>
             <Filename Value="../Output/brewbuddy"/>
           </Target>
           <SearchPaths>
-            <IncludeFiles Value="../Output;$(ProjOutDir)"/>
-            <Libraries Value="3rdParty/fann/usr/local/lib"/>
-            <OtherUnitFiles Value="UserInterface/Forms;Units"/>
-            <UnitOutputDirectory Value="../Output/units"/>
-          </SearchPaths>
-          <Parsing>
-            <SyntaxOptions>
-              <IncludeAssertionCode Value="True"/>
-            </SyntaxOptions>
-          </Parsing>
-          <CodeGeneration>
-            <Checks>
-              <IOChecks Value="True"/>
-              <RangeChecks Value="True"/>
-              <OverflowChecks Value="True"/>
-              <StackChecks Value="True"/>
-            </Checks>
-            <VerifyObjMethodCallValidity Value="True"/>
-            <TargetCPU Value="x86_64"/>
-            <TargetOS Value="linux"/>
-            <Optimizations>
-              <VariablesInRegisters Value="True"/>
-            </Optimizations>
-          </CodeGeneration>
-          <Linking>
-            <Debugging>
-              <DebugInfoType Value="dsDwarf2Set"/>
-              <UseHeaptrc Value="True"/>
-              <TrashVariables Value="True"/>
-              <UseValgrind Value="True"/>
-              <UseExternalDbgSyms Value="True"/>
-            </Debugging>
-          </Linking>
-        </CompilerOptions>
-      </Item2>
-      <Item3 Name="Release Linux X64">
-        <CompilerOptions>
-          <Version Value="11"/>
-          <Target>
-            <Filename Value="../Output/brewbuddy"/>
-          </Target>
-          <SearchPaths>
-            <IncludeFiles Value="../Output;$(ProjOutDir)"/>
-            <Libraries Value="3rdParty/fann/usr/local/lib"/>
-            <OtherUnitFiles Value="UserInterface/Forms;Units"/>
+            <OtherUnitFiles Value="UserInterface/Forms"/>
             <UnitOutputDirectory Value="../Output/units"/>
           </SearchPaths>
           <CodeGeneration>
-            <TargetCPU Value="x86_64"/>
-            <TargetOS Value="linux"/>
             <Optimizations>
-              <OptimizationLevel Value="2"/>
+              <OptimizationLevel Value="3"/>
               <VariablesInRegisters Value="True"/>
             </Optimizations>
           </CodeGeneration>
@@ -91,9 +45,14 @@
               <GenerateDebugInfo Value="False"/>
               <UseValgrind Value="True"/>
             </Debugging>
+            <Options>
+              <Win32>
+                <GraphicApplication Value="True"/>
+              </Win32>
+            </Options>
           </Linking>
         </CompilerOptions>
-      </Item3>
+      </Item2>
     </BuildModes>
     <PublishOptions>
       <Version Value="2"/>
@@ -104,7 +63,7 @@
         <Mode0 Name="default"/>
       </Modes>
     </RunParams>
-    <RequiredPackages Count="9">
+    <RequiredPackages Count="7">
       <Item1>
         <PackageName Value="TAChartPrint"/>
       </Item1>
@@ -115,26 +74,19 @@
         <PackageName Value="uniqueinstance_package"/>
       </Item3>
       <Item4>
-        <PackageName Value="SynEdit"/>
-        <MinVersion Major="1" Valid="True"/>
-      </Item4>
-      <Item5>
         <PackageName Value="laz_synapse"/>
         <MinVersion Valid="True"/>
+      </Item4>
+      <Item5>
+        <PackageName Value="Printer4Lazarus"/>
       </Item5>
       <Item6>
-        <PackageName Value="printers4lazide"/>
-      </Item6>
-      <Item7>
-        <PackageName Value="Printer4Lazarus"/>
-      </Item7>
-      <Item8>
         <PackageName Value="TAChartLazarusPkg"/>
         <MinVersion Major="1" Valid="True"/>
-      </Item8>
-      <Item9>
+      </Item6>
+      <Item7>
         <PackageName Value="LCL"/>
-      </Item9>
+      </Item7>
     </RequiredPackages>
     <Units Count="55">
       <Unit0>
@@ -514,9 +466,8 @@
       <Filename Value="../Output/brewbuddy"/>
     </Target>
     <SearchPaths>
-      <IncludeFiles Value="../Output;$(ProjOutDir)"/>
-      <Libraries Value="3rdParty/fann/usr/local/lib"/>
-      <OtherUnitFiles Value="UserInterface/Forms;Units"/>
+      <IncludeFiles Value="$(ProjOutDir)"/>
+      <OtherUnitFiles Value="UserInterface/Forms"/>
       <UnitOutputDirectory Value="../Output/units"/>
     </SearchPaths>
     <Parsing>
@@ -532,17 +483,23 @@
         <StackChecks Value="True"/>
       </Checks>
       <VerifyObjMethodCallValidity Value="True"/>
-      <TargetCPU Value="x86_64"/>
-      <TargetOS Value="linux"/>
       <Optimizations>
-        <OptimizationLevel Value="0"/>
         <VariablesInRegisters Value="True"/>
       </Optimizations>
     </CodeGeneration>
     <Linking>
       <Debugging>
+        <DebugInfoType Value="dsDwarf2Set"/>
+        <UseHeaptrc Value="True"/>
+        <TrashVariables Value="True"/>
         <UseValgrind Value="True"/>
+        <UseExternalDbgSyms Value="True"/>
       </Debugging>
+      <Options>
+        <Win32>
+          <GraphicApplication Value="True"/>
+        </Win32>
+      </Options>
     </Linking>
   </CompilerOptions>
   <Debugging>
