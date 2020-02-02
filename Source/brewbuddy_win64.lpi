@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CONFIG>
   <ProjectOptions>
-    <Version Value="10"/>
+    <Version Value="12"/>
     <General>
-      <MainUnit Value="0"/>
+      <Flags>
+        <CompatibilityMode Value="True"/>
+      </Flags>
+      <SessionStorage Value="InProjectDir"/>
       <AutoCreateForms Value="False"/>
       <Title Value="brewbuddy"/>
       <UseAppBundle Value="False"/>
@@ -19,7 +22,7 @@
       <Language Value="0413"/>
       <StringTable CompanyName="Brouwerij Het Witte Paard" FileDescription="BrewBuddy Sassy Saison" InternalName="BrewBuddy" OriginalFilename="BrewBuddy" ProductName="BrewBuddy" ProductVersion="5.3.5.2"/>
     </VersionInfo>
-    <BuildModes Count="3" Active="Release">
+    <BuildModes Count="3">
       <Item1 Name="Default" Default="True"/>
       <Item2 Name="Debug">
         <CompilerOptions>
@@ -28,8 +31,7 @@
             <Filename Value="../Output/brewbuddy"/>
           </Target>
           <SearchPaths>
-            <IncludeFiles Value="../Output;$(ProjOutDir)"/>
-            <OtherUnitFiles Value="UserInterface/Forms;Units;OSspecific"/>
+            <OtherUnitFiles Value="UserInterface/Forms;Units"/>
             <UnitOutputDirectory Value="../Output/units"/>
           </SearchPaths>
           <Parsing>
@@ -69,8 +71,8 @@
             <Filename Value="../Output/brewbuddy"/>
           </Target>
           <SearchPaths>
-            <IncludeFiles Value="../Output;$(ProjOutDir)"/>
-            <OtherUnitFiles Value="UserInterface/Forms;Units;OSspecific"/>
+            <IncludeFiles Value="$(ProjOutDir)"/>
+            <OtherUnitFiles Value="UserInterface/Forms;Units"/>
             <UnitOutputDirectory Value="../Output/units"/>
           </SearchPaths>
           <CodeGeneration>
@@ -97,15 +99,14 @@
     </BuildModes>
     <PublishOptions>
       <Version Value="2"/>
-      <IncludeFileFilter Value="*.(pas|pp|inc|lfm|lpr|lrs|lpi|lpk|sh|xml)"/>
-      <ExcludeFileFilter Value="*.(bak|ppu|o|so);*~;backup"/>
     </PublishOptions>
     <RunParams>
-      <local>
-        <FormatVersion Value="1"/>
-      </local>
+      <FormatVersion Value="2"/>
+      <Modes Count="1">
+        <Mode0 Name="default"/>
+      </Modes>
     </RunParams>
-    <RequiredPackages Count="9">
+    <RequiredPackages Count="7">
       <Item1>
         <PackageName Value="TAChartPrint"/>
       </Item1>
@@ -116,35 +117,24 @@
         <PackageName Value="uniqueinstance_package"/>
       </Item3>
       <Item4>
-        <PackageName Value="SynEdit"/>
-        <MinVersion Major="1" Valid="True"/>
-      </Item4>
-      <Item5>
         <PackageName Value="laz_synapse"/>
         <MinVersion Valid="True"/>
+      </Item4>
+      <Item5>
+        <PackageName Value="Printer4Lazarus"/>
       </Item5>
       <Item6>
-        <PackageName Value="printers4lazide"/>
-      </Item6>
-      <Item7>
-        <PackageName Value="Printer4Lazarus"/>
-      </Item7>
-      <Item8>
         <PackageName Value="TAChartLazarusPkg"/>
         <MinVersion Major="1" Valid="True"/>
-      </Item8>
-      <Item9>
+      </Item6>
+      <Item7>
         <PackageName Value="LCL"/>
-      </Item9>
+      </Item7>
     </RequiredPackages>
-    <Units Count="201">
+    <Units Count="55">
       <Unit0>
         <Filename Value="brewbuddy.pas"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="1"/>
-        <CursorPos Y="6"/>
-        <UsageCount Value="201"/>
-        <Loaded Value="True"/>
       </Unit0>
       <Unit1>
         <Filename Value="UserInterface/Forms/frmain.pas"/>
@@ -153,1623 +143,365 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="FrMain"/>
-        <TopLine Value="1036"/>
-        <CursorPos X="7" Y="1041"/>
-        <UsageCount Value="201"/>
-        <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
       </Unit1>
       <Unit2>
         <Filename Value="Units/data.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="Data"/>
-        <EditorIndex Value="-1"/>
-        <CursorPos X="58" Y="28"/>
-        <UsageCount Value="201"/>
       </Unit2>
       <Unit3>
-        <Filename Value="/usr/lib/lazarus/0.9.30/ide/lazarus.pp"/>
-        <UnitName Value="Lazarus"/>
-        <UsageCount Value="2"/>
-      </Unit3>
-      <Unit4>
-        <Filename Value="/usr/lib/lazarus/0.9.30/lcl/lconvencoding.pas"/>
-        <UnitName Value="LConvEncoding"/>
-        <TopLine Value="13"/>
-        <CursorPos X="24" Y="27"/>
-        <UsageCount Value="2"/>
-      </Unit4>
-      <Unit5>
-        <Filename Value="/usr/lib/lazarus/0.9.30/ide/ideinfodlg.pas"/>
-        <UnitName Value="IDEInfoDlg"/>
-        <TopLine Value="19"/>
-        <UsageCount Value="2"/>
-      </Unit5>
-      <Unit6>
-        <Filename Value="../lazarus/0.9.30/ide/lazarus.pp"/>
-        <UnitName Value="Lazarus"/>
-        <UsageCount Value="2"/>
-      </Unit6>
-      <Unit7>
-        <Filename Value="/usr/lib/lazarus/0.9.30/ide/idecmdline.pas"/>
-        <UnitName Value="IDECmdLine"/>
-        <UsageCount Value="2"/>
-      </Unit7>
-      <Unit8>
-        <Filename Value="/usr/lib/lazarus/0.9.30/debugger/gdbmidebugger.pp"/>
-        <UnitName Value="GDBMIDebugger"/>
-        <TopLine Value="9582"/>
-        <CursorPos X="7" Y="9596"/>
-        <UsageCount Value="2"/>
-      </Unit8>
-      <Unit9>
-        <Filename Value="/usr/lib/lazarus/0.9.30/converter/convertdelphi.pas"/>
-        <UnitName Value="ConvertDelphi"/>
-        <TopLine Value="803"/>
-        <CursorPos X="28" Y="817"/>
-        <UsageCount Value="2"/>
-      </Unit9>
-      <Unit10>
-        <Filename Value="/usr/lib/lazarus/0.9.30/ide/lazconf.pp"/>
-        <UnitName Value="LazConf"/>
-        <UsageCount Value="2"/>
-      </Unit10>
-      <Unit11>
         <Filename Value="Units/hulpfuncties.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="Hulpfuncties"/>
-        <IsVisibleTab Value="True"/>
-        <EditorIndex Value="2"/>
-        <TopLine Value="2491"/>
-        <CursorPos Y="2526"/>
-        <UsageCount Value="201"/>
-        <Loaded Value="True"/>
-      </Unit11>
-      <Unit12>
-        <Filename Value="lnet/lazaruspackage/lnetbase.pas"/>
-        <UsageCount Value="3"/>
-      </Unit12>
-      <Unit13>
+      </Unit3>
+      <Unit4>
         <Filename Value="Units/containers.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="Containers"/>
-        <EditorIndex Value="-1"/>
-        <CursorPos Y="3349"/>
-        <UsageCount Value="200"/>
-      </Unit13>
-      <Unit14>
-        <Filename Value="appsettings.pas"/>
-        <CursorPos Y="131"/>
-        <UsageCount Value="3"/>
-      </Unit14>
-      <Unit15>
-        <Filename Value="icetabset.pas"/>
-        <UnitName Value="IceTabSet"/>
-        <TopLine Value="42"/>
-        <CursorPos X="22" Y="55"/>
-        <UsageCount Value="2"/>
-      </Unit15>
-      <Unit16>
-        <Filename Value="ovctable.pas"/>
-        <TopLine Value="21"/>
-        <CursorPos X="2" Y="34"/>
-        <UsageCount Value="2"/>
-      </Unit16>
-      <Unit17>
-        <Filename Value="ovccmd.pas"/>
-        <TopLine Value="698"/>
-        <CursorPos X="49" Y="711"/>
-        <UsageCount Value="2"/>
-      </Unit17>
-      <Unit18>
-        <Filename Value="/usr/lib/lazarus/0.9.30.4/ide/lazconf.pp"/>
-        <UnitName Value="LazConf"/>
-        <UsageCount Value="6"/>
-      </Unit18>
-      <Unit19>
-        <Filename Value="/usr/lib/lazarus/0.9.30.4/ideintf/actionseditor.pas"/>
-        <ComponentName Value="ActionListEditor"/>
-        <HasResources Value="True"/>
-        <ResourceBaseClass Value="Form"/>
-        <UnitName Value="ActionsEditor"/>
-        <TopLine Value="20"/>
-        <CursorPos X="22" Y="33"/>
-        <UsageCount Value="6"/>
-      </Unit19>
-      <Unit20>
+      </Unit4>
+      <Unit5>
         <Filename Value="UserInterface/Forms/frbeerstyles.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FrmBeerstyles"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="FrBeerstyles"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="108"/>
-        <CursorPos Y="120"/>
-        <UsageCount Value="201"/>
-      </Unit20>
-      <Unit21>
-        <Filename Value="/usr/lib/lazarus/0.9.30.4/lcl/include/customlistbox.inc"/>
-        <TopLine Value="453"/>
-        <CursorPos Y="466"/>
-        <UsageCount Value="2"/>
-      </Unit21>
-      <Unit22>
-        <Filename Value="/usr/lib/lazarus/0.9.30.4/lcl/include/control.inc"/>
-        <TopLine Value="2775"/>
-        <CursorPos Y="2788"/>
-        <UsageCount Value="8"/>
-      </Unit22>
-      <Unit23>
-        <Filename Value="/usr/lib/lazarus/0.9.30.4/lcl/include/buttoncontrol.inc"/>
-        <TopLine Value="50"/>
-        <CursorPos Y="63"/>
-        <UsageCount Value="2"/>
-      </Unit23>
-      <Unit24>
-        <Filename Value="/usr/lib/lazarus/0.9.30.4/lcl/include/buttons.inc"/>
-        <TopLine Value="162"/>
-        <CursorPos Y="175"/>
-        <UsageCount Value="2"/>
-      </Unit24>
-      <Unit25>
-        <Filename Value="/usr/lib/lazarus/0.9.30.4/lcl/include/bitbtn.inc"/>
-        <TopLine Value="45"/>
-        <CursorPos Y="58"/>
-        <UsageCount Value="2"/>
-      </Unit25>
-      <Unit26>
+      </Unit5>
+      <Unit6>
         <Filename Value="UserInterface/Forms/frhop2.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FrmHop2"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="FrHop2"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="94"/>
-        <CursorPos X="17" Y="125"/>
-        <UsageCount Value="202"/>
-      </Unit26>
-      <Unit27>
+      </Unit6>
+      <Unit7>
         <Filename Value="UserInterface/Forms/frquestion.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FrmQuestion"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="frQuestion"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="7"/>
-        <CursorPos X="31" Y="39"/>
-        <UsageCount Value="200"/>
-      </Unit27>
-      <Unit28>
+      </Unit7>
+      <Unit8>
         <Filename Value="UserInterface/Forms/frgetstring.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FrmGetString"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="10"/>
-        <CursorPos Y="47"/>
-        <UsageCount Value="200"/>
-      </Unit28>
-      <Unit29>
+      </Unit8>
+      <Unit9>
         <Filename Value="UserInterface/Forms/frequipments.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FrmEquipments"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="FrEquipments"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="104"/>
-        <CursorPos Y="120"/>
-        <UsageCount Value="200"/>
-      </Unit29>
-      <Unit30>
+      </Unit9>
+      <Unit10>
         <Filename Value="UserInterface/Forms/frfermentables2.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FrmFermentables2"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="FrFermentables2"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="134"/>
-        <CursorPos Y="161"/>
-        <UsageCount Value="201"/>
-      </Unit30>
-      <Unit31>
+      </Unit10>
+      <Unit11>
         <Filename Value="UserInterface/Forms/frmiscs2.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FrmMiscs2"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="FrMiscs2"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="106"/>
-        <CursorPos Y="146"/>
-        <UsageCount Value="200"/>
-      </Unit31>
-      <Unit32>
+      </Unit11>
+      <Unit12>
         <Filename Value="UserInterface/Forms/frmashs.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FrmMashs"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="47"/>
-        <CursorPos Y="72"/>
-        <UsageCount Value="201"/>
-      </Unit32>
-      <Unit33>
+      </Unit12>
+      <Unit13>
         <Filename Value="UserInterface/Forms/fryeasts2.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FrmYeasts2"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="FrYeasts2"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="126"/>
-        <CursorPos X="39" Y="146"/>
-        <UsageCount Value="200"/>
-      </Unit33>
-      <Unit34>
-        <Filename Value="/usr/lib/lazarus/0.9.30.4/lcl/interfaces/gtk2/gtk2wscontrols.pp"/>
-        <UnitName Value="Gtk2WSControls"/>
-        <TopLine Value="293"/>
-        <CursorPos Y="306"/>
-        <UsageCount Value="6"/>
-      </Unit34>
-      <Unit35>
+      </Unit13>
+      <Unit14>
         <Filename Value="UserInterface/Forms/frwaters.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FrmWaters"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="FrWaters"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="82"/>
-        <CursorPos Y="106"/>
-        <UsageCount Value="200"/>
-      </Unit35>
-      <Unit36>
+      </Unit14>
+      <Unit15>
         <Filename Value="UserInterface/Forms/frmashstep.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FrmMashStep"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="52"/>
-        <CursorPos Y="89"/>
-        <UsageCount Value="201"/>
-      </Unit36>
-      <Unit37>
-        <Filename Value="/usr/lib/lazarus/0.9.30.4/lcl/grids.pas"/>
-        <UnitName Value="Grids"/>
-        <TopLine Value="8206"/>
-        <CursorPos Y="8219"/>
-        <UsageCount Value="5"/>
-      </Unit37>
-      <Unit38>
+      </Unit15>
+      <Unit16>
         <Filename Value="UserInterface/Forms/frfermentables.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FrmFermentables"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="FrFermentables"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="129"/>
-        <CursorPos Y="135"/>
-        <UsageCount Value="200"/>
-      </Unit38>
-      <Unit39>
+      </Unit16>
+      <Unit17>
         <Filename Value="Units/positieinterval.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="PositieInterval"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="6"/>
-        <CursorPos X="5" Y="648"/>
-        <UsageCount Value="200"/>
-      </Unit39>
-      <Unit40>
+      </Unit17>
+      <Unit18>
         <Filename Value="UserInterface/Forms/frhop.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FrmHop"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="FrHop"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="112"/>
-        <CursorPos Y="137"/>
-        <UsageCount Value="200"/>
-      </Unit40>
-      <Unit41>
+      </Unit18>
+      <Unit19>
         <Filename Value="UserInterface/Forms/frmiscs.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FrmMiscs"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="FrMiscs"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="74"/>
-        <CursorPos Y="97"/>
-        <UsageCount Value="200"/>
-      </Unit41>
-      <Unit42>
+      </Unit19>
+      <Unit20>
         <Filename Value="UserInterface/Forms/fryeasts.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FrmYeasts"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="FrYeasts"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="93"/>
-        <CursorPos Y="119"/>
-        <UsageCount Value="200"/>
-      </Unit42>
-      <Unit43>
+      </Unit20>
+      <Unit21>
         <Filename Value="UserInterface/Forms/frmiscs3.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FrmMiscs3"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="160"/>
-        <CursorPos X="28" Y="183"/>
-        <UsageCount Value="200"/>
-      </Unit43>
-      <Unit44>
-        <Filename Value="/usr/lib/lazarus/0.9.30.4/lcl/include/headercontrol.inc"/>
-        <TopLine Value="384"/>
-        <CursorPos Y="416"/>
-        <UsageCount Value="2"/>
-      </Unit44>
-      <Unit45>
+      </Unit21>
+      <Unit22>
         <Filename Value="UserInterface/Forms/frfermentables3.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FrmFermentables3"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="230"/>
-        <CursorPos X="76" Y="240"/>
-        <UsageCount Value="200"/>
-      </Unit45>
-      <Unit46>
+      </Unit22>
+      <Unit23>
         <Filename Value="UserInterface/Forms/frhop3.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FrmHop3"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="146"/>
-        <CursorPos X="5" Y="149"/>
-        <UsageCount Value="200"/>
-      </Unit46>
-      <Unit47>
-        <Filename Value="/usr/lib/lazarus/0.9.30.4/lcl/interfaces/qt/qtwscontrols.pp"/>
-        <UnitName Value="QtWSControls"/>
-        <TopLine Value="281"/>
-        <CursorPos Y="295"/>
-        <UsageCount Value="3"/>
-      </Unit47>
-      <Unit48>
+      </Unit23>
+      <Unit24>
         <Filename Value="UserInterface/Forms/frwateradjustment.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FrmWaterAdjustment"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="826"/>
-        <CursorPos X="59" Y="866"/>
-        <UsageCount Value="200"/>
-      </Unit48>
-      <Unit49>
+      </Unit24>
+      <Unit25>
         <Filename Value="UserInterface/Forms/frnotification.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FrmNotification"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="FrNotification"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="43"/>
-        <CursorPos X="3" Y="45"/>
-        <UsageCount Value="200"/>
-      </Unit49>
-      <Unit50>
-        <Filename Value="acs_lame.pas"/>
-        <TopLine Value="10"/>
-        <UsageCount Value="158"/>
-      </Unit50>
-      <Unit51>
-        <Filename Value="/usr/lib/lazarus/0.9.30.4/lcl/include/customedit.inc"/>
-        <TopLine Value="500"/>
-        <CursorPos Y="513"/>
-        <UsageCount Value="8"/>
-      </Unit51>
-      <Unit52>
-        <Filename Value="ttimeedit.pas"/>
-        <TopLine Value="376"/>
-        <UsageCount Value="2"/>
-      </Unit52>
-      <Unit53>
-        <Filename Value="rxtimeedit.pas"/>
-        <UnitName Value="RxTimeEdit"/>
-        <TopLine Value="66"/>
-        <CursorPos X="2" Y="34"/>
-        <UsageCount Value="196"/>
-      </Unit53>
-      <Unit54>
-        <Filename Value="rxspin.pas"/>
-        <TopLine Value="957"/>
-        <CursorPos X="4" Y="981"/>
-        <UsageCount Value="2"/>
-      </Unit54>
-      <Unit55>
-        <Filename Value="../Software/Lazarus/Componenten/FortesReport/rlreg.pas"/>
-        <UnitName Value="RLReg"/>
-        <UsageCount Value="2"/>
-      </Unit55>
-      <Unit56>
+      </Unit25>
+      <Unit26>
         <Filename Value="UserInterface/Forms/frmeasurements.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmMeasurements"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="216"/>
-        <CursorPos Y="216"/>
-        <UsageCount Value="201"/>
-      </Unit56>
-      <Unit57>
-        <Filename Value="graph.pas"/>
-        <UnitName Value="ASGraph"/>
-        <CursorPos Y="98"/>
-        <UsageCount Value="7"/>
-      </Unit57>
-      <Unit58>
-        <Filename Value="brewbuddygraph.pas"/>
-        <UnitName Value="BrewBuddyGraph"/>
-        <TopLine Value="449"/>
-        <CursorPos X="81" Y="463"/>
-        <UsageCount Value="196"/>
-      </Unit58>
-      <Unit59>
-        <Filename Value="PrintDialog.pas"/>
-        <ComponentName Value="PrinterForm"/>
-        <HasResources Value="True"/>
-        <ResourceBaseClass Value="Form"/>
-        <CursorPos X="15" Y="13"/>
-        <UsageCount Value="7"/>
-      </Unit59>
-      <Unit60>
-        <Filename Value="/usr/lib/lazarus/0.9.30.4/components/printers/printer4lazarus.pas"/>
-        <UnitName Value="Printer4Lazarus"/>
-        <CursorPos X="29" Y="10"/>
-        <UsageCount Value="6"/>
-      </Unit60>
-      <Unit61>
-        <Filename Value="/usr/lib/lazarus/0.9.30.4/components/printers/design/ideprinting.pas"/>
-        <UsageCount Value="6"/>
-      </Unit61>
-      <Unit62>
-        <Filename Value="/usr/lib/lazarus/0.9.30.4/components/lazcontrols/extendednotebook.pas"/>
-        <UnitName Value="ExtendedNotebook"/>
-        <UsageCount Value="6"/>
-      </Unit62>
-      <Unit63>
-        <Filename Value="/usr/lib/lazarus/0.9.30.4/ide/lazarus.pp"/>
-        <UnitName Value="Lazarus"/>
-        <UsageCount Value="6"/>
-      </Unit63>
-      <Unit64>
-        <Filename Value="/usr/lib/lazarus/0.9.30.4/lcl/include/customcheckbox.inc"/>
-        <TopLine Value="141"/>
-        <CursorPos Y="153"/>
-        <UsageCount Value="2"/>
-      </Unit64>
-      <Unit65>
+      </Unit26>
+      <Unit27>
         <Filename Value="UserInterface/Forms/frimport.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FrmImport"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="103"/>
-        <CursorPos Y="142"/>
-        <UsageCount Value="200"/>
-      </Unit65>
-      <Unit66>
-        <Filename Value="filefind.pas"/>
-        <UnitName Value="FileFind"/>
-        <TopLine Value="151"/>
-        <CursorPos Y="221"/>
-        <UsageCount Value="7"/>
-      </Unit66>
-      <Unit67>
+      </Unit27>
+      <Unit28>
         <Filename Value="UserInterface/Forms/frselectbeerstyle.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FrmSelectBeerStyle"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="27"/>
-        <CursorPos X="21" Y="62"/>
-        <UsageCount Value="200"/>
-      </Unit67>
-      <Unit68>
-        <Filename Value="promashimport.pas"/>
-        <UnitName Value="PromashImport"/>
-        <TopLine Value="1992"/>
-        <CursorPos X="17" Y="2005"/>
-        <UsageCount Value="5"/>
-      </Unit68>
-      <Unit69>
-        <Filename Value="/usr/lib/lazarus/0.9.30.4/lcl/interfaces/qt/qtobject.inc"/>
-        <TopLine Value="243"/>
-        <CursorPos Y="256"/>
-        <UsageCount Value="5"/>
-      </Unit69>
-      <Unit70>
+      </Unit28>
+      <Unit29>
         <Filename Value="UserInterface/Forms/frrecipetobrew.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmRecipeToBrew"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="73"/>
-        <CursorPos X="8" Y="106"/>
-        <UsageCount Value="200"/>
-      </Unit70>
-      <Unit71>
+      </Unit29>
+      <Unit30>
         <Filename Value="Units/bh_report.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="BH_report"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="993"/>
-        <CursorPos X="8" Y="1013"/>
-        <UsageCount Value="200"/>
-      </Unit71>
-      <Unit72>
+      </Unit30>
+      <Unit31>
         <Filename Value="UserInterface/Forms/frprintpreview.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FrmPrintPreview"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="71"/>
-        <CursorPos Y="71"/>
-        <UsageCount Value="201"/>
-      </Unit72>
-      <Unit73>
+      </Unit31>
+      <Unit32>
         <Filename Value="Units/bhprintforms.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="BHprintforms"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="680"/>
-        <CursorPos X="9" Y="694"/>
-        <UsageCount Value="200"/>
-      </Unit73>
-      <Unit74>
-        <Filename Value="/usr/lib/lazarus/0.9.30.4/lcl/include/font.inc"/>
-        <TopLine Value="796"/>
-        <CursorPos Y="810"/>
-        <UsageCount Value="3"/>
-      </Unit74>
-      <Unit75>
-        <Filename Value="/usr/lib/lazarus/0.9.30.4/lcl/include/rasterimage.inc"/>
-        <TopLine Value="292"/>
-        <CursorPos Y="308"/>
-        <UsageCount Value="3"/>
-      </Unit75>
-      <Unit76>
-        <Filename Value="etiket.pas"/>
-        <UnitName Value="Etiket"/>
-        <TopLine Value="977"/>
-        <CursorPos Y="1000"/>
-        <UsageCount Value="197"/>
-      </Unit76>
-      <Unit77>
-        <Filename Value="etiketlabel.pas"/>
-        <UnitName Value="EtiketLabel"/>
-        <TopLine Value="575"/>
-        <CursorPos Y="587"/>
-        <UsageCount Value="197"/>
-      </Unit77>
-      <Unit78>
-        <Filename Value="/usr/lib/lazarus/0.9.30.4/components/tachart/tagraph.pas"/>
-        <UnitName Value="TAGraph"/>
-        <TopLine Value="307"/>
-        <CursorPos Y="414"/>
-        <UsageCount Value="7"/>
-      </Unit78>
-      <Unit79>
-        <Filename Value="/usr/lib/lazarus/0.9.30.4/components/tachart/tachartaxis.pas"/>
-        <UnitName Value="TAChartAxis"/>
-        <TopLine Value="794"/>
-        <CursorPos X="15" Y="808"/>
-        <UsageCount Value="6"/>
-      </Unit79>
-      <Unit80>
-        <Filename Value="/usr/lib/lazarus/0.9.30.4/components/tachart/demo/save/main.pas"/>
-        <TopLine Value="56"/>
-        <UsageCount Value="7"/>
-      </Unit80>
-      <Unit81>
-        <Filename Value="/usr/lib/lazarus/0.9.30.4/components/tachart/tadrawutils.pas"/>
-        <UnitName Value="TADrawUtils"/>
-        <TopLine Value="28"/>
-        <UsageCount Value="7"/>
-      </Unit81>
-      <Unit82>
-        <Filename Value="/usr/lib/lazarus/0.9.30.4/components/tachart/demo/basic/unit1.pas"/>
-        <ComponentName Value="Form1"/>
-        <HasResources Value="True"/>
-        <ResourceBaseClass Value="Form"/>
-        <TopLine Value="103"/>
-        <CursorPos X="3" Y="118"/>
-        <UsageCount Value="7"/>
-      </Unit82>
-      <Unit83>
-        <Filename Value="/usr/lib/lazarus/0.9.30.4/components/tachart/tacustomseries.pas"/>
-        <UnitName Value="TACustomSeries"/>
-        <TopLine Value="635"/>
-        <CursorPos Y="648"/>
-        <UsageCount Value="7"/>
-      </Unit83>
-      <Unit84>
+      </Unit32>
+      <Unit33>
         <Filename Value="UserInterface/Forms/frpropagation.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FrmPropagation"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="71"/>
-        <CursorPos X="5" Y="88"/>
-        <UsageCount Value="200"/>
-      </Unit84>
-      <Unit85>
+      </Unit33>
+      <Unit34>
         <Filename Value="UserInterface/Forms/frrefractometer.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FrmRefractometer"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="33"/>
-        <CursorPos X="6" Y="63"/>
-        <UsageCount Value="200"/>
-      </Unit85>
-      <Unit86>
+      </Unit34>
+      <Unit35>
         <Filename Value="UserInterface/Forms/frboilmethod.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FrmBoilMethod"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="58"/>
-        <CursorPos X="7" Y="85"/>
-        <UsageCount Value="200"/>
-      </Unit86>
-      <Unit87>
+      </Unit35>
+      <Unit36>
         <Filename Value="UserInterface/Forms/fdatabaselocation.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FrmDatabaseLocation"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="76"/>
-        <CursorPos X="48" Y="116"/>
-        <UsageCount Value="200"/>
-      </Unit87>
-      <Unit88>
-        <Filename Value="../Software/Lazarus/Componenten/Mathematisch/dmat086/Units/uminmax.pas"/>
-        <UsageCount Value="3"/>
-      </Unit88>
-      <Unit89>
+      </Unit36>
+      <Unit37>
         <Filename Value="Units/umulfit.pas"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="64"/>
-        <CursorPos X="30" Y="15"/>
-        <UsageCount Value="200"/>
-      </Unit89>
-      <Unit90>
+      </Unit37>
+      <Unit38>
         <Filename Value="Units/utypes.pas"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="-1"/>
-        <UsageCount Value="200"/>
-      </Unit90>
-      <Unit91>
+      </Unit38>
+      <Unit39>
         <Filename Value="UserInterface/Forms/frdividebrew.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FrmDivideBrew"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="15"/>
-        <CursorPos X="3" Y="41"/>
-        <UsageCount Value="200"/>
-      </Unit91>
-      <Unit92>
+      </Unit39>
+      <Unit40>
         <Filename Value="UserInterface/Forms/fryeasts3.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FrmYeasts3"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="77"/>
-        <CursorPos X="13" Y="117"/>
-        <UsageCount Value="200"/>
-      </Unit92>
-      <Unit93>
+      </Unit40>
+      <Unit41>
         <Filename Value="UserInterface/Forms/frchoosebeerstyle.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FrmChooseBeerstyle"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="12"/>
-        <CursorPos X="68" Y="46"/>
-        <UsageCount Value="200"/>
-      </Unit93>
-      <Unit94>
+      </Unit41>
+      <Unit42>
         <Filename Value="UserInterface/Forms/frchoosebrewschars.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FrmChooseBrewChars"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="48"/>
-        <CursorPos Y="70"/>
-        <UsageCount Value="200"/>
-      </Unit94>
-      <Unit95>
+      </Unit42>
+      <Unit43>
         <Filename Value="UserInterface/Forms/frsplash.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FrmSplash"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="23"/>
-        <CursorPos X="16" Y="58"/>
-        <UsageCount Value="200"/>
-      </Unit95>
-      <Unit96>
-        <Filename Value="/usr/lib/lazarus/0.9.30.4/ide/idecmdline.pas"/>
-        <UnitName Value="IDECmdLine"/>
-        <UsageCount Value="2"/>
-      </Unit96>
-      <Unit97>
-        <Filename Value="/usr/share/fpcsrc/2.6.0/rtl/objpas/sysutils/osutilsh.inc"/>
-        <CursorPos X="20" Y="41"/>
-        <UsageCount Value="2"/>
-      </Unit97>
-      <Unit98>
-        <Filename Value="/usr/share/fpcsrc/2.6.0/rtl/objpas/sysutils/osutil.inc"/>
-        <TopLine Value="104"/>
-        <CursorPos X="30" Y="127"/>
-        <UsageCount Value="2"/>
-      </Unit98>
-      <Unit99>
-        <Filename Value="/usr/share/fpcsrc/2.6.0/rtl/objpas/sysutils/fina.inc"/>
-        <TopLine Value="37"/>
-        <UsageCount Value="2"/>
-      </Unit99>
-      <Unit100>
-        <Filename Value="/usr/share/fpcsrc/2.6.0/rtl/objpas/objpas.pp"/>
-        <TopLine Value="174"/>
-        <CursorPos X="18" Y="221"/>
-        <UsageCount Value="2"/>
-      </Unit100>
-      <Unit101>
-        <Filename Value="/usr/share/fpcsrc/2.6.0/rtl/objpas/sysutils/sysutils.inc"/>
-        <UsageCount Value="2"/>
-      </Unit101>
-      <Unit102>
-        <Filename Value="/usr/share/fpcsrc/2.6.0/rtl/win/windirs.pp"/>
-        <TopLine Value="91"/>
-        <UsageCount Value="2"/>
-      </Unit102>
-      <Unit103>
-        <Filename Value="/usr/lib/lazarus/0.9.30.4/components/tachart/talegend.pas"/>
-        <UnitName Value="TALegend"/>
-        <TopLine Value="179"/>
-        <CursorPos X="9" Y="192"/>
-        <UsageCount Value="2"/>
-      </Unit103>
-      <Unit104>
-        <Filename Value="../../lazarus/fpc/2.6.0/source/rtl/win/windirs.pp"/>
-        <CursorPos X="46" Y="4"/>
-        <UsageCount Value="3"/>
-      </Unit104>
-      <Unit105>
-        <Filename Value="../../lazarus/lcl/include/treeview.inc"/>
-        <TopLine Value="1426"/>
-        <CursorPos Y="1437"/>
-        <UsageCount Value="2"/>
-      </Unit105>
-      <Unit106>
-        <Filename Value="../../lazarus/lcl/include/control.inc"/>
-        <TopLine Value="2278"/>
-        <CursorPos Y="2289"/>
-        <UsageCount Value="2"/>
-      </Unit106>
-      <Unit107>
-        <Filename Value="../../lazarus/lcl/include/buttoncontrol.inc"/>
-        <TopLine Value="52"/>
-        <CursorPos Y="63"/>
-        <UsageCount Value="2"/>
-      </Unit107>
-      <Unit108>
-        <Filename Value="../../lazarus/lcl/include/customedit.inc"/>
-        <TopLine Value="501"/>
-        <CursorPos Y="512"/>
-        <UsageCount Value="3"/>
-      </Unit108>
-      <Unit109>
-        <Filename Value="../../lazarus/lcl/grids.pas"/>
-        <UnitName Value="Grids"/>
-        <TopLine Value="5051"/>
-        <CursorPos X="23" Y="5058"/>
-        <UsageCount Value="4"/>
-      </Unit109>
-      <Unit110>
-        <Filename Value="../../lazarus/lcl/include/spinedit.inc"/>
-        <CursorPos X="3" Y="3"/>
-        <UsageCount Value="3"/>
-      </Unit110>
-      <Unit111>
-        <Filename Value="../../lazarus/lcl/spin.pp"/>
-        <UnitName Value="Spin"/>
-        <TopLine Value="105"/>
-        <CursorPos X="22" Y="181"/>
-        <UsageCount Value="3"/>
-      </Unit111>
-      <Unit112>
-        <Filename Value="../../lazarus/lcl/include/wincontrol.inc"/>
-        <TopLine Value="5231"/>
-        <CursorPos Y="5242"/>
-        <UsageCount Value="3"/>
-      </Unit112>
-      <Unit113>
-        <Filename Value="../../lazarus/lcl/lclmessageglue.pas"/>
-        <UnitName Value="LCLMessageGlue"/>
-        <TopLine Value="106"/>
-        <CursorPos Y="121"/>
-        <UsageCount Value="3"/>
-      </Unit113>
-      <Unit114>
-        <Filename Value="../../lazarus/lcl/lclclasses.pp"/>
-        <UnitName Value="LCLClasses"/>
-        <TopLine Value="129"/>
-        <CursorPos Y="141"/>
-        <UsageCount Value="3"/>
-      </Unit114>
-      <Unit115>
-        <Filename Value="../../lazarus/lcl/interfaces/win32/win32callback.inc"/>
-        <TopLine Value="2498"/>
-        <CursorPos Y="2511"/>
-        <UsageCount Value="3"/>
-      </Unit115>
-      <Unit116>
-        <Filename Value="../../lazarus/lcl/forms.pp"/>
-        <UnitName Value="Forms"/>
-        <TopLine Value="59"/>
-        <CursorPos X="41" Y="70"/>
-        <UsageCount Value="4"/>
-      </Unit116>
-      <Unit117>
-        <Filename Value="/usr/lib/lazarus/0.9.30.4/lcl/comctrls.pp"/>
-        <UnitName Value="ComCtrls"/>
-        <TopLine Value="3045"/>
-        <CursorPos X="13" Y="2234"/>
-        <UsageCount Value="7"/>
-      </Unit117>
-      <Unit118>
+      </Unit43>
+      <Unit44>
         <Filename Value="UserInterface/Forms/frinfo.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmInfo"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="-1"/>
-        <CursorPos X="3" Y="79"/>
-        <UsageCount Value="200"/>
-      </Unit118>
-      <Unit119>
+      </Unit44>
+      <Unit45>
         <Filename Value="Units/vinfo.pas"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="-1"/>
-        <CursorPos X="44" Y="8"/>
-        <UsageCount Value="200"/>
-      </Unit119>
-      <Unit120>
-        <Filename Value="/usr/share/fpcsrc/2.6.0/packages/fcl-res/src/versiontypes.pp"/>
-        <TopLine Value="25"/>
-        <CursorPos X="3" Y="49"/>
-        <UsageCount Value="7"/>
-      </Unit120>
-      <Unit121>
-        <Filename Value="webstuff.pas"/>
-        <UnitName Value="Webstuff"/>
-        <TopLine Value="127"/>
-        <CursorPos Y="92"/>
-        <UsageCount Value="17"/>
-      </Unit121>
-      <Unit122>
-        <Filename Value="/Software/Lazarus/proejct1/unit1.pas"/>
-        <UnitName Value="Unit1"/>
-        <TopLine Value="38"/>
-        <CursorPos Y="58"/>
-        <UsageCount Value="7"/>
-      </Unit122>
-      <Unit123>
-        <Filename Value="Synapse/source/lib/ftpsend.pas"/>
-        <CursorPos X="86" Y="4"/>
-        <UsageCount Value="5"/>
-      </Unit123>
-      <Unit124>
+      </Unit45>
+      <Unit46>
         <Filename Value="UserInterface/Forms/frsynchronize.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmFTPList"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="-1"/>
-        <CursorPos X="39" Y="9"/>
-        <UsageCount Value="200"/>
-      </Unit124>
-      <Unit125>
-        <Filename Value="/usr/lib/lazarus/0.9.30.4/lcl/stdctrls.pp"/>
-        <UnitName Value="StdCtrls"/>
-        <TopLine Value="1173"/>
-        <CursorPos X="3" Y="1185"/>
-        <UsageCount Value="7"/>
-      </Unit125>
-      <Unit126>
+      </Unit46>
+      <Unit47>
         <Filename Value="UserInterface/Forms/frchoosebrews.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmChooseBrewsList"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="69"/>
-        <CursorPos X="31" Y="84"/>
-        <UsageCount Value="201"/>
-      </Unit126>
-      <Unit127>
-        <Filename Value="AlReport/alrep.pas"/>
-        <UnitName Value="Alrep"/>
-        <UsageCount Value="1"/>
-      </Unit127>
-      <Unit128>
-        <Filename Value="/usr/lib/lazarus/0.9.30.4/lcl/include/customform.inc"/>
-        <TopLine Value="114"/>
-        <CursorPos Y="134"/>
-        <UsageCount Value="2"/>
-      </Unit128>
-      <Unit129>
-        <Filename Value="/usr/share/lazarus/1.0/components/tachart/tachartaxis.pas"/>
-        <UnitName Value="TAChartAxis"/>
-        <TopLine Value="13"/>
-        <CursorPos X="3" Y="27"/>
-        <UsageCount Value="1"/>
-      </Unit129>
-      <Unit130>
-        <Filename Value="/usr/share/lazarus/1.0/components/tachart/tadraweraggpas.pas"/>
-        <UnitName Value="TADrawerAggPas"/>
-        <TopLine Value="8"/>
-        <CursorPos X="22" Y="23"/>
-        <UsageCount Value="1"/>
-      </Unit130>
-      <Unit131>
-        <Filename Value="/usr/share/lazarus/1.0/lcl/grids.pas"/>
-        <UnitName Value="Grids"/>
-        <TopLine Value="5448"/>
-        <CursorPos Y="5462"/>
-        <UsageCount Value="2"/>
-      </Unit131>
-      <Unit132>
-        <Filename Value="/usr/share/lazarus/1.0/components/tachart/tagraph.pas"/>
-        <UnitName Value="TAGraph"/>
-        <TopLine Value="1133"/>
-        <CursorPos X="46" Y="1146"/>
-        <UsageCount Value="1"/>
-      </Unit132>
-      <Unit133>
-        <Filename Value="/usr/share/lazarus/1.0/components/tachart/tadrawercanvas.pas"/>
-        <UnitName Value="TADrawerCanvas"/>
-        <TopLine Value="175"/>
-        <CursorPos Y="137"/>
-        <UsageCount Value="1"/>
-      </Unit133>
-      <Unit134>
-        <Filename Value="/usr/share/lazarus/1.0/components/tachart/taprint.pas"/>
-        <UnitName Value="TAPrint"/>
-        <TopLine Value="30"/>
-        <UsageCount Value="1"/>
-      </Unit134>
-      <Unit135>
-        <Filename Value="/usr/share/lazarus/1.0/lcl/include/rasterimage.inc"/>
-        <TopLine Value="291"/>
-        <CursorPos Y="305"/>
-        <UsageCount Value="1"/>
-      </Unit135>
-      <Unit136>
-        <Filename Value="/usr/share/lazarus/1.0/lcl/include/customedit.inc"/>
-        <TopLine Value="517"/>
-        <CursorPos Y="526"/>
-        <UsageCount Value="1"/>
-      </Unit136>
-      <Unit137>
-        <Filename Value="/usr/share/lazarus/1.0/lcl/include/control.inc"/>
-        <TopLine Value="2729"/>
-        <CursorPos Y="2743"/>
-        <UsageCount Value="1"/>
-      </Unit137>
-      <Unit138>
-        <Filename Value="/usr/share/lazarus/1.0/packager/registration/registerfcl.pas"/>
-        <UnitName Value="RegisterFCL"/>
-        <UsageCount Value="1"/>
-      </Unit138>
-      <Unit139>
-        <Filename Value="/usr/share/lazarus/1.0/packager/registration/fcllaz.pas"/>
-        <UsageCount Value="1"/>
-      </Unit139>
-      <Unit140>
-        <Filename Value="Synapse/source/lib/laz_synapse.pas"/>
-        <EditorIndex Value="-1"/>
-        <CursorPos X="22" Y="14"/>
-        <UsageCount Value="6"/>
-      </Unit140>
-      <Unit141>
-        <Filename Value="/usr/share/lazarus/1.0/lcl/interfaces/lcl.pas"/>
-        <UnitName Value="LCL"/>
-        <UsageCount Value="1"/>
-      </Unit141>
-      <Unit142>
-        <Filename Value="/usr/share/lazarus/1.0/lcl/alllclunits.pp"/>
-        <UsageCount Value="1"/>
-      </Unit142>
-      <Unit143>
-        <Filename Value="/usr/share/lazarus/1.0/components/aggpas/lazarus/aggpaslcl.pas"/>
-        <UnitName Value="AggPasLCL"/>
-        <UsageCount Value="1"/>
-      </Unit143>
-      <Unit144>
-        <Filename Value="/usr/share/lazarus/1.0/components/tachart/tachartprint.pas"/>
-        <UnitName Value="TAChartPrint"/>
-        <CursorPos X="3" Y="10"/>
-        <UsageCount Value="1"/>
-      </Unit144>
-      <Unit145>
-        <Filename Value="/usr/share/lazarus/1.0/components/tachart/tadrawerwmf.pas"/>
-        <UnitName Value="TADrawerWMF"/>
-        <UsageCount Value="1"/>
-      </Unit145>
-      <Unit146>
-        <Filename Value="/usr/share/lazarus/1.0/lcl/include/customcheckbox.inc"/>
-        <TopLine Value="109"/>
-        <CursorPos Y="123"/>
-        <UsageCount Value="2"/>
-      </Unit146>
-      <Unit147>
+      </Unit47>
+      <Unit48>
         <Filename Value="UserInterface/Forms/frgristwizard.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FrmGristWizard"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="2"/>
-        <CursorPos X="86" Y="8"/>
-        <UsageCount Value="172"/>
-      </Unit147>
-      <Unit148>
-        <Filename Value="/usr/share/lazarus/1.0/components/lazutils/fileutil.inc"/>
-        <TopLine Value="986"/>
-        <CursorPos Y="1000"/>
-        <UsageCount Value="2"/>
-      </Unit148>
-      <Unit149>
-        <Filename Value="/usr/share/fpcsrc/2.6.0/packages/fcl-xml/src/xmlread.pp"/>
-        <UnitName Value="XMLRead"/>
-        <TopLine Value="30"/>
-        <CursorPos X="27" Y="44"/>
-        <UsageCount Value="6"/>
-      </Unit149>
-      <Unit150>
+      </Unit48>
+      <Unit49>
         <Filename Value="Units/cloud.pas"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="1307"/>
-        <CursorPos X="42" Y="194"/>
-        <UsageCount Value="120"/>
-      </Unit150>
-      <Unit151>
-        <Filename Value="/usr/share/lazarus/1.0.2/lcl/extctrls.pp"/>
-        <UnitName Value="ExtCtrls"/>
-        <TopLine Value="37"/>
-        <CursorPos X="35" Y="61"/>
-        <UsageCount Value="3"/>
-      </Unit151>
-      <Unit152>
-        <Filename Value="/usr/share/lazarus/1.0.2/lcl/include/page.inc"/>
-        <CursorPos X="34" Y="21"/>
-        <UsageCount Value="3"/>
-      </Unit152>
-      <Unit153>
-        <Filename Value="/usr/share/lazarus/1.0.2/lcl/controls.pp"/>
-        <UnitName Value="Controls"/>
-        <TopLine Value="3176"/>
-        <CursorPos X="48" Y="1975"/>
-        <UsageCount Value="3"/>
-      </Unit153>
-      <Unit154>
-        <Filename Value="/usr/share/lazarus/1.0.2/lcl/buttons.pp"/>
-        <UnitName Value="Buttons"/>
-        <TopLine Value="564"/>
-        <UsageCount Value="3"/>
-      </Unit154>
-      <Unit155>
+      </Unit49>
+      <Unit50>
         <Filename Value="UserInterface/Forms/frsettings.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmSettings"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="91"/>
-        <CursorPos X="32" Y="115"/>
-        <UsageCount Value="121"/>
-      </Unit155>
-      <Unit156>
+      </Unit50>
+      <Unit51>
         <Filename Value="UserInterface/Forms/frrestoredatabases.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmRestoreDatabase"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="-1"/>
-        <CursorPos X="47" Y="16"/>
-        <UsageCount Value="120"/>
-      </Unit156>
-      <Unit157>
+      </Unit51>
+      <Unit52>
         <Filename Value="Units/neuroot.pas"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="189"/>
-        <CursorPos X="25" Y="213"/>
-        <UsageCount Value="120"/>
-      </Unit157>
-      <Unit158>
-        <Filename Value="fann.pas"/>
-        <UnitName Value="FANN"/>
-        <UsageCount Value="4"/>
-      </Unit158>
-      <Unit159>
-        <Filename Value="fannnetwork.pas"/>
-        <UnitName Value="FannNetwork"/>
-        <UsageCount Value="4"/>
-      </Unit159>
-      <Unit160>
-        <Filename Value="frnntrain.pas"/>
-        <ComponentName Value="FrmNNTrain"/>
-        <HasResources Value="True"/>
-        <ResourceBaseClass Value="Form"/>
-        <TopLine Value="65"/>
-        <CursorPos X="40" Y="88"/>
-        <UsageCount Value="63"/>
-      </Unit160>
-      <Unit161>
-        <Filename Value="Synapse/source/lib/httpsend.pas"/>
-        <TopLine Value="250"/>
-        <CursorPos X="26" Y="274"/>
-        <UsageCount Value="5"/>
-      </Unit161>
-      <Unit162>
+      </Unit52>
+      <Unit53>
         <Filename Value="UserInterface/Forms/frgetpasswd.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmGetPasswd"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="7"/>
-        <CursorPos Y="21"/>
-        <UsageCount Value="103"/>
-      </Unit162>
-      <Unit163>
+      </Unit53>
+      <Unit54>
         <Filename Value="UserInterface/Forms/frdownloadprogress.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FrmDownloadProgress"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="29"/>
-        <CursorPos Y="57"/>
-        <UsageCount Value="97"/>
-      </Unit163>
-      <Unit164>
-        <Filename Value="/usr/share/fpcsrc/2.6.0/packages/fcl-xml/src/xmlutils.pp"/>
-        <TopLine Value="83"/>
-        <CursorPos X="61" Y="97"/>
-        <UsageCount Value="5"/>
-      </Unit164>
-      <Unit165>
-        <Filename Value="Synapse/source/lib/synautil.pas"/>
-        <TopLine Value="268"/>
-        <UsageCount Value="5"/>
-      </Unit165>
-      <Unit166>
-        <Filename Value="/usr/share/fpcsrc/2.6.0/rtl/inc/variants.pp"/>
-        <TopLine Value="96"/>
-        <CursorPos X="43" Y="110"/>
-        <UsageCount Value="5"/>
-      </Unit166>
-      <Unit167>
-        <Filename Value="franalysis.pas"/>
-        <ComponentName Value="FrmAnalysis"/>
-        <HasResources Value="True"/>
-        <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="58"/>
-        <CursorPos X="60" Y="84"/>
-        <UsageCount Value="6"/>
-      </Unit167>
-      <Unit168>
-        <Filename Value="/usr/share/lazarus/1.4.2/lcl/editbtn.pas"/>
-        <UnitName Value="EditBtn"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="35"/>
-        <CursorPos X="34" Y="55"/>
-        <UsageCount Value="6"/>
-      </Unit168>
-      <Unit169>
-        <Filename Value="/usr/share/lazarus/1.4.2/lcl/controls.pp"/>
-        <UnitName Value="Controls"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="1886"/>
-        <CursorPos X="3" Y="1861"/>
-        <UsageCount Value="6"/>
-      </Unit169>
-      <Unit170>
-        <Filename Value="/usr/lib/lazarus/1.6/ide/lazarus.pp"/>
-        <UnitName Value="Lazarus"/>
-        <EditorIndex Value="-1"/>
-        <WindowIndex Value="-1"/>
-        <TopLine Value="37"/>
-        <CursorPos X="3" Y="54"/>
-        <UsageCount Value="6"/>
-      </Unit170>
-      <Unit171>
-        <Filename Value="/usr/lib/lazarus/1.6/lcl/grids.pas"/>
-        <UnitName Value="Grids"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="5711"/>
-        <CursorPos Y="5723"/>
-        <UsageCount Value="6"/>
-      </Unit171>
-      <Unit172>
-        <Filename Value="/usr/lib/lazarus/1.6/lcl/interfaces/qt/qtwidgets.pas"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="5552"/>
-        <CursorPos X="46" Y="5587"/>
-        <UsageCount Value="6"/>
-      </Unit172>
-      <Unit173>
-        <Filename Value="/usr/lib/lazarus/1.6/lcl/include/spinedit.inc"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="116"/>
-        <CursorPos Y="140"/>
-        <UsageCount Value="6"/>
-      </Unit173>
-      <Unit174>
-        <Filename Value="rcstrngs.pas"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="519"/>
-        <CursorPos X="48" Y="541"/>
-        <UsageCount Value="7"/>
-      </Unit174>
-      <Unit175>
-        <Filename Value="subs.pas"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="354"/>
-        <CursorPos X="32" Y="375"/>
-        <UsageCount Value="7"/>
-      </Unit175>
-      <Unit176>
-        <Filename Value="/usr/lib/lazarus/1.6/lcl/dialogs.pp"/>
-        <UnitName Value="Dialogs"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="160"/>
-        <CursorPos X="3" Y="180"/>
-        <UsageCount Value="6"/>
-      </Unit176>
-      <Unit177>
-        <Filename Value="/usr/lib/lazarus/1.6/lcl/stdctrls.pp"/>
-        <UnitName Value="StdCtrls"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="1618"/>
-        <CursorPos X="20" Y="1636"/>
-        <UsageCount Value="6"/>
-      </Unit177>
-      <Unit178>
-        <Filename Value="/usr/lib/lazarus/1.6/lcl/include/lcl_defines.inc"/>
-        <EditorIndex Value="-1"/>
-        <UsageCount Value="6"/>
-      </Unit178>
-      <Unit179>
-        <Filename Value="/usr/lib/lazarus/1.6/lcl/include/customlabel.inc"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="46"/>
-        <UsageCount Value="6"/>
-      </Unit179>
-      <Unit180>
-        <Filename Value="ExpandPanels/expandpanels.pas"/>
-        <UnitName Value="ExpandPanels"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="70"/>
-        <CursorPos X="3" Y="42"/>
-        <UsageCount Value="6"/>
-      </Unit180>
-      <Unit181>
-        <Filename Value="uniqueinstance-1.0/uniqueinstance.pas"/>
-        <UnitName Value="UniqueInstance"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="24"/>
-        <CursorPos X="3" Y="41"/>
-        <UsageCount Value="6"/>
-      </Unit181>
-      <Unit182>
-        <Filename Value="/usr/share/lazarus/1.8.2/components/lazutils/fileutil.pas"/>
-        <UnitName Value="FileUtil"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="10"/>
-        <CursorPos X="17" Y="19"/>
-        <UsageCount Value="6"/>
-      </Unit182>
-      <Unit183>
-        <Filename Value="frmain.lfm"/>
-        <EditorIndex Value="-1"/>
-        <UsageCount Value="6"/>
-        <DefaultSyntaxHighlighter Value="LFM"/>
-      </Unit183>
-      <Unit184>
-        <Filename Value="/usr/share/lazarus/1.8.2/lcl/spin.pp"/>
-        <UnitName Value="Spin"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="175"/>
-        <CursorPos X="17" Y="212"/>
-        <UsageCount Value="8"/>
-      </Unit184>
-      <Unit185>
-        <Filename Value="/usr/share/lazarus/1.8.2/lcl/widgetset/wsspin.pp"/>
-        <UnitName Value="WSSpin"/>
-        <EditorIndex Value="-1"/>
-        <CursorPos X="56" Y="49"/>
-        <UsageCount Value="7"/>
-      </Unit185>
-      <Unit186>
-        <Filename Value="/usr/share/lazarus/1.8.2/lcl/include/spinedit.inc"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="190"/>
-        <CursorPos X="24" Y="205"/>
-        <UsageCount Value="8"/>
-      </Unit186>
-      <Unit187>
-        <Filename Value="/usr/share/lazarus/1.8.2/lcl/stdctrls.pp"/>
-        <UnitName Value="StdCtrls"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="1645"/>
-        <CursorPos X="19" Y="1665"/>
-        <UsageCount Value="7"/>
-      </Unit187>
-      <Unit188>
-        <Filename Value="/usr/share/lazarus/1.8.2/lcl/include/customedit.inc"/>
-        <EditorIndex Value="-1"/>
-        <CursorPos X="75" Y="15"/>
-        <UsageCount Value="7"/>
-      </Unit188>
-      <Unit189>
-        <Filename Value="/usr/share/lazarus/1.8.2/lcl/controls.pp"/>
-        <UnitName Value="Controls"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="2901"/>
-        <CursorPos X="11" Y="2710"/>
-        <UsageCount Value="8"/>
-      </Unit189>
-      <Unit190>
-        <Filename Value="/usr/share/lazarus/1.8.2/ide/lazarus.pp"/>
-        <UnitName Value="Lazarus"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="121"/>
-        <CursorPos Y="161"/>
-        <UsageCount Value="7"/>
-      </Unit190>
-      <Unit191>
-        <Filename Value="/usr/include/c++/7/fenv.h"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="41"/>
-        <CursorPos Y="81"/>
-        <UsageCount Value="8"/>
-        <DefaultSyntaxHighlighter Value="C++"/>
-      </Unit191>
-      <Unit192>
-        <Filename Value="openal.pas"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="2172"/>
-        <CursorPos Y="2191"/>
-        <UsageCount Value="24"/>
-      </Unit192>
-      <Unit193>
-        <Filename Value="/usr/share/fpcsrc/3.0.4/packages/openal/src/openal.pas"/>
-        <EditorIndex Value="-1"/>
-        <CursorPos Y="40"/>
-        <UsageCount Value="8"/>
-      </Unit193>
-      <Unit194>
-        <Filename Value="alch.inc"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="190"/>
-        <UsageCount Value="8"/>
-      </Unit194>
-      <Unit195>
-        <Filename Value="alexth.inc"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="80"/>
-        <CursorPos X="63" Y="95"/>
-        <UsageCount Value="8"/>
-      </Unit195>
-      <Unit196>
-        <Filename Value="alh.inc"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="375"/>
-        <CursorPos X="10" Y="90"/>
-        <UsageCount Value="8"/>
-      </Unit196>
-      <Unit197>
-        <Filename Value="../Synapse/source/lib/laz_synapse.pas"/>
-        <EditorIndex Value="-1"/>
-        <CursorPos X="3" Y="11"/>
-        <UsageCount Value="10"/>
-      </Unit197>
-      <Unit198>
-        <Filename Value="../../../MAGWEG/BrewBuddy/Source/3rdParty/Synapse/source/lib/laz_synapse.pas"/>
-        <EditorIndex Value="-1"/>
-        <CursorPos X="3" Y="11"/>
-        <UsageCount Value="10"/>
-      </Unit198>
-      <Unit199>
-        <Filename Value="OSspecific/osspecific.pas"/>
-        <IsPartOfProject Value="True"/>
-        <UnitName Value="OSspecific"/>
-        <EditorIndex Value="3"/>
-        <CursorPos X="52" Y="21"/>
-        <UsageCount Value="22"/>
-        <Loaded Value="True"/>
-      </Unit199>
-      <Unit200>
-        <Filename Value="../../../lazarus/lcl/graphics.pp"/>
-        <UnitName Value="Graphics"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="257"/>
-        <CursorPos X="3" Y="266"/>
-        <UsageCount Value="10"/>
-      </Unit200>
+      </Unit54>
     </Units>
-    <JumpHistory Count="30" HistoryIndex="29">
-      <Position1>
-        <Filename Value="UserInterface/Forms/frmain.pas"/>
-        <Caret Line="1041" Column="30" TopLine="1022"/>
-      </Position1>
-      <Position2>
-        <Filename Value="UserInterface/Forms/frmain.pas"/>
-        <Caret Line="1039" Column="3" TopLine="1021"/>
-      </Position2>
-      <Position3>
-        <Filename Value="OSspecific/osspecific.pas"/>
-        <Caret Line="14" Column="25"/>
-      </Position3>
-      <Position4>
-        <Filename Value="UserInterface/Forms/frmain.pas"/>
-        <Caret Line="1039" Column="10" TopLine="1021"/>
-      </Position4>
-      <Position5>
-        <Filename Value="UserInterface/Forms/frmain.pas"/>
-      </Position5>
-      <Position6>
-        <Filename Value="UserInterface/Forms/frmain.pas"/>
-        <Caret Line="1039" Column="10" TopLine="1010"/>
-      </Position6>
-      <Position7>
-        <Filename Value="UserInterface/Forms/frmain.pas"/>
-        <Caret Line="2008" Column="72" TopLine="1980"/>
-      </Position7>
-      <Position8>
-        <Filename Value="UserInterface/Forms/frmain.pas"/>
-      </Position8>
-      <Position9>
-        <Filename Value="UserInterface/Forms/frmain.pas"/>
-        <Caret Line="1039" Column="10" TopLine="1010"/>
-      </Position9>
-      <Position10>
-        <Filename Value="UserInterface/Forms/frmain.pas"/>
-        <Caret Line="2008" Column="72" TopLine="1980"/>
-      </Position10>
-      <Position11>
-        <Filename Value="UserInterface/Forms/frmain.pas"/>
-        <Caret Line="2092" Column="56" TopLine="2064"/>
-      </Position11>
-      <Position12>
-        <Filename Value="UserInterface/Forms/frmain.pas"/>
-        <Caret Line="5139" Column="46" TopLine="5110"/>
-      </Position12>
-      <Position13>
-        <Filename Value="UserInterface/Forms/frmain.pas"/>
-        <Caret Line="5144" Column="46" TopLine="5115"/>
-      </Position13>
-      <Position14>
-        <Filename Value="UserInterface/Forms/frmain.pas"/>
-        <Caret Line="6693" Column="62" TopLine="6664"/>
-      </Position14>
-      <Position15>
-        <Filename Value="UserInterface/Forms/frmain.pas"/>
-        <Caret Line="7047" Column="36" TopLine="7018"/>
-      </Position15>
-      <Position16>
-        <Filename Value="UserInterface/Forms/frmain.pas"/>
-        <Caret Line="7123" Column="36" TopLine="7094"/>
-      </Position16>
-      <Position17>
-        <Filename Value="UserInterface/Forms/frmain.pas"/>
-        <Caret Line="7373" Column="56" TopLine="7344"/>
-      </Position17>
-      <Position18>
-        <Filename Value="UserInterface/Forms/frmain.pas"/>
-        <Caret Line="7410" Column="56" TopLine="7381"/>
-      </Position18>
-      <Position19>
-        <Filename Value="UserInterface/Forms/frmain.pas"/>
-        <Caret Line="5" Column="21"/>
-      </Position19>
-      <Position20>
-        <Filename Value="UserInterface/Forms/frmain.pas"/>
-        <Caret Line="1039" Column="7" TopLine="1010"/>
-      </Position20>
-      <Position21>
-        <Filename Value="UserInterface/Forms/frmain.pas"/>
-        <Caret Line="1017" Column="29" TopLine="1010"/>
-      </Position21>
-      <Position22>
-        <Filename Value="UserInterface/Forms/frmain.pas"/>
-      </Position22>
-      <Position23>
-        <Filename Value="UserInterface/Forms/frmain.pas"/>
-        <Caret Line="949" Column="27" TopLine="921"/>
-      </Position23>
-      <Position24>
-        <Filename Value="UserInterface/Forms/frmain.pas"/>
-        <Caret Line="957" Column="44" TopLine="929"/>
-      </Position24>
-      <Position25>
-        <Filename Value="UserInterface/Forms/frmain.pas"/>
-        <Caret Line="958" Column="39" TopLine="930"/>
-      </Position25>
-      <Position26>
-        <Filename Value="UserInterface/Forms/frmain.pas"/>
-        <Caret Line="1007" Column="20" TopLine="990"/>
-      </Position26>
-      <Position27>
-        <Filename Value="UserInterface/Forms/frmain.pas"/>
-        <Caret Line="1029" Column="16" TopLine="1000"/>
-      </Position27>
-      <Position28>
-        <Filename Value="UserInterface/Forms/frmain.pas"/>
-        <Caret Line="1248" Column="16" TopLine="1220"/>
-      </Position28>
-      <Position29>
-        <Filename Value="UserInterface/Forms/frmain.pas"/>
-        <Caret Line="1041" Column="7" TopLine="1017"/>
-      </Position29>
-      <Position30>
-        <Filename Value="brewbuddy.pas"/>
-        <Caret Line="6"/>
-      </Position30>
-    </JumpHistory>
   </ProjectOptions>
   <CompilerOptions>
     <Version Value="11"/>
@@ -1777,8 +509,8 @@
       <Filename Value="../Output/brewbuddy"/>
     </Target>
     <SearchPaths>
-      <IncludeFiles Value="../Output;$(ProjOutDir)"/>
-      <OtherUnitFiles Value="UserInterface/Forms;Units;OSspecific"/>
+      <IncludeFiles Value="$(ProjOutDir)"/>
+      <OtherUnitFiles Value="UserInterface/Forms;Units"/>
       <UnitOutputDirectory Value="../Output/units"/>
     </SearchPaths>
     <Parsing>
@@ -1808,37 +540,6 @@
     </Linking>
   </CompilerOptions>
   <Debugging>
-    <BreakPoints Count="3">
-      <Item1>
-        <Kind Value="bpkSource"/>
-        <WatchScope Value="wpsLocal"/>
-        <WatchKind Value="wpkWrite"/>
-        <Source Value="hulpfuncties.pas"/>
-        <Line Value="2462"/>
-      </Item1>
-      <Item2>
-        <Kind Value="bpkSource"/>
-        <WatchScope Value="wpsLocal"/>
-        <WatchKind Value="wpkWrite"/>
-        <Source Value="openal.pas"/>
-        <Line Value="2189"/>
-      </Item2>
-      <Item3>
-        <Kind Value="bpkSource"/>
-        <WatchScope Value="wpsLocal"/>
-        <WatchKind Value="wpkWrite"/>
-        <Source Value="openal.pas"/>
-        <Line Value="1973"/>
-      </Item3>
-    </BreakPoints>
-    <Watches Count="2">
-      <Item1>
-        <Expression Value="TYeast(FYeasts[i]).FAmountYeast.fValue"/>
-      </Item1>
-      <Item2>
-        <Expression Value="TYeast(FYeasts[i]).fAmount.FValue"/>
-      </Item2>
-    </Watches>
     <Exceptions Count="4">
       <Item1>
         <Name Value="EAbort"/>
