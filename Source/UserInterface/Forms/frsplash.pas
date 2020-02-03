@@ -1,4 +1,4 @@
-unit frsplash;
+unit FrSplash;
 
 {$mode objfpc}{$H+}
 

@@ -1,4 +1,4 @@
-unit frchoosebrewschars;
+unit FrChooseBrewsChars;
 
 {$mode objfpc}{$H+}
 

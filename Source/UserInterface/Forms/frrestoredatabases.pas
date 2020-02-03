@@ -1,4 +1,4 @@
-unit frrestoredatabases;
+unit FrRestoreDatabases;
 
 {$mode objfpc}{$H+}
 

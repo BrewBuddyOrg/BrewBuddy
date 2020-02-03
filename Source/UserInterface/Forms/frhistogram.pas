@@ -1,4 +1,4 @@
-unit frhistogram;
+unit FrHistogram;
 
 {$mode objfpc}{$H+}
 

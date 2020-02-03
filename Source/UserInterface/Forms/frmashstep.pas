@@ -1,4 +1,4 @@
-unit frmashstep;
+unit FrMashstep;
 
 {$mode objfpc}{$H+}
 

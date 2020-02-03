@@ -1,4 +1,4 @@
-unit frwaterwizard;
+unit FrWaterWizard;
 
 {$mode objfpc}{$H+}
 

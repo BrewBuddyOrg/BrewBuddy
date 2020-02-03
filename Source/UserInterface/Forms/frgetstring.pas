@@ -1,4 +1,4 @@
-unit frgetstring;
+unit FrGetString;
 
 {$mode objfpc}{$H+}
 

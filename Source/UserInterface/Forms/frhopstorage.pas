@@ -1,4 +1,4 @@
-unit frhopstorage;
+unit FrHopStorage;
 
 {$mode objfpc}{$H+}
 

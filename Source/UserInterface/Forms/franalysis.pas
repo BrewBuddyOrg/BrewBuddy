@@ -1,4 +1,4 @@
-unit franalysis;
+unit FrAnalysis;
 
 {$mode objfpc}{$H+}
 

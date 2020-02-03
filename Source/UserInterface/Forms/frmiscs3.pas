@@ -1,4 +1,4 @@
-unit frmiscs3;
+unit FrMiscs3;
 
 {$mode objfpc}{$H+}
 

@@ -1,4 +1,4 @@
-unit frQuestion;
+unit FrQuestion;
 
 {$mode objfpc}{$H+}
 

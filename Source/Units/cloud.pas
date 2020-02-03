@@ -1,4 +1,4 @@
-unit cloud;
+unit Cloud;
 
 {$mode objfpc}{$H+}
 

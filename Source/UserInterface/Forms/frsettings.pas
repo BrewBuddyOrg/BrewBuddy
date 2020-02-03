@@ -1,4 +1,4 @@
-unit frsettings;
+unit FrSettings;
 
 {$mode objfpc}{$H+}
 

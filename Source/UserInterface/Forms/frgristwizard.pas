@@ -1,4 +1,4 @@
-unit frgristwizard;
+unit FrGristWizard;
 
 {$mode objfpc}{$H+}
 

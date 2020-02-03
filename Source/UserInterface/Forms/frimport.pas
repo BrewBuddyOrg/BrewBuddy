@@ -1,4 +1,4 @@
-unit frimport;
+unit FrImport;
 
 {$mode objfpc}{$H+}
 

@@ -1,4 +1,4 @@
-unit frchoosebeerstyle;
+unit FrChooseBeerStyle;
 
 {$mode objfpc}{$H+}
 

@@ -1,4 +1,4 @@
-unit frdividebrew;
+unit FrDivideBrew;
 
 {$mode objfpc}{$H+}
 

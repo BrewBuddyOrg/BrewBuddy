@@ -1,4 +1,4 @@
-unit frprintpreview;
+unit FrPrintPreview;
 
 {$mode objfpc}{$H+}
 

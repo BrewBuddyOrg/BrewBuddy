@@ -1,4 +1,4 @@
-unit fryeasts3;
+unit FrYeasts3;
 
 {$mode objfpc}{$H+}
 

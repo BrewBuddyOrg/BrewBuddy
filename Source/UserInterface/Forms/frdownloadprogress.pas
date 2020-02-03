@@ -1,4 +1,4 @@
-unit frdownloadprogress;
+unit FrDownloadProgress;
 
 {$mode objfpc}{$H+}
 

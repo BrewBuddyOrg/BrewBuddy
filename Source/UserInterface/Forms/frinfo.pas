@@ -1,4 +1,4 @@
-unit frinfo;
+unit FrInfo;
 
 {$mode objfpc}{$H+}
 

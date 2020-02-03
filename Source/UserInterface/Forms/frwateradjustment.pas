@@ -1,4 +1,4 @@
-unit frwateradjustment;
+unit FrWaterAdjustment;
 
 {$mode objfpc}{$H+}
 

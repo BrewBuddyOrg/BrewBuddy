@@ -1,4 +1,4 @@
-unit fdatabaselocation;
+unit FDatabaseLocation;
 
 {$mode objfpc}{$H+}
 

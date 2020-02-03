@@ -1,4 +1,4 @@
-unit frmeasurements;
+unit FrMeasurements;
 
 {$mode objfpc}{$H+}
 

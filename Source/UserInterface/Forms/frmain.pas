@@ -5,13 +5,33 @@ unit FrMain;
 interface
 
 uses
-  Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, Menus,
-  ComCtrls, ExtCtrls, ActnList, StdCtrls, StrUtils, Buttons, Grids, Spin,
-  ExtDlgs, EditBtn, Printers, PrintersDlgs, TAGraph, TASeries,
+  // RTL, FCL
+  Classes, SysUtils, StrUtils, Crt, Math, DOM, {XMLRead,} XMLWrite,
+  // LazUtils
+  FileUtil,
+  // LCL
+  LCLIntf, Forms, Controls, Graphics, Menus, ComCtrls, ExtCtrls, StdCtrls,
+  ActnList, Buttons, Grids, Spin, Dialogs, ExtDlgs, EditBtn, DefaultTranslator,
+  Printers, PrintersDlgs,
+  // TAChart
+  TAGraph, TASeries,
   TASources, TAChartUtils, TAChartAxis, TATransformations, TATools,
-  TAMultiSeries, TAIntervalSources, Data, Containers, Hulpfuncties,
-  PositieInterval, timeedit, UniqueInstance, {pl_luicontrols,} DOM, XMLRead, XMLWrite, LCLIntf,
-  ExpandPanels, DefaultTranslator;
+  TAMultiSeries, TAIntervalSources,
+  // ExpandPanels
+  ExpandPanels,
+  // UniqueInstance
+  UniqueInstance,
+  // BrewBuddy
+  Data, Cloud, Containers, Hulpfuncties, RcStrngs, PositieInterval, TimeEdit,
+  FrFermentables, FrHop, FrYeasts, FrMiscs, FrWaters, FrEquipments,
+  FrBeerstyles, FrMashs, FrFermentables2, FrHop2, FrMiscs2, FrYeasts2,
+  FrFermentables3, FrHop3, FrMiscs3, FrYeasts3, FrMashstep,
+  FrWaterAdjustment, FrNotification, FrMeasurements, FrImport, FrRecipeToBrew,
+  BH_report, BHprintforms, FrPropagation, FrRefractometer, FrBoilMethod,
+  FDatabaseLocation, FrDivideBrew, FrChooseBrewsChars,
+  FrSplash, FrInfo, FrSynchronize, FrChoosebrews, FrRestoreDatabases, FrSettings,
+  FrAnalysis, FrHistogram, FrNN, neuroot, FrHopStorage, FrHopGraph,
+  FrGristWizard, FrAdjustTo100, FrHopWizard, FrWaterWizard, FrCheckList;
 
 type
 
@@ -834,14 +854,11 @@ type
     procedure tCTimerTimer(Sender: TObject);
     procedure tMashTimerTimer(Sender: TObject);
     procedure tbHelpClick(Sender: TObject);
-    procedure tvBrewsKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState
-      );
+    procedure tvBrewsKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure tvBrewsSelectionChanged(Sender: TObject);
-    procedure tvCloudKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState
-      );
+    procedure tvCloudKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure tvCloudSelectionChanged(Sender: TObject);
-    procedure tvRecipesKeyDown(Sender: TObject; var Key: Word;
-      Shift: TShiftState);
+    procedure tvRecipesKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure tvRecipesSelectionChanged(Sender: TObject);
     procedure bbStartTimerClick(Sender: TObject);
     procedure bbResetTimersClick(Sender: TObject);
@@ -923,10 +940,6 @@ type
     procedure cbAerationTypeChange(Sender: TObject);
     procedure fseCoolingToChange(Sender: TObject);
     procedure cbLockedChange(Sender: TObject);
-
-    Procedure CloudOnCloudReady(Sender: TObject; NumFiles : longint);
-    Procedure CloudOnFileRead(Sender : TObject; PercDone : single);
-    Procedure CloudOnCloudError(Sender : TObject; Msg : string);
     procedure sbHideToolsClick(Sender: TObject);
     procedure sbShowToolsClick(Sender: TObject);
     procedure tbTrainNNClick(Sender: TObject);
@@ -975,6 +988,10 @@ type
     Procedure SetIcon;
     Procedure SetControlsStrings;
     Procedure NameChange;
+    // Handlers for TBHCloud events.
+    Procedure CloudOnCloudReady(Sender: TObject; NumFiles : longint);
+    Procedure CloudOnFileRead(Sender : TObject; PercDone : single);
+    Procedure CloudOnCloudError(Sender : TObject; Msg : string);
   public
     OriginalBounds: TRect;
     OriginalWindowState: TWindowState;
@@ -991,15 +1008,6 @@ implementation
 {$R *.lfm}
 
 { TfrmMain }
-uses Crt, Math, FrFermentables, FrHop, FrYeasts, FrMiscs, FrWaters, FrEquipments,
-     FrBeerstyles, frmashs, FrFermentables2, FrHop2, FrMiscs2, FrYeasts2,
-     frfermentables3, frhop3, frmiscs3, fryeasts3, frmashstep,
-     frwateradjustment, FrNotification, frmeasurements, frimport, frrecipetobrew,
-     BH_report, BHprintforms, frpropagation, frrefractometer, frboilmethod,
-     fdatabaselocation, frdividebrew, frchoosebrewschars,
-     frsplash, frinfo, frsynchronize, frchoosebrews, frrestoredatabases, frsettings,
-     cloud, franalysis, frhistogram, frnn, neuroot, frhopstorage, frhopgraph,
-     frgristwizard, fradjustto100, frhopwizard, frwaterwizard, frchecklist, rcstrngs;
 
 var clBack : TColor;
 

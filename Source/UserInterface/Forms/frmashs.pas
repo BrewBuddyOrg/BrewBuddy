@@ -1,4 +1,4 @@
-unit frmashs;
+unit FrMashs;
 
 {$mode objfpc}{$H+}
 

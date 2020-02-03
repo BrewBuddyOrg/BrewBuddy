@@ -1,4 +1,4 @@
-unit frrefractometer;
+unit FrRefractometer;
 
 {$mode objfpc}{$H+}
 

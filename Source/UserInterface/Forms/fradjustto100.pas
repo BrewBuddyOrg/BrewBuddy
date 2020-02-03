@@ -1,4 +1,4 @@
-unit fradjustto100;
+unit FrAdjustTo100;
 
 {$mode objfpc}{$H+}
 

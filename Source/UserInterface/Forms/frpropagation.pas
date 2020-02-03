@@ -1,4 +1,4 @@
-unit frpropagation;
+unit FrPropagation;
 
 {$mode objfpc}{$H+}
 

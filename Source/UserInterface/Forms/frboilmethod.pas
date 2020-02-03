@@ -1,4 +1,4 @@
-unit frboilmethod;
+unit FrBoilMethod;
 
 {$mode objfpc}{$H+}
 

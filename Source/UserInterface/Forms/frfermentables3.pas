@@ -1,4 +1,4 @@
-unit frfermentables3;
+unit FrFermentables3;
 
 {$mode objfpc}{$H+}
 

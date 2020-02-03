@@ -1,4 +1,4 @@
-unit frhopwizard;
+unit FrHopWizard;
 
 {$mode objfpc}{$H+}
 

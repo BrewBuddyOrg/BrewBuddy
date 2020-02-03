@@ -52,7 +52,7 @@
  - Make it an installable Lazarus package, so it can be put on a form in design time
 }
 
-unit timeedit;
+unit TimeEdit;
 
 {$mode objfpc}{$H+}
 
@@ -62,12 +62,8 @@ uses
   Classes, SysUtils, LResources, Forms, Controls, Graphics, Dialogs,
   ExtCtrls, Clipbrd, LCLType, LCLProc, MaskEdit, ComCtrls;
 
-
-
-
 type
   TTimeEditFormat = (tefLong, tefShort);
-
 
 type
 

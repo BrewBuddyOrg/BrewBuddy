@@ -32,7 +32,7 @@
           </Target>
           <SearchPaths>
             <IncludeFiles Value="$(ProjOutDir)"/>
-            <OtherUnitFiles Value="UserInterface/Forms"/>
+            <OtherUnitFiles Value="UserInterface/Forms;Units"/>
             <UnitOutputDirectory Value="../Output/units"/>
           </SearchPaths>
           <CodeGeneration>
@@ -139,7 +139,7 @@
         <ComponentName Value="FrmQuestion"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <UnitName Value="frQuestion"/>
+        <UnitName Value="FrQuestion"/>
       </Unit7>
       <Unit8>
         <Filename Value="UserInterface/Forms/frgetstring.pas"/>
@@ -147,6 +147,7 @@
         <ComponentName Value="FrmGetString"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
+        <UnitName Value="FrGetString"/>
       </Unit8>
       <Unit9>
         <Filename Value="UserInterface/Forms/frequipments.pas"/>
@@ -178,6 +179,7 @@
         <ComponentName Value="FrmMashs"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
+        <UnitName Value="FrMashs"/>
       </Unit12>
       <Unit13>
         <Filename Value="UserInterface/Forms/fryeasts2.pas"/>
@@ -201,6 +203,7 @@
         <ComponentName Value="FrmMashStep"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
+        <UnitName Value="FrMashstep"/>
       </Unit15>
       <Unit16>
         <Filename Value="UserInterface/Forms/frfermentables.pas"/>
@@ -245,6 +248,7 @@
         <ComponentName Value="FrmMiscs3"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
+        <UnitName Value="FrMiscs3"/>
       </Unit21>
       <Unit22>
         <Filename Value="UserInterface/Forms/frfermentables3.pas"/>
@@ -252,6 +256,7 @@
         <ComponentName Value="FrmFermentables3"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
+        <UnitName Value="FrFermentables3"/>
       </Unit22>
       <Unit23>
         <Filename Value="UserInterface/Forms/frhop3.pas"/>
@@ -259,6 +264,7 @@
         <ComponentName Value="FrmHop3"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
+        <UnitName Value="FrHop3"/>
       </Unit23>
       <Unit24>
         <Filename Value="UserInterface/Forms/frwateradjustment.pas"/>
@@ -266,6 +272,7 @@
         <ComponentName Value="FrmWaterAdjustment"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
+        <UnitName Value="FrWaterAdjustment"/>
       </Unit24>
       <Unit25>
         <Filename Value="UserInterface/Forms/frnotification.pas"/>
@@ -281,6 +288,7 @@
         <ComponentName Value="frmMeasurements"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
+        <UnitName Value="FrMeasurements"/>
       </Unit26>
       <Unit27>
         <Filename Value="UserInterface/Forms/frimport.pas"/>
@@ -288,6 +296,7 @@
         <ComponentName Value="FrmImport"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
+        <UnitName Value="FrImport"/>
       </Unit27>
       <Unit28>
         <Filename Value="UserInterface/Forms/frselectbeerstyle.pas"/>
@@ -295,6 +304,7 @@
         <ComponentName Value="FrmSelectBeerStyle"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
+        <UnitName Value="FrSelectBeerStyle"/>
       </Unit28>
       <Unit29>
         <Filename Value="UserInterface/Forms/frrecipetobrew.pas"/>
@@ -302,6 +312,7 @@
         <ComponentName Value="frmRecipeToBrew"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
+        <UnitName Value="FrRecipeToBrew"/>
       </Unit29>
       <Unit30>
         <Filename Value="Units/bh_report.pas"/>
@@ -314,6 +325,7 @@
         <ComponentName Value="FrmPrintPreview"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
+        <UnitName Value="FrPrintPreview"/>
       </Unit31>
       <Unit32>
         <Filename Value="Units/bhprintforms.pas"/>
@@ -326,6 +338,7 @@
         <ComponentName Value="FrmPropagation"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
+        <UnitName Value="FrPropagation"/>
       </Unit33>
       <Unit34>
         <Filename Value="UserInterface/Forms/frrefractometer.pas"/>
@@ -333,6 +346,7 @@
         <ComponentName Value="FrmRefractometer"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
+        <UnitName Value="FrRefractometer"/>
       </Unit34>
       <Unit35>
         <Filename Value="UserInterface/Forms/frboilmethod.pas"/>
@@ -340,6 +354,7 @@
         <ComponentName Value="FrmBoilMethod"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
+        <UnitName Value="FrBoilMethod"/>
       </Unit35>
       <Unit36>
         <Filename Value="UserInterface/Forms/fdatabaselocation.pas"/>
@@ -347,6 +362,7 @@
         <ComponentName Value="FrmDatabaseLocation"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
+        <UnitName Value="FDatabaseLocation"/>
       </Unit36>
       <Unit37>
         <Filename Value="Units/umulfit.pas"/>
@@ -362,6 +378,7 @@
         <ComponentName Value="FrmDivideBrew"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
+        <UnitName Value="FrDivideBrew"/>
       </Unit39>
       <Unit40>
         <Filename Value="UserInterface/Forms/fryeasts3.pas"/>
@@ -369,6 +386,7 @@
         <ComponentName Value="FrmYeasts3"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
+        <UnitName Value="FrYeasts3"/>
       </Unit40>
       <Unit41>
         <Filename Value="UserInterface/Forms/frchoosebeerstyle.pas"/>
@@ -383,6 +401,7 @@
         <ComponentName Value="FrmChooseBrewChars"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
+        <UnitName Value="FrChooseBrewsChars"/>
       </Unit42>
       <Unit43>
         <Filename Value="UserInterface/Forms/frsplash.pas"/>
@@ -390,6 +409,7 @@
         <ComponentName Value="FrmSplash"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
+        <UnitName Value="FrSplash"/>
       </Unit43>
       <Unit44>
         <Filename Value="UserInterface/Forms/frinfo.pas"/>
@@ -397,6 +417,7 @@
         <ComponentName Value="frmInfo"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
+        <UnitName Value="FrInfo"/>
       </Unit44>
       <Unit45>
         <Filename Value="Units/vinfo.pas"/>
@@ -408,6 +429,7 @@
         <ComponentName Value="frmFTPList"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
+        <UnitName Value="FrSynchronize"/>
       </Unit46>
       <Unit47>
         <Filename Value="UserInterface/Forms/frchoosebrews.pas"/>
@@ -415,6 +437,7 @@
         <ComponentName Value="frmChooseBrewsList"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
+        <UnitName Value="FrChoosebrews"/>
       </Unit47>
       <Unit48>
         <Filename Value="UserInterface/Forms/frgristwizard.pas"/>
@@ -422,10 +445,12 @@
         <ComponentName Value="FrmGristWizard"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
+        <UnitName Value="FrGristWizard"/>
       </Unit48>
       <Unit49>
         <Filename Value="Units/cloud.pas"/>
         <IsPartOfProject Value="True"/>
+        <UnitName Value="Cloud"/>
       </Unit49>
       <Unit50>
         <Filename Value="UserInterface/Forms/frsettings.pas"/>
@@ -433,6 +458,7 @@
         <ComponentName Value="frmSettings"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
+        <UnitName Value="FrSettings"/>
       </Unit50>
       <Unit51>
         <Filename Value="UserInterface/Forms/frrestoredatabases.pas"/>
@@ -440,6 +466,7 @@
         <ComponentName Value="frmRestoreDatabase"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
+        <UnitName Value="FrRestoreDatabases"/>
       </Unit51>
       <Unit52>
         <Filename Value="Units/neuroot.pas"/>
@@ -451,6 +478,7 @@
         <ComponentName Value="frmGetPasswd"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
+        <UnitName Value="FrGetPasswd"/>
       </Unit53>
       <Unit54>
         <Filename Value="UserInterface/Forms/frdownloadprogress.pas"/>
@@ -458,6 +486,7 @@
         <ComponentName Value="FrmDownloadProgress"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
+        <UnitName Value="FrDownloadProgress"/>
       </Unit54>
     </Units>
   </ProjectOptions>
@@ -468,7 +497,7 @@
     </Target>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>
-      <OtherUnitFiles Value="UserInterface/Forms"/>
+      <OtherUnitFiles Value="UserInterface/Forms;Units"/>
       <UnitOutputDirectory Value="../Output/units"/>
     </SearchPaths>
     <Parsing>

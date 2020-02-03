@@ -1,4 +1,4 @@
-unit frsynchronize;
+unit FrSynchronize;
 
 {$mode objfpc}{$H+}
 

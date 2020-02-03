@@ -1,4 +1,4 @@
-unit frhopgraph;
+unit FrHopGraph;
 
 {$mode objfpc}{$H+}
 

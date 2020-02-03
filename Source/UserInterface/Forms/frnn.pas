@@ -1,4 +1,4 @@
-unit frnn;
+unit FrNN;
 
 {$mode objfpc}{$H+}
 

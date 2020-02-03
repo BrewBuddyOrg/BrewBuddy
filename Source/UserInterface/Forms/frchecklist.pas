@@ -1,4 +1,4 @@
-unit frchecklist;
+unit FrCheckList;
 
 {$mode objfpc}{$H+}
 

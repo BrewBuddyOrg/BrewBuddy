@@ -1,4 +1,4 @@
-unit frrecipetobrew;
+unit FrRecipeToBrew;
 
 {$mode objfpc}{$H+}
 
