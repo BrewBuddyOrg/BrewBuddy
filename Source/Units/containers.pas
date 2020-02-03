@@ -3346,7 +3346,6 @@ end;
 Initialization
   if DoLog then slLog:= TStringList.Create
   else slLog:= NIL;
-  Screen.Cursor:= crHourglass;
 
   ExecFolder:= Application.Location;
   log('ExecFolder = ' + ExecFolder);
@@ -3448,7 +3447,7 @@ Initialization
     CheckSalts;
   end
   else
-    ShowMessage('Databestanden niet gevonden');
+    WriteLn('Databestanden niet gevonden');
 //  Equipments.CalcEfficiencyRegressionFactors;
 //  Equipments.CalcAttenuationRegressionFactors;
 
@@ -3463,8 +3462,6 @@ Initialization
   Arr[7]:= 11;
   Brews.ExportToCSV(Arr);
   SetLength(Arr, 0);}
-
-  Screen.Cursor:= crDefault;
 
 Finalization
   if OnUSB then
