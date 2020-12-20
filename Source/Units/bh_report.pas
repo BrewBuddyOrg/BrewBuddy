@@ -935,7 +935,6 @@ begin
     BRect.Bottom:= SRect.Bottom - SRect.Top;
     BRect.Right:= SRect.Right - SRect.Left;
 
-    //OTFH:= FChart.AxisList[0].Title.Font.Size;
     OMFH:= FChart.AxisList[0].Marks.LabelFont.Size;
     OTL:= FChart.AxisList[0].TickLength;
     OLFH:= FChart.Legend.Font.Size;
@@ -946,7 +945,6 @@ begin
     for i:= 0 to FChart.AxisList.Count - 1 do
     begin
       FChart.AxisList[i].Marks.LabelFont.Size:= round(GSc * 9);
-      //FChart.AxisList[i].Title.Font.Size:= round(GSC * 9);
       FChart.AxisList[i].TickLength:= round(GSc * OTL);
     end;
     FChart.Legend.Font.Size:= round(GSc * 9);
@@ -962,7 +960,6 @@ begin
     for i:= 0 to FChart.AxisList.Count - 1 do
     begin
       FChart.AxisList[i].Marks.LabelFont.Size:= OMFH;
-      //FChart.AxisList[i].Title.Font.Size:= OTFH;
       FChart.AxisList[i].TickLength:= OTL;
     end;
     FChart.Legend.Font.Size:= OLFH;
@@ -994,12 +991,10 @@ begin
       if WH > 1 then
       begin
         FRect.Bottom:= FRect.Top + round((FRect.Right - FRect.Left) / WH);
-       // FRect.Right:= FRect.Left + W;
       end
       else
       begin
         FRect.Right:= FRect.Left + round((FRect.Bottom - FRect.Top) * WH);
-       // FRect.Bottom:= FRect.Top + H;
       end;
     end;
     if FRect.Bottom > FDocument.FPrintRect.Bottom then
@@ -1010,7 +1005,6 @@ begin
       if WH > 1 then
       begin
         FRect.Bottom:= FRect.Top + round((FRect.Right - FRect.Left) / WH);
-       // FRect.Right:= FRect.Left + W;
       end
       else
       begin
@@ -1033,10 +1027,8 @@ begin
   FFont := TFont.Create;
   with FFont do
   begin
-//    CharSet:= DEFAULT_CHARSET;
     Color:= clBlack;
     Size:= 10;
-//    Name:= default;
     Orientation:= 0;
     Pitch:= fpDefault;
     Quality:= fqDefault; //fqAntiAliased
