@@ -25,6 +25,7 @@ uses
 {$R *.res}
 
 begin
+  Application.Scaled:=True;
   Application.Title:='brewbuddy';
   try
     Application.Initialize;
