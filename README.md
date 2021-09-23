@@ -1,6 +1,8 @@
 # English version below
 # Developers wanted!
-Are you fluent in Freepascal? Does the Lazarus IDE have no secrets for you? Do you love home brewing and are you an avid supporter of OSS? Than join us and help making BrewBuddy the number 1 brewing software!
+As of 2021 the BrewBuddy project is not actively maintained anymore. The current software is built in a not so popular language and IDE. It's impossible to find skilled developers who have the time. The idea was to recreate BrewBuddy in a new language using modern frameworks and modern IDE. However, also for this it seemed impossible to find skilled developers with time on their hands.
+
+So... if you have *enough* time and you are a skilled developer in modern languages and frameworks (f.i. JS, Flutter, Electron etc), let us know!
 
 # BrouwHulp 
 Brouwsoftware oorspronkelijk ontwikkeld door Adrie Otte en sinds eind 2018 Open Source Software onder de GPLv3-licentie.
