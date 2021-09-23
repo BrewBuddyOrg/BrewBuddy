@@ -2358,7 +2358,7 @@ begin
 //  {$endif}
   {$ifdef darwin}
   sound:= TProcess.Create(NIL);
-  sound.CommandLine:= 'afplay ' + StartSound;
+  sound.CommandLine:= 'afplay ' + WarningSound;
   sound.Execute;
   sound.Free;
   {$endif}
@@ -2375,9 +2375,9 @@ begin
 //  {$ifdef linux}
 //  AlSourcePlay(source[alarm]);
 //  {$endif}
-  {$ifdef darwub}
+  {$ifdef darwin}
   sound:= TProcess.Create(NIL);
-  sound.CommandLine:= 'afplay ' + StartSound;
+  sound.CommandLine:= 'afplay ' + AlarmSound;
   sound.Execute;
   sound.Free;
   {$endif}
@@ -2396,7 +2396,7 @@ begin
 //  {$endif}
   {$ifdef darwin}
   sound:= TProcess.Create(NIL);
-  sound.CommandLine:= 'afplay ' + StartSound;
+  sound.CommandLine:= 'afplay ' + EndSound;
   sound.Execute;
   sound.Free;
   {$endif}

@@ -3059,11 +3059,11 @@ Procedure CheckDataFolder;
   end;
 var sourcedata, destdata, sourcesounds, destsounds : string;
 begin
-  {$ifdef UNIX}
+  {$ifdef linux}
     sourcedata:= '/usr/share/brewbuddy/';
   {$endif}
   {$ifdef darwin}
-    sourcedata:= '/usr/share/brewbuddy/';
+    sourcedata:= ProgramDirectory() + 'BrewBuddy.app/Contents/Resources/';
   {$endif}
   {$ifdef Windows}
     sourcedata:= ExtractFilePath(Application.ExeName) + 'brewbuddy\';
@@ -3116,9 +3116,9 @@ begin
   CheckFile(sourcedata, destdata, 'Introductie BrewBuddy Sassy Saison.pdf');
   {$endif}
   {$ifdef Darwin}
-  CheckFile('/usr/share/doc/brewbuddy/', destdata, 'Introductie BrewBuddy Sassy Saison.pdf');
+  CheckFile(sourcedata, destdata, 'Introductie BrewBuddy Sassy Saison.pdf');
   {$endif}
-  {$ifdef Unix}
+  {$ifdef linux}
   CheckFile('/usr/share/doc/brewbuddy/', destdata, 'Introductie BrewBuddy Sassy Saison.pdf');
   {$endif}
   CheckFile(sourcesounds, destsounds, 'alarm.wav');
@@ -3232,11 +3232,11 @@ begin
     end
     else //copy previous database to new location, but clear brews
     begin
-      {$ifdef UNIX}
+      {$ifdef linux}
         sourcedata:= '/usr/share/brewbuddy/';
       {$endif}
       {$ifdef darwin}
-        sourcedata:= '/usr/share/brewbuddy/';
+        sourcedata:= '/usr/local/share/brewbuddy/';
       {$endif}
       {$ifdef Windows}
         sourcedata:= ExtractFilePath(Application.ExeName) + 'brewbuddy\';
@@ -3353,7 +3353,7 @@ Initialization
   ExecFolder:= Application.Location;
   log('ExecFolder = ' + ExecFolder);
   OnUSB:= false;
-  {$ifdef UNIX}
+  {$ifdef linux}
     {DriveLetter:= LeftStr(ExecFolder, 6);
     if DriveLetter = '/media' then
     begin
