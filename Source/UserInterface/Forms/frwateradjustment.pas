@@ -1,4 +1,4 @@
-unit frwateradjustment;
+unit FrWaterAdjustment;
 
 {$mode objfpc}{$H+}
 
@@ -100,7 +100,6 @@ type
     procedure sgSourceDrawCell(Sender: TObject; aCol, aRow: Integer;
       aRect: TRect; aState: TGridDrawState);
   private
-    { private declarations }
     FRecipe : TRecipe;
     FSource1, FSource2, FMashWater, FAdjustedWater, FTargetWater : TWater;
     FColorCells : array of TCellCoord;
@@ -122,7 +121,6 @@ type
     Function GetDefaultPerc(at : TAcidType) : double;
     Procedure Dilute(perc : double);
   public
-    { public declarations }
     Function Execute(R : TRecipe) : boolean;
   end; 
 
@@ -729,8 +727,7 @@ begin
 end;
 
 Procedure TFrmWaterAdjustment.Dilute(perc : double);
-var i : integer;
-    Wdemi : TWater;
+var Wdemi : TWater;
     vol : double;
 begin
   Wdemi:= Waters.GetDemiWater;
@@ -785,7 +782,7 @@ begin
 end;
 
 Procedure TFrmWaterAdjustment.SetTable(Row : integer; W : TWater);
-var pHa, RA : double;
+var RA : double;
     i : integer;
 begin
   if (Row >= 1) and (Row <= 4) then
@@ -1014,13 +1011,13 @@ begin
 end;
 
 Function TFrmWaterAdjustment.GetFrac(pH, pK1, pK2, pK3 : double) : double;
-var r1d, r2d, r3d, dd, f1d, f2d, f3d, f4d : double;
+var r1d, r2d, r3d, dd, {f1d,} f2d, f3d, f4d : double;
 begin
   r1d:= Power(10, fseTargetpH.Value - pK1);
   r2d:= Power(10, fseTargetpH.Value - pK2);
   r3d:= Power(10, fseTargetpH.Value - pK3);
   dd:= 1/(1 + r1d + r1d*r2d + r1d*r2d*r3d);
-  f1d:= dd;
+  //f1d:= dd;
   f2d:= r1d*dd;
   f3d:= r1d*r2d*dd;
   f4d:= r1d*r2d*r3d*dd;
@@ -1484,10 +1481,10 @@ end;
 
 Procedure TFrmWaterAdjustment.CalcSparge;
 var alkalinity, acid, TargetpH : double;
-    r1, r2, d, f1, f2, f3 : double;
-    r1g, r2g, dg, f1g, f2g, f3g : double;
-    r143, r243, d43, f143, f243, f343 : double;
-    r1d, r2d, r3d, dd, f1d, f2d, f3d, f4d, fract, pK1, pK2, pK3, MolWt, AcidSG, AcidPrc : double;
+    r1, r2, d, f1, {f2,} f3 : double;
+    r1g, r2g, dg, f1g, {f2g,} f3g : double;
+    r143, r243, d43, f143, {f243,} f343 : double;
+    fract, pK1, pK2, pK3, MolWt, AcidSG, AcidPrc : double;
     W : TWater;
     AT : TAcidType;
 begin
@@ -1506,7 +1503,7 @@ begin
     r2:= power(10, acid - 10.33);
     d:= 1 + r1 + r1*r2;
     f1:= 1/d;
-    f2:= r1/d;
+    //f2:= r1/d;
     f3:= r1 * r2 / d;
 
     //Step 2. Compute the mole fractions at pHb = 4.3 (the pH which defines alkalinity)
@@ -1514,7 +1511,7 @@ begin
     r243:= power(10, 4.3 - 10.33);
     d43:= 1 + r143 + r143*r243;
     f143:= 1/d43;
-    f243:= r143 / d43;
+    //f243:= r143 / d43;
     f343:= r143 * r243 / d43;
 
     //Step 3. Convert the sample alkalinity to milliequivalents/L
@@ -1528,7 +1525,7 @@ begin
     r2g:= power(10, TargetpH - 10.33);
     dg:= 1 + r1g + r1g*r2g;
     f1g:= 1/dg;
-    f2g:= r1g / dg;
+    //f2g:= r1g / dg;
     f3g:= r1g * r2g / dg;
 
     //Step 6. Use these to compute the milliequivalents acid required per liter (mEq/L)
@@ -1628,6 +1625,7 @@ begin
   if FUserClicked then
   begin
     FUserClicked:= false;
+    {$warning This code makes no sense. AT gets a value but it is not used. }
     for ATc:= Low(AcidTypeDisplayNames) to High(AcidTypeDisplayNames) do
       if cbAcid.Items[cbAcid.ItemIndex] = AcidTypeDisplayNames[ATc] then
         AT:= ATc;
@@ -1723,7 +1721,6 @@ var Na1, Na2, Nad, Ca1, Ca2, Cad, Mg1, Mg2, Mgd : Double;
     dNa, dCa, dMg, dCl, dSO4, dCO3, dmax : Double;
     NaCl, CaCl2 : Double;
     MgSO4, CaSO4 : Double;
-    MaxNeg : Double;
     Vol : Double;
     Wdest : TWater;
 begin
@@ -1732,7 +1729,6 @@ begin
   dNa:= 0; dCa:= 0; dMg:= 0; dCl:= 0; dSO4:= 0; dCO3:= 0;
   NaCl:= 0; CaCl2:= 0;
   MgSO4:= 0; CaSO4:= 0;
-  MaxNeg:= 0;
   Vol:= 0;
   Vol:= FMashWater.Amount.Value;
   //remove dilution water if present and set all additions to 0
@@ -1887,22 +1883,17 @@ begin
 end;
 
 procedure TFrmWaterAdjustment.bbpHClSO4Click(Sender: TObject);
-var Na1, Na2, Nad, Ca1, Ca2, Cad, Mg1, Mg2, Mgd : Double;
-    Cl1, Cl2, Cld, SO41, SO42, SO4d, CO31, CO32, CO3d : Double;
-    dNa, dCa, dMg, dCl, dSO4, dCO3, dmax : Double;
-    NaCl, CaCl2 : Double;
-    MgSO4, CaSO4 : Double;
+var Cl1, Cl2, Cld, SO41, SO42, SO4d : Double;
+    dCl, dSO4, dmax : Double;
+    CaCl2, CaSO4 : Double;
     ClSO4opt : double;
-    MaxNeg : Double;
     Vol : Double;
     Wdest : TWater;
 begin
-  Na1:= 0; Na2:= 0; Nad:= 0; Ca1:= 0; Ca2:= 0; Cad:= 0; Mg1:= 0; Mg2:= 0; Mgd:= 0;
-  Cl1:= 0; Cl2:= 0; Cld:= 0; SO41:= 0; SO42:= 0; SO4d:= 0; CO31:= 0; CO32:= 0; CO3d:= 0;
-  dNa:= 0; dCa:= 0; dMg:= 0; dCl:= 0; dSO4:= 0; dCO3:= 0;
-  NaCl:= 0; CaCl2:= 0;
-  MgSO4:= 0; CaSO4:= 0;
-  MaxNeg:= 0;
+  Cl1:= 0; Cl2:= 0; Cld:= 0; SO41:= 0; SO42:= 0; SO4d:= 0;
+  dCl:= 0; dSO4:= 0;
+  CaCl2:= 0;
+  CaSO4:= 0;
   Vol:= 0;
   Vol:= FMashWater.Amount.Value;
   //remove dilution water if present and set all additions to 0
@@ -1958,7 +1949,6 @@ begin
     SO42:= Cl2 / ClSO4opt;
   end;
 
-
   // Get concentration of ions in diluted brewwater (1) and target water (2) in mmol/l
   SO41:= FMashWater.Sulfate.Value / MMSO4;
   SO42:= MaxD(SO41, SO42) / MMSO4;
@@ -1971,7 +1961,6 @@ begin
   //Now, add chloride and sulfate
   CaSO4:= dSO4;
   CaCl2:= dCl / 2;
-
 
   //calculate addition in grams per salt
   CaCl2:= CaCl2 * MMCaCl2 * Vol / 1000;

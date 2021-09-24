@@ -1,4 +1,4 @@
-unit cloud;
+unit Cloud;
 
 {$mode objfpc}{$H+}
 
@@ -16,7 +16,7 @@ type
     FShowRecipe : TBBoolean; //show the recipe in the cloud recipe tree
     FFileType : TFileType;
     Constructor Create;
-    Destructor Destroy;
+    Destructor Destroy; override;
     Procedure ReadXML(iNode: TDOMNode);
     Procedure SaveXML(Doc: TXMLDocument; iNode: TDOMNode);
   private
@@ -77,7 +77,7 @@ type
     Function GetFileRec(i : longint) : TBHCloudFile;
   public
     Constructor Create; virtual;
-    Destructor Destroy;
+    Destructor Destroy; override;
     Function ReadCloud : boolean; //retrieve file info of all files in the cloud
     Procedure SaveXML;
     Procedure ReadXML;
@@ -883,7 +883,7 @@ end;
 
 Function TBHCloud.LoadRecipeByName(FN : string) : boolean;
 var ftp: TFTPSend;
-    i, j, fnr : integer;
+    i : integer;
     localfn, remotefn, remotefnd, ext : string;
     bhr : TBHCloudFile;
 begin
@@ -966,6 +966,7 @@ end;
 
 Function TBHCloud.LoadRecipeByIndex(i : longint) : boolean;
 begin
+  Result:= True;
   if (i >= Low(FFiles)) and (i <= High(FFiles)) then
     LoadRecipeByName(FFiles[i].FileName.Value);
 end;
@@ -1078,7 +1079,7 @@ Function RunAsRoot(cmd, cmd2 : string) : boolean;
 var Proc: TProcess;
     CharBuffer: array [0..511] of char;
     RestCount: integer;
-    ExitCode: integer;
+    //ExitCode: integer;
     SudoPassword: string;
 begin
   Result:= false;
@@ -1141,7 +1142,7 @@ begin
     end;
     SudoPassword := 'password'; //hope this will scramble memory
     SudoPassword := ''; // and make the program a bit safer from snooping?!?
-    ExitCode := Proc.ExitStatus;
+    //ExitCode := Proc.ExitStatus;
     Result:= true;
   finally
     Proc.Free;
@@ -1229,12 +1230,11 @@ end;
 
 Function GetHTTPFile(URL, localfn : string) : boolean;
 var Lines : TStringList;
-    Header : TStringList;
+    //Header : TStringList;
     HTTPGetResult: boolean;
     HTTPSender: THTTPSend;
-    RetryAttempt, i: integer;
+    RetryAttempt: integer;
     dir : string;
-    s : string;
 const MaxRetries = 1;
 begin
   result:= false;
@@ -1358,11 +1358,13 @@ begin
 end;
 
 Function DownloadNewVersion(fn : string) : boolean;
-var i, j : longint;
-    localfn, fnlocal, s, bs : string;
+var localfn: string;
     aProcess : TProcess; //TProcess is crossplatform is best way
     delfile : PChar;
+    {$ifdef windows}
+    s, bs : string;
     l : TStringList;
+    {$endif}
 begin
   Result:= false;
   try

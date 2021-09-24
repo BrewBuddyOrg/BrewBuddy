@@ -85,14 +85,12 @@ type
     procedure fseAlfaChange(Sender: TObject);
     procedure cbFormChange(Sender: TObject);
   private
-    { private declarations }
     FHop, FOriginal, FChosen : THop;
     FCh, FUserClicked : boolean;
     Function GetHopUse : THopUse;
     Procedure SetControls;
     Procedure FillcbName;
   public
-    { public declarations }
     Function Execute(H : THop) : boolean;
   end;
 
@@ -217,9 +215,6 @@ end;
 
 Function TFrmHop2.Execute(H : THop) : boolean;
 var R : TRecipe;
-    s : string;
-    Ho : THop;
-    i : integer;
     hu : THopUse;
 begin
   Result:= false;

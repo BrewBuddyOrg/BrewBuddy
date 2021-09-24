@@ -1,4 +1,4 @@
-unit frQuestion;
+unit FrQuestion;
 
 {$mode objfpc}{$H+}
 
@@ -18,9 +18,8 @@ type
     lQuestion: TLabel;
     procedure FormCreate(Sender: TObject);
   private
-    { private declarations }
+
   public
-    { public declarations }
     Function Question(s : string) : boolean;
   end; 
 

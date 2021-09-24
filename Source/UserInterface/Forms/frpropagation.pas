@@ -1,4 +1,4 @@
-unit frpropagation;
+unit FrPropagation;
 
 {$mode objfpc}{$H+}
 
@@ -51,14 +51,12 @@ type
     procedure cbStarterTypeChange(Sender: TObject);
     procedure bbOKClick(Sender: TObject);
   private
-    { private declarations }
     FCellsNeeded : double;
     FAuto : boolean;
     Function CalcStart : double;
     Procedure CalcNeeded;
     Procedure CalcSteps;
   public
-    { public declarations }
     Function Execute(Rec : TRecipe) : boolean;
   end; 
 
@@ -179,7 +177,7 @@ type
 const numtrials = 12;
 var i, n, n2 : integer;
     SA1 : array[0..numtrials-1] of TStepArray;
-    StepVol, TotVol, AmCells : double;
+    TotVol, AmCells : double;
     numsteps : array[0..numtrials-1] of integer;
 
   function TrySteps(StartVol, stepsize : double; SA : PStepArray) : integer;

@@ -87,6 +87,7 @@ var FN : string;
     Doc : TXMLDocument;
     i : longint;
 begin
+  Result:= True;
   if NumItems > 0 then
   begin
     try
@@ -116,6 +117,7 @@ var FN : string;
     RootNode, Child : TDOMNode;
     Doc : TXMLDocument;
 begin
+  Result:= True;
   RootNode:= NIL;
   Doc:= NIL;
   try
@@ -354,6 +356,7 @@ var FN : string;
     Doc : TXMLDocument;
     i : longint;
 begin
+  Result:= True;
   if NumItems > 0 then
   begin
     try
@@ -385,6 +388,7 @@ var FN : string;
     RootNode, Child : TDOMNode;
     Doc : TXMLDocument;
 begin
+  Result:= True;
   RootNode:= NIL;
   Doc:= NIL;
   try

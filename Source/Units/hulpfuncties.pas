@@ -357,6 +357,7 @@ uses Data, FrMain, lconvencoding, Zipper;
 
 function GetTaskBarSize: TRect;
 begin
+  Result := Rect(0,0,0,0);
   {$ifdef Windows}
 //  SystemParametersInfo(SPI_GETWORKAREA, 0, @Result, 0);
   {$endif}
@@ -741,7 +742,7 @@ var Code, p : integer;
 begin
   Code:= 0;
   try
-    p:= Pos2(DecimalSeparator, S);
+    p:= Pos2(DefaultFormatSettings.DecimalSeparator, S);
     if (p >= 0) and (p < Length(S)) then S[p]:= '.';
     Val(S, D, Code);
     Result:= D;
@@ -755,11 +756,11 @@ end;
 Function ValidateRealStr(S : string) : boolean;
 var Code, p : integer;
     SO : string;
-    D : double;
+    {%H-}D : double;
 begin
   Code:= 0;
   try
-    p:= Pos2(DecimalSeparator, S);
+    p:= Pos2(DefaultFormatSettings.DecimalSeparator, S);
     if (p >= 0) and (p < Length(S)) then S[p]:= '.';
     Val(S, D, Code);
     Result:= TRUE;
@@ -828,10 +829,10 @@ begin
 
   if s <> 'NTB' then
   begin
-    LongTimeFormat := 'hh:mm:ss';
-    ShortDateFormat := 'DD-MM-YYYY';
-    DateSeparator := '-';
-    TimeSeparator := ':';
+    DefaultFormatSettings.LongTimeFormat := 'hh:mm:ss';
+    DefaultFormatSettings.ShortDateFormat := 'DD-MM-YYYY';
+    DefaultFormatSettings.DateSeparator := '-';
+    DefaultFormatSettings.TimeSeparator := ':';
     try
       Result:= StrToDate(ns);
     except
@@ -839,7 +840,7 @@ begin
     end;
     if Result = 0 then
     begin
-      ShortDateFormat := 'DD-MM-YY';
+      DefaultFormatSettings.ShortDateFormat := 'DD-MM-YY';
       try
         Result:= StrToDate(ns);
       except
@@ -848,7 +849,7 @@ begin
     end;
     if Result = 0 then
     begin
-      ShortDateFormat := 'MM-DD-YY';
+      DefaultFormatSettings.ShortDateFormat := 'MM-DD-YY';
       try
         Result:= StrToDate(ns);
       except
@@ -857,7 +858,7 @@ begin
     end;
     if Result = 0 then
     begin
-      ShortDateFormat := 'YY-MM-DD';
+      DefaultFormatSettings.ShortDateFormat := 'YY-MM-DD';
       try
         Result:= StrToDate(ns);
       except
@@ -866,7 +867,7 @@ begin
     end;
     if Result = 0 then
     begin
-      ShortDateFormat := 'YYYY-MM-DD';
+      DefaultFormatSettings.ShortDateFormat := 'YYYY-MM-DD';
       try
         Result:= StrToDate(ns);
       except
@@ -875,7 +876,7 @@ begin
     end;
     if Result = 0 then
     begin
-      ShortDateFormat := 'D-M-YY';
+      DefaultFormatSettings.ShortDateFormat := 'D-M-YY';
       try
         Result:= StrToDate(ns);
       except
@@ -884,7 +885,7 @@ begin
     end;
     if Result = 0 then
     begin
-      ShortDateFormat := 'M-D-YYYY';
+      DefaultFormatSettings.ShortDateFormat := 'M-D-YYYY';
       try
         Result:= StrToDate(ns);
       except
@@ -893,7 +894,7 @@ begin
     end;
     if Result = 0 then
     begin
-      ShortDateFormat := 'M-D-YY';
+      DefaultFormatSettings.ShortDateFormat := 'M-D-YY';
       try
         Result:= StrToDate(ns);
       except
@@ -902,7 +903,7 @@ begin
     end;
     if Result = 0 then
     begin
-      ShortDateFormat := 'YY-M-D';
+      DefaultFormatSettings.ShortDateFormat := 'YY-M-D';
       try
         Result:= StrToDate(ns);
       except
@@ -911,7 +912,7 @@ begin
     end;
     if Result = 0 then
     begin
-      ShortDateFormat := 'YYYY-M-D';
+      DefaultFormatSettings.ShortDateFormat := 'YYYY-M-D';
       try
         Result:= StrToDate(ns);
       except
@@ -928,10 +929,10 @@ end;
 
 Function StringToTime(s : string) : TDateTime;
 begin
-  LongTimeFormat := 'hh:mm:ss';
-  ShortDateFormat := 'DD-MM-YYY';
-  DateSeparator := '-';
-  TimeSeparator := ':';
+  DefaultFormatSettings.LongTimeFormat := 'hh:mm:ss';
+  DefaultFormatSettings.ShortDateFormat := 'DD-MM-YYY';
+  DefaultFormatSettings.DateSeparator := '-';
+  DefaultFormatSettings.TimeSeparator := ':';
   try
     Result:= StrToTime(s);
   except
@@ -1028,7 +1029,7 @@ begin
   X1:= 0; X2:= 0; X3:= 0;
   Di:= 4 * Power(-b*b + 3*a*c, 3) +
       Power(-2 * Power(b, 3) + 9*a*b*c - 27*a*a*d, 2);
-  if (Di > 0) and (a <> 0) and (E <> 0) then
+  if (Di > 0) and (a <> 0) then
   begin
     E:= Power(-2*b*b*b + 9*a*b*c - 27*a*a*d + SQRT(Di), 1/3);
     X1:= -b/(3*a) - (Power(2, 1/3) * (-b*b+3*a*c)) / (3 * a * E)
@@ -1588,13 +1589,12 @@ end;
 {============================= Brewing functions ==============================}
 
 Function CalcFrac(TpH, pK1, pK2, pK3 : double) : double;
-var r1d, r2d, r3d, dd, f1d, f2d, f3d, f4d : double;
+var r1d, r2d, r3d, dd, f2d, f3d, f4d : double;
 begin
   r1d:= Power(10, TpH - pK1);
   r2d:= Power(10, TpH - pK2);
   r3d:= Power(10, TpH - pK3);
   dd:= 1/(1 + r1d + r1d*r2d + r1d*r2d*r3d);
-  f1d:= dd;
   f2d:= r1d*dd;
   f3d:= r1d*r2d*dd;
   f4d:= r1d*r2d*r3d*dd;
@@ -2191,11 +2191,8 @@ end;
 Function CalcIBU(Method : TIBUmethod; HopUse : THopUse; AA : Double; AM : Double; Vw : Double;
                  Vf : Double; SG : Double; Tboil : Double; HopVorm : THopForm;
                  BNAP : Double) : Double;
-var IBUi : Double;
-    U : Double;
-    a : Double;
-    b : Double;
-    c : Double;
+var IBUi, U : Double;
+    //a, b, c : Double;
 begin
   U:= 1;
   if Vf > 0 then IBUi:= 10 * AM * AA / Vf
@@ -2290,7 +2287,7 @@ begin
     Zipper := TZipper.Create;
     try
       Zipper.FileName := zipfn;
-      for I := 1 to l.Count - 1 do
+      for i := 1 to l.Count - 1 do
         Zipper.Entries.AddFileEntry(l.Strings[i], zipfn);
       Zipper.ZipAllFiles;
       Result:= TRUE;
@@ -2301,8 +2298,8 @@ begin
 end;
 
 Function UnZipFiles(zipfn, outpath : string) : boolean;
-var i : integer;
-    Zipper: TUnZipper;
+var
+  Zipper: TUnZipper;
 begin
   Result:= false;
   Zipper := TUnZipper.Create;
@@ -2332,7 +2329,9 @@ begin
 end;}
 
 Procedure PlayStartProg;
+{$ifdef darwin}
 var sound : TProcess;
+{$endif}
 begin
 //  {$ifdef linux}
 //  AlSourcePlay(source[startprog]);
@@ -2351,7 +2350,9 @@ begin
 end;
 
 Procedure PlayWarning;
+{$ifdef darwin}
 var sound : TProcess;
+{$endif}
 begin
 //  {$ifdef linux}
 //  AlSourcePlay(source[warning]);
@@ -2370,12 +2371,14 @@ begin
 end;
 
 Procedure PlayAlarm;
+{$ifdef darwin}
 var sound : TProcess;
+{$endif}
 begin
 //  {$ifdef linux}
 //  AlSourcePlay(source[alarm]);
 //  {$endif}
-  {$ifdef darwub}
+  {$ifdef darwin}
   sound:= TProcess.Create(NIL);
   sound.CommandLine:= 'afplay ' + StartSound;
   sound.Execute;
@@ -2389,7 +2392,9 @@ begin
 end;
 
 Procedure PlayEndProg;
+{$ifdef darwin}
 var sound : TProcess;
+{$endif}
 begin
 //  {$ifdef linux}
 //  AlSourcePlay(source[endprog]);

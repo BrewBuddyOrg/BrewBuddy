@@ -1,4 +1,4 @@
-unit frsplash;
+unit FrSplash;
 
 {$mode objfpc}{$H+}
 
@@ -18,10 +18,8 @@ type
     procedure tSplashTimer(Sender: TObject);
     procedure FormCreate(Sender: TObject);
   private
-    { private declarations }
     FSecs, FDuration : integer;
   public
-    { public declarations }
     Procedure Execute;
   end; 
 

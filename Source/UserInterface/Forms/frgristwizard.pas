@@ -1,4 +1,4 @@
-unit frgristwizard;
+unit FrGristWizard;
 
 {$mode objfpc}{$H+}
 
@@ -95,9 +95,8 @@ type
     procedure sgSugarSelectEditor(Sender: TObject; aCol, aRow: Integer;
       var Editor: TWinControl);
   private
-    { private declarations }
     FRec : TRecipe;
-    FUserClicked, FSortGrid : boolean;
+    FUserClicked : boolean;
     FSelFerm : TFermentable;
     FSelGrid : integer;
     FIGSCYBase, FIGSCYSpecialty, FIGSCYSugar : integer;
@@ -106,7 +105,7 @@ type
     FScrollBars : array of TScrollRec;
     piSG, piColor, piAlcohol : TPosInterval;
     Procedure FillGrids;
-    Procedure Update;
+    Procedure Update; reintroduce;
     Procedure ChangeOG;
     Function FindMaltScrollBar : TScrollBar;
     Function FindScrollBar(sg : TStringGrid; aCol, aRow : integer) : TScrollBar;
@@ -120,7 +119,6 @@ type
     procedure sbScrollbarsChange(Sender: TObject);
     procedure cbScrollbarsChange(Sender: TObject);
   public
-    { public declarations }
     Function Execute(R : TRecipe) : boolean;
   end;
 
@@ -454,8 +452,6 @@ var i, j : integer;
     perc, n, ni, totbase, totspec, totsug, percvar, maxperc : double;
     variableset, allsugarslocked, allspecialtylocked : boolean;
     sb : TScrollBar;
-    cb : TCheckBox;
-    Rect : TRect;
     St : TBeerStyle;
 begin
   FUserClicked:= false;
@@ -891,16 +887,14 @@ end;
 
 procedure TFrmGristWizard.sbScrollbarsChange(Sender: TObject);
 var sb : TScrollBar;
-    i, spos, n : integer;
-    totperc, delta : double;
+    i, n : integer;
+    {totperc,} delta : double;
     F : TFermentable;
 begin
   if (FSelFerm <> NIL) and FUserClicked then
   begin
     FUserClicked:= false;
-
     sb:= TScrollBar(sender);
-    spos:= sb.Position;
     FSelFerm:= FindFermentable(sb);
     if FSelFerm <> NIL then
     begin
@@ -920,7 +914,7 @@ begin
             F:= FRec.SpecialtyMalt[i];
             if (not F.LockPercentage) then Inc(n);
           end;
-          totperc:= sbSpecialty.Position / 10;
+          //totperc:= sbSpecialty.Position / 10;
           delta:= FSelFerm.Percentage.Value - sb.Position / 10;
           if n > 1 then delta:= delta / (n - 1);
           for i:= 0 to FRec.NumSpecialtyMalts - 1 do
@@ -950,7 +944,7 @@ begin
             F:= FRec.Sugar[i];
             if (not F.LockPercentage) then Inc(n);
           end;
-          totperc:= sbSugars.Position / 10;
+          //totperc:= sbSugars.Position / 10;
           delta:= FSelFerm.Percentage.Value - sb.Position / 10;
           if n > 1 then delta:= delta / (n - 1);
           for i:= 0 to FRec.NumSugars - 1 do
@@ -1504,8 +1498,6 @@ var F : TFermentable;
     i, j : integer;
     prca : array of double;
     v, vr : double;
-    g : TStringGrid;
-    sb : TScrollBar;
 begin
   try
     if FRec <> NIL then

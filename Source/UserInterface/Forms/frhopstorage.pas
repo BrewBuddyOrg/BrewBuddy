@@ -1,4 +1,4 @@
-unit frhopstorage;
+unit FrHopStorage;
 
 {$mode objfpc}{$H+}
 
@@ -37,13 +37,12 @@ type
     procedure FormCreate(Sender: TObject);
     procedure fseIBUChange(Sender: TObject);
   private
-    { private declarations }
     Procedure CalcIBU;
     Procedure SetHSI(v : double);
     Procedure SetAlpha(v : double);
     procedure SetAge(i : longint);
   public
-    { public declarations }
+
   published
     property HSI : double write SetHSI;
     property Alpha : double write SetAlpha;

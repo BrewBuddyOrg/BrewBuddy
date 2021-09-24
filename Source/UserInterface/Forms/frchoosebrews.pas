@@ -1,4 +1,4 @@
-unit frchoosebrews;
+unit FrChoosebrews;
 
 {$mode objfpc}{$H+}
 
@@ -31,13 +31,11 @@ type
     procedure cbStartChange(Sender: TObject);
     procedure FormCreate(Sender: TObject);
   private
-    { private declarations }
     Function GetStartDate : TDateTime;
     Function GetEndDate : TDateTime;
     Function GetStartNr : string;
     Function GetEndNR : string;
   public
-    { public declarations }
     Function Execute : integer;
   published
     property StartDate : TDateTime read GetStartDate;

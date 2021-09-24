@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CONFIG>
-  <Compiler Value="C:\lazarus\fpc\3.0.4\bin\x86_64-win64\fpc.exe" Date="1286836893"/>
-  <Params Value=" -Twin64 -Px86_64 -MObjFPC -Scghi -O1 -g -gl -l -vewnhibq -FiC:\Projecten\BrewBuddy\Synapse\source\lib\usr\share\lazarus\1.0.10 -FuC:\lazarus\packager\units\x86_64-win64 -FuC:\Projecten\BrewBuddy\Synapse\source\lib\ -FUC:\Projecten\BrewBuddy\Synapse\source\lib\lib\x86_64-win64\ laz_synapse.pas"/>
-</CONFIG>

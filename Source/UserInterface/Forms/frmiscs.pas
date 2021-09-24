@@ -72,21 +72,19 @@ type
     procedure fseCostChange(Sender: TObject);
     procedure fseInventoryChange(Sender: TObject);
     procedure sbClearClick(Sender: TObject);
-    procedure tvSelectKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState
-      );
+    procedure tvSelectKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure tvSelectSelectionChanged(Sender: TObject);
     procedure cbTypeChange(Sender: TObject);
     procedure bbImportClick(Sender: TObject);
     procedure bbCopyClick(Sender: TObject);
   private
-    { private declarations }
     FSelectedNode : TTreeNode;
     FNew : boolean;
     FUserClicked: boolean;
     Procedure Store;
     Procedure FillTree;
   public
-    { public declarations }
+
   end; 
 
 var
@@ -133,7 +131,7 @@ Procedure TFrmMiscs.FillTree;
 var i : integer;
     s : string;
     M : TMisc;
-    Node, ChildNode, ChildNode2: TTreeNode;
+    Node, ChildNode, {%H-}ChildNode2: TTreeNode;
 begin
   tvSelect.Items.Clear;
   Node:= tvSelect.Items.Add(nil,'Type');
@@ -405,8 +403,7 @@ begin
 end;
 
 procedure TFrmMiscs.eSearchChange(Sender: TObject);
-var i : integer;
-    N : TTreeNode;
+var N : TTreeNode;
     M : TMisc;
     s, s2 : string;
     Vis : boolean;

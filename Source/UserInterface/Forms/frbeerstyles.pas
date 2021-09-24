@@ -96,20 +96,18 @@ type
     procedure fseIBUMinChange(Sender: TObject);
     procedure fseOGMaxChange(Sender: TObject);
     procedure fseOGMinChange(Sender: TObject);
-    procedure tvSelectKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState
-      );
+    procedure tvSelectKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure tvSelectSelectionChanged(Sender: TObject);
     procedure eNameChange(Sender: TObject);
     procedure eStyleLetterExit(Sender: TObject);
     procedure bbImportClick(Sender: TObject);
   private
-    { private declarations }
     FSelectedNode : TTreeNode;
     FUserClicked, FMustStore :  boolean;
     Procedure Store;
     Procedure FillTree;
   public
-    { public declarations }
+
   end; 
 
 var
@@ -191,7 +189,7 @@ Procedure TFrmBeerstyles.FillTree;
 var i : integer;
     letter, sname : string;
     S : TBeerStyle;
-    Node, ChildNode, ChildNode2 : TTreeNode;
+    Node, ChildNode, {%H-}ChildNode2 : TTreeNode;
 begin
   FUserClicked:= false;
   tvSelect.Items.Clear;

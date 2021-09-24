@@ -5,13 +5,33 @@ unit FrMain;
 interface
 
 uses
-  Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, Menus,
-  ComCtrls, ExtCtrls, ActnList, StdCtrls, StrUtils, Buttons, Grids, Spin,
-  ExtDlgs, EditBtn, Printers, PrintersDlgs, TAGraph, TASeries,
+  // RTL, FCL
+  Classes, SysUtils, StrUtils, Crt, Math, DOM, {XMLRead,} XMLWrite,
+  // LazUtils
+  FileUtil,
+  // LCL
+  LCLIntf, Forms, Controls, Graphics, Menus, ComCtrls, ExtCtrls, StdCtrls,
+  ActnList, Buttons, Grids, Spin, Dialogs, ExtDlgs, EditBtn, DefaultTranslator,
+  Printers, PrintersDlgs,
+  // TAChart
+  TAGraph, TASeries,
   TASources, TAChartUtils, TAChartAxis, TATransformations, TATools,
-  TAMultiSeries, TAIntervalSources, Data, Containers, Hulpfuncties,
-  PositieInterval, timeedit, UniqueInstance, {pl_luicontrols,} DOM, XMLRead, XMLWrite, LCLIntf,
-  ExpandPanels, DefaultTranslator;
+  TAMultiSeries, TAIntervalSources,
+  // ExpandPanels
+  ExpandPanels,
+  // UniqueInstance
+  UniqueInstance,
+  // BrewBuddy
+  Data, Cloud, Containers, Hulpfuncties, RcStrngs, PositieInterval, TimeEdit,
+  FrFermentables, FrHop, FrYeasts, FrMiscs, FrWaters, FrEquipments,
+  FrBeerstyles, FrMashs, FrFermentables2, FrHop2, FrMiscs2, FrYeasts2,
+  FrFermentables3, FrHop3, FrMiscs3, FrYeasts3, FrMashstep,
+  FrWaterAdjustment, FrNotification, FrMeasurements, FrImport, FrRecipeToBrew,
+  BH_report, BHprintforms, FrPropagation, FrRefractometer, FrBoilMethod,
+  FDatabaseLocation, FrDivideBrew, FrChooseBrewsChars,
+  FrSplash, FrInfo, FrSynchronize, FrChoosebrews, FrRestoreDatabases, FrSettings,
+  FrAnalysis, FrHistogram, FrNN, neuroot, FrHopStorage, FrHopGraph,
+  FrGristWizard, FrAdjustTo100, FrHopWizard, FrWaterWizard, FrCheckList;
 
 type
 
@@ -834,14 +854,11 @@ type
     procedure tCTimerTimer(Sender: TObject);
     procedure tMashTimerTimer(Sender: TObject);
     procedure tbHelpClick(Sender: TObject);
-    procedure tvBrewsKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState
-      );
+    procedure tvBrewsKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure tvBrewsSelectionChanged(Sender: TObject);
-    procedure tvCloudKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState
-      );
+    procedure tvCloudKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure tvCloudSelectionChanged(Sender: TObject);
-    procedure tvRecipesKeyDown(Sender: TObject; var Key: Word;
-      Shift: TShiftState);
+    procedure tvRecipesKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure tvRecipesSelectionChanged(Sender: TObject);
     procedure bbStartTimerClick(Sender: TObject);
     procedure bbResetTimersClick(Sender: TObject);
@@ -923,16 +940,11 @@ type
     procedure cbAerationTypeChange(Sender: TObject);
     procedure fseCoolingToChange(Sender: TObject);
     procedure cbLockedChange(Sender: TObject);
-
-    Procedure CloudOnCloudReady(Sender: TObject; NumFiles : longint);
-    Procedure CloudOnFileRead(Sender : TObject; PercDone : single);
-    Procedure CloudOnCloudError(Sender : TObject; Msg : string);
     procedure sbHideToolsClick(Sender: TObject);
     procedure sbShowToolsClick(Sender: TObject);
     procedure tbTrainNNClick(Sender: TObject);
     procedure tbChartClick(Sender: TObject);
   private
-    { private declarations }
     FSelRecipe : TRecipe;
     FSelBrew : TRecipe;
     FSelCloud : TRecipe;
@@ -965,7 +977,7 @@ type
     Procedure CheckTotal100;
     Procedure Store;
     Procedure UpdateIngredientsGrid;
-    Procedure Update;
+    Procedure Update; reintroduce;
     Procedure UpdatePredictions;
     Procedure SetControls;
     Procedure SortIngredients(I1, I2 : integer);
@@ -976,8 +988,11 @@ type
     Procedure SetIcon;
     Procedure SetControlsStrings;
     Procedure NameChange;
+    // Handlers for TBHCloud events.
+    Procedure CloudOnCloudReady(Sender: TObject; NumFiles : longint);
+    Procedure CloudOnFileRead(Sender : TObject; PercDone : single);
+    Procedure CloudOnCloudError(Sender : TObject; Msg : string);
   public
-    { public declarations }
     OriginalBounds: TRect;
     OriginalWindowState: TWindowState;
     ScreenBounds: TRect;
@@ -993,15 +1008,6 @@ implementation
 {$R *.lfm}
 
 { TfrmMain }
-uses Crt, Math, FrFermentables, FrHop, FrYeasts, FrMiscs, FrWaters, FrEquipments,
-     FrBeerstyles, frmashs, FrFermentables2, FrHop2, FrMiscs2, FrYeasts2,
-     frfermentables3, frhop3, frmiscs3, fryeasts3, frmashstep,
-     frwateradjustment, FrNotification, frmeasurements, frimport, frrecipetobrew,
-     BH_report, BHprintforms, frpropagation, frrefractometer, frboilmethod,
-     fdatabaselocation, frdividebrew, frchoosebrewschars,
-     frsplash, frinfo, frsynchronize, frchoosebrews, frrestoredatabases, frsettings,
-     cloud, franalysis, frhistogram, frnn, neuroot, frhopstorage, frhopgraph,
-     frgristwizard, fradjustto100, frhopwizard, frwaterwizard, frchecklist, rcstrngs;
 
 var clBack : TColor;
 
@@ -1033,7 +1039,7 @@ var rt : TRecipeType;
     st : TStarterType;
     ps : TPrimingSugar;
     R : TRecipe;
-    b, bt : boolean;
+    b{, bt} : boolean;
 begin
   {$ifdef Windows}
   clBack:= RGBToColor(242, 242, 242);
@@ -1058,8 +1064,6 @@ begin
     PlayStartProg;
     Application.ProcessMessages;
   end;
-
-  Screen.Cursor:= crHourglass;
 
   epRight.AddPanel(mroSG);
   epRight.AddPanel(mroWaterSugar);
@@ -1424,7 +1428,7 @@ begin
   lMessage.Visible:= false;
   pbProgress.Visible:= false;
   b:= Settings.UseCloud.Value;
-  bt:= (BHCloud.PassWord <> '');
+  //bt:= (BHCloud.PassWord <> '');
   if Settings.UseCloud.Value then BHCloud.ReadCloud;
   tsCloud.TabVisible:= Settings.UseCloud.Value and (BHCloud.PassWord <> '');
   bbShowTools.Visible:= false;
@@ -1434,8 +1438,6 @@ begin
   SetReadOnly(fseOG, (not cbPercentage.Checked));
   cbScaleVolume.Checked:= Settings.ScaleWithVolume.Value;
   FUserClicked:= TRUE;
-
-  Screen.Cursor:= crDefault;
 
   if Settings.CheckForNewVersion.Value then
   begin
@@ -1761,10 +1763,10 @@ begin
 end;
 
 Procedure TfrmMain.SetControls;
-var u : TUnit;
-    v : double;
-    bl : boolean;
-    s : string;
+var
+  v : double;
+  bl : boolean;
+  s : string;
 begin
   if FTemporary <> NIL then
   begin
@@ -2454,7 +2456,6 @@ begin
       if Question(self, savechanges2) then
       begin
         Screen.Cursor:= crHourglass;
-        Cursor:= crHourglass;
         Application.ProcessMessages;
 
         if FSelected <> NIL then
@@ -2468,14 +2469,12 @@ begin
         Brews.SaveXML;
         Recipes.SaveXML;
         Screen.Cursor:= crDefault;
-        Cursor:= crDefault;
       end
       else FChanged:= false;
     end
     else
     begin
       Screen.Cursor:= crHourglass;
-      Cursor:= crHourglass;
       Application.ProcessMessages;
 
       if FSelected <> NIL then
@@ -2489,7 +2488,6 @@ begin
       Brews.SaveXML;
       Recipes.SaveXML;
       Screen.Cursor:= crDefault;
-      Cursor:= crDefault;
     end;
 end;
 
@@ -2532,7 +2530,6 @@ end;
 procedure TfrmMain.tbSaveClick(Sender: TObject);
 begin
   Screen.Cursor:= crHourglass;
-  Cursor:= crHourglass;
   Application.ProcessMessages;
   if (FSelected <> NIL) then
   begin
@@ -2546,7 +2543,6 @@ begin
   Application.ProcessMessages;
   Recipes.SaveXML;
   Screen.Cursor:= crDefault;
-  Cursor:= crDefault;
 end;
 
 procedure TfrmMain.tbImportClick(Sender: TObject);
@@ -2631,12 +2627,10 @@ begin
   if FSelected <> NIL then
   begin
     Screen.Cursor:= crHourglass;
-    Cursor:= crHourglass;
     Application.ProcessMessages;
     if FTemporary.CopyToClipboardForumFormat then
       ShowNotification(self, copysucces1);
     Screen.Cursor:= crDefault;
-    Cursor:= crDefault;
   end;
 end;
 
@@ -2645,12 +2639,10 @@ begin
   if FSelected <> NIL then
   begin
     Screen.Cursor:= crHourglass;
-    Cursor:= crHourglass;
     Application.ProcessMessages;
     if FTemporary.CopyToClipboardHTML then
       ShowNotification(self, copysucces1);
     Screen.Cursor:= crDefault;
-    Cursor:= crDefault;
   end;
 end;
 
@@ -2662,7 +2654,6 @@ begin
     if frmChooseBrewsList.Execute > -1 then
     begin
       Screen.Cursor:= crHourglass;
-      Cursor:= crHourglass;
       Application.ProcessMessages;
 
       Doc:= TBHRDocument.Create;
@@ -2670,13 +2661,11 @@ begin
                          frmChooseBrewsList.StartNR, frmChooseBrewsList.EndNR) then
       begin
         Screen.Cursor:= crDefault;
-        Cursor:= crDefault;
         Doc.PrintPreview;
       end
       else Doc.Free;
       Doc:= NIL; //Doc is freed automatically after PrintPreview form closes;
       Screen.Cursor:= crDefault;
-      Cursor:= crDefault;
     end;
   finally
     frmChooseBrewsList.Free;
@@ -2688,7 +2677,6 @@ var Doc : TBHRDocument;
     RT : TRecType;
 begin
   Screen.Cursor:= crHourglass;
-  Cursor:= crHourglass;
   Application.ProcessMessages;
 
   if pcRecipes.ActivePage = tsBrews then
@@ -2700,13 +2688,11 @@ begin
   if CreateLogbook(Doc, FTemporary, RT) then
   begin
     Screen.Cursor:= crDefault;
-    Cursor:= crDefault;
     Doc.PrintPreview
   end
   else Doc.Free;
   Doc:= NIL; //Doc is freed automatically after PrintPreview form closes;
   Screen.Cursor:= crDefault;
-  Cursor:= crDefault;
 end;
 
 procedure TfrmMain.tbPrintClick(Sender: TObject);
@@ -2989,7 +2975,6 @@ procedure TfrmMain.miCheckPrintClick(Sender: TObject);
 var Doc : TBHRDocument;
 begin
   Screen.Cursor:= crHourglass;
-  Cursor:= crHourglass;
   Application.ProcessMessages;
 
   FTemporary.CheckList.CreateCheckList;
@@ -2997,7 +2982,6 @@ begin
   if CreateCheckList(Doc, FTemporary) then
   begin
     Screen.Cursor:= crDefault;
-    Cursor:= crDefault;
     Doc.PrintPreview;
   end
   else Doc.Free;
@@ -3018,14 +3002,12 @@ procedure TfrmMain.tbInventoryListClick(Sender: TObject);
 var Doc : TBHRDocument;
 begin
   Screen.Cursor:= crHourglass;
-  Cursor:= crHourglass;
   Application.ProcessMessages;
 
   Doc:= TBHRDocument.Create;
   if CreateStockList(Doc) then
   begin
     Screen.Cursor:= crDefault;
-    Cursor:= crDefault;
     Doc.PrintPreview;
   end
   else Doc.Free;
@@ -3065,9 +3047,7 @@ begin
 end;
 
 procedure TfrmMain.tbRestoreClick(Sender: TObject);
-var DBlocation : string;
 begin
-  DBlocation:= BHFolder;
   sddBackup.InitialDir:= BHFolder;
   sddBackup.Title:= choosebackupfolder1;
   sddBackup.Filter:= 'backup-*';
@@ -3360,7 +3340,7 @@ end;
 
 procedure TfrmMain.miCloudToBrewsClick(Sender: TObject);
 var R : TRecipe;
-    s : string;
+    //s : string;
     ibu : double;
 begin
   if FSelected <> NIL then
@@ -3401,7 +3381,7 @@ end;
 
 procedure TfrmMain.miCloudToRecipesClick(Sender: TObject);
 var R : TRecipe;
-    s : string;
+    //s : string;
 begin
   if FSelected <> NIL then
   begin
@@ -3578,7 +3558,6 @@ begin
     if (tvBrews.Selected <> NIL) and (tvBrews.Selected.Data <> NIL) then
       Rec:= TRecipe(tvBrews.Selected.Data);
     Screen.Cursor:= crHourglass;
-    Cursor:= crHourglass;
     Application.ProcessMessages;
     tvBrews.Visible:= false;
     tvBrews.Items.Clear;
@@ -3630,14 +3609,12 @@ begin
       end;
     end;
     Screen.Cursor:= crDefault;
-    Cursor:= crDefault;
   end
   else if page = tsRecipes then
   begin
     if (tvRecipes.Selected <> NIL) and (tvRecipes.Selected.Data <> NIL) then
       Rec:= TRecipe(tvRecipes.Selected.Data);
     Screen.Cursor:= crHourglass;
-    Cursor:= crHourglass;
     Application.ProcessMessages;
     tvRecipes.Visible:= false;
     tvRecipes.Items.Clear;
@@ -3674,7 +3651,6 @@ begin
         tvRecipes.Selected.MakeVisible;
     end;
     Screen.Cursor:= crDefault;
-    Cursor:= crDefault;
   end
   else if page = tsCloud then
   begin
@@ -3683,7 +3659,6 @@ begin
       if (tvCloud.Selected <> NIL) and (tvCloud.Selected.Data <> NIL) then
         CloudF:= BHCloud.Selected;
       Screen.Cursor:= crHourglass;
-      Cursor:= crHourglass;
       Application.ProcessMessages;
       tvCloud.Visible:= false;
       tvCloud.Items.Clear;
@@ -3713,7 +3688,6 @@ begin
           tvCloud.Selected.MakeVisible;
       end;
       Screen.Cursor:= crDefault;
-      Cursor:= crDefault;
     end
     else if not BHCloud.IsBusy then
       tsCloud.TabVisible:= BHCloud.ReadCloud;
@@ -3725,18 +3699,17 @@ var i, n : integer;
     st, le : string;
     RootNode, ClassNode, StyleNode, RecipeNode : TTreeNode;
     Rec, RecO : TRecipe;
-    CloudF : longint;
+    //CloudF : longint;
     CloudFile : TBHCloudFile;
 begin
   Rec:= NIL; RecO:= NIL;
-  CloudF:= -1;
+  //CloudF:= -1;
   if Page = tsBrews then
   begin
     //fill the treeview with brews
     if (tvBrews.Selected <> NIL) and (tvBrews.Selected.Data <> NIL) then
       RecO:= TRecipe(tvBrews.Selected.Data);
     Screen.Cursor:= crHourglass;
-    Cursor:= crHourglass;
     Application.ProcessMessages;
     tvBrews.Visible:= false;
     tvBrews.Items.Clear;
@@ -3808,13 +3781,11 @@ begin
       end;
     finally
       Screen.Cursor:= crDefault;
-      Cursor:= crDefault;
     end;
   end
   else if Page = tsRecipes then
   begin
     Screen.Cursor:= crHourglass;
-    Cursor:= crHourglass;
     Application.ProcessMessages;
     if (tvRecipes.Selected <> NIL) and (tvRecipes.Selected.Data <> NIL) then
       RecO:= TRecipe(tvRecipes.Selected.Data);
@@ -3875,13 +3846,11 @@ begin
       end;
     finally
       Screen.Cursor:= crDefault;
-      Cursor:= crDefault;
     end;
   end
   else if Page = tsCloud then
   begin
     Screen.Cursor:= crHourglass;
-    Cursor:= crHourglass;
     Application.ProcessMessages;
     if (tvCloud.Selected <> NIL) and (tvCloud.Selected.Data <> NIL) then
       RecO:= TRecipe(tvCloud.Selected.Data);
@@ -3895,7 +3864,7 @@ begin
         RootNode.StateIndex:= 11;
         for i:= 0 to BHCloud.NumFiles - 1 do
         begin
-          CloudF:= BHCloud.Selected;
+          //CloudF:= BHCloud.Selected;
           CloudFile:= BHCloud.FileRec[i];
           if CloudFile.ShowRecipe.Value then
           begin
@@ -3946,7 +3915,6 @@ begin
         tsCloud.TabVisible:= BHCloud.ReadCloud;
     finally
       Screen.Cursor:= crDefault;
-      Cursor:= crDefault;
       tvCloud.Visible:= TRUE;
     end;
   end;
@@ -3958,17 +3926,14 @@ var y, m, d, i, n : word;
     st : string;
     RootNode, YearNode, MonthNode, RecipeNode : TTreeNode;
     Rec, RecO : TRecipe;
-    CloudF : longint;
     CloudFile : TBHCloudFile;
 begin
   Rec:= NIL; RecO:= NIL;
-  CloudF:= -1;
   CloudFile:= NIL;
   if Page = tsBrews then
   begin
     //fill the treeview with brews
     Screen.Cursor:= crHourglass;
-    Cursor:= crHourglass;
     Application.ProcessMessages;
     if (tvBrews.Selected <> NIL) and (tvBrews.Selected.Data <> NIL) then
       RecO:= TRecipe(tvBrews.Selected.Data);
@@ -4039,13 +4004,11 @@ begin
       end;
     finally
       Screen.Cursor:= crDefault;
-      Cursor:= crDefault;
     end;
   end
   else if Page = tsRecipes then
   begin
     Screen.Cursor:= crHourglass;
-    Cursor:= crHourglass;
     Application.ProcessMessages;
     if (tvRecipes.Selected <> NIL) and (tvRecipes.Selected.Data <> NIL) then
       RecO:= TRecipe(tvRecipes.Selected.Data);
@@ -4103,13 +4066,11 @@ begin
       end;
     finally
       Screen.Cursor:= crDefault;
-      Cursor:= crDefault;
     end;
   end
   else if Page = tsCloud then
   begin
     Screen.Cursor:= crHourglass;
-    Cursor:= crHourglass;
     Application.ProcessMessages;
     if (tvCloud.Selected <> NIL) and (tvCloud.Selected.Data <> NIL) then
       RecO:= TRecipe(tvCloud.Selected.Data);
@@ -4168,7 +4129,6 @@ begin
         tsCloud.TabVisible:= BHCloud.ReadCloud;
     finally
       Screen.Cursor:= crDefault;
-      Cursor:= crDefault;
       tvCloud.Visible:= TRUE;
     end;
   end;
@@ -4241,8 +4201,8 @@ begin
 end;
 
 procedure TfrmMain.FillAnalyseCharts;
-var lett, snm : string;
-    num : integer;
+var //lett, snm : string;
+    //num : integer;
     mma : TMinMax;
     ylist: array [1..4] of Double;
     i : integer;
@@ -4268,20 +4228,20 @@ begin
     begin
       OK:= TRUE;
       RC:= Brews;
-      snm:= tvBrews.Selected.Text;
-      lett:= tvBrews.Selected.Parent.Text;
+      //snm:= tvBrews.Selected.Text;
+      //lett:= tvBrews.Selected.Parent.Text;
     end
     else if (pcRecipes.ActivePage = tsRecipes) and (cbRecipesSort.ItemIndex = 1) and
        (tvRecipes.Selected <> NIL) and (tvRecipes.Selected.Level = 2) then //sorted by beerstyle
     begin
       OK:= TRUE;
       RC:= Recipes;
-      snm:= tvRecipes.Selected.Text;
-      lett:= tvRecipes.Selected.Parent.Text;
+      //snm:= tvRecipes.Selected.Text;
+      //lett:= tvRecipes.Selected.Parent.Text;
     end;
     if OK then
     begin
-      num:= RC.AnalyseFermentables(lett, snm);
+      //num:= RC.AnalyseFermentables(lett, snm);
       dbawFermentables.Source.Ycount:= 5;
       //create graph and show it
       for i:= 0 to High(RC.FermentablesMinMaxArray) do
@@ -4297,7 +4257,7 @@ begin
       end;
 
       lcsHopBW.YCount:= 5;
-      num:= RC.AnalyseHops(lett, snm);
+      //num:= RC.AnalyseHops(lett, snm);
       if rgBitterhop.Checked then
       begin
         for i:= 0 to High(RC.BitterhopMinMaxArray) do
@@ -4351,7 +4311,7 @@ begin
       end;
       if maxr > 0 then latHopright.Scale:= maxl / maxr;
 
-      num:= RC.AnalyseYeasts(lett, snm);
+      //num:= RC.AnalyseYeasts(lett, snm);
       //create graph and show it
       for i:= 0 to High(RC.YeastMinMaxArray) do
       begin
@@ -4367,7 +4327,7 @@ begin
 
       maxl:= 0;
       maxr:= 0;
-      num:= RC.AnalyseMiscs(lett, snm);
+      //num:= RC.AnalyseMiscs(lett, snm);
       for i:= 0 to High(RC.MiscMinMaxArray) do
       begin
         mma:= RC.MiscMinMaxArray[i];
@@ -4383,7 +4343,7 @@ begin
       end;
       if maxr > 0 then latMiscRight.Scale:= maxl / maxr;
 
-      num:= RC.AnalyseRecipes(lett, snm);
+      //num:= RC.AnalyseRecipes(lett, snm);
       for i:= 0 to High(RC.CommonMinMaxArray) do
       begin
         mma:= RC.CommonMinMaxArray[i];
@@ -4423,7 +4383,7 @@ end;
 
 Procedure TfrmMain.UpdateAndStoreCheckList(Rec : TRecipe);
 var R : TRecipe;
-    i, n, g : longint;
+    //i, n, g : longint;
 begin
   if Rec.RecType = rtBrew then
   begin
@@ -4431,26 +4391,26 @@ begin
     R:= Brews.FindByAutoNr(Rec.AutoNr.Value);
     if R <> NIL then
     begin
-      n:= Rec.CheckList.NumItemsChecked;
+      //n:= Rec.CheckList.NumItemsChecked;
       R.CheckList.Assign(Rec.CheckList);
-      i:= R.CheckList.NumItemsChecked;
-      n:= Rec.CheckList.NumItemsChecked;
-      g:= Rec.CheckList.NumGroups;
+      //i:= R.CheckList.NumItemsChecked;
+      //n:= Rec.CheckList.NumItemsChecked;
+      //g:= Rec.CheckList.NumGroups;
       if (FSelBrew = R) then
       begin
         if (FTemporary.RecType = rtBrew) and (FTemporary.AutoNr.Value = Rec.AutoNr.Value) then
         begin
-          g:= Rec.CheckList.NumGroups;
+          //g:= Rec.CheckList.NumGroups;
           FTemporary.CheckList.Assign(Rec.CheckList);
-          i:= FTemporary.CheckList.NumItemsChecked;
-          n:= Rec.CheckList.NumItemsChecked;
+          //i:= FTemporary.CheckList.NumItemsChecked;
+          //n:= Rec.CheckList.NumItemsChecked;
           FSelBrew.Assign(FTemporary);
-          i:= FSelBrew.CheckList.NumItemsChecked;
-          n:= Rec.CheckList.NumItemsChecked;
+          //i:= FSelBrew.CheckList.NumItemsChecked;
+          //n:= Rec.CheckList.NumItemsChecked;
         end;
       end;
       Brews.SaveXML;
-      i:= R.CheckList.NumItemsChecked;
+      //i:= R.CheckList.NumItemsChecked;
     end;
     FUserClicked:= TRUE;
   end;
@@ -4589,7 +4549,6 @@ begin
 end;
 
 Procedure TfrmMain.NameChange;
-var s : string;
 begin
   if FTemporary <> NIL then
     Caption:= 'BrewBuddy - Sassy Saison - ' + FTemporary.Name.Value
@@ -4866,12 +4825,11 @@ begin
 end;
 
 procedure TfrmMain.cbLockedChange(Sender: TObject);
-var n : TTreeNode;
+//var n : TTreeNode;
 begin
   if (FSelected <> NIL) and FUserClicked then
   begin
     Screen.Cursor:= crHourglass;
-    Cursor:= crHourglass;
     Application.ProcessMessages;
     FTemporary.Locked.Value:= cbLocked.Checked;
     Store;
@@ -4883,12 +4841,11 @@ begin
     else
       bbInventory.Color:= clDefault;
 
-    n:= tvBrews.Items.FindNodeWithData(FSelected);
+    //n:= tvBrews.Items.FindNodeWithData(FSelected);
     SetIcon;
 
     Application.ProcessMessages;
     Screen.Cursor:= crDefault;
-    Cursor:= crDefault;
     FChanged:= false;
   end;
 end;
@@ -5883,7 +5840,7 @@ procedure TfrmMain.sgIngredientsSelectEditor(Sender: TObject; aCol,
   aRow: Integer; var Editor: TWinControl);
 var r : TRect;
     v : double;
-    s : string;
+    //s : string;
     Y : TYeast;
 begin
   Editor:= NIL;
@@ -5901,7 +5858,7 @@ begin
         fseGrid.BoundsRect:= r;
         fseGrid.DecimalPlaces:= Y.AmountYeast.Decimals;
         fseGrid.MaxValue:= Y.AmountYeast.MaxValue;
-        s:= Y.Name.Value;
+        //s:= Y.Name.Value;
         v:= Y.AmountYeast.DisplayValue;
         fseGrid.Value:= v;
         Editor:= fseGrid;
@@ -5911,7 +5868,7 @@ begin
         fseGrid.BoundsRect:= r;
         fseGrid.DecimalPlaces:= FSelIngredient.Amount.Decimals;
         fseGrid.MaxValue:= FSelIngredient.Amount.MaxValue;
-        s:= FSelIngredient.Name.Value;
+        //s:= FSelIngredient.Name.Value;
         v:= FSelIngredient.Amount.DisplayValue;
         fseGrid.Value:= v;
         Editor:= fseGrid;
@@ -6695,7 +6652,7 @@ begin
 end;
 
 procedure TfrmMain.fseTopUpWaterChange(Sender: TObject);
-var V, V2, x : double;
+//var V, V2, x : double;
 begin
   if (FSelected <> NIL) and (FTemporary.Mash <> NIL) and FUserClicked then
   begin
@@ -7483,14 +7440,12 @@ procedure TfrmMain.bbChecklistClick(Sender: TObject);
 var Doc : TBHRDocument;
 begin
   Screen.Cursor:= crHourglass;
-  Cursor:= crHourglass;
   Application.ProcessMessages;
 
   Doc:= TBHRDocument.Create;
   if CreateCheckList(Doc, FTemporary) then
   begin
     Screen.Cursor:= crDefault;
-    Cursor:= crDefault;
     Doc.PrintPreview
   end
   else Doc.Free;

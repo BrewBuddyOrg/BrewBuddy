@@ -1,4 +1,4 @@
-unit frimport;
+unit FrImport;
 
 {$mode objfpc}{$H+}
 
@@ -32,7 +32,6 @@ type
     procedure bbOKClick(Sender: TObject);
     procedure odFileTypeChange(Sender: TObject);
   private
-    { private declarations }
     FDirName : string;
     FFileName : string;
     FFileType : TFileType;
@@ -40,7 +39,6 @@ type
     FDestination : TDestination;
     FFiles : TStrings;
   public
-    { public declarations }
     Function Execute : boolean;
   published
     property DirName : string read FDirName;

@@ -1,4 +1,4 @@
-unit frhopgraph;
+unit FrHopGraph;
 
 {$mode objfpc}{$H+}
 
@@ -30,11 +30,9 @@ type
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
   private
-    { private declarations }
     FGraphType : longint;
     procedure FillGraph;
   public
-    { public declarations }
     Function Execute(i : longint) : boolean;
   end;
 
@@ -156,7 +154,7 @@ var i, n : longint;
 begin
   lcsData.Clear;
   n:= 0;
-
+  SetLength(HRArr, 0);
   case FGraphType of
   0:
   begin
@@ -357,13 +355,13 @@ end;
 procedure TFrmHopGraph.ChartToolset1DataPointCrosshairTool1AfterMouseMove(
   ATool: TChartTool; APoint: TPoint);
 var i : longint;
-    Xv, Yv : double;
+    {Xv,} Yv : double;
     t : string;
 begin
   i:= TDataPointCrosshairTool(atool).PointIndex;
   if (i > -1) and (i <= cbsProperties.Source.Count - 1) then
   begin
-    Xv:= cbsProperties.Source.Item[i]^.X;
+    //Xv:= cbsProperties.Source.Item[i]^.X;
     Yv:= cbsProperties.Source.Item[i]^.Y;
     t:= cbsProperties.Source.Item[i]^.Text;
     StatusBar1.Panels.Items[0].Text:= t + '; waarde: ' + RealToStrSignif(Yv, 3);

@@ -1,4 +1,4 @@
-unit fryeasts3;
+unit FrYeasts3;
 
 {$mode objfpc}{$H+}
 
@@ -35,14 +35,12 @@ type
     procedure eSearchChange(Sender: TObject);
     procedure SpeedButton1Click(Sender: TObject);
   private
-    { private declarations }
     FYeast : TYeast;
     FSort : integer;
     FSortDec, FUserClicked : boolean;
     FYeastList : array of TYeast;
     Procedure SortGrid(Nr1, Nr2 : integer);
   public
-    { public declarations }
     Function Execute(Y : TYeast) : boolean;
   end; 
 

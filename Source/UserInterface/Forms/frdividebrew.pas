@@ -1,4 +1,4 @@
-unit frdividebrew;
+unit FrDivideBrew;
 
 {$mode objfpc}{$H+}
 
@@ -19,10 +19,8 @@ type
     Label1: TLabel;
     seNumBatches: TSpinEdit;
   private
-    { private declarations }
     Function GetNumBatches : word;
   public
-    { public declarations }
     Function Execute : integer;
   published
     property NumBatches : word read GetNumBatches;

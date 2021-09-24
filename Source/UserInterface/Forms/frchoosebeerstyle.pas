@@ -1,4 +1,4 @@
-unit frchoosebeerstyle;
+unit FrChooseBeerStyle;
 
 {$mode objfpc}{$H+}
 
@@ -17,9 +17,8 @@ type
     bbOK: TBitBtn;
     bbCancel: TBitBtn;
   private
-    { private declarations }
+
   public
-    { public declarations }
     Function Execute : TBeerStyle;
   end; 
 

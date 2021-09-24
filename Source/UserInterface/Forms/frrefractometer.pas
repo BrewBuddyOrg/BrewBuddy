@@ -1,4 +1,4 @@
-unit frrefractometer;
+unit FrRefractometer;
 
 {$mode objfpc}{$H+}
 
@@ -27,9 +27,9 @@ type
     procedure fseSGChange(Sender: TObject);
     procedure bbOKClick(Sender: TObject);
   private
-    { private declarations }
+
   public
-    { public declarations }
+
   end; 
 
 var

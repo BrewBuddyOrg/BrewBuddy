@@ -1,4 +1,4 @@
-unit rcstrngs;
+unit RcStrngs;
 
 {$mode objfpc}{$H+}
 

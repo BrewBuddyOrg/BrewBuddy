@@ -1,4 +1,4 @@
-unit frselectbeerstyle;
+unit FrSelectBeerStyle;
 
 {$mode objfpc}{$H+}
 
@@ -20,10 +20,8 @@ type
     procedure FormCreate(Sender: TObject);
     procedure cbStylesChange(Sender: TObject);
   private
-    { private declarations }
     FBeerStyle : TBeerStyle;
   public
-    { public declarations }
     Function Execute(OldBeerstyle : string) : boolean;
   published
     property BeerStyle : TBeerstyle read FBeerStyle;

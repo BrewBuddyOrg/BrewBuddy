@@ -1,4 +1,4 @@
-unit fdatabaselocation;
+unit FDatabaseLocation;
 
 {$mode objfpc}{$H+}
 
@@ -23,10 +23,8 @@ type
     procedure deSettingsChange(Sender: TObject);
     procedure cbRemoveClick(Sender: TObject);
   private
-    { private declarations }
     FOldDir, FNewDir : string;
   public
-    { public declarations }
     Function Execute : boolean;
   end; 
 
@@ -39,7 +37,7 @@ implementation
 uses Data, Containers, frmain, Hulpfuncties, subs, neuroot;
 
 procedure TFrmDatabaseLocation.deSettingsChange(Sender: TObject);
-var StylesN, FermN, HopN, MiscN, YeastN, WaterN : string;
+//var StylesN, FermN, HopN, MiscN, YeastN, WaterN : string;
 begin
 {  //Check if there are files in the chosen directory
   FNewDir:= deSettings.Directory;

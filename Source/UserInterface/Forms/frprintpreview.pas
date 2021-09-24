@@ -1,4 +1,4 @@
-unit frprintpreview;
+unit FrPrintPreview;
 
 {$mode objfpc}{$H+}
 
@@ -34,7 +34,6 @@ type
     procedure sbPageMouseWheelDown(Sender: TObject; Shift: TShiftState;
       MousePos: TPoint; var Handled: Boolean);
   private
-    { private declarations }
     FDocument : TBHRDocument;
     FPageNr, FPageHeight, FPageWidth : word;
     FScale, FZoomfactor : single;
@@ -42,7 +41,6 @@ type
     Procedure SetDocument(F : TBHRDocument);
     Procedure ShowPage;
   public
-    { public declarations }
     Function Execute(F : TBHRDocument) : boolean;
   published
     property Document : TBHRDocument read FDocument write SetDocument;

@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CONFIG>
-  <Compiler Value="C:\lazarus\fpc\3.0.4\bin\x86_64-win64\fpc.exe" Date="1286834845"/>
-  <Params Value=" -Twin32 -Pi386 -MObjFPC -Scgi -O2 -g -gl -l -vewnhibq -FuC:\lazarus\packager\units\i386-win32 -FuC:\lazarus\components\lazutils\lib\i386-win32 -FuC:\lazarus\lcl\units\i386-win32 -FuC:\lazarus\lcl\units\i386-win32\win32 -FuC:\Projecten\BrewBuddy\Source\3rdParty\uniqueinstance-1.0\ -FUC:\Projecten\BrewBuddy\Source\3rdParty\uniqueinstance-1.0\lib\i386-win32-win32\ -dLCL -dLCLwin32 -dDisableUTF8RTL uniqueinstance_package.pas"/>
-</CONFIG>

@@ -29,7 +29,7 @@ type
      Procedure SortByIndex2(I1, I2 : integer; Decending : boolean);
      Procedure SortByName(s : string);
      Procedure UnSelect;
-     Function AddItem : TBase; virtual;
+     Function AddItem : TBase;
      Procedure InsertItem(i : integer); virtual;
      Procedure RemoveItem(i : integer); virtual;
      Procedure RemoveByReference(Item : TBase); virtual;
@@ -58,7 +58,7 @@ type
      Procedure ReadXML; override;
      Function ImportXML : boolean; override;
      Function GetSelectedItem : TFermentable;
-     Function AddItem : TFermentable;
+     Function AddItem : TFermentable; reintroduce;
      Procedure InsertItem(i : integer); override;
      Function FindByNameAndSupplier(N, S : string) : TFermentable;
   published
@@ -73,7 +73,7 @@ type
      Procedure ReadXML; override;
      Function ImportXML : boolean; override;
      Function GetSelectedItem : THop;
-     Function AddItem : THop;
+     Function AddItem : THop; reintroduce;
      Procedure InsertItem(i : integer); override;
      Function FindByNameAndOriginAndAlfa(N, O : string; A : double) : THop;
   published
@@ -88,7 +88,7 @@ type
      Procedure ReadXML; override;
      Function ImportXML : boolean; override;
      Function GetSelectedItem : TMisc;
-     Function AddItem : TMisc;
+     Function AddItem : TMisc; reintroduce;
      Procedure InsertItem(i : integer); override;
   published
     property SelectedItem : TMisc read GetSelectedItem;
@@ -102,7 +102,7 @@ type
      Procedure ReadXML; override;
      Function ImportXML : boolean; override;
      Function GetSelectedItem : TYeast;
-     Function AddItem : TYeast;
+     Function AddItem : TYeast; reintroduce;
      Procedure InsertItem(i : integer); override;
      Function FindByNameAndLaboratory(N, L : string) : TYeast;
   published
@@ -117,7 +117,7 @@ type
      Procedure ReadXML; override;
      Function ImportXML : boolean; override;
      Function GetSelectedItem : TWater;
-     Function AddItem : TWater;
+     Function AddItem : TWater; reintroduce;
      Procedure InsertItem(i : integer); override;
      Function GetDefaultWater : TWater;
      Function GetDemiWater : TWater;
@@ -133,7 +133,7 @@ type
      Procedure ReadXML; override;
 //     Function ImportXML : boolean; override;
      Function GetSelectedItem : TEquipment;
-     Function AddItem : TEquipment;
+     Function AddItem : TEquipment; reintroduce;
      Procedure InsertItem(i : integer); override;
      Procedure CalcEfficiencyRegressionFactors;
      Procedure CalcAttenuationRegressionFactors;
@@ -149,7 +149,7 @@ type
      Procedure ReadXML; override;
      Function ImportXML : boolean; override;
      Function GetSelectedItem : TBeerStyle;
-     Function AddItem : TBeerStyle;
+     Function AddItem : TBeerStyle; reintroduce;
      Procedure InsertItem(i : integer); override;
   published
     property SelectedItem : TBeerStyle read GetSelectedItem;
@@ -163,7 +163,7 @@ type
      Procedure ReadXML; override;
      Function ImportXML : boolean; override;
      Function GetSelectedItem : TMash;
-     Function AddItem : TMash;
+     Function AddItem : TMash; reintroduce;
      Procedure InsertItem(i : integer); override;
   published
     property SelectedItem : TMash read GetSelectedItem;
@@ -188,7 +188,7 @@ type
      FCommonMinMaxArray : TMinMaxArray;
      Procedure QuickSortRecipes(var Arr : array of TBase);
      Function ImportXMLs(FN : TStrings; DN : string; Equip : TEquipment) : boolean;
-     Function ImportXML(FN : string; Equip : TEquipment) : boolean;
+     Function ImportXML(FN : string; Equip : TEquipment) : boolean; reintroduce;
      Function ImportRECs(FN : TStrings; DN : string; Equip : TEquipment) : boolean;
      Function ImportREC(FN : string; Equip : TEquipment) : boolean;
      Function GetLastNrRecipe : string;
@@ -205,7 +205,7 @@ type
                           FT : TFileType) : boolean;
      Procedure Sort;
      Function GetSelectedItem : TRecipe;
-     Function AddItem : TRecipe;
+     Function AddItem : TRecipe; reintroduce;
      Procedure InsertItem(i : integer); override;
      Function FindByNameAndNr(Nm, Nr : string) : TRecipe;
      Function FindByAutoNr(nr : integer) : TRecipe;
@@ -427,7 +427,7 @@ Procedure TContainer.SaveXML;
 begin
   FDoc := TXMLDocument.Create;
 //  FDoc.Encoding:= 'ISO-8859-1';
-  FRootNode := FDoc.CreateElement(FLabel);
+  FRootNode := FDoc.CreateElement(FLabel{%H-});
   FDoc.Appendchild(FRootNode);
 end;
 
@@ -441,7 +441,7 @@ begin
     if FileExists(FN) then
     begin
       ReadXMLFile(FDoc, FN);
-      FRootNode:= FDoc.FindNode(FLabel);
+      FRootNode:= FDoc.FindNode(FLabel{%H-});
     end;
   except
     FDoc.Free;
@@ -468,7 +468,7 @@ begin
       FImportFileName:= dlg.FileName;
       dlg.Free;
       ReadXMLFile(FDoc, FImportFileName);
-      FRootNode:= FDoc.FindNode(FLabel);
+      FRootNode:= FDoc.FindNode(FLabel{%H-});
       Result:= TRUE;
     end;
   except
@@ -1733,7 +1733,7 @@ Function TRecipes.ImportXMLs(FN : TStrings; DN : string; Equip : TEquipment) : b
 var SL : TStringList;
     i : integer;
     mask : string;
-    ps : TProgressBar;
+    //ps : TProgressBar;
 begin
   Result:= false;
   if DN <> '' then
@@ -1789,7 +1789,7 @@ end;
 
 Function TRecipes.ImportXML(FN : string; Equip : TEquipment) : boolean;
 var R : TRecipe;
-    s : string;
+    //s : string;
 begin
   Result:= false;
   FDoc := TXMLDocument.Create;
@@ -1798,8 +1798,8 @@ begin
     if FileExists(FN) then
     begin
       ReadXMLFile(FDoc, FN);
-      s:= ExtractFileNameOnly(FN);
-      FRootNode:= FDoc.FindNode(FLabel);
+      //s:= ExtractFileNameOnly(FN);
+      FRootNode:= FDoc.FindNode(FLabel{%H-});
       if FRootNode <> NIL then
       begin
         FChild:= FRootNode.FirstChild;
@@ -1837,7 +1837,7 @@ Function TRecipes.ImportRECs(FN : TStrings; DN : string; Equip : TEquipment) : b
 var SL : TStringList;
     i : integer;
     mask : string;
-    ps : TProgressBar;
+    //ps : TProgressBar;
 begin
   Result:= false;
   if DN <> '' then
@@ -1883,7 +1883,7 @@ end;
 Function TRecipes.ImportREC(FN : string; Equip : TEquipment) : boolean;
 var PI : TPromash;
     R : TRecipe;
-    s : string;
+    //s : string;
 begin
   Result:= false;
   PI := TPromash.Create(FrmMain);
@@ -1897,7 +1897,7 @@ begin
        if R <> NIL then
        begin
          PI.Convert(R);
-         s:= R.Style.Name.Value;
+         //s:= R.Style.Name.Value;
          R.AutoNr.Value:= MaxAutoNr + 1;
 
          CheckBeerStyle(R);
@@ -2954,7 +2954,6 @@ Procedure Backup;
 var sourcedata, destdata : string;
     year, month, day : word;
     i : integer;
-    SearchResult : TSearchRec;
     SL : TStringList;
 begin
   sourcedata:= Settings.DataLocation.Value;
@@ -2995,7 +2994,6 @@ Procedure Restore(sourcedata : string);
       result:= CopyFile(sd + fn, dd + fn);
   end;
 var destdata : string;
-    year, month, day : word;
     i : integer;
     SL : TStringList;
 begin
@@ -3192,10 +3190,10 @@ Procedure ChangeDatabaseLocation(source, destination : string; copy, deleteold :
     if FileExists(sd + fn) then
       result:= CopyFile(sd + fn, dd + fn);
   end;
-var SearchResult : TSearchRec;
-    i : integer;
-    SL : TStringList;
-    StylesN, FermN, HopN, MiscN, YeastN, WaterN, sourcedata : string;
+var
+  i : integer;
+  SL : TStringList;
+  StylesN, FermN, HopN, MiscN, YeastN, WaterN : string;
 begin
   {$ifdef UNIX}
     destination:= destination + '/';
@@ -3233,13 +3231,13 @@ begin
     else //copy previous database to new location, but clear brews
     begin
       {$ifdef UNIX}
-        sourcedata:= '/usr/share/brewbuddy/';
+        //sourcedata:= '/usr/share/brewbuddy/';
       {$endif}
       {$ifdef darwin}
-        sourcedata:= '/usr/share/brewbuddy/';
+        //sourcedata:= '/usr/share/brewbuddy/';
       {$endif}
       {$ifdef Windows}
-        sourcedata:= ExtractFilePath(Application.ExeName) + 'brewbuddy\';
+        //sourcedata:= ExtractFilePath(Application.ExeName) + 'brewbuddy\';
         if OnUSB then BHFolder:= DriveLetter + '\brewbuddy\brewbuddy\'
         else BHFolder:= destination;
       {$endif}
@@ -3348,7 +3346,6 @@ end;
 Initialization
   if DoLog then slLog:= TStringList.Create
   else slLog:= NIL;
-  Screen.Cursor:= crHourglass;
 
   ExecFolder:= Application.Location;
   log('ExecFolder = ' + ExecFolder);
@@ -3450,7 +3447,7 @@ Initialization
     CheckSalts;
   end
   else
-    ShowMessage('Databestanden niet gevonden');
+    WriteLn('Databestanden niet gevonden');
 //  Equipments.CalcEfficiencyRegressionFactors;
 //  Equipments.CalcAttenuationRegressionFactors;
 
@@ -3465,8 +3462,6 @@ Initialization
   Arr[7]:= 11;
   Brews.ExportToCSV(Arr);
   SetLength(Arr, 0);}
-
-  Screen.Cursor:= crDefault;
 
 Finalization
   if OnUSB then

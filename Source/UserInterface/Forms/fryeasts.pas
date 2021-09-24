@@ -94,21 +94,19 @@ type
     procedure fseMaxTemperatureChange(Sender: TObject);
     procedure fseMinTemperatureChange(Sender: TObject);
     procedure sbClearClick(Sender: TObject);
-    procedure tvSelectKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState
-      );
+    procedure tvSelectKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure tvSelectSelectionChanged(Sender: TObject);
     procedure eLaboratoryExit(Sender: TObject);
     procedure bbImportClick(Sender: TObject);
     procedure bbCopyClick(Sender: TObject);
   private
-    { private declarations }
     FSelectedNode : TTreeNode;
     FUserClicked : boolean;
     Procedure Store;
     Procedure FillTree;
     Procedure UpdateAmoebe;
   public
-    { public declarations }
+
   end; 
 
 var
@@ -184,7 +182,7 @@ Procedure TFrmYeasts.FillTree;
 var i : integer;
     supp, yname : string;
     Y : TYeast;
-    Node, ChildNode, ChildNode2 : TTreeNode;
+    Node, ChildNode, {%H-}ChildNode2 : TTreeNode;
 begin
   tvSelect.Items.Clear;
   Node:= tvSelect.Items.Add(nil,'Fabrikant');
@@ -495,8 +493,7 @@ begin
 end;
 
 procedure TFrmYeasts.eSearchChange(Sender: TObject);
-var i : integer;
-    N : TTreeNode;
+var N : TTreeNode;
     Y : TYeast;
     s, s2 : string;
     Vis : boolean;

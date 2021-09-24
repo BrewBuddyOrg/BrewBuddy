@@ -17,9 +17,7 @@ type
     FInsideColor, FOutsideColor, FIntermediateColor : TColor;
     FColorScale, FShowValues, FValuesInBar : boolean;
     FDecimals : integer;
-    { Private declarations }
   protected
-    { Protected declarations }
     Procedure SetMin(V : double);
     Procedure SetMax(V : double);
     Procedure SetLow(V : double);
@@ -37,11 +35,9 @@ type
     Procedure PaintLinux;
     Procedure PaintWindows;
   public
-    { Public declarations }
     Constructor Create(AOwner : TComponent); override;
     procedure Paint; override;
   published
-    { Published declarations }
     property Min : double read FMin write SetMin;
     property Max: double read FMax write SetMax;
     property Low : double read FLow write SetLow;
@@ -431,10 +427,11 @@ end;
 Procedure TPosInterval.PaintWindows;
 var Rct, BarRect, MarkRect, PIRect : TRect;
     TH, TW, BarW, pMin, pLow, pValue, pHigh, pMax, pTolerance, TextX, TextY : integer;
-    OldFontColor, OldPenColor, OldBrushColor, ValueColor, LowColor, HighColor, MinColor, MaxColor : TColor;
+    OldFontColor, OldPenColor, OldBrushColor, ValueColor, LowColor, HighColor : TColor;
+    //MinColor, MaxColor : TColor;
     MinC, MaxC : double;
     valuestring : string;
-    i, j, step : integer;
+    i, step : integer;
 const Margin : integer = 5;
 begin
   OldPenColor:= Canvas.Pen.Color;
@@ -471,7 +468,6 @@ begin
     Rct.Top:= BarRect.Top;
     Rct.Bottom:= BarRect.Bottom;
 
-    j:= pMin;
     if FColorScale then
     begin
       step:= round(BarW/20);
@@ -534,9 +530,8 @@ begin
     ValueColor:= Canvas.Pixels[pValue, round((BarRect.Bottom - BarRect.Top)/2 + BarRect.Top)];
     LowColor:= Canvas.Pixels[pLow, round((BarRect.Bottom - BarRect.Top)/2 + BarRect.Top)];
     HighColor:= Canvas.Pixels[pHigh, round((BarRect.Bottom - BarRect.Top)/2 + BarRect.Top)];
-    MinColor:= Canvas.Pixels[pMin, round((BarRect.Bottom - BarRect.Top)/2 + BarRect.Top)];
-    MaxColor:= Canvas.Pixels[pMax, round((BarRect.Bottom - BarRect.Top)/2 + BarRect.Top)];
-
+    //MinColor:= Canvas.Pixels[pMin, round((BarRect.Bottom - BarRect.Top)/2 + BarRect.Top)];
+    //MaxColor:= Canvas.Pixels[pMax, round((BarRect.Bottom - BarRect.Top)/2 + BarRect.Top)];
 
     //Create Glassy effect
     if FEffect = eGlassy then Glassify(Canvas, BarRect);
@@ -603,9 +598,10 @@ begin
 end;
 
 Procedure TPosInterval.PaintLinux;
-var Rct, BarRect, MarkRect, PIRect : TRect;
+var Rct, BarRect, MarkRect : TRect;
     TH, TW, BarW, pMin, pLow, pValue, pHigh, pMax, pTolerance, TextX, TextY : integer;
-    OldFontColor, OldPenColor, OldBrushColor, ValueColor, LowColor, HighColor, MinColor, MaxColor : TColor;
+    OldFontColor, OldPenColor, OldBrushColor, ValueColor, LowColor, HighColor : TColor;
+    //MinColor, MaxColor : TColor;
     MinC, MaxC : double;
     valuestring : string;
     Bmp : TBitmap;
@@ -712,9 +708,8 @@ begin
     ValueColor:= Bmp.Canvas.Pixels[pValue, round((BarRect.Bottom - BarRect.Top)/2 + BarRect.Top)];
     LowColor:= Bmp.Canvas.Pixels[pLow, round((BarRect.Bottom - BarRect.Top)/2 + BarRect.Top)];
     HighColor:= Bmp.Canvas.Pixels[pHigh, round((BarRect.Bottom - BarRect.Top)/2 + BarRect.Top)];
-    MinColor:= Bmp.Canvas.Pixels[pMin, round((BarRect.Bottom - BarRect.Top)/2 + BarRect.Top)];
-    MaxColor:= Bmp.Canvas.Pixels[pMax, round((BarRect.Bottom - BarRect.Top)/2 + BarRect.Top)];
-
+    //MinColor:= Bmp.Canvas.Pixels[pMin, round((BarRect.Bottom - BarRect.Top)/2 + BarRect.Top)];
+    //MaxColor:= Bmp.Canvas.Pixels[pMax, round((BarRect.Bottom - BarRect.Top)/2 + BarRect.Top)];
 
     //Create Glassy effect
     if FEffect = eGlassy then Glassify(Bmp.Canvas, BarRect);
@@ -796,4 +791,4 @@ begin
 end;
 
 end.
-
+

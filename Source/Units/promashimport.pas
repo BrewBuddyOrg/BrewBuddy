@@ -569,7 +569,6 @@ end;
 Function ReadANSIString(FS : TFileStream; i : integer) : string;
 var S : ansistring;
     j : integer;
-    Buffer : array of byte;
 begin
   SetLength(S, i);
   for j:= 1 to i do
@@ -583,7 +582,6 @@ end;
 Function ReadString(FS : TFileStream; i : integer) : string;
 var S : string;
     j : integer;
-    Buffer : array of byte;
 begin
   SetLength(S, i);
   for j:= 1 to i do
@@ -708,7 +706,6 @@ begin
 end;
 
 Procedure TPromash.Clear;
-var i : longint;
 begin
    FOpened:= false;
    FFileName := '';
@@ -814,14 +811,11 @@ begin
 end;
 
 Function IsPromashFile(FN : string) : boolean;
-var i : longint;
-    FS : TFileStream;
-    b : byte;
-    chunksize, sk : longword;
-    x : single;
-    s, name : string;
-    li, hopcount, maltcount, extracount, boiltime : LongInt;
-    batchsize, wortsize, efficiency : single;
+var FS : TFileStream;
+    //x : single;
+    s : string;
+    li, hopcount, maltcount, extracount{, boiltime} : LongInt;
+    //batchsize, wortsize, efficiency : single;
 begin
   Result:= false;
   if FileExists(FN) { *Converted from FileExists*  } then
@@ -832,7 +826,6 @@ begin
       //Recipe Chunk
       s:= ReadString(FS, 83);
       s:= ConvertStringEnc(s);
-      Name:= s;
       li:= ReadLongInt(FS);
       HopCount:= li;
       li:= ReadLongInt(FS);
@@ -866,7 +859,6 @@ end;
 Function TPromash.OpenReadRec(FN : string) : boolean;
 var i : longint;
     FS : TFileStream;
-    b : byte;
     chunksize, sk : longword;
     x : single;
     s : string;
@@ -1308,7 +1300,7 @@ begin
 end;
 
 Function TPromash.GetMaltYield(i : integer) : single;   //in % !!!
-var s : single;
+//var s : single;
 begin
   if (i >= Low(FMalts)) and (i <= High(FMalts)) then
   begin

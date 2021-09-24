@@ -1,4 +1,4 @@
-unit frsynchronize;
+unit FrSynchronize;
 
 {$mode objfpc}{$H+}
 
@@ -56,7 +56,6 @@ type
     procedure bbRetrieveLocClick(Sender: TObject);
     procedure PageControl1PageChanged(Sender: TObject);
   private
-    { private declarations }
     Function GetFileFTP(Host, SourceFileName, TargetFileName, User, Password : string) : boolean;
     Function SendFileFTP(Host, SourceFileName, TargetFileName, User, Password : string) : boolean;
     Function GetAndSendFilesFTP(Host, User, Password : string) : boolean;
@@ -64,7 +63,7 @@ type
     Procedure FillStringGrid;
     Procedure Reset;
   public
-    { public declarations }
+
   end;
 
   TBHFileRec = record

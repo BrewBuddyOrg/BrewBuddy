@@ -1,4 +1,4 @@
-unit frgetpasswd;
+unit FrGetPasswd;
 
 {$mode objfpc}{$H+}
 
@@ -19,9 +19,8 @@ type
     mePasswd: TMaskEdit;
     procedure FormCreate(Sender: TObject);
   private
-    { private declarations }
+
   public
-    { public declarations }
     Function GetAnswer : string;
   end;
 

@@ -97,19 +97,17 @@ type
     procedure fseBatchSizeChange(Sender: TObject);
     procedure fseMashVolumeChange(Sender: TObject);
     procedure fseTunVolumeChange(Sender: TObject);
-    procedure tvSelectKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState
-      );
+    procedure tvSelectKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure tvSelectSelectionChanged(Sender: TObject);
     procedure fseBoilSizeChange(Sender: TObject);
     procedure fseEvapRateChange(Sender: TObject);
   private
-    { private declarations }
     FSelectedNode : TTreeNode;
     FNew : boolean;
     FUserClicked : boolean;
     Procedure Store;
   public
-    { public declarations }
+
   end; 
 
 var
@@ -126,7 +124,7 @@ procedure TFrmEquipments.FormCreate(Sender: TObject);
 var i : integer;
     mname : string;
     E : TEquipment;
-    Node, ChildNode: TTreeNode;
+    Node, {%H-}ChildNode: TTreeNode;
 begin
   FUserClicked:= TRUE;
   Equipments.UnSelect;

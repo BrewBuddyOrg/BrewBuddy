@@ -42,7 +42,7 @@ type
      Function GetActivationFunction : TActivationFunction;
    public
      Constructor Create;
-     Destructor Destroy;
+     Destructor Destroy; override;
      Procedure AddInputIndex(s : string);
      Procedure AddOutputIndex(s : string);
      Procedure ClearInputIndexs;
@@ -188,7 +188,7 @@ begin
 end;
 
 Procedure TBHNN.SaveXML(Doc: TXMLDocument; iNode: TDOMNode);
-var i, j, n : integer;
+var j, n : integer;
     iNN, iChild, iChild2 : TDOMNode;
 begin
   iNN:= Doc.CreateElement('NN');
@@ -232,7 +232,10 @@ end;
 
 Function ReadNode(iNode : TDomNode; FLabel : string) : string;
 var
-  v, encs, encto: string;
+  v: string;
+  {$ifdef WINDOWS}
+  encs, encto: string;
+  {$endif}
 begin
   Result:= '';
   if FLabel <> '' then
@@ -275,7 +278,7 @@ begin
 end;
 
 Procedure TBHNN.ReadXML(iNode: TDOMNode);
-var i, j, n : integer;
+var i, n : integer;
     s : string;
     iChild, iChild2 : TDOMNode;
     x : double;
@@ -714,7 +717,7 @@ begin
 end;
 
 Function TBHNN.CheckValidData(R : TRecipe) : boolean;
-var i, j : longint;
+var j : longint;
     x, y : double;
 begin
   Result:= TRUE;
@@ -829,10 +832,10 @@ var i, j, k, l, numvalid : longint;
     x : double;
     progress, totmse : single;
     tot : longint;
-    valid : boolean;
 begin
   Result:= false;
   Application.ProcessMessages;
+  SetLength(RA, 0);
   try
     if Perc < 50 then Perc:= 50;
     if Perc > 100 then Perc:= 100;
@@ -861,7 +864,8 @@ begin
     SetLength(Outputs, High(FOutputIndexs) + 1);
 
     //check if there is enough data to train the network
-    if not CheckNumValidData(numvalid) then ShowNotification(Application, 'Niet genoeg brouwsels voor dit netwerk')
+    if not CheckNumValidData(numvalid) then
+      ShowNotification(Application, 'Niet genoeg brouwsels voor dit netwerk')
     else
     begin
       tot:= NumRounds * j;
@@ -891,7 +895,8 @@ begin
           Application.ProcessMessages;
         end;
         Fmse:= totmse / j;
-        if Assigned(FOnTrainRound) and valid then FOnTrainRound(self, Fmse, progress);
+        if Assigned(FOnTrainRound) then
+          FOnTrainRound(self, Fmse, progress);
         Application.ProcessMessages;
         Inc(k);
       end;
@@ -900,7 +905,6 @@ begin
     SetLength(Inputs, 0);
     SetLength(Outputs, 0);
     SetLength(RA, 0);
-
     Save;
     FIsTrained:= TRUE;
     if Assigned(FOnTrainReady) then FOnTrainReady(self, Fmse);
@@ -1030,10 +1034,10 @@ var
   iChild, iTextNode: TDOMNode;
   s: string;
 begin
-  iChild := Doc.CreateElement(Title);
+  iChild := Doc.CreateElement(Title{%H-});
   s := ReplaceSpecialChars(Value);
   s := SetDecimalPoint(s);
-  iTextNode := Doc.CreateTextNode(s);
+  iTextNode := Doc.CreateTextNode(s{%H-});
   iChild.AppendChild(iTextNode);
   iNode.AppendChild(iChild);
 end;

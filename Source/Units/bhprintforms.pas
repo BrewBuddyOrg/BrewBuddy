@@ -25,13 +25,11 @@ type
     Caption : string;
     IngrType : TIngredientType;
   end;
-
-  TIngrListArray = array of TIngrListItem;
+  //TIngrListArray = array of TIngrListItem;
 
 var Head1FontSize, Head2FontSize, Head3FontSize: word;
     TextFontSize: word;
     clHead, clOneven, clEven : TColor;
-    IngrListArray : TIngrListArray;
 
 Function CmToPixX(cm : single) : word;
 begin
@@ -204,7 +202,7 @@ end;
 Function CreateCheckList(Doc : TBHRDocument; Rec : TRecipe) : boolean;
 var i, j : integer;
     txt : TBHRText;
-    Space : TBHRElement;
+    {%H-}Space : TBHRElement;
     logo : TImage;
     R : TRect;
     LineSpace : word;
@@ -264,8 +262,8 @@ var i, num, nRows, nCols, Ro, Co : integer;
     txt : TBHRText;
     logo : TImage;
     tbl : TBHRTable;
-    chart : TBHRChart;
-    Space : TBHRElement;
+    {%H-}chart : TBHRChart;
+    {%H-}Space : TBHRElement;
     R : TRect;
     v : double;
     LineSpace : word;
@@ -2532,11 +2530,10 @@ end;
 
 Function CreateStockList(Doc : TBHRDocument) : boolean;
 var i, nRows, nCols, Ro, Co : integer;
-    txt : TBHRText;
-//    img : TBHRImage;
+    {%H-}txt : TBHRText;
     logo : TImage;
     tbl : TBHRTable;
-    Space : TBHRElement;
+    {%H-}Space : TBHRElement;
     R : TRect;
     LineSpace : word;
     s : string;
@@ -2900,7 +2897,6 @@ var i, j : integer;
     F : TFermentable;
     H : THop;
     Y : TYeast;
-    wi : word;
 const ItemLength = 40;
 begin
   Result:= false;
@@ -3033,7 +3029,7 @@ begin
 end;
 
 Function CreateStockListFile : boolean;
-var i, j : integer;
+var i : integer;
     Memo : TMemo;
     dlg : TSaveDialog;
     s, FN : string;
@@ -3041,13 +3037,12 @@ var i, j : integer;
     F : TFermentable;
     H : THop;
     Y : TYeast;
-    wi : word;
     ds, ls : char;
 const ItemLength = 40;
 begin
   Result:= false;
-  ds:= DecimalSeparator;
-  ls:= ListSeparator;
+  ds:= DefaultFormatSettings.DecimalSeparator;
+  ls:= DefaultFormatSettings.ListSeparator;
   if ds = ls then ls:= ';';
 
   Application.ProcessMessages;
@@ -3178,10 +3173,11 @@ var i, nRows, nCols, Ro, Co : integer;
     logo : TImage;
     tbl : TBHRTable;
     R : TRect;
-    LineSpace, wi, totbr : word;
+    {LineSpace,} wi, totbr : word;
     totvol, x : double;
     s : string;
     Rec : TRecipe;
+
     Procedure NextR;
     begin
       Inc(Ro);
@@ -3203,7 +3199,7 @@ begin
   Head2FontSize:= 13;
   Head3FontSize:= 10;
   TextFontSize:= 9;
-  LineSpace:= round(1.2 * FontSizeToPix(TextFontSize, 1));
+  //LineSpace:= round(1.2 * FontSizeToPix(TextFontSize, 1));
   if (Doc <> NIL)  then
   begin
     Screen.Cursor:= crHourglass;

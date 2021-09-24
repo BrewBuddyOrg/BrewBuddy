@@ -1,4 +1,4 @@
-unit frmiscs3;
+unit FrMiscs3;
 
 {$mode objfpc}{$H+}
 
@@ -38,14 +38,12 @@ type
     procedure eSearchChange(Sender: TObject);
     procedure SpeedButton1Click(Sender: TObject);
   private
-    { private declarations }
     FMisc : TMisc;
     FSort : integer;
     FSortDec, FUserClicked : boolean;
     FMiscList : array of TMisc;
     Procedure SortGrid(Nr1, Nr2 : integer);
   public
-    { public declarations }
     Function Execute(M : TMisc) : boolean;
   end; 
 

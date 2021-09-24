@@ -1,4 +1,4 @@
-unit frmashs;
+unit FrMashs;
 
 {$mode objfpc}{$H+}
 
@@ -47,13 +47,11 @@ type
     procedure FormCreate(Sender: TObject);
     procedure sgMashStepsDblClick(Sender: TObject);
     procedure sgMashStepsSelection(Sender: TObject; aCol, aRow: Integer);
-    procedure tvSelectKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState
-      );
+    procedure tvSelectKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure tvSelectSelectionChanged(Sender: TObject);
     procedure bbImportClick(Sender: TObject);
     procedure bbCopyClick(Sender: TObject);
   private
-    { private declarations }
     FSelectedNode : TTreeNode;
     FNew : boolean;
     FSelectedRow : integer;
@@ -61,7 +59,7 @@ type
     Procedure Store;
     Procedure FillTree;
   public
-    { public declarations }
+
   end; 
 
 var
@@ -108,7 +106,7 @@ Procedure TFrmMashs.FillTree;
 var i : integer;
     mname : string;
     Mash : TMash;
-    Node, ChildNode: TTreeNode;
+    Node, {%H-}ChildNode: TTreeNode;
 begin
   tvSelect.Items.Clear;
   Node:= tvSelect.Items.Add(nil,'');

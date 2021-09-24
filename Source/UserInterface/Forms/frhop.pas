@@ -98,15 +98,13 @@ type
     procedure fseCohumuloneChange(Sender: TObject);
     procedure fseCostChange(Sender: TObject);
     procedure sbClearClick(Sender: TObject);
-    procedure tvSelectKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState
-      );
+    procedure tvSelectKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure tvSelectSelectionChanged(Sender: TObject);
     procedure fseInventoryChange(Sender: TObject);
     procedure eOriginExit(Sender: TObject);
     procedure bbImportClick(Sender: TObject);
     procedure bbCopyClick(Sender: TObject);
   private
-    { private declarations }
     FNew : boolean;
     FSelectedNode : TTreeNode;
     FUserClicked : boolean;
@@ -114,7 +112,7 @@ type
     Procedure FillTree;
     Procedure UpdateAmoebe;
   public
-    { public declarations }
+
   end; 
 
 var
@@ -187,7 +185,7 @@ Procedure TFrmHop.FillTree;
 var i : integer;
     H : THop;
     s : string;
-    Node, ChildNode, ChildNode2 : TTreeNode;
+    Node, ChildNode, {%H-}ChildNode2 : TTreeNode;
 begin
   tvSelect.Items.Clear;
   Node:= tvSelect.Items.Add(nil,'Herkomst');
@@ -492,8 +490,7 @@ begin
 end;
 
 procedure TFrmHop.eSearchChange(Sender: TObject);
-var i : integer;
-    N : TTreeNode;
+var N : TTreeNode;
     H : THop;
     s, s2 : string;
     Vis : boolean;

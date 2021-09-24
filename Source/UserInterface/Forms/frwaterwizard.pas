@@ -1,4 +1,4 @@
-unit frwaterwizard;
+unit FrWaterWizard;
 
 {$mode objfpc}{$H+}
 
@@ -81,16 +81,14 @@ type
     procedure sbSpargeChange(Sender: TObject);
     procedure sbSpargeMashChange(Sender: TObject);
   private
-    { private declarations }
     FRec : TRecipe;
     un, dun : TUnit;
     Mash : TMash;
     Eq : TEquipment;
     FUserClicked : boolean;
     FMaxFerm : double;
-    Procedure Update;
+    Procedure Update; reintroduce;
   public
-    { public declarations }
     Function Execute(R : TRecipe) : boolean;
   end;
 

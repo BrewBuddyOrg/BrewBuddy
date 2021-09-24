@@ -1,4 +1,4 @@
-unit frhopwizard;
+unit FrHopWizard;
 
 {$mode objfpc}{$H+}
 
@@ -102,7 +102,6 @@ type
     procedure sgFlavourSelectEditor(Sender: TObject; aCol, aRow: Integer;
       var Editor: TWinControl);
   private
-    { private declarations }
     FRec : TRecipe;
     FUserClicked : boolean;
     FSelHop : THop;
@@ -122,7 +121,7 @@ type
     Function IsFlavourHop(H : THop) : boolean;
     Function IsAromaHop(H : THop) : boolean;
     Procedure FillGrids;
-    Procedure Update;
+    Procedure Update; reintroduce;
     Procedure ChangeIBU;
     Function FindHopScrollBar : TScrollBar;
     Function FindScrollBar(sg : TStringGrid; aCol, aRow : integer) : TScrollBar;
@@ -133,7 +132,6 @@ type
     procedure sbScrollbarsChange(Sender: TObject);
     procedure cbScrollbarsChange(Sender: TObject);
   public
-    { public declarations }
     Function Execute(R : TRecipe) : boolean;
   end;
 
@@ -427,7 +425,6 @@ var i, numbit, numflav, numaro : integer;
     ibu, gpl, n, ni : double;
     sb : TScrollBar;
     cb : TCheckBox;
-    variableset : boolean;
 begin
   if FRec <> NIL then
   begin
@@ -642,8 +639,6 @@ var i, j, nbit, nflav, naro : integer;
     ibubitter, ibuflavour, ibuaroma : double;
     allflavourlocked, allaromalocked : boolean;
     sb : TScrollBar;
-    cb : TCheckBox;
-    Rect : TRect;
     St : TBeerStyle;
 begin
   FUserClicked:= false;
@@ -1074,20 +1069,16 @@ end;
 
 procedure TFrmHopWizard.sbScrollbarsChange(Sender: TObject);
 var sb : TScrollBar;
-    i, spos, n : integer;
-    vol, conc, amount, tot, delta : double;
+    i, n : integer;
+    vol, conc, amount, delta : double;
     H : THop;
-    ibuold, ibunew, ibufa, ibu : double;
+    ibuold, ibunew, ibu : double;
 begin
   if (FRec <> NIL) and (FSelHop <> NIL) and FUserClicked then
   begin
     FUserClicked:= false;
-
     sb:= TScrollBar(sender);
-
-    spos:= sb.Position;
     FSelHop:= FindHop(sb);
-
     vol:= FRec.BatchSize.DisplayValue;
     conc:= sb.Position / 10;
     amount:= conc * vol;
@@ -1831,9 +1822,6 @@ end;
 
 procedure TFrmHopWizard.bbAddHopClick(Sender: TObject);
 var H : THop;
-    g : TStringGrid;
-    sb : TScrollBar;
-    i, n : integer;
     IBUold : double;
 begin
   try

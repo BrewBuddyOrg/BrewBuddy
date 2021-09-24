@@ -87,7 +87,6 @@ type
     procedure bbImportClick(Sender: TObject);
     procedure bbCopyClick(Sender: TObject);
   private
-    { private declarations }
     FSelectedNode : TTreeNode;
     FNew : boolean;
     FUserClicked : boolean;
@@ -95,7 +94,7 @@ type
     Procedure FillTree;
     Procedure UpdateAmoebe;
   public
-    { public declarations }
+
   end; 
 
 var
@@ -155,7 +154,7 @@ Procedure TFrmWaters.FillTree;
 var i : integer;
     mname : string;
     W : TWater;
-    Node, ChildNode: TTreeNode;
+    Node, {%H-}ChildNode: TTreeNode;
 begin
   tvSelect.Items.Clear;
   Node:= tvSelect.Items.Add(nil,'');
@@ -407,8 +406,6 @@ begin
 end;
 
 procedure TFrmWaters.cbDefaultChange(Sender: TObject);
-var i : integer;
-    W : TWater;
 begin
 
 end;

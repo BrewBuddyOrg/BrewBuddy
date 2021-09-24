@@ -347,7 +347,7 @@ begin
 end;
 
 Procedure TAmoebeSerie.SetNormLength(Value : LongInt);
-var L : LongInt;
+//var L : LongInt;
 begin
   if (Value > 0) and (FNorm > FMinValue) then
   begin
@@ -628,6 +628,7 @@ begin
       end;
     end;
     Cnvs.Brush.Style:= bsSolid;
+    {$warning TAmoebeSerie.DrawModern: Color BC is not initialized!}
     Cnvs.Brush.Color:= BC;
   end;
 end;
@@ -688,7 +689,8 @@ end;
 Destructor TAmoebe.Destroy;
 var i : LongInt;
 begin
-  for i:= 0 to FSeries.Count-1 do TAmoebeSerie(FSeries.Items[i]).Free;
+  for i:= 0 to FSeries.Count-1 do
+    TAmoebeSerie(FSeries.Items[i]).Free;
   FSeries.Clear;
   FSeries.Free;
   FSeries:= NIL;
@@ -697,7 +699,7 @@ begin
 end;
 
 Procedure TAmoebe.Initialize;
-var i : LongInt;
+var //i : LongInt;
     P : TPoint;
 begin
   FFitting:= false;
@@ -846,6 +848,7 @@ end;
 
 Function TAmoebe.DrawTitle(Cnvs : TCanvas; Rect : TRect) : LongInt;
 begin
+  Result:= 0; // What should be returned?
   if FTitle <> '' then
   begin
     Cnvs.Brush.Style:= bsClear;
@@ -859,7 +862,7 @@ Procedure TAmoebe.DrawClassic(Cnvs : TCanvas; Re : TRect);
 var i, j : LongInt;
     Serie, Serie2 : TAmoebeSerie;
     PA : array of TPoint;
-    L, A : double;
+    //A : double;
 begin
 //Teken eerst normcircel met kleur, dan de amoebe, dan de normcirkel leeg
 //en tenslotte de assen
@@ -879,10 +882,11 @@ begin
       System.SetLength(PA, 3)
     else
       System.SetLength(PA, FSeries.Count);
-
+{    if FSeries.Count > 1 then
+      A:= 0.5 * TAmoebeSerie(FSeries.Items[1]).Angle
+    else
+      A:= 90;  }
     j:= 0;
-    if FSeries.Count > 1 then A:= 0.5 * TAmoebeSerie(FSeries.Items[1]).Angle
-    else A:= 90;
     for i:= 1 to FSeries.Count do
     begin
       Serie:= TAmoebeSerie(FSeries.Items[i-1]);
@@ -925,10 +929,9 @@ begin
 end;
 
 Procedure TAmoebe.DrawModern(Cnvs : TCanvas; Re : TRect);
-var i, j : LongInt;
+var i : LongInt;
     Serie : TAmoebeSerie;
     PA : array of TPoint;
-    L, A : double;
 begin
 //Teken eerst normcircel met kleur, dan de amoebe, dan de normcirkel leeg
 //en tenslotte de assen
@@ -1013,7 +1016,7 @@ begin
 end;
 
 Procedure TAmoebe.DrawSlices(Cnvs : TCanvas; Re : TRect);
-var i, j : LongInt;
+var i : LongInt;
     Serie : TAmoebeSerie;
     L, A, A2 : double;
     L2, X1, X2, X3, X4, Y1, Y2, Y3, Y4 : integer;
@@ -1032,7 +1035,6 @@ begin
   begin
     if FSeries.Count > 1 then A:= TAmoebeSerie(FSeries.Items[1]).Angle
     else A:= 45;
-    j:= 0;
     Cnvs.Brush.Style:= bsSolid;
     Cnvs.Brush.Color:= FAmoebeColor;
     Cnvs.Pen.Color:= clBlack;
@@ -1168,7 +1170,6 @@ end;
 
 Procedure TAmoebe.SetAmountSeries(Value : LongInt);
 var i : LongInt;
-    Serie : TAmoebeSerie;
 begin
   if Value < 0 then Value:= 0;
   if FSeries = NIL then FSeries:= TList.Create;
@@ -1500,6 +1501,7 @@ end;
 
 Function TAmoebe.ExecuteEditor : boolean;
 begin
+  Result:= True;
 {  if FAllowEditor then
   begin
     Application.CreateForm(TFrmAmoebeDlg, FrmAmoebeDlg);
@@ -1544,4 +1546,4 @@ begin
 end;
 
 end.
- 
+ 

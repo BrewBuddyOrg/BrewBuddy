@@ -1,4 +1,4 @@
-unit frfermentables3;
+unit FrFermentables3;
 
 {$mode objfpc}{$H+}
 
@@ -43,7 +43,6 @@ type
     procedure cbFlexibleChange(Sender: TObject);
     Procedure BitBtn1Click(Sender : TObject);
   private
-    { private declarations }
     Ftot : double;
     FFerm : TFermentable;
     FSort : integer;
@@ -53,7 +52,6 @@ type
     Procedure SortGrid(Nr1, Nr2 : integer);
     Function InRecipe(F : TFermentable) : boolean;
   public
-    { public declarations }
     Function Execute(const F : TFermentable; prc : boolean) : boolean;
   end; 
 

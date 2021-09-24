@@ -1,4 +1,4 @@
-unit frhop3;
+unit FrHop3;
 
 {$mode objfpc}{$H+}
 
@@ -44,7 +44,6 @@ type
     procedure eSearchChange(Sender: TObject);
     procedure SpeedButton1Click(Sender: TObject);
   private
-    { private declarations }
     FHop : THop;
     FSort : integer;
     FSortDec : boolean;
@@ -52,7 +51,6 @@ type
     FHopList : array of THop;
     Procedure SortGrid(Nr1, Nr2 : integer);
   public
-    { public declarations }
     Function Execute(H : THop) : boolean;
   end; 
 
