@@ -90,21 +90,26 @@ begin
   if NumItems > 0 then
   begin
     try
-      Doc := TXMLDocument.Create;
-    //  FDoc.Encoding:= 'ISO-8859-1';
-      RootNode := Doc.CreateElement('SUBS');
-      Doc.AppendChild(RootNode);
-      FN:= Settings.DataLocation.Value + FFileName;
-      for i:= Low(FSubs) to High(FSubs) do
-      begin
-        iChild := Doc.CreateElement('SUB');
-        RootNode.AppendChild(iChild);
+      try
+        Doc := TXMLDocument.Create;
+      //  FDoc.Encoding:= 'ISO-8859-1';
+        RootNode := Doc.CreateElement('SUBS');
+        Doc.AppendChild(RootNode);
+        FN:= Settings.DataLocation.Value + FFileName;
+        for i:= Low(FSubs) to High(FSubs) do
+        begin
+          iChild := Doc.CreateElement('SUB');
+          RootNode.AppendChild(iChild);
 
-        FSubs[i].Original.SaveXML(Doc, iChild, false);
-        FSubs[i].Substitute.SaveXML(Doc, iChild, false);
+          FSubs[i].Original.SaveXML(Doc, iChild, false);
+          FSubs[i].Substitute.SaveXML(Doc, iChild, false);
+        end;
+        writeXMLFile(Doc, FN);
+        result := true;
+      except
+        result := false;
       end;
-      writeXMLFile(Doc, FN);
-     finally
+    finally
       Doc.Free;
     end;
   end;
@@ -119,29 +124,34 @@ begin
   RootNode:= NIL;
   Doc:= NIL;
   try
-    FN:= Settings.DataLocation.Value + FFileName;
-    if FileExists(FN) then
-    begin
-      ReadXMLFile(Doc, FN);
-      Clear;
-      RootNode:= Doc.FindNode('SUBS');
-      if RootNode <> NIL then
+    try
+      FN:= Settings.DataLocation.Value + FFileName;
+      if FileExists(FN) then
       begin
-        i:= 0;
-        Child:= RootNode.FirstChild;
-        while Child <> NIL do
+        ReadXMLFile(Doc, FN);
+        Clear;
+        RootNode:= Doc.FindNode('SUBS');
+        if RootNode <> NIL then
         begin
-          inc(i);
-          SetLength(FSubs, i);
-          FSubs[i-1].Original:= TBString.Create(NIL);
-          FSubs[i-1].Original.NodeLabel:= 'ORIGINAL';
-          FSubs[i-1].Substitute:= TBString.Create(NIL);
-          FSubs[i-1].Substitute.NodeLabel:= 'SUBSTITUTE';
-          FSubs[i-1].Original.ReadXML(Child);
-          FSubs[i-1].Substitute.ReadXML(Child);
-          Child:= Child.NextSibling;
+          i:= 0;
+          Child:= RootNode.FirstChild;
+          while Child <> NIL do
+          begin
+            inc(i);
+            SetLength(FSubs, i);
+            FSubs[i-1].Original:= TBString.Create(NIL);
+            FSubs[i-1].Original.NodeLabel:= 'ORIGINAL';
+            FSubs[i-1].Substitute:= TBString.Create(NIL);
+            FSubs[i-1].Substitute.NodeLabel:= 'SUBSTITUTE';
+            FSubs[i-1].Original.ReadXML(Child);
+            FSubs[i-1].Substitute.ReadXML(Child);
+            Child:= Child.NextSibling;
+          end;
         end;
       end;
+      result := true;
+    except
+      result := false;
     end;
   finally
     if Doc <> NIL then Doc.Free;
@@ -357,22 +367,27 @@ begin
   if NumItems > 0 then
   begin
     try
-      Doc := TXMLDocument.Create;
-    //  FDoc.Encoding:= 'ISO-8859-1';
-      RootNode := Doc.CreateElement('SUBS');
-      Doc.AppendChild(RootNode);
-      FN:= Settings.DataLocation.Value + FFileName;
-      for i:= Low(FSubs) to High(FSubs) do
-      begin
-        iChild := Doc.CreateElement('SUB');
-        RootNode.AppendChild(iChild);
+      try
+        Doc := TXMLDocument.Create;
+      //  FDoc.Encoding:= 'ISO-8859-1';
+        RootNode := Doc.CreateElement('SUBS');
+        Doc.AppendChild(RootNode);
+        FN:= Settings.DataLocation.Value + FFileName;
+        for i:= Low(FSubs) to High(FSubs) do
+        begin
+          iChild := Doc.CreateElement('SUB');
+          RootNode.AppendChild(iChild);
 
-        FSubs[i].Original.SaveXML(Doc, iChild, false);
-        FSubs[i].Original2.SaveXML(Doc, iChild, false);
-        FSubs[i].Substitute.SaveXML(Doc, iChild, false);
-        FSubs[i].Substitute2.SaveXML(Doc, iChild, false);
+          FSubs[i].Original.SaveXML(Doc, iChild, false);
+          FSubs[i].Original2.SaveXML(Doc, iChild, false);
+          FSubs[i].Substitute.SaveXML(Doc, iChild, false);
+          FSubs[i].Substitute2.SaveXML(Doc, iChild, false);
+        end;
+        writeXMLFile(Doc, FN);
+        result := true;
+      except
+        result := false;
       end;
-      writeXMLFile(Doc, FN);
      finally
       Doc.Free;
     end;
@@ -388,35 +403,40 @@ begin
   RootNode:= NIL;
   Doc:= NIL;
   try
-    FN:= Settings.DataLocation.Value + FFileName;
-    if FileExists(FN) then
-    begin
-      ReadXMLFile(Doc, FN);
-      Clear;
-      RootNode:= Doc.FindNode('SUBS');
-      if RootNode <> NIL then
+    try
+      FN:= Settings.DataLocation.Value + FFileName;
+      if FileExists(FN) then
       begin
-        i:= 0;
-        Child:= RootNode.FirstChild;
-        while Child <> NIL do
+        ReadXMLFile(Doc, FN);
+        Clear;
+        RootNode:= Doc.FindNode('SUBS');
+        if RootNode <> NIL then
         begin
-          inc(i);
-          SetLength(FSubs, i);
-          FSubs[i-1].Original:= TBString.Create(NIL);
-          FSubs[i-1].Original.NodeLabel:= 'ORIGINAL';
-          FSubs[i-1].Original2:= TBString.Create(NIL);
-          FSubs[i-1].Original2.NodeLabel:= 'ORIGINAL_2';
-          FSubs[i-1].Substitute:= TBString.Create(NIL);
-          FSubs[i-1].Substitute.NodeLabel:= 'SUBSTITUTE';
-          FSubs[i-1].Substitute2:= TBString.Create(NIL);
-          FSubs[i-1].Substitute2.NodeLabel:= 'SUBSTITUTE_2';
-          FSubs[i-1].Original.ReadXML(Child);
-          FSubs[i-1].Original2.ReadXML(Child);
-          FSubs[i-1].Substitute.ReadXML(Child);
-          FSubs[i-1].Substitute2.ReadXML(Child);
-          Child:= Child.NextSibling;
+          i:= 0;
+          Child:= RootNode.FirstChild;
+          while Child <> NIL do
+          begin
+            inc(i);
+            SetLength(FSubs, i);
+            FSubs[i-1].Original:= TBString.Create(NIL);
+            FSubs[i-1].Original.NodeLabel:= 'ORIGINAL';
+            FSubs[i-1].Original2:= TBString.Create(NIL);
+            FSubs[i-1].Original2.NodeLabel:= 'ORIGINAL_2';
+            FSubs[i-1].Substitute:= TBString.Create(NIL);
+            FSubs[i-1].Substitute.NodeLabel:= 'SUBSTITUTE';
+            FSubs[i-1].Substitute2:= TBString.Create(NIL);
+            FSubs[i-1].Substitute2.NodeLabel:= 'SUBSTITUTE_2';
+            FSubs[i-1].Original.ReadXML(Child);
+            FSubs[i-1].Original2.ReadXML(Child);
+            FSubs[i-1].Substitute.ReadXML(Child);
+            FSubs[i-1].Substitute2.ReadXML(Child);
+            Child:= Child.NextSibling;
+          end;
         end;
       end;
+      result := true;
+    except
+      result := false;
     end;
   finally
     if Doc <> NIL then Doc.Free;

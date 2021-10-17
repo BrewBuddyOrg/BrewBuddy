@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="11"/>
+    <BuildModes Active="Default"/>
+    <Units Count="19">
+      <Unit0>
+        <Filename Value="BrewBuddy_JR.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="6"/>
+        <CursorPos X="32" Y="16"/>
+        <UsageCount Value="22"/>
+        <Loaded Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="UI\frmain.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmMain"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="FrMain"/>
+        <TopLine Value="9325"/>
+        <CursorPos X="2" Y="9360"/>
+        <UsageCount Value="22"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="D:\Documenten Joris\GitHub\BrewBuddy\Source\3rdParty\uniqueinstance-1.0\uniqueinstance.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="22"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="D:\Documenten Joris\GitHub\expandpanels\pexpandpanels.lpk"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="22"/>
+        <DefaultSyntaxHighlighter Value="XML"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="D:\Documenten Joris\GitHub\expandpanels\pexpandpanels.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="20"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="Units\hulpfuncties.pas"/>
+        <UnitName Value="Hulpfuncties"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="370"/>
+        <CursorPos X="20" Y="401"/>
+        <UsageCount Value="11"/>
+        <Loaded Value="True"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="Units\containers.pas"/>
+        <UnitName Value="Containers"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="3329"/>
+        <CursorPos Y="3348"/>
+        <UsageCount Value="11"/>
+        <Loaded Value="True"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="Units\data.pas"/>
+        <UnitName Value="Data"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="16856"/>
+        <CursorPos X="82" Y="16870"/>
+        <UsageCount Value="11"/>
+        <Loaded Value="True"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="D:\Documenten Joris\GitHub\BrewBuddy\Source\3rdParty\ExpandPanels\pexpandpanels.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="20"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="D:\Documenten Joris\GitHub\BrewBuddy\Source\Units\data.pas"/>
+        <UnitName Value="Data"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="16906"/>
+        <CursorPos X="22" Y="16877"/>
+        <UsageCount Value="10"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="D:\Documenten Joris\GitHub\BrewBuddy\Source\Units\containers.pas"/>
+        <UnitName Value="Containers"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="3131"/>
+        <CursorPos X="3" Y="3133"/>
+        <UsageCount Value="10"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="D:\Documenten Joris\GitHub\BrewBuddy\Source\UserInterface\Forms\frmain.pas"/>
+        <UnitName Value="FrMain"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2762"/>
+        <CursorPos X="3" Y="2781"/>
+        <UsageCount Value="10"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="C:\lazarus\lcl\include\screen.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="573"/>
+        <CursorPos Y="595"/>
+        <UsageCount Value="10"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="C:\lazarus\components\lazutils\maps.pp"/>
+        <UnitName Value="Maps"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="289"/>
+        <CursorPos Y="312"/>
+        <UsageCount Value="10"/>
+      </Unit13>
+      <Unit14>
+        <Filename Value="C:\lazarus\components\lazutils\laz_avl_tree.pp"/>
+        <UnitName Value="Laz_AVL_Tree"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="730"/>
+        <CursorPos Y="759"/>
+        <UsageCount Value="10"/>
+      </Unit14>
+      <Unit15>
+        <Filename Value="C:\lazarus\lcl\include\filedialog.inc"/>
+        <EditorIndex Value="5"/>
+        <TopLine Value="389"/>
+        <CursorPos Y="409"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit15>
+      <Unit16>
+        <Filename Value="C:\lazarus\lcl\include\commondialog.inc"/>
+        <EditorIndex Value="4"/>
+        <TopLine Value="22"/>
+        <CursorPos X="27" Y="41"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit16>
+      <Unit17>
+        <Filename Value="C:\lazarus\lcl\dialogs.pp"/>
+        <UnitName Value="Dialogs"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="89"/>
+        <CursorPos X="16" Y="107"/>
+        <UsageCount Value="10"/>
+      </Unit17>
+      <Unit18>
+        <Filename Value="C:\lazarus\lcl\include\control.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="3928"/>
+        <CursorPos X="46" Y="3941"/>
+        <UsageCount Value="10"/>
+      </Unit18>
+    </Units>
+    <JumpHistory Count="29" HistoryIndex="28">
+      <Position1>
+        <Filename Value="C:\lazarus\lcl\include\commondialog.inc"/>
+        <Caret Line="39" TopLine="8"/>
+      </Position1>
+      <Position2>
+        <Filename Value="C:\lazarus\lcl\include\commondialog.inc"/>
+        <Caret Line="40" TopLine="9"/>
+      </Position2>
+      <Position3>
+        <Filename Value="C:\lazarus\lcl\include\commondialog.inc"/>
+        <Caret Line="41" Column="20" TopLine="10"/>
+      </Position3>
+      <Position4>
+        <Filename Value="Units\hulpfuncties.pas"/>
+        <Caret Line="395" TopLine="360"/>
+      </Position4>
+      <Position5>
+        <Filename Value="Units\containers.pas"/>
+        <Caret Line="3348" TopLine="3329"/>
+      </Position5>
+      <Position6>
+        <Filename Value="Units\hulpfuncties.pas"/>
+        <Caret Line="395" TopLine="364"/>
+      </Position6>
+      <Position7>
+        <Filename Value="C:\lazarus\lcl\include\commondialog.inc"/>
+        <Caret Line="41" TopLine="21"/>
+      </Position7>
+      <Position8>
+        <Filename Value="Units\hulpfuncties.pas"/>
+        <Caret Line="391" Column="48" TopLine="364"/>
+      </Position8>
+      <Position9>
+        <Filename Value="Units\containers.pas"/>
+        <Caret Line="3348" TopLine="3329"/>
+      </Position9>
+      <Position10>
+        <Filename Value="Units\hulpfuncties.pas"/>
+        <Caret Line="395" TopLine="364"/>
+      </Position10>
+      <Position11>
+        <Filename Value="C:\lazarus\lcl\include\commondialog.inc"/>
+        <Caret Line="41" Column="22" TopLine="21"/>
+      </Position11>
+      <Position12>
+        <Filename Value="Units\containers.pas"/>
+        <Caret Line="3348" TopLine="3329"/>
+      </Position12>
+      <Position13>
+        <Filename Value="Units\hulpfuncties.pas"/>
+        <Caret Line="395" TopLine="364"/>
+      </Position13>
+      <Position14>
+        <Filename Value="C:\lazarus\lcl\include\commondialog.inc"/>
+        <Caret Line="41" TopLine="21"/>
+      </Position14>
+      <Position15>
+        <Filename Value="C:\lazarus\lcl\include\filedialog.inc"/>
+        <Caret Line="408" TopLine="389"/>
+      </Position15>
+      <Position16>
+        <Filename Value="C:\lazarus\lcl\include\filedialog.inc"/>
+        <Caret Line="409" TopLine="389"/>
+      </Position16>
+      <Position17>
+        <Filename Value="C:\lazarus\lcl\include\commondialog.inc"/>
+        <Caret Line="142" TopLine="123"/>
+      </Position17>
+      <Position18>
+        <Filename Value="Units\hulpfuncties.pas"/>
+        <Caret Line="393" Column="31" TopLine="364"/>
+      </Position18>
+      <Position19>
+        <Filename Value="Units\containers.pas"/>
+        <Caret Line="3348" TopLine="3329"/>
+      </Position19>
+      <Position20>
+        <Filename Value="Units\hulpfuncties.pas"/>
+        <Caret Line="396" TopLine="365"/>
+      </Position20>
+      <Position21>
+        <Filename Value="Units\containers.pas"/>
+        <Caret Line="3348" TopLine="3329"/>
+      </Position21>
+      <Position22>
+        <Filename Value="Units\hulpfuncties.pas"/>
+        <Caret Line="392" Column="37" TopLine="365"/>
+      </Position22>
+      <Position23>
+        <Filename Value="Units\containers.pas"/>
+        <Caret Line="3348" TopLine="3329"/>
+      </Position23>
+      <Position24>
+        <Filename Value="Units\data.pas"/>
+        <Caret Line="16877" TopLine="16856"/>
+      </Position24>
+      <Position25>
+        <Filename Value="Units\containers.pas"/>
+        <Caret Line="3348" TopLine="3329"/>
+      </Position25>
+      <Position26>
+        <Filename Value="Units\hulpfuncties.pas"/>
+        <Caret Line="396" TopLine="365"/>
+      </Position26>
+      <Position27>
+        <Filename Value="Units\containers.pas"/>
+        <Caret Line="3348" TopLine="3329"/>
+      </Position27>
+      <Position28>
+        <Filename Value="Units\hulpfuncties.pas"/>
+        <Caret Line="382" Column="71" TopLine="365"/>
+      </Position28>
+      <Position29>
+        <Filename Value="Units\hulpfuncties.pas"/>
+        <Caret Line="401" Column="53" TopLine="368"/>
+      </Position29>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes Count="0" ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+  <Debugging>
+    <BreakPoints Count="2">
+      <Item1>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="D:\Documenten Joris\GitHub\BrewBuddy\Source\Units\containers.pas"/>
+        <Line Value="3133"/>
+      </Item1>
+      <Item2>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="Units\hulpfuncties.pas"/>
+        <Line Value="396"/>
+      </Item2>
+    </BreakPoints>
+  </Debugging>
+</CONFIG>

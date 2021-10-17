@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CONFIG>
-  <Compiler Value="C:\lazarus\fpc\3.0.4\bin\x86_64-win64\fpc.exe" Date="1286834845"/>
-  <Params Value=" -Twin32 -Pi386 -MObjFPC -Scghi -O1 -g -gl -l -vewnhibq -FiC:\Projecten\BrewBuddy\Source\3rdParty\Synapse\source\lib\usr\share\lazarus\1.0.10 -FuC:\lazarus\packager\units\i386-win32 -FuC:\Projecten\BrewBuddy\Source\3rdParty\Synapse\source\lib\ -FUC:\Projecten\BrewBuddy\Source\3rdParty\Synapse\source\lib\lib\i386-win32\ -dDisableUTF8RTL laz_synapse.pas"/>
-</CONFIG>

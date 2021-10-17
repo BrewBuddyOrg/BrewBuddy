@@ -5,7 +5,7 @@ unit Hulpfuncties;
 interface
 uses
   {$ifdef unix}clocale,{$endif} Classes, SysUtils, Variants, Math, Graphics,
-  Forms, Dialogs, strutils, frQuestion, frgetstring, frgetpasswd,
+  Forms, Dialogs, strutils, {frQuestion, frgetstring, frgetpasswd,}
   FrNotification //{$ifdef linux}, openal{$endif}
   {$ifdef windows}, MMsystem{$endif}, Process;
 
@@ -56,12 +56,12 @@ type
   TEndChar = set of char;
 
 const
-  UnitNames : array[TUnit] of string = ('mg', 'g', 'kg', 'ml', 'l', 'hl', 'IBU', 'EBC',
+  UnitNames : array[TUnit] of string = ('mg', 'g', 'kg', 'ml', 'L', 'hl', 'IBU', 'EBC',
               '°L', 'SG', '°P', '°B', '°C', '°F', 'min.', 'uren', 'dagen',
-              'weken', 'mg/l', 'vol.', 'vol.%', '%', '€', 'pH', '%/uur', 'cal/g.°C',
-              'kPa', 'bar', '°Lintner', '°WK', 'g/l', 'kcal/l', 'pak(ken)',
-              'stuks', 'depots', 'W', 'l/uur', 'l/min', 'l/kg',
-              'm', 'cm', 'mEq/l', '');
+              'weken', 'mg/L', 'vol.', 'vol.%', '%', '€', 'pH', '%/uur', 'cal/g.°C',
+              'kPa', 'bar', '°Lintner', '°WK', 'g/L', 'kcal/L', 'pak(ken)',
+              'stuks', 'depots', 'W', 'L/uur', 'L/min', 'L/KG',
+              'm', 'cm', 'mEq/L', '');
   DefaultDecimals : array[TUnit] of word = (1, 1, 2, 1, 2, 1, 0, 0, 1, 3, 1, 1, 1, 0,
                                             0, 0, 0, 0, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1,
                                             1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0);
@@ -224,10 +224,9 @@ var
 
   slLog : TStringList;
 
-Function GetTaskBarSize: TRect;
 Function InitializeHD(FN : string; var Dir : string) : boolean;
 Function Convert(FromUnit : TUnit; ToUnit : TUnit; val : double) : double;
-Procedure ConvertSeconds(var h, m, s, mi : word);
+Procedure ConvertSeconds(var h, m, s, mi : word); // IN: s. OUT: h, m, s, mi. Converts (s)econds into h:m:s:00
 Function Sinus(angle : double) : double; //angle in degrees
 Function Cosinus(angle : double) : double; //angle in degrees
 Function Between(value, low, high : double) : boolean;
@@ -355,13 +354,6 @@ implementation
 
 uses Data, FrMain, lconvencoding, Zipper;
 
-function GetTaskBarSize: TRect;
-begin
-  {$ifdef Windows}
-//  SystemParametersInfo(SPI_GETWORKAREA, 0, @Result, 0);
-  {$endif}
-end;
-
 Function ConvertStringEnc(s : string) : string;
 var encs, encto: string;
 begin
@@ -375,7 +367,7 @@ Function InitializeHD(FN : string; var Dir : string) : boolean;
 const waitT : word = 1;
       Trials : integer = 5;
 var i : integer;
-    sdd : TSelectDirectoryDialog;
+    dlgDir : TSelectDirectoryDialog;
 begin
   Result:= false;
   i:= 1;
@@ -388,16 +380,17 @@ begin
   end;
   if not Result then
   begin
-    sdd:= TSelectDirectoryDialog.Create(frmMain);
-    sdd.Title:= 'Geef map met ' + FN;
-    sdd.Filter:= 'XML bestand|*.xml';
-    sdd.FilterIndex:= 0;
-    if sdd.Execute then
+    dlgDir := TSelectDirectoryDialog.Create(nil);
+    dlgDir.Title:= 'Geef map met ' + FN;
+    dlgDir.Filter:= 'XML bestand|*.xml';
+    dlgDir.FilterIndex:= 0;
+    if dlgDir.Execute then
     begin
-      Dir:= sdd.FileName + Slash;
+      Dir:= dlgDir.FileName + Slash;
       Result:= FileExists(Dir + FN);
     end;
-    sdd.free;
+    dlgDir.free;
+    MessageDlg('Foutmelding', FN + ' niet gevonden.' + #10#10 + 'Brewbuddy sluit af.', mtError, [mbOK], 0);
 //    ShowNotification(frmMain, FN + 'niet gevonden.' + #10#13 + 'BrouwHulp sluit af');
   end;
 end;
@@ -741,7 +734,7 @@ var Code, p : integer;
 begin
   Code:= 0;
   try
-    p:= Pos2(DecimalSeparator, S);
+    p:= Pos2(DefaultFormatSettings.DecimalSeparator, S);
     if (p >= 0) and (p < Length(S)) then S[p]:= '.';
     Val(S, D, Code);
     Result:= D;
@@ -759,7 +752,7 @@ var Code, p : integer;
 begin
   Code:= 0;
   try
-    p:= Pos2(DecimalSeparator, S);
+    p:= Pos2(DefaultFormatSettings.DecimalSeparator, S);
     if (p >= 0) and (p < Length(S)) then S[p]:= '.';
     Val(S, D, Code);
     Result:= TRUE;
@@ -791,7 +784,7 @@ var
   separator: integer;
 begin
   GetLocaleFormatSettings(0, F);
-  F.ShortDateFormat := 'd-m-yyyy';
+  F.DefaultFormatSettings.ShortDateFormat := 'd-m-yyyy';
   F.ShortTimeFormat := 'hh:mm:ss';
   F.DateSeparator := '-';
   F.TimeSeparator := ':';
@@ -828,10 +821,10 @@ begin
 
   if s <> 'NTB' then
   begin
-    LongTimeFormat := 'hh:mm:ss';
-    ShortDateFormat := 'DD-MM-YYYY';
-    DateSeparator := '-';
-    TimeSeparator := ':';
+    DefaultFormatSettings.LongTimeFormat := 'hh:mm:ss';
+    DefaultFormatSettings.ShortDateFormat := 'DD-MM-YYYY';
+    DefaultFormatSettings.DateSeparator := '-';
+    DefaultFormatSettings.TimeSeparator := ':';
     try
       Result:= StrToDate(ns);
     except
@@ -839,7 +832,7 @@ begin
     end;
     if Result = 0 then
     begin
-      ShortDateFormat := 'DD-MM-YY';
+      DefaultFormatSettings.ShortDateFormat := 'DD-MM-YY';
       try
         Result:= StrToDate(ns);
       except
@@ -848,7 +841,7 @@ begin
     end;
     if Result = 0 then
     begin
-      ShortDateFormat := 'MM-DD-YY';
+      DefaultFormatSettings.ShortDateFormat := 'MM-DD-YY';
       try
         Result:= StrToDate(ns);
       except
@@ -857,7 +850,7 @@ begin
     end;
     if Result = 0 then
     begin
-      ShortDateFormat := 'YY-MM-DD';
+      DefaultFormatSettings.ShortDateFormat := 'YY-MM-DD';
       try
         Result:= StrToDate(ns);
       except
@@ -866,7 +859,7 @@ begin
     end;
     if Result = 0 then
     begin
-      ShortDateFormat := 'YYYY-MM-DD';
+      DefaultFormatSettings.ShortDateFormat := 'YYYY-MM-DD';
       try
         Result:= StrToDate(ns);
       except
@@ -875,7 +868,7 @@ begin
     end;
     if Result = 0 then
     begin
-      ShortDateFormat := 'D-M-YY';
+      DefaultFormatSettings.ShortDateFormat := 'D-M-YY';
       try
         Result:= StrToDate(ns);
       except
@@ -884,7 +877,7 @@ begin
     end;
     if Result = 0 then
     begin
-      ShortDateFormat := 'M-D-YYYY';
+      DefaultFormatSettings.ShortDateFormat := 'M-D-YYYY';
       try
         Result:= StrToDate(ns);
       except
@@ -893,7 +886,7 @@ begin
     end;
     if Result = 0 then
     begin
-      ShortDateFormat := 'M-D-YY';
+      DefaultFormatSettings.ShortDateFormat := 'M-D-YY';
       try
         Result:= StrToDate(ns);
       except
@@ -902,7 +895,7 @@ begin
     end;
     if Result = 0 then
     begin
-      ShortDateFormat := 'YY-M-D';
+      DefaultFormatSettings.ShortDateFormat := 'YY-M-D';
       try
         Result:= StrToDate(ns);
       except
@@ -911,7 +904,8 @@ begin
     end;
     if Result = 0 then
     begin
-      ShortDateFormat := 'YYYY-M-D';
+      DefaultFormatSettings.ShortDateFormat:= 'YYYY-M-D';
+//      DefaultFormatSettings.ShortDateFormat := 'YYYY-M-D';
       try
         Result:= StrToDate(ns);
       except
@@ -928,10 +922,10 @@ end;
 
 Function StringToTime(s : string) : TDateTime;
 begin
-  LongTimeFormat := 'hh:mm:ss';
-  ShortDateFormat := 'DD-MM-YYY';
-  DateSeparator := '-';
-  TimeSeparator := ':';
+  DefaultFormatSettings.LongTimeFormat := 'hh:mm:ss';
+  DefaultFormatSettings.ShortDateFormat := 'DD-MM-YYY';
+  DefaultFormatSettings.DateSeparator := '-';
+  DefaultFormatSettings.TimeSeparator := ':';
   try
     Result:= StrToTime(s);
   except
@@ -1028,7 +1022,7 @@ begin
   X1:= 0; X2:= 0; X3:= 0;
   Di:= 4 * Power(-b*b + 3*a*c, 3) +
       Power(-2 * Power(b, 3) + 9*a*b*c - 27*a*a*d, 2);
-  if (Di > 0) and (a <> 0) and (E <> 0) then
+  if (Di > 0) and (a <> 0) then
   begin
     E:= Power(-2*b*b*b + 9*a*b*c - 27*a*a*d + SQRT(Di), 1/3);
     X1:= -b/(3*a) - (Power(2, 1/3) * (-b*b+3*a*c)) / (3 * a * E)
@@ -1087,7 +1081,9 @@ end;
 
 Procedure ShowNotification(sender : TComponent; s : string);
 begin
-  if FrmNotification = NIL then
+//  ShowMessage(s);
+  MessageDlg(s, mtInformation, [mbOK], 0);
+{  if FrmNotification = NIL then
   begin
     FrmNotification:= TFrmNotification.Create(sender);
     FrmNotification.ShowFrm(s);
@@ -1099,7 +1095,7 @@ begin
     FreeAndNIL(FrmNotification);
     FrmNotification:= TFrmNotification.Create(sender);
     FrmNotification.ShowFrm(s);
-  end;
+  end;}
 end;
 
 Procedure ShowNotificationModal(sender : TComponent; s : string);
@@ -1110,23 +1106,24 @@ end;
 
 Function Question(sender : TComponent; s : string) : boolean;
 begin
-  FrmQuestion:= TFrmQuestion.Create(sender);
-  Result:= FrmQuestion.Question(s);
-  FreeAndNil(frmQuestion);
+  if (MessageDlg(s, mtConfirmation, [mbYes], 0) = 6) then
+     Result := true
+  else
+     Result := false ;
 end;
 
 Function GetAnswer(sender : TComponent; Q : string) : string;
 begin
-  FrmGetString:= TFrmGetString.Create(sender);
-  Result:= FrmGetString.GetAnswer(Q);
-  FreeAndNil(FrmGetString);
+//  FrmGetString:= TFrmGetString.Create(sender);
+//  Result:= FrmGetString.GetAnswer(Q);
+//  FreeAndNil(FrmGetString);
 end;
 
 Function GetPasswd(sender : TComponent) : string;
 begin
-  FrmGetPasswd:= TFrmGetPasswd.Create(sender);
-  Result:= FrmGetPasswd.GetAnswer;
-  FreeAndNil(FrmGetString);
+//  FrmGetPasswd:= TFrmGetPasswd.Create(sender);
+//  Result:= FrmGetPasswd.GetAnswer;
+//  FreeAndNil(FrmGetString);
 end;
 
 {Graph related functions}

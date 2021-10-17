@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SUBS>
+  <SUB>
+    <ORIGINAL>pilsener 3 - dingemans</ORIGINAL>
+    <SUBSTITUTE>pilsmout</SUBSTITUTE>
+    <SUBSTITUTE_2>dingemans</SUBSTITUTE_2>
+  </SUB>
+  <SUB>
+    <ORIGINAL>aromamout (amber 50) - dingemans</ORIGINAL>
+    <SUBSTITUTE>aroma 50</SUBSTITUTE>
+    <SUBSTITUTE_2>dingemans</SUBSTITUTE_2>
+  </SUB>
+  <SUB>
+    <ORIGINAL>cara-pils dextrine malt</ORIGINAL>
+    <SUBSTITUTE>cara-pils</SUBSTITUTE>
+    <SUBSTITUTE_2>weyermann</SUBSTITUTE_2>
+  </SUB>
+  <SUB>
+    <ORIGINAL>munchener</ORIGINAL>
+    <SUBSTITUTE>münchenermout</SUBSTITUTE>
+    <SUBSTITUTE_2>dingemans</SUBSTITUTE_2>
+  </SUB>
+  <SUB>
+    <ORIGINAL>cara-hell 25</ORIGINAL>
+    <SUBSTITUTE>cara-hell</SUBSTITUTE>
+    <SUBSTITUTE_2>weyermann</SUBSTITUTE_2>
+  </SUB>
+  <SUB>
+    <ORIGINAL>kristalsuiker</ORIGINAL>
+    <ORIGINAL_2>eneric</ORIGINAL_2>
+    <SUBSTITUTE>kristalsuiker</SUBSTITUTE>
+    <SUBSTITUTE_2>supermarkt</SUBSTITUTE_2>
+  </SUB>
+  <SUB>
+    <ORIGINAL>pilsmout</ORIGINAL>
+    <SUBSTITUTE>pilsmout</SUBSTITUTE>
+    <SUBSTITUTE_2>dingemans</SUBSTITUTE_2>
+  </SUB>
+  <SUB>
+    <ORIGINAL>pilsener 3 - dingemans</ORIGINAL>
+    <SUBSTITUTE>pilsmout</SUBSTITUTE>
+    <SUBSTITUTE_2>dingemans</SUBSTITUTE_2>
+  </SUB>
+  <SUB>
+    <ORIGINAL>caramunich (cara 120) - dingemans</ORIGINAL>
+    <SUBSTITUTE>cara 120</SUBSTITUTE>
+    <SUBSTITUTE_2>dingemans</SUBSTITUTE_2>
+  </SUB>
+  <SUB>
+    <ORIGINAL>bruine kandijsuiker</ORIGINAL>
+    <ORIGINAL_2>eneric</ORIGINAL_2>
+    <SUBSTITUTE>bruine kandijsuiker</SUBSTITUTE>
+    <SUBSTITUTE_2>supermarkt</SUBSTITUTE_2>
+  </SUB>
+  <SUB>
+    <ORIGINAL>melanoidinemout</ORIGINAL>
+    <ORIGINAL_2>weyermann</ORIGINAL_2>
+    <SUBSTITUTE>melanoidinmout</SUBSTITUTE>
+    <SUBSTITUTE_2>weyermann</SUBSTITUTE_2>
+  </SUB>
+  <SUB>
+    <ORIGINAL>special premium pilsner</ORIGINAL>
+    <ORIGINAL_2>weyermann</ORIGINAL_2>
+    <SUBSTITUTE>premium pilsmout</SUBSTITUTE>
+    <SUBSTITUTE_2>weyermann</SUBSTITUTE_2>
+  </SUB>
+  <SUB>
+    <ORIGINAL>honing</ORIGINAL>
+    <ORIGINAL_2>john</ORIGINAL_2>
+    <SUBSTITUTE>heidehoning</SUBSTITUTE>
+    <SUBSTITUTE_2>john</SUBSTITUTE_2>
+  </SUB>
+  <SUB>
+    <ORIGINAL>amber 50</ORIGINAL>
+    <ORIGINAL_2>dingemans</ORIGINAL_2>
+    <SUBSTITUTE>aroma 50</SUBSTITUTE>
+    <SUBSTITUTE_2>dingemans</SUBSTITUTE_2>
+  </SUB>
+  <SUB>
+    <ORIGINAL>melanoidinemout</ORIGINAL>
+    <ORIGINAL_2>weyermann</ORIGINAL_2>
+    <SUBSTITUTE>melanoidinmout</SUBSTITUTE>
+    <SUBSTITUTE_2>weyermann</SUBSTITUTE_2>
+  </SUB>
+  <SUB>
+    <ORIGINAL>melanoidinemout</ORIGINAL>
+    <ORIGINAL_2>weyermann</ORIGINAL_2>
+    <SUBSTITUTE>melanoidinmout</SUBSTITUTE>
+    <SUBSTITUTE_2>weyermann</SUBSTITUTE_2>
+  </SUB>
+</SUBS>

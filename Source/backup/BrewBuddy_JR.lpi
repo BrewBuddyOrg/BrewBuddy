@@ -1,0 +1,553 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectOptions>
+    <Version Value="11"/>
+    <PathDelim Value="\"/>
+    <General>
+      <SessionStorage Value="InProjectDir"/>
+      <MainUnit Value="0"/>
+      <Title Value="BrewBuddy"/>
+      <Scaled Value="True"/>
+      <ResourceType Value="res"/>
+      <UseXPManifest Value="True"/>
+      <XPManifest>
+        <DpiAware Value="True"/>
+      </XPManifest>
+      <Icon Value="0"/>
+    </General>
+    <BuildModes Count="1">
+      <Item1 Name="Default" Default="True"/>
+    </BuildModes>
+    <PublishOptions>
+      <Version Value="2"/>
+    </PublishOptions>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes Count="0"/>
+    </RunParams>
+    <RequiredPackages Count="5">
+      <Item1>
+        <PackageName Value="uniqueinstance_package"/>
+      </Item1>
+      <Item2>
+        <PackageName Value="Pexpandpanels"/>
+      </Item2>
+      <Item3>
+        <PackageName Value="Printer4Lazarus"/>
+      </Item3>
+      <Item4>
+        <PackageName Value="TAChartLazarusPkg"/>
+      </Item4>
+      <Item5>
+        <PackageName Value="LCL"/>
+      </Item5>
+    </RequiredPackages>
+    <Units Count="103">
+      <Unit0>
+        <Filename Value="BrewBuddy_JR.lpr"/>
+        <IsPartOfProject Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="UI\frmain.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmMain"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="FrMain"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="UI\frfermentables.lfm"/>
+        <IsPartOfProject Value="True"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="UI\frfermentables2.lfm"/>
+        <IsPartOfProject Value="True"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="UI\frfermentables3.lfm"/>
+        <IsPartOfProject Value="True"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="Units\amoebes.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="Units\hulpfuncties.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Hulpfuncties"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="Units\containers.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Containers"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="Units\data.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Data"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="UI\frfermentables.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmFermentables"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="FrFermentables"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="Units\rcstrngs.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="Units\bh_report.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="BH_report"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="Units\bhgraphics.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="Units\bhprintforms.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="BHprintforms"/>
+      </Unit13>
+      <Unit14>
+        <Filename Value="Units\positieinterval.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit14>
+      <Unit15>
+        <Filename Value="Units\subs.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit15>
+      <Unit16>
+        <Filename Value="Units\vinfo.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit16>
+      <Unit17>
+        <Filename Value="UI\fdatabaselocation.lfm"/>
+        <IsPartOfProject Value="True"/>
+      </Unit17>
+      <Unit18>
+        <Filename Value="UI\fdatabaselocation.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+      </Unit18>
+      <Unit19>
+        <Filename Value="UI\fradjustto100.lfm"/>
+        <IsPartOfProject Value="True"/>
+      </Unit19>
+      <Unit20>
+        <Filename Value="UI\fradjustto100.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+      </Unit20>
+      <Unit21>
+        <Filename Value="UI\franalysis.lfm"/>
+        <IsPartOfProject Value="True"/>
+      </Unit21>
+      <Unit22>
+        <Filename Value="UI\franalysis.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+      </Unit22>
+      <Unit23>
+        <Filename Value="UI\frbeerstyles.lfm"/>
+        <IsPartOfProject Value="True"/>
+      </Unit23>
+      <Unit24>
+        <Filename Value="UI\frbeerstyles.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+      </Unit24>
+      <Unit25>
+        <Filename Value="UI\frboilmethod.lfm"/>
+        <IsPartOfProject Value="True"/>
+      </Unit25>
+      <Unit26>
+        <Filename Value="UI\frboilmethod.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+      </Unit26>
+      <Unit27>
+        <Filename Value="UI\frchecklist.lfm"/>
+        <IsPartOfProject Value="True"/>
+      </Unit27>
+      <Unit28>
+        <Filename Value="UI\frchecklist.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmChecklist"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit28>
+      <Unit29>
+        <Filename Value="UI\frchoosebrews.lfm"/>
+        <IsPartOfProject Value="True"/>
+      </Unit29>
+      <Unit30>
+        <Filename Value="UI\frchoosebrews.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+      </Unit30>
+      <Unit31>
+        <Filename Value="UI\frchoosebrewschars.lfm"/>
+        <IsPartOfProject Value="True"/>
+      </Unit31>
+      <Unit32>
+        <Filename Value="UI\frchoosebrewschars.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+      </Unit32>
+      <Unit33>
+        <Filename Value="UI\frdividebrew.lfm"/>
+        <IsPartOfProject Value="True"/>
+      </Unit33>
+      <Unit34>
+        <Filename Value="UI\frdividebrew.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+      </Unit34>
+      <Unit35>
+        <Filename Value="UI\frequipments.lfm"/>
+        <IsPartOfProject Value="True"/>
+      </Unit35>
+      <Unit36>
+        <Filename Value="UI\frequipments.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+      </Unit36>
+      <Unit37>
+        <Filename Value="UI\frfermentables2.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+      </Unit37>
+      <Unit38>
+        <Filename Value="UI\frfermentables3.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+      </Unit38>
+      <Unit39>
+        <Filename Value="UI\frgristwizard.lfm"/>
+        <IsPartOfProject Value="True"/>
+      </Unit39>
+      <Unit40>
+        <Filename Value="UI\frgristwizard.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+      </Unit40>
+      <Unit41>
+        <Filename Value="UI\frhistogram.lfm"/>
+        <IsPartOfProject Value="True"/>
+      </Unit41>
+      <Unit42>
+        <Filename Value="UI\frhistogram.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+      </Unit42>
+      <Unit43>
+        <Filename Value="UI\frhop.lfm"/>
+        <IsPartOfProject Value="True"/>
+      </Unit43>
+      <Unit44>
+        <Filename Value="UI\frhop.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+      </Unit44>
+      <Unit45>
+        <Filename Value="UI\frhop2.lfm"/>
+        <IsPartOfProject Value="True"/>
+      </Unit45>
+      <Unit46>
+        <Filename Value="UI\frhop2.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+      </Unit46>
+      <Unit47>
+        <Filename Value="UI\frhop3.lfm"/>
+        <IsPartOfProject Value="True"/>
+      </Unit47>
+      <Unit48>
+        <Filename Value="UI\frhop3.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+      </Unit48>
+      <Unit49>
+        <Filename Value="UI\frhopgraph.lfm"/>
+        <IsPartOfProject Value="True"/>
+      </Unit49>
+      <Unit50>
+        <Filename Value="UI\frhopgraph.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+      </Unit50>
+      <Unit51>
+        <Filename Value="UI\frhopstorage.lfm"/>
+        <IsPartOfProject Value="True"/>
+      </Unit51>
+      <Unit52>
+        <Filename Value="UI\frhopstorage.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+      </Unit52>
+      <Unit53>
+        <Filename Value="UI\frhopwizard.lfm"/>
+        <IsPartOfProject Value="True"/>
+      </Unit53>
+      <Unit54>
+        <Filename Value="UI\frhopwizard.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+      </Unit54>
+      <Unit55>
+        <Filename Value="UI\frimport.lfm"/>
+        <IsPartOfProject Value="True"/>
+      </Unit55>
+      <Unit56>
+        <Filename Value="UI\frimport.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+      </Unit56>
+      <Unit57>
+        <Filename Value="UI\frinfo.lfm"/>
+        <IsPartOfProject Value="True"/>
+      </Unit57>
+      <Unit58>
+        <Filename Value="UI\frinfo.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+      </Unit58>
+      <Unit59>
+        <Filename Value="UI\frmain.lfm"/>
+        <IsPartOfProject Value="True"/>
+      </Unit59>
+      <Unit60>
+        <Filename Value="UI\frmashs.lfm"/>
+        <IsPartOfProject Value="True"/>
+      </Unit60>
+      <Unit61>
+        <Filename Value="UI\frmashs.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+      </Unit61>
+      <Unit62>
+        <Filename Value="UI\frmashstep.lfm"/>
+        <IsPartOfProject Value="True"/>
+      </Unit62>
+      <Unit63>
+        <Filename Value="UI\frmashstep.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmMashStep"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit63>
+      <Unit64>
+        <Filename Value="UI\frmeasurements.lfm"/>
+        <IsPartOfProject Value="True"/>
+      </Unit64>
+      <Unit65>
+        <Filename Value="UI\frmeasurements.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+      </Unit65>
+      <Unit66>
+        <Filename Value="UI\frmiscs.lfm"/>
+        <IsPartOfProject Value="True"/>
+      </Unit66>
+      <Unit67>
+        <Filename Value="UI\frmiscs.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+      </Unit67>
+      <Unit68>
+        <Filename Value="UI\frmiscs2.lfm"/>
+        <IsPartOfProject Value="True"/>
+      </Unit68>
+      <Unit69>
+        <Filename Value="UI\frmiscs2.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+      </Unit69>
+      <Unit70>
+        <Filename Value="UI\frmiscs3.lfm"/>
+        <IsPartOfProject Value="True"/>
+      </Unit70>
+      <Unit71>
+        <Filename Value="UI\frmiscs3.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+      </Unit71>
+      <Unit72>
+        <Filename Value="UI\frnotification.lfm"/>
+        <IsPartOfProject Value="True"/>
+      </Unit72>
+      <Unit73>
+        <Filename Value="UI\frnotification.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+      </Unit73>
+      <Unit74>
+        <Filename Value="UI\frprintpreview.lfm"/>
+        <IsPartOfProject Value="True"/>
+      </Unit74>
+      <Unit75>
+        <Filename Value="UI\frprintpreview.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+      </Unit75>
+      <Unit76>
+        <Filename Value="UI\frpropagation.lfm"/>
+        <IsPartOfProject Value="True"/>
+      </Unit76>
+      <Unit77>
+        <Filename Value="UI\frpropagation.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+      </Unit77>
+      <Unit78>
+        <Filename Value="UI\frrecipetobrew.lfm"/>
+        <IsPartOfProject Value="True"/>
+      </Unit78>
+      <Unit79>
+        <Filename Value="UI\frrecipetobrew.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+      </Unit79>
+      <Unit80>
+        <Filename Value="UI\frrefractometer.lfm"/>
+        <IsPartOfProject Value="True"/>
+      </Unit80>
+      <Unit81>
+        <Filename Value="UI\frrefractometer.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+      </Unit81>
+      <Unit82>
+        <Filename Value="UI\frrestoredatabases.lfm"/>
+        <IsPartOfProject Value="True"/>
+      </Unit82>
+      <Unit83>
+        <Filename Value="UI\frrestoredatabases.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+      </Unit83>
+      <Unit84>
+        <Filename Value="UI\frselectbeerstyle.lfm"/>
+        <IsPartOfProject Value="True"/>
+      </Unit84>
+      <Unit85>
+        <Filename Value="UI\frselectbeerstyle.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+      </Unit85>
+      <Unit86>
+        <Filename Value="UI\frsettings.lfm"/>
+        <IsPartOfProject Value="True"/>
+      </Unit86>
+      <Unit87>
+        <Filename Value="UI\frsettings.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+      </Unit87>
+      <Unit88>
+        <Filename Value="UI\frwateradjustment.lfm"/>
+        <IsPartOfProject Value="True"/>
+      </Unit88>
+      <Unit89>
+        <Filename Value="UI\frwateradjustment.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+      </Unit89>
+      <Unit90>
+        <Filename Value="UI\frwaters.lfm"/>
+        <IsPartOfProject Value="True"/>
+      </Unit90>
+      <Unit91>
+        <Filename Value="UI\frwaters.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+      </Unit91>
+      <Unit92>
+        <Filename Value="UI\frwaterwizard.lfm"/>
+        <IsPartOfProject Value="True"/>
+      </Unit92>
+      <Unit93>
+        <Filename Value="UI\frwaterwizard.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrmWaterWizard"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit93>
+      <Unit94>
+        <Filename Value="UI\fryeasts.lfm"/>
+        <IsPartOfProject Value="True"/>
+      </Unit94>
+      <Unit95>
+        <Filename Value="UI\fryeasts.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+      </Unit95>
+      <Unit96>
+        <Filename Value="UI\fryeasts2.lfm"/>
+        <IsPartOfProject Value="True"/>
+      </Unit96>
+      <Unit97>
+        <Filename Value="UI\fryeasts2.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+      </Unit97>
+      <Unit98>
+        <Filename Value="UI\fryeasts3.lfm"/>
+        <IsPartOfProject Value="True"/>
+      </Unit98>
+      <Unit99>
+        <Filename Value="UI\fryeasts3.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+      </Unit99>
+      <Unit100>
+        <Filename Value="3rdParty\UniqueInstance-master\uniqueinstance\uniqueinstance_package.lpk"/>
+        <IsPartOfProject Value="True"/>
+      </Unit100>
+      <Unit101>
+        <Filename Value="3rdParty\expandpanels\pexpandpanels.lpk"/>
+        <IsPartOfProject Value="True"/>
+      </Unit101>
+      <Unit102>
+        <Filename Value="3rdParty\synapse\laz_synapse.lpk"/>
+        <IsPartOfProject Value="True"/>
+      </Unit102>
+    </Units>
+  </ProjectOptions>
+  <CompilerOptions>
+    <Version Value="11"/>
+    <PathDelim Value="\"/>
+    <Target>
+      <Filename Value="..\Output\BrewBuddy"/>
+    </Target>
+    <SearchPaths>
+      <IncludeFiles Value="$(ProjOutDir)"/>
+      <OtherUnitFiles Value="UI;Units"/>
+      <UnitOutputDirectory Value="..\Output\lib\$(TargetCPU)-$(TargetOS)"/>
+    </SearchPaths>
+    <Linking>
+      <Options>
+        <Win32>
+          <GraphicApplication Value="True"/>
+        </Win32>
+      </Options>
+    </Linking>
+  </CompilerOptions>
+  <Debugging>
+    <Exceptions Count="3">
+      <Item1>
+        <Name Value="EAbort"/>
+      </Item1>
+      <Item2>
+        <Name Value="ECodetoolError"/>
+      </Item2>
+      <Item3>
+        <Name Value="EFOpenError"/>
+      </Item3>
+    </Exceptions>
+  </Debugging>
+</CONFIG>

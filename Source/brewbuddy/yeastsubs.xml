@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SUBS>
+  <SUB>
+    <ORIGINAL>german lager</ORIGINAL>
+    <ORIGINAL_2>white labs</ORIGINAL_2>
+    <SUBSTITUTE>bavarian lager</SUBSTITUTE>
+    <SUBSTITUTE_2>wyeast labs</SUBSTITUTE_2>
+  </SUB>
+  <SUB>
+    <ORIGINAL>belgian ardennes</ORIGINAL>
+    <ORIGINAL_2>wyeast</ORIGINAL_2>
+    <SUBSTITUTE>belgian ardennes</SUBSTITUTE>
+    <SUBSTITUTE_2>wyeast labs</SUBSTITUTE_2>
+  </SUB>
+</SUBS>

@@ -935,7 +935,7 @@ begin
     BRect.Bottom:= SRect.Bottom - SRect.Top;
     BRect.Right:= SRect.Right - SRect.Left;
 
-    OTFH:= FChart.AxisList[0].Title.Font.Size;
+    OTFH:= FChart.AxisList[0].Title.LabelFont.Size;
     OMFH:= FChart.AxisList[0].Marks.LabelFont.Size;
     OTL:= FChart.AxisList[0].TickLength;
     OLFH:= FChart.Legend.Font.Size;
@@ -946,7 +946,7 @@ begin
     for i:= 0 to FChart.AxisList.Count - 1 do
     begin
       FChart.AxisList[i].Marks.LabelFont.Size:= round(GSc * 9);
-      FChart.AxisList[i].Title.Font.Size:= round(GSC * 9);
+      FChart.AxisList[i].Title.LabelFont.Size:= round(GSC * 9);
       FChart.AxisList[i].TickLength:= round(GSc * OTL);
     end;
     FChart.Legend.Font.Size:= round(GSc * 9);
@@ -962,7 +962,7 @@ begin
     for i:= 0 to FChart.AxisList.Count - 1 do
     begin
       FChart.AxisList[i].Marks.LabelFont.Size:= OMFH;
-      FChart.AxisList[i].Title.Font.Size:= OTFH;
+      FChart.AxisList[i].Title.LabelFont.Size:= OTFH;
       FChart.AxisList[i].TickLength:= OTL;
     end;
     FChart.Legend.Font.Size:= OLFH;

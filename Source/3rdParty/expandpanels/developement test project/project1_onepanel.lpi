@@ -1,0 +1,526 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectOptions>
+    <Version Value="9"/>
+    <General>
+      <MainUnit Value="0"/>
+      <Title Value="project1_onepanel"/>
+      <UseXPManifest Value="True"/>
+    </General>
+    <VersionInfo>
+      <Language Value=""/>
+      <CharSet Value=""/>
+      <StringTable ProductVersion=""/>
+    </VersionInfo>
+    <BuildModes Count="1">
+      <Item1 Name="default" Default="True"/>
+    </BuildModes>
+    <PublishOptions>
+      <Version Value="2"/>
+      <IgnoreBinaries Value="False"/>
+      <IncludeFileFilter Value="*.(pas|pp|inc|lfm|lpr|lrs|lpi|lpk|sh|xml)"/>
+      <ExcludeFileFilter Value="*.(bak|ppu|ppw|o|so);*~;backup"/>
+    </PublishOptions>
+    <RunParams>
+      <local>
+        <FormatVersion Value="1"/>
+        <LaunchingApplication PathPlusParams="/usr/X11R6/bin/xterm -T 'Lazarus Run Output' -e $(LazarusDir)/tools/runwait.sh $(TargetCmdLine)"/>
+      </local>
+    </RunParams>
+    <RequiredPackages Count="2">
+      <Item1>
+        <PackageName Value="Pexpandpanels"/>
+        <MinVersion Major="1" Minor="98" Valid="True"/>
+      </Item1>
+      <Item2>
+        <PackageName Value="LCL"/>
+      </Item2>
+    </RequiredPackages>
+    <Units Count="42">
+      <Unit0>
+        <Filename Value="project1_onepanel.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="24" Y="6"/>
+        <UsageCount Value="86"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="unit1_onepanel.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="116"/>
+        <CursorPos Y="130"/>
+        <UsageCount Value="86"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="../expandpanels.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ExpandPanels"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="1158"/>
+        <CursorPos X="45" Y="1171"/>
+        <UsageCount Value="86"/>
+        <Loaded Value="True"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="/LinuxPrograms/lazarus/lcl/controls.pp"/>
+        <UnitName Value="Controls"/>
+        <TopLine Value="96"/>
+        <CursorPos X="31" Y="119"/>
+        <UsageCount Value="6"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="/usr/share/fpcsrc/2.4.0/rtl/objpas/classes/classesh.inc"/>
+        <TopLine Value="1765"/>
+        <CursorPos X="10" Y="1788"/>
+        <UsageCount Value="6"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="/LinuxPrograms/lazarus/lcl/extctrls.pp"/>
+        <UnitName Value="ExtCtrls"/>
+        <TopLine Value="38"/>
+        <CursorPos X="35" Y="38"/>
+        <UsageCount Value="6"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="/LinuxPrograms/lazarus/lcl/lclclasses.pp"/>
+        <UnitName Value="LCLClasses"/>
+        <TopLine Value="15"/>
+        <CursorPos X="3" Y="38"/>
+        <UsageCount Value="6"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="/LinuxPrograms/lazarus/lcl/calendar.pp"/>
+        <UnitName Value="Calendar"/>
+        <TopLine Value="90"/>
+        <CursorPos X="17" Y="113"/>
+        <UsageCount Value="6"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="/LinuxPrograms/lazarus/lcl/include/control.inc"/>
+        <TopLine Value="30"/>
+        <CursorPos X="24" Y="61"/>
+        <UsageCount Value="6"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="/LinuxPrograms/lazarus/lcl/lclproc.pas"/>
+        <UnitName Value="LCLProc"/>
+        <TopLine Value="1520"/>
+        <CursorPos X="56" Y="1549"/>
+        <UsageCount Value="6"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="../pexpandpanels.pas"/>
+        <UnitName Value="Pexpandpanels"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="15" Y="19"/>
+        <UsageCount Value="6"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="../icons.lrs"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="17"/>
+        <UsageCount Value="6"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="../../../Projects/test/effects_panel/effects_panel_main.pas"/>
+        <ComponentName Value="Form1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="11" Y="7"/>
+        <UsageCount Value="6"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="effects_panel/effects_panel_main.pas"/>
+        <ComponentName Value="Form1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="93"/>
+        <CursorPos Y="96"/>
+        <UsageCount Value="6"/>
+      </Unit13>
+      <Unit14>
+        <Filename Value="../expandpanels_o.pas"/>
+        <UnitName Value="ExpandPanels"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2008"/>
+        <CursorPos Y="2025"/>
+        <UsageCount Value="7"/>
+      </Unit14>
+      <Unit15>
+        <Filename Value="../../../../../Development/FreePascal/lazarus/lcl/extctrls.pp"/>
+        <UnitName Value="ExtCtrls"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1016"/>
+        <CursorPos X="29" Y="1018"/>
+        <UsageCount Value="31"/>
+      </Unit15>
+      <Unit16>
+        <Filename Value="../../../../../Development/FreePascal/lazarus/lcl/controls.pp"/>
+        <UnitName Value="Controls"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2275"/>
+        <CursorPos X="20" Y="2285"/>
+        <UsageCount Value="10"/>
+      </Unit16>
+      <Unit17>
+        <Filename Value="../../../../../Development/FreePascal/lazarus/lcl/include/wincontrol.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="7744"/>
+        <CursorPos X="3" Y="7689"/>
+        <UsageCount Value="6"/>
+      </Unit17>
+      <Unit18>
+        <Filename Value="../to-do.txt"/>
+        <EditorIndex Value="3"/>
+        <CursorPos X="23" Y="20"/>
+        <UsageCount Value="35"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit18>
+      <Unit19>
+        <Filename Value="../changelog.txt"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="2"/>
+        <CursorPos X="18" Y="9"/>
+        <UsageCount Value="76"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit19>
+      <Unit20>
+        <Filename Value="../expandpanels_subpanel.pas"/>
+        <UnitName Value="ExpandPanels"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="22"/>
+        <CursorPos Y="34"/>
+        <UsageCount Value="6"/>
+      </Unit20>
+      <Unit21>
+        <Filename Value="../_subpanel/expandpanels_subpanel.pas"/>
+        <UnitName Value="ExpandPanels"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2329"/>
+        <CursorPos X="12" Y="2308"/>
+        <UsageCount Value="8"/>
+      </Unit21>
+      <Unit22>
+        <Filename Value="../../../../../Development/FreePascal/lazarus/lcl/include/custompanel.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="89"/>
+        <CursorPos X="3" Y="94"/>
+        <UsageCount Value="22"/>
+      </Unit22>
+      <Unit23>
+        <Filename Value="../../../../../Development/FreePascal/lazarus/lcl/graphics.pp"/>
+        <UnitName Value="Graphics"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1162"/>
+        <CursorPos X="15" Y="1171"/>
+        <UsageCount Value="6"/>
+      </Unit23>
+      <Unit24>
+        <Filename Value="../../../../../Development/FreePascal/lazarus/lcl/include/canvas.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1034"/>
+        <CursorPos X="15" Y="1045"/>
+        <UsageCount Value="6"/>
+      </Unit24>
+      <Unit25>
+        <Filename Value="../../../../../Development/FreePascal/lazarus/lcl/include/lclintfh.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="56"/>
+        <CursorPos X="10" Y="67"/>
+        <UsageCount Value="6"/>
+      </Unit25>
+      <Unit26>
+        <Filename Value="../../../../../Development/FreePascal/lazarus/lcl/include/intfbaselcl.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="341"/>
+        <CursorPos X="3" Y="344"/>
+        <UsageCount Value="6"/>
+      </Unit26>
+      <Unit27>
+        <Filename Value="unit1.pas"/>
+        <ComponentName Value="Form1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Unit1"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="44"/>
+        <CursorPos Y="55"/>
+        <UsageCount Value="10"/>
+      </Unit27>
+      <Unit28>
+        <Filename Value="../../../../../Development/FreePascal/lazarus/lcl/buttons.pp"/>
+        <UnitName Value="Buttons"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="318"/>
+        <CursorPos X="17" Y="326"/>
+        <UsageCount Value="18"/>
+      </Unit28>
+      <Unit29>
+        <Filename Value="unit1_onepanel.lfm"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="202"/>
+        <UsageCount Value="8"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit29>
+      <Unit30>
+        <Filename Value="../../../../../Development/FreePascal/fpc/rtl/objpas/types.pp"/>
+        <UnitName Value="Types"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="451"/>
+        <CursorPos X="3" Y="453"/>
+        <UsageCount Value="9"/>
+      </Unit30>
+      <Unit31>
+        <Filename Value="../../../../../Development/FreePascal/lazarus/lcl/include/rasterimage.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="814"/>
+        <CursorPos Y="829"/>
+        <UsageCount Value="12"/>
+      </Unit31>
+      <Unit32>
+        <Filename Value="../../../../../Development/FreePascal/lazarus/lcl/include/custombitmap.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="484"/>
+        <CursorPos Y="504"/>
+        <UsageCount Value="11"/>
+      </Unit32>
+      <Unit33>
+        <Filename Value="../../../../../Development/FreePascal/fpc/rtl/objpas/math.pp"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2072"/>
+        <CursorPos X="3" Y="2075"/>
+        <UsageCount Value="11"/>
+      </Unit33>
+      <Unit34>
+        <Filename Value="../../../../../Development/FreePascal/lazarus/lcl/stdctrls.pp"/>
+        <UnitName Value="StdCtrls"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1122"/>
+        <CursorPos X="3" Y="1127"/>
+        <UsageCount Value="10"/>
+      </Unit34>
+      <Unit35>
+        <Filename Value="../../../../../Development/FreePascal/lazarus/lcl/include/customcontrol.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="89"/>
+        <CursorPos X="15" Y="92"/>
+        <UsageCount Value="10"/>
+      </Unit35>
+      <Unit36>
+        <Filename Value="../../../../../Development/FreePascal/lazarus/lcl/widgetset/wscontrols.pp"/>
+        <UnitName Value="WSControls"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="470"/>
+        <CursorPos X="10" Y="486"/>
+        <UsageCount Value="10"/>
+      </Unit36>
+      <Unit37>
+        <Filename Value="../../../../../Development/FreePascal/lazarus/lcl/widgetset/wsfactory.pas"/>
+        <UnitName Value="WSFactory"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="30"/>
+        <CursorPos X="10" Y="41"/>
+        <UsageCount Value="10"/>
+      </Unit37>
+      <Unit38>
+        <Filename Value="../../../../../Development/FreePascal/lazarus/lcl/include/speedbutton.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="854"/>
+        <CursorPos X="3" Y="856"/>
+        <UsageCount Value="10"/>
+      </Unit38>
+      <Unit39>
+        <Filename Value="../../../../../Development/FreePascal/lazarus/lcl/dialogs.pp"/>
+        <UnitName Value="Dialogs"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="255"/>
+        <CursorPos X="31" Y="257"/>
+        <UsageCount Value="10"/>
+      </Unit39>
+      <Unit40>
+        <Filename Value="../../../../../Development/FreePascal/lazarus/lcl/include/colorbutton.inc"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="35" Y="127"/>
+        <UsageCount Value="10"/>
+      </Unit40>
+      <Unit41>
+        <Filename Value="../expandpanels_glyphs.lrs"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="10"/>
+      </Unit41>
+    </Units>
+    <JumpHistory Count="23" HistoryIndex="22">
+      <Position1>
+        <Filename Value="unit1_onepanel.pas"/>
+        <Caret Line="122" Column="10" TopLine="114"/>
+      </Position1>
+      <Position2>
+        <Filename Value="unit1_onepanel.pas"/>
+        <Caret Line="123" Column="10" TopLine="115"/>
+      </Position2>
+      <Position3>
+        <Filename Value="../expandpanels.pas"/>
+        <Caret Line="1332" Column="36" TopLine="1318"/>
+      </Position3>
+      <Position4>
+        <Filename Value="../expandpanels.pas"/>
+        <Caret Line="1248" Column="13" TopLine="1235"/>
+      </Position4>
+      <Position5>
+        <Filename Value="../expandpanels.pas"/>
+        <Caret Line="1161" TopLine="1150"/>
+      </Position5>
+      <Position6>
+        <Filename Value="../expandpanels.pas"/>
+        <Caret Line="1246" Column="64" TopLine="1237"/>
+      </Position6>
+      <Position7>
+        <Filename Value="../expandpanels.pas"/>
+        <Caret Line="1248" Column="20" TopLine="1237"/>
+      </Position7>
+      <Position8>
+        <Filename Value="../expandpanels.pas"/>
+        <Caret Line="1161" TopLine="1150"/>
+      </Position8>
+      <Position9>
+        <Filename Value="../expandpanels.pas"/>
+        <Caret Line="1249" Column="75" TopLine="1234"/>
+      </Position9>
+      <Position10>
+        <Filename Value="../expandpanels.pas"/>
+        <Caret Line="1248" Column="7" TopLine="1234"/>
+      </Position10>
+      <Position11>
+        <Filename Value="../expandpanels.pas"/>
+        <Caret Line="1161" TopLine="1150"/>
+      </Position11>
+      <Position12>
+        <Filename Value="../expandpanels.pas"/>
+        <Caret Line="1184" TopLine="1174"/>
+      </Position12>
+      <Position13>
+        <Filename Value="../expandpanels.pas"/>
+        <Caret Line="1161" Column="6" TopLine="1153"/>
+      </Position13>
+      <Position14>
+        <Filename Value="../expandpanels.pas"/>
+        <Caret Line="1164" TopLine="1153"/>
+      </Position14>
+      <Position15>
+        <Filename Value="../expandpanels.pas"/>
+        <Caret Line="1166" TopLine="1153"/>
+      </Position15>
+      <Position16>
+        <Filename Value="../expandpanels.pas"/>
+        <Caret Line="1167" TopLine="1153"/>
+      </Position16>
+      <Position17>
+        <Filename Value="../expandpanels.pas"/>
+        <Caret Line="1168" TopLine="1153"/>
+      </Position17>
+      <Position18>
+        <Filename Value="../expandpanels.pas"/>
+        <Caret Line="1169" TopLine="1153"/>
+      </Position18>
+      <Position19>
+        <Filename Value="../expandpanels.pas"/>
+        <Caret Line="1174" TopLine="1156"/>
+      </Position19>
+      <Position20>
+        <Filename Value="../expandpanels.pas"/>
+        <Caret Line="1175" TopLine="1157"/>
+      </Position20>
+      <Position21>
+        <Filename Value="../expandpanels.pas"/>
+        <Caret Line="1176" TopLine="1158"/>
+      </Position21>
+      <Position22>
+        <Filename Value="../expandpanels.pas"/>
+        <Caret Line="1177" TopLine="1159"/>
+      </Position22>
+      <Position23>
+        <Filename Value="../expandpanels.pas"/>
+        <Caret Line="1203" TopLine="1193"/>
+      </Position23>
+    </JumpHistory>
+  </ProjectOptions>
+  <CompilerOptions>
+    <Version Value="11"/>
+    <SearchPaths>
+      <IncludeFiles Value="$(ProjOutDir)"/>
+      <OtherUnitFiles Value="/media/bigone/Daten/Programmieren/meine/Komponenten/expandpanels/"/>
+    </SearchPaths>
+    <Parsing>
+      <SyntaxOptions>
+        <UseAnsiStrings Value="False"/>
+      </SyntaxOptions>
+    </Parsing>
+    <Linking>
+      <Options>
+        <Win32>
+          <GraphicApplication Value="True"/>
+        </Win32>
+      </Options>
+    </Linking>
+  </CompilerOptions>
+  <Debugging>
+    <BreakPoints Count="5">
+      <Item1>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="../expandpanels.pas"/>
+        <Line Value="3362"/>
+      </Item1>
+      <Item2>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="../expandpanels.pas"/>
+        <Line Value="3379"/>
+      </Item2>
+      <Item3>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="../expandpanels.pas"/>
+        <Line Value="2964"/>
+      </Item3>
+      <Item4>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="../expandpanels.pas"/>
+        <Line Value="3383"/>
+      </Item4>
+      <Item5>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="../expandpanels.pas"/>
+        <Line Value="2973"/>
+      </Item5>
+    </BreakPoints>
+    <Exceptions Count="3">
+      <Item1>
+        <Name Value="EAbort"/>
+      </Item1>
+      <Item2>
+        <Name Value="ECodetoolError"/>
+      </Item2>
+      <Item3>
+        <Name Value="EFOpenError"/>
+      </Item3>
+    </Exceptions>
+  </Debugging>
+</CONFIG>

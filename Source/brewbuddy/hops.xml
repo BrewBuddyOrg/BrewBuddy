@@ -1,0 +1,2015 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HOPS>
+  <HOP>
+    <NAME>Feux Coeur Francais</NAME>
+    <NOTES>Zeldzame hop met hoog alfazuurgehalte. Wortels liggen in Bourgondië in Frankrijk. Groeit nu in de Victoria regio in Australië.  Geïntroduceerd in 2010.</NOTES>
+    <VERSION>1</VERSION>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>14</ALPHA>
+    <TYPE>Bittering</TYPE>
+    <FORM>Pellet</FORM>
+    <USE>Aroma</USE>
+    <BETA>6</BETA>
+    <HSI>25</HSI>
+    <ORIGIN>Australië</ORIGIN>
+  </HOP>
+  <HOP>
+    <NAME>Galaxy</NAME>
+    <NOTES>Hoog alfazuurgehalte voor bittering en aroma met een uniek hoparoma. Geeft smaak van citrus en passievrucht.
+Aroma: intens, aangenaam, uniek.</NOTES>
+    <VERSION>1</VERSION>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>14</ALPHA>
+    <TYPE>Bittering</TYPE>
+    <FORM>Pellet</FORM>
+    <USE>Aroma</USE>
+    <BETA>5.900000095</BETA>
+    <HSI>35</HSI>
+    <ORIGIN>Australië</ORIGIN>
+  </HOP>
+  <HOP>
+    <NAME>Pride of Ringwood</NAME>
+    <NOTES>Bitterhop voor Australische bieren.
+Aroma: matig citrus, zuivere bitterheid.</NOTES>
+    <VERSION>1</VERSION>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>9</ALPHA>
+    <TYPE>Bittering</TYPE>
+    <FORM>Pellet</FORM>
+    <USE>Aroma</USE>
+    <BETA>5.800000191</BETA>
+    <HSI>45</HSI>
+    <ORIGIN>Australië</ORIGIN>
+    <SUBSTITUTES>E.K. Goldings, Centennial, Cluster, Galena</SUBSTITUTES>
+    <HUMULENE>5</HUMULENE>
+    <CAROPHYLLENE>7.5</CAROPHYLLENE>
+    <COHUMULONE>35.5</COHUMULONE>
+    <MYRCENE>37.5</MYRCENE>
+    <TOTAL_OIL>1.5</TOTAL_OIL>
+  </HOP>
+  <HOP>
+    <NAME>Super Pride</NAME>
+    <NOTES>Variant van Pride of Ringwood met hoger alfazuurgehalte. Heeft milde aromas en lage cohumulone gehalten.  
+Gebruikt voor bitteren.</NOTES>
+    <VERSION>1</VERSION>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>14.19999981</ALPHA>
+    <TYPE>Bittering</TYPE>
+    <FORM>Pellet</FORM>
+    <USE>Aroma</USE>
+    <BETA>6.699999809</BETA>
+    <HSI>45</HSI>
+    <ORIGIN>Australië</ORIGIN>
+    <SUBSTITUTES>Pride of Ringwood</SUBSTITUTES>
+  </HOP>
+  <HOP>
+    <NAME>Topaz</NAME>
+    <NOTES>Hop met zeer hoog alfazuurgehalte.
+Gebrukt voor commerciële productie van alfazuren.</NOTES>
+    <VERSION>1</VERSION>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>17</ALPHA>
+    <TYPE>Bittering</TYPE>
+    <FORM>Pellet</FORM>
+    <USE>Aroma</USE>
+    <BETA>6.5</BETA>
+    <HSI>30</HSI>
+    <ORIGIN>Australië</ORIGIN>
+  </HOP>
+  <HOP>
+    <NAME>Victoria</NAME>
+    <NOTES>Hop met hoog alfazuurgehalte uit Victoria. Australië.  Gekweekt in 1976 en geproduceerd vanaf de jaren 90.
+Gebruik: voor bitteren.</NOTES>
+    <VERSION>1</VERSION>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>13</ALPHA>
+    <TYPE>Bittering</TYPE>
+    <FORM>Pellet</FORM>
+    <USE>Aroma</USE>
+    <BETA>6.199999809</BETA>
+    <HSI>35</HSI>
+    <ORIGIN>Australië</ORIGIN>
+  </HOP>
+  <HOP>
+    <NAME>Goldings. B.C.</NAME>
+    <NOTES>Gebruik: bittering en aromahop voor Engelse ales. bitters. porters en stouts.
+Aroma: kruidig. bloemig. rond. mild aroma.</NOTES>
+    <VERSION>1</VERSION>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>5</ALPHA>
+    <TYPE>Aroma</TYPE>
+    <FORM>Pellet</FORM>
+    <USE>Aroma</USE>
+    <BETA>3.200000048</BETA>
+    <HSI>40</HSI>
+    <ORIGIN>Canada</ORIGIN>
+    <SUBSTITUTES>East Kent Goldings. Fuggles</SUBSTITUTES>
+  </HOP>
+  <HOP>
+    <NAME>Hallertau Hersbrucker</NAME>
+    <NOTES>Gebruik: Duitse ondergistende bieren en tarwebieren
+Aroma: nobel. aangenaam</NOTES>
+    <VERSION>1</VERSION>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>2.5</ALPHA>
+    <TYPE>Aroma</TYPE>
+    <FORM>Pellet</FORM>
+    <USE>Aroma</USE>
+    <BETA>6</BETA>
+    <HSI>35</HSI>
+    <ORIGIN>Duitsland</ORIGIN>
+    <SUBSTITUTES>Hallertau Mittelfrüh. Hallertauer. Mt. Hood.</SUBSTITUTES>
+    <HUMULENE>23.5</HUMULENE>
+    <CAROPHYLLENE>11</CAROPHYLLENE>
+    <COHUMULONE>21.5</COHUMULONE>
+    <MYRCENE>17</MYRCENE>
+  </HOP>
+  <HOP>
+    <NAME>Hallertau Mittelfrüh</NAME>
+    <NOTES>Gebruik: Europese ondergistende bieren. Duitse bieren. Amerikaanse ondergistende bieren
+Aroma: aangenaam, mild kruidig aroma</NOTES>
+    <VERSION>1</VERSION>
+    <COST>37.3</COST>
+    <DISPLAY_COST>37.30 €</DISPLAY_COST>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>3.4</ALPHA>
+    <TYPE>Aroma</TYPE>
+    <FORM>Leaf</FORM>
+    <USE>Aroma</USE>
+    <BETA>4.6</BETA>
+    <HSI>25</HSI>
+    <ORIGIN>Duitsland</ORIGIN>
+    <SUBSTITUTES>Hallertauer. Mt. Hood. Liberty. Crystal</SUBSTITUTES>
+    <HUMULENE>50</HUMULENE>
+    <CAROPHYLLENE>12</CAROPHYLLENE>
+    <COHUMULONE>24</COHUMULONE>
+    <MYRCENE>24</MYRCENE>
+    <TOTAL_OIL>1</TOTAL_OIL>
+    <HARVEST_DATE>01-09-2014</HARVEST_DATE>
+  </HOP>
+  <HOP>
+    <NAME>Hallertau Tradition</NAME>
+    <NOTES>Lijkt sterk op H. Mittelfrüh. maar met hogere opbrengst.
+Voor ondergistende bieren. pilseners. bockbieren en sommige Weizens
+Aroma: verfijnd. lijkt op H. Mittelfrüh.</NOTES>
+    <VERSION>1</VERSION>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>6</ALPHA>
+    <TYPE>Both</TYPE>
+    <FORM>Pellet</FORM>
+    <USE>Aroma</USE>
+    <BETA>4.5</BETA>
+    <HSI>45</HSI>
+    <ORIGIN>Duitsland</ORIGIN>
+    <SUBSTITUTES>Hallertauer Mittelfrüh. Liberty. Ultra</SUBSTITUTES>
+    <HUMULENE>42</HUMULENE>
+    <CAROPHYLLENE>12</CAROPHYLLENE>
+    <COHUMULONE>27</COHUMULONE>
+    <MYRCENE>25</MYRCENE>
+    <TOTAL_OIL>1</TOTAL_OIL>
+  </HOP>
+  <HOP>
+    <NAME>Hallertauer</NAME>
+    <NOTES>Gebruik: Duitse bieren. Amerikaanse en Canadese ondergisters
+Aroma: aangenaam, mild kruidige smaak, vrij neutraal</NOTES>
+    <VERSION>1</VERSION>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>4.800000191</ALPHA>
+    <TYPE>Aroma</TYPE>
+    <FORM>Pellet</FORM>
+    <USE>Aroma</USE>
+    <BETA>4</BETA>
+    <HSI>50</HSI>
+    <ORIGIN>Duitsland</ORIGIN>
+    <SUBSTITUTES>Hallertauer Mittelfrüh, Hallertau Hersbrucker, Crystal, Liberty</SUBSTITUTES>
+    <HUMULENE>32.5</HUMULENE>
+    <CAROPHYLLENE>8.5</CAROPHYLLENE>
+    <COHUMULONE>21.5</COHUMULONE>
+    <MYRCENE>15.5</MYRCENE>
+  </HOP>
+  <HOP>
+    <NAME>Herkules</NAME>
+    <NOTES>Bitterhop met hoog alfazuurgehalte. Geeft een harmonische, niet te sterke bitterheid. Geeft niet al te uitgesproken aroma.</NOTES>
+    <VERSION>1</VERSION>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>15</ALPHA>
+    <TYPE>Bittering</TYPE>
+    <FORM>Pellet</FORM>
+    <USE>Aroma</USE>
+    <BETA>4.699999809</BETA>
+    <ORIGIN>Duitsland</ORIGIN>
+    <SUBSTITUTES>Magnum</SUBSTITUTES>
+    <HUMULENE>37</HUMULENE>
+    <CAROPHYLLENE>10</CAROPHYLLENE>
+    <COHUMULONE>35</COHUMULONE>
+    <MYRCENE>40</MYRCENE>
+    <TOTAL_OIL>3.5</TOTAL_OIL>
+  </HOP>
+  <HOP>
+    <NAME>Hersbrucker Spät</NAME>
+    <NOTES>Duitse nobele hop met goede aromaeigenschappen.
+Gebruik: aromahop in Duitse bierstijlen.</NOTES>
+    <VERSION>1</VERSION>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>3</ALPHA>
+    <TYPE>Aroma</TYPE>
+    <FORM>Pellet</FORM>
+    <USE>Aroma</USE>
+    <BETA>4</BETA>
+    <HSI>25</HSI>
+    <ORIGIN>Duitsland</ORIGIN>
+    <SUBSTITUTES>Hallertau Hersbrucker</SUBSTITUTES>
+    <HUMULENE>25</HUMULENE>
+    <CAROPHYLLENE>11</CAROPHYLLENE>
+    <COHUMULONE>21</COHUMULONE>
+    <MYRCENE>22</MYRCENE>
+    <TOTAL_OIL>0.6999999881</TOTAL_OIL>
+  </HOP>
+  <HOP>
+    <NAME>Magnum</NAME>
+    <NOTES>Duitse Hallertauer variant. Veel gebruikt in Duitsland
+Gebruik: alle Duitse bieren
+Aroma: mooi aroma en kruidige smaak.
+Smaak: heldere, cleane bitterheid</NOTES>
+    <VERSION>1</VERSION>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>10.7</ALPHA>
+    <TYPE>Bittering</TYPE>
+    <FORM>Leaf</FORM>
+    <USE>Aroma</USE>
+    <BETA>6.5</BETA>
+    <HSI>15</HSI>
+    <ORIGIN>Duitsland</ORIGIN>
+    <SUBSTITUTES>Merkur, Taurus</SUBSTITUTES>
+    <HUMULENE>37</HUMULENE>
+    <CAROPHYLLENE>11</CAROPHYLLENE>
+    <COHUMULONE>25</COHUMULONE>
+    <MYRCENE>37</MYRCENE>
+    <TOTAL_OIL>2.5</TOTAL_OIL>
+    <HARVEST_DATE>01-09-2014</HARVEST_DATE>
+  </HOP>
+  <HOP>
+    <NAME>Merkur</NAME>
+    <NOTES>Bitterhop met hoog alfazuurgehalte, gematigd aroma en een harmonische bitterheid.</NOTES>
+    <VERSION>1</VERSION>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>12</ALPHA>
+    <TYPE>Bittering</TYPE>
+    <FORM>Pellet</FORM>
+    <USE>Aroma</USE>
+    <BETA>5</BETA>
+    <HSI>70</HSI>
+    <ORIGIN>Duitsland</ORIGIN>
+    <SUBSTITUTES>Magnum, Taurus</SUBSTITUTES>
+    <HUMULENE>42</HUMULENE>
+    <CAROPHYLLENE>12</CAROPHYLLENE>
+    <COHUMULONE>20</COHUMULONE>
+    <MYRCENE>30</MYRCENE>
+    <TOTAL_OIL>4.5</TOTAL_OIL>
+  </HOP>
+  <HOP>
+    <NAME>Northern Brewer</NAME>
+    <NOTES>Ook genoemd: Hallertauer Northern Brewer
+Gebruik: als bitterhop en aromahop in zowel bovengistende als ondergistende bieren
+Aroma: fijn, droog, cleane bitterhop. Zwarte bessen. Unieke smaak.</NOTES>
+    <VERSION>1</VERSION>
+    <COST>35</COST>
+    <DISPLAY_COST>35.00 €</DISPLAY_COST>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>9.7</ALPHA>
+    <TYPE>Both</TYPE>
+    <FORM>Leaf</FORM>
+    <USE>Aroma</USE>
+    <BETA>4</BETA>
+    <HSI>35</HSI>
+    <ORIGIN>Duitsland</ORIGIN>
+    <SUBSTITUTES>Hallertauer Mittelfrueh, Hallertauer</SUBSTITUTES>
+    <HUMULENE>42</HUMULENE>
+    <CAROPHYLLENE>15</CAROPHYLLENE>
+    <COHUMULONE>30</COHUMULONE>
+    <MYRCENE>30</MYRCENE>
+    <TOTAL_OIL>3.5</TOTAL_OIL>
+    <HARVEST_DATE>01-09-2014</HARVEST_DATE>
+  </HOP>
+  <HOP>
+    <NAME>Nugget (D)</NAME>
+    <NOTES>Harmonische bitterhop met hoog alfazuurgehalte.
+Aroma: kruidig, hoppig, licht bloemig en fruitig.</NOTES>
+    <VERSION>1</VERSION>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>11</ALPHA>
+    <TYPE>Bittering</TYPE>
+    <FORM>Pellet</FORM>
+    <USE>Aroma</USE>
+    <BETA>4</BETA>
+    <HSI>25</HSI>
+    <ORIGIN>Duitsland</ORIGIN>
+    <HUMULENE>32</HUMULENE>
+    <CAROPHYLLENE>15</CAROPHYLLENE>
+    <COHUMULONE>27</COHUMULONE>
+    <MYRCENE>35</MYRCENE>
+    <TOTAL_OIL>3.5</TOTAL_OIL>
+  </HOP>
+  <HOP>
+    <NAME>Opal</NAME>
+    <NOTES>Nieuwe variëteit van het onderzoekscentrum in Hull. Aromahop voor in continentale bierstijlen.
+Aroma: veel aroma met wat kruidigheid en subtiele citrustonen.</NOTES>
+    <VERSION>1</VERSION>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>6.5</ALPHA>
+    <TYPE>Aroma</TYPE>
+    <FORM>Pellet</FORM>
+    <USE>Aroma</USE>
+    <BETA>4.5</BETA>
+    <HSI>25</HSI>
+    <ORIGIN>Duitsland</ORIGIN>
+    <HUMULENE>40</HUMULENE>
+    <CAROPHYLLENE>12</CAROPHYLLENE>
+    <COHUMULONE>15</COHUMULONE>
+    <MYRCENE>32</MYRCENE>
+    <TOTAL_OIL>4</TOTAL_OIL>
+  </HOP>
+  <HOP>
+    <NAME>Perle</NAME>
+    <NOTES>Algemene bitterhop voor bijna alle bierstijlen.
+Aroma: licht kruidig. aangenaam. mintachtig.</NOTES>
+    <VERSION>1</VERSION>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>8</ALPHA>
+    <TYPE>Bittering</TYPE>
+    <FORM>Pellet</FORM>
+    <USE>Aroma</USE>
+    <BETA>4.800000191</BETA>
+    <HSI>20</HSI>
+    <ORIGIN>Duitsland</ORIGIN>
+    <SUBSTITUTES>Northern Brewer</SUBSTITUTES>
+    <HUMULENE>45</HUMULENE>
+    <CAROPHYLLENE>15</CAROPHYLLENE>
+    <COHUMULONE>32</COHUMULONE>
+    <MYRCENE>27</MYRCENE>
+    <TOTAL_OIL>4</TOTAL_OIL>
+  </HOP>
+  <HOP>
+    <NAME>Saphir</NAME>
+    <NOTES>Nobele hop. gekweekt als alternatief voor Hallertau Mittelfrüh. Karakter lijkt om andere Hallertau variëteiten.
+Aroma: aangenaam, bosvruchten.
+Voor pilseners, ondergistende bieren en Belgische witbieren.</NOTES>
+    <VERSION>1</VERSION>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>3.5</ALPHA>
+    <TYPE>Aroma</TYPE>
+    <FORM>Pellet</FORM>
+    <USE>Aroma</USE>
+    <BETA>4.599999905</BETA>
+    <HSI>45</HSI>
+    <ORIGIN>Duitsland</ORIGIN>
+    <SUBSTITUTES>Hallertau Mittelfrüh</SUBSTITUTES>
+    <HUMULENE>25</HUMULENE>
+    <CAROPHYLLENE>11.5</CAROPHYLLENE>
+    <COHUMULONE>15</COHUMULONE>
+    <MYRCENE>33</MYRCENE>
+    <TOTAL_OIL>4.5</TOTAL_OIL>
+  </HOP>
+  <HOP>
+    <NAME>Smaragd</NAME>
+    <NOTES>Aromahop met goede bittereigenschappen.
+Aroma: kruidig, licht zoetig, licht fruitig, intensief.</NOTES>
+    <VERSION>1</VERSION>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>5</ALPHA>
+    <TYPE>Both</TYPE>
+    <FORM>Pellet</FORM>
+    <USE>Aroma</USE>
+    <BETA>4.5</BETA>
+    <ORIGIN>Duitsland</ORIGIN>
+    <HUMULENE>40</HUMULENE>
+    <CAROPHYLLENE>12</CAROPHYLLENE>
+    <COHUMULONE>15</COHUMULONE>
+    <MYRCENE>30</MYRCENE>
+    <TOTAL_OIL>0.6000000238</TOTAL_OIL>
+  </HOP>
+  <HOP>
+    <NAME>Spalt Select</NAME>
+    <NOTES>Kruising tussen Hallertau Mittelfrüh en Duitse Spalt. Lijkt op Spalt.
+Voor alle ondergistende bieren of bieren die een nobel hopkarakter vereisen.
+Aroma: zeer verfijnd, spalt aroma.</NOTES>
+    <VERSION>1</VERSION>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>5</ALPHA>
+    <TYPE>Aroma</TYPE>
+    <FORM>Pellet</FORM>
+    <USE>Aroma</USE>
+    <BETA>3.5</BETA>
+    <HSI>17</HSI>
+    <ORIGIN>Duitsland</ORIGIN>
+    <SUBSTITUTES>Spalter, Saaz, Tettnang</SUBSTITUTES>
+    <HUMULENE>16</HUMULENE>
+    <CAROPHYLLENE>7</CAROPHYLLENE>
+    <COHUMULONE>24</COHUMULONE>
+    <MYRCENE>30</MYRCENE>
+    <TOTAL_OIL>4.5</TOTAL_OIL>
+    <HARVEST_DATE>01-09-2014</HARVEST_DATE>
+  </HOP>
+  <HOP>
+    <NAME>Spalter Spalt</NAME>
+    <NOTES>Traditionele Duitse bitter- en aromahop. Voor Altbier, ondergisters.
+Aroma: mild. aangenaam, licht kruidig.</NOTES>
+    <VERSION>1</VERSION>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>4.5</ALPHA>
+    <TYPE>Aroma</TYPE>
+    <FORM>Pellet</FORM>
+    <USE>Aroma</USE>
+    <BETA>4</BETA>
+    <HSI>50</HSI>
+    <ORIGIN>Duitsland</ORIGIN>
+    <SUBSTITUTES>Spalt Select, Saaz, Tettnang</SUBSTITUTES>
+    <HUMULENE>25</HUMULENE>
+    <CAROPHYLLENE>11</CAROPHYLLENE>
+    <COHUMULONE>25</COHUMULONE>
+    <MYRCENE>27</MYRCENE>
+    <TOTAL_OIL>0.7</TOTAL_OIL>
+  </HOP>
+  <HOP>
+    <NAME>Taurus</NAME>
+    <NOTES>Bitterhop met zeer hoog alfazuurgehalte en gematigd aroma.</NOTES>
+    <VERSION>1</VERSION>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>15</ALPHA>
+    <TYPE>Bittering</TYPE>
+    <FORM>Pellet</FORM>
+    <USE>Aroma</USE>
+    <BETA>5</BETA>
+    <ORIGIN>Duitsland</ORIGIN>
+    <SUBSTITUTES>Magnum</SUBSTITUTES>
+    <HUMULENE>28</HUMULENE>
+    <CAROPHYLLENE>8.5</CAROPHYLLENE>
+    <COHUMULONE>22.5</COHUMULONE>
+    <MYRCENE>40</MYRCENE>
+    <TOTAL_OIL>3.5</TOTAL_OIL>
+  </HOP>
+  <HOP>
+    <NAME>Tettnanger</NAME>
+    <NOTES>Voor Duitse bovengistende en ondergistende bieren en tarwebieren.
+Aroma: nobel, mild, verfijnd, licht krudig.</NOTES>
+    <VERSION>1</VERSION>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>3.5</ALPHA>
+    <TYPE>Aroma</TYPE>
+    <FORM>Leaf</FORM>
+    <USE>Aroma</USE>
+    <BETA>3.5</BETA>
+    <HSI>40</HSI>
+    <ORIGIN>Duitsland</ORIGIN>
+    <SUBSTITUTES>Saaz, Spalt</SUBSTITUTES>
+    <HUMULENE>26</HUMULENE>
+    <CAROPHYLLENE>8</CAROPHYLLENE>
+    <COHUMULONE>26</COHUMULONE>
+    <MYRCENE>27</MYRCENE>
+    <TOTAL_OIL>0.6999999881</TOTAL_OIL>
+  </HOP>
+  <HOP>
+    <NAME>Strisslespalt</NAME>
+    <NOTES>Aromahop dat veel wordt gebruikt in de Alzas.
+Voor pilseners en tarwebieren.
+Aroma: matig intens, aangenaam hoppig.</NOTES>
+    <VERSION>1</VERSION>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>4</ALPHA>
+    <TYPE>Aroma</TYPE>
+    <FORM>Pellet</FORM>
+    <USE>Aroma</USE>
+    <BETA>3.799999952</BETA>
+    <HSI>45</HSI>
+    <ORIGIN>Frankrijk</ORIGIN>
+    <SUBSTITUTES>Hallertauer Hersbrucker</SUBSTITUTES>
+    <HUMULENE>20</HUMULENE>
+    <CAROPHYLLENE>9</CAROPHYLLENE>
+    <COHUMULONE>22.5</COHUMULONE>
+    <MYRCENE>25</MYRCENE>
+    <TOTAL_OIL>0.6999999881</TOTAL_OIL>
+  </HOP>
+  <HOP>
+    <NAME>Sorachi Ace</NAME>
+    <NOTES>Ontwikkeld door de Sapporo Brouwerijen voor eigen gebruik. Stamt onder andere af van Brewers Gold en Saaz. Citroenachtige smaak en aroma.
+Voor saison. IPA en andere bieren waarin een citrusachtige smaak is gewenst.</NOTES>
+    <VERSION>1</VERSION>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>12</ALPHA>
+    <TYPE>Bittering</TYPE>
+    <FORM>Pellet</FORM>
+    <USE>Aroma</USE>
+    <BETA>6</BETA>
+    <HSI>25</HSI>
+    <ORIGIN>Japan</ORIGIN>
+    <SUBSTITUTES>Admiral. Cascade</SUBSTITUTES>
+  </HOP>
+  <HOP>
+    <NAME>Green Bullet</NAME>
+    <NOTES>Bitterhop ontwikkeld in 1972. Gebruikt in Australische bieren.
+Aroma: bloemachtig, rozijn.</NOTES>
+    <VERSION>1</VERSION>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>13.5</ALPHA>
+    <TYPE>Bittering</TYPE>
+    <FORM>Pellet</FORM>
+    <USE>Aroma</USE>
+    <BETA>7</BETA>
+    <HSI>20</HSI>
+    <ORIGIN>Nieuw Zeeland</ORIGIN>
+    <SUBSTITUTES>Styrian Goldings</SUBSTITUTES>
+    <HUMULENE>28</HUMULENE>
+    <CAROPHYLLENE>10</CAROPHYLLENE>
+    <COHUMULONE>42</COHUMULONE>
+    <MYRCENE>38</MYRCENE>
+    <TOTAL_OIL>1.100000024</TOTAL_OIL>
+  </HOP>
+  <HOP>
+    <NAME>Hallertauer, Nieuw Zeeland</NAME>
+    <NOTES>Hallertauer variant met klassiek aroma. Geteelt uit Duitse Hallertau Mittelfrüh.
+Gebruikt voor Australische bieren.</NOTES>
+    <VERSION>1</VERSION>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>8.5</ALPHA>
+    <TYPE>Both</TYPE>
+    <FORM>Pellet</FORM>
+    <USE>Aroma</USE>
+    <BETA>3</BETA>
+    <HSI>25</HSI>
+    <ORIGIN>Nieuw Zeeland</ORIGIN>
+    <SUBSTITUTES>Hallertauer Mittelfrüh</SUBSTITUTES>
+    <HUMULENE>14</HUMULENE>
+    <CAROPHYLLENE>7.5</CAROPHYLLENE>
+    <COHUMULONE>32.5</COHUMULONE>
+    <MYRCENE>41</MYRCENE>
+    <TOTAL_OIL>1</TOTAL_OIL>
+  </HOP>
+  <HOP>
+    <NAME>Motueka</NAME>
+    <NOTES>Ontwikkeld uit Saaz. Heeft een nobel karakter en aroma. gebalanceerde bitterheid en een unieke smaak.
+Gebruikt in ondergistende bieren. Belgische bieren en Tjechische pils.</NOTES>
+    <VERSION>1</VERSION>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>7</ALPHA>
+    <TYPE>Aroma</TYPE>
+    <FORM>Pellet</FORM>
+    <USE>Aroma</USE>
+    <BETA>5.199999809</BETA>
+    <HSI>15</HSI>
+    <ORIGIN>Nieuw Zeeland</ORIGIN>
+    <SUBSTITUTES>Saaz</SUBSTITUTES>
+  </HOP>
+  <HOP>
+    <NAME>Nelson Sauvin</NAME>
+    <NOTES>Triploide variëteit van Smoothcone. uitgebrachtin 2000. Het olieprofiel smaakt naar vers gekneusde kruisbessen. net zoals bij de Sauvignon Blanc druif. Zeer fruitig. citrusachtig. Gebruik dan ook met mate.
+Gebruikt in Pale Ales en speciaalbieren.</NOTES>
+    <VERSION>1</VERSION>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>12.8</ALPHA>
+    <TYPE>Bittering</TYPE>
+    <FORM>Pellet</FORM>
+    <USE>Aroma</USE>
+    <BETA>7</BETA>
+    <HSI>20</HSI>
+    <ORIGIN>Nieuw Zeeland</ORIGIN>
+    <SUBSTITUTES>geen substituut</SUBSTITUTES>
+    <HUMULENE>36</HUMULENE>
+    <CAROPHYLLENE>12</CAROPHYLLENE>
+    <COHUMULONE>24</COHUMULONE>
+    <MYRCENE>22</MYRCENE>
+    <HARVEST_DATE>01-02-2014</HARVEST_DATE>
+  </HOP>
+  <HOP>
+    <NAME>Pacific Gem</NAME>
+    <NOTES>Variëteit met een hoog alfazuurgehalte. ontwikkeld in 1987. Gebruikt voor bitteren. Geeft een eikenhoutachtige smaak.
+Aroma: aangenaam, braam.</NOTES>
+    <VERSION>1</VERSION>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>15</ALPHA>
+    <TYPE>Bittering</TYPE>
+    <FORM>Pellet</FORM>
+    <USE>Aroma</USE>
+    <BETA>8.199999809</BETA>
+    <HSI>10</HSI>
+    <ORIGIN>Nieuw Zeeland</ORIGIN>
+    <SUBSTITUTES>Magnum, Nugget, Columbus, Bullion</SUBSTITUTES>
+    <HUMULENE>24</HUMULENE>
+    <CAROPHYLLENE>9</CAROPHYLLENE>
+    <COHUMULONE>38.5</COHUMULONE>
+    <MYRCENE>44</MYRCENE>
+    <TOTAL_OIL>1.299999952</TOTAL_OIL>
+  </HOP>
+  <HOP>
+    <NAME>Pacific Jade</NAME>
+    <NOTES>Bitterhop met hoog alfazuurgehalte. Geeft een sterke kruidige smaak met wat zwarte peper tonen. Citrusaroma en smaak.
+Gebruikt voor veel biersoorten.</NOTES>
+    <VERSION>1</VERSION>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>13</ALPHA>
+    <TYPE>Bittering</TYPE>
+    <FORM>Pellet</FORM>
+    <USE>Aroma</USE>
+    <BETA>7.5</BETA>
+    <HSI>15</HSI>
+    <ORIGIN>Nieuw Zeeland</ORIGIN>
+    <HUMULENE>33</HUMULENE>
+    <CAROPHYLLENE>11</CAROPHYLLENE>
+    <COHUMULONE>24</COHUMULONE>
+    <MYRCENE>34</MYRCENE>
+  </HOP>
+  <HOP>
+    <NAME>Pacifica</NAME>
+    <NOTES>Aromahop ontwikkeld uit Hallertau Mittelfrüh in 1994. Mengsel van oude en nieuwe wereld smaken. waaronder marmelade en citrus tonen wanneer gebruikt als late hop. Zachte bitterheid.</NOTES>
+    <VERSION>1</VERSION>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>5.5</ALPHA>
+    <TYPE>Aroma</TYPE>
+    <FORM>Pellet</FORM>
+    <USE>Aroma</USE>
+    <BETA>6</BETA>
+    <HSI>20</HSI>
+    <ORIGIN>Nieuw Zeeland</ORIGIN>
+    <SUBSTITUTES>Chinook, Hallertauer Mittelfrüh</SUBSTITUTES>
+    <HUMULENE>33</HUMULENE>
+    <CAROPHYLLENE>11</CAROPHYLLENE>
+    <COHUMULONE>24</COHUMULONE>
+    <MYRCENE>34</MYRCENE>
+  </HOP>
+  <HOP>
+    <NAME>Riwaka</NAME>
+    <NOTES>Voorheen bekend als B-Saaz. Ontwikkeld uit een oude lijn Saaz hop in Nieuw Zeeland. 
+Gebruikt voor pale ale en regionale pilseners in Nieuw Zeeland.
+Aroma: sterk, hoppig. Wat grapefruit en citrus.</NOTES>
+    <VERSION>1</VERSION>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>5.199999809</ALPHA>
+    <TYPE>Aroma</TYPE>
+    <FORM>Pellet</FORM>
+    <USE>Aroma</USE>
+    <BETA>4.5</BETA>
+    <HSI>15</HSI>
+    <ORIGIN>Nieuw Zeeland</ORIGIN>
+    <HUMULENE>9</HUMULENE>
+    <CAROPHYLLENE>4</CAROPHYLLENE>
+    <COHUMULONE>34</COHUMULONE>
+    <MYRCENE>68</MYRCENE>
+  </HOP>
+  <HOP>
+    <NAME>Southern Cross</NAME>
+    <NOTES>Bitter/aromahop met Europees karakter uit 1994.
+Gebruikt voor bittering en "Europese" smaak en geur.
+Aroma: kruidig, citroen, licht harsig en houtachtig.</NOTES>
+    <VERSION>1</VERSION>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>13</ALPHA>
+    <TYPE>Both</TYPE>
+    <FORM>Pellet</FORM>
+    <USE>Aroma</USE>
+    <BETA>6.199999809</BETA>
+    <HSI>15</HSI>
+    <ORIGIN>Nieuw Zeeland</ORIGIN>
+    <HUMULENE>21</HUMULENE>
+    <CAROPHYLLENE>6.699999809</CAROPHYLLENE>
+    <COHUMULONE>26</COHUMULONE>
+    <MYRCENE>32</MYRCENE>
+    <TOTAL_OIL>1.200000048</TOTAL_OIL>
+  </HOP>
+  <HOP>
+    <NAME>Sticklebract</NAME>
+    <NOTES>Hopsoort met hoog alfazuurgehalte. uitgebracht in 1972. Lijkt wat op Northern Brewer.
+Aroma: harsig met een vlaag van citrus.</NOTES>
+    <VERSION>1</VERSION>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>13.5</ALPHA>
+    <TYPE>Both</TYPE>
+    <FORM>Pellet</FORM>
+    <USE>Aroma</USE>
+    <BETA>8</BETA>
+    <HSI>25</HSI>
+    <ORIGIN>Nieuw Zeeland</ORIGIN>
+    <SUBSTITUTES>Northern Brewer</SUBSTITUTES>
+    <HUMULENE>11.5</HUMULENE>
+    <CAROPHYLLENE>5.5</CAROPHYLLENE>
+    <COHUMULONE>43</COHUMULONE>
+    <MYRCENE>57.5</MYRCENE>
+    <TOTAL_OIL>1.600000024</TOTAL_OIL>
+  </HOP>
+  <HOP>
+    <NAME>Super Alpha</NAME>
+    <NOTES>Hop met hoog alfazuurgehalte uit 1976. Europees karakter. 
+Gebruikt in Europese bierstijlen.
+Aroma: aangenaam. rozijnachtig aroma.</NOTES>
+    <VERSION>1</VERSION>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>13</ALPHA>
+    <TYPE>Bittering</TYPE>
+    <FORM>Pellet</FORM>
+    <USE>Aroma</USE>
+    <BETA>8</BETA>
+    <HSI>15</HSI>
+    <ORIGIN>Nieuw Zeeland</ORIGIN>
+    <HUMULENE>33</HUMULENE>
+    <CAROPHYLLENE>10</CAROPHYLLENE>
+    <COHUMULONE>37</COHUMULONE>
+    <MYRCENE>29</MYRCENE>
+    <TOTAL_OIL>1.299999952</TOTAL_OIL>
+  </HOP>
+  <HOP>
+    <NAME>Lublin</NAME>
+    <NOTES>Poolse versie van Saaz, ook Lubelski genoemd.
+Gebruikt in Tjechische ondergisters.
+Aroma: nobel, mild, lijkt sterk op Saaz.</NOTES>
+    <VERSION>1</VERSION>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>5</ALPHA>
+    <TYPE>Bittering</TYPE>
+    <FORM>Pellet</FORM>
+    <USE>Aroma</USE>
+    <BETA>3</BETA>
+    <HSI>45</HSI>
+    <ORIGIN>Polen</ORIGIN>
+    <SUBSTITUTES>Saaz, Tettnanger</SUBSTITUTES>
+    <HUMULENE>35</HUMULENE>
+    <CAROPHYLLENE>8.5</CAROPHYLLENE>
+    <COHUMULONE>27.5</COHUMULONE>
+    <MYRCENE>27</MYRCENE>
+    <TOTAL_OIL>0.8000000119</TOTAL_OIL>
+  </HOP>
+  <HOP>
+    <NAME>Marynka</NAME>
+    <NOTES>Bitterhop met veel aroma. Vooral voor pilseners. Lijkt op E.K. Goldings en Chinook.</NOTES>
+    <VERSION>1</VERSION>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>10.5</ALPHA>
+    <TYPE>Bittering</TYPE>
+    <FORM>Pellet</FORM>
+    <USE>Aroma</USE>
+    <BETA>11.39999962</BETA>
+    <HSI>35</HSI>
+    <ORIGIN>Polen</ORIGIN>
+    <SUBSTITUTES>Chinook, E.K. Golding, Perle</SUBSTITUTES>
+    <HUMULENE>30</HUMULENE>
+    <CAROPHYLLENE>11.5</CAROPHYLLENE>
+    <COHUMULONE>30</COHUMULONE>
+    <MYRCENE>29.5</MYRCENE>
+    <TOTAL_OIL>2</TOTAL_OIL>
+  </HOP>
+  <HOP>
+    <NAME>Atlas</NAME>
+    <NOTES>Kruising tussen Brewers Gold en Sloveense wilde hop. Vooral een bitterhop met een aangename bitterheid en aroma.
+Gebruik: bitterhop voor alle bierstijlen.</NOTES>
+    <VERSION>1</VERSION>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>9</ALPHA>
+    <TYPE>Bittering</TYPE>
+    <FORM>Pellet</FORM>
+    <USE>Aroma</USE>
+    <BETA>3.700000048</BETA>
+    <HSI>15</HSI>
+    <ORIGIN>Slovenië</ORIGIN>
+    <SUBSTITUTES>Brewers Gold</SUBSTITUTES>
+  </HOP>
+  <HOP>
+    <NAME>Aurora</NAME>
+    <NOTES>Ook bekend als Super Styrian. Hybride van Northern Brewer en TG.  Heeft een aangenaam hoppig aroma dat lijkt op Styrian Goldings. maar dan lichter.  
+Gebruik: vaak gemengd met andere hopsoorten in ondergistende bieren
+Substitutes: Styrian Goldings</NOTES>
+    <VERSION>1</VERSION>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>8.199999809</ALPHA>
+    <TYPE>Both</TYPE>
+    <FORM>Pellet</FORM>
+    <USE>Aroma</USE>
+    <BETA>3.5</BETA>
+    <HSI>23</HSI>
+    <ORIGIN>Slovenië</ORIGIN>
+  </HOP>
+  <HOP>
+    <NAME>Bobek</NAME>
+    <NOTES>Ook bekend als Styrian Golding B - kruising van Northern Brewer en een TG zaailing.  Aangenaam hop aroma en -smaak.
+Gebuik: Engelse ales. ondergistende bieren/pilseners.</NOTES>
+    <VERSION>1</VERSION>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>5.199999809</ALPHA>
+    <TYPE>Both</TYPE>
+    <FORM>Pellet</FORM>
+    <USE>Aroma</USE>
+    <BETA>5</BETA>
+    <HSI>20</HSI>
+    <ORIGIN>Slovenië</ORIGIN>
+    <SUBSTITUTES>Northern Brewer</SUBSTITUTES>
+  </HOP>
+  <HOP>
+    <NAME>Celeia</NAME>
+    <NOTES>Hybride vanSavinjski Golding. Aurora en Sloveense wilde hop.  Lijkt in aroma op Saaz.  
+Gebruik: lichte ondergistende bieren. pilseners en Belgische bieren.</NOTES>
+    <VERSION>1</VERSION>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>4.5</ALPHA>
+    <TYPE>Both</TYPE>
+    <FORM>Pellet</FORM>
+    <USE>Aroma</USE>
+    <BETA>2.6</BETA>
+    <HSI>23</HSI>
+    <ORIGIN>Slovenië</ORIGIN>
+    <SUBSTITUTES>Saaz. Styrian Goldings</SUBSTITUTES>
+  </HOP>
+  <HOP>
+    <NAME>Styrian Goldings</NAME>
+    <NOTES>Zaadloze versie van Fuggles, verbouwd in Slovenië.
+Gebruikt voor bitteren en aroma in veel Europese bierstijlen.
+Aroma: mild. zacht, grassig, bloemig, citrusachtig aroma. Lijkt op Fuggles.</NOTES>
+    <VERSION>1</VERSION>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>3.4</ALPHA>
+    <TYPE>Aroma</TYPE>
+    <FORM>Pellet</FORM>
+    <USE>Aroma</USE>
+    <BETA>3</BETA>
+    <HSI>27.5</HSI>
+    <ORIGIN>Slovenië</ORIGIN>
+    <SUBSTITUTES>Fuggles. Williamette</SUBSTITUTES>
+    <HUMULENE>31</HUMULENE>
+    <CAROPHYLLENE>10</CAROPHYLLENE>
+    <COHUMULONE>29</COHUMULONE>
+    <MYRCENE>31</MYRCENE>
+    <TOTAL_OIL>1</TOTAL_OIL>
+    <HARVEST_DATE>01-09-2014</HARVEST_DATE>
+  </HOP>
+  <HOP>
+    <NAME>Premiant</NAME>
+    <NOTES>Kruising tussen verschillende Tjechische aroma- en bitterhoppen. Kan voor bitteren en aroma gebruikt worden. al is het aroma niet zo sterk als die van andere Tjechische hoppen. Gebruikt in bieren waarin niet veel hoparoma is gewenst.</NOTES>
+    <VERSION>1</VERSION>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>7.5</ALPHA>
+    <TYPE>Both</TYPE>
+    <FORM>Pellet</FORM>
+    <USE>Aroma</USE>
+    <BETA>4.5</BETA>
+    <HSI>25</HSI>
+    <ORIGIN>Tsjechië</ORIGIN>
+    <SUBSTITUTES>Saaz</SUBSTITUTES>
+  </HOP>
+  <HOP>
+    <NAME>Saaz</NAME>
+    <NOTES>De koning onder de nobele hoppen. Heeft ook fijne bittereigenschappen.
+Gebruikt voor zeer veel bierstijlen, traditioneel in pilseners en andere Tjechische ondergistende bieren.
+Aroma: delicaat, mild, iets bloemachtig.</NOTES>
+    <VERSION>1</VERSION>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>3.4</ALPHA>
+    <TYPE>Aroma</TYPE>
+    <FORM>Pellet</FORM>
+    <USE>Aroma</USE>
+    <BETA>3.5</BETA>
+    <HSI>50</HSI>
+    <ORIGIN>Tsjechië</ORIGIN>
+    <SUBSTITUTES>Tettnanger. Lublin</SUBSTITUTES>
+    <HUMULENE>25</HUMULENE>
+    <CAROPHYLLENE>11</CAROPHYLLENE>
+    <COHUMULONE>25</COHUMULONE>
+    <MYRCENE>30</MYRCENE>
+    <TOTAL_OIL>0.7</TOTAL_OIL>
+    <HARVEST_DATE>01-09-2014</HARVEST_DATE>
+  </HOP>
+  <HOP>
+    <NAME>Sladek</NAME>
+    <NOTES>Hybride variëteit van Saaz met nobel hopkarakter. Vooral geschikt voor een hopping bij 20 minuten voor het einde van het koken. Sladek is geen vervanging voor Saaz, maar wel een goed complement.</NOTES>
+    <VERSION>1</VERSION>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>5</ALPHA>
+    <TYPE>Aroma</TYPE>
+    <FORM>Pellet</FORM>
+    <USE>Aroma</USE>
+    <BETA>7.5</BETA>
+    <HSI>25</HSI>
+    <ORIGIN>Tsjechië</ORIGIN>
+    <SUBSTITUTES>Saaz</SUBSTITUTES>
+    <HUMULENE>34</HUMULENE>
+    <CAROPHYLLENE>12</CAROPHYLLENE>
+    <COHUMULONE>23</COHUMULONE>
+    <MYRCENE>36</MYRCENE>
+  </HOP>
+  <HOP>
+    <NAME>Ahtanum</NAME>
+    <NOTES>Uitgesproken aromatische hop met matige bitterheid uit Washington.
+Gebruik: Amerikaanse bieren
+Aroma: uitgesproken bloemige en citrusaroma.</NOTES>
+    <VERSION>1</VERSION>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>6</ALPHA>
+    <TYPE>Aroma</TYPE>
+    <FORM>Pellet</FORM>
+    <USE>Aroma</USE>
+    <BETA>5.199999809</BETA>
+    <HSI>45</HSI>
+    <ORIGIN>V.S.</ORIGIN>
+    <SUBSTITUTES>Amarillo. Cascade</SUBSTITUTES>
+    <HUMULENE>18</HUMULENE>
+    <CAROPHYLLENE>10.5</CAROPHYLLENE>
+    <COHUMULONE>32.5</COHUMULONE>
+    <MYRCENE>52.5</MYRCENE>
+    <TOTAL_OIL>1</TOTAL_OIL>
+  </HOP>
+  <HOP>
+    <NAME>Amarillo</NAME>
+    <NOTES>Onbekende afkomst. maar lijkt op Cascade.  Voor bitteren en aroma.
+Gebruik: Amerikaanse IPAs, Ales
+Aroma: Citrus, bloemig</NOTES>
+    <VERSION>1</VERSION>
+    <COST>30</COST>
+    <DISPLAY_COST>30.00 €</DISPLAY_COST>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>8.899999619</ALPHA>
+    <TYPE>Aroma</TYPE>
+    <FORM>Leaf</FORM>
+    <USE>Aroma</USE>
+    <BETA>6</BETA>
+    <HSI>20</HSI>
+    <ORIGIN>V.S.</ORIGIN>
+    <SUBSTITUTES>Cascade. Centennial</SUBSTITUTES>
+    <HUMULENE>10</HUMULENE>
+    <CAROPHYLLENE>3</CAROPHYLLENE>
+    <COHUMULONE>22.5</COHUMULONE>
+    <MYRCENE>69</MYRCENE>
+    <TOTAL_OIL>1.700000048</TOTAL_OIL>
+    <HARVEST_DATE>01-08-2010</HARVEST_DATE>
+  </HOP>
+  <HOP>
+    <NAME>Apollo</NAME>
+    <NOTES>Soort met zeer hoog alfazuurgehalte uit het Hopsteiner breeding program uitgebracht in 2006.  Hoog alfazuurgehalte en laag cohumuloongehalte maakt dit een uitstekende bitterhop.
+Geeft een sterke grapefruit/hop smaak bij late toevoeging tijdens het koken.</NOTES>
+    <VERSION>1</VERSION>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>17</ALPHA>
+    <TYPE>Bittering</TYPE>
+    <FORM>Pellet</FORM>
+    <USE>Aroma</USE>
+    <BETA>6.800000191</BETA>
+    <HSI>15</HSI>
+    <ORIGIN>V.S.</ORIGIN>
+    <SUBSTITUTES>Nugget. Columbus. Tomahawk. Zeus</SUBSTITUTES>
+    <HUMULENE>22.5</HUMULENE>
+    <CAROPHYLLENE>17.5</CAROPHYLLENE>
+    <COHUMULONE>26</COHUMULONE>
+    <MYRCENE>40</MYRCENE>
+  </HOP>
+  <HOP>
+    <NAME>Bravo</NAME>
+    <NOTES>Tweede generatie super alfa-hop uit het kweekprogramma van Hopsteiner. uitgebracht in 2006.  Goede bitterhop.
+Aroma: fruitig en bloemig.</NOTES>
+    <VERSION>1</VERSION>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>15.5</ALPHA>
+    <TYPE>Bittering</TYPE>
+    <FORM>Pellet</FORM>
+    <USE>Aroma</USE>
+    <BETA>3.5</BETA>
+    <HSI>30</HSI>
+    <ORIGIN>V.S.</ORIGIN>
+    <SUBSTITUTES>Columbus. Zeus. Tomahawk</SUBSTITUTES>
+    <HUMULENE>19</HUMULENE>
+    <CAROPHYLLENE>11</CAROPHYLLENE>
+    <COHUMULONE>31.5</COHUMULONE>
+    <MYRCENE>37.5</MYRCENE>
+    <TOTAL_OIL>2</TOTAL_OIL>
+  </HOP>
+  <HOP>
+    <NAME>Cascade</NAME>
+    <NOTES>Klassieke Amerikaanse aromahop.
+Gebruik: Amerikaanse bieren
+Aroma: sterk kruidig. bloemig en grapefruit karakter.
+Substitutes: Centennial
+Voorbeelden: Sierra Nevada Pale Ale. Anchor Liberty Ale</NOTES>
+    <VERSION>1</VERSION>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>5.5</ALPHA>
+    <TYPE>Both</TYPE>
+    <FORM>Pellet</FORM>
+    <USE>Aroma</USE>
+    <BETA>6</BETA>
+    <HSI>50</HSI>
+    <ORIGIN>V.S.</ORIGIN>
+    <SUBSTITUTES>Centennial</SUBSTITUTES>
+    <HUMULENE>11.5</HUMULENE>
+    <CAROPHYLLENE>4.5</CAROPHYLLENE>
+    <COHUMULONE>36.5</COHUMULONE>
+    <MYRCENE>52.5</MYRCENE>
+    <TOTAL_OIL>1.100000024</TOTAL_OIL>
+  </HOP>
+  <HOP>
+    <NAME>Centennial</NAME>
+    <NOTES>Amerkaanse bitterhop.
+Gebruik: algemeen voor bitteren. aroma in Amerikaanse ales en Amerikaanse tarwebieren.
+Aroma: bloemig, citrus, kruidig. Zuivere bitterheid. 
+Voorbeelden: Sierra Nevada Celebration Ale, Sierra Nevada Bigfoot</NOTES>
+    <VERSION>1</VERSION>
+    <COST>54.5</COST>
+    <DISPLAY_COST>54.50 €</DISPLAY_COST>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>10.3</ALPHA>
+    <TYPE>Bittering</TYPE>
+    <FORM>Leaf</FORM>
+    <USE>Aroma</USE>
+    <BETA>4</BETA>
+    <HSI>40</HSI>
+    <ORIGIN>V.S.</ORIGIN>
+    <SUBSTITUTES>Galena. Eroica. Nugget. Bullion</SUBSTITUTES>
+    <HUMULENE>14</HUMULENE>
+    <CAROPHYLLENE>6</CAROPHYLLENE>
+    <COHUMULONE>29</COHUMULONE>
+    <MYRCENE>52.5</MYRCENE>
+    <TOTAL_OIL>2</TOTAL_OIL>
+    <HARVEST_DATE>01-08-2013</HARVEST_DATE>
+  </HOP>
+  <HOP>
+    <NAME>Chelan</NAME>
+    <NOTES>Soort met hoog alfazuurgehalte uit het kweekprogramma van Haas. uitgekomen in 2004.  Het is een variant van Galena en lijkt sterk op deze hopsoort.
+Aroma: aangename citrus tonen.</NOTES>
+    <VERSION>1</VERSION>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>13.19999981</ALPHA>
+    <TYPE>Bittering</TYPE>
+    <FORM>Pellet</FORM>
+    <USE>Aroma</USE>
+    <BETA>9.199999809</BETA>
+    <HSI>20</HSI>
+    <ORIGIN>V.S.</ORIGIN>
+    <SUBSTITUTES>Galena</SUBSTITUTES>
+    <HUMULENE>10.5</HUMULENE>
+    <CAROPHYLLENE>13.5</CAROPHYLLENE>
+    <COHUMULONE>34</COHUMULONE>
+    <MYRCENE>50</MYRCENE>
+  </HOP>
+  <HOP>
+    <NAME>Chinook</NAME>
+    <NOTES>Sterke. breed toepasbare bitterhop.
+Gebruik: ales, porters, stouts
+Aroma: zwaar en kruidig aroma
+Voorbeelden: Sierra Nevada Stout, Sierra Nevada Celebration Ale</NOTES>
+    <VERSION>1</VERSION>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>13.1</ALPHA>
+    <TYPE>Bittering</TYPE>
+    <FORM>Leaf</FORM>
+    <USE>Aroma</USE>
+    <BETA>3.6</BETA>
+    <HSI>33</HSI>
+    <ORIGIN>V.S.</ORIGIN>
+    <SUBSTITUTES>Galena. Eroica. Nugget. Bullion</SUBSTITUTES>
+    <HUMULENE>21.5</HUMULENE>
+    <CAROPHYLLENE>10</CAROPHYLLENE>
+    <COHUMULONE>32</COHUMULONE>
+    <MYRCENE>37.5</MYRCENE>
+    <TOTAL_OIL>1.7</TOTAL_OIL>
+    <HARVEST_DATE>01-08-2013</HARVEST_DATE>
+  </HOP>
+  <HOP>
+    <NAME>Citra</NAME>
+    <NOTES>Speciale aroma hop vrijgegeven in 2007. Heeft een hoog alfazuur- en oliegehalte. maar een laag cohumulone-gehalte.
+Aroma: geeft een interessante citrus en tropisch fruit karakter.</NOTES>
+    <VERSION>1</VERSION>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>12</ALPHA>
+    <TYPE>Both</TYPE>
+    <FORM>Pellet</FORM>
+    <USE>Aroma</USE>
+    <BETA>4</BETA>
+    <HSI>25</HSI>
+    <ORIGIN>V.S.</ORIGIN>
+    <HUMULENE>12</HUMULENE>
+    <CAROPHYLLENE>7</CAROPHYLLENE>
+    <COHUMULONE>23</COHUMULONE>
+    <MYRCENE>62.5</MYRCENE>
+  </HOP>
+  <HOP>
+    <NAME>Cluster</NAME>
+    <NOTES>Algemeen toepasbare bitterhop
+Gebruik: alle bieren
+Aroma: bloemig, licht kruidig. Scherp aroma en scherpe smaak.</NOTES>
+    <VERSION>1</VERSION>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>7</ALPHA>
+    <TYPE>Bittering</TYPE>
+    <FORM>Pellet</FORM>
+    <USE>Aroma</USE>
+    <BETA>4.800000191</BETA>
+    <HSI>16</HSI>
+    <ORIGIN>V.S.</ORIGIN>
+    <SUBSTITUTES>Eroica. Galena</SUBSTITUTES>
+    <HUMULENE>29</HUMULENE>
+    <CAROPHYLLENE>7.5</CAROPHYLLENE>
+    <COHUMULONE>39</COHUMULONE>
+    <MYRCENE>37.5</MYRCENE>
+  </HOP>
+  <HOP>
+    <NAME>Columbus</NAME>
+    <NOTES>Hoort bij de Columbus/Tomahak/Zeus (CTZ) groep van Amerikaanse bitterhoppen met een zeer hoog alfazuurgehalte.
+Gebruik: bitterhop, maar geeft ook typische smaak en aroma - IPA, Amerikaanse Pale Ale, Stout
+Aroma: scherp, kruidig. Sterk aroma, maar zuivere bitterheid.</NOTES>
+    <VERSION>1</VERSION>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>18.3</ALPHA>
+    <TYPE>Bittering</TYPE>
+    <FORM>Leaf</FORM>
+    <USE>Aroma</USE>
+    <BETA>5</BETA>
+    <HSI>40</HSI>
+    <ORIGIN>V.S.</ORIGIN>
+    <SUBSTITUTES>Centennial</SUBSTITUTES>
+    <HUMULENE>20</HUMULENE>
+    <CAROPHYLLENE>9.5</CAROPHYLLENE>
+    <COHUMULONE>32</COHUMULONE>
+    <MYRCENE>35</MYRCENE>
+    <TOTAL_OIL>2.5</TOTAL_OIL>
+    <HARVEST_DATE>01-08-2014</HARVEST_DATE>
+  </HOP>
+  <HOP>
+    <NAME>Comet</NAME>
+    <NOTES>Zeer bittere hop. Gebruik spaarzaam met andere hopsoorten.
+Alleen voor bittering.</NOTES>
+    <VERSION>1</VERSION>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>9.5</ALPHA>
+    <TYPE>Bittering</TYPE>
+    <FORM>Pellet</FORM>
+    <USE>Aroma</USE>
+    <BETA>4</BETA>
+    <HSI>20</HSI>
+    <ORIGIN>V.S.</ORIGIN>
+    <COHUMULONE>41</COHUMULONE>
+    <TOTAL_OIL>2</TOTAL_OIL>
+  </HOP>
+  <HOP>
+    <NAME>Crystal</NAME>
+    <NOTES>Aromahop voor ondergistende bieren.
+Aroma: zuiver, mild, aangenaam en licht kruidig.</NOTES>
+    <VERSION>1</VERSION>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>3.5</ALPHA>
+    <TYPE>Aroma</TYPE>
+    <FORM>Pellet</FORM>
+    <USE>Aroma</USE>
+    <BETA>5.199999809</BETA>
+    <HSI>50</HSI>
+    <ORIGIN>V.S.</ORIGIN>
+    <SUBSTITUTES>Hallertauer. Mount Liberty</SUBSTITUTES>
+    <HUMULENE>21</HUMULENE>
+    <CAROPHYLLENE>6</CAROPHYLLENE>
+    <COHUMULONE>23</COHUMULONE>
+    <MYRCENE>52.5</MYRCENE>
+    <TOTAL_OIL>2</TOTAL_OIL>
+  </HOP>
+  <HOP>
+    <NAME>Eroica</NAME>
+    <NOTES>Algemene bitterhop voor vele bierstijlen.
+Aroma: zuivere bitterheid, zeer bitter.</NOTES>
+    <VERSION>1</VERSION>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>13</ALPHA>
+    <TYPE>Bittering</TYPE>
+    <FORM>Pellet</FORM>
+    <USE>Aroma</USE>
+    <BETA>4.800000191</BETA>
+    <HSI>35</HSI>
+    <ORIGIN>V.S.</ORIGIN>
+    <SUBSTITUTES>Galena. Northern Brewer. Chinook</SUBSTITUTES>
+  </HOP>
+  <HOP>
+    <NAME>Galena</NAME>
+    <NOTES>Algemene bitterhop voor alle bierstijlen.
+Aroma: sterk, zuiver, evenwichtige bitterheid.</NOTES>
+    <VERSION>1</VERSION>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>12.5</ALPHA>
+    <TYPE>Bittering</TYPE>
+    <FORM>Pellet</FORM>
+    <USE>Aroma</USE>
+    <BETA>8</BETA>
+    <HSI>21</HSI>
+    <ORIGIN>V.S.</ORIGIN>
+    <SUBSTITUTES>Bullion, Eroica, Northern Brewer, Cluster, Chinook</SUBSTITUTES>
+    <HUMULENE>12.5</HUMULENE>
+    <CAROPHYLLENE>4.199999809</CAROPHYLLENE>
+    <COHUMULONE>37</COHUMULONE>
+    <MYRCENE>57.5</MYRCENE>
+    <TOTAL_OIL>1.100000024</TOTAL_OIL>
+  </HOP>
+  <HOP>
+    <NAME>Glacier</NAME>
+    <NOTES>Kruising tussen minimaal 8 hopsoorten waaronder Elsasser, Brewers Gold, Northern Brewer, Bullion en Early Green. Uitgebracht in 2000.
+Gebruikt als aromahop.
+Aroma: zeer goed, hoppig.</NOTES>
+    <VERSION>1</VERSION>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>5.599999905</ALPHA>
+    <TYPE>Aroma</TYPE>
+    <FORM>Pellet</FORM>
+    <USE>Aroma</USE>
+    <BETA>7.599999905</BETA>
+    <HSI>28.5</HSI>
+    <ORIGIN>V.S.</ORIGIN>
+    <HUMULENE>30</HUMULENE>
+    <CAROPHYLLENE>8.300000191</CAROPHYLLENE>
+    <COHUMULONE>12</COHUMULONE>
+    <MYRCENE>47.5</MYRCENE>
+    <TOTAL_OIL>1.100000024</TOTAL_OIL>
+  </HOP>
+  <HOP>
+    <NAME>Horizon</NAME>
+    <NOTES>Goede bitter- en aromahop. afgeleid van Nugget in 1970.
+Voor alle bierstijlen geschikt.
+Aroma: aangenaam hoppig.</NOTES>
+    <VERSION>1</VERSION>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>12</ALPHA>
+    <TYPE>Bittering</TYPE>
+    <FORM>Pellet</FORM>
+    <USE>Aroma</USE>
+    <BETA>7.5</BETA>
+    <HSI>30</HSI>
+    <ORIGIN>V.S.</ORIGIN>
+    <SUBSTITUTES>Magnum</SUBSTITUTES>
+    <HUMULENE>9</HUMULENE>
+    <CAROPHYLLENE>5.5</CAROPHYLLENE>
+    <COHUMULONE>20</COHUMULONE>
+    <MYRCENE>67.5</MYRCENE>
+    <TOTAL_OIL>1.899999976</TOTAL_OIL>
+  </HOP>
+  <HOP>
+    <NAME>Liberty</NAME>
+    <NOTES>Amerikaanse substituut voor Europese nobele hopsoorten.
+Gebruikt in Duitse bierstijlen.
+Aroma: verfijnd, mild, licht kruidig.</NOTES>
+    <VERSION>1</VERSION>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>4.300000191</ALPHA>
+    <TYPE>Aroma</TYPE>
+    <FORM>Pellet</FORM>
+    <USE>Aroma</USE>
+    <BETA>3.5</BETA>
+    <HSI>50</HSI>
+    <ORIGIN>V.S.</ORIGIN>
+    <SUBSTITUTES>Hallertauer, Tettnanger, Mount Hood, Ultra</SUBSTITUTES>
+    <HUMULENE>35</HUMULENE>
+    <CAROPHYLLENE>10.5</CAROPHYLLENE>
+    <COHUMULONE>26</COHUMULONE>
+    <MYRCENE>33</MYRCENE>
+    <TOTAL_OIL>1.100000024</TOTAL_OIL>
+  </HOP>
+  <HOP>
+    <NAME>Millenium</NAME>
+    <NOTES>Oorspronkelijk ontwikkeld in het Haas ontwikkelprogramma in de VS werd deze hop in 2000 uitgebracht. Het is een soort met een hoog alfazuurgehalte gebruikt als bitterhop.
+Aroma: mild, kruidig.</NOTES>
+    <VERSION>1</VERSION>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>14.19999981</ALPHA>
+    <TYPE>Bittering</TYPE>
+    <FORM>Pellet</FORM>
+    <USE>Aroma</USE>
+    <BETA>5.699999809</BETA>
+    <HSI>25</HSI>
+    <ORIGIN>V.S.</ORIGIN>
+    <SUBSTITUTES>Nugget, Columbus</SUBSTITUTES>
+    <HUMULENE>25</HUMULENE>
+    <CAROPHYLLENE>10.5</CAROPHYLLENE>
+    <COHUMULONE>30.5</COHUMULONE>
+    <MYRCENE>35</MYRCENE>
+  </HOP>
+  <HOP>
+    <NAME>Mosaic</NAME>
+    <NOTES>Mosaic (HBC 369) is een aromahop, ontwikkeld door Hop Breeding Company, LLC en vrijgegeven in 2012. Het geeft een unieke en complex mengsel van bloemig, tropisch fruit en aardeachtige karakteristieken. Mooi in verschillende bierstijlen. Mosaic is een dochter van Simcoe (YCR 14) en een Nugget mannetje.</NOTES>
+    <VERSION>1</VERSION>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>13.9</ALPHA>
+    <TYPE>Both</TYPE>
+    <FORM>Pellet</FORM>
+    <USE>Aroma</USE>
+    <BETA>3.5</BETA>
+    <HSI>25</HSI>
+    <ORIGIN>V.S.</ORIGIN>
+    <HUMULENE>14.5</HUMULENE>
+    <CAROPHYLLENE>6.5</CAROPHYLLENE>
+    <COHUMULONE>25</COHUMULONE>
+    <MYRCENE>50</MYRCENE>
+    <TOTAL_OIL>1.3</TOTAL_OIL>
+    <HARVEST_DATE>01-09-2014</HARVEST_DATE>
+  </HOP>
+  <HOP>
+    <NAME>Mount Hood</NAME>
+    <NOTES>Gebruikt in Europese ondergistende bierstijlen als aromahop.
+Aroma: mild met een zuiver aroma, neutrale smaak. Ietwat scherp.</NOTES>
+    <VERSION>1</VERSION>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>6</ALPHA>
+    <TYPE>Aroma</TYPE>
+    <FORM>Pellet</FORM>
+    <USE>Aroma</USE>
+    <BETA>6.300000191</BETA>
+    <HSI>50</HSI>
+    <ORIGIN>V.S.</ORIGIN>
+    <SUBSTITUTES>Hallertauer, Tettnanger, Liberty, Ultra</SUBSTITUTES>
+    <HUMULENE>25</HUMULENE>
+    <CAROPHYLLENE>11</CAROPHYLLENE>
+    <COHUMULONE>24.5</COHUMULONE>
+    <MYRCENE>47.5</MYRCENE>
+    <TOTAL_OIL>1.399999976</TOTAL_OIL>
+  </HOP>
+  <HOP>
+    <NAME>Newport</NAME>
+    <NOTES>In 2002 uitgebrachte hop met een hoog alfazuurgehalte als vervanging voor Galena. Alfazuurgehalte kan sterk variëren. Vrij scherp.
+Vooral gebruikt als bitterhop in ales, stout en barley wine.</NOTES>
+    <VERSION>1</VERSION>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>13.5</ALPHA>
+    <TYPE>Bittering</TYPE>
+    <FORM>Pellet</FORM>
+    <USE>Aroma</USE>
+    <BETA>6</BETA>
+    <HSI>35</HSI>
+    <ORIGIN>V.S.</ORIGIN>
+    <SUBSTITUTES>Galena</SUBSTITUTES>
+    <HUMULENE>9.5</HUMULENE>
+    <CAROPHYLLENE>5.5</CAROPHYLLENE>
+    <COHUMULONE>37</COHUMULONE>
+    <MYRCENE>50.5</MYRCENE>
+  </HOP>
+  <HOP>
+    <NAME>Nugget</NAME>
+    <NOTES>Gebruikt als bitterhop in bovengistende bieren.
+Aroma: sterke bitterheid, zwaar, kruidig aroma.</NOTES>
+    <VERSION>1</VERSION>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>13</ALPHA>
+    <TYPE>Bittering</TYPE>
+    <FORM>Pellet</FORM>
+    <USE>Aroma</USE>
+    <BETA>5</BETA>
+    <HSI>24</HSI>
+    <ORIGIN>V.S.</ORIGIN>
+    <SUBSTITUTES>Galena, Perle, Olympic</SUBSTITUTES>
+    <HUMULENE>17</HUMULENE>
+    <CAROPHYLLENE>13.5</CAROPHYLLENE>
+    <COHUMULONE>27</COHUMULONE>
+    <MYRCENE>55</MYRCENE>
+    <TOTAL_OIL>2</TOTAL_OIL>
+  </HOP>
+  <HOP>
+    <NAME>Olympic</NAME>
+    <NOTES>Olympic  in 1983 uitgekomen en gekweekt uit Brewers Gold en Fuggles.
+Aroma: kruidig, citrus.</NOTES>
+    <VERSION>1</VERSION>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>11.5</ALPHA>
+    <TYPE>Bittering</TYPE>
+    <FORM>Pellet</FORM>
+    <USE>Aroma</USE>
+    <BETA>5.5</BETA>
+    <HSI>30</HSI>
+    <ORIGIN>V.S.</ORIGIN>
+    <SUBSTITUTES>Chinook, Brewers Gold</SUBSTITUTES>
+    <HUMULENE>6.5</HUMULENE>
+    <CAROPHYLLENE>6</CAROPHYLLENE>
+    <COHUMULONE>33</COHUMULONE>
+    <MYRCENE>63.5</MYRCENE>
+    <TOTAL_OIL>1.799999952</TOTAL_OIL>
+  </HOP>
+  <HOP>
+    <NAME>Palisade</NAME>
+    <NOTES>Aromahop met matige bittereigenschappen.</NOTES>
+    <VERSION>1</VERSION>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>7.5</ALPHA>
+    <TYPE>Both</TYPE>
+    <FORM>Pellet</FORM>
+    <USE>Aroma</USE>
+    <BETA>7</BETA>
+    <HSI>25</HSI>
+    <ORIGIN>V.S.</ORIGIN>
+    <SUBSTITUTES>Golding, Willamette, Saaz</SUBSTITUTES>
+    <HUMULENE>32</HUMULENE>
+    <CAROPHYLLENE>10.5</CAROPHYLLENE>
+    <COHUMULONE>26.5</COHUMULONE>
+    <MYRCENE>9.5</MYRCENE>
+  </HOP>
+  <HOP>
+    <NAME>Santiam</NAME>
+    <NOTES>Triploïde aromahop gekweekt uit Tettnang en Hallertau in 1997.
+Gebruikt voor ondergistende bieren, Amerikaanse Pale Ale en pilseners.</NOTES>
+    <VERSION>1</VERSION>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>6</ALPHA>
+    <TYPE>Aroma</TYPE>
+    <FORM>Pellet</FORM>
+    <USE>Aroma</USE>
+    <BETA>7</BETA>
+    <HSI>35</HSI>
+    <ORIGIN>V.S.</ORIGIN>
+    <SUBSTITUTES>German Tettnang, Spalt, Spalt Select</SUBSTITUTES>
+    <HUMULENE>23</HUMULENE>
+    <CAROPHYLLENE>6.5</CAROPHYLLENE>
+    <COHUMULONE>22</COHUMULONE>
+    <MYRCENE>36</MYRCENE>
+    <TOTAL_OIL>1.5</TOTAL_OIL>
+  </HOP>
+  <HOP>
+    <NAME>Satus</NAME>
+    <NOTES>Hop met een hoog alfazuurgehalte, gelijkend op Galena.</NOTES>
+    <VERSION>1</VERSION>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>13.19999981</ALPHA>
+    <TYPE>Bittering</TYPE>
+    <FORM>Pellet</FORM>
+    <USE>Aroma</USE>
+    <BETA>8.800000191</BETA>
+    <HSI>33</HSI>
+    <ORIGIN>V.S.</ORIGIN>
+    <SUBSTITUTES>Galena</SUBSTITUTES>
+    <HUMULENE>23</HUMULENE>
+    <CAROPHYLLENE>12</CAROPHYLLENE>
+    <COHUMULONE>33.5</COHUMULONE>
+    <MYRCENE>25</MYRCENE>
+    <TOTAL_OIL>1.700000048</TOTAL_OIL>
+  </HOP>
+  <HOP>
+    <NAME>Simcoe</NAME>
+    <NOTES>Hop met hoog alfazuurgehalte en goede aroma-eigenschappen.
+Vooral voor Amerikaanse IPAs.
+Aroma: citrus en dennenachtig.</NOTES>
+    <VERSION>1</VERSION>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>12.9</ALPHA>
+    <TYPE>Both</TYPE>
+    <FORM>Pellet</FORM>
+    <USE>Aroma</USE>
+    <BETA>4.5</BETA>
+    <HSI>18</HSI>
+    <ORIGIN>V.S.</ORIGIN>
+    <SUBSTITUTES>Amarillo</SUBSTITUTES>
+    <HUMULENE>12.5</HUMULENE>
+    <CAROPHYLLENE>6.5</CAROPHYLLENE>
+    <COHUMULONE>17.5</COHUMULONE>
+    <MYRCENE>62.5</MYRCENE>
+    <TOTAL_OIL>2.3</TOTAL_OIL>
+    <HARVEST_DATE>01-08-2014</HARVEST_DATE>
+  </HOP>
+  <HOP>
+    <NAME>Sterling</NAME>
+    <NOTES>Smaak is een kruising tussen die van Saaz en Mt Hood.
+Geschikt voor pilseners, maar ook voor veel andere bierstijlen.
+Aroma: kruidachtig, kruidig, hints van bloemen en citrus.</NOTES>
+    <VERSION>1</VERSION>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>7.5</ALPHA>
+    <TYPE>Both</TYPE>
+    <FORM>Pellet</FORM>
+    <USE>Aroma</USE>
+    <BETA>5</BETA>
+    <HSI>30</HSI>
+    <ORIGIN>V.S.</ORIGIN>
+    <SUBSTITUTES>Saaz, Lublin</SUBSTITUTES>
+    <HUMULENE>14.5</HUMULENE>
+    <CAROPHYLLENE>13.5</CAROPHYLLENE>
+    <COHUMULONE>22.5</COHUMULONE>
+    <MYRCENE>46</MYRCENE>
+    <TOTAL_OIL>1.299999952</TOTAL_OIL>
+  </HOP>
+  <HOP>
+    <NAME>Summit</NAME>
+    <NOTES>Variëteit met hoog alfazuurgehalte. Dwergvariant.
+Aroma: sterk citrus met grapefruit tonen.</NOTES>
+    <VERSION>1</VERSION>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>17</ALPHA>
+    <TYPE>Bittering</TYPE>
+    <FORM>Pellet</FORM>
+    <USE>Aroma</USE>
+    <BETA>5</BETA>
+    <HSI>15</HSI>
+    <ORIGIN>V.S.</ORIGIN>
+    <SUBSTITUTES>Columbus</SUBSTITUTES>
+    <HUMULENE>22.10000038</HUMULENE>
+    <CAROPHYLLENE>14.5</CAROPHYLLENE>
+    <COHUMULONE>27.60000038</COHUMULONE>
+    <MYRCENE>28</MYRCENE>
+    <TOTAL_OIL>1.299999952</TOTAL_OIL>
+  </HOP>
+  <HOP>
+    <NAME>Sun</NAME>
+    <NOTES>Zeer hoog alfazuurgehalte. Gebruikt voor intense bittering.
+Aroma: aangenaam, hoppig</NOTES>
+    <VERSION>1</VERSION>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>14</ALPHA>
+    <TYPE>Bittering</TYPE>
+    <FORM>Pellet</FORM>
+    <USE>Aroma</USE>
+    <BETA>5.5</BETA>
+    <HSI>25</HSI>
+    <ORIGIN>V.S.</ORIGIN>
+    <SUBSTITUTES>andere bitterhoppen uit de VS.</SUBSTITUTES>
+    <HUMULENE>12.5</HUMULENE>
+    <CAROPHYLLENE>7.5</CAROPHYLLENE>
+    <COHUMULONE>35</COHUMULONE>
+    <MYRCENE>62.5</MYRCENE>
+    <TOTAL_OIL>3.799999952</TOTAL_OIL>
+  </HOP>
+  <HOP>
+    <NAME>Tillicum</NAME>
+    <NOTES>Hop met hoge alfa- en betazuurgehalten. vrijgegeven in 1995. Nakomeling van Galena en verwant aan Chelan. Lijkt daarom op beide.</NOTES>
+    <VERSION>1</VERSION>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>13.19999981</ALPHA>
+    <TYPE>Bittering</TYPE>
+    <FORM>Pellet</FORM>
+    <USE>Aroma</USE>
+    <BETA>9.899999619</BETA>
+    <HSI>20</HSI>
+    <ORIGIN>V.S.</ORIGIN>
+    <SUBSTITUTES>Galena, Chelan</SUBSTITUTES>
+    <HUMULENE>14.5</HUMULENE>
+    <CAROPHYLLENE>7.5</CAROPHYLLENE>
+    <COHUMULONE>35.5</COHUMULONE>
+    <MYRCENE>50</MYRCENE>
+  </HOP>
+  <HOP>
+    <NAME>Tomahawk</NAME>
+    <NOTES>Hoort bij de Columbus/Tomahak/Zeus (CTZ) groep van Amerikaanse bitterhoppen met een zeer hoog alfazuurgehalte.
+Vooral gebruikt voor bitterheid en het maken van hopextracten voor bitterheid.</NOTES>
+    <VERSION>1</VERSION>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>15.5</ALPHA>
+    <TYPE>Bittering</TYPE>
+    <FORM>Pellet</FORM>
+    <USE>Aroma</USE>
+    <BETA>4.5</BETA>
+    <HSI>48</HSI>
+    <ORIGIN>V.S.</ORIGIN>
+    <SUBSTITUTES>Columbus, Zeus, Nugget, Galena, Chinook</SUBSTITUTES>
+    <HUMULENE>20</HUMULENE>
+    <CAROPHYLLENE>9.5</CAROPHYLLENE>
+    <COHUMULONE>32</COHUMULONE>
+    <MYRCENE>35</MYRCENE>
+    <TOTAL_OIL>2.5</TOTAL_OIL>
+  </HOP>
+  <HOP>
+    <NAME>Ultra</NAME>
+    <NOTES>Triploide zaailing van Hallertau Mittelfrüh.
+Gebruikt in ondergistende bieren zoals pilseners. maar ook in tarwebieren en als aromahop in bovengistende bieren.
+Aroma: goed tot uitstekend. met Saaz-achtige kwaliteiten.</NOTES>
+    <VERSION>1</VERSION>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>3</ALPHA>
+    <TYPE>Aroma</TYPE>
+    <FORM>Pellet</FORM>
+    <USE>Aroma</USE>
+    <BETA>3.799999952</BETA>
+    <HSI>35</HSI>
+    <ORIGIN>V.S.</ORIGIN>
+    <SUBSTITUTES>Saaz</SUBSTITUTES>
+    <HUMULENE>35</HUMULENE>
+    <CAROPHYLLENE>12.5</CAROPHYLLENE>
+    <COHUMULONE>27.5</COHUMULONE>
+    <MYRCENE>30</MYRCENE>
+    <TOTAL_OIL>1</TOTAL_OIL>
+  </HOP>
+  <HOP>
+    <NAME>Vanguard</NAME>
+    <NOTES>Diploide zaailing met Hallertau Mittelfrüh als ouder. Gekweekt in 1982. maar vrijgegeven in 1997.
+Gebruik: Europese bierstijlen
+Aroma: sterk aroma.</NOTES>
+    <VERSION>1</VERSION>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>5.5</ALPHA>
+    <TYPE>Aroma</TYPE>
+    <FORM>Pellet</FORM>
+    <USE>Aroma</USE>
+    <BETA>6</BETA>
+    <HSI>22</HSI>
+    <ORIGIN>V.S.</ORIGIN>
+    <SUBSTITUTES>Hallertauer, Tettnanger</SUBSTITUTES>
+    <HUMULENE>46.5</HUMULENE>
+    <CAROPHYLLENE>12.5</CAROPHYLLENE>
+    <COHUMULONE>17</COHUMULONE>
+    <MYRCENE>22.5</MYRCENE>
+    <TOTAL_OIL>1</TOTAL_OIL>
+  </HOP>
+  <HOP>
+    <NAME>Warrior</NAME>
+    <NOTES>Hop uit de Yakima Chief Ranches met hoog alfazuurgehalte. Mild aroma en laag cohumuloongehalte. Vooral voor bittering.
+Gebruikt in ales en stouts.
+Aroma: Amerikaans grapefruit-karakter, zuiver, mild.</NOTES>
+    <VERSION>1</VERSION>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>15</ALPHA>
+    <TYPE>Both</TYPE>
+    <FORM>Pellet</FORM>
+    <USE>Aroma</USE>
+    <BETA>4.800000191</BETA>
+    <HSI>24</HSI>
+    <ORIGIN>V.S.</ORIGIN>
+    <SUBSTITUTES>Nugget, Galena</SUBSTITUTES>
+    <HUMULENE>17.5</HUMULENE>
+    <CAROPHYLLENE>9</CAROPHYLLENE>
+    <COHUMULONE>24</COHUMULONE>
+    <MYRCENE>45</MYRCENE>
+    <TOTAL_OIL>1.5</TOTAL_OIL>
+  </HOP>
+  <HOP>
+    <NAME>Willamette</NAME>
+    <NOTES>Mooie aromahop voor het aromatiseren van Amerikaanse en Engelse ales.
+Aroma: mild, grassig, bloemachtig, licht kruidig.</NOTES>
+    <VERSION>1</VERSION>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>5.5</ALPHA>
+    <TYPE>Aroma</TYPE>
+    <FORM>Pellet</FORM>
+    <USE>Aroma</USE>
+    <BETA>3.5</BETA>
+    <HSI>37.5</HSI>
+    <ORIGIN>V.S.</ORIGIN>
+    <SUBSTITUTES>Fuggle</SUBSTITUTES>
+    <HUMULENE>25</HUMULENE>
+    <CAROPHYLLENE>7.5</CAROPHYLLENE>
+    <COHUMULONE>32.5</COHUMULONE>
+    <MYRCENE>42.5</MYRCENE>
+    <TOTAL_OIL>1.299999952</TOTAL_OIL>
+  </HOP>
+  <HOP>
+    <NAME>Zeus</NAME>
+    <NOTES>Hoort bij de Columbus/Tomahak/Zeus (CTZ) groep van Amerikaanse bitterhoppen met een zeer hoog alfazuurgehalte.
+Gebruikt als bitterhop. Heeft een intense aroma.
+Aroma: aromatisch, aangenaam.</NOTES>
+    <VERSION>1</VERSION>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>14</ALPHA>
+    <TYPE>Bittering</TYPE>
+    <FORM>Pellet</FORM>
+    <USE>Aroma</USE>
+    <BETA>5</BETA>
+    <HSI>45</HSI>
+    <ORIGIN>V.S.</ORIGIN>
+    <SUBSTITUTES>Columbus, Tomahawk</SUBSTITUTES>
+    <HUMULENE>17.5</HUMULENE>
+    <CAROPHYLLENE>10</CAROPHYLLENE>
+    <COHUMULONE>33.5</COHUMULONE>
+    <MYRCENE>47.5</MYRCENE>
+    <TOTAL_OIL>1.700000048</TOTAL_OIL>
+  </HOP>
+  <HOP>
+    <NAME>Admiral</NAME>
+    <NOTES>Bitterhop afgeleid van Wye Challenger.  Goede hop om mee te bitteren.
+Gebruik: alle bovengistende bieren
+Aroma: primair voor bitteren</NOTES>
+    <VERSION>1</VERSION>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>14.8</ALPHA>
+    <TYPE>Bittering</TYPE>
+    <FORM>Pellet</FORM>
+    <USE>Aroma</USE>
+    <BETA>5.6</BETA>
+    <HSI>15</HSI>
+    <ORIGIN>Verenigd Koninkrijk</ORIGIN>
+    <SUBSTITUTES>Target, Northdown. Challenger</SUBSTITUTES>
+    <HUMULENE>16.5</HUMULENE>
+    <CAROPHYLLENE>7</CAROPHYLLENE>
+    <COHUMULONE>41</COHUMULONE>
+    <MYRCENE>44</MYRCENE>
+    <TOTAL_OIL>1.3</TOTAL_OIL>
+  </HOP>
+  <HOP>
+    <NAME>Bramling Cross</NAME>
+    <NOTES>Ontwikkeld in 1927 uit een Goldings hop en een wilde hop.
+Gebruik: ESB, Bitters, Pale Ale
+Aroma: Mild, fruitig, zwarte bessen.</NOTES>
+    <VERSION>1</VERSION>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>6</ALPHA>
+    <TYPE>Aroma</TYPE>
+    <FORM>Pellet</FORM>
+    <USE>Aroma</USE>
+    <BETA>3</BETA>
+    <HSI>35</HSI>
+    <ORIGIN>Verenigd Koninkrijk</ORIGIN>
+    <SUBSTITUTES>East Kent Goldings, Progress, Whitbread Goldings</SUBSTITUTES>
+    <HUMULENE>30</HUMULENE>
+    <CAROPHYLLENE>15</CAROPHYLLENE>
+    <COHUMULONE>30</COHUMULONE>
+    <MYRCENE>37</MYRCENE>
+    <TOTAL_OIL>1</TOTAL_OIL>
+  </HOP>
+  <HOP>
+    <NAME>Brewers Gold</NAME>
+    <NOTES>Traditionele bitterhop voor Engelse ales en zware Duitse ondergistende bieren.
+Aroma: scherpe bitterhop</NOTES>
+    <VERSION>1</VERSION>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>8</ALPHA>
+    <TYPE>Bittering</TYPE>
+    <FORM>Pellet</FORM>
+    <USE>Aroma</USE>
+    <BETA>3.7</BETA>
+    <HSI>40</HSI>
+    <ORIGIN>Verenigd Koninkrijk</ORIGIN>
+    <SUBSTITUTES>Northern Brewer, Galena, Chinook, Eroica</SUBSTITUTES>
+    <HUMULENE>30</HUMULENE>
+    <CAROPHYLLENE>7.2</CAROPHYLLENE>
+    <COHUMULONE>44</COHUMULONE>
+    <MYRCENE>38.5</MYRCENE>
+    <TOTAL_OIL>2</TOTAL_OIL>
+  </HOP>
+  <HOP>
+    <NAME>Bullion</NAME>
+    <NOTES>Voor sterke. donkere Engelse ales en sommige zware Duitse ondergistende bieren.
+Aroma: sterk, scherp en bitter in smaak.  Zwarte bessensmaak.</NOTES>
+    <VERSION>1</VERSION>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>8</ALPHA>
+    <TYPE>Bittering</TYPE>
+    <FORM>Pellet</FORM>
+    <USE>Aroma</USE>
+    <BETA>4.5</BETA>
+    <HSI>47.5</HSI>
+    <ORIGIN>Verenigd Koninkrijk</ORIGIN>
+    <SUBSTITUTES>Chinook, Eroica, Brewers Gold</SUBSTITUTES>
+    <HUMULENE>21</HUMULENE>
+    <CAROPHYLLENE>10</CAROPHYLLENE>
+    <COHUMULONE>37.5</COHUMULONE>
+    <MYRCENE>55</MYRCENE>
+    <TOTAL_OIL>2.5</TOTAL_OIL>
+  </HOP>
+  <HOP>
+    <NAME>Challenger</NAME>
+    <NOTES>Engelse bitterhop uit de Northern Brewer lijn.
+Gebruik: aroma en bitteren van Engelse boven- en ondergistende bieren.
+Aroma: fruitige smaak, kruidig aroma, mengt goed met andere hopsoorten</NOTES>
+    <VERSION>1</VERSION>
+    <COST>31.6</COST>
+    <DISPLAY_COST>31.60 €</DISPLAY_COST>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>10.1</ALPHA>
+    <TYPE>Bittering</TYPE>
+    <FORM>Pellet</FORM>
+    <USE>Aroma</USE>
+    <BETA>4</BETA>
+    <HSI>22.5</HSI>
+    <ORIGIN>Verenigd Koninkrijk</ORIGIN>
+    <SUBSTITUTES>Perle, Target, Northern Brewer</SUBSTITUTES>
+    <HUMULENE>29</HUMULENE>
+    <CAROPHYLLENE>9</CAROPHYLLENE>
+    <COHUMULONE>25</COHUMULONE>
+    <MYRCENE>36</MYRCENE>
+    <TOTAL_OIL>2</TOTAL_OIL>
+    <HARVEST_DATE>01-09-2012</HARVEST_DATE>
+  </HOP>
+  <HOP>
+    <NAME>Columbia</NAME>
+    <NOTES>Broertje van Williamette hop.
+Gebruik: alle Engelse ales.
+Aroma: lijkt op Fuggles.</NOTES>
+    <VERSION>1</VERSION>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>5.5</ALPHA>
+    <TYPE>Bittering</TYPE>
+    <FORM>Pellet</FORM>
+    <USE>Aroma</USE>
+    <BETA>3</BETA>
+    <HSI>35</HSI>
+    <ORIGIN>Verenigd Koninkrijk</ORIGIN>
+    <SUBSTITUTES>Fuggles, Williamette</SUBSTITUTES>
+    <HUMULENE>17</HUMULENE>
+    <CAROPHYLLENE>8</CAROPHYLLENE>
+    <COHUMULONE>40</COHUMULONE>
+    <MYRCENE>49.5</MYRCENE>
+    <TOTAL_OIL>1.100000024</TOTAL_OIL>
+  </HOP>
+  <HOP>
+    <NAME>E.K. Golding</NAME>
+    <NOTES>Klassieke Engelse hop voor zeer veel Engelse bierstijlen. Zowel voor bitteren als voor smaak en aroma.
+Aroma: bloemachtig, licht citrus, aromatisch, licht zoete kruidigheid.</NOTES>
+    <VERSION>1</VERSION>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>5.7</ALPHA>
+    <TYPE>Both</TYPE>
+    <FORM>Pellet</FORM>
+    <USE>Aroma</USE>
+    <BETA>3.5</BETA>
+    <HSI>27.5</HSI>
+    <ORIGIN>Verenigd Koninkrijk</ORIGIN>
+    <SUBSTITUTES>Fuggles, BC Goldings</SUBSTITUTES>
+    <HUMULENE>41</HUMULENE>
+    <CAROPHYLLENE>14</CAROPHYLLENE>
+    <COHUMULONE>30</COHUMULONE>
+    <MYRCENE>25</MYRCENE>
+    <TOTAL_OIL>0.7</TOTAL_OIL>
+    <HARVEST_DATE>01-09-2014</HARVEST_DATE>
+  </HOP>
+  <HOP>
+    <NAME>First Gold</NAME>
+    <NOTES>Dwerghop met Engels Golding karakter.
+Voor Engelse ales. ESB
+Aroma: lijkt op andere Golding variëteiten, kruidig.</NOTES>
+    <VERSION>1</VERSION>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>7.5</ALPHA>
+    <TYPE>Both</TYPE>
+    <FORM>Pellet</FORM>
+    <USE>Aroma</USE>
+    <BETA>3.5</BETA>
+    <HSI>37.5</HSI>
+    <ORIGIN>Verenigd Koninkrijk</ORIGIN>
+    <SUBSTITUTES>East Kent Goldings, Crystal</SUBSTITUTES>
+    <HUMULENE>22</HUMULENE>
+    <CAROPHYLLENE>6.5</CAROPHYLLENE>
+    <COHUMULONE>32</COHUMULONE>
+    <MYRCENE>26</MYRCENE>
+    <TOTAL_OIL>1.1</TOTAL_OIL>
+  </HOP>
+  <HOP>
+    <NAME>Fuggle</NAME>
+    <NOTES>Klassieke Engelse aromahop met een karakteristieke smaak. Licht sinaasappel, "aardeachtig".</NOTES>
+    <VERSION>1</VERSION>
+    <COST>31.6</COST>
+    <DISPLAY_COST>31.60 €</DISPLAY_COST>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>4.3</ALPHA>
+    <TYPE>Aroma</TYPE>
+    <FORM>Leaf</FORM>
+    <USE>Aroma</USE>
+    <BETA>2.5</BETA>
+    <HSI>30</HSI>
+    <ORIGIN>Verenigd Koninkrijk</ORIGIN>
+    <SUBSTITUTES>E.K. Goldings</SUBSTITUTES>
+    <HUMULENE>35</HUMULENE>
+    <CAROPHYLLENE>12</CAROPHYLLENE>
+    <COHUMULONE>27.5</COHUMULONE>
+    <MYRCENE>26</MYRCENE>
+    <TOTAL_OIL>1</TOTAL_OIL>
+  </HOP>
+  <HOP>
+    <NAME>Herald</NAME>
+    <NOTES>Dwergvariëteit ontwikkeld in Wye midden jaren '90.
+Gebruikt als bitterhop.
+Aroma: sterk, acceptabel.</NOTES>
+    <VERSION>1</VERSION>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>12</ALPHA>
+    <TYPE>Bittering</TYPE>
+    <FORM>Pellet</FORM>
+    <USE>Aroma</USE>
+    <BETA>5.199999809</BETA>
+    <HSI>25</HSI>
+    <ORIGIN>Verenigd Koninkrijk</ORIGIN>
+    <SUBSTITUTES>Target</SUBSTITUTES>
+    <HUMULENE>15</HUMULENE>
+    <CAROPHYLLENE>7</CAROPHYLLENE>
+    <COHUMULONE>36</COHUMULONE>
+    <MYRCENE>40</MYRCENE>
+    <TOTAL_OIL>1.399999976</TOTAL_OIL>
+  </HOP>
+  <HOP>
+    <NAME>Northdown</NAME>
+    <NOTES>Variatie van Northern Brewer gekweekt in Engeland.
+Gebruikt voor bitteren van Engelse ales.
+Aroma: goede bittering, smaak en aroma.</NOTES>
+    <VERSION>1</VERSION>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>8.5</ALPHA>
+    <TYPE>Both</TYPE>
+    <FORM>Pellet</FORM>
+    <USE>Aroma</USE>
+    <BETA>5.5</BETA>
+    <HSI>30</HSI>
+    <ORIGIN>Verenigd Koninkrijk</ORIGIN>
+    <SUBSTITUTES>Northern Brewer, Perle, Galena, Challenger</SUBSTITUTES>
+    <HUMULENE>42.5</HUMULENE>
+    <CAROPHYLLENE>15</CAROPHYLLENE>
+    <COHUMULONE>26.5</COHUMULONE>
+    <MYRCENE>29.5</MYRCENE>
+    <TOTAL_OIL>1.799999952</TOTAL_OIL>
+  </HOP>
+  <HOP>
+    <NAME>Phoenix</NAME>
+    <NOTES>Zaailing van Wye Yoeman.
+Gebruikt voor ales.
+Aroma: lijkt op Wye Challenger hop.</NOTES>
+    <VERSION>1</VERSION>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>8</ALPHA>
+    <TYPE>Bittering</TYPE>
+    <FORM>Pellet</FORM>
+    <USE>Aroma</USE>
+    <BETA>4.599999905</BETA>
+    <HSI>10</HSI>
+    <ORIGIN>Verenigd Koninkrijk</ORIGIN>
+    <SUBSTITUTES>Challenger, East Kent Golding, Northdown</SUBSTITUTES>
+    <HUMULENE>29</HUMULENE>
+    <CAROPHYLLENE>9</CAROPHYLLENE>
+    <COHUMULONE>28.5</COHUMULONE>
+    <MYRCENE>29</MYRCENE>
+    <TOTAL_OIL>2.200000048</TOTAL_OIL>
+  </HOP>
+  <HOP>
+    <NAME>Pilgrim</NAME>
+    <NOTES>Nieuw variëteit van het Wye College uit 2001. Hoog selineengehalte.
+Gebruikt voor bittering.</NOTES>
+    <VERSION>1</VERSION>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>11.5</ALPHA>
+    <TYPE>Bittering</TYPE>
+    <FORM>Pellet</FORM>
+    <USE>Aroma</USE>
+    <BETA>4.699999809</BETA>
+    <HSI>18</HSI>
+    <ORIGIN>Verenigd Koninkrijk</ORIGIN>
+    <SUBSTITUTES>Target, Challenger</SUBSTITUTES>
+    <HUMULENE>17</HUMULENE>
+    <CAROPHYLLENE>7.5</CAROPHYLLENE>
+    <COHUMULONE>37</COHUMULONE>
+    <MYRCENE>30.5</MYRCENE>
+    <TOTAL_OIL>1.799999952</TOTAL_OIL>
+  </HOP>
+  <HOP>
+    <NAME>Pioneer</NAME>
+    <NOTES>Gekweekt uit Wye Omega op het Wye College in Engeland.
+Gebruikt voor ESB en andere Engelse ales.
+Aroma: mild Engels hop aroma.</NOTES>
+    <VERSION>1</VERSION>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>9</ALPHA>
+    <TYPE>Both</TYPE>
+    <FORM>Pellet</FORM>
+    <USE>Aroma</USE>
+    <BETA>3.799999952</BETA>
+    <HSI>17</HSI>
+    <ORIGIN>Verenigd Koninkrijk</ORIGIN>
+    <SUBSTITUTES>East Kent Golding</SUBSTITUTES>
+    <HUMULENE>23</HUMULENE>
+    <CAROPHYLLENE>7.5</CAROPHYLLENE>
+    <COHUMULONE>38</COHUMULONE>
+    <MYRCENE>33.5</MYRCENE>
+    <TOTAL_OIL>1.600000024</TOTAL_OIL>
+  </HOP>
+  <HOP>
+    <NAME>Progress</NAME>
+    <NOTES>Bittering en aroma in Engelse ales.
+Aroma: lijkt op Fuggles, aromatisch, licht zoetig.</NOTES>
+    <VERSION>1</VERSION>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>6.199999809</ALPHA>
+    <TYPE>Aroma</TYPE>
+    <FORM>Pellet</FORM>
+    <USE>Aroma</USE>
+    <BETA>2.099999905</BETA>
+    <HSI>30</HSI>
+    <ORIGIN>Verenigd Koninkrijk</ORIGIN>
+    <SUBSTITUTES>Fuggle, E.K. Golding</SUBSTITUTES>
+    <HUMULENE>43.5</HUMULENE>
+    <CAROPHYLLENE>13.5</CAROPHYLLENE>
+    <COHUMULONE>30.5</COHUMULONE>
+    <MYRCENE>32.5</MYRCENE>
+    <TOTAL_OIL>0.8000000119</TOTAL_OIL>
+  </HOP>
+  <HOP>
+    <NAME>Target</NAME>
+    <NOTES>Mooie bitterhop voor Engelse bierstijlen.
+Aroma: sterk aroma en smaak.</NOTES>
+    <VERSION>1</VERSION>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>12.7</ALPHA>
+    <TYPE>Bittering</TYPE>
+    <FORM>Leaf</FORM>
+    <USE>Aroma</USE>
+    <BETA>5</BETA>
+    <HSI>50</HSI>
+    <ORIGIN>Verenigd Koninkrijk</ORIGIN>
+    <SUBSTITUTES>East Kent Golding</SUBSTITUTES>
+    <HUMULENE>19.5</HUMULENE>
+    <CAROPHYLLENE>9.5</CAROPHYLLENE>
+    <COHUMULONE>37.5</COHUMULONE>
+    <MYRCENE>50</MYRCENE>
+    <TOTAL_OIL>1.3</TOTAL_OIL>
+    <HARVEST_DATE>01-09-2014</HARVEST_DATE>
+  </HOP>
+  <HOP>
+    <NAME>Whitbread Goldings</NAME>
+    <NOTES>Ontwikkeld in 1911 uit Bates Brewer. Heeft enkele Golding karakteristieken, maar heeft niet het volledige Golding aromaprofiel.
+Gebruikt voor Engelse ales.
+Aroma: aangenaam hoppig, vrij intens.</NOTES>
+    <VERSION>1</VERSION>
+    <ALWAYS_ON_STOCK>FALSE</ALWAYS_ON_STOCK>
+    <ALPHA>6</ALPHA>
+    <TYPE>Aroma</TYPE>
+    <FORM>Pellet</FORM>
+    <USE>Aroma</USE>
+    <BETA>2.5</BETA>
+    <HSI>37.5</HSI>
+    <ORIGIN>Verenigd Koninkrijk</ORIGIN>
+    <SUBSTITUTES>East Kent Goldings, Fuggle, Styrian Goldings</SUBSTITUTES>
+    <HUMULENE>43.5</HUMULENE>
+    <CAROPHYLLENE>13</CAROPHYLLENE>
+    <COHUMULONE>34</COHUMULONE>
+    <MYRCENE>24</MYRCENE>
+    <TOTAL_OIL>1.200000048</TOTAL_OIL>
+  </HOP>
+</HOPS>
